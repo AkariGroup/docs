@@ -1,0 +1,143 @@
+.. highlight:: python
+    :linenothreshold: 10
+
+****************************************
+Q3-3.ディスプレイテキストの表示2
+****************************************
+
+
+問題
+========
+
+**Q3-3.M5のディスプレイに'あか''きいろ''あお'と縦に3つ並べて表示してみましょう。**
+    **文字の色はそれぞれの字と同じ色('あか'なら赤)にしましょう。**
+
+ファイルの場所: akari_practice/3_m5_display/question/q3-3_display_text_2.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q3-3.M5のディスプレイに'あか''きいろ''あお'と縦に3つ並べて表示してみましょう。
+        文字の色はそれぞれの字と同じ色('あか'なら赤)にしましょう。
+    ヒント1: 前の文字を消さずに次の文字を表示する必要があります。
+        　　 set_display_textの引数refreshをFalseにすると、前の表示を消さずに重ねて表示します。
+    ヒント2: 文字と背景の色は、画面の色変更と同じように黒なら'black'、白なら'white'を入れればOKです。
+    """
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+
+        # M5SerialServerのインスタンスを作成する。
+        m5 = M5SerialServer()
+
+        ### ここから問題  ###
+        # 'あか'を表示
+        # textは'あか'
+        text = """(表示したい文字を入力)"""
+        # 左右表示位置は真中揃え
+        pos_x = -999
+        # 上下表示位置は30
+        pos_y = 30
+        # 文字サイズは3
+        size = 3
+        # 文字色は赤
+        text_color = """(表示したい色を入力)"""
+        # 背景色は白
+        back_color = 'white'
+        # 最初の１つ目は背景をリセットする
+        refresh = """(TrueかFalseを入力)"""
+        # set_display_textを実行
+        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        # 0.5秒停止
+        time.sleep(0.5)
+
+        # 'きいろ'を表示
+        # textは'きいろ'
+        text = """(表示したい文字を入力)"""
+        # 左右表示位置は真中揃え
+        pos_x = -999
+        # 上下表示位置は90
+        pos_y = 90
+        # 文字サイズは3
+        size = 3
+        # 文字色は黄色
+        text_color = """(表示したい色を入力)"""
+        # 背景色は白
+        back_color = 'white'
+        # 前の文字を消さないために、背景はリセットしない。
+        refresh = """(TrueかFalseを入力)"""
+        # set_display_textを実行
+        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        # 0.5秒停止
+        time.sleep(0.5)
+
+        # 'あお'を表示
+        # textは'あお'
+        text = """(表示したい文字を入力)"""
+        # 左右表示位置は真中揃え
+        pos_x = -999
+        # 上下表示位置は150
+        pos_y = 150
+        # 文字サイズは3
+        size = 3
+        # 文字色は青
+        text_color = """(表示したい色を入力)"""
+        # 背景色は白
+        back_color = 'white'
+        # 前の文字を消さないために、背景はリセットしない。
+        refresh = """(TrueかFalseを入力)"""
+        # set_display_textを実行
+        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        # 0.5秒停止
+        time.sleep(0.5)
+
+        ### ここまで  ###
+
+
+    if __name__ == '__main__':
+        main()
+
+
+前回に引き続きディスプレイにテキストを表示する方法です。
+
+前回とは違う箇所を穴埋めして使い方を覚えていきましょう。
+
+ヒント
+========
+
+前回と同様set_display_text()を使っていきます。
+
+今回は'refresh'引数の穴埋めをします。
+
+    |  `bool refresh`: trueの場合画面全体を現在の背景色で更新する。falseの場合は現在の表示を維持しつつ、指定表示範囲のみ更新する。
+
+これまで表示していた文字や画像を消さずに、続けて表示したい場合は、refreshをFalseにします。
+
+画面を消して新しく表示したい場合はrefreshをTrueにすると、背景をback_colorで更新してから文字を表示します。
+
+今回は最初の'あか'の時は画面を消して新しく表示し、残りの'きいろ''あお'の時は消さずに続けて表示していくようにしましょう。
+
+それぞれテキストの表示色も異なる色が指定されています。 :doc:`こちら <../../spec/soft_base_noros>` から指定の色を選んで穴埋めしてください。
+
+答え合わせ
+================
+完成したら実行してみましょう
+
+.. code-block:: bash
+
+   python q3-3_display_text_2.py
+
+画面に「あか」「きいろ」「あお」とそれぞれの色で表示されればOKです。
+
+|
+:doc:`回答 <a3-3>` へ進む

@@ -1,0 +1,1073 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, TOYOTA
+# This file is distributed under the same license as the HSRDocument
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HSRDocument 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 17:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/troubleshoot/troubleshoot.rst:3
+msgid "困ったときは"
+msgstr "Help"
+
+#: ../../source/troubleshoot/troubleshoot.rst:10
+msgid "HSRサポートへの問い合わせ"
+msgstr "Contact HSR support"
+
+#: ../../source/troubleshoot/troubleshoot.rst:12
+msgid "HSRに関して不具合や問題が発生した場合はHSRサポートまでご連絡ください。"
+msgstr ""
+"If a bug or a problem occurs in relation to the HSR, please contact HSR "
+"support."
+
+#: ../../source/troubleshoot/troubleshoot.rst:15
+msgid "問い合わせの前に"
+msgstr "Before an inquiry"
+
+#: ../../source/troubleshoot/troubleshoot.rst:16
+msgid ""
+"HSRに関する質問は `Q&Aサイト <https://qa.hsr.io>`_ へお願いします。 Q&Aサイトの使い方については "
+"`ＨＳＲポータルサイト利用マニュアル "
+"<https://docs.hsr.io/portal_manual/q_and_a/q_and_a.html>`_ を参照ください。"
+msgstr ""
+"In relation to questions about HSR, please ask them on `Q&A site "
+"<https://qa.hsr.io>`_.  For information about how to use the Q&A site, "
+"please refer to `HSR portal site manual "
+"<https://docs.hsr.io/portal_manual/q_and_a/q_and_a.html>`_."
+
+#: ../../source/troubleshoot/troubleshoot.rst:19
+msgid ""
+"報告されている既知の不具合は `GitLabのIssue <https://git.hsr.io/tmc/hsr/issues>`_ "
+"に公開していますので、問い合わせ前にご確認ください。 既知の不具合の検索や見方については `こちら "
+"<https://docs.hsr.io/portal_manual/gitlab/gitlab.html#id26>`__ を参照ください。"
+msgstr ""
+"Before your inquiry, please check `GitLab's Issues "
+"<https://git.hsr.io/tmc/hsr/issues>`_ first because we show bugs that "
+"have already been reported there.  About the method of searching and "
+"looking for the bugs that have already been, please refer to `this "
+"<https://docs.hsr.io/portal_manual/gitlab/gitlab.html#id26>`__."
+
+#: ../../source/troubleshoot/troubleshoot.rst:22
+msgid "必要に応じて :ref:`robot_troubleshoot` もご確認ください。"
+msgstr "As needed, please check :ref:`robot_troubleshoot` too."
+
+#: ../../source/troubleshoot/troubleshoot.rst:24
+msgid ""
+"ソフトウェアのサポートは、リリースから1年間となっています。 :ref:`お使いのバージョン<check_robot_version>` "
+"をご確認ください。サポートが終了しているかどうかは、HSR開発マニュアルのリファレンスからchangelogをご確認ください。"
+msgstr ""
+"Software support is for one year from the release. Please check the "
+":ref:`software version<check_robot_version>` you are using.  Please check"
+" the changelog in the reference of the HSR development manual for whether"
+" or not support has ended."
+
+#: ../../source/troubleshoot/troubleshoot.rst:29
+msgid "問い合わせ方法"
+msgstr "Inquiry method"
+
+#: ../../source/troubleshoot/troubleshoot.rst:31
+msgid "HSRサポート[xr-hsr-support@mail.toyota.co.jp]までメールにてご連絡ください。"
+msgstr ""
+"Please contact HSR support by e-mail at [xr-hsr-"
+"support@mail.toyota.co.jp]."
+
+#: ../../source/troubleshoot/troubleshoot.rst:33
+msgid "問い合わせのフォーマットを用意していますので、下記をメールにコピーしてご記入ください。"
+msgstr ""
+"Because we prepared a format for the inquiry, please copy and paste the "
+"following to your e-mail and fill it out there."
+
+#: ../../source/troubleshoot/troubleshoot.rst:93
+msgid "上記フォーマット以外の問い合わせも受け付けておりますが、フォーマットを使用いただきますと状況の把握をよりスムーズに行うことができます。"
+msgstr ""
+"Although we may receive an inquiry that is not in the above format, using"
+" the format allows us to get a grasp of the situation more smoothly."
+
+#: ../../source/troubleshoot/troubleshoot.rst:95
+msgid "添付資料は以下の2通りで送付可能です。"
+msgstr "You can send attachments to us by using the following two ways."
+
+#: ../../source/troubleshoot/troubleshoot.rst:97
+msgid ""
+"メールの添付ファイルとして送付。弊社のセキュリティシステムの関係上、拡張子がzip, "
+"exe等の添付ファイルは受信できませんので、拡張子をzi_等に変更のうえ送付ください。"
+msgstr ""
+"Sending as e-mail attachments.  Because of our corporation's security "
+"system, we cannot receive a file which extension is zip or exe or such.  "
+"Please send  it after changing the file's extension to zi\\_ or such."
+
+#: ../../source/troubleshoot/troubleshoot.rst:99
+msgid ""
+"ファイル共有サービス(ownCloud)での共有。共有方法にはルールがございますので、`こちら "
+"<https://docs.hsr.io/portal_manual/file_share/file_share.html#id3>`__ "
+"を参照ください。"
+msgstr ""
+"Sharing with the file sharing service (ownCloud).  To share files, there "
+"are some rules.  Please refer to `this "
+"<https://docs.hsr.io/portal_manual_en/file_share/file_share.html#id3>`__."
+
+#: ../../source/troubleshoot/troubleshoot.rst:106
+msgid "ログ回収ツールについて"
+msgstr "About the log collection tool"
+
+#: ../../source/troubleshoot/troubleshoot.rst:108
+msgid "HSRの不具合に関してご連絡いただく際、ログ回収ツールをご活用しログを送付いただけると状況の把握をよりスムーズに行うことができます。"
+msgstr ""
+"When you contact us about an HSR bug, if you send the log by using the "
+"log collection tool, it will allow us to graps the situation more "
+"smoothly."
+
+#: ../../source/troubleshoot/troubleshoot.rst:110
+msgid "当ツールは不具合解析のためのシステムログやROSのログ、ネットワークなどのHSR動作環境の情報を自動で回収し弊社に送信するものとなっております。以下でツールの使用方法を説明します。"
+msgstr ""
+"This tool automatically collects the system log, ROS log, and the data of"
+" HSR's movement environment such as the network, then sends them to our "
+"corporation.  We explain how to use the tool in the following."
+
+#: ../../source/troubleshoot/troubleshoot.rst:114
+msgid "ツールの利用はHSRから外部のネットワークが見える環境が必須となります。見えない場合は下記のようなエラーメッセージが表示されます。"
+msgstr ""
+"To use the tool, the environment which can see the internet from the HSR "
+"is required.  If it cannot see the network, an error message such as the "
+"following is displayed."
+
+#: ../../source/troubleshoot/troubleshoot.rst:121
+msgid "外部への接続にプロキシを介する必要がある場合、コマンド実行前に環境変数https_proxyを設定してください。"
+msgstr ""
+"If it is necessary to go through a proxy to connect to the internet, "
+"please set the environmental variable https_proxy before executing the "
+"command."
+
+#: ../../source/troubleshoot/troubleshoot.rst:138
+msgid "事前準備"
+msgstr "Advance Preparations"
+
+#: ../../source/troubleshoot/troubleshoot.rst:140
+msgid "HSRに管理者権限でログインしてください。"
+msgstr "Log into the robot using administrative privileges."
+
+#: ../../source/troubleshoot/troubleshoot.rst:146
+msgid "以下のコマンドを入力しバージョンを確認してください。"
+msgstr "Enter the following command, then please confirm the version."
+
+#: ../../source/troubleshoot/troubleshoot.rst:152
+msgid "バージョンが表示されない、または表示されたバージョンが0.4.1以下の場合、以下のコマンドを入力し更新作業を行ってください。"
+msgstr ""
+"If the version is not displayed or if the displayed version is 0.4.1 or "
+"less, please perform an update by using the following command."
+
+#: ../../source/troubleshoot/troubleshoot.rst:160
+msgid "更新後、バージョンが0.5.0以上であることが確認できたら準備完了です。"
+msgstr ""
+"After updating, if you can confirm that the version is greater than or "
+"equal to 0.5.0, then the preparations are complete."
+
+#: ../../source/troubleshoot/troubleshoot.rst:167
+msgid "ロボットに管理者権限でログインし、必要なパッケージをインストールします。"
+msgstr ""
+"Log into the robot using administrator privileges and install the "
+"necessary packages."
+
+#: ../../source/troubleshoot/troubleshoot.rst:177
+msgid ""
+"**Kinetic** の場合は $ sudo apt-get install ros-melodic-hsrb-full "
+"の代わりに以下を実行してください。"
+msgstr ""
+"In case of **Kinetic**, execute the following instead of ``$ sudo apt-get"
+" install ros-melodic-hsrb-full`` :"
+
+#: ../../source/troubleshoot/troubleshoot.rst:183
+msgid "ログ回収ツール実行"
+msgstr "Executing the log collection tool"
+
+#: ../../source/troubleshoot/troubleshoot.rst:185
+msgid "HSRに管理者権限でログインしている状態とします。 ツールはROSが利用可能な環境で動作するため、以下のようにROS環境を読み込んでください。"
+msgstr ""
+"Suppose that you are logged into the HSR using administrator privileges."
+"  Because the tool runs in an environment where ROS is available, please "
+"read the ROS environment by doing the following."
+
+#: ../../source/troubleshoot/troubleshoot.rst:194
+msgid "**Kinetic** の場合は $ source /opt/ros/melodic/setup.bash の代わりに以下を実行してください。"
+msgstr ""
+"In case of **Kinetic**, execute the following instead of ``$ source "
+"/opt/ros/melodic/setup.bash`` :"
+
+#: ../../source/troubleshoot/troubleshoot.rst:200
+msgid "以下では当日分のログを全て送る場合を想定し、手順を説明します。以下のコマンドを実行してください。"
+msgstr ""
+"In the following, we suppose sending all log in the day, and we explain "
+"the procedure.  Please execute the following command."
+
+#: ../../source/troubleshoot/troubleshoot.rst:206
+msgid ""
+"以下のように表示されたら成功です。 :ref:`ask_approach` "
+"をご覧の上で、**ログ回収ツール実施結果の欄にSentence行の文章([LOG] robot_log_....)の記載** をお願いします。"
+msgstr ""
+"If something like the following is displayed, then it is successful.  "
+"After seeing :ref:`ask_approach`, please **paste the Sentence line to the"
+" result of log collection tool ([LOG] robot_log_....) in your e-mail**."
+
+#: ../../source/troubleshoot/troubleshoot.rst:221
+msgid "ログの日付やログの種類を指定して送ることもできます。以下のヘルプ表示コマンドで指定方法の詳細を確認してください。"
+msgstr ""
+"You can specify the kinds of log and date.  Please confirm the details of"
+" how to specify them by using the following help command."
+
+#: ../../source/troubleshoot/troubleshoot.rst:227
+msgid "ログの種類は以下のようなものがあり、今後追加される可能性があります。上記ヘルプ表示コマンドで、指定可能なログの種類の最新情報を確認できます。"
+msgstr ""
+"Below is a list of the kind of logs that can be listed.  In the furture "
+"there is the possibility for more kinds of logs to be added.  By using "
+"the above help command, you can see the latest information for the kind "
+"of logs that can be specified."
+
+#: ../../source/troubleshoot/troubleshoot.rst:232
+msgid "名前"
+msgstr "Name"
+
+#: ../../source/troubleshoot/troubleshoot.rst:233
+msgid "回収されるログ"
+msgstr "Log which is collected"
+
+#: ../../source/troubleshoot/troubleshoot.rst:234
+msgid "env"
+msgstr "env"
+
+#: ../../source/troubleshoot/troubleshoot.rst:235
+msgid "インストールパッケージやネットワークなど動作環境情報"
+msgstr ""
+"The data of HSR's movement environment such as the installed packages and"
+" the network, etc."
+
+#: ../../source/troubleshoot/troubleshoot.rst:236
+msgid "journal"
+msgstr "journal"
+
+#: ../../source/troubleshoot/troubleshoot.rst:237
+msgid "systemd-journaldによって収集されたログ情報(journal file)"
+msgstr "Log information (journal file) that was collected by systemd-journald"
+
+#: ../../source/troubleshoot/troubleshoot.rst:238
+msgid "robot_config"
+msgstr "robot_config"
+
+#: ../../source/troubleshoot/troubleshoot.rst:239
+msgid "``/etc/opt/tmc/robot/`` 以下に保存されているロボットに依存する設定情報"
+msgstr ""
+"Setting information that the robot depends on that is saved under "
+"``/etc/opt/tmc/robot/``"
+
+#: ../../source/troubleshoot/troubleshoot.rst:240
+msgid "ros"
+msgstr "ros"
+
+#: ../../source/troubleshoot/troubleshoot.rst:241
+msgid "``/var/log/ros/`` 以下に保存されているログ情報"
+msgstr "The log which is saved under ``/var/log/ros/``"
+
+#: ../../source/troubleshoot/troubleshoot.rst:242
+msgid "syslog"
+msgstr "syslog"
+
+#: ../../source/troubleshoot/troubleshoot.rst:243
+msgid "``/var/log/syslog*`` に保存されているログ情報"
+msgstr "The log which is saved in ``/var/log/syslog*``"
+
+#: ../../source/troubleshoot/troubleshoot.rst:244
+msgid "system_config"
+msgstr "system_config"
+
+#: ../../source/troubleshoot/troubleshoot.rst:245
+msgid "``/etc/`` 以下に保存されている設定情報"
+msgstr "The setting information which is saved under ``/etc/``"
+
+#: ../../source/troubleshoot/troubleshoot.rst:246
+msgid "systemd_log"
+msgstr "systemd_log"
+
+#: ../../source/troubleshoot/troubleshoot.rst:247
+msgid "``/var/log/`` 以下に保存されている一部のsystemdログ情報"
+msgstr "Some systemd log information that is saved under ``/var/log/``"
+
+#: ../../source/troubleshoot/troubleshoot.rst:250
+msgid "以下は指定例です。"
+msgstr "The following are examples of specifying methods."
+
+#: ../../source/troubleshoot/troubleshoot.rst:256
+msgid "状況"
+msgstr "State"
+
+#: ../../source/troubleshoot/troubleshoot.rst:257
+msgid "コマンド例"
+msgstr "example command"
+
+#: ../../source/troubleshoot/troubleshoot.rst:258
+msgid "2019/1/1のログを送りたい"
+msgstr "You want to send a log from January 1, 2019."
+
+#: ../../source/troubleshoot/troubleshoot.rst:259
+msgid "``hsrb_command upload_log 2019/1/1``"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:260
+msgid "本日分のROSのログのみ送りたい"
+msgstr "You want to send only today's ROS log."
+
+#: ../../source/troubleshoot/troubleshoot.rst:261
+msgid "``hsrb_command upload_log --only ros``"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:262
+msgid "2019/1/1から2019/1/3までのsyslogとjournalのログを送りたい"
+msgstr ""
+"You want to send the syslog and journal logs from January 1, 2019 to "
+"January 3, 2019."
+
+#: ../../source/troubleshoot/troubleshoot.rst:263
+msgid "``hsrb_command upload_log 2019/1/1-2019/1/3 --only syslog journal``"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:270
+msgid "トラブルシュート（実機）"
+msgstr "Troubleshooting (real robot)"
+
+#: ../../source/troubleshoot/troubleshoot.rst:272
+msgid "実機のトラブルシュートです。"
+msgstr "This is the troubleshooter for the real robot."
+
+#: ../../source/troubleshoot/troubleshoot.rst:276
+msgid "トラブル発生時の対処フロー"
+msgstr "Coping flow at the time when trouble occurs"
+
+#: ../../source/troubleshoot/troubleshoot.rst:278
+msgid "ロボットの動作中にエラーが発生したり、挙動がおかしい場合は以下のフローに沿って対処ください。"
+msgstr ""
+"If some error occurs during movement of the robot, or if the behavior is "
+"strange, please follow the following flow and cope."
+
+#: ../../source/troubleshoot/troubleshoot.rst:292
+msgid ""
+"頭部ディスプレイにメッセージが表示される場合はこれより下のページを、 診断ツールの実施方法は "
+":doc:`/howto/diagnostics/diagnostics` を参照ください。"
+msgstr ""
+"If a message is displayed on a head display, please refer to the page "
+"below this.  Please refer to :doc:`/howto/diagnostics/diagnostics` for "
+"the implementation method of the diagnosis tool."
+
+#: ../../source/troubleshoot/troubleshoot.rst:295
+msgid ""
+"複数のエラーが発生している場合でも、頭部ディスプレイに表示されるメッセージは1つだけです。 全てのエラーを確認する方法は、 "
+":ref:`diagnostics_viewer` を参照ください。"
+msgstr ""
+"Even when multiple errors occur, only one message is displayed in the "
+"head display.  Please refer to :ref:`diagnostics_viewer` for the methods "
+"for confirming all of the errors."
+
+#: ../../source/troubleshoot/troubleshoot.rst:300
+msgid "頭部ディスプレイに表示されるエラーメッセージと対処方法"
+msgstr "Error messages that are displayed on the head display and coping methods"
+
+#: ../../source/troubleshoot/troubleshoot.rst:302
+msgid "ロボットを動作中になんらかの異常が発生した場合、頭部ディスプレイにエラーメッセージが表示されることがあります。"
+msgstr ""
+"If some kind of problem occurs during movement of the robot, error "
+"messages may be displayed on the head display."
+
+#: ../../source/troubleshoot/troubleshoot.rst:304
+msgid "ここでは、異常検出時の頭部ディスプレイ表示の見方とその原因、対処法について記載しています。"
+msgstr ""
+"Here, we list the viewpoint of the head display, cause and actions at the"
+" time of the abnormal detection."
+
+#: ../../source/troubleshoot/troubleshoot.rst:308
+msgid "表示の見方"
+msgstr "Viewpoint of the display"
+
+#: ../../source/troubleshoot/troubleshoot.rst:310
+msgid "表示は異常を検出したデバイスと発生した事象を表示しています。"
+msgstr ""
+"The display displays the device which detected the abnormality and the "
+"generated phenomenon."
+
+#: ../../source/troubleshoot/troubleshoot.rst:312
+msgid "異常を検出したデバイスは、ディスプレイの上部に表示されます。"
+msgstr ""
+"The device which detected abnormality is displayed in the upper part of "
+"the display."
+
+#: ../../source/troubleshoot/troubleshoot.rst:314
+msgid "\"/\"区切り毎にGroup, Device, Nameの順に表示されています。"
+msgstr "The Group, Device, and Name are shown delimited by \"/\"."
+
+#: ../../source/troubleshoot/troubleshoot.rst:316
+msgid "発生した事象は、ディスプレイの中心にエラーメッセージとして表示されます。"
+msgstr ""
+"The generated phenomenon is displayed as error message in the center of "
+"the display."
+
+#: ../../source/troubleshoot/troubleshoot.rst:329
+msgid "エラーメッセージ一覧と対処方法"
+msgstr "Error message list and coping methods"
+
+#: ../../source/troubleshoot/troubleshoot.rst:331
+msgid "異常検出時に頭部ディスプレイに表示される可能性のあるエラーメッセージの一覧です。"
+msgstr ""
+"This is a list of error messages that may be displayed at the time of an "
+"abnormal detection on the head display."
+
+#: ../../source/troubleshoot/troubleshoot.rst:333
+msgid "起こりうる状況と発生した場合の対処手順も記載しています。"
+msgstr "We list the possible states and the coping procedure when it occurred."
+
+#: ../../source/troubleshoot/troubleshoot.rst:338
+msgid "Group"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:339
+msgid "Device"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:340
+msgid "Name"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:341
+msgid "エラーメッセージ"
+msgstr "Error message"
+
+#: ../../source/troubleshoot/troubleshoot.rst:342
+msgid "起こりうる状況"
+msgstr "Possible situation"
+
+#: ../../source/troubleshoot/troubleshoot.rst:343
+msgid "対処方法"
+msgstr "Coping method"
+
+#: ../../source/troubleshoot/troubleshoot.rst:344
+msgid "全てが対象"
+msgstr "All applies"
+
+#: ../../source/troubleshoot/troubleshoot.rst:345
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "←"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Diagnostic data hasn't been updated in a timeout."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "緊急停止ボタンを押して駆動電源を落としました。"
+msgstr ""
+"The emergency stop button was pressed and the drive power supply was "
+"turned off."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "センサのノードが落ちています。"
+msgstr "A node of a sensor fails."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ":ref:`standard_approach` を実施ください。"
+msgstr "Please carry out :ref:`standard_approach`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:351
+#: ../../source/troubleshoot/troubleshoot.rst:352
+msgid "Computer"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "CPU"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Disk"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Memory"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Network"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ProcessCpu"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ProcessMemory"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+#: ../../source/troubleshoot/troubleshoot.rst:449
+msgid "Sensors"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "USB"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Wireless"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Failed execute \"実行コマンド\", retcode=\"リターンコード\""
+msgstr "Failed execute \"executed command\", retcode=\"return code\""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "コマンドの実行に失敗しました。"
+msgstr "Command execution failed."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ロボットの動作に影響はありません。"
+msgstr "There is no influence on the operation of the robot."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "対象のコマンドを実行するためのパッケージを"
+msgstr "Please install the package for the target command "
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ロボットにインストールしてください。"
+msgstr "into the robot."
+
+#: ../../source/troubleshoot/troubleshoot.rst:367
+#: ../../source/troubleshoot/troubleshoot.rst:368
+#: ../../source/troubleshoot/troubleshoot.rst:373
+#: ../../source/troubleshoot/troubleshoot.rst:374
+#: ../../source/troubleshoot/troubleshoot.rst:380
+#: ../../source/troubleshoot/troubleshoot.rst:412
+#: ../../source/troubleshoot/troubleshoot.rst:0
+#: ../../source/troubleshoot/troubleshoot.rst:421
+#: ../../source/troubleshoot/troubleshoot.rst:428
+#: ../../source/troubleshoot/troubleshoot.rst:442
+#: ../../source/troubleshoot/troubleshoot.rst:443
+#: ../../source/troubleshoot/troubleshoot.rst:456
+#: ../../source/troubleshoot/troubleshoot.rst:457
+#: ../../source/troubleshoot/troubleshoot.rst:464
+#: ../../source/troubleshoot/troubleshoot.rst:474
+#: ../../source/troubleshoot/troubleshoot.rst:475
+#: ../../source/troubleshoot/troubleshoot.rst:480
+#: ../../source/troubleshoot/troubleshoot.rst:481
+#: ../../source/troubleshoot/troubleshoot.rst:486
+#: ../../source/troubleshoot/troubleshoot.rst:494
+#: ../../source/troubleshoot/troubleshoot.rst:495
+#: ../../source/troubleshoot/troubleshoot.rst:505
+#: ../../source/troubleshoot/troubleshoot.rst:511
+#: ../../source/troubleshoot/troubleshoot.rst:512
+msgid "↑"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "No device is connected"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "デバイスがひとつも接続されていません。"
+msgstr "No device is connected."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Multiple wireless networks are not supported"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "複数の無線ネットワークに接続しています。(サポート対象外)"
+msgstr "Connected to multipe wireless networks. (Not supported)"
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ロボットの無線接続を一つにすると解決します。"
+msgstr "This is resolved when there is a single wireless connection."
+
+#: ../../source/troubleshoot/troubleshoot.rst:381
+msgid "File"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "StereoCameraConfig"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ""
+"The camera setting file is the default. Please execute '$ hsrb_command "
+"restore'."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "ステレオカメラの設定ファイルがデフォルトです。"
+msgstr "The stereo camera configuration file is the default."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ":ref:`restore` を実施ください。"
+msgstr "Please carry out :ref:`restore`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:386
+msgid "Joints"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:387
+#: ../../source/troubleshoot/troubleshoot.rst:413
+#: ../../source/troubleshoot/troubleshoot.rst:422
+#: ../../source/troubleshoot/troubleshoot.rst:429
+msgid "---"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (arm_flex_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (arm_lift_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (arm_roll_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (base_l_drive_wheel_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (base_r_drive_wheel_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (base_roll_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (hand_motor_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (head_pan_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (head_tilt_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (wrist_flex_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Joint (wrist_roll_joint)"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Abnormal position"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Abnormal state in motor driver"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Connection error rate high"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Current sensor failure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・EEPROM failure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Invalid error status."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Invalid packet size"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Over current"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Position error too large"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Timing belt jumped"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Velocity integration error too large"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "モータアンプの異常を検知しました。"
+msgstr "An abnormality in a motor amplifier was detected."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Avago sensor failure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Encoder failure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Hall sensor failure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Supplied voltage out of range"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "モータアンプで深刻な問題が発生しました。"
+msgstr "A serious problem occurred with a motor amplifier."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "使用を中止してHSRサポートにご連絡ください。"
+msgstr "Use is canceled.  Please contact HSR support."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Board over temperature"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "基板温度が上限値を一定時間 以上超えました。"
+msgstr ""
+"Board temperature exceeded an upper limit value for more than a given "
+"period of time."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "外気温が高い場合は使用を中止してください。"
+msgstr "When outside temperature is high, please cancel use."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "使用を再開しても再度表示される場合はHSRサポートにご連絡ください。"
+msgstr ""
+"When it is displayed again even if use is resumed, please contact HSR "
+"support."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Motor over temperature"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "推定巻線温度が一定値を超えました。"
+msgstr "Estimated winding temperature was higher than a constant value."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "電源ボタン長押しで電源を落とし、30分程度使用を中止してください。"
+msgstr ""
+"Turn off the power by long-pressing the power button, then please cancel "
+"use for around 30 minutes."
+
+#: ../../source/troubleshoot/troubleshoot.rst:435
+msgid "Power"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:436
+msgid "Battery"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Battery updater"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Battery Level: \"現在のバッテリ残量\" %."
+msgstr "Battery Level: \"Current battery level\" %."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "バッテリ残量が20%を切っています。"
+msgstr "Battery level is below 20%."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ":ref:`start_charging` してください。"
+msgstr "Please do :ref:`start_charging`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "充電開始後、しばらくすると表示は消えます。"
+msgstr "After beginning charge, the indicator goes out after a little while."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Battery Error: \"エラー詳細\""
+msgstr "Battery Error: \"Error details\""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "バッテリとの通信ができていない等によって、"
+msgstr "When the battery cannot communicate or other causes,"
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "バッテリ情報の読み込みが失敗しています。"
+msgstr "reading battery information fails."
+
+#: ../../source/troubleshoot/troubleshoot.rst:450
+msgid "Bumper"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "hsrb_bumper"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "All joints are stopped by bumper."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Please press the emergency switch to reset the system."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "台車部分に物などがぶつかりました。"
+msgstr "Something hit the base part."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ":ref:`bumper_sensor_approach` を実施ください。"
+msgstr "Please carry out :ref:`bumper_sensor_approach`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ""
+"・Bumper was pushed. But failed to stop the controller. Press the "
+"emergency switch."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "・Required service is not available."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "台車部分に物などがぶつかり、バンパセンサが反応していますが、"
+msgstr "Something hits the cart part, and a bumper sensor responds,"
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "なんらかの原因でロボットの動作が停止していません。"
+msgstr "but the operation of the robot does not stop for some reason."
+
+#: ../../source/troubleshoot/troubleshoot.rst:465
+msgid "Camera"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "HandCamera"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "HeadCenterCamera"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "HeadRGBDSensor"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "HeadStereoCamera"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Boot timeout"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "60秒以内に起動(トピックが発行されている状態)できませんでした。"
+msgstr "Camera nodelet cannot establish topic transports within 60 seconds."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "自動のリスタートプロセスが動いていますが、"
+msgstr "Although the automatic restart process is running, "
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "エラーが続く場合は :ref:`standard_approach` を実施ください。"
+msgstr "if there is an error, please carry out :ref:`standard_approach`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Fill image with unicolor"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "画像が単一色で出力される問題が発生しています。"
+msgstr "The problem that an image is output with a single color occurs."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "No New Messages"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "起動後に対象デバイスとの通信またはノードが落ちています。"
+msgstr "After booting, communication with the target device or node has failed."
+
+#: ../../source/troubleshoot/troubleshoot.rst:487
+msgid "IO"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Magnetic Sensor 1"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Magnetic Sensor 2"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "All joints are stopped by magnetic sensor."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Please move location and press the emergency switch to reset the system."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "磁気テープを踏んだか磁石などの上を通過しました。"
+msgstr "The robot rolled over magnetic tape or passed over magnets."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid ":ref:`magnetic_sensor_approach` を実施ください。"
+msgstr "Please carry out :ref:`magnetic_sensor_approach`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Front Bumper"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Rear Bumper"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Pressure"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Runstop Button"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Timeout is occered.Topics is not reached."
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "センサとの通信またはセンサのノードが落ちています。"
+msgstr "Communication with a sensor or a sensor node has failed."
+
+#: ../../source/troubleshoot/troubleshoot.rst:506
+msgid "Hokuyo"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Hardware Status"
+msgstr ""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Not Connected: \"デバイスの状態\""
+msgstr "Not Connected: \"State of the device\""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "通信線の断線等でレーザーレンジセンサと通信ができていません。"
+msgstr ""
+"Due to the communication line being disconnected or other causes the "
+"communication with the laser range sensor is not possible."
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "Abnormal status: \"デバイスの状態\""
+msgstr "Abnormal status: \"State of the device\""
+
+#: ../../source/troubleshoot/troubleshoot.rst:0
+msgid "レーザーレンジセンサが何かしらの異常状態です。"
+msgstr "The laser range sensor is in an abnormal state."
+
+#: ../../source/troubleshoot/troubleshoot.rst:521
+msgid "Diagnostics Viewerの見方"
+msgstr "Understanding Diagnostics Viewer"
+
+#: ../../source/troubleshoot/troubleshoot.rst:523
+msgid ""
+"頭部ディスプレイには1つのエラーしか表示されませんが、Diagnostics Viewerでは全てのエラーを確認できます。 "
+"特に、ステレオカメラが使用できない場合は、StereoCameraConfigのエラーが出ていないか確認してください。"
+msgstr ""
+"A single error is displayed in the head display. However, you can verify "
+"all of the errors using Diagnostics Viewer.  In particular, please verify"
+" whether StereoCameraConfig is not displayed when you cannot use the "
+"stereo camera."
+
+#: ../../source/troubleshoot/troubleshoot.rst:526
+msgid "hsrb_modeでロボットと接続し、rqtを立ち上げます。"
+msgstr "Connect to the robot using hsrb_mode, and start up rqt."
+
+#: ../../source/troubleshoot/troubleshoot.rst:533
+msgid ""
+"rqtのウィンドウ左上から \"Plugins\"-> \"Robot Tools\"-> \"Diagnostics Viewer\" "
+"を選択すると以下のように表示されます。"
+msgstr ""
+"If you select \"Plugins\"-> \"Robot Tools\"-> \"Diagnostics Viewer\" from"
+" the upper left of the rqt window, then the following will be displayed."
+
+#: ../../source/troubleshoot/troubleshoot.rst:541
+msgid "通常の対処手順"
+msgstr "Normal coping procedure"
+
+#: ../../source/troubleshoot/troubleshoot.rst:543
+msgid "以下手順をお試しください。"
+msgstr "Please try the following procedure."
+
+#: ../../source/troubleshoot/troubleshoot.rst:545
+msgid "緊急停止ボタンを押し込み、再度解除してください。"
+msgstr "Please push the emergency stop button and release it."
+
+#: ../../source/troubleshoot/troubleshoot.rst:547
+msgid "1を実施しても解消しない場合は緊急停止ボタンを押し込み、電源ボタンを長押しで電源を切り、再度長押しで電源を入れ、緊急停止ボタンを解除してください。"
+msgstr ""
+"If even after doing step #1 it's not resolved, please press the emergency"
+" stop button, turn off the power by long-pressing the power button, turn "
+"on the power on by again long-pressing, and release the emergency stop "
+"button."
+
+#: ../../source/troubleshoot/troubleshoot.rst:551
+msgid "ロボットの起動と終了方法の詳細は、 :doc:`/howto/on_off` を参照ください。"
+msgstr ""
+"For details about the robot start-up and shutdown methods, please refer "
+"to :doc:`/howto/on_off`."
+
+#: ../../source/troubleshoot/troubleshoot.rst:554
+msgid "2を実施しても解消しない場合、もしくは解消しても頻繁に発生する場合はHSRサポートにご連絡ください。"
+msgstr ""
+"If even after doing step #2 it's not resolved, or it occurs frequently "
+"even if it is resolved, please contact HSR support."
+
+#~ msgid "Cpmputer"
+#~ msgstr ""
+
+#~ msgid "**Kineticの場合**"
+#~ msgstr "**In case of Kinetic**"
+
+#~ msgid "**Indigoの場合**"
+#~ msgstr "**In case of Indigo**"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "upstart"
+#~ msgstr ""
+
+#~ msgid "``/var/log/upstart/`` 以下に保存されているログ情報"
+#~ msgstr "The log which is saved under ``/var/log/upstart/``"
+
+#~ msgid "``hsrb_command upload_log 2016/1/1``"
+#~ msgstr ""
+
+#~ msgid "``hsrb_command upload_log 2016/1/1-2016/1/3 --only syslog upstart``"
+#~ msgstr ""
+
+#~ msgid "システムに依存する設定情報"
+#~ msgstr "Setting information that the system depends on"
+

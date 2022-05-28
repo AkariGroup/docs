@@ -1,0 +1,285 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+Q4-1.温度ロガー(回答編)
+******************************
+
+回答
+========
+
+**Q4-1.現在時刻と環境温度を10秒ごとに取得して、csvファイルに追記し続けるコードを書きましょう。**
+
+以下はコード例です。問題文を満たしていれば、これと同じでなくても問題ありません。
+
+ファイルの場所: akari_practice/4_challenge/answer/a4-1_temperature_logger.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q4-1.現在時刻と環境温度を10秒ごとに取得して、csvファイルに追記し続けるコードを書きましょう。
+    ヒント1: 時刻の取得はQ3-5,温度の取得はQ2-5を参考にしましょう。
+    ヒント2: csvへの書き込みはcsv.writerを使います。
+            最初の行にインデックスを書き込んで、以降取得した値を追記していきましょう。
+            下記がlog.csvというファイルを作って'時刻','温度'という行を書き込むサンプルです。
+            ファイル作成先はpythonを実行した場所となります。
+            openの第二引数を'w'にすると新規作成、'a'にすると既存のファイルに追記します。
+            import csv
+            with open('log.csv', 'w') as f:
+                writer = csv.writer(f)
+                writer.writerow(['時刻','温度'])
+    ヒント3: logを取る間隔を変える、logの内容を増やす、logのファイル名や保存場所を変えるなど
+            色々試してみましょう！
+    """
+
+    ### ここから問題  ###
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+    # 時刻取得に必要なライブラリをインポートする。
+    import datetime
+    # csvの読み書き用ライブラリをインポートする。
+    import csv
+
+    # logファイルの名前を定義
+    FILE_NAME = 'log.csv'
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+        # M5SerialServerのインスタンスを作成する。
+        m5 = M5SerialServer()
+        # log.csvを作成して、インデックス行を書き込む
+        with open(FILE_NAME, 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(['時刻','温度'])
+        # Ctrl + Cで終了するまでループし続ける
+        while(True):
+            result, m5_data = m5.get()
+            # データが取得できた場合(result=True)は温度を取得。
+            # 失敗した場合(result=False)はエラー文を表示。
+            if(result):
+                cur_temperature = m5_data['temperature']
+                # 時刻を取得
+                dt_now = datetime.datetime.now()
+                # 時:分:秒の形に変換
+                cur_time = dt_now.strftime('%H:%M:%S')
+                print('[' + cur_time + '] temperature: ' + str(cur_temperature) + ' [deg]' )
+                # logファイルを開いて取得した時刻、温度を最終行に追記
+                with open(FILE_NAME, 'a') as f:
+                    writer = csv.writer(f)
+                    writer.writerow([cur_time,cur_temperature])
+            else:
+                print("データ取得に失敗しました")
+            # 10秒停止処理を入れる。
+            time.sleep(10)
+
+
+    if __name__ == '__main__':
+        main()
+    ### ここまで  ###
+
+
+解説
+========
+**21-28行目:**
+
+.. code-block:: python
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+    # 時刻取得に必要なライブラリをインポートする。
+    import datetime
+    # csvの読み書き用ライブラリをインポートする。
+    import csv
+
+最初に必要なモジュールをインポートします。
+
+1つ目はM5と通信するためのM5SerialServer
+
+2つ目はsleepを使うために必要なtime
+
+3つ目は時刻を取得するために必要なdatatime
+
+4つ目はcsv書き込みに必要なcsvです。
+
+|
+**30-31行目:**
+
+.. code-block:: python
+
+    # logファイルの名前を定義
+    FILE_NAME = 'log.csv'
+
+logファイルの名前を'log.csv'として定義しておきます。
+
+同じファイルへの書き込み処理をする箇所が複数あるので、先に定義しておいた方が使いやすいです。
+
+|
+**33-36行目:**
+
+.. code-block:: python
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+
+メイン関数を定義します。この中身が実行されます。
+
+|
+**37-38行目:**
+
+.. code-block:: python
+
+    # M5SerialServerのインスタンスを作成する。
+    m5 = M5SerialServer()
+
+M5SerialServer()のインスタンスをm5という名前で作成します。
+
+|
+**39-42行目:**
+
+.. code-block:: python
+
+    # log.csvを作成して、インデックス行を書き込む
+    with open(FILE_NAME, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['時刻','温度'])
+
+ヒントの書き方を参考にlogファイルを新規作成し、インデックスを書き込みます。
+
+新規作成なので、open()の第二引数を'w'としています。
+
+|
+**43-44行目:**
+
+.. code-block:: python
+
+    # Ctrl + Cで終了するまでループし続ける
+    while(True):
+
+while()でループさせます。条件式はTrueなので、終了するまでループし続けます。
+
+|
+**45行目:**
+
+.. code-block:: python
+
+    result, m5_data = m5.get()
+
+これまでと同じようにm5.get()という形でM5のデータを取得します。
+
+|
+**46-48行目:**
+
+.. code-block:: python
+
+    # データが取得できた場合(result=True)の場合は温度表示。
+    # 失敗した場合(result=False)の場合はエラー文を表示。
+    if(result):
+
+m5.get()でデータが取得できた場合のみ処理を実行します。
+
+|
+**49行目:**
+
+.. code-block:: python
+
+    cur_temperature = m5_data['temperature']
+
+現在温度をm5_data内から取得します。温度のキーは'temperature'です。
+
+|
+**50-53行目:**
+
+.. code-block:: python
+
+    # 時刻を取得
+    dt_now = datetime.datetime.now()
+    # 時:分:秒の形に変換
+    cur_time = dt_now.strftime('%H:%M:%S')
+
+datatime.datatime.now()を用いて、現在時刻を取得します。
+
+dt_now.strftime()を使うと、引数で指定した書式での現在時刻がstr型で取得できます。
+
+Q3-5で使っているので、そちらを参考にするのがいいでしょう。
+
+|
+**54行目:**
+
+.. code-block:: python
+
+    print('[' + cur_time + '] temperature: ' + str(cur_temperature) + ' [deg]' )
+
+特に指定はないですが、記録する値をコマンドラインに出力しておくとデバッグに便利です。
+
+|
+**55-58行目:**
+
+.. code-block:: python
+
+    # logファイルを開いて取得した時刻、温度を最終行に追記
+    with open(FILE_NAME, 'a') as f:
+        writer = csv.writer(f)
+        writer.writerow([cur_time,cur_temperature])
+
+39-43行目と同じファイルへ追記していきます。追記なので、open()の第二引数は'a'です。
+
+この書き方で、1列目にcur_time,2列目にcur_temperatureが書き込めます。
+
+|
+**59-60行目:**
+
+.. code-block:: python
+
+        else:
+            print("データ取得に失敗しました")
+
+48行目のif文に対応するelse文です。
+
+m5.get()でデータが取得できなかった場合は、その旨をコマンドラインに出力します。
+
+|
+**61-62行目:**
+
+.. code-block:: python
+
+    # 10秒停止処理を入れる。
+    time.sleep(10)
+
+最後に10秒停止の処理をsleep()で行います。
+
+|
+**65-66行目:**
+
+.. code-block:: python
+
+    if __name__ == '__main__':
+        main()
+
+これまでの問題と同様、インポート時の実行避けを入れます。
+
+
+実行結果
+========
+answerディレクトリ内のファイルを実行してみましょう
+
+.. code-block:: bash
+
+    python a4-1_temperature_logger.py
+
+'csv.log'というファイルに10秒ごとに時刻と温度が書き込まれます。
+
+|
+:doc:`問題 <q4-1>` へ戻る
+
+:doc:`q4-2` へ進む

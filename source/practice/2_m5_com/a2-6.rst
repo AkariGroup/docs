@@ -1,0 +1,121 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+A2-6.自動ライト(回答編)
+******************************
+
+回答
+========
+
+| **Q2-6.環境明るさの取得値をコマンドラインに表示し、3000以上の場合のみ、テストヘッドのdout0のLEDをONにする自動ライトを作りましょう。。**
+
+
+以下はコード例です。問題文を満たしていれば、これと同じでなくても問題ありません。
+
+ファイルの場所: akari_practice/2_m5_com/answer/a2-6_auto_light.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q2-6.環境明るさの取得値をコマンドラインに表示し、
+         3000以上の場合のみ、テストヘッドのdout0のLEDをONにする自動ライトを作りましょう。
+    ヒント1: Q2-3とQ2-5を参考にしましょう。
+             get関数の返り値の'brightness'の項目から明るさが読めます。
+    ヒント2: AKARIのボディー部の、AKARIから見て右側面に明るさセンサがついています。
+             ここに光を当てたり、指で覆ったりするとbrightnessの値が0-4095で変化します。
+             暗くなるほどbrightnessの値は大きくなります。
+    ヒント3: 3000未満の時はLED0は消しましょう。
+    """
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+
+        # M5SerialServerのインスタンスを作成する。
+        m5 = M5SerialServer()
+
+        ### ここから問題  ###
+        # Ctrl + Cで終了するまでループし続ける
+        while(True):
+            result, m5_data = m5.get()
+            # データが取得できた場合(result=True)は明るさ表示。
+            # 失敗した場合(result=False)はエラー文を表示。
+            if(result):
+                # 取得した明るさをコマンドラインに表示。
+                print("明るさ値は" + str(m5_data['brightness']) + "です。")
+                # 3000以上ならdout0をONにする。
+                if(m5_data['brightness'] >= 3000):
+                    m5.set_dout(0, True)
+                else:
+                    m5.set_dout(0, False)
+            else:
+                print("データ取得に失敗しました")
+            # 0.5秒停止処理を入れる。
+            time.sleep(0.5)
+        ### ここまで  ###
+
+
+    if __name__ == '__main__':
+        main()
+
+
+解説
+========
+**31行目:**
+
+.. code-block:: python
+
+    result, m5_data = m5.get()
+
+Q2-5と同じように26行目でm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
+
+|
+**36行目:**
+
+.. code-block:: python
+
+    print("明るさ値は" + str(m5_data['brightness']) + "です。")
+
+今回は、"m5_data['brightnesss']" を参照します。Q2-5と同様、この値を文字列に変換した上で、前後に文字列を合成して、"明るさ値は〇〇です。"という表示にします。
+
+|
+**38-41行目:**
+
+.. code-block:: python
+
+    if(m5_data['brightness'] >= 3000):
+        m5.set_dout(0, True)
+    else:
+        m5.set_dout(0, False)
+
+m5_data['brightness']が3000以上かどうかを、if文を使って判定します。
+
+3000以上の場合はdout0をONにします。Q2-3と同様m5.set_dout()を使います。pin_idは0,valはTrueです。
+
+3000以下の場合の処理はelse以下に書きます。dout0をOFFにするには同じくm5.set_dout()を使い、pin_idは0,valはFalseです。
+
+
+実行結果
+========
+answerディレクトリ内のファイルを実行してみましょう
+
+.. code-block:: bash
+
+    python a2-6_auto_light.py
+
+0.5秒ごとに"明るさ値は〇〇です。"とコマンドラインに表示され、明るさ値が3000以上になった時にdout0のLEDが点灯、3000未満で消灯します。
+
+|
+:doc:`問題 <q2-6>` へ戻る
+
+:doc:`q2-7` へ進む

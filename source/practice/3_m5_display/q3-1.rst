@@ -1,0 +1,103 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+Q3-1.ディスプレイカラーの制御
+******************************
+
+
+問題
+========
+
+**Q3-1.M5のディスプレイの背景色を赤→黄→青に変えてみましょう。**
+
+ファイルの場所: akari_practice/3_m5_display/question/q3-1_display_color.py
+
+.. code-block:: python
+
+   #!/usr/bin/env python
+   # -*- coding: utf-8 -*-
+
+   """
+   Q3-1.M5のディスプレイの背景色を赤→黄→青に変えてみましょう。
+   ヒント1: 色を変えるにはset_display_color(str color)という関数を使います。
+            colorに色の名前を入れるとその色に背景色が変わります。赤は"red",黄色は"yellow",青は"blue"を入れます。
+            例:
+               m5.set_display_color("red")
+   """
+
+   # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+   from m5serial_server_py.m5serial_server_py import M5SerialServer
+   # sleep関数を使うためにtimeのライブラリをインポートする。
+   import time
+
+
+   def main(args=None):
+      """
+      メイン関数
+      """
+
+      # M5SerialServerのインスタンスを作成する。
+      m5 = M5SerialServer()
+
+      ### ここから問題  ###
+      # M5のディスプレイの色を赤にする
+      m5.set_display_color("""(赤を指定)""")
+      # 2秒停止処理を入れる。
+      time.sleep(2)
+      # M5のディスプレイの色を黃にする
+      m5.set_display_color("""(黃を指定)""")
+      # 2秒停止処理を入れる。
+      time.sleep(2)
+      # M5のディスプレイの色を青にする
+      """(青を指定して変更する関数)"""
+      # 2秒停止処理を入れる。
+      time.sleep(2)
+      ### ここまで  ###
+
+
+   if __name__ == '__main__':
+      main()
+
+
+ここからはAKARIのボディー部にあるM5のディスプレイを制御する方法を学習します。
+
+まずはディスプレイ全体の色を変更する方法を学習しましょう。
+
+ヒント
+========
+
+**今回使用するAKARIライブラリ1: set_display_color()**
+
+M5のディスプレイカラーを変更するには、M5SerialServerのset_display_color()関数を使います。
+
+   .. function:: bool **set_display_color** (str color)
+   | M5のディスプレイの背景色を塗りつぶし。
+   | - **引数**
+   |  `str color`: 背景色を名前で指定。使用可能な色名リストは後述。リストにない文字列の場合(空白など)の場合は前回値をそのまま使用。
+   | - **返り値**
+   |  `bool result`: M5へのserial送信完了でtrue。
+
+この関数を呼び出すと、colorで指定した色に変更することができます。
+
+使える色名の一覧は :doc:`こちら <../../spec/soft_base_noros>` を参照してください。
+
+この関数はm5serial_server_pyのライブラリに含まれており、23行目でm5いう名前でこのライブラリのインスタンスを作成しています。
+
+この場合、m5.set_display_color(red)のようにこの関数を呼び出します(赤の場合)。
+
+今回は赤、黃、青の3色が指定されています。赤は"red",黄色は"yellow",青は"blue"を引数にしましょう。
+
+
+答え合わせ
+================
+完成したら実行してみましょう
+
+.. code-block:: bash
+
+   python q3-1_display_color.py
+
+画面の色が赤→黃→青のように変わってアプリが終了すればOKです。
+
+|
+:doc:`回答 <a3-1>` へ進む

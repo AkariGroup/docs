@@ -1,0 +1,139 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+Q4-2.シャッターカメラ
+******************************
+
+
+問題
+========
+
+**Q4-2.キーボードで特定のキーを入力した際に写真を撮影して保存するアプリを作りましょう。**
+
+ファイルの場所: akari_practice/4_challenge/question/q4-2_camera_shutter.py
+
+.. code-block:: python
+
+   #!/usr/bin/env python
+   # -*- coding: utf-8 -*-
+
+   """
+   Q4-2.キーボードで特定のキーを入力した際に写真を撮影して保存するアプリを作りましょう。
+   ヒント1: take_photo()という関数が用意してあるのでこれを使いましょう。
+            この関数はファイル名を引数として渡すと、その名前の写真を保存してくれます。
+            1枚目は001,2枚目は002...となるようにファイル名を渡してあげましょう。
+   ヒント2: キーボード入力を取得するにはinput()という関数を使います。
+               val = input()
+            というようにすると、入力した文字がvalとして得られます。
+            文字入力後エンターを押すとvalに渡されます。
+   ヒント3: zfill()を使うと文字列をゼロ埋めします。
+            zfillの引数はゼロ埋めする桁数です。下記のように使います。
+               num = 1
+               num_after = str(num).zfill(3)
+               print(num_after)
+               # '001'とプリントされる
+   """
+
+   # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+   from m5serial_server_py.m5serial_server_py import M5SerialServer
+   # openCVのライブラリをインポート
+   import cv2
+   # osのインポート
+   import os
+
+   # webカメラの設定
+   DEVICE_ID = 0
+
+
+   def take_photo(name: str):
+      """
+      写真を撮って保存する関数。
+      保存先はoutputディレクトリ以下。
+      Args:
+         name (str): 保存する画像ファイル名
+      Returns:
+         Bool: True なら成功, False なら失敗.
+
+      """
+      # カメラ画像の取得
+      cap = cv2.VideoCapture(DEVICE_ID)
+      ret, frame = cap.read()
+      cap.release()
+      # 取得に失敗した場合、Falseを返す
+      if not ret:
+         print('画像取得に失敗しました。')
+         return False
+      else:
+         file_name = 'output/' + name + '.jpg'
+         cv2.imwrite(file_name, frame)
+         print('ファイル名' + file_name + 'を保存しました。')
+         return True
+
+
+   def main(args=None):
+      """
+      メイン関数
+      """
+      # 'output'というディレクトリを作成
+      os.makedirs('output', exist_ok=True)
+      ### ここから問題  ###
+
+      """(特定の文字入力で、写真を撮影して保存するコードを記述)"""
+
+      ### ここまで  ###
+
+
+   if __name__ == '__main__':
+      main()
+
+
+チャレンジ問題の2つ目は、キーボード入力で写真を撮れるカメラです。
+
+ヒント
+========
+
+カメラ画像を記録する関数take_photo()が既に作成されています。
+
+キーボードで正しい入力が得られた時に、この関数を呼び出すようにします。
+
+**今回学習する項目1: input()**
+
+input()を使うとキーボード入力が取得できます。
+
+.. code-block:: python
+
+   val = input()
+   print(val)
+
+上記のようにすると、キーボードで入力した文字列をvalに取得し、コマンドラインに同じ文字列を出力することができます。
+
+**今回学習する項目2: zfill()**
+
+写真を保存する時は、1枚目は001,2枚目は002...というファイル名を付けたいので、引数でそのように渡してあげる必要があります。
+
+数値をゼロ埋めした文字列にするには、zfill()を使います。
+
+zfillの引数はゼロ埋めする桁数です。下記のように使います。
+
+.. code-block:: python
+
+   num = 1
+   # numを3桁にゼロ埋めした文字列にする
+   num_after = str(num).zfill(3)
+   print(num_after)
+   # '001'とプリントされる
+
+
+答え合わせ
+================
+完成したら実行してみましょう
+
+.. code-block:: bash
+
+   python q4-2_camera_shutter.py
+
+アプリ実行時、指定したキーを押した際に写真が撮影できるようになればOKです。
+
+|
+:doc:`回答 <a4-2>` へ進む

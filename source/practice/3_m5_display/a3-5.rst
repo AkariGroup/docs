@@ -1,0 +1,258 @@
+.. highlight:: python
+    :linenothreshold: 10
+
+******************************
+A3-5.デジタル時計(回答編)
+******************************
+
+回答
+========
+
+**Q3-5.M5のディスプレイに時:分:秒を表示する時計を作りましょう。**
+
+以下はコード例です。問題文を満たしていれば、これと同じでなくても問題ありません。
+
+ファイルの場所: akari_practice/3_m5_display/answer/a3-5_clock.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q3-5. M5のディスプレイに時:分:秒を表示する時計を作りましょう。
+    ヒント1: 現在時刻を返す独自関数 get_time() を作成してあります。これを使ってみましょう。
+            返り値として時:分:秒の文字列が得られます。
+    ヒント2: Q3-4を参考に書いてみましょう。
+            背景の色、文字の色やサイズ、ループのあとの停止時間をどれくらいにするか、などで見栄えの良さが
+            変わります。少し難しいですが、よりかっこいいアプリを目指して色々試してみましょう。
+    """
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+    # 時刻取得に必要なライブラリをインポートする。
+    import datetime
+    import locale
+    # M5SerialServerのインスタンスを作成する。
+    m5 = M5SerialServer()
+
+    def get_time():
+        """
+        現在時刻を返す独自関数
+        引数:なし
+        返り値: 時:分:秒の文字列
+        """
+        # 現在時刻を取得。
+        locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
+        dt_now = datetime.datetime.now()
+        # 時:分:秒を返す。
+        return (dt_now.strftime('%H:%M:%S'))
+
+    ### ここから問題  ###
+    def main(args=None):
+        """
+        メイン関数
+        """
+        # M5のディスプレイの背景色を黒にする
+        m5.set_display_color("black")
+        while(True):
+            # 表示する時刻は、独自関数を呼び出して取得する。
+            text = get_time()
+            # 左右表示位置は真中揃え
+            pos_x = -999
+            # 上下表示位置は中央揃え
+            pos_y = -999
+            # 文字サイズは4にする
+            size = 4
+            # 文字色は白
+            text_color = 'white'
+            # 背景色は黒
+            back_color = 'black'
+            # 背景をリセットしない
+            refresh = False
+            # set_display_textを実行
+            result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+            # 0.3秒停止
+            time.sleep(0.3)
+
+
+    if __name__ == '__main__':
+        main()
+    ### ここまで  ###
+
+
+
+
+
+解説
+========
+**36行目:**
+
+.. code-block:: python
+
+    def main(args=None):
+
+main関数の定義をします。
+
+|
+**41行目:**
+
+.. code-block:: python
+
+    m5.set_display_color("black")
+
+今回はディスプレイの背景色を黒に変更しています。
+
+|
+**42行目:**
+
+.. code-block:: python
+
+    while(True):
+
+時刻を取得してディスプレイを更新する処理はwhile文でループします。
+
+|
+**44行目:**
+
+.. code-block:: python
+
+    text = get_time()
+
+既に実装されているget_time()関数を用いて、時刻の文字列を取得してtextに代入します。
+
+|
+**46行目:**
+
+.. code-block:: python
+
+    pos_x = -999
+    
+左右表示位置を真中揃えにします。-999で真中になります。
+
+|
+**48行目:**
+
+.. code-block:: python
+
+    pos_y = -999
+    
+上下表示位置を中央揃えにします。-999で中央になります。
+
+|
+**50行目:**
+
+.. code-block:: python
+
+    size = 4
+    
+今回は文字サイズを4にしています。
+
+|
+**52行目:**
+
+.. code-block:: python
+
+    text_color = 'white'
+    
+今回は文字色を白にしています。
+
+|
+**54行目:**
+
+.. code-block:: python
+
+    back_color = 'black'
+    
+今回は背景色を黒にしています。
+
+|
+**56行目:**
+
+.. code-block:: python
+
+    refresh = False
+
+同じ箇所に表示し続けるので、背景はリセットしなくても問題ないです。
+
+|
+**58行目:**
+
+.. code-block:: python
+
+    result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+
+ここまで設定した変数を引数として、set_display_text()を実行します。
+
+|
+**60行目:**
+
+.. code-block:: python
+
+    time.sleep(0.3)
+
+今回はsleep時間を0.3秒としました。
+
+M5のディスプレイ更新に少し時間がかかるため、短すぎるとset_display_textの実行が間に合わなくなってしまいます。
+
+長すぎると、時計の時刻更新が不連続に見えてしまいます。
+
+0.3秒くらいのペースで更新が続いていると、見た目の違和感も少ないと思います。
+
+|
+**63行目:**
+
+.. code-block:: python
+
+    if __name__ == '__main__':
+        main()
+
+最後にimport時の実行避けを入れておきます。
+
+詳細は:doc:`Q1-1の全文解説 <../1_motor/a1-1>` を参照してください。
+
+実行結果
+========
+answerディレクトリ内のファイルを実行してみましょう
+
+.. code-block:: bash
+
+    python a3-5_clock.py
+
+画面にデジタル時計が表示され、動き始めます。
+
+Tips
+========
+
+時刻の取得方法
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**今回学習する項目1: datetime**
+
+23-33行目のget_time()関数では、datatime型を使って時刻を取得しています。
+
+.. code-block:: python
+    
+    import datetime
+
+    dt_now = datetime.datetime.now()
+    print(dt_now)
+
+datetime.datetime.now()で現在の日時が取得でき、下記のような形式で出力が得られます。
+
+.. code-block:: bash
+
+    2020–05–18 16:34:23.174812
+
+datetime型はそのまま日時の差を計算したり、日や時、分など特定の要素のみを抽出できたりなど非常に便利です。
+
+詳細は下記を参照してください。
+
+https://note.nkmk.me/python-datetime-timedelta-measure-time/
+
+|
+:doc:`問題 <q3-3>` へ戻る
+
+:doc:`../4_challenge/main` へ進む

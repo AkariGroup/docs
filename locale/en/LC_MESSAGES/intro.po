@@ -1,0 +1,170 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HSRDocument 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-30 17:26+0900\n"
+"PO-Revision-Date: 2016-09-05 13:20+0900\n"
+"Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/intro.rst:3
+msgid "はじめに"
+msgstr "Preface"
+
+#: ../../source/intro.rst:5
+msgid "HSRに関するマニュアルは2種類あります。 目的に応じて、閲覧するマニュアルを選択してください。"
+msgstr "There are two types of manuals related to the HSR. Please select a manual to read according to your goals."
+
+#: ../../source/intro.rst:8
+msgid "HSRの使い方や設定等について"
+msgstr "About how to use the HSR and its configuration"
+
+#: ../../source/intro.rst:10
+msgid "機体のバージョンによりマニュアルが異なります。"
+msgstr "The manual differs depending on the version of the body of the robot."
+
+#: ../../source/intro.rst:12
+msgid "HSRBユーザマニュアル (本マニュアル)"
+msgstr "HSRB user manual (this manual)"
+
+#: ../../source/intro.rst:13
+msgid "HSRCユーザマニュアル"
+msgstr "HSRC user manual"
+
+#: ../../source/intro.rst:15
+msgid "HSRのソフトウェアについて"
+msgstr "About the HSR software"
+
+#: ../../source/intro.rst:17
+msgid "HSRB、HSRC共通のマニュアルです。"
+msgstr "Manual in common with the HSRB and HSRC."
+
+#: ../../source/intro.rst:19
+msgid "HSR開発マニュアル"
+msgstr "HSR development manual"
+
+#: ../../source/intro.rst:23
+msgid "本マニュアルについて"
+msgstr "About this manual"
+
+#: ../../source/intro.rst:25
+msgid "本マニュアルは、HSRを安全に、快適にご使用いただくためのドキュメントです。 本マニュアルの対象者は、HSRの管理者及び開発者になります。"
+msgstr "This manual is a document to allow you to use the HSR in confort and safety.  The target audience of this manual is the HSR managers and developers."
+
+#: ../../source/intro.rst:28
+msgid "なお、本マニュアルは、Linux(Ubuntu)やROSについての基本的な知識がある方を対象としています。"
+msgstr "In addition, this manual is intended for those with basic knowledge of Linux (Ubuntu) and ROS."
+
+#: ../../source/intro.rst:32
+msgid "本マニュアルの構成"
+msgstr "Contents of this manual"
+
+#: ../../source/intro.rst:34
+msgid "本マニュアルは以下のような構成になっています。"
+msgstr "This manual is organized as follows."
+
+#: ../../source/intro.rst:36
+msgid ":doc:`intro`"
+msgstr ":doc:`intro`"
+
+#: ../../source/intro.rst:38
+msgid "本マニュアルの構成について記載します。"
+msgstr "This section gives an overview of the manual."
+
+#: ../../source/intro.rst:40
+msgid ":doc:`safety/safety`"
+msgstr ":doc:`safety/safety`"
+
+#: ../../source/intro.rst:42
+msgid "HSRの安全について記載します。 HSRの管理者、開発者は必ずお読みください。"
+msgstr ""
+"This section describes the safety procedures for the HSR. If you are the "
+"administrator or the developer of the HSR, please be sure to read this "
+"section."
+
+#: ../../source/intro.rst:45
+msgid ":doc:`security/security`"
+msgstr ":doc:`security/security`"
+
+#: ../../source/intro.rst:47
+msgid "HSRのセキュリティについて記載します。"
+msgstr "This section describes the security procedures for the HSR."
+
+#: ../../source/intro.rst:49
+msgid ":doc:`overview/overview`"
+msgstr ":doc:`overview/overview`"
+
+#: ../../source/intro.rst:51
+msgid "HSRのハードウェア構成について記載します。"
+msgstr "This section describes the hardware configuration of the HSR."
+
+#: ../../source/intro.rst:53
+msgid ":doc:`startup/startup`"
+msgstr ":doc:`startup/startup`"
+
+#: ../../source/intro.rst:55
+msgid "HSRが届く前の事前準備と届いてからのセットアップ手順について記載します。"
+msgstr ""
+"This section describes the preparations to carry out before the HSR "
+"arrives, and the setup procedures for after the HSR arrives."
+
+#: ../../source/intro.rst:57
+msgid ":doc:`howto/howto`"
+msgstr ":doc:`howto/howto`"
+
+#: ../../source/intro.rst:59
+msgid "セットアップ手順、使い方について記載します。"
+msgstr "This section describes the setup procedure, and how to use the HSR."
+
+#: ../../source/intro.rst:61
+msgid ":doc:`troubleshoot/troubleshoot`"
+msgstr ":doc:`troubleshoot/troubleshoot`"
+
+#: ../../source/intro.rst:63
+msgid "HSRのトラブルシュートを記載します。"
+msgstr "This section describes the troubleshooting for the HSR."
+
+#: ../../source/intro.rst:67
+msgid "変更履歴"
+msgstr "Changelog"
+
+#: ../../source/intro.rst:69
+msgid "本マニュアルの変更履歴を示します。"
+msgstr "This section shows the change history of this manual."
+
+#: ../../source/intro.rst:71
+msgid ":doc:`changelog`"
+msgstr ":doc:`changelog`"
+
+#~ msgid ":doc:`development/development`"
+#~ msgstr ":doc:`development/development`"
+
+#~ msgid "HSRのソフトウェアを開発する方法について記載します。"
+#~ msgstr "This section describes how to develop the software for the HSR."
+
+#~ msgid ":doc:`reference/reference`"
+#~ msgstr ":doc:`reference/reference`"
+
+#~ msgid "HSRのAPIリファレンスを記載します。"
+#~ msgstr "This section describes the API reference for the HSR."
+
+#~ msgid ":doc:`qa`"
+#~ msgstr ":doc:`qa`"
+
+#~ msgid "HSRのよくある質問と回答を記載します。"
+#~ msgstr ""
+#~ "This section describes the frequently "
+#~ "asked questions and answers for the "
+#~ "HSR."
+
+#~ msgid ":doc:`notice/notice`"
+#~ msgstr ":doc:`notice/notice`"
+
+#~ msgid "必要な通知事項を記載します。"
+#~ msgstr "This section describes the notice."
+

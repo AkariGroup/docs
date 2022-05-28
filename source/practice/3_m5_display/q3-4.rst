@@ -1,0 +1,109 @@
+.. highlight:: python
+    :linenothreshold: 10
+
+******************************
+Q3-4.気圧計
+******************************
+
+
+問題
+========
+
+**Q3-4.M5のディスプレイに圧力センサの値を表示しましょう。**
+
+ファイルの場所: akari_practice/3_m5_display/question/q3-4_pressure_sensor.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q3-4.M5のディスプレイに圧力センサの値を表示しましょう。
+    ヒント1: 圧力センサの値を返す独自関数 get_pressure() を作成してあります。これを使ってみましょう。
+            返り値として圧力値が文字列で得られます。
+    ヒント2: コメントを参考に、引数を穴埋めしましょう。
+    """
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+    # M5SerialServerのインスタンスを作成する。
+    m5 = M5SerialServer()
+
+    def get_pressure():
+        """
+        圧力センサの値を返す独自関数
+        引数:なし
+        返り値: 圧力値の文字列
+        """
+        result,m5_data = m5.get()
+        if(result):
+            # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
+            return (str(round(m5_data['pressure']/100,2)) + 'hPa')
+        else:
+            # 取得に失敗した場合は、"No data"を返す。
+            return "No data"
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+        # M5のディスプレイの背景色を黒にする
+        m5.set_display_color("black")
+
+        ### ここから問題  ###
+        while(True):
+            # 表示する圧力センサ値は、独自関数を呼び出して取得する。
+            text = """(圧力センサの値を返す独自関数を呼ぶ)"""
+            # 左右表示位置は真中揃え
+            pos_x = -999
+            # 上下表示位置は中央揃え
+            pos_y = -999
+            # 文字サイズは3にする
+            size = """(文字サイズを指定)"""
+            # 文字色は白
+            text_color = """(文字色を指定)"""
+            # 背景色は黒
+            back_color = """(背景色を指定)"""
+            # 背景をリセットする
+            refresh = True
+            # set_display_textを実行
+            result = """(文字をM5に表示する処理)"""
+            # 1秒停止
+            time.sleep(1)
+        ### ここまで  ###
+
+
+    if __name__ == '__main__':
+        main()
+
+
+
+Q3-3までのディスプレイ表示とQ2でのM5のデータ取得を組み合わせて、気圧を取得してディスプレイに表示する圧力計を作ってみましょう。
+
+ヒント
+========
+
+今回は、 **実装された関数を呼び出す方法** も学習しましょう。
+
+18-30行目にget_pressure()という関数がすでに実装されています。こちらは、Q2で学習したm5.get()を使って圧力センサの値を取得し、テキストに変換して返してくれる関数です。
+
+この関数を42行目で呼び出して、返ってきたテキストをQ3-2と同じようにディスプレイに表示していきます。
+
+今回は56行目でset_display_text()関数の実行部分も書く必要があります。Q3-2を参考に書いてみましょう。
+
+答え合わせ
+================
+
+完成したら実行してみましょう
+
+.. code-block:: bash
+
+   python q3-4_pressure_sensor.py
+
+画面に気圧の値が表示されていればOKです。
+
+|
+:doc:`回答 <a3-4>` へ進む

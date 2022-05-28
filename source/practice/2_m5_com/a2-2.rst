@@ -1,0 +1,152 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+A2-2.GPIO入力の取得(回答編)
+******************************
+
+回答
+========
+
+**Q2-1.テストヘッドのdin0ボタン入力があったときにコマンドラインに「din0がONです」と表示されるようにしましょう。**
+
+以下はコード例です。問題文を満たしていれば、これと同じでなくても問題ありません。
+
+ファイルの場所: akari_practice/2_m5_com/answer/a2-2_gpio_input.py
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+
+    """
+    Q2-2.テストヘッドのdin0ボタン入力があったときにコマンドラインに「din0がONです」と表示されるようにしましょう
+    ヒント1: Q1を参考にしましょう。'button_a'の代わりに'din0'の値を使います。
+    """
+
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    from m5serial_server_py.m5serial_server_py import M5SerialServer
+    # sleep関数を使うためにtimeのライブラリをインポートする。
+    import time
+
+    def main(args=None):
+        """
+        メイン関数
+        """
+
+        # M5SerialServerのインスタンスを作成する。
+        m5 = M5SerialServer()
+
+        ### ここから問題  ###
+        while(True):
+            result, m5_data = m5.get()
+            if(result):
+                if(m5_data['din0']):
+                    print("din0がONです")
+            time.sleep(0.1)
+        ### ここまで  ###
+
+
+    if __name__ == '__main__':
+        main()
+
+
+
+
+解説
+========
+**23行目:**
+
+.. code-block:: python
+
+    while(True):
+
+M5の情報を取得→din0の判定をループするので、while文を使います。終了するまで繰り返し続けるので、条件式はTrueです。
+
+|
+**24行目:**
+
+.. code-block:: python
+
+    result, m5_data = m5.get()
+
+Q2-1と同様、20行目でm5という名前でM5SerialServer()のインスタンスを作成しています。
+
+この場合、M5SerialServer()に含まれる関数は **m5.関数名** という形で呼び出します。
+
+使用する関数は、Q2-1と同様get()関数です。
+
+
+|
+**25行目:**
+
+.. code-block:: python
+
+    if(result):
+
+結果が取得しているかの判定を入れます。
+
+resultがTrueの場合のみ、m5_dataの中身を判定するようにします。
+
+
+|
+**26-27行目:**
+
+.. code-block:: python
+
+    if(m5_data['din0']):
+        print("din0がONです")
+
+m5_data['din0']にdin0の値が格納されています。din0がHiならTrue、LoならFalseです。
+
+if文を用いて、この値がTrueの時のみ、"din0がONです"というメッセージをprintするようにします。
+
+|
+**28行目:**
+
+.. code-block:: python
+
+    time.sleep(0.1)
+
+42行目以降はループしており、M5のデータを取得→ボタンAが押されているか判定する、という処理を繰り返しています。
+
+ループの最後にスリープを入れて、ループ速度の調整をしています。Q2-1と同じく0.1秒としていますが、時間を色々変えて試してみるといいでしょう。
+
+
+実行結果
+========
+answerディレクトリ内のファイルを実行してみましょう
+
+.. code-block:: bash
+
+    python a2-2_gpio_input.py
+
+テストヘッドのdin0ボタンを押した時に、下記のようにコマンドラインに出力されます。
+
+::
+
+    din0がONです
+
+
+Tips
+========
+
+その他の入力を取得するには？
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+din1、ain0も同様に取得できます。28行目以下に下記を追加してみましょう。
+
+.. code-block:: python
+
+    if(m5_data['din1']):
+        print("din1がONです")
+    print("ain0の値は" + str(m5_data['ain0']) + "です")
+
+din1,ain0のステータスも同時に取得できるようになります。
+
+ain0はアナログ入力なので、0-255の数値が返ってきます。今回は、毎回ain0の値を出力するようにしています。
+
+|
+:doc:`問題 <q2-2>` へ戻る
+
+:doc:`q2-3` へ進む

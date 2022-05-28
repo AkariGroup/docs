@@ -1,0 +1,10 @@
+################
+AKARIの仕様
+################
+
+.. toctree::
+   :maxdepth: 2
+
+   hard_spec
+   soft_base
+   soft_base_noros

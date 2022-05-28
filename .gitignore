@@ -1,0 +1,7 @@
+*~
+*.mo
+*.pickle
+*.doctree
+_build/
+venv/
+

@@ -1,0 +1,90 @@
+.. highlight:: python
+   :linenothreshold: 10
+
+******************************
+Q1-3.モータ位置の取得
+******************************
+
+
+問題
+========
+
+**Q1-3. AKARIが動いたあとの、現在位置を取得してコマンドラインに表示しましょう。**
+
+ファイルの場所: akari_practice/1_motor/question/q1-3_get_position.py
+
+.. code-block:: python
+
+   #!/usr/bin/env python
+   # -*- coding: utf-8 -*-
+
+   """
+   Q1-3. AKARIが動いたあとの、現在位置を取得してコマンドラインに表示しましょう。
+   ヒント1: get_present_position (list(str) joint_name_list)という関数を使います。
+            Q2で使っているので、参考にしてください。
+   """
+
+   # sleep関数を使うためにtimeのライブラリをインポートする。
+   import time
+   # モータ制御の際はakari_controllerのライブラリをインポートする
+   from akari_controller.akari_controller import AkariController
+
+   def main(args=None):
+      """
+      メイン関数
+      """
+
+      # AkariControllerのインスタンスを作成する。
+      akari = AkariController()
+      # 両方のモータ速度を5rad/sに変更する。
+      akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
+                              "values": [5, 5]})
+      # AKARIを目標位置に移動する。
+      akari.set_goal_position({"joint_names": ["pan", "tilt"],
+                           "values": [-0.5, 0.2]})
+      # 1秒待つ
+      time.sleep(1)
+      ### ここから問題  ###
+      """(処理を書く)"""
+      ### ここまで  ###
+
+
+   if __name__ == '__main__':
+      main()
+
+
+ヘッドが動いたあとのモータの現在位置を取得します。
+
+
+ヒント
+========
+**今回使用するAKARIライブラリ1: get_present_position()**
+
+関節位置を取得するには **get_present_position()** を使います。
+
+   .. function:: list(float) **get_present_position** (list(str) joint_name_list)
+   | 関節の現在位置を取得。
+   | - **引数**
+   |   `list(str) joint_name_list`:関節名のリスト
+   | - **返り値**
+   |   `list(float) data_list`: joint_name_listの要素に応じた現在位置のリスト。単位はrad。
+
+この関数を使うと、現在の関節角度が取得できます。
+
+返り値のリストは引数の関節名に応じたものが返ってきます。今回は２軸両方の値が取得したいので、両方の名前をリストに入れて渡します。
+
+取得した値をコマンドラインにプリントします。
+
+同じ方法はQ1-2でも使われていますので、そちらも参考にしてください。
+
+答え合わせ
+================
+完成したら実行してみましょう
+
+.. code-block:: bash
+
+   python q1-3_get_position.py
+
+AKARIのヘッドが動いたあとに、コマンドラインに現在の関節角が表示されたら成功です。
+
+:doc:`回答 <a1-2>` へ進む

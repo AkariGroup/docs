@@ -1,0 +1,69 @@
+***************
+3. 学習を行う
+***************
+
+次に、先程作成したアノテーション付き画像を学習させ、学習結果のモデルファイルを出力します。
+学習はGoogle Colab上で行います。
+
+=============================
+Google Colabについて
+=============================
+
+| Google Colab は、ブラウザから Python を実行できるサービスです。Googleのサーバ上で動作するもので、Googleアカウントがあれば基本無料で使えます。
+| 特徴はGPU環境が用意されていることで、これによって自分で環境を用意しなくても、高速な学習を行うことができます。
+
+=============================
+学習前の準備
+=============================
+
+| Google Colabでの学習をするためには、:doc:`annotation` で作成した画像とアノテーションファイルをGoogleドライブに保存する必要があります。
+| 下記の手順に沿って実行してください。
+
+1. Googleドライブをブラウザから開きます。
+2. Googleドライブ上でマイドライブを右クリックし、「新しいフォルダ」を選択し `object_detection` というフォルダを作ります。
+3. `object_detection` の中に `images` というフォルダを作ります。
+4. `images` の中に `dataset` というフォルダと `test` というフォルダを作ります。
+5. `dataset` フォルダの中に、:doc:`annotation` で準備した画像ファイル(.jpg)とアノテーションファイル(.xml)を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、dataset直下にまとめて置きます。
+6. `test` フォルダの中に、テスト用の画像を数枚入れます。こちらはアノテーションファイルは必要ありません。学習結果の確認のための最終テストをするのに用います。
+
+.. image:: ../images/google_drive_dir.jpg
+   :scale: 70%
+
+| 以上でGoogleドライブの準備は完了です。
+
+=============================
+Google Colabで学習をする
+=============================
+..
+   TODO(Yamamoto):
+   git アカウントがオープンソース化してからは、下記リンクからのアクセスに差し替え。
+   .. raw:: html
+
+      <h3>学習用リンク <a href="https://colab.research.google.com/github/AkariGroup/akari_object_detection/blob/main/3_training/training_mobilenet_akari.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></h2>
+
+   | 学習は上の `Open in colab` のリンク先からGoogle Colabを開いて行います。
+
+| 下記リンクからGoogle Colabにアクセスします。
+| https://colab.research.google.com/?hl=ja
+| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/training_mobilenet_akari.ipynb` を選択します。
+
+.. image:: ../images/colab_open.jpg
+
+| 後は順番にコードを実行していくことで、学習済みのOAK-D用モデル(.blob)とラベルファイル(.json)をダウンロードすることができます。
+
+.. image:: ../images/colab_play.jpg
+
+| 手順はリンク先のGoogle Colab内に書かれているので、それに沿ってください。
+
+=============================
+学習モデルファイルを配置する
+=============================
+
+| ダウンロードしたモデルファイルとラベルファイルは、下記の場所にコピーします。
+| モデルファイル(.blob): `akari_main/src/depthai_sample/object_recognition/models`
+| ラベルファイル(.json): `akari_main/src/depthai_sample/object_recognition/configs`
+| 以上で物体認識モデルの準備は完了です。次はいよいよ物体認識を実行してみましょう。
+
+:doc:`testing` へ進む
+
+:doc:`annotation` へ戻る

@@ -1,0 +1,1301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Toyota Motor Corporation
+# This file is distributed under the same license as the HSRDocument
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HSRDocument 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-13 14:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/startup/startup.rst:3
+msgid "スタートアップガイド"
+msgstr "Start-up Guide"
+
+#: ../../source/startup/startup.rst:7
+msgid "お使いになる国・地域によりご確認いただくこと"
+msgstr "Depending on the country or region of use, there are things to verify"
+
+#: ../../source/startup/startup.rst:12
+msgid "搭載無線機器の利用について"
+msgstr "About the use of the onboard wireless device"
+
+#: ../../source/startup/startup.rst:14
+msgid ""
+"お使いいただいているHSRは研究開発段階のプロトタイプであり、研究開発を目的とした共同研究契約に基づいて提供しております。 "
+"現段階では市販製品に対して各国で要求される基準に適合しておりません。 "
+"そのため、本ロボットには以下の無線機器が搭載されていますが、出荷時には機能をOFFにしています。"
+msgstr ""
+"The HSR that you are using is at the research prototype stage and "
+"contributions are made based on the collaborative investigation contract "
+"for the purpose of research and development. The HSR does not meet the "
+"standards required for a commercial product in all countries at this "
+"stage. Therfore, the following radio devices are installed on this robot,"
+" but the function is turned off at the time of shipment. "
+
+#: ../../source/startup/startup.rst:18
+msgid "Wi-Fi 無線LAN（子機）"
+msgstr "Wi-Fi wireless LAN (adapter)"
+
+#: ../../source/startup/startup.rst:20
+msgid "メーカ：インテル（株）（Intel Corporation）"
+msgstr "Maker: Intel Corporation"
+
+#: ../../source/startup/startup.rst:22
+msgid "製品名：7260HMW"
+msgstr "Product name: 7260HMW"
+
+#: ../../source/startup/startup.rst:24
+msgid ""
+"製品情報： http://www.intel.com/content/www/us/en/wireless-products/dual-band-"
+"wireless-ac-7260-bluetooth-brief.html"
+msgstr ""
+"Product information： http://www.intel.com/content/www/us/en/wireless-"
+"products/dual-band-wireless-ac-7260-bluetooth-brief.html"
+
+#: ../../source/startup/startup.rst:27
+msgid "無線停止ボタン用モジュール"
+msgstr "Wireless stop button module"
+
+#: ../../source/startup/startup.rst:29
+msgid "メーカ：（株）サーキットデザイン（Circuit Design, Inc.）"
+msgstr "Maker: Circuit Design, Inc."
+
+#: ../../source/startup/startup.rst:31
+msgid "製品名：NK-2.4Y"
+msgstr "Product name: NK-2.4Y"
+
+#: ../../source/startup/startup.rst:33
+msgid "製品情報： http://www.cdt21.com/products/telecommand/nk-24y/"
+msgstr "Product information： http://www.cdt21.com/products/telecommand/nk-24y/"
+
+#: ../../source/startup/startup.rst:36
+msgid "上記機器の利用においては各国の法規制に従う必要があります。下記に当社が調査した範囲で得られた情報をまとめています。これらはあくまで参考情報ですので、お使いになる方の責任において各国の法令を遵守するようお願いいたします。"
+msgstr ""
+"It is necessary to obey the laws and regulations of each country with "
+"regards to the use of the devices mentioned above.  In the following we "
+"compile the information that was obtained to the degree that TOYOTA "
+"investigated.  Because they are just reference imformation, it is the "
+"user's responsibility to please obey the laws and regulations of each "
+"country."
+
+#: ../../source/startup/startup.rst:38
+msgid "日本国内"
+msgstr "Inside Japan"
+
+#: ../../source/startup/startup.rst:40 ../../source/startup/startup.rst:45
+msgid "問題なく利用可能。"
+msgstr "Can be used without any problems."
+
+#: ../../source/startup/startup.rst:43
+msgid "米国内"
+msgstr "Inside the United States of America"
+
+#: ../../source/startup/startup.rst:48
+msgid "欧州経済地域内"
+msgstr "European Economic Area"
+
+#: ../../source/startup/startup.rst:50
+msgid "EU無線機器指令2014/53/EU により研究開発施設内での利用が可能。"
+msgstr ""
+"Use in research and development facilities is allowed by the EU Radio "
+"Equipment Directive 2014/53/EU."
+
+#: ../../source/startup/startup.rst:52 ../../source/startup/startup.rst:63
+msgid "（詳細情報）"
+msgstr "(Detailed information)"
+
+#: ../../source/startup/startup.rst:54
+msgid "下記のAnnex I の4を参照。"
+msgstr "Reference Annex I of 4 below."
+
+#: ../../source/startup/startup.rst:56
+msgid ""
+"http://eur-lex.europa.eu/legal-"
+"content/EN/TXT/PDF/?uri=OJ:JOL_2014_153_R_0002&from=EN"
+msgstr ""
+
+#: ../../source/startup/startup.rst:59
+msgid "豪州内"
+msgstr "Inside Australia"
+
+#: ../../source/startup/startup.rst:61
+msgid "ライセンスの取得により利用可能。"
+msgstr "Can be used with the acquisition of a license."
+
+#: ../../source/startup/startup.rst:65
+msgid "http://www.acma.gov.au/theACMA/scientific-licence-guidelines"
+msgstr ""
+
+#: ../../source/startup/startup.rst:68
+msgid "その他"
+msgstr "Others"
+
+#: ../../source/startup/startup.rst:70
+msgid "上記以外の国、あるいは搭載無線機器は利用できないと思われる場合は、下記のような別の手段によりHSRを運用してください。"
+msgstr ""
+"If it is thought that you are in a country outside of the ones listed "
+"above or the onboard wireless device cannot be used, then please use the "
+"HSR according to the following kinds of different procedures."
+
+#: ../../source/startup/startup.rst:72
+msgid ""
+"Wi-Fi無線LAN（子機）については、搭載無線機器を利用せず、個別に各国の規制に適合した機器を搭載してください。搭載方法は "
+":ref:`using_external_wifi` を参照してください。"
+msgstr ""
+"About the Wi-Fi wireless LAN (adapter), please, without using the onboard"
+" wireless device, equip the HSR with a device in accordance with the "
+"regulation of each country individually.  For the deployment method, "
+"please refer to :ref:`using_external_wifi`."
+
+#: ../../source/startup/startup.rst:74
+msgid "無線停止ボタンについては、無線緊急停止切替スイッチをOFFのままとし、利用はお控えください。緊急停止においては、ロボットに固定されている緊急停止ボタン（HSRの背面カバーの上部に設置）のみをご利用ください。"
+msgstr ""
+"About the wireless stop button, please keep the wireless stop button "
+"power switch off and refrain from using it.  About the emergency stop "
+"button, please use only the emergency stop button which is fixed to the "
+"robot (it is on the upper part of the back cover of the HSR)."
+
+#: ../../source/startup/startup.rst:76
+msgid "上記を理解された上で搭載無線機器を利用される場合には、:ref:`wifi_on_method` を参照してください。"
+msgstr ""
+"In case an onboard wireless device is used after the above was "
+"understood, please refer to :ref:`wifi_on_method`."
+
+#: ../../source/startup/startup.rst:82
+msgid "HSRが届くまでの事前準備"
+msgstr "Preparations before the HSR arrives"
+
+#: ../../source/startup/startup.rst:84
+msgid "HSRが届く前に、事前にご用意いただく必要がある物や環境について記載します。"
+msgstr ""
+"We explain the things and environment that are necessary to prepare "
+"before the HSR arrives."
+
+#: ../../source/startup/startup.rst:88
+msgid "ご用意していただく必要があるもの"
+msgstr "Things that you need prepare"
+
+#: ../../source/startup/startup.rst:90
+msgid "HSRをご利用いただくにあたり、以下の物をご用意いただく必要があります。"
+msgstr "To use the HSR it is necessary to prepare the following things."
+
+#: ../../source/startup/startup.rst:92
+msgid "HSRが届くまでにご用意いただきますようお願いします。"
+msgstr "Please have them prepared before the HSR arrives."
+
+#: ../../source/startup/startup.rst:94
+msgid "DHCPサーバ"
+msgstr "DHCP server"
+
+#: ../../source/startup/startup.rst:95
+msgid "無線ネットワーク環境（推奨：IEEE802.11ac規格対応、WPS機能付き）"
+msgstr ""
+"Wireless network environment (recommendation: Corresponding IEEE802.11ac "
+"standard with WPS function included)"
+
+#: ../../source/startup/startup.rst:96
+msgid ""
+"`NEMA 5-15P "
+"<https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#NEMA_5-15_grounded_.28Type_B.29>`_"
+" 用のコンセントまたは変換プラグ（充給電器がこの規格を使用しています）"
+msgstr ""
+"Electrical outlet or conversion plug for `NEMA 5-15P "
+"<https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#NEMA_5-15_grounded_.28Type_B.29>`_"
+" (The charging unit uses this standard.)"
+
+#: ../../source/startup/startup.rst:97
+msgid "開発PC"
+msgstr "Development PC"
+
+#: ../../source/startup/startup.rst:101
+msgid "ネットワーク構成に関しては、 :doc:`/howto/network_settings` を参照ください。"
+msgstr ""
+"Regarding the composition of the network, please refer to "
+":doc:`/howto/network_settings`."
+
+#: ../../source/startup/startup.rst:102
+msgid "開発PCの推奨スペックに関しては、 :doc:`/howto/pc_install` を参照ください。"
+msgstr ""
+"Regarding the recommended specifications of a development PC, please "
+"refer to :doc:`/howto/pc_install`."
+
+#: ../../source/startup/startup.rst:107
+msgid "事前に確認いただく内容"
+msgstr "Details that should be confirmed beforehand"
+
+#: ../../source/startup/startup.rst:109
+msgid "HSRをご利用いただくにあたり、 :doc:`/safety/safety` をご一読ください。"
+msgstr "Before using the HSR, please read :doc:`/safety/safety`."
+
+#: ../../source/startup/startup.rst:111
+#, python-format
+msgid ""
+"また、HSRが届いてからセットアップまでを動画にした `HSR動画マニュアル "
+"<https://share.hsr.io/index.php/apps/files/?dir=%2Fshare_tmc_common%2FHSR_Manuals%2FJapanese%2F%E5%8B%95%E7%94%BB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB>`_"
+" もご用意しております。"
+msgstr ""
+"In addition, we have prepared the `HSR video manual "
+"<https://share.hsr.io/index.php/apps/files/?dir=%2Fshare_tmc_common%2FHSR_Manuals%2FEnglish%2Fvideo_manual>`_"
+" which covers the HSR procedures from after the HSR arrives to its setup."
+
+#: ../../source/startup/startup.rst:115
+msgid "HSRが届く前にできること"
+msgstr "Things that can be done before the HSR arrives"
+
+#: ../../source/startup/startup.rst:117
+msgid "実機が手元に届く前でも、シミュレータ内でHSRを動かすことができます。"
+msgstr "You can move the HSR in the simulator even before the real robot arrives."
+
+#: ../../source/startup/startup.rst:119
+msgid ":doc:`/howto/pc_install` の手順に従ってシミュレータを使用できる環境を整えます。"
+msgstr ""
+"Prepare the environment for using the simulator by following the "
+"procedures in :doc:`/howto/pc_install`."
+
+#: ../../source/startup/startup.rst:121
+msgid "HSR開発マニュアルを順番に進めていくことで、HSRの操作方法やHSRを使用してできることを学ぶことができます。"
+msgstr ""
+"By carrying out the procedures in HSR development manual step-by-step, "
+"you can learn the operating method of the HSR as well as what you can do "
+"with the HSR."
+
+#: ../../source/startup/startup.rst:127
+msgid "HSRが届いてからのセットアップ"
+msgstr "Setup after the HSR arrives"
+
+#: ../../source/startup/startup.rst:129
+msgid "HSRが届いたら以下の手順に従いセットアップを実施してください。"
+msgstr ""
+"When the HSR arrives, please carry out the setup according to the "
+"following procedures."
+
+#: ../../source/startup/startup.rst:132
+msgid "運搬箱の移動"
+msgstr "Transportation of the transport box"
+
+#: ../../source/startup/startup.rst:135
+msgid "運搬箱の取り扱いについて"
+msgstr "Transport box handling"
+
+#: ../../source/startup/startup.rst:137
+msgid "運搬箱の取り扱いの際には以下の点にご注意ください。"
+msgstr ""
+"When handling the transport box, please be careful about the following "
+"points."
+
+#: ../../source/startup/startup.rst:141
+msgid "守っていただけない場合、HSRがご利用いただけなくなる恐れがあります。"
+msgstr "If you cannot follow these rules, the HSR might become unusable."
+
+#: ../../source/startup/startup.rst:143
+msgid "HSRを運搬箱に入れた状態で決して横向きにしないでください。"
+msgstr ""
+"Please, never place the transport box on its side while the HSR is inside"
+" it."
+
+#: ../../source/startup/startup.rst:145
+msgid "運搬箱を下ろす際には、なるべく振動を与えないよう下ろしてください。"
+msgstr ""
+"When lowering the transport box, please, as much as possible, do so "
+"without vibration."
+
+#: ../../source/startup/startup.rst:149
+msgid "移動方法"
+msgstr "Transportation method"
+
+#: ../../source/startup/startup.rst:151
+msgid "運搬箱を移動させる必要がない場合は、 :ref:`open_transport_box` へ進んでください。"
+msgstr ""
+"If the transport box does not need to be transported, please advance to  "
+":ref:`open_transport_box`."
+
+#: ../../source/startup/startup.rst:154
+msgid "運搬箱のローラーで移動"
+msgstr "Transport by rolling the transport box on its rollers"
+
+#: ../../source/startup/startup.rst:156
+msgid "運搬箱の取っ手を持ち、運搬箱下部に足を掛け、足を支点に運搬箱をゆっくりと手前に傾けます。"
+msgstr ""
+"Take the handle of the transport box, then after forming a fulcrum by "
+"placing a foot at the bottom of the box, slowly tilt the box up onto the "
+"rollers."
+
+#: ../../source/startup/startup.rst:163
+msgid "傾けすぎると運搬箱が倒れますのでご注意ください。"
+msgstr "Please note that if the box is tilted too far that it will fall."
+
+#: ../../source/startup/startup.rst:165
+msgid "運搬箱のローラーを転がして搬送します。"
+msgstr "Transport the transport box by rolling it on its rollers."
+
+#: ../../source/startup/startup.rst:177
+msgid "目的の場所に着いたら、運搬箱下部に足を掛け、足を支点に運搬箱を静かに下ろします。"
+msgstr ""
+"When you arrive at the target location, form a fulcrum by placing a foot "
+"at the bottom of the box, then gently lower the box by tilting forward."
+
+#: ../../source/startup/startup.rst:181
+msgid "勢いよく下ろすと、ロボットの故障や運搬箱の破損の原因になりますので、ご注意ください。"
+msgstr ""
+"Please note that if it is lowered to the floor suddenly, it could cause "
+"failure of the robot or damage to the transport box."
+
+#: ../../source/startup/startup.rst:188
+msgid "運搬箱を台車に乗せて移動"
+msgstr "Transport the the transport box on a cart"
+
+#: ../../source/startup/startup.rst:192
+msgid "必ず2人で作業を行ってください。"
+msgstr "By all means, please work as a pair."
+
+#: ../../source/startup/startup.rst:193
+msgid "必ずロック付き台車を使用してください。"
+msgstr "By all means, please use a cart with lockable casters."
+
+#: ../../source/startup/startup.rst:195
+msgid "運搬箱の左右に1人ずつ立ち、運搬箱の側面に付いている取っ手を開きます。"
+msgstr ""
+"One person stands on the left side of the transport box and the other on "
+"the right side, then open the handles that are attached to the sides of "
+"the transport box."
+
+#: ../../source/startup/startup.rst:197
+msgid "取っ手を握り、2人でタイミングを合わせて運搬箱を持ち上げます。"
+msgstr "Grasp the handles and, together as a pair, lift the transport box."
+
+#: ../../source/startup/startup.rst:199
+msgid "台車の上まで移動し、運搬箱を静かに下ろします。"
+msgstr "Move the transport box to the cart, and calmly lower it."
+
+#: ../../source/startup/startup.rst:201
+msgid "目的の場所まで台車を移動させます。"
+msgstr "Move the cart to the target location."
+
+#: ../../source/startup/startup.rst:203
+msgid "1〜2と同様の手順で台車から運搬箱を持ち上げ、静かに下ろします。"
+msgstr ""
+"Lift the transport box from the cart and calmly lower it in the same way "
+"as in steps 1 through 2."
+
+#: ../../source/startup/startup.rst:209
+msgid "運搬箱の外蓋の開け方"
+msgstr "How to open outer lid of the transport box"
+
+#: ../../source/startup/startup.rst:211
+msgid "運搬箱には全部で8箇所のロック金具があります。"
+msgstr "There are 8 lock brackets in all on the transport box."
+
+#: ../../source/startup/startup.rst:214
+msgid "運搬箱の外蓋のロック金具を開ける。"
+msgstr "Open the transport box's outer lid's lock brackets."
+
+#: ../../source/startup/startup.rst:228
+msgid "以下のような2種類のロック金具があります。"
+msgstr "There are 2 types of lock brackets as shown below."
+
+#: ../../source/startup/startup.rst:230
+#, python-format
+msgid ""
+"開け方が分かりにくい場合は、`動画マニュアル "
+"<https://share.hsr.io/index.php/apps/files/?dir=%2Fshare_tmc_common%2FHSR_Manuals%2FJapanese%2F%E5%8B%95%E7%94%BB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB>`_"
+" の「起動準備編」をご覧ください。"
+msgstr ""
+"If it is difficult to understand how to open the lock brackets, then "
+"please refer to \"Startup_Preparation\" in `the video manual "
+"<https://share.hsr.io/index.php/apps/files/?dir=%2Fshare_tmc_common%2FHSR_Manuals%2FEnglish%2Fvideo_manual>`_"
+" ."
+
+#: ../../source/startup/startup.rst:241
+msgid "外蓋を取り外したら床に置きます。"
+msgstr "When you take off the outer lid, place it on the floor."
+
+#: ../../source/startup/startup.rst:245
+msgid "同梱物の確認"
+msgstr "Item check-list"
+
+#: ../../source/startup/startup.rst:247
+msgid "運搬箱の外蓋に、以下の用品が入っていることを確認してください。"
+msgstr ""
+"Please check that the following items are in the outer lid of the "
+"transport box."
+
+#: ../../source/startup/startup.rst:252
+msgid "用品名"
+msgstr "Item name"
+
+#: ../../source/startup/startup.rst:253
+msgid "写真"
+msgstr "Picture"
+
+#: ../../source/startup/startup.rst:254
+msgid "説明"
+msgstr "Description"
+
+#: ../../source/startup/startup.rst:255
+msgid "無線停止ボタン"
+msgstr "Wireless stop button"
+
+#: ../../source/startup/startup.rst:0
+msgid "ロボットのスタートとストップを無線で行うスイッチです。"
+msgstr "The switch that starts and stops the robot wirelessly."
+
+#: ../../source/startup/startup.rst:262
+msgid "充給電器"
+msgstr "Charging unit"
+
+#: ../../source/startup/startup.rst:0
+msgid "ロボットの充給電を行う装置です。"
+msgstr "The device for the power supply and charging of the robot."
+
+#: ../../source/startup/startup.rst:0
+msgid "ご使用の充給電器を入れてください。"
+msgstr ""
+"Please insert the corresponding charging unit for the robot you are using"
+" into the transport box."
+
+#: ../../source/startup/startup.rst:274
+msgid "キャリブレーション用マーカ冶具"
+msgstr "Calibration marker jig"
+
+#: ../../source/startup/startup.rst:0
+msgid "カメラのキャリブレーションに必要なマーカ冶具です。"
+msgstr "Marker jig necessary for camera calibration."
+
+#: ../../source/startup/startup.rst:281
+msgid "TK1用シリアルケーブル"
+msgstr "TK1 serial cable"
+
+#: ../../source/startup/startup.rst:0
+msgid "TK1とシリアル通信を行うために必要なケーブルです。"
+msgstr "Cable necessary for TK1 serial communication."
+
+#: ../../source/startup/startup.rst:0
+msgid "最初から同梱されていない場合もあります。"
+msgstr "From the beginning this may not always be included."
+
+#: ../../source/startup/startup.rst:289
+msgid "予備ハンドグリップ"
+msgstr "Spare hand grip"
+
+#: ../../source/startup/startup.rst:0
+msgid "ハンドグリップが破損した際に交換するための予備品です。"
+msgstr "Replacement spare part in case the hand grip is damaged."
+
+#: ../../source/startup/startup.rst:296
+msgid "予備吸引パッド"
+msgstr "Spare suction pad"
+
+#: ../../source/startup/startup.rst:0
+msgid "吸引パッドが破損した際に交換するための予備品です。"
+msgstr "Replacement spare part in case the suction pad is damaged."
+
+#: ../../source/startup/startup.rst:303
+msgid "マニュアル"
+msgstr "Manual"
+
+#: ../../source/startup/startup.rst:0
+msgid "HSRの安全マニュアルです。"
+msgstr "HSR Safety Information."
+
+#: ../../source/startup/startup.rst:311
+msgid "それぞれの用品は、以下の位置に収納できます。"
+msgstr "Each item can be stored in the following locations."
+
+#: ../../source/startup/startup.rst:325
+msgid "各用品入れは面ファスナーで固定されています。 用品の出し入れがしにくい場合は用品入れを取り外してご利用ください。"
+msgstr ""
+"Each part in the container is stabilized with hook and loop fasteners.  "
+"If taking the parts out or putting them in is difficult to do, please "
+"remove the part container and use it."
+
+#: ../../source/startup/startup.rst:329
+msgid "外蓋は運搬箱の取っ手部分に引っ掛けることができます。"
+msgstr "You can hang the outer lid on the handle part of the transport box."
+
+#: ../../source/startup/startup.rst:333
+msgid "HSRを運搬箱から出す"
+msgstr "Take the HSR out of the transport box"
+
+#: ../../source/startup/startup.rst:335
+msgid "以下の手順でHSRを運搬箱から取り出します。"
+msgstr "Take the HSR out of the transport box using the following procedures."
+
+#: ../../source/startup/startup.rst:339
+msgid "内蓋の面ファスナーを外す。"
+msgstr "Remove the inner lid's hook and loop fasteners."
+
+#: ../../source/startup/startup.rst:351
+msgid "アーム、ハンド、HSRを固定しているベルトを外し、クッションを取り出す。"
+msgstr ""
+"Remove the belts that secure the arm, hand, and HSR and take out the "
+"cushion."
+
+#: ../../source/startup/startup.rst:364
+msgid "台車をゆっくりと手で押して、HSRを取り出してください。"
+msgstr "Push the base slowly by hand, then take the HSR out of the box."
+
+#: ../../source/startup/startup.rst:0
+msgid "取り出しの際にHSRが倒れないよう、HSR上部を支えながら取り出してください。"
+msgstr ""
+"While taking the HSR out of the box, support the HSR's head so that the "
+"HSR will not fall."
+
+#: ../../source/startup/startup.rst:0
+msgid "また、HSRの頭部マイクが運搬箱に擦れないように、昇降を押し下げながら取り出してください。"
+msgstr ""
+"In addition, please, while pushing down on the lifting axis, take it out "
+"so that the HSR's head microphone does not rub against the transport box."
+
+#: ../../source/startup/startup.rst:374
+msgid "HSRの首を下に向け、首固定用のクッションを取り除きます。取り除いた首固定用クッションは運搬箱に入れて保管してください。"
+msgstr ""
+"Point the HSR's neck downward and remove the neck stabilization cushion."
+"  Please place the neck stabilization cushion into the transport box for "
+"safekeeping."
+
+#: ../../source/startup/startup.rst:384
+msgid "HSRの設定および起動準備"
+msgstr "HSR settings and start-up preparations"
+
+#: ../../source/startup/startup.rst:386
+msgid "HSRの開発に必要なネットワークと、起動の準備ついて説明します。"
+msgstr ""
+"We explain about the necessary network and start-up prepararions for the "
+"HSR development."
+
+#: ../../source/startup/startup.rst:390
+msgid "バッテリの取り付け"
+msgstr "Battery installation"
+
+#: ../../source/startup/startup.rst:392
+msgid ""
+"日本以外でHSRをご利用いただく場合、航空機で輸送するためにバッテリを取り外した状態で出荷しています。 "
+":doc:`/howto/desorption_battery` の手順に従って、バッテリの取り付けを行ってください。"
+msgstr ""
+"When you use the HSR outside of Japan, we ship the HSR with the battery "
+"removed for transport by plane.  Please perform battery installation by "
+"following the procedures in :doc:`/howto/desorption_battery`."
+
+#: ../../source/startup/startup.rst:397
+msgid "HSRの電源を入れる"
+msgstr "Turn on the HSR's power"
+
+#: ../../source/startup/startup.rst:399
+msgid "無線停止ボタンと充給電器を使用しますのでご準備ください。"
+msgstr ""
+"Because we will use the wireless stop button and the charging unit, "
+"please have them ready."
+
+#: ../../source/startup/startup.rst:0
+msgid "電源ケーブルには以下のような危険があります。"
+msgstr "There are the following kinds of dangers with a power cable."
+
+#: ../../source/startup/startup.rst:0
+msgid "取り扱いに注意してください。"
+msgstr "Please handle with care."
+
+#: ../../source/startup/startup.rst:406
+msgid "電源ケーブルが体に巻きつき、解くことができず窒息する。"
+msgstr ""
+"The power cable coils itself around a person's body and the person "
+"inevitablely suffocates."
+
+#: ../../source/startup/startup.rst:408
+msgid "電源ケーブルにつまづき、人が転倒する。"
+msgstr "A person trips over the power cable and falls down."
+
+#: ../../source/startup/startup.rst:410
+msgid "電源ケーブルに引っ張られ、ロボットや環境物が転倒する。"
+msgstr ""
+"Pulled by the power cable, the robot or something in the environment "
+"falls down."
+
+#: ../../source/startup/startup.rst:412
+msgid "電源ケーブルに力が加わり、コネクタや電源ケーブルが破損する。"
+msgstr ""
+"Power is added to the power cable, and the connector or power cable are "
+"damaged."
+
+#: ../../source/startup/startup.rst:0
+msgid "電源ケーブルを接続した状態でのロボットの運用は極力避けてください。"
+msgstr ""
+"Please avoid using the robot in the state where it is connected to the "
+"power cable as much as possible."
+
+#: ../../source/startup/startup.rst:0
+msgid "もし電源ケーブルを接続した状態で運用する場合は、"
+msgstr "If you use a power cable in the connected state, "
+
+#: ../../source/startup/startup.rst:0
+msgid "安全管理者の責任の下で十分な安全性を確保して運用してください。"
+msgstr ""
+"please ensure and apply enough safety under the responsibility of the "
+"safety manager."
+
+#: ../../source/startup/startup.rst:422
+msgid ""
+":ref:`radio_restriction` "
+"をお読みになり無線子機が利用出来ない場合は、以下の無線停止ボタンおよび無線停止ボタン有効化スイッチの確認の手順を飛ばしてください。"
+msgstr ""
+"If after reading :ref:`radio_restriction`, you are unable to use the "
+"wireless adapter, please skip over the following confirmation procedures "
+"for wireless stop button and the wireless stop button enable switch."
+
+#: ../../source/startup/startup.rst:424
+msgid "ロボットの緊急停止ボタンを押し込みます。"
+msgstr "Press the robot’s emergency stop button."
+
+#: ../../source/startup/startup.rst:429
+msgid "無線停止ボタンを押し込み、無線停止ボタンの電源をOFFにします。"
+msgstr ""
+"Press the wireless stop button and turn off wireless stop button power "
+"switch."
+
+#: ../../source/startup/startup.rst:434
+msgid "背面カバーを開けて、無線停止ボタン有効化スイッチをON(「|」側)にします。"
+msgstr ""
+"Open the back cover and turn ON (\"|\") the switch which enables the "
+"wireless stop button."
+
+#: ../../source/startup/startup.rst:439
+msgid "背面カバーを開けて、主電源スイッチをON(「|」側)にします。"
+msgstr "Open the back cover and turn ON (\"|\") the main power switch."
+
+#: ../../source/startup/startup.rst:444
+msgid "充給電器のスイッチをOFFにします。"
+msgstr "Turn OFF the charging unit's switch."
+
+#: ../../source/startup/startup.rst:0
+msgid "スイッチの位置は充給電器によって異なります。"
+msgstr "Depending on the charging unit the switch’s location will differ."
+
+#: ../../source/startup/startup.rst:0
+msgid "下記いずれかのようになっていれば、OFFになっています。"
+msgstr "The switch is OFF in any state as follows."
+
+#: ../../source/startup/startup.rst:454
+msgid "「切」側がOFF"
+msgstr "\"OFF\" side is OFF."
+
+#: ../../source/startup/startup.rst:455
+msgid "「○」側がOFF"
+msgstr "\"○\" side is OFF."
+
+#: ../../source/startup/startup.rst:0
+msgid "電源ケーブルのコネクタのHSRへの着脱は、必ず充給電器の電源をOFFにしてから行ってください。"
+msgstr ""
+"When attaching or detaching the power cable connector to the HSR, please "
+"be sure to do so after turning the power off on the charging unit."
+
+#: ../../source/startup/startup.rst:0
+msgid "発熱、故障の原因になります。"
+msgstr "To do otherwise could cause overheating or failure."
+
+#: ../../source/startup/startup.rst:466
+msgid "充給電器の電源ケーブルをコンセントに挿します。"
+msgstr "Connect the charging unit's power cable to an electrical outlet."
+
+#: ../../source/startup/startup.rst:468
+msgid "電源ケーブルのコネクタをHSR側の電源コネクタに接続します。"
+msgstr "Connect the power cable connector to the power connector on the HSR."
+
+#: ../../source/startup/startup.rst:0
+msgid "接続する際は、電源ケーブルのコネクタにある赤い印と、HSR側の電源コネクタにある赤い印を合わせてください。"
+msgstr ""
+"When you are connecting the power cable, please put the red mark on the "
+"power cable connector together with the red mark on the power connector "
+"on the HSR."
+
+#: ../../source/startup/startup.rst:0
+msgid "また、下図のように奥まで差し込んでください。"
+msgstr "Also, please insert it all the way as in the following illustration."
+
+#: ../../source/startup/startup.rst:481
+msgid "HSR上部にある背面カバーを取り外します。"
+msgstr "Remove the back cover from the top of the HSR."
+
+#: ../../source/startup/startup.rst:495
+msgid "カバーには配線が付いていますので、配線を断線させないように、ゆっくりとパネルを外してください。"
+msgstr ""
+"Because the cover has wiring, remove the panel slowly so as not to break "
+"the wiring."
+
+#: ../../source/startup/startup.rst:497
+msgid "電源ケーブル側のマグネットをHSR側のマグネットに取り付け、ケーブルを固定します。"
+msgstr ""
+"Attach the magnet on the power cable side to the magnet on the HSR's "
+"side, then secure the cable."
+
+#: ../../source/startup/startup.rst:515
+msgid "外していた背面カバーを本体カバーに取り付けます。"
+msgstr "Install the removed back cover to the body cover."
+
+#: ../../source/startup/startup.rst:522
+msgid "背面カバーで配線を挟まないように注意してください。"
+msgstr "Please be careful not to pinch the wiring in the back cover."
+
+#: ../../source/startup/startup.rst:527
+msgid "充給電器のスイッチをONにします。"
+msgstr "Turn ON the charging unit's switch."
+
+#: ../../source/startup/startup.rst:0
+msgid "下記いずれかのようになっていれば、ONになっています。"
+msgstr "The switch is ON in any of the following states:"
+
+#: ../../source/startup/startup.rst:537
+msgid "「入」側がON"
+msgstr "\"ON\" side is ON."
+
+#: ../../source/startup/startup.rst:538
+msgid "「|」側がON"
+msgstr "\"|\" side is ON."
+
+#: ../../source/startup/startup.rst:544
+msgid "電源供給状態表示LEDが緑点滅か緑点灯になっていることを確認します。"
+msgstr ""
+"Confirm that the power supply status LED is flashing green or is "
+"continously lit as green."
+
+#: ../../source/startup/startup.rst:549
+msgid "電源ボタンを3秒以上長押しして、ロボットを起動させます。"
+msgstr ""
+"Press and hold the power button for 3 or more seconds then the robot will"
+" start."
+
+#: ../../source/startup/startup.rst:556
+msgid ""
+"5秒以上長押しした場合、シャットダウンシーケンスに入ってしまい、 ロボットが起動しませんのでご注意ください。 "
+"ファンの回る音が聞こえたら、電源ボタンから手を離してください。"
+msgstr ""
+"Please note that if you press the button for more than 5 seconds, it will"
+" enter the shutdown sequence and the robot will not start. So please take"
+" your hand off the main power button, when you hear the sound of the fan."
+
+#: ../../source/startup/startup.rst:561
+msgid "HSRをアクセスポイントに接続"
+msgstr "Connect the HSR to an access point"
+
+#: ../../source/startup/startup.rst:563
+msgid "HSRの開発にはネットワーク環境が必要です。 HSRとのデータや命令の送受信は同じサブネットに接続されたPCから行う必要があります。"
+msgstr ""
+"A network environment is necessary for HSR development.  It is necessary "
+"to perform the transmission and reception of data and commands with the "
+"HSR from a PC connected to the same subnet."
+
+#: ../../source/startup/startup.rst:566
+msgid "HSR本体内のネットワーク構成は以下のようになっています。"
+msgstr "The following figure shows the composition of the HSR network."
+
+#: ../../source/startup/startup.rst:568
+msgid "HSRを無線ネットワーク環境で運用するために、以下のようなネットワーク構成をご用意ください。"
+msgstr ""
+"To use the HSR in a wireless network environment, please prepare a "
+"network like the following."
+
+#: ../../source/startup/startup.rst:575
+msgid ""
+":ref:`radio_restriction` をお読みになり無線子機が利用出来ない場合は、 "
+":ref:`using_external_wifi` や :ref:`wired_network` の方法で接続してください。"
+msgstr ""
+"If you read :ref:`radio_restriction` and cannot use a wireless adapter, "
+"please connect using :ref:`using_external_wifi` or :ref:`wired_network`."
+
+#: ../../source/startup/startup.rst:579
+msgid "初期設定では無線機器がOFF、有線接続設定になっていますので、以下の手順で設定の変更を行います。"
+msgstr ""
+"Because the initial setting is wireless device OFF in the wired "
+"connection settings, change the setting using the following procedure."
+
+#: ../../source/startup/startup.rst:583
+msgid "無線機器のONと無線接続設定手順"
+msgstr "Wireless device ON and wireless connection configuration procedure"
+
+#: ../../source/startup/startup.rst:585
+msgid "HSRの背面カバーを外し、アクセスパネルの拡張用USB2.0ポートにUSBキーボードを接続します。"
+msgstr ""
+"Remove the HSR's back cover, then connect a USB keyboard to one of the "
+"USB2.0 expansion ports on the HSR access panel."
+
+#: ../../source/startup/startup.rst:590
+msgid "Ctrl+Alt+t で頭部ディスプレイにターミナルを出します。"
+msgstr "Using Ctrl+Alt+t, open a terminal on the head display."
+
+#: ../../source/startup/startup.rst:591
+msgid "管理者になります。パスワードは管理者にお問い合わせください。"
+msgstr "Become the administrator.  Please ask an administrator for the password."
+
+#: ../../source/startup/startup.rst:597
+msgid "以下のコマンドで無線接続に設定します。"
+msgstr "Using the following command, set it to the wireless connection."
+
+#: ../../source/startup/startup.rst:603 ../../source/startup/startup.rst:806
+msgid "電源ボタン長押しでロボットの電源を切り、再度電源ボタン長押しでロボットの電源を入れます。"
+msgstr ""
+"Turn off the robot's power by long-pressing the power button, then turn "
+"on the power once again by long-pressing the power button."
+
+#: ../../source/startup/startup.rst:607
+msgid "無線接続設定手順"
+msgstr "Wireless connection configuration procedure"
+
+#: ../../source/startup/startup.rst:609
+msgid "HSRとWi-Fiアクセスポイントの接続には、WPS(Wi-Fi Protected Setup)の有無に応じて以下の手順を実施ください。"
+msgstr ""
+"For the connection of the HSR and the Wi-Fi access point, please carry "
+"out the following procedures depending on if you have WPS (Wi-Fi "
+"Protected Setup) or not."
+
+#: ../../source/startup/startup.rst:611
+msgid "アクセスポイントにWPSがある場合： :ref:`use_WPS_setting`"
+msgstr "When WPS is in the access point: :ref:`use_WPS_setting`"
+
+#: ../../source/startup/startup.rst:613
+msgid "アクセスポイントにWPSがない場合： :ref:`no_use_WPS_setting`"
+msgstr "When WPS is not in the access point: :ref:`no_use_WPS_setting`"
+
+#: ../../source/startup/startup.rst:619
+msgid "WPSを使った接続"
+msgstr "Connection using WPS"
+
+#: ../../source/startup/startup.rst:621 ../../source/startup/startup.rst:687
+msgid "HSRの背面カバーを外し、アクセスパネルの拡張用USB2.0ポートにUSBキーボードとマウスを接続します。"
+msgstr ""
+"Remove the HSR's back cover, then connect a USB keyboard and a mouse to "
+"one of the USB2.0 expansion ports on the HSR access panel."
+
+#: ../../source/startup/startup.rst:623 ../../source/startup/startup.rst:692
+#: ../../source/startup/startup.rst:814
+msgid "*Ctrl+Alt+t* で頭部ディスプレイにターミナルを出します。"
+msgstr "Open a terminal on the head display by pressing *Ctrl+Alt+t*."
+
+#: ../../source/startup/startup.rst:625 ../../source/startup/startup.rst:694
+msgid "ターミナル上で、以下のコマンドで設定ツールを立ち上げます。"
+msgstr ""
+"In the terminal, launch the configuration tool with the following "
+"commands:"
+
+#: ../../source/startup/startup.rst:635 ../../source/startup/startup.rst:704
+msgid "管理者権限のパスワードは管理者に問い合わせください。"
+msgstr ""
+"When logging into the robot using administrator permissions, please ask "
+"the administrator for the password."
+
+#: ../../source/startup/startup.rst:637
+msgid "タブの中から、 **WPS** を選びます。"
+msgstr "From the tabs, select the **WPS**."
+
+#: ../../source/startup/startup.rst:642
+msgid ""
+"WPSで無線LANを設定します。アクセスポイント側の説明はアクセスポイントのマニュアルを参照ください。 Wifi "
+"AP設定方法は付属のマニュアルを参照ください。 多くの場合はWifi APのWPSボタンを押すだけです。"
+msgstr ""
+"Configure the wireless LAN from the WPS tab.  For a description of the "
+"access point, please refer to the documentation that came with it.  In "
+"many cases, simply press the WPS button on the Wi-Fi AP."
+
+#: ../../source/startup/startup.rst:646
+msgid "次に **PBC - push button** のキーを押します。"
+msgstr "Then press the **PBC - push button**."
+
+#: ../../source/startup/startup.rst:651
+msgid ""
+"**Status** が **Connected to the network** "
+"になります。さらにNetwork:の欄にWPSで設定したSSIDが表示されればOKです。"
+msgstr ""
+"**Status** should change to **Connected to the network**.  In addition, "
+"the SSID set by the WPS should be displayed in the \"Network:\" column."
+
+#: ../../source/startup/startup.rst:656 ../../source/startup/startup.rst:740
+msgid "設定ツール上部のFileから **Save Configuration** を選択して設定を保存します。"
+msgstr ""
+"Select **Save Configuration** from \"File\" from the upper part of the "
+"configuration tool and save the settings."
+
+#: ../../source/startup/startup.rst:658 ../../source/startup/startup.rst:742
+msgid "電源ボタン長押しでロボットの電源を切ります。"
+msgstr "Turn off the robot's power by long-pressing the power button."
+
+#: ../../source/startup/startup.rst:660
+msgid "接続の確認を行います。HSRの電源を入れ、PCから以下のコマンドを打ちHSRに接続できているか確認します。"
+msgstr ""
+"Confirm the connection. Turn on the HSR and confirm connection to the HSR"
+" by entering following command from your PC."
+
+#: ../../source/startup/startup.rst:666 ../../source/startup/startup.rst:750
+msgid "以下のような出力がされれば、HSRはネットワークに接続されています。"
+msgstr ""
+"If you get output like the following, then the HSR is connected to the "
+"network."
+
+#: ../../source/startup/startup.rst:677 ../../source/startup/startup.rst:761
+msgid "接続が確認できれば作業は終了です。"
+msgstr "If you can confirm the connection, then this process is completed."
+
+#: ../../source/startup/startup.rst:679
+msgid "接続出来ないときは、:ref:`hsr_noconnected` を参照ください。"
+msgstr "If you can not connect, please refer to :ref:`hsr_noconnected`."
+
+#: ../../source/startup/startup.rst:685
+msgid "WPSが付いていない場合の接続"
+msgstr "Connection without using WPS"
+
+#: ../../source/startup/startup.rst:706
+msgid "タブの中から、 **Manage Networks** を選びます。"
+msgstr "From the tabs, select **Manage Networks**."
+
+#: ../../source/startup/startup.rst:711
+msgid "**Scan** をクリックします。"
+msgstr "Click **Scan**."
+
+#: ../../source/startup/startup.rst:716
+msgid "Scanウィンドウが立ち上がるので、Scanをクリックします。"
+msgstr "The Scan window should start up, then click \"Scan\"."
+
+#: ../../source/startup/startup.rst:721
+msgid "Scan結果が表示されます。接続したいアクセスポイントをダブルクリックします。"
+msgstr ""
+"The Scan results will be displayed.  Double-click on the access point "
+"that you want to connect to."
+
+#: ../../source/startup/startup.rst:726
+msgid "PSKにパスワードを入力し、**Add** をクリックします。"
+msgstr "Enter the password into PSK, then click **Add**."
+
+#: ../../source/startup/startup.rst:733
+msgid "ウィンドウが画面に収まらずAddボタンが見えない場合は、Windowsキーを押しながら左クリックでドラッグしてウィンドウを移動させてください。"
+msgstr ""
+"When the window is out of the bounds of the display and the \"Add\" "
+"button cannot be seen, please, while pressing the Windows key, left click"
+" to drag and move the window."
+
+#: ../../source/startup/startup.rst:735
+msgid ""
+"**Status** が **Connected to the network** "
+"になります。さらにNetwork:の欄に設定したSSIDが表示されればOKです。"
+msgstr ""
+"**Status** should change to **Connected to the network**.  In addition, "
+"SSID set  should be displayed in the \"Network:\" column."
+
+#: ../../source/startup/startup.rst:744
+msgid "接続の確認を行います。HSRの電源を入れ、PCから以下のコマンドを打ちHSRと接続できているか確認します。"
+msgstr ""
+"Confirm the connection. Turn on the HSR and confirm connection to the HSR"
+" by entering following command from your PC."
+
+#: ../../source/startup/startup.rst:765
+msgid "localeの変更"
+msgstr "Changing the locale"
+
+#: ../../source/startup/startup.rst:767
+msgid "HSRをご利用いただく地域に合わせてlocaleを変更します。"
+msgstr "Change the locale to match the region where the HSR is used."
+
+#: ../../source/startup/startup.rst:769
+msgid "HSRのアクセスパネルの拡張用USB2.0ポートにUSBキーボードおよびマウスを接続します。"
+msgstr ""
+"Connect a USB keyboard and a mouse to the USB2.0 expansion ports on the "
+"HSR access panel."
+
+#: ../../source/startup/startup.rst:771
+msgid "頭部ディスプレイ右上に表示されている設定マークをクリックし、 **System Settings** を選択します。"
+msgstr ""
+"Click on the configuration mark in the head display's upper right, then "
+"select **System Settings**."
+
+#: ../../source/startup/startup.rst:778
+msgid "あらかじめHSRに設定されている言語によって表示が異なります。 ここでは英語を例に説明します。"
+msgstr ""
+"Depending on the language configured in the HSR beforehand, the display "
+"differs.  Here we explain using English as an example."
+
+#: ../../source/startup/startup.rst:781
+msgid "設定メニューから **Time & Date** を選択します。"
+msgstr "Select **Time & Date** from the configuration menu."
+
+#: ../../source/startup/startup.rst:786
+msgid "**Unlock to change these settings** を押します。"
+msgstr "Click **Unlock to change these settings**."
+
+#: ../../source/startup/startup.rst:791
+msgid "管理者権限のパスワードを入力し、 **Authenticate** を押します。"
+msgstr ""
+"Input the password for administrator permissions, then click "
+"**Authenticate**."
+
+#: ../../source/startup/startup.rst:796
+msgid ""
+"地図上から現在の地域を指定し、時刻を修正します。設定が終わったら **Lock to prevent further changes** "
+"を押します。"
+msgstr ""
+"Specify the current region from the map, then edit the time.  When the "
+"configuration is finished, click **Lock to prevent further changes**."
+
+#: ../../source/startup/startup.rst:801
+msgid "以上で変更は完了です。設定画面を閉じます。"
+msgstr "The above changes are complete.  Close the configuration screen."
+
+#: ../../source/startup/startup.rst:810
+msgid "設定ファイルの復帰"
+msgstr "Configuration File Restoration"
+
+#: ../../source/startup/startup.rst:812
+msgid "アクセスパネルを開け、USBポートにキーボードを接続します。"
+msgstr ""
+"Connect a USB keyboard to the USB2.0 expansion ports on the HSR access "
+"panel."
+
+#: ../../source/startup/startup.rst:816
+msgid "管理者になります。"
+msgstr "Become the administrator."
+
+#: ../../source/startup/startup.rst:822
+msgid "設定ファイルを復帰させます。"
+msgstr "Restore the configuration file."
+
+#: ../../source/startup/startup.rst:828
+msgid "設定ファイルを反映させるために電源ボタンを長押ししてロボットの電源を切った後に、再度電源ボタンの長押しでロボットを起動します。"
+msgstr ""
+"To enable the configuration file, long-press the power button.  After the"
+" power goes off, once again long-press the power button and boot the "
+"robot."
+
+#: ../../source/startup/startup.rst:832
+msgid "HSRの起動"
+msgstr "Start up the HSR"
+
+#: ../../source/startup/startup.rst:834
+msgid "HSRの電源が入っていることを確認します。頭部ディスプレイが以下の表示であればOKです。"
+msgstr ""
+"Confirm that the HSR's power is on.  If the head display is the "
+"following, then it is OK."
+
+#: ../../source/startup/startup.rst:839
+msgid "無線停止ボタンの電源を入れます。電源が入ると、無線停止ボタンの緑色のLEDが点灯します。"
+msgstr ""
+"Switch on the wireless stop button.  When it is switched on, the wireless"
+" stop button's green LED turns on."
+
+#: ../../source/startup/startup.rst:844
+msgid "緊急停止ボタンをひねって解除します。"
+msgstr "Release the emergency stop button by twisting."
+
+#: ../../source/startup/startup.rst:849
+msgid "無線停止ボタンをひねって解除します。"
+msgstr "Release the wireless stop button by twisting."
+
+#: ../../source/startup/startup.rst:854
+msgid "HSRが「HSR start!」と喋り、初期姿勢に遷移します。"
+msgstr "The HSR will say \"HSR start!\" and transition to the initial pose."
+
+#: ../../source/startup/startup.rst:858
+msgid "正常にHSRが起動したかどうかは以下ポイントをご確認ください。"
+msgstr ""
+"Please confirm whether or not the HSR booted correctly using the "
+"following points:"
+
+#: ../../source/startup/startup.rst:860
+msgid "HSRの状態表示LEDが黄色点灯から青緑点灯に変化すること"
+msgstr "The HSR status display LED changes from yellow to cyan."
+
+#: ../../source/startup/startup.rst:865
+msgid "頭部ディスプレイが以下の表示となっていること"
+msgstr "The head display becomes the following display:"
+
+#: ../../source/startup/startup.rst:872
+msgid "動作確認"
+msgstr "Operation check"
+
+#: ../../source/startup/startup.rst:874
+msgid "HSRが正常に動作しているか診断ツールを使い、初期の動作確認を実施します。"
+msgstr ""
+"Use the Diagnostic Tool to see whether or not the HSR is operating "
+"correctly, and perform an initial operation check."
+
+#: ../../source/startup/startup.rst:876
+msgid "診断ツールの使用方法は :doc:`/howto/diagnostics/diagnostics` を参照ください。"
+msgstr ""
+"Please refer to :doc:`/howto/diagnostics/diagnostics` for how to use the "
+"diagnostic tool."
+
+#: ../../source/startup/startup.rst:880
+msgid "HSRを終了する際は、 :ref:`shutdown` をご参照ください。"
+msgstr "When shutting down the HSR, please refer to :ref:`shutdown`."
+
+#~ msgid "充給電器のスイッチがOFFになっていることを確認します。"
+#~ msgstr "Confirm that the charging unit's switch is off."
+
+#~ msgid "無線停止ボタンが押し込まれていることと、電源が切れていることを確認します。"
+#~ msgstr ""
+
+#~ msgid "充給電器のスイッチがOFFにします。"
+#~ msgstr "Turn OFF the charging unit's switch."
+
+#~ msgid "無線停止ボタンの電源を入れます。"
+#~ msgstr "Turn on the wireless stop button."
+
+#~ msgid "緊急停止スイッチ"
+#~ msgstr "Emergency stop switch"
+
+#~ msgid "マーカーボード"
+#~ msgstr "Marker board"
+
+#~ msgid "初期設定では無線機器がOFF、有線接続設定になっていますので、以下の手順で設定の変更を行います。"
+#~ msgstr ""
+
+#~ msgid "Ctrl+Alt+t で頭部ディスプレイにターミナルを出します。"
+#~ msgstr "Using Ctrl+Alt+t, open a terminal on the head display."
+
+#~ msgid "管理者になります。パスワードは管理者にお問い合わせ下さい。"
+#~ msgstr ""
+
+#~ msgid "以下のコマンドで無線有効化の設定を行います。"
+#~ msgstr "Using the following command, enable the wireless settings."
+
+#~ msgid "以下のコマンドで無線接続への設定変更を行います。"
+#~ msgstr ""
+
+#~ msgid "HSRに必要なパッケージをインストール"
+#~ msgstr "Install necessary packages into the HSR"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "PCからロボットに管理者権限でログインします。"
+#~ msgstr "Log into the robot using administrator permissions from a PC."
+
+#~ msgid "以下のコマンドを入力し、必要なパッケージをインストールします。"
+#~ msgstr "Install the necessary packages with the following commands:"
+
+#~ msgid "HSRにソフトウェアをインストール"
+#~ msgstr "Install software on HSR"
+
+#~ msgid "**ご使用中のロボットのバージョン確認**"
+#~ msgstr "**Version confirmation of the current robot**"
+
+#~ msgid "以下コマンドを入力します。"
+#~ msgstr "Enter the following command."
+
+#~ msgid "表示される ``ROBOT_VERSION`` と ``LOCALE`` を控えてください。以降の手順で使用します。"
+#~ msgstr ""
+
+#~ msgid "インストール用DVDの作成"
+#~ msgstr "Creating a Install DVD"
+
+#~ msgid "https://packages.hsr.io/images にアクセスします。"
+#~ msgstr "Access https://packages.hsr.io/images."
+
+#~ msgid "対象となるISOファイルをダウンロードします。"
+#~ msgstr "Download the target ISO file."
+
+#~ msgid "ISOファイルからDVDを作成します。"
+#~ msgstr "Create a DVD from the ISO file."
+
+#~ msgid "ISOファイルのファイル名は以下の命名規則に従っています。 ご使用中のロボットに対応したファイルをダウンロードください。"
+#~ msgstr ""
+
+#~ msgid "項目名"
+#~ msgstr "Item Name"
+
+#~ msgid "表示例"
+#~ msgstr "Example"
+
+#~ msgid "内容"
+#~ msgstr "Content"
+
+#~ msgid "ソフトウェアバージョン"
+#~ msgstr "Software Version"
+
+#~ msgid "17.10.02"
+#~ msgstr ""
+
+#~ msgid "18.04.01"
+#~ msgstr ""
+
+#~ msgid "リリースされたソフトウェアのバージョンです。"
+#~ msgstr "This is the released software version."
+
+#~ msgid "ドット区切りでリリース年、リリース月、マイナーバージョンを示しています。"
+#~ msgstr ""
+
+#~ msgid "最も新しいバージョンをご利用ください。"
+#~ msgstr "Please use the latest version."
+
+#~ msgid "Ubuntuディストリビューション"
+#~ msgstr "Ubuntu Distribution"
+
+#~ msgid "xenial"
+#~ msgstr ""
+
+#~ msgid "Ubuntuのディストリビューションです。"
+#~ msgstr "This is the Ubuntu Distribution."
+
+#~ msgid "ロボットバージョン"
+#~ msgstr "Robot Version"
+
+#~ msgid "HSRB-PHASE3"
+#~ msgstr ""
+
+#~ msgid "HSRB-PHASE5"
+#~ msgstr ""
+
+#~ msgid "ロボットに設定されているバージョンです。"
+#~ msgstr "This is the version set to the robot."
+
+#~ msgid "言語"
+#~ msgstr "Language"
+
+#~ msgid "ja_JP.UTF-8"
+#~ msgstr ""
+
+#~ msgid "en_US.UTF-8"
+#~ msgstr ""
+
+#~ msgid "ロボットが話す言語です。（ja:日本語、en：英語）ライセンスが必要になりますので、"
+#~ msgstr ""
+
+#~ msgid "現在ご使用中の言語以外をインストールしてもロボットは喋りません。"
+#~ msgstr ""
+
+#~ msgid "ソフトウェアのインストール"
+#~ msgstr "Install software"
+
+#~ msgid "電源ボタンを長押しして、ロボットの電源を落とします。"
+#~ msgstr "Turn off the robot's power by long-pressing the power button."
+
+#~ msgid "HSRの背面カバーを外し、アクセスパネルの拡張用USB2.0ポートに外付けDVDドライブを接続します。"
+#~ msgstr ""
+
+#~ msgid "外付けDVDドライブのACアダプタを電源に接続します。"
+#~ msgstr "Connect the external USB DVD drive's AC power adapter."
+
+#~ msgid "作成したDVDをDVDドライブに入れます。"
+#~ msgstr "Insert the DVD that was made into the DVD drive."
+
+#~ msgid "電源ボタンを長押しして、ロボットの電源を入れます。"
+#~ msgstr "Long-press the power button.  The robot's power should turn on."
+
+#~ msgid "頭部ディスプレイに以下画面が出ればクリーンインストールが開始されています。"
+#~ msgstr ""
+
+#~ msgid "インストールが完了し、ディスクが排出されるまで待ちます。（30分程度）"
+#~ msgstr ""
+
+#~ msgid "アクセスパネルを開け、USBポートにキーボードを接続し、「Enter」キーを押します。"
+#~ msgstr ""
+
+#~ msgid "頭部ディスプレイに「No signal」が表示されたら、主電源スイッチでロボットの電源を落とします。"
+#~ msgstr ""
+
+#~ msgid "外付けDVDドライブを外します。"
+#~ msgstr "Disconnect the external DVD drive."
+
