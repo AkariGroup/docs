@@ -1,5 +1,5 @@
 ******************************
-ハードウェア仕様(工事中)
+ハードウェア仕様
 ******************************
 
 ハードウェアの仕様について説明します。
@@ -16,7 +16,7 @@ AKARIは卓上に配置可能なサイズです。
 
 .. raw:: html
 
-   <iframe src="https://myhub.autodesk360.com/ue289b128/shares/public/SH35dfcQT936092f0e437309b40f34ee6929?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+   <iframe src="https://myhub.autodesk360.com/ue289b128/shares/public/SH35dfcQT936092f0e43f802aac881572051?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 =============================
 GPIO
@@ -31,29 +31,29 @@ USB3.0のデバイスを接続することもできます。
 
 
 =============================
-カメラ
+DepthAIカメラ
 =============================
-Logicool HD Webcam C270n
+OAK-D-LITE
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-マイク内蔵の120万画素ウェブカメラです。
+ステレオカメラ2基と4Kカメラ1基を通して、深度情報と色情報を取得できるAIカメラです。
 
-https://www.logicool.co.jp/ja-jp/product/hd-webcam-c270n
+https://shop.luxonis.com/products/oak-d-lite-1?_pos=1&_psq=lite&_ss=e&_v=1.0
 
-.. image:: ../images/c270n.jpg
+.. image:: ../images/oak-d-lite.jpg
    :scale: 100%
    :height: 200px
    :width: 200px
 
 .. csv-table::
-   :widths: 5, 5
-   :align: left
+   :widths: 6, 6
 
-    最大解像度, 720p/30fps
-    フォーカスタイプ, 固定フォーカス
-    レンズテクノロジー, 標準
-    内蔵マイク, モノラル
-    視野, 60°
+    メインカメラモデル, Sony IMX214
+    焦点範囲, 8 cm〜∞
+    有効焦点距離長, 3.37 mm
+    ステレオカメラモデル, OmniVision OV725
+    焦点範囲, 6.5 cm〜∞
+    有効焦点距離長, 1.3 mm
 
 
 =============================
@@ -83,36 +83,35 @@ https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262
 =============================
 M5Stack
 =============================
-M5StackGray
+M5StackBasic
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 ESP32を搭載した開発デバイスです。
 
 https://m5stack-store.myshopify.com/collections/m5-core/products/grey-development-core
 
-.. image:: ../images/M5StackGray.jpg
+.. image:: ../images/m5stack.jpg
    :scale: 100%
    :height: 200px
    :width: 200px
 
 .. csv-table::
-   :widths: 5, 5
+   :widths: 4, 4
 
     CPU, 240MHz dual core、 600 DMIPS、 520KB SRAM、 Wi-Fi、 dual mode Bluetooth
-    内蔵センサ, MPU9250（9軸センサ）
     ストレージ, microSDスロット
     搭載LCD, 320 x 240 カラーTFT LCD
     内蔵スピーカー, 1W
 
 
-環境センサ（ENV II）
+環境センサ（ENV Ⅲ）
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-SHT30とBMP280を搭載した温度/湿度/気圧が測定できる環境センサです。
+SHT30とQMP6988を搭載した温度/湿度/気圧が測定できる環境センサです。
 
-https://m5stack-store.myshopify.com/products/env-ii-unit
+https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pressure-sensor-sht30-qmp6988
 
-.. image:: ../images/ENV2_Sensor.jpg
+.. image:: ../images/ENV3_Sensor.png
    :scale: 100%
    :height: 200px
    :width: 200px
@@ -124,7 +123,7 @@ https://m5stack-store.myshopify.com/products/env-ii-unit
     標準温度許容差, 	0 ~ 60 ℃/±0.2 ℃
     湿度測定範囲, 	10 ~ 90 %RH / ±2 %
     気圧測定範囲,	300 ~ 1100 hPa / ±1 hPa
-    通信プロトコル, 	I2C：SHT30（0x44） BMP280（0x76）
+    通信プロトコル, 	I2C：SHT30（0x44） QMP6988（0x56）
 
 
 光センサ
