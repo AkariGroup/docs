@@ -10,7 +10,6 @@
 AKARIは卓上に配置可能なサイズです。
 
 .. image:: ../images/AKARI_Size.jpg
-   :scale: 100%
    :width: 600px
 
 .. raw:: html
@@ -24,7 +23,6 @@ GPIO
 USB3.0のデバイスを接続することもできます。
 
 .. image:: ../images/PinAssign.JPG
-   :scale: 100%
    :width: 600px
 
 
@@ -39,8 +37,6 @@ OAK-D-LITE
 https://shop.luxonis.com/products/oak-d-lite-1?_pos=1&_psq=lite&_ss=e&_v=1.0
 
 .. image:: ../images/oak-d-lite.jpg
-   :scale: 100%
-   :height: 200px
    :width: 200px
 
 .. csv-table::
@@ -65,8 +61,6 @@ Dynamixel 2XL430-W250-T
 https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262
 
 .. image:: ../images/2XL430-W250-T.png
-   :scale: 100%
-   :height: 200px
    :width: 300px
 
 .. csv-table::
@@ -89,8 +83,6 @@ ESP32を搭載した開発デバイスです。
 https://m5stack-store.myshopify.com/collections/m5-core/products/grey-development-core
 
 .. image:: ../images/m5stack.jpg
-   :scale: 100%
-   :height: 200px
    :width: 200px
 
 .. csv-table::
@@ -110,8 +102,6 @@ SHT30とQMP6988を搭載した温度/湿度/気圧が測定できる環境セン
 https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pressure-sensor-sht30-qmp6988
 
 .. image:: ../images/ENV3_Sensor.png
-   :scale: 100%
-   :height: 200px
    :width: 200px
 
 .. csv-table::
@@ -132,8 +122,6 @@ https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pre
 https://m5stack-store.myshopify.com/collections/m5-unit/products/light-sensor-unit
 
 .. image:: ../images/LIGHT_Sensor.jpg
-   :scale: 100%
-   :height: 200px
    :width: 200px
 
 
@@ -148,8 +136,6 @@ Intelの第8世代Core m3-8100Yを搭載したシングルボードコンピュ�
 https://www.lattepanda.com/products/lattepanda-alpha-864s.html
 
 .. image:: ../images/LattePanda.jpg
-   :scale: 100%
-   :height: 200px
    :width: 200px
 
 .. csv-table::
