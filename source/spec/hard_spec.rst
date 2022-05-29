@@ -11,7 +11,6 @@ AKARIは卓上に配置可能なサイズです。
 
 .. image:: ../images/AKARI_Size.jpg
    :scale: 100%
-   :height: 400px
    :width: 600px
 
 .. raw:: html
@@ -26,7 +25,6 @@ USB3.0のデバイスを接続することもできます。
 
 .. image:: ../images/PinAssign.JPG
    :scale: 100%
-   :height: 400px
    :width: 600px
 
 

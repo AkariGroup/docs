@@ -7,21 +7,18 @@ AKARIとは
 ***************************************
 .. image:: images/AKARI_Design.png
    :scale: 100%
-   :height: 350px
    :width: 600px
 
 AKARIはパン・チルトの2自由度を持ったAIカメラです。
 
 .. image:: images/Parameters.png
    :scale: 100%
-   :height: 400px
    :width: 600px
 
 AKARIはヘッドとベースユニットをそれぞれスタックし、拡張することができます。
 
 .. image:: images/AKARI_Stack.jpg
    :scale: 100%
-   :height: 400px
    :width: 600px
 
 ********************************************

@@ -20,7 +20,6 @@ AKARIを使用するための事前準備を行いましょう。
 
 .. image:: ../images/AKARI_Part.jpg
    :scale: 100%
-   :height: 450px
    :width: 650px
 
 1. 背面のDCジャックに電源プラグを接続します。
