@@ -15,50 +15,46 @@ AKARI_DOC_PARENT_PATH=`pwd | xargs dirname`
 titleEcho "apt update"
 apt_check_and_update
 
-titleEcho "Install virtualenv"
-pip_check_and_install virtualenv
 
-titleEcho "Set up virtualenv"
-cd $AKARI_DOC_PARENT_PATH
-virtualenv -p python3.8 venv
-successEcho "virtualenv set up finished."
+titleEcho " Install curl"
+apt_check_and_install curl
 
-titleEcho "Activate virtualenv"
-. ./venv/bin/activate
-successEcho "virtualenv activated."
+titleEcho "Install python3-pip" 
+apt_check_and_install python3-pip
 
-titleEcho " Install Sphinx"
-pip install Sphinx
-successEcho "Sphinx installed."
+titleEcho " Install poetry"
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+successEcho "poetry installed"
 
-titleEcho " Install sphinx-rtd-theme"
-pip install sphinx-rtd-theme
-successEcho "sphinx-rtd-theme installed."
+titleEcho "Add poetry path in .bashrc"
+if grep 'export PATH="\$HOME/.poetry/bin:\$PATH"' ~/.bashrc > /dev/null 2>&1; then 
+ skipEcho "poetry path has already been available in .bashrc."
+else
+ echo 'export PATH="$HOME/.poetry/bin:$PATH"' >> ~/.bashrc
+ successEcho "poetry path was added in .bashrc"
+fi
 
-titleEcho " Install sphinxcontrib-youtube"
-pip install sphinxcontrib-youtube
-successEcho "sphinxcontrib-youtube installed."
+titleEcho "Install pipenv"
+pip3_check_and_install pipenv
+
+titleEcho "set up akari poetry env"
+(
+    source $HOME/.poetry/env
+    cd $AKARI_DOC_PARENT_PATH
+    poetry install
+)
 
 titleEcho " Build document"
 cd $AKARI_DOC_PARENT_PATH
-make html
+poetry run make html
 successEcho "Document built."
 
 titleEcho "Link custom theme"
-if find  $AKARI_DOC_PARENT_PATH/_build/html/akaridoc_theme.css > /dev/null; then
+if find  $AKARI_DOC_PARENT_PATH/_build/html/akaridoc_theme.css > /dev/null 2>&1; then
  skipEcho "Custom theme has already been linked"
 else
  cp $AKARI_DOC_PARENT_PATH/theme/akaridoc_theme.css $AKARI_DOC_PARENT_PATH/_build/html/_static/css
  successEcho "Custom theme link was created."
-fi
-
-titleEcho "Link document to Desktop"
-if find  ~/Desktop > /dev/null; then
- ln -sf $AKARI_DOC_PARENT_PATH/_build/html/index.html ~/Desktop/AKARIマニュアル
- successEcho "Document link was created."
-elif find  ~/デスクトップ > /dev/null; then
- ln -sf $AKARI_DOC_PARENT_PATH/_build/html/index.html ~/デスクトップ/AKARIマニュアル
- successEcho "Document link was created."
 fi
 
 echo -e " "

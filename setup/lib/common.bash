@@ -118,6 +118,17 @@ pip_installed () {
   return 0  # 正常終了
 }
 
+## 指定したパッケージがpython2にすべてインストール済みなら正常終了、
+## インストールされてないパッケージが1つでもあればエラー終了
+## （もしすべてインストール済みなら apt-get install をスキップできる）
+pip2_installed () {
+  local pkg
+  for pkg in $@; do
+    pip2 list | grep "$pkg "  > /dev/null || return 1   # エラー終了
+  done
+  return 0  # 正常終了
+}
+
 ## 指定したパッケージがpython3にすべてインストール済みなら正常終了、
 ## インストールされてないパッケージが1つでもあればエラー終了
 ## （もしすべてインストール済みなら apt-get install をスキップできる）
@@ -130,13 +141,29 @@ pip3_installed () {
 }
 
 ## 指定したパッケージがインストールされていなければインストールする
+## python2とpython3両方に対して実行
 pip_check_and_install () {
   local pkg
   for pkg in $@; do
     if pip3_installed $pkg; then
      skipEcho "$pkg has been available in python3."
     else
-     pip3 install $pkg
+     pip3 install $pkg --user
+     successEcho "$pkg was installed in python3."
+    fi    
+  done
+  return 0
+}
+
+## 指定したパッケージがインストールされていなければインストールする
+## python3に対して実行
+pip3_check_and_install () {
+  local pkg
+  for pkg in $@; do
+    if pip3_installed $pkg; then
+     skipEcho "$pkg has been available in python3."
+    else
+     pip3 install $pkg --user
      successEcho "$pkg was installed in python3."
     fi    
   done
