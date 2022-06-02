@@ -12,19 +12,18 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 AKARI_DOC_PARENT_PATH=`pwd | xargs dirname`
 . $AKARI_DOC_PARENT_PATH/setup/lib/common.bash    # 共通の関数や定数をライブラリからロード
 
-titleEcho "Set up virtualenv"
-cd $AKARI_DOC_PARENT_PATH
-virtualenv -p python3.8 venv
-successEcho "virtualenv set up finished."
-
-titleEcho "Activate virtualenv"
-. ./venv/bin/activate
-successEcho "virtualenv activated."
-
 titleEcho " Build document"
 cd $AKARI_DOC_PARENT_PATH
-make html
+poetry run make html
 successEcho "Document built."
+
+titleEcho "Link custom theme"
+if find  $AKARI_DOC_PARENT_PATH/_build/html/akaridoc_theme.css > /dev/null 2>&1; then
+ skipEcho "Custom theme has already been linked"
+else
+ cp $AKARI_DOC_PARENT_PATH/theme/akaridoc_theme.css $AKARI_DOC_PARENT_PATH/_build/html/_static/css
+ successEcho "Custom theme link was created."
+fi
 
 echo -e " "
 echo -e "\e[32;1m----------------------------------------\e[m"
