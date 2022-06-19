@@ -50,7 +50,7 @@ akari_mainレポジトリのclone
 
 | 下図のように、最後に `All steps were finished!!` と表示されたら成功です。
 
-.. image:: ../images/setup_script.jpg
+.. image:: ../../images/setup_script.jpg
     :width: 500px
 
 3. セットアップスクリプト2を実行します。
