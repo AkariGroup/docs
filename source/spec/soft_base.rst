@@ -159,7 +159,9 @@ get()により取得できるdict dataの中身は下記のとおりです。
 | - **bool din0**
 | - **bool din1**
 | - **int ain0**
-|  ヘッドモジュール用GPIOの入力に対応。din0,din1は入力3.3Vでtrue。ain0は0-3.3Vを4096段階で出力。
+|  ヘッドモジュール用GPIOの入力に対応。
+|  din0,din1は3.3Vで内部プルアップされておりデフォルトでtrue。GNDに接続するとFalseになる。
+|  ain0は0-3.3Vを4096段階で出力。
 | - **bool dout0**
 | - **bool dout1**
 | - **int pwmout0**
