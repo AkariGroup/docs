@@ -26,24 +26,25 @@ A1-4.おじぎをする(回答編)
     """
 
     # モータ制御の際はakari_controllerのライブラリをインポートする
-    from akari_controller.akari_controller import AkariController
+    from akari_controller.akari_controller import AkariController, ComDictFloat
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
-    """
-    メイン関数
-    """
 
-    # AkariControllerのインスタンスを作成する。
-    akari = AkariController()
-    # 両方のモータ速度を5rad/sに変更する。
-    akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                            "values": [5, 5]})
-    ### ここから問題  ###
-    while(True):
+    def main() -> None:
+        """
+        メイン関数
+        """
+
+        # AkariControllerのインスタンスを作成する。
+        akari = AkariController()
+        # 両方のモータ速度を5rad/sに変更する。
+        akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
+                                    "values": [5, 5]})
+        ### ここから問題  ###
+        while(True):
             # 下40°を向く
-            dict1 = {}
+            dict1: ComDictFloat = {}
             dict1["joint_names"] = ["tilt"]
             dict1["values"] = [-0.698]
             akari.set_goal_position(dict1)
@@ -56,20 +57,20 @@ A1-4.おじぎをする(回答編)
             akari.set_goal_position(dict1)
             # 3秒停止する
             time.sleep(3)
-    ### ここまで  ###
+        ### ここまで  ###
 
 
     if __name__ == '__main__':
-    main()
+        main()
 
 
 解説
 ========
-**28-31行目:**
+**29-32行目:**
 
 .. code-block:: python
 
-        dict1 = {}
+        dict1: ComDictFloat = {}
         dict1["joint_names"] = ["tilt"]
         dict1["values"] = [-0.698]
         akari.set_goal_position(dict1)
@@ -81,7 +82,7 @@ Q1-2と同じやり方で、set_goal_position()でモータを制御します。
 これを引数にしてset_goal_position()を呼び出します。
 
 |
-**33行目:**
+**34行目:**
 
 .. code-block:: python
 
@@ -90,7 +91,7 @@ Q1-2と同じやり方で、set_goal_position()でモータを制御します。
 sleep()関数で3秒停止します。引数は秒数なので3を入れます。
 
 |
-**35-38行目:**
+**36-39行目:**
 
 .. code-block:: python
 
@@ -102,7 +103,7 @@ sleep()関数で3秒停止します。引数は秒数なので3を入れます�
 28-31行目と同じやり方です。dict1を再度利用して、"values"を20°をradにした0.349にします。
 
 |
-**40行目:**
+**41行目:**
 
 .. code-block:: python
 

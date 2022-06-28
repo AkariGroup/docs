@@ -31,13 +31,14 @@ A1-5.ランダムに動く(回答編)
     ### ここから問題  ###
 
     # モータ制御の際はakari_controllerのライブラリをインポートする
-    from akari_controller.akari_controller import AkariController
+    from akari_controller.akari_controller import AkariController, ComDictFloat
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
     # 乱数生成用のライブラリをインポートする。
     import random
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -51,7 +52,7 @@ A1-5.ランダムに動く(回答編)
             # 問題文に指定はないが、一応print。
             print("pan: " + str(pan_angle) + "tilt: " + str(tilt_angle))
             # 生成したランダムな方向を向く
-            dict1 = {}
+            dict1: ComDictFloat = {}
             dict1["joint_names"] = ["pan", "tilt"]
             dict1["values"] = [pan_angle, tilt_angle]
             akari.set_goal_position(dict1)
@@ -67,7 +68,7 @@ A1-5.ランダムに動く(回答編)
 
 解説
 ========
-**15-20行目:**
+**14-19行目:**
 
 .. code-block:: python
 
@@ -94,7 +95,7 @@ A1-5.ランダムに動く(回答編)
 
 .. code-block:: python
 
-    def main(args=None):
+    def main() -> None:
 
 メイン関数を定義します。この中身が実行されます。
 
@@ -150,7 +151,7 @@ str(数値)で数値を文字列に変換できます。文字列どうしであ
 .. code-block:: python
 
     # 生成したランダムな方向を向く
-    dict1 = {}
+    dict1: ComDictFloat = {}
     dict1["joint_names"] = ["pan", "tilt"]
     dict1["values"] = [pan_angle, tilt_angle]
     akari.set_goal_position(dict1)

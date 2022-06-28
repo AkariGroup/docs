@@ -25,11 +25,12 @@ Q1-4.おじぎをする
    """
 
    # モータ制御の際はakari_controllerのライブラリをインポートする
-   from akari_controller.akari_controller import AkariController
+   from akari_controller.akari_controller import AkariController, ComDictFloat
    # sleep関数を使うためにtimeのライブラリをインポートする。
    import time
 
-   def main(args=None):
+
+   def main() -> None:
       """
       メイン関数
       """
@@ -57,7 +58,7 @@ Q1-4.おじぎをする
 ========
 **今回学習する項目1: while()**
 
-43行目でwhile(True)が使われています。
+27行目でwhile(True)が使われています。
 
 while(条件式)中に含まれる処理は条件式を満たす場合ループします。
 
@@ -73,7 +74,7 @@ https://www.python.jp/train/loop/index.html
 
 一定時間処理を停止するためにはsleep(sec)関数を使います。secの数字の秒数分処理を停止します。
 
-30行目でtimeモジュールをimportしています。sleep()はtimeモジュールに含まれるので、下記のように呼び出します。
+13行目でtimeモジュールをimportしています。sleep()はtimeモジュールに含まれるので、下記のように呼び出します。
 
 .. code-block:: python
 

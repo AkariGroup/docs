@@ -29,27 +29,28 @@ A1-2.モータの制御(回答編)
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
     # モータ制御の際はakari_controllerのライブラリをインポートする
-    from akari_controller.akari_controller import AkariController
+    from akari_controller.akari_controller import AkariController, ComDictFloat
 
-    def main(args=None):
-    """
-    メイン関数
-    """
 
-    # AkariControllerのインスタンスを作成する。
-    akari = AkariController()
+    def main() -> None:
+        """
+        メイン関数
+        """
 
-    ### ここから問題  ###
-    dict1 = {}
-    dict1["joint_names"] = ["pan"]
-    dict1["values"] = [0.785]
-    akari.set_goal_position(dict1)
-    ### ここまで  ###
-    # 1秒待つ
-    time.sleep(1)
-    # 現在位置を取得してコマンドラインに表示
-    position = akari.get_present_position(["pan", "tilt"])
-    print("現在位置は" + str(position) + "です。")
+        # AkariControllerのインスタンスを作成する。
+        akari = AkariController()
+
+        ### ここから問題  ###
+        dict1: ComDictFloat = {}
+        dict1["joint_names"] = ["pan"]
+        dict1["values"] = [0.785]
+        akari.set_goal_position(dict1)
+        ### ここまで  ###
+        # 1秒待つ
+        time.sleep(1)
+        # 現在位置を取得してコマンドラインに表示
+        position = akari.get_present_position(["pan", "tilt"])
+        print("現在位置は" + str(position) + "です。")
 
 
     if __name__ == '__main__':
@@ -59,7 +60,7 @@ A1-2.モータの制御(回答編)
 
 解説
 ========
-**26行目:**
+**27行目:**
 
 .. code-block:: python
 
@@ -70,7 +71,7 @@ Q1-1で、左右方向の関節名は"pan"だということが分かってい�
 今回は左右方向だけ動かせばいいので、リスト内に"pan"だけを入れます。
 
 |
-**27行目:**
+**28行目:**
 
 .. code-block:: python
 
@@ -79,7 +80,7 @@ Q1-1で、左右方向の関節名は"pan"だということが分かってい�
 45°をラジアンで表すと0.785...になります。今回はこの値をリストに入れて、左右方向の角度として渡します。
 
 |
-**28行目:**
+**29行目:**
 
 .. code-block:: python
 
@@ -125,7 +126,7 @@ Tips
 
 .. code-block:: python
 
-    dict1 = {}
+    dict1: ComDictFloat = {}
     dict1["joint_names"] = ["pan", "tilt"]
     dict1["values"] = [0.785, 0.3]
     akari.set_goal_position(dict1)
@@ -138,7 +139,7 @@ Tips
 
 .. code-block:: python
 
-    dict1 = {}
+    dict1: ComDictFloat = {}
     dict1["joint_names"] = ["tilt"]
     dict1["values"] = [0.3]
     akari.set_goal_position(dict1)
