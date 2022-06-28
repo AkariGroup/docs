@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A1-4.おじぎをする(回答編)
@@ -32,32 +32,32 @@ A1-4.おじぎをする(回答編)
 
 
     def main() -> None:
-        """
-        メイン関数
-        """
+    """
+    メイン関数
+    """
 
-        # AkariControllerのインスタンスを作成する。
-        akari = AkariController()
-        # 両方のモータ速度を5rad/sに変更する。
-        akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                                    "values": [5, 5]})
-        ### ここから問題  ###
-        while(True):
-            # 下40°を向く
-            dict1: ComDictFloat = {}
-            dict1["joint_names"] = ["tilt"]
-            dict1["values"] = [-0.698]
-            akari.set_goal_position(dict1)
-            # 3秒停止する
-            time.sleep(3)
-            # 上20°を向く
-            dict1 = {}
-            dict1["joint_names"] = ["tilt"]
-            dict1["values"] = [0.349]
-            akari.set_goal_position(dict1)
-            # 3秒停止する
-            time.sleep(3)
-        ### ここまで  ###
+    # AkariControllerのインスタンスを作成する。
+    akari = AkariController()
+    # 両方のモータ速度を5rad/sに変更する。
+    akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
+                            "values": [5, 5]})
+    ### ここから問題  ###
+    while(True):
+        # 下40°を向く
+        dict1: ComDictFloat = {}
+        dict1["joint_names"] = ["tilt"]
+        dict1["values"] = [-0.698]
+        akari.set_goal_position(dict1)
+        # 3秒停止する
+        time.sleep(3)
+        # 上20°を向く
+        dict1 = {}
+        dict1["joint_names"] = ["tilt"]
+        dict1["values"] = [0.349]
+        akari.set_goal_position(dict1)
+        # 3秒停止する
+        time.sleep(3)
+    ### ここまで  ###
 
 
     if __name__ == '__main__':
@@ -118,7 +118,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-4_bow.py
+        python a1-4_bow.py
 
 下40°を向く→3秒待つ→上20°を向く→３秒待つ→下40°を向く…という動作を繰り返します。
 

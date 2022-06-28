@@ -33,24 +33,24 @@ A1-2.モータの制御(回答編)
 
 
     def main() -> None:
-        """
-        メイン関数
-        """
+    """
+    メイン関数
+    """
 
-        # AkariControllerのインスタンスを作成する。
-        akari = AkariController()
+    # AkariControllerのインスタンスを作成する。
+    akari = AkariController()
 
-        ### ここから問題  ###
-        dict1: ComDictFloat = {}
-        dict1["joint_names"] = ["pan"]
-        dict1["values"] = [0.785]
-        akari.set_goal_position(dict1)
-        ### ここまで  ###
-        # 1秒待つ
-        time.sleep(1)
-        # 現在位置を取得してコマンドラインに表示
-        position = akari.get_present_position(["pan", "tilt"])
-        print("現在位置は" + str(position) + "です。")
+    ### ここから問題  ###
+    dict1: ComDictFloat = {}
+    dict1["joint_names"] = ["pan"]
+    dict1["values"] = [0.785]
+    akari.set_goal_position(dict1)
+    ### ここまで  ###
+    # 1秒待つ
+    time.sleep(1)
+    # 現在位置を取得してコマンドラインに表示
+    position = akari.get_present_position(["pan", "tilt"])
+    print("現在位置は" + str(position) + "です。")
 
 
     if __name__ == '__main__':
@@ -99,7 +99,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-2_move_joint.py
+    python a1-2_move_joint.py
 
 下記のようにコマンドラインに出力されるはずです。
 

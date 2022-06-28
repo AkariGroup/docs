@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ************************************************************
 A1-1.関節名の取得(回答編)
@@ -80,7 +80,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-1_joints_name.py
+    python a1-1_joints_name.py
 
 下記のようにコマンドラインに出力されるはずです。
 

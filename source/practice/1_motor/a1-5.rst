@@ -187,7 +187,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-5_random.py
+    python a1-5_random.py
 
 AKARIのヘッドが3秒に１回ランダムな方向を向く挙動を繰り返します。
 
