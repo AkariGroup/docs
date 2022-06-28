@@ -63,7 +63,7 @@ A1-3.モータ位置の取得(回答編)
 
 .. code-block:: python
 
-        position = akari.get_present_position(["pan", "tilt"])
+    position = akari.get_present_position(["pan", "tilt"])
 
 これまでと同じく、akari.~という形でget_goal_position()を呼び出します。
 
@@ -74,7 +74,7 @@ A1-3.モータ位置の取得(回答編)
 
 .. code-block:: python
 
-        print(position)
+    print(position)
 
 print()関数で位置をコマンドラインに出力します。
 

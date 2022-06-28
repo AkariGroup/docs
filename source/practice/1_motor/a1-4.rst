@@ -70,10 +70,10 @@ A1-4.おじぎをする(回答編)
 
 .. code-block:: python
 
-        dict1: ComDictFloat = {}
-        dict1["joint_names"] = ["tilt"]
-        dict1["values"] = [-0.698]
-        akari.set_goal_position(dict1)
+    dict1: ComDictFloat = {}
+    dict1["joint_names"] = ["tilt"]
+    dict1["values"] = [-0.698]
+    akari.set_goal_position(dict1)
 
 Q1-2と同じやり方で、set_goal_position()でモータを制御します。
 
@@ -86,7 +86,7 @@ Q1-2と同じやり方で、set_goal_position()でモータを制御します。
 
 .. code-block:: python
 
-        time.sleep(3)
+    time.sleep(3)
 
 sleep()関数で3秒停止します。引数は秒数なので3を入れます。
 
@@ -95,10 +95,10 @@ sleep()関数で3秒停止します。引数は秒数なので3を入れます�
 
 .. code-block:: python
 
-        dict1 = {}
-        dict1["joint_names"] = ["tilt"]
-        dict1["values"] = [0.349]
-        akari.set_goal_position(dict1)
+    dict1 = {}
+    dict1["joint_names"] = ["tilt"]
+    dict1["values"] = [0.349]
+    akari.set_goal_position(dict1)
 
 28-31行目と同じやり方です。dict1を再度利用して、"values"を20°をradにした0.349にします。
 
@@ -107,7 +107,7 @@ sleep()関数で3秒停止します。引数は秒数なので3を入れます�
 
 .. code-block:: python
 
-        time.sleep(3)
+    time.sleep(3)
 
 33行目と同じです。
 
@@ -118,7 +118,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-        python a1-4_bow.py
+    python a1-4_bow.py
 
 下40°を向く→3秒待つ→上20°を向く→３秒待つ→下40°を向く…という動作を繰り返します。
 

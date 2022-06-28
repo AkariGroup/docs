@@ -54,7 +54,7 @@ A1-1.関節名の取得(回答編)
 
 .. code-block:: python
 
-        joints_name = akari.get_joint_names()
+    joints_name = akari.get_joint_names()
 
 ヒントにもあったように、20行目でakariという名前でakari_controllerのライブラリを定義しています。
 
@@ -65,7 +65,7 @@ A1-1.関節名の取得(回答編)
 
 .. code-block:: python
 
-        print(joints_name)
+    print(joints_name)
 
 コマンドラインに出力するには、print()という関数を使います。
 
