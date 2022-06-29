@@ -21,7 +21,7 @@ A1-5.ランダムに動く(回答編)
 
     """
     Q1-5. 3秒に1回パン、チルトで-0.5rad~0.5radのランダムな角度を２つ作り、その方向を向くコードを書きましょう。
-    ヒント1: Q4を参考に、while文の中の処理を書き直しましょう。
+    ヒント1: Q1-4を参考に、while文の中の処理を書き直しましょう。
     ヒント2: ランダムな関数を生成するには、random.uniform()という関数を使います。
                 import random
                 val = random.uniform(min,max)
@@ -29,7 +29,6 @@ A1-5.ランダムに動く(回答編)
             これを2回使って、パンとチルトの角度を作りましょう。
     """
     ### ここから問題  ###
-
     # モータ制御の際はakari_controllerのライブラリをインポートする
     from akari_controller.akari_controller import AkariController, ComDictFloat
     # sleep関数を使うためにtimeのライブラリをインポートする。
@@ -171,7 +170,7 @@ panとtilt同時に動かすので、"joint_names"のリストは["pan", "tilt"]
 3秒に1回動かすので、ここでは3秒のsleepを入れます。
 
 |
-**40-41行目:**
+**44-45行目:**
 
 .. code-block:: python
 

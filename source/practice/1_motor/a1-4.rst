@@ -32,32 +32,32 @@ A1-4.おじぎをする(回答編)
 
 
     def main() -> None:
-    """
-    メイン関数
-    """
+        """
+        メイン関数
+        """
 
-    # AkariControllerのインスタンスを作成する。
-    akari = AkariController()
-    # 両方のモータ速度を5rad/sに変更する。
-    akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                            "values": [5, 5]})
-    ### ここから問題  ###
-    while(True):
-        # 下40°を向く
-        dict1: ComDictFloat = {}
-        dict1["joint_names"] = ["tilt"]
-        dict1["values"] = [-0.698]
-        akari.set_goal_position(dict1)
-        # 3秒停止する
-        time.sleep(3)
-        # 上20°を向く
-        dict1 = {}
-        dict1["joint_names"] = ["tilt"]
-        dict1["values"] = [0.349]
-        akari.set_goal_position(dict1)
-        # 3秒停止する
-        time.sleep(3)
-    ### ここまで  ###
+        # AkariControllerのインスタンスを作成する。
+        akari = AkariController()
+        # 両方のモータ速度を5rad/sに変更する。
+        akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
+                                    "values": [5, 5]})
+        ### ここから問題  ###
+        while(True):
+            # 下40°を向く
+            dict1: ComDictFloat = {}
+            dict1["joint_names"] = ["tilt"]
+            dict1["values"] = [-0.698]
+            akari.set_goal_position(dict1)
+            # 3秒停止する
+            time.sleep(3)
+            # 上20°を向く
+            dict1 = {}
+            dict1["joint_names"] = ["tilt"]
+            dict1["values"] = [0.349]
+            akari.set_goal_position(dict1)
+            # 3秒停止する
+            time.sleep(3)
+        ### ここまで  ###
 
 
     if __name__ == '__main__':
@@ -100,7 +100,7 @@ sleep()関数で3秒停止します。引数は秒数なので3を入れます�
     dict1["values"] = [0.349]
     akari.set_goal_position(dict1)
 
-28-31行目と同じやり方です。dict1を再度利用して、"values"を20°をradにした0.349にします。
+29-32行目と同じやり方です。dict1を再度利用して、"values"を20°をradにした0.349にします。
 
 |
 **41行目:**
@@ -109,7 +109,7 @@ sleep()関数で3秒停止します。引数は秒数なので3を入れます�
 
     time.sleep(3)
 
-33行目と同じです。
+34行目と同じです。
 
 
 実行結果
