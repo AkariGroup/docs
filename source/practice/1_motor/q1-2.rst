@@ -28,9 +28,10 @@ Q1-2.モータの制御
    # sleep関数を使うためにtimeのライブラリをインポートする。
    import time
    # モータ制御の際はakari_controllerのライブラリをインポートする
-   from akari_controller.akari_controller import AkariController
+   from akari_controller.akari_controller import AkariController, ComDictFloat
 
-   def main(args=None):
+
+   def main() -> None:
       """
       メイン関数
       """
@@ -39,7 +40,7 @@ Q1-2.モータの制御
       akari = AkariController()
 
       ### ここから問題  ###
-      dict1 = {}
+      dict1: ComDictFloat = {}
       dict1["joint_names"] = """(関節名のリスト)"""
       dict1["values"] = """(目標角度のリスト)""""
       """(モータを動かす関数)""""
@@ -49,6 +50,7 @@ Q1-2.モータの制御
       # 現在位置を取得してコマンドラインに表示
       position = akari.get_present_position(["pan", "tilt"])
       print("現在位置は" + str(position) + "です。")
+
 
    if __name__ == '__main__':
       main()
@@ -63,7 +65,7 @@ Q1-2.モータの制御
 |
 **今回学習する項目1: dict**
 
-25行目でdict1を定義しています。これは **dict** 型という型の変数です。
+26行目でdict1を定義しています。これは **dict** 型という型の変数です。
 
 dictとは、キーというタイトルのようなものと、それに対応する値が格納されたものです。
 
@@ -71,7 +73,7 @@ dictとは、キーというタイトルのようなものと、それに対応�
 
 https://www.python.jp/train/dict/index.html
 
-今回でいうと、26行目
+今回でいうと、27行目
 
 .. code-block:: python
 
@@ -79,7 +81,7 @@ https://www.python.jp/train/dict/index.html
 
 の"joint_names"がキーで、これに対応する値を入れる処理を穴埋めで入れることになります。
 
-27行目
+28行目
 
 .. code-block:: python
 
@@ -104,15 +106,15 @@ https://www.python.jp/train/dict/index.html
 
 この関数の引数に関節名のリストを入れます。
 
-25行目で作成したdict1を引数として使いましょう。
+26行目で作成したdict1を引数として使いましょう。
 
 今回は左右方向のモータだけ動かせばいいので、リストの中の要素は1個だけです。
 
-Q1-1で左右方向の関節名を取得したと思います。その名前を26行目のリストの要素として入れればOKです。
+Q1-1で左右方向の関節名を取得したと思います。その名前を27行目のリストの要素として入れればOKです。
 
-27行目には45°をラジアンに変換した値を入れましょう。
+28行目には45°をラジアンに変換した値を入れましょう。
 
-この関数は前問と同じくakari_controllerのライブラリに含まれており、22行目でakariという名前でこのライブラリを定義しています。
+この関数は前問と同じくakari_controllerのライブラリに含まれており、23行目でakariという名前でこのライブラリを定義しています。
 
 こういう場合、このライブラリの関数は **akari.set_goal_position(dict1)** のように呼び出します。
 

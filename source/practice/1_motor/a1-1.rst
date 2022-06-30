@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ************************************************************
 A1-1.関節名の取得(回答編)
@@ -29,7 +29,8 @@ A1-1.関節名の取得(回答編)
     # モータ制御の際はakari_controllerのライブラリをインポートする
     from akari_controller.akari_controller import AkariController
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -50,26 +51,26 @@ A1-1.関節名の取得(回答編)
 解説
 ========
 
-**23行目:**
-
-.. code-block:: python
-
-        joints_name = akari.get_joint_names()
-
-ヒントにもあったように、20行目でakariという名前でakari_controllerのライブラリを定義しています。
-
-この場合、akari_controllerに含まれる関数は **akari.関数名** という形で呼び出します。
-
-|
 **24行目:**
 
 .. code-block:: python
 
-        print(joints_name)
+    joints_name = akari.get_joint_names()
+
+ヒントにもあったように、21行目でakariという名前でakari_controllerのライブラリを定義しています。
+
+この場合、akari_controllerに含まれる関数は **akari.関数名** という形で呼び出します。
+
+|
+**25行目:**
+
+.. code-block:: python
+
+    print(joints_name)
 
 コマンドラインに出力するには、print()という関数を使います。
 
-23行目でjoints_nameという変数に関節名を受け取ったので、これをprint関数で出力します。print(変数名)で出力できます。
+24行目でjoints_nameという変数に関節名を受け取ったので、これをprint関数で出力します。print(変数名)で出力できます。
 
 joints_nameはlist型なので、listが出力されます。
 
@@ -80,7 +81,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-1_joints_name.py
+    python a1-1_joints_name.py
 
 下記のようにコマンドラインに出力されるはずです。
 
@@ -158,11 +159,11 @@ akari_controllerはモータ制御用のライブラリとしてあらかじめ�
 最初のうちは、 **ヘッドのモータ制御が必要な際は必ず記述するもの** 、と覚えておいてください。
 
 |
-**14-17行目:**
+**15-18行目:**
 
 .. code-block:: python
 
-    def main(args=None):
+    def main() -> None:
         """
         メイン関数
         """
@@ -174,7 +175,7 @@ argsは引数で、args=Noneとしておくとpython実行時に引数が入っ�
 **最初はこの部分もあまり気にせず、毎回この書き方をしておけば問題ないです。**
 
 |
-**19-20行目:**
+**20-21行目:**
 
 .. code-block:: python
 
@@ -188,7 +189,7 @@ argsは引数で、args=Noneとしておくとpython実行時に引数が入っ�
 これも12行目とセットで **ヘッドのモータ制御をするために必要なもの** 、と覚えておいてください。
 
 |
-**22-25行目:**
+**23-26行目:**
 
 .. code-block:: python
 
@@ -200,18 +201,18 @@ argsは引数で、args=Noneとしておくとpython実行時に引数が入っ�
 上で解説しているので割愛します。
 
 |
-**28-29行目:**
+**29-30行目:**
 
 .. code-block:: python
 
     if __name__ == '__main__':
         main()
 
-28行目を入れておくと、ファイルがコマンドラインからスクリプトとして実行された場合にのみ処理を実行してくれます。
+29行目を入れておくと、ファイルがコマンドラインからスクリプトとして実行された場合にのみ処理を実行してくれます。
 
 つまり他ファイルからimportしたときにこのコードの中身が自動実行されなくなります。
 
-29行目にmain()という名前で実行する関数が指定されているので、14行目のmain()関数が実行されます。
+30行目にmain()という名前で実行する関数が指定されているので、15行目のmain()関数が実行されます。
 
 **これも現時点ではあまり気にせず、基本的にアプリを作る場合は入れておきましょう。**
 

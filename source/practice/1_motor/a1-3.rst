@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A1-3.モータ位置の取得(回答編)
@@ -30,25 +30,26 @@ A1-3.モータ位置の取得(回答編)
     # モータ制御の際はakari_controllerのライブラリをインポートする
     from akari_controller.akari_controller import AkariController
 
-    def main(args=None):
-    """
-    メイン関数
-    """
 
-    # AkariControllerのインスタンスを作成する。
-    akari = AkariController()
-    # 両方のモータ速度を5rad/sに変更する。
-    akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
-                            "values": [5, 5]})
-    # AKARIを目標位置に移動する。
-    akari.set_goal_position({"joint_names": ["pan", "tilt"],
-                            "values": [-0.5, 0.2]})
-    # 1秒待つ
-    time.sleep(1)
-    ### ここから問題  ###
-    position = akari.get_present_position(["pan", "tilt"])
-    print(position)
-    ### ここまで  ###
+    def main() -> None:
+        """
+        メイン関数
+        """
+
+        # AkariControllerのインスタンスを作成する。
+        akari = AkariController()
+        # 両方のモータ速度を5rad/sに変更する。
+        akari.set_profile_velocity({"joint_names": ["pan", "tilt"],
+                                    "values": [5, 5]})
+        # AKARIを目標位置に移動する。
+        akari.set_goal_position({"joint_names": ["pan", "tilt"],
+                                "values": [-0.5, 0.2]})
+        # 1秒待つ
+        time.sleep(1)
+        ### ここから問題  ###
+        position = akari.get_present_position(["pan", "tilt"])
+        print(position)
+        ### ここまで  ###
 
 
     if __name__ == '__main__':
@@ -59,22 +60,22 @@ A1-3.モータ位置の取得(回答編)
 
 解説
 ========
-**31行目:**
+**32行目:**
 
 .. code-block:: python
 
-        position = akari.get_present_position(["pan", "tilt"])
+    position = akari.get_present_position(["pan", "tilt"])
 
 これまでと同じく、akari.~という形でget_goal_position()を呼び出します。
 
 "pan", "tilt"の両方をリストにして引数にすることで、両方の関節の角度が返り値のリストに入ります。
 
 |
-**32行目:**
+**33行目:**
 
 .. code-block:: python
 
-        print(position)
+    print(position)
 
 print()関数で位置をコマンドラインに出力します。
 
@@ -84,7 +85,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
 .. code-block:: bash
 
-   python a1-3_get_position.py
+    python a1-3_get_position.py
 
 ヘッドが動いたあと下記のようにコマンドラインに出力されるはずです。
 
@@ -92,7 +93,7 @@ answerディレクトリ内のファイルを実行してみましょう
 
     [-0.47718452516064747, 0.17951958020513104]
 
-26行目でヘッドを[-0.5, 0.2]に動かすように指令を出しています。
+27行目でヘッドを[-0.5, 0.2]に動かすように指令を出しています。
 
 表示されたリストの１つ目の値が左右方向の角度、２つ目の値が上下方向の角度です。
 
@@ -122,7 +123,7 @@ Tips
 
 関節名と速度rad/sをdictに入れて渡すと、以降は更新するまでその速度でモータが動くようになります。
 
-23行目で、
+24行目で、
 
 .. code-block:: python
 

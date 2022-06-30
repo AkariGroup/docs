@@ -28,7 +28,8 @@ Q1-1.関節名の取得
    # モータ制御の際はakari_controllerのライブラリをインポートする
    from akari_controller.akari_controller import AkariController
 
-   def main(args=None):
+
+   def main() -> None:
       """
       メイン関数
       """
@@ -63,7 +64,7 @@ Q1-1.関節名の取得
 
 この関数を呼び出すと、list型に左右の軸、上下の軸の関節名が格納されて返ってきます。
 
-この関数はakari_controllerのライブラリに含まれており、20行目でakariという名前でこのライブラリを定義しています。
+この関数はakari_controllerのライブラリに含まれており、21行目でakariという名前でこのライブラリを定義しています。
 
 こういう場合、このライブラリの関数はakari.get_joint_names()のように呼び出します。
 
