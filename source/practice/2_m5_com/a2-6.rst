@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A2-6.自動ライト(回答編)
@@ -22,21 +22,22 @@ A2-6.自動ライト(回答編)
 
     """
     Q2-6.環境明るさの取得値をコマンドラインに表示し、
-         3000以上の場合のみ、テストヘッドのdout0のLEDをONにする自動ライトを作りましょう。
+        3000以上の場合のみ、テストヘッドのdout0のLEDをONにする自動ライトを作りましょう。
     ヒント1: Q2-3とQ2-5を参考にしましょう。
-             get関数の返り値の'brightness'の項目から明るさが読めます。
+            get関数の返り値の'brightness'の項目から明るさが読めます。
     ヒント2: AKARIのボディー部の、AKARIから見て右側面に明るさセンサがついています。
-             ここに光を当てたり、指で覆ったりするとbrightnessの値が0-4095で変化します。
-             暗くなるほどbrightnessの値は大きくなります。
+            ここに光を当てたり、指で覆ったりするとbrightnessの値が0-4095で変化します。
+            暗くなるほどbrightnessの値は大きくなります。
     ヒント3: 3000未満の時はLED0は消しましょう。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -47,19 +48,14 @@ A2-6.自動ライト(回答編)
         ### ここから問題  ###
         # Ctrl + Cで終了するまでループし続ける
         while(True):
-            result, m5_data = m5.get()
-            # データが取得できた場合(result=True)は明るさ表示。
-            # 失敗した場合(result=False)はエラー文を表示。
-            if(result):
-                # 取得した明るさをコマンドラインに表示。
-                print("明るさ値は" + str(m5_data['brightness']) + "です。")
-                # 3000以上ならdout0をONにする。
-                if(m5_data['brightness'] >= 3000):
-                    m5.set_dout(0, True)
-                else:
-                    m5.set_dout(0, False)
+            m5_data = m5.get()
+            # 取得した明るさをコマンドラインに表示。
+            print("明るさ値は" + str(m5_data['brightness']) + "です。")
+            # 3000以上ならdout0をONにする。
+            if(m5_data['brightness'] >= 3000):
+                m5.set_dout(0, True)
             else:
-                print("データ取得に失敗しました")
+                m5.set_dout(0, False)
             # 0.5秒停止処理を入れる。
             time.sleep(0.5)
         ### ここまで  ###
@@ -71,16 +67,16 @@ A2-6.自動ライト(回答編)
 
 解説
 ========
-**31行目:**
+**32行目:**
 
 .. code-block:: python
 
-    result, m5_data = m5.get()
+    m5_data = m5.get()
 
-Q2-5と同じように26行目でm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
+Q2-5と同じように27行目でm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
 
 |
-**36行目:**
+**34行目:**
 
 .. code-block:: python
 
@@ -89,7 +85,7 @@ Q2-5と同じように26行目でm5という名前でm5_serial_serverのイン�
 今回は、"m5_data['brightnesss']" を参照します。Q2-5と同様、この値を文字列に変換した上で、前後に文字列を合成して、"明るさ値は〇〇です。"という表示にします。
 
 |
-**38-41行目:**
+**36-39行目:**
 
 .. code-block:: python
 

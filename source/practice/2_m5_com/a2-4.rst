@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A2-4.PWM出力の制御(回答編)
@@ -33,12 +33,13 @@ A2-4.PWM出力の制御(回答編)
             を使うのがいいでしょう。これは数値iがstartからendまで、stepずつ増加するループ処理です。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -63,7 +64,7 @@ A2-4.PWM出力の制御(回答編)
 
 解説
 ========
-**30-31行目:**
+**31-32行目:**
 
 .. code-block:: python
 
@@ -73,19 +74,19 @@ A2-4.PWM出力の制御(回答編)
 for文を使って変数iを変化させていきます。iはpwmout0の明るさとして与えるので、0から250まで10ずつ変化させます。
 
 |
-**32-33行目:**
+**33-34行目:**
 
 .. code-block:: python
 
     # dout0をON
     m5.set_pwmout(0, i)
 
-これまでの問題と同様、27行目でm5という名前でM5SerialServer()のインスタンスを作成しているので、m5.set_pwmout()という形で書きます。
+これまでの問題と同様、28行目でm5という名前でM5SerialServer()のインスタンスを作成しているので、m5.set_pwmout()という形で書きます。
 
 pin_idは0、valはfor文で変化させるiを使います。iが10ずつ増加するので、この値を引数にします。
 
 |
-**34行目:**
+**35行目:**
 
 .. code-block:: python
 
@@ -94,7 +95,7 @@ pin_idは0、valはfor文で変化させるiを使います。iが10ずつ増加
 0.5秒間停止させるように問題文で支持されているので、sleepを使って0.5秒停止します。
 
 |
-**35-36行目:**
+**36-37行目:**
 
 .. code-block:: python
 
