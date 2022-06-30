@@ -26,12 +26,13 @@ Q2-3.デジタル出力の制御
    ヒント3: 処理を停止するにはtime.sleep(sec)関数を使います。secに秒数を入れるとその時間だけ処理が停止します。
    """
 
-   # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+   # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
    from m5serial_server_py.m5serial_server_py import M5SerialServer
    # sleep関数を使うためにtimeのライブラリをインポートする。
    import time
 
-   def main(args=None):
+
+   def main() -> None:
       """
       メイン関数
       """
@@ -72,7 +73,7 @@ M5のデジタル出力を制御するには、M5SerialServerのset_dout()関数
 
 今回は第一引数のpin_idが0、第二引数のvalをTrue、Falseで切り替えて出力をON、OFFします。
 
-この関数はm5serial_server_pyのライブラリに含まれており、22行目でm5いう名前でこのライブラリのインスタンスを作成しています。
+この関数はm5serial_server_pyのライブラリに含まれており、24行目でm5いう名前でこのライブラリのインスタンスを作成しています。
 
 これまでの問題と同じように、m5.set_dout()のようにこの関数を呼び出します。
 
