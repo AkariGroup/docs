@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 Q4-1.温度ロガー(回答編)
@@ -36,7 +36,7 @@ Q4-1.温度ロガー(回答編)
     """
 
     ### ここから問題  ###
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
@@ -48,7 +48,8 @@ Q4-1.温度ロガー(回答編)
     # logファイルの名前を定義
     FILE_NAME = 'log.csv'
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -57,25 +58,22 @@ Q4-1.温度ロガー(回答編)
         # log.csvを作成して、インデックス行を書き込む
         with open(FILE_NAME, 'w') as f:
             writer = csv.writer(f)
-            writer.writerow(['時刻','温度'])
+            writer.writerow(['時刻', '温度'])
         # Ctrl + Cで終了するまでループし続ける
         while(True):
-            result, m5_data = m5.get()
-            # データが取得できた場合(result=True)は温度を取得。
-            # 失敗した場合(result=False)はエラー文を表示。
-            if(result):
-                cur_temperature = m5_data['temperature']
-                # 時刻を取得
-                dt_now = datetime.datetime.now()
-                # 時:分:秒の形に変換
-                cur_time = dt_now.strftime('%H:%M:%S')
-                print('[' + cur_time + '] temperature: ' + str(cur_temperature) + ' [deg]' )
-                # logファイルを開いて取得した時刻、温度を最終行に追記
-                with open(FILE_NAME, 'a') as f:
-                    writer = csv.writer(f)
-                    writer.writerow([cur_time,cur_temperature])
-            else:
-                print("データ取得に失敗しました")
+            m5_data = m5.get()
+            # 温度を取得
+            cur_temperature = m5_data['temperature']
+            # 時刻を取得
+            dt_now = datetime.datetime.now()
+            # 時:分:秒の形に変換
+            cur_time = dt_now.strftime('%H:%M:%S')
+            print('[' + cur_time + '] temperature: ' +
+                str(cur_temperature) + ' [deg]')
+            # logファイルを開いて取得した時刻、温度を最終行に追記
+            with open(FILE_NAME, 'a') as f:
+                writer = csv.writer(f)
+                writer.writerow([cur_time, cur_temperature])
             # 10秒停止処理を入れる。
             time.sleep(10)
 
@@ -123,7 +121,7 @@ logファイルの名前を'log.csv'として定義しておきます。
 同じファイルへの書き込み処理をする箇所が複数あるので、先に定義しておいた方が使いやすいです。
 
 |
-**33-36行目:**
+**34-37行目:**
 
 .. code-block:: python
 
@@ -135,7 +133,7 @@ logファイルの名前を'log.csv'として定義しておきます。
 メイン関数を定義します。この中身が実行されます。
 
 |
-**37-38行目:**
+**38-39行目:**
 
 .. code-block:: python
 
@@ -145,7 +143,7 @@ logファイルの名前を'log.csv'として定義しておきます。
 M5SerialServer()のインスタンスをm5という名前で作成します。
 
 |
-**39-42行目:**
+**40-43行目:**
 
 .. code-block:: python
 
@@ -159,7 +157,7 @@ M5SerialServer()のインスタンスをm5という名前で作成します。
 新規作成なので、open()の第二引数を'w'としています。
 
 |
-**43-44行目:**
+**44-45行目:**
 
 .. code-block:: python
 
@@ -169,36 +167,26 @@ M5SerialServer()のインスタンスをm5という名前で作成します。
 while()でループさせます。条件式はTrueなので、終了するまでループし続けます。
 
 |
-**45行目:**
+**46行目:**
 
 .. code-block:: python
 
-    result, m5_data = m5.get()
+    m5_data = m5.get()
 
 これまでと同じようにm5.get()という形でM5のデータを取得します。
 
 |
-**46-48行目:**
+**47-48行目:**
 
 .. code-block:: python
 
-    # データが取得できた場合(result=True)の場合は温度表示。
-    # 失敗した場合(result=False)の場合はエラー文を表示。
-    if(result):
-
-m5.get()でデータが取得できた場合のみ処理を実行します。
-
-|
-**49行目:**
-
-.. code-block:: python
-
+    # 温度を取得
     cur_temperature = m5_data['temperature']
 
 現在温度をm5_data内から取得します。温度のキーは'temperature'です。
 
 |
-**50-53行目:**
+**49-52行目:**
 
 .. code-block:: python
 
@@ -214,11 +202,12 @@ dt_now.strftime()を使うと、引数で指定した書式での現在時刻が
 Q3-5で使っているので、そちらを参考にするのがいいでしょう。
 
 |
-**54行目:**
+**53行目:**
 
 .. code-block:: python
 
-    print('[' + cur_time + '] temperature: ' + str(cur_temperature) + ' [deg]' )
+    print('[' + cur_time + '] temperature: ' +
+              str(cur_temperature) + ' [deg]')
 
 特に指定はないですが、記録する値をコマンドラインに出力しておくとデバッグに便利です。
 
@@ -230,7 +219,7 @@ Q3-5で使っているので、そちらを参考にするのがいいでしょ�
     # logファイルを開いて取得した時刻、温度を最終行に追記
     with open(FILE_NAME, 'a') as f:
         writer = csv.writer(f)
-        writer.writerow([cur_time,cur_temperature])
+        writer.writerow([cur_time, cur_temperature])
 
 39-43行目と同じファイルへ追記していきます。追記なので、open()の第二引数は'a'です。
 
@@ -241,25 +230,13 @@ Q3-5で使っているので、そちらを参考にするのがいいでしょ�
 
 .. code-block:: python
 
-        else:
-            print("データ取得に失敗しました")
-
-48行目のif文に対応するelse文です。
-
-m5.get()でデータが取得できなかった場合は、その旨をコマンドラインに出力します。
-
-|
-**61-62行目:**
-
-.. code-block:: python
-
     # 10秒停止処理を入れる。
     time.sleep(10)
 
 最後に10秒停止の処理をsleep()で行います。
 
 |
-**65-66行目:**
+**63-65行目:**
 
 .. code-block:: python
 
