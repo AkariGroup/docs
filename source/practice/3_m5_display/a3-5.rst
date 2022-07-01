@@ -28,7 +28,7 @@ A3-5.デジタル時計(回答編)
             変わります。少し難しいですが、よりかっこいいアプリを目指して色々試してみましょう。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
@@ -38,7 +38,8 @@ A3-5.デジタル時計(回答編)
     # M5SerialServerのインスタンスを作成する。
     m5 = M5SerialServer()
 
-    def get_time():
+
+    def get_time() -> str:
         """
         現在時刻を返す独自関数
         引数:なし
@@ -51,7 +52,9 @@ A3-5.デジタル時計(回答編)
         return (dt_now.strftime('%H:%M:%S'))
 
     ### ここから問題  ###
-    def main(args=None):
+
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -73,7 +76,8 @@ A3-5.デジタル時計(回答編)
             # 背景をリセットしない
             refresh = False
             # set_display_textを実行
-            result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+            result = m5.set_display_text(
+                text, pos_x, pos_y, size, text_color, back_color, refresh)
             # 0.3秒停止
             time.sleep(0.3)
 
@@ -88,16 +92,16 @@ A3-5.デジタル時計(回答編)
 
 解説
 ========
-**36行目:**
+**39行目:**
 
 .. code-block:: python
 
-    def main(args=None):
+    def main() -> None:
 
 main関数の定義をします。
 
 |
-**41行目:**
+**44行目:**
 
 .. code-block:: python
 
@@ -106,7 +110,7 @@ main関数の定義をします。
 今回はディスプレイの背景色を黒に変更しています。
 
 |
-**42行目:**
+**45行目:**
 
 .. code-block:: python
 
@@ -115,7 +119,7 @@ main関数の定義をします。
 時刻を取得してディスプレイを更新する処理はwhile文でループします。
 
 |
-**44行目:**
+**47行目:**
 
 .. code-block:: python
 
@@ -124,7 +128,7 @@ main関数の定義をします。
 既に実装されているget_time()関数を用いて、時刻の文字列を取得してtextに代入します。
 
 |
-**46行目:**
+**49行目:**
 
 .. code-block:: python
 
@@ -133,7 +137,7 @@ main関数の定義をします。
 左右表示位置を真中揃えにします。-999で真中になります。
 
 |
-**48行目:**
+**51行目:**
 
 .. code-block:: python
 
@@ -142,7 +146,7 @@ main関数の定義をします。
 上下表示位置を中央揃えにします。-999で中央になります。
 
 |
-**50行目:**
+**53行目:**
 
 .. code-block:: python
 
@@ -151,7 +155,7 @@ main関数の定義をします。
 今回は文字サイズを4にしています。
 
 |
-**52行目:**
+**55行目:**
 
 .. code-block:: python
 
@@ -160,7 +164,7 @@ main関数の定義をします。
 今回は文字色を白にしています。
 
 |
-**54行目:**
+**57行目:**
 
 .. code-block:: python
 
@@ -169,7 +173,7 @@ main関数の定義をします。
 今回は背景色を黒にしています。
 
 |
-**56行目:**
+**59行目:**
 
 .. code-block:: python
 
@@ -178,16 +182,17 @@ main関数の定義をします。
 同じ箇所に表示し続けるので、背景はリセットしなくても問題ないです。
 
 |
-**58行目:**
+**61行目:**
 
 .. code-block:: python
 
-    result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+    result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
 
 ここまで設定した変数を引数として、set_display_text()を実行します。
 
 |
-**60行目:**
+**64行目:**
 
 .. code-block:: python
 
@@ -202,7 +207,7 @@ M5のディスプレイ更新に少し時間がかかるため、短すぎると
 0.3秒くらいのペースで更新が続いていると、見た目の違和感も少ないと思います。
 
 |
-**63行目:**
+**67行目:**
 
 .. code-block:: python
 
@@ -231,7 +236,7 @@ Tips
 
 **今回学習する項目1: datetime**
 
-23-33行目のget_time()関数では、datatime型を使って時刻を取得しています。
+24-34行目のget_time()関数では、datatime型を使って時刻を取得しています。
 
 .. code-block:: python
     

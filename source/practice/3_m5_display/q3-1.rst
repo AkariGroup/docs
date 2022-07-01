@@ -26,13 +26,13 @@ Q3-1.ディスプレイカラーの制御
                m5.set_display_color("red")
    """
 
-   # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+   # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
    from m5serial_server_py.m5serial_server_py import M5SerialServer
    # sleep関数を使うためにtimeのライブラリをインポートする。
    import time
 
 
-   def main(args=None):
+   def main() -> None:
       """
       メイン関数
       """
@@ -82,7 +82,7 @@ M5のディスプレイカラーを変更するには、M5SerialServerのset_dis
 
 使える色名の一覧は :doc:`こちら <../../spec/soft_base_noros>` を参照してください。
 
-この関数はm5serial_server_pyのライブラリに含まれており、23行目でm5いう名前でこのライブラリのインスタンスを作成しています。
+この関数はm5serial_server_pyのライブラリに含まれており、24行目でm5という名前でこのライブラリのインスタンスを作成しています。
 
 この場合、m5.set_display_color(red)のようにこの関数を呼び出します(赤の場合)。
 
