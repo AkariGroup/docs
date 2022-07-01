@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************************
 A2-3.デジタル出力の制御(回答編)
@@ -23,15 +23,17 @@ A2-3.デジタル出力の制御(回答編)
     Q2-3.テストヘッドのdout0のLEDを2秒ごとにONOFFするコードを書きましょう。
     ヒント1: set_dout (int pin_id, bool val)という関数でdoutの出力を制御できます。
             pin_idは0、valにTrue,Falseを入れることでON,OFFできます。
-    ヒント2: 処理を停止するにはtime.sleep(sec)関数を使います。secに秒数を入れるとその時間だけ処理が停止します。
+    ヒント2: while(True):の中に書かれたコードはループします。この中に１周期分の処理を書きましょう。
+    ヒント3: 処理を停止するにはtime.sleep(sec)関数を使います。secに秒数を入れるとその時間だけ処理が停止します。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -58,7 +60,7 @@ A2-3.デジタル出力の制御(回答編)
 
 解説
 ========
-**25行目:**
+**27行目:**
 
 .. code-block:: python
 
@@ -67,21 +69,21 @@ A2-3.デジタル出力の制御(回答編)
 dou0のON、OFFをループするので、while文を使います。終了するまで繰り返し続けるので、条件式はTrueです。
 
 |
-**26-27行目:**
+**28-29行目:**
 
 .. code-block:: python
 
     # dout0をON
     m5.set_dout(0, True)
 
-ヒントにもあったように、22行目でm5という名前でM5SerialServer()のインスタンスを作成しています。
+ヒントにもあったように、24行目でm5という名前でM5SerialServer()のインスタンスを作成しています。
 
 この場合、M5SerialServer()に含まれる関数は **m5.関数名** という形で呼び出します。
 
 ここではset_dout()関数を使います。dout0をONにするため、pin_idは0、valはTrueです。
 
 |
-**28-29行目:**
+**30-31行目:**
 
 .. code-block:: python
 
@@ -91,26 +93,26 @@ dou0のON、OFFをループするので、while文を使います。終了する
 2秒間停止するので、sleepを使います。
 
 |
-**30-31行目:**
+**32-33行目:**
 
 .. code-block:: python
 
     # dout0をOFF
     m5.set_dout(0, False)
 
-26-27行目と同様に、set_dout()を使います。
+28-29行目と同様に、set_dout()を使います。
 
 dout0をOFFにするため、pin_idは0、valはFalseです。
 
 |
-**32-33行目:**
+**34-35行目:**
 
 .. code-block:: python
 
     # 2秒停止する
     time.sleep(2)
 
-28-29行目と同様です。
+30-31行目と同様です。
 
 
 実行結果

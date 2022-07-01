@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A2-7.手動ライト(回答編)
@@ -39,7 +39,7 @@ A2-7.手動ライト(回答編)
     import time
 
 
-    def main(args=None):
+    def main() -> None:
         """
         メイン関数
         """
@@ -51,20 +51,15 @@ A2-7.手動ライト(回答編)
         pwmout0_val = 0
         # Ctrl + Cで終了するまでループし続ける。
         while(True):
-            result, m5_data = m5.get()
-            # データが取得できた場合(result=True)は明るさ表示。
-            # 失敗した場合(result=False)はエラー文を表示。
-            if(result):
-                 # ボタンAが押されていて、かつpwmout0_valが240以下の場合、pwmout0を+10。
-                if(m5_data['button_a'] and pwmout0_val <= 240):
-                    pwmout0_val += 10
-                # ボタンBが押されていて、かつpwmout0_valが10以上の場合、pwmout0を-10。
-                if(m5_data['button_b'] and pwmout0_val >= 10):
-                    pwmout0_val -= 10
-                # pwmout0の値をコマンドラインに出力。
-                print("今の明るさは" + str(pwmout0_val) + "です。")
-            else:
-                print("データ取得に失敗しました")
+            m5_data = m5.get()
+            # ボタンAが押されていて、かつpwmout0_valが240以下の場合、pwmout0を+10。
+            if(m5_data['button_a'] and pwmout0_val <= 240):
+                pwmout0_val += 10
+            # ボタンBが押されていて、かつpwmout0_valが10以上の場合、pwmout0を-10。
+            if(m5_data['button_b'] and pwmout0_val >= 10):
+                pwmout0_val -= 10
+            # pwmout0の値をコマンドラインに出力。
+            print("今の明るさは" + str(pwmout0_val) + "です。")
             # pwmout0を指令
             m5.set_pwmout(0, pwmout0_val)
             # 0.1秒停止処理を入れる。ここは各自調整！
@@ -99,7 +94,7 @@ A2-7.手動ライト(回答編)
 
 .. code-block:: python
 
-    def main(args=None):
+    def main() -> None:
 
 メイン関数を定義します。この中身が実行されます。
 
@@ -141,21 +136,12 @@ While文の中に書いてしまうと、毎回ループのために0が与え�
 
 .. code-block:: python
 
-        result, m5_data = m5.get()
+        m5_data = m5.get()
 
 これまでと同じようにm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
 
 |
-**37行目:**
-
-.. code-block:: python
-
-    if(result):
-
-resultがTrueの場合のみm5_dataの値を読むようにします。こうしないとエラーが発生します。
-
-|
-**38-40行目:**
+**36-38行目:**
 
 .. code-block:: python
 
@@ -163,17 +149,17 @@ resultがTrueの場合のみm5_dataの値を読むようにします。こうし
     if(m5_data['button_a'] and pwmout0_val <= 240):
         pwmout0_val += 10
 
-ボタンAの出力はm5_data['button_a']に格納されています。ボタンAがTrueで、かつpwmout0_valが240以下の時のみ、31行目で作成した変数であるpwmout0_valを+10します。
+ボタンAの出力はm5_data['button_a']に格納されています。ボタンAがTrueで、かつpwmout0_valが240以下の時のみ、32行目で作成した変数であるpwmout0_valを+10します。
 
 こうすることで、pwmout0_valが250を超えないようにします。
 
 |
-**42-44行目:**
+**39-41行目:**
 
 .. code-block:: python
 
     # ボタンBが押されていて、かつpwmout0_valが10以上の場合、pwmout0を-10。
-    if(m5_data['button_b']):
+    if(m5_data['button_b'] and pwmout0_val >= 10):
         pwmout0_val -= 10
 
 ボタンBの出力はm5_data['button_b']に格納されています。同様にボタンBがTrueかつpwmout0_valが10以上の時のみ、pwmout0_valを-10します。
@@ -181,7 +167,7 @@ resultがTrueの場合のみm5_dataの値を読むようにします。こうし
 こうすることで、pwmout0_valが0を下回らないようにします。
 
 |
-**45-46行目:**
+**42-43行目:**
 
 .. code-block:: python
 
@@ -191,17 +177,7 @@ resultがTrueの場合のみm5_dataの値を読むようにします。こうし
 pwmout0_valをコマンドラインに出力しておきます。
 
 |
-**47-48行目:**
-
-.. code-block:: python
-
-    else:
-        print("データ取得に失敗しました")
-
-36行目のif文に対するelseです。resultがFalseだった場合、つまりデータ取得に失敗した場合、コマンドラインにエラーメッセージとして出力します。
-
-|
-**49-50行目:**
+**44-45行目:**
 
 .. code-block:: python
 
@@ -211,7 +187,7 @@ pwmout0_valをコマンドラインに出力しておきます。
 ボタンによって更新されたpwmout0_valを出力値として、set_pwmout()でpwmout0を出力します。
 
 |
-**51-52行目:**
+**46-47行目:**
 
 .. code-block:: python
 
@@ -221,7 +197,7 @@ pwmout0_valをコマンドラインに出力しておきます。
 0.1秒間停止させる処理をします。ここの値は各自調整し、ループ速度と処理のレスポンスが最適になるようにしましょう。
 
 |
-**55-56行目:**
+**50-51行目:**
 
 .. code-block:: python
 

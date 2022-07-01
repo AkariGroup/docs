@@ -1,5 +1,5 @@
 .. highlight:: python
-   :linenothreshold: 10
+    :linenothreshold: 10
 
 ******************************
 A2-5.温度計(回答編)
@@ -26,12 +26,13 @@ A2-5.温度計(回答編)
             返り値の'temperature'の項目から温度[℃]が読めます。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -42,13 +43,9 @@ A2-5.温度計(回答編)
         ### ここから問題  ###
         # Ctrl + Cで終了するまでループし続ける
         while(True):
-            result, m5_data = m5.get()
-            # データが取得できた場合(result=True)は温度表示。
-            # 失敗した場合(result=False)はエラー文を表示。
-            if(result):
-                print("温度は" + str(m5_data['temperature']) + "度です。")
-            else:
-                print("データ取得に失敗しました")
+            m5_data = m5.get()
+            # 温度を表示。
+            print("温度は" + str(m5_data['temperature']) + "度です。")
             # 1秒停止処理を入れる。
             time.sleep(1)
         ### ここまで  ###
@@ -60,16 +57,16 @@ A2-5.温度計(回答編)
 
 解説
 ========
-**26行目:**
+**27行目:**
 
 .. code-block:: python
 
-    result, m5_data = m5.get()
+    m5_data = m5.get()
 
-Q2-1と同じように21行目でm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
+Q2-1と同じように22行目でm5という名前でm5_serial_serverのインスタンスを作成しているので、m5.get()という形で呼び出します。
 
 |
-**46行目:**
+**29行目:**
 
 .. code-block:: python
 
@@ -78,7 +75,7 @@ Q2-1と同じように21行目でm5という名前でm5_serial_serverのイン�
 今回は、"m5_data['temperature']" を参照します。この値を文字列に変換した上で、前後に文字列を合成して、"温度は〇〇度です。"という表示にします。
 
 |
-**51行目:**
+**31行目:**
 
 .. code-block:: python
 
