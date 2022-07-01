@@ -28,12 +28,13 @@ A3-3.ディスプレイテキストの表示2(回答編)
     ヒント2: 文字と背景の色は、画面の色変更と同じように黒なら'black'、白なら'white'を入れればOKです。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -58,7 +59,8 @@ A3-3.ディスプレイテキストの表示2(回答編)
         # 最初の１つ目は背景をリセットする
         refresh = True
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
@@ -78,7 +80,8 @@ A3-3.ディスプレイテキストの表示2(回答編)
         # 前の文字を消さないために、背景はリセットしない。
         refresh = False
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
@@ -98,7 +101,8 @@ A3-3.ディスプレイテキストの表示2(回答編)
         # 前の文字を消さないために、背景はリセットしない。
         refresh = False
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
@@ -112,7 +116,7 @@ A3-3.ディスプレイテキストの表示2(回答編)
 
 解説
 ========
-**28行目:**
+**29行目:**
 
 .. code-block:: python
 
@@ -121,7 +125,7 @@ A3-3.ディスプレイテキストの表示2(回答編)
 textの引数には、str形式で出力したい文字列を与えます。今回は'あか'です。
 
 |
-**36行目:**
+**37行目:**
 
 .. code-block:: python
 
@@ -130,7 +134,7 @@ textの引数には、str形式で出力したい文字列を与えます。今�
 文字の色は表示するテキストと同じ赤を指定します。
 
 |
-**40行目:**
+**41行目:**
 
 .. code-block:: python
 
@@ -141,7 +145,7 @@ textの引数には、str形式で出力したい文字列を与えます。今�
 refreshをTrueにすることで、画面をback_colorで指定した色(今回は白)でリセットした上で文字が表示されます。
 
 |
-**48行目:**
+**50行目:**
 
 .. code-block:: python
 
@@ -150,7 +154,7 @@ refreshをTrueにすることで、画面をback_colorで指定した色(今回�
 つぎは'きいろ'です。
 
 |
-**56行目:**
+**58行目:**
 
 .. code-block:: python
 
@@ -159,7 +163,7 @@ refreshをTrueにすることで、画面をback_colorで指定した色(今回�
 同じく文字色は黄色にします。
 
 |
-**60行目:**
+**62行目:**
 
 .. code-block:: python
 
@@ -168,7 +172,7 @@ refreshをTrueにすることで、画面をback_colorで指定した色(今回�
 前の'あか'を消さずに表示したいため、refreshはFalseにします。
 
 |
-**68行目:**
+**71行目:**
 
 .. code-block:: python
 
@@ -177,7 +181,7 @@ refreshをTrueにすることで、画面をback_colorで指定した色(今回�
 最後は'あお'です。
 
 |
-**76行目:**
+**79行目:**
 
 .. code-block:: python
 
@@ -186,7 +190,7 @@ refreshをTrueにすることで、画面をback_colorで指定した色(今回�
 文字色は青にします。
 
 |
-**60行目:**
+**83行目:**
 
 .. code-block:: python
 

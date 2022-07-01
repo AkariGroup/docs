@@ -26,28 +26,26 @@ A3-4.気圧計(回答編)
     ヒント2: コメントを参考に、引数を穴埋めしましょう。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
     # M5SerialServerのインスタンスを作成する。
     m5 = M5SerialServer()
 
-    def get_pressure():
+
+    def get_pressure() -> str:
         """
         圧力センサの値を返す独自関数
         引数:なし
         返り値: 圧力値の文字列
         """
-        result,m5_data = m5.get()
-        if(result):
-            # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
-            return (str(round(m5_data['pressure']/100,2)) + 'hPa')
-        else:
-            # 取得に失敗した場合は、"No data"を返す。
-            return "No data"
+        m5_data = m5.get()
+        # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
+        return (str(round(m5_data['pressure'] / 100, 2)) + 'hPa')
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -71,7 +69,8 @@ A3-4.気圧計(回答編)
             # 背景をリセットする
             refresh = True
             # set_display_textを実行
-            result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+            result = m5.set_display_text(
+                text, pos_x, pos_y, size, text_color, back_color, refresh)
             # 1秒停止
             time.sleep(1)
         ### ここまで  ###
@@ -85,25 +84,25 @@ A3-4.気圧計(回答編)
 
 解説
 ========
-**42行目:**
+**40行目:**
 
 .. code-block:: python
 
     text = get_pressure()
 
-18行目で作成されているget_pressure()関数を呼び出します。この関数は、返り値がすでに'〇〇hPa'というstr形式になっているので、そのままtextの引数にできます。
+19行目で作成されているget_pressure()関数を呼び出します。この関数は、返り値がすでに'〇〇hPa'というstr形式になっているので、そのままtextの引数にできます。
 
 |
-**48行目:**
+**46行目:**
 
 .. code-block:: python
 
     size = 3
 
-コメントで文字サイズ3を指定されているので、4を入れます。
+コメントで文字サイズ3を指定されているので、3を入れます。
 
 |
-**50行目:**
+**48行目:**
 
 .. code-block:: python
 
@@ -112,7 +111,7 @@ A3-4.気圧計(回答編)
 コメントにしたがって、文字色は白にします。
 
 |
-**52行目:**
+**50行目:**
 
 .. code-block:: python
 
@@ -121,7 +120,7 @@ A3-4.気圧計(回答編)
 こちらもコメントにしたがって、背景色を黒にします。
 
 |
-**56行目:**
+**54行目:**
 
 .. code-block:: python
 
@@ -129,7 +128,7 @@ A3-4.気圧計(回答編)
 
 Q3-2と同じように、set_display_text()を呼び出します。
 
-42-55行目で設定した変数を引数として文字が表示されます。
+40-52行目で設定した変数を引数として文字が表示されます。
 
 
 

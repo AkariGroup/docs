@@ -28,12 +28,13 @@ A3-2.ディスプレイテキストの表示(回答編)
     ヒント2: 文字と背景の色は、画面の色変更と同じように黒なら'black'、白なら'white'を入れればOKです。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -46,7 +47,7 @@ A3-2.ディスプレイテキストの表示(回答編)
         text = 'こんにちは'
         # 左右表示位置を0-320で座標指定。0が左。-999を入れると真中揃え。999を入れると右揃え
         pos_x = -999
-        # 上下表示位置を0-240で座標指定。0が上。-999を入れると中央揃え。999を入れると下揃え
+        # 上下表示位置を0-240で座標指定。0が上。-999を入れると中央揃え。999を入れると右揃え
         pos_y = -999
         # 文字サイズは3
         size = 3
@@ -57,7 +58,8 @@ A3-2.ディスプレイテキストの表示(回答編)
         # 背景をリセット
         refresh = True
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         ### ここまで  ###
 
 
@@ -67,7 +69,7 @@ A3-2.ディスプレイテキストの表示(回答編)
 
 解説
 ========
-**28行目:**
+**29行目:**
 
 .. code-block:: python
 
@@ -76,7 +78,7 @@ A3-2.ディスプレイテキストの表示(回答編)
 textの引数には、str形式で出力したい文字列を与えます。
 
 |
-**30行目:**
+**31行目:**
 
 .. code-block:: python
 
@@ -87,7 +89,7 @@ textの引数には、str形式で出力したい文字列を与えます。
 今回は真中に表示するので、-999を入れます。
 
 |
-**32行目:**
+**33行目:**
 
 .. code-block:: python
 
@@ -98,7 +100,7 @@ textの引数には、str形式で出力したい文字列を与えます。
 今回は中央に表示するので、-999を入れます。
 
 |
-**36行目:**
+**37行目:**
 
 .. code-block:: python
 
@@ -107,7 +109,7 @@ textの引数には、str形式で出力したい文字列を与えます。
 文字の色は黒なので、text_colorは'black'を指定します。
 
 |
-**38行目:**
+**39行目:**
 
 .. code-block:: python
 

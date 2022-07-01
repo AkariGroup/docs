@@ -25,28 +25,26 @@ Q3-4.気圧計
     ヒント2: コメントを参考に、引数を穴埋めしましょう。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
     # M5SerialServerのインスタンスを作成する。
     m5 = M5SerialServer()
 
-    def get_pressure():
+
+    def get_pressure() -> str:
         """
         圧力センサの値を返す独自関数
         引数:なし
         返り値: 圧力値の文字列
         """
-        result,m5_data = m5.get()
-        if(result):
-            # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
-            return (str(round(m5_data['pressure']/100,2)) + 'hPa')
-        else:
-            # 取得に失敗した場合は、"No data"を返す。
-            return "No data"
+        m5_data = m5.get()
+        # 圧力センサ値を小数点以下２桁にして、単位hPaを付けて返す。
+        return (str(round(m5_data['pressure'] / 100, 2)) + 'hPa')
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -88,11 +86,11 @@ Q3-3までのディスプレイ表示とQ2でのM5のデータ取得を組み合
 
 今回は、 **実装された関数を呼び出す方法** も学習しましょう。
 
-18-30行目にget_pressure()という関数がすでに実装されています。こちらは、Q2で学習したm5.get()を使って圧力センサの値を取得し、テキストに変換して返してくれる関数です。
+19-27行目にget_pressure()という関数がすでに実装されています。こちらは、Q2で学習したm5.get()を使って圧力センサの値を取得し、テキストに変換して返してくれる関数です。
 
-この関数を42行目で呼び出して、返ってきたテキストをQ3-2と同じようにディスプレイに表示していきます。
+この関数を40行目で呼び出して、返ってきたテキストをQ3-2と同じようにディスプレイに表示していきます。
 
-今回は56行目でset_display_text()関数の実行部分も書く必要があります。Q3-2を参考に書いてみましょう。
+今回は54行目でset_display_text()関数の実行部分も書く必要があります。Q3-2を参考に書いてみましょう。
 
 答え合わせ
 ================
@@ -101,7 +99,7 @@ Q3-3までのディスプレイ表示とQ2でのM5のデータ取得を組み合
 
 .. code-block:: bash
 
-   python q3-4_pressure_sensor.py
+    python q3-4_pressure_sensor.py
 
 画面に気圧の値が表示されていればOKです。
 

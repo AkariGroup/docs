@@ -23,16 +23,17 @@ Q3-3.ディスプレイテキストの表示2
     Q3-3.M5のディスプレイに'あか''きいろ''あお'と縦に3つ並べて表示してみましょう。
         文字の色はそれぞれの字と同じ色('あか'なら赤)にしましょう。
     ヒント1: 前の文字を消さずに次の文字を表示する必要があります。
-        　　 set_display_textの引数refreshをFalseにすると、前の表示を消さずに重ねて表示します。
+            set_display_textの引数refreshをFalseにすると、前の表示を消さずに重ねて表示します。
     ヒント2: 文字と背景の色は、画面の色変更と同じように黒なら'black'、白なら'white'を入れればOKです。
     """
 
-    # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+    # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
     from m5serial_server_py.m5serial_server_py import M5SerialServer
     # sleep関数を使うためにtimeのライブラリをインポートする。
     import time
 
-    def main(args=None):
+
+    def main() -> None:
         """
         メイン関数
         """
@@ -57,7 +58,8 @@ Q3-3.ディスプレイテキストの表示2
         # 最初の１つ目は背景をリセットする
         refresh = """(TrueかFalseを入力)"""
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
@@ -77,7 +79,8 @@ Q3-3.ディスプレイテキストの表示2
         # 前の文字を消さないために、背景はリセットしない。
         refresh = """(TrueかFalseを入力)"""
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
@@ -97,7 +100,8 @@ Q3-3.ディスプレイテキストの表示2
         # 前の文字を消さないために、背景はリセットしない。
         refresh = """(TrueかFalseを入力)"""
         # set_display_textを実行
-        result = m5.set_display_text(text, pos_x, pos_y, size, text_color, back_color, refresh)
+        result = m5.set_display_text(
+            text, pos_x, pos_y, size, text_color, back_color, refresh)
         # 0.5秒停止
         time.sleep(0.5)
 
