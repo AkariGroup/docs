@@ -20,6 +20,7 @@ Q4-2.シャッターカメラ
 
    """
    Q4-2.キーボードで特定のキーを入力した際に写真を撮影して保存するアプリを作りましょう。
+   このアプリの実行には、別ターミナルでakari_main/src/depthai_uvc/depthai_uvc_rgb.pyを起動しておく必要があります。
    ヒント1: take_photo()という関数が用意してあるのでこれを使いましょう。
             この関数はファイル名を引数として渡すと、その名前の写真を保存してくれます。
             1枚目は001,2枚目は002...となるようにファイル名を渡してあげましょう。
@@ -35,18 +36,18 @@ Q4-2.シャッターカメラ
                # '001'とプリントされる
    """
 
-   # M5と通信する際はm5serial_server_pyのライブラリをインポートする
+   # M5と通信する際はm5serial_server_pyのライブラリをインポートする。
    from m5serial_server_py.m5serial_server_py import M5SerialServer
    # openCVのライブラリをインポート
    import cv2
    # osのインポート
    import os
 
-   # webカメラの設定
-   DEVICE_ID = 0
+   # depthaiの仮想カメラのID20番を指定
+   DEVICE_ID = 20
 
 
-   def take_photo(name: str):
+   def take_photo(name: str) -> bool:
       """
       写真を撮って保存する関数。
       保存先はoutputディレクトリ以下。
@@ -71,7 +72,7 @@ Q4-2.シャッターカメラ
          return True
 
 
-   def main(args=None):
+   def main() -> None:
       """
       メイン関数
       """
