@@ -52,13 +52,13 @@ Dynamixelの設定
 4. 右上のモータ名表示の下にあるプルダウンから制御モードを「Position」に設定し、その下の「Torque」のスイッチをONにする。
   **注意: サーボモータがONになります!** 
 
-.. image:: ../images/dynamixel_pos_mode.jpg
+.. image:: ../../images/dynamixel_pos_mode.jpg
     :width: 900px
 
 5. 中央のアドレス一覧から「Address:116 Goal Position」を選択し、0°で初期位置、つまみでモータが回転できるか確認します。
   **注意: モータが動くので、一気に大きく値変化させないこと!**
 
-.. image:: ../images/dynamixel_goal_pos.jpg
+.. image:: ../../images/dynamixel_goal_pos.jpg
     :width: 900px
 
 6. この際AKARIの上下方向の軸(Dynamixelの側面を両端に貫通している軸)が動いた場合は、先程の「Torque」のスイッチをOFFにし、中央のアドレス一覧から「Address:7」を選択し、IDを2に変更し、「Save」ボタンを押します。
@@ -66,10 +66,10 @@ Dynamixelの設定
 
 7. 先程の「Torque」のスイッチをOFFにし、中央のアドレス一覧から「Address:8 Baud Rate」欄を選択し、1Mbpsを選択後、「Save」ボタンを押します。
 
-.. image:: ../images/dynamixel_baudrate.jpg
+.. image:: ../../images/dynamixel_baudrate.jpg
     :width: 900px
 
-8. ID:002のモータについても4-7を繰り返します。この際6.の手順でAKARIの左右方向の軸(Dynamixelの上面についている軸)が動いた場合は、IDを1に変更し、「Save」ボタンを押します。
+8. ID:002のモータについても4-6を繰り返します。この際6.の手順でAKARIの左右方向の軸(Dynamixelの上面についている軸)が動いた場合は、IDを1に変更し、「Save」ボタンを押します。
 
 | 最終的に左右方向がID:1、上下方向がID:2になっていればOKです。
 

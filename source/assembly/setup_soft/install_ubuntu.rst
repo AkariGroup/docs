@@ -25,7 +25,7 @@ Ubuntuの起動用USBを作成する。
 | 5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu20.04のisoを指定します。
 | 6. Step.3のUSBメモリの選択で、インストールするUSBメモリを指定します。
 
-.. image:: ../images/usb_installer_setting.jpg
+.. image:: ../../images/usb_installer_setting.jpg
     :width: 600px
 
 7. Createを選択すると、Ubuntu起動用USBメモリの作成が開始します。しばらく待っていれば終了します。
