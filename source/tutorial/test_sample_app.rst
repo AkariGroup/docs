@@ -133,7 +133,7 @@ M5リセットのサンプルです。一定時間ごとにM5をリセットし�
 
    .. code-block:: bash
 
-      $ python3 5b_reset_m5.py
+      $ python3 5a_reset_m5.py
 
 =============================
 カメラ
