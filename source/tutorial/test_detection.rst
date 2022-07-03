@@ -99,7 +99,7 @@ mobilenetで認識できる物体の一覧は下記のとおりです。
 
 .. code-block:: bash
 
-   $ python3 tini-yolo.py
+   $ python3 tiny-yolo.py
 
 YOLOv3-tinyを起動したい場合は、YOLOv3-tinyのモデルをオプションで指定する必要があります。
 
