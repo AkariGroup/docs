@@ -1,0 +1,60 @@
+name: Build docs
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+env:
+  POETRY_HOME: /opt/poetry
+  POETRY_VERSION: 1.1.13
+jobs:
+  build:
+    name: Build docs
+    runs-on: ubuntu-20.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        lfs: false
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+    - name: Install poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$POETRY_HOME/bin" >> $GITHUB_PATH
+    - name: Install Python dependencies
+      run: |
+        poetry install
+    - name: Build documents
+      run: |
+        poetry run make html
+    - name: Deploy to private repository
+      shell: bash
+      env:
+        GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      if: github.ref == 'refs/heads/main'
+      run: |
+        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
+        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/deploy_key
+        chmod 600 ~/deploy_key
+        ssh-add ~/deploy_key
+
+        tempdir=$(mktemp -d)
+
+        cp -r _build/html $tempdir
+        cd $tempdir/html
+        echo "${{ secrets.GH_PAGES_CNAME }}" >> CNAME
+        touch .nojekyll
+
+        git init
+        git config user.name "Akari Group"
+        git config user.email "akari.tmc@gmail.com"
+
+        git checkout -B gh-pages
+        git add .
+        git commit -am "Build: $(date)"
+
+        git remote add origin ${{ secrets.GH_PAGES_REPO }}
+        git push -f origin HEAD
