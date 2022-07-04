@@ -34,6 +34,7 @@ jobs:
       env:
         GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      if: github.ref == 'refs/heads/main'
       run: |
         ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
         echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/deploy_key
