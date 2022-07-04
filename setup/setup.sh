@@ -49,14 +49,6 @@ cd $AKARI_DOC_PARENT_PATH
 poetry run make html
 successEcho "Document built."
 
-titleEcho "Link custom theme"
-if find  $AKARI_DOC_PARENT_PATH/_build/html/akaridoc_theme.css > /dev/null 2>&1; then
- skipEcho "Custom theme has already been linked"
-else
- cp $AKARI_DOC_PARENT_PATH/theme/akaridoc_theme.css $AKARI_DOC_PARENT_PATH/_build/html/_static/css
- successEcho "Custom theme link was created."
-fi
-
 echo -e " "
 echo -e "\e[32;1m----------------------------------------\e[m"
 echo -e "\e[32;1mAll steps were finished!!\e[m"
