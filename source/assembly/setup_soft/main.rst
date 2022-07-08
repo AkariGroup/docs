@@ -9,6 +9,6 @@ AKARIのセットアップを行います。
 
    install_ubuntu
    setup_autostart_bios
-   setup_akari_main
+   setup_ansible
    setup_m5
    setup_dynamixel
