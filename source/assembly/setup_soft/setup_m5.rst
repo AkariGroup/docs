@@ -19,15 +19,14 @@ microSDカードの準備
 | M5stack用のmicroSDカードを準備します。
 | microSDカードをlattepandaに挿入し、 `akari_main/setup/m5_sd` の中身を、microSDカードの直下に全てコピーします。
 
-.. TODO(Yamamoto): Add image
-
 =============================
 microSDカードの準備
 =============================
 
 | microSDカードをlattepandaから抜き、M5stackに挿入します。
 
-.. TODO(Yamamoto): Add image
+.. image:: ../../images/sd.jpg
+    :width: 400px
 
 | 以上でM5StackのSDカードのセットアップは完了です。
 |
