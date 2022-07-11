@@ -53,12 +53,6 @@ git submoduleのclone
 
     git submodule update --init --recursive
 
-3. 下記コマンドでsubmoduleのcloneをします。
-
-.. code-block:: bash
-
-    git submodule update
-
 =============================
 ansibleを用いたセットアップ
 =============================
