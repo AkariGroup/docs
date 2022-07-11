@@ -51,7 +51,7 @@ git submoduleのclone
 
 .. code-block:: bash
 
-    git submodule init
+    git submodule update --init --recursive
 
 3. 下記コマンドでsubmoduleのcloneをします。
 
