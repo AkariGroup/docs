@@ -154,6 +154,6 @@ BIOSをインストールする
 
 | 16. 「Ctrl」+「Alt」+「Del」を押してシステムを再起動します。次回以降は、電源コネクタからの電源投入のみで自動起動が行われるようになります。
 
-:doc:`setup_akari_main` へ進む
+:doc:`setup_ansible` へ進む
 
 :doc:`install_ubuntu` へ戻る
