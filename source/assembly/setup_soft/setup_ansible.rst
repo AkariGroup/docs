@@ -141,7 +141,7 @@ ansibleを用いたakari_mainのシステムへのインストール
 
    ./run-ansible.py -c local ./local.yml -K --diff
 
-| SSH password, Default passwordを聞かれるので、それぞれlattepandaのログインパスワードを入力します。
+| Default passwordを聞かれるので、lattepandaのログインパスワードを入力します。
 
 2. 終了すると、PLAY RECAPが表示されます。
 全てがOKまたはchangedになっており、failed=0であればOKです。
