@@ -21,7 +21,7 @@ gitのインストール
 
 .. code-block:: bash
 
-    sudo apt install git python3.8 python3.8-venv sshpass ansible
+    sudo apt install git python3.8 python3.8-venv sshpass
 
 =============================
 akari_mainレポジトリのclone
@@ -98,30 +98,12 @@ AKARIのセットアップには、ansibleというセットアップツール�
 * akariのpython仮想環境(poetry)の設定
 * ユーザー権限の設定
 * dynamixel、M5Stack、OAK-DなどのUSB周辺機器の接続設定
+* M5Stackへのソフト書き込み
 
 全てがOK(既に変更済み)またはchanged(変更あり)になっており、failed=0であればOKです。
 
 .. image:: ../../images/ansible.jpg
     :width: 600px
-
-====================================================
-ansibleを用いたM5Stackへのソフト書き込み
-====================================================
-
-次に、ansibleを用いてM5Stackへのソフト書き込みをします。
-
-1. 下記のコマンドで、ansibleによる環境セットアップを実行します。
-
-.. code-block:: bash
-
-    ./run-ansible.py -i hosts ./arduino.yml -Kk --diff -c local
-
-| SSH password, Default passwordを聞かれるので、それぞれlattepandaのログインパスワードを入力します。
-| 実行時は時間がかかるので、終了までしばらく待ちます。
-| 実行中、M5Stackへのソフト書き込みが始まると、M5Stackの画面が暗転します。
-
-2. 終了すると、PLAY RECAPが表示されます。
-全てがOKまたはchangedになっており、failed=0であればOKです。
 
 ====================================================
 ansibleを用いたakari_mainのシステムへのインストール
