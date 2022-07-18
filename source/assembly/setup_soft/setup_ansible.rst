@@ -88,7 +88,7 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    ./run-ansible.py -i hosts ./site.yml -Kk --diff -c local
+    ./run-ansible.py -i hosts ./system.yml -Kk --diff -c local
 
 | SSH password, Default passwordを聞かれるので、それぞれlattepandaのログインパスワードを入力します。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
@@ -122,7 +122,6 @@ ansibleを用いたakari_mainのシステムへのインストール
 2. 終了すると、PLAY RECAPが表示されます。
 全てがOKまたはchangedになっており、failed=0であればOKです。
 
-
 =============================
 本体の再起動
 =============================
@@ -131,9 +130,10 @@ ansibleを用いたakari_mainのシステムへのインストール
 
 
 | 以上でansibleによるセットアップは完了です。
+| 次はakari_main直下にアプリケーションを実行するための仮想実行環境を構築します。
 |
 
-:doc:`setup_m5` へ進む
+:doc:`setup_poetry` へ進む
 
 :doc:`setup_autostart_bios` へ戻る
 

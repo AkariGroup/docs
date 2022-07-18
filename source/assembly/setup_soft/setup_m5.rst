@@ -8,7 +8,7 @@ M5stackのSDカードのセットアップ
 必要なもの
 =============================
 
-* AKARI本体( :doc:`setup_akari_main`` 終了済みのもの)
+* microSDカードにデータコピーできる環境(PC、またはUSB-microSDカードリーダ)
 * キーボード
 * マウス
 * microSDカード
@@ -17,13 +17,15 @@ M5stackのSDカードのセットアップ
 microSDカードの準備
 =============================
 | M5stack用のmicroSDカードを準備します。
-| microSDカードをlattepandaに挿入し、 `akari_main/setup/m5_sd` の中身を、microSDカードの直下に全てコピーします。
+| microSDカードをPCに挿入し、 `akari_main/setup/m5_sd` の中身を、microSDカードの直下に全てコピーします。
+| USB-microSDカードリーダを使う場合は、AKARI本体に接続してakari_mainからデータをコピーします。
+| PCを使う場合は、PC側でも :doc:`setup_ansible` と同様にgitのインストール、クローンが必要です。
 
 =============================
-microSDカードの準備
+microSDカードの挿入
 =============================
 
-| microSDカードをlattepandaから抜き、M5stackに挿入します。
+| microSDカードをPCから抜き、M5stackに挿入します。
 
 .. image:: ../../images/sd.jpg
     :width: 400px
