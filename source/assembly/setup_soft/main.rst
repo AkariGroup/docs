@@ -8,7 +8,6 @@ AKARIのセットアップを行います。
    :maxdepth: 2
 
    install_ubuntu
-   setup_autostart_bios
    setup_ansible
    setup_poetry
    setup_m5
