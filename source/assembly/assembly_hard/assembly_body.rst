@@ -27,7 +27,7 @@
 
 手順
 ^^^^^^^^
-1. `(3)AKARI Body` 内部から `(4)AKARI Cover` をカチッと奥まで差し込む。
+1. `(3) AKARI Body` 内部から `(4) AKARI Cover` をカチッと奥まで差し込む。
 
 .. image:: ../../images/assembly/body/body1-1.jpg
     :width: 300px
@@ -35,7 +35,7 @@
 .. image:: ../../images/assembly/body/body1-2.jpg
     :width: 300px
 
-2 USB-Hubの搭載
+2 USBハブの搭載
 --------
 
 必要な部品
@@ -49,7 +49,7 @@
 
 手順
 ^^^^^^^^
-1. `(29)USBハブ 4ポート15cm` をボディー内部にスライドさせて挿入する。
+1. `(29) USBハブ 4ポート15cm` をボディー内部にスライドさせて挿入する。
 
 .. image:: ../../images/assembly/body/body2-1.jpg
     :width: 300px
@@ -67,14 +67,14 @@
 
 手順
 ^^^^^^^^
-1. `(1)M5基板` を表側から載せる。
+1. `(1) M5基板` を表側から載せる。
 
 **CN9のピンヘッダが右前に来るようにすること**
 
 .. image:: ../../images/assembly/body/body3-1.jpg
     :width: 300px
 
-2. `(40)タッピングビスM2.5-6` で４点を表面からねじ留めする。
+2. `(40) タッピングビスM2.5-6` で４点を表面からねじ留めする。
 
 .. image:: ../../images/assembly/body/body3-2.jpg
     :width: 300px
@@ -91,13 +91,13 @@
 
 手順
 ^^^^^^^^
-1. `(9)温湿度気圧センサユニット ENVⅢ` 付属の配線をボディーの右側面から通す。
+1. `(9) 温湿度気圧センサユニット ENVⅢ` 付属の配線をボディーの右側面から通す。
 
 .. image:: ../../images/assembly/body/body4-1.jpg
     :width: 300px
 
 
-2. `(9)温湿度気圧センサユニット ENVⅢ` を配線のコネクタに接続する。
+2. `(9) 温湿度気圧センサユニット ENVⅢ` を配線のコネクタに接続する。
 
 .. image:: ../../images/assembly/body/body4-2.jpg
     :width: 300px
@@ -126,13 +126,13 @@
 
 手順
 ^^^^^^^^
-1. `(10)光センサユニット` 付属のケーブルをボディーの左側面から通す。
+1. `(10) 光センサユニット` 付属のケーブルをボディーの左側面から通す。
 
 .. image:: ../../images/assembly/body/body5-1.jpg
     :width: 300px
 
 
-2. `(10)光センサユニット` を配線のコネクタに接続する。
+2. `(10) 光センサユニット` を配線のコネクタに接続する。
 
 .. image:: ../../images/assembly/body/body5-2.jpg
     :width: 300px
@@ -163,12 +163,12 @@
 
 手順
 ^^^^^^^^
-1. `(33)XHコネクタ付ケーブル 3P` の真ん中の黒線を抜く。もしくは切る。
+1. `(33) XHコネクタ付ケーブル 3P` の真ん中の黒線を抜く。もしくは切る。
 
 .. image:: ../../images/assembly/body/body6-1.jpg
     :width: 300px
 
-2. `(35)ロッカスイッチ` の端子に `(33)XHコネクタ付ケーブル 3P` の赤、黃の線をはんだ付けする。
+2. `(35) ロッカスイッチ` の端子に `(33) XHコネクタ付ケーブル 3P` の赤、黃の線をはんだ付けする。
 
 | **黃はスイッチのON側端子( | マーク側)**
 | **赤はスイッチのOFF側端子(○マーク側)**
@@ -177,6 +177,7 @@
     :width: 300px
 
 3. ボディー表面のスイッチ用の穴に表から2. の配線を通していき、ロッカスイッチを押してはめ込む。
+
 **○マークが下になるように**
 
 .. image:: ../../images/assembly/body/body6-3.jpg
@@ -198,7 +199,7 @@
 
 必要な部品
 ^^^^^^^^
-| (19) コネクタ付コード2P XH 1個
+| (19) コネクタ付コード2P XH(赤黒) 1個
 | (20) 2.1mm標準DCジャック パネル取付用 1個
 
 .. image:: ../../images/assembly/body/body7-0.jpg
@@ -206,12 +207,12 @@
 
 手順
 ^^^^^^^^
-1. `(19)コネクタ付コード2P XH` をツイスト線にする。
+1. `(19) コネクタ付コード2P XH(赤黒)` をツイスト線にする。
 
 .. image:: ../../images/assembly/body/body7-1.jpg
     :width: 300px
 
-2. `(20)2.1mm標準DCジャック パネル取付用` 付属のナットを、あらかじめ `(19)コネクタ付コード2P XH` に通す。
+2. `(20) 2.1mm標準DCジャック パネル取付用` 付属のナットを、あらかじめ `(19) コネクタ付コード2P XH(赤黒)` に通す。
 
 .. image:: ../../images/assembly/body/body7-2.jpg
     :width: 300px
@@ -224,7 +225,7 @@
 .. image:: ../../images/assembly/body/body7-4.jpg
     :width: 300px
 
-4. `(20)2.1mm標準DCジャック パネル取付用` にはんだ付けする。
+4. `(20) 2.1mm標準DCジャック パネル取付用` にはんだ付けする。
 
 **+側(端子が短い方)に赤、-側(端子が長い方)に黒をはんだ付けすること。**
 
@@ -264,7 +265,7 @@
 
 手順
 ^^^^^^^^
-1. `(8)M5Stack BASIC` の背面を外す。
+1. `(8) M5Stack BASIC` の背面を外す。
 
 .. image:: ../../images/assembly/body/body8-1.jpg
     :width: 300px
@@ -272,7 +273,7 @@
 .. image:: ../../images/assembly/body/body8-2.jpg
     :width: 300px
 
-2. `(8)M5Stack BASIC` の前面を、ボディーに取り付けたM5stack用基板に表から差し込む
+2. `(8) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack用基板に表から差し込む
 
 .. image:: ../../images/assembly/body/body8-3.jpg
     :width: 300px
@@ -345,7 +346,7 @@
 
 2. M5stack基板のCN5に差し込む。
 
- **基板側コネクタに(13)2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**
+ **基板側コネクタに(13) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**
 
 .. image:: ../../images/assembly/body/body11-3.jpg
     :width: 300px
@@ -384,7 +385,7 @@
 
 手順
 ^^^^^^^^
-1. ヘッドのOAK-D Liteから出ている `(32)USB Type-Cケーブル 0.5mL字` を背面から通す。
+1. ヘッドのOAK-D Liteから出ている `(32) USB Type-Cケーブル 0.5mL字` を背面から通す。
 
 .. image:: ../../images/assembly/body/body13-1.jpg
     :width: 300px
@@ -406,7 +407,7 @@
 
 手順
 ^^^^^^^^
-1. `(28)USB2TTL dongle` に付属のケーブルを差し込む。
+1. `(28) USB2TTL dongle` に付属のケーブルを差し込む。
 
 .. image:: ../../images/assembly/body/body14-1.jpg
     :width: 300px
@@ -418,9 +419,12 @@
 
 3. 2.の反対側のコネクタをCN4に差し込む。
 
- **基板側コネクタに(13)2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**
+ **基板側コネクタに(13) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**
 
 .. image:: ../../images/assembly/body/body14-3.jpg
+    :width: 300px
+
+.. image:: ../../images/assembly/body/body11-4.jpg
     :width: 300px
 
 15 M5StackのUSB接続
@@ -435,7 +439,7 @@
 
 手順
 ^^^^^^^^
-1. `(31)USB Type-Cケーブル 0.3mL字` をボディー部の内側からM5Stack本体側面に差し込む。
+1. `(31) USB Type-Cケーブル 0.3mL字` をボディー部の内側からM5Stack本体側面に差し込む。
 
 .. image:: ../../images/assembly/body/body15-1.jpg
     :width: 300px

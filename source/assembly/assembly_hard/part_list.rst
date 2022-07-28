@@ -43,10 +43,10 @@ AKARIの組み立てに必要な道具、部品の一覧を記載します。
     15,"購入品",,"DC-DCコンバーター","M78AR05-1",1,1,`秋月電子 <https://akizukidenshi.com/catalog/g/gM-13536>`_,
     16,"購入品",,"積層セラミックコンデンサー 10μF","RDEC71H106K3K1H03B",2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gP-08155>`_,
     17,"購入品",,"2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13378>`_,
-    18,"購入品",,"コネクタ付コード 4P","DG01032-0049-01",2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-15554>`_,
-    19,"購入品",,"コネクタ付コード2P XH",,2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05682>`_,
+    18,"購入品",,"コネクタ付コード 4P PH(赤黒黄緑)","DG01032-0049-01",2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-15554>`_,
+    19,"購入品",,"コネクタ付コード2P XH(赤黒)",,2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05682>`_,
     20,"購入品",,"2.1mm標準DCジャック パネル取付用","C-17108",2,2,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-17108>`_,
-    21,"購入品",,"コネクタ付コード2P PH",,1,1,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05679>`_,
+    21,"購入品",,"コネクタ付コード2P PH(赤白)",,1,1,`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05679>`_,
     22,"購入品",,"ACアダプター12V5A","ATS065-P120",1,1,`秋月電子 <https://akizukidenshi.com/catalog/g/gM-06961>`_,
     23,"購入品",|23|,"OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`_,
     24,"購入品",,"M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`_,
@@ -69,6 +69,6 @@ AKARIの組み立てに必要な道具、部品の一覧を記載します。
     42,"購入品",,"磁石角型20x10x3",,2,1,`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B08LK9669N>`_,
     43,"購入品",,"両面テープ","SRE-19",1,1,`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`_,強めの両面テープなら代替可
 
-:doc:`setup_autostart_bios` へ進む
+:doc:`assembly_head` へ進む
 
-:doc:`main` へ戻る
+:doc:`pcb` へ戻る
