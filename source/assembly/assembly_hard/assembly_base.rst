@@ -1,215 +1,238 @@
 ***********
-ヘッドを組み立てよう
+ベースを組み立てよう
 ***********
 
-| いよいよ組み立てを始めます。
-| ここでは、ヘッド部分を組み立てます。
-
+| 最後にベースを組み立てます。
+| ベースを使わずに、PCなどと接続して使う場合はこの工程は必要ありません。
 
 必要な道具
 --------
 | - 精密ドライバ(＋)
+| - はんだごて
+| - はんだ線
+| - ニッパ
 
-１ Motor部の組み立て
+
+１ アンテナの貼り付け
 --------
 
 必要な部品
 ^^^^^^^^
-| (26) Dynamixel 2XL430-W250-T 1個
-| (27) HN11-I101  1個
+| (3) AKARI base 1個
+| (7) Lattepanda Alpha付属のアンテナ 2個
 
-.. image:: ../../images/assembly/head/head1-0.jpg
+.. image:: ../../images/assembly/base/base1-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(26)Dynamixel 2XL430-W250-T` のID(B)ポートに付属のケーブルを接続する。
+1. `(7)Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(3)AKARI base` 内部の図の位置に2枚貼り付ける。
 
-.. image:: ../../images/assembly/head/head1-1.jpg
-    :width: 300px
-
-2. `(27) HN11-I101` の大きいリングを載せる。
-
-.. image:: ../../images/assembly/head/head1-2.jpg
-    :width: 300px
-
-.. image:: ../../images/assembly/head/head1-3.jpg
-    :height: 230px
-
-3. `(27) HN11-I101` の留め具を載せる。
-
-.. image:: ../../images/assembly/head/head1-4.jpg
-    :width: 300px
-
-.. image:: ../../images/assembly/head/head1-5.jpg
-    :height: 230px
-
-4. `(27) HN11-I101` 付属のネジ(銀)で留める。
-
-.. image:: ../../images/assembly/head/head1-6.jpg
+.. image:: ../../images/assembly/base/base1-1.jpg
     :width: 300px
 
 
-2 OAK-Dのヘッドへの搭載
+2 Lattepanda Alphaの搭載
 --------
 
 必要な部品
 ^^^^^^^^
-| (2) AKARI Head 1個
-| (23) OAK-D Lite  1個
-| (39) ボルトM4-5  2個
+| (7) Lattepanda Alpha 1個
+| (7) Lattepanda Alpha付属のスペーサー 4個
+| (7) Lattepanda Alpha付属のねじ 4個
 
-.. image:: ../../images/assembly/head/head2-0.jpg
+
+.. image:: ../../images/assembly/base/base2-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(23)OAK-D Lite` のUSBポートが `(2)AKARI Head` の下向きになるように、表から挿入する。
+1. 先程貼り付けたアンテナのコネクタを `(7)Lattepanda AlphaLattepanda` のアンテナジャックに接続する。
 
-.. image:: ../../images/assembly/head/head2-1.jpg
+.. image:: ../../images/assembly/base/base2-1.jpg
     :width: 300px
 
-2. 裏面から `(39)ボルトM4-5` で2点ネジ留めする。
-
-.. image:: ../../images/assembly/head/head2-2.jpg
+.. image:: ../../images/assembly/base/base2-2.jpg
     :width: 300px
 
+2. `(7)Lattepanda AlphaLattepanda` を `(3)AKARI base` にはめ込む。
 
-3 Dynamixelのヘッドへの搭載
+.. image:: ../../images/assembly/base/base2-3.jpg
+    :width: 300px
+
+3. ベース上部からLattepanda付属のねじを差し込み、同じく付属のスペーサーで4点留める。
+
+.. image:: ../../images/assembly/base/base2-4.jpg
+    :width: 300px
+
+.. image:: ../../images/assembly/base/base2-5.jpg
+    :width: 300px
+
+3 DCジャックの搭載
 --------
 
 必要な部品
 ^^^^^^^^
-| (26) Dynamixel 2XL430-W250-T(1で組み立て済みのもの) 1個
-| (26) Dynamixel 2XL430-W250-T付属のネジ(黒) 6個
+| (20) 2.1mm標準DCジャック パネル取付用 1個
 
-.. image:: ../../images/assembly/head/head3-0.jpg
+.. image:: ../../images/assembly/base/base3-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(26) Dynamixel 2XL430-W250-T` を"dynamixelA"の表示が下向きになるようにヘッドにモータを挿入する。
+1. `(20)2.1mm標準DCジャック パネル取付用` を上部から押し込み、裏側から付属のナットで留める。
 
-.. image:: ../../images/assembly/head/head3-1.jpg
+.. image:: ../../images/assembly/base/base3-1.jpg
     :width: 300px
 
-2. ヘッドの左側面とDynamixelを `(26) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
-
-.. image:: ../../images/assembly/head/head3-2.jpg
+.. image:: ../../images/assembly/base/base3-2.jpg
     :width: 300px
 
-3. ヘッドの右側面とDynamixelを `(26) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
-
-|   **モータがヘッドに対して水平な状態で固定すること！**
-|   **締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！**
-
-.. image:: ../../images/assembly/head/head3-3.jpg
-    :width: 300px
-
-
-4 磁石の貼り付け
+4 パワー線の接続
 --------
 
 必要な部品
 ^^^^^^^^
-| (42) 磁石角型20x10x3 2個
-| (43) 両面テープ 1個
+| (18) コネクタ付コード 4P 1個
 
-.. image:: ../../images/assembly/head/head4-0.jpg
+.. image:: ../../images/assembly/base/base4-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(43) 両面テープ` を `(42) 磁石角型20x10x3` 2個に貼って、サイズに合わせて切る。
+1. `(18)コネクタ付コード 4P` のコネクタをLattepandaのDCコネクタに挿す。
 
-|   **2つの磁石の極性を合わせること！**
-
-.. image:: ../../images/assembly/head/head4-1.jpg
+.. image:: ../../images/assembly/base/base4-1.jpg
     :width: 300px
 
-.. image:: ../../images/assembly/head/head4-2.jpg
+
+2. `(18)コネクタ付コード 4P` の-側(緑と黄色の線)を2本まとめて、DCジャックの-側(足が長い端子)にはんだ付けする。
+
+.. image:: ../../images/assembly/base/base4-2.jpg
     :width: 300px
 
-2. 両面テープを剥がし、ヘッド上部のくぼみに貼りつける。
+3. `(18)コネクタ付コード 4P` の+側(赤と黒の線)を2本まとめて、DCジャックの+側(足が短い端子)にはんだ付けする。
 
-.. image:: ../../images/assembly/head/head4-3.jpg
+.. image:: ../../images/assembly/base/base4-3.jpg
     :width: 300px
 
-5 リボンケーブルの搭載
+5 スイッチの搭載
 --------
 
 必要な部品
 ^^^^^^^^
-| (17) 2x10(20P)両端コネクタ付IDCリボンケーブル 1個
-| (40) タッピングビスM2.5-6 2個
-.. image:: ../../images/assembly/head/head5-0.jpg
+| (21) コネクタ付コード2P PH 1個
+| (36) モーメンタリスイッチ 1個
+
+.. image:: ../../images/assembly/base/base5-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(17) 2x10(20P)両端コネクタ付ＩＤＣリボンケーブル` をヘッドの裏からはめ込む。
+1. `(36)モーメンタリスイッチ` 付属のナットを外す。
 
-.. image:: ../../images/assembly/head/head5-1.jpg
+.. image:: ../../images/assembly/base/base5-1.jpg
     :width: 300px
 
-.. image:: ../../images/assembly/head/head5-2.jpg
+
+2. `(36)モーメンタリスイッチ` をベース側面のスイッチ穴に外側から入れ、ベース内側から1. のナットで留める。
+
+.. image:: ../../images/assembly/base/base5-2.jpg
     :width: 300px
 
-2. `(40) タッピングビスM2.5-6` でリボンケーブルの左右側面から2点ネジ留めする。
+3. `(21)コネクタ付コード2P PH` の端線をスイッチにはんだ付けする。(どちらの足にはんだ付けしても問題ない。)
 
-.. image:: ../../images/assembly/head/head5-3.jpg
+.. image:: ../../images/assembly/base/base5-3.jpg
     :width: 300px
 
-.. image:: ../../images/assembly/head/head5-4.jpg
+4. `(21)コネクタ付コード2P PH` のコネクタをLattepandaのSWコネクタに差し込む。
+
+.. image:: ../../images/assembly/base/base5-4.jpg
     :width: 300px
 
-6 USBパネルマウントの搭載
+
+6 底面プレートの搭載
 --------
 
 必要な部品
 ^^^^^^^^
-| (30) パネルマウントUSB3.0ケーブル 30cm 1個
-| (37) ボルトM3-6 2個
-.. image:: ../../images/assembly/head/head6-0.jpg
+| (6) AKARI Plate 1個
+| (37) ボルトM3-6 4個
+
+.. image:: ../../images/assembly/base/base6-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. ヘッド内部に裏から `(30) パネルマウントUSB3.0ケーブル 30cm` を通す。
+1. `(6)AKARI Plate` をベース底面に、 `(37)ボルトM3-6` で4点ねじ留めする。
 
-.. image:: ../../images/assembly/head/head6-1.jpg
+.. image:: ../../images/assembly/base/base6-1.jpg
     :width: 300px
 
-2. `(37) ボルトM3-6` で表側から2点ネジ留めする。
-
-.. image:: ../../images/assembly/head/head6-2.jpg
-    :width: 300px
-
-7 OAK-D LiteのUSB接続
+7 DCジャックの接続
 --------
 
 必要な部品
 ^^^^^^^^
-| (32) USB Type-Cケーブル 0.5mL字 1個
+| (34) 5.5✕2.1mm Lタイプジャック 1個
+| (19) コネクタ付コード2P XH 1個
 
-.. image:: ../../images/assembly/head/head7-0.jpg
+.. image:: ../../images/assembly/base/base7-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. ヘッド内部に裏から `(32) USB Type-Cケーブル 0.5mL字` を入れ、ヘッド正面に出す。
+1. `(34)5.5✕2.1mm Lタイプジャック` の蓋を取る。
 
-.. image:: ../../images/assembly/head/head7-1.jpg
+.. image:: ../../images/assembly/base/base7-1.jpg
     :width: 300px
 
-2. OAK-D LiteのUSBポートにUSBケーブルを接続する。
+2. `(34)5.5✕2.1mm Lタイプジャック` の+側(足の短い方)に `(19)コネクタ付コード2P XH` の端線の赤を、-側(足の長い方)に黒をはんだ付けする。
 
-.. image:: ../../images/assembly/head/head7-2.jpg
+.. image:: ../../images/assembly/base/base7-2.jpg
     :width: 300px
 
-| 以上でヘッドの組み立ては終わりです。
-| 次はボディー部の組み立てを行います。
+3. `(34)5.5✕2.1mm Lタイプジャック` の蓋を再度被せる。
 
-:doc:`assembly_base` へ進む
+.. image:: ../../images/assembly/base/base7-3.jpg
+    :width: 300px
 
-:doc:`part_list` へ戻る
+4. `(19)コネクタ付コード2P XH` のコネクタをボディー部のCN1に接続する。
+
+.. image:: ../../images/assembly/base/base7-4.jpg
+    :width: 300px
+
+8 全体の組み付け
+--------
+
+必要な部品
+^^^^^^^^
+
+| :doc:`assembly_body` で組み立てたボディー 1個
+
+.. image:: ../../images/assembly/base/base8-0.jpg
+    :width: 300px
+
+手順
+^^^^^^^^
+1. ボディー部をベース部の溝に沿って横からスライドさせながらベース部に差し込む。
+
+.. image:: ../../images/assembly/base/base8-1.jpg
+    :width: 300px
+
+2. ボディー部の `(34)5.5✕2.1mm Lタイプジャック` をベース部に接続する。
+
+.. image:: ../../images/assembly/base/base8-2.jpg
+    :width: 300px
+
+3. ボディー部を奥までスライドさせ、ボディー部背面のUSB2本をベース部のLattepandaに接続する。
+
+.. image:: ../../images/assembly/base/base8-3.jpg
+    :width: 300px
+
+| 以上でAKARI本体の組み立ては完了です。
+| 次はソフトのセットアップに進みます。
+
+:doc:`../setup_soft/main` へ進む
+
+:doc:`assembly_body` へ戻る
