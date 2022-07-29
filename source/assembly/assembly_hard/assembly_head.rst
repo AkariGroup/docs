@@ -28,7 +28,7 @@
 .. image:: ../../images/assembly/head/head1-1.jpg
     :width: 300px
 
-2. `(27) HN11-I101` の大きいリングを載せる。
+2. `(28) HN11-I101` の大きいリングを載せる。
 
 .. image:: ../../images/assembly/head/head1-2.jpg
     :width: 300px
@@ -36,7 +36,7 @@
 .. image:: ../../images/assembly/head/head1-3.jpg
     :height: 230px
 
-3. `(27) HN11-I101` の留め具を載せる。
+3. `(28) HN11-I101` の留め具を載せる。
 
 .. image:: ../../images/assembly/head/head1-4.jpg
     :width: 300px
@@ -44,7 +44,7 @@
 .. image:: ../../images/assembly/head/head1-5.jpg
     :height: 230px
 
-4. `(27) HN11-I101` 付属のネジ(銀)で留める。
+4. `(28) HN11-I101` 付属のネジ(銀)で留める。
 
 .. image:: ../../images/assembly/head/head1-6.jpg
     :width: 300px
@@ -56,20 +56,20 @@
 必要な部品
 ^^^^^^^^
 | (2) AKARI Head 1個
-| (23) OAK-D Lite  1個
-| (39) ボルトM4-5  2個
+| (24) OAK-D Lite  1個
+| (38) ボルトM4-5  2個
 
 .. image:: ../../images/assembly/head/head2-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(23) OAK-D Lite` のUSBポートが `(2) AKARI Head` の下向きになるように、表から挿入する。
+1. `(24) OAK-D Lite` のUSBポートが `(2) AKARI Head` の下向きになるように、表から挿入する。
 
 .. image:: ../../images/assembly/head/head2-1.jpg
     :width: 300px
 
-2. 裏面から `(39) ボルトM4-5` で2点ネジ留めする。
+2. 裏面から `(38) ボルトM4-5` で2点ネジ留めする。
 
 .. image:: ../../images/assembly/head/head2-2.jpg
     :width: 300px
@@ -80,25 +80,25 @@
 
 必要な部品
 ^^^^^^^^
-| (26) Dynamixel 2XL430-W250-T(1で組み立て済みのもの) 1個
-| (26) Dynamixel 2XL430-W250-T付属のネジ(黒) 6個
+| (27) Dynamixel 2XL430-W250-T(1で組み立て済みのもの) 1個
+| (27) Dynamixel 2XL430-W250-T付属のネジ(黒) 6個
 
 .. image:: ../../images/assembly/head/head3-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(26) Dynamixel 2XL430-W250-T` を"dynamixelA"の表示が下向きになるようにヘッドにモータを挿入する。
+1. `(27) Dynamixel 2XL430-W250-T` を"dynamixelA"の表示が下向きになるようにヘッドにモータを挿入する。
 
 .. image:: ../../images/assembly/head/head3-1.jpg
     :width: 300px
 
-2. ヘッドの左側面とDynamixelを `(26) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
+2. ヘッドの左側面とDynamixelを `(27) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
 
 .. image:: ../../images/assembly/head/head3-2.jpg
     :width: 300px
 
-3. ヘッドの右側面とDynamixelを `(26) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
+3. ヘッドの右側面とDynamixelを `(27) Dynamixel 2XL430-W250-T` 付属のネジ(黒)で3点ねじ留めする。
 
 |   **モータがヘッドに対して水平な状態で固定すること！**
 |   **締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！**
@@ -112,15 +112,15 @@
 
 必要な部品
 ^^^^^^^^
-| (42) 磁石角型20x10x3 2個
-| (43) 両面テープ 1個
+| (41) 磁石角型20x10x3 2個
+| (42) 両面テープ 1個
 
 .. image:: ../../images/assembly/head/head4-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(43) 両面テープ` を `(42) 磁石角型20x10x3` 2個に貼って、サイズに合わせて切る。
+1. `(42) 両面テープ` を `(41) 磁石角型20x10x3` 2個に貼って、サイズに合わせて切る。
 
 |   **2つの磁石の極性を合わせること！**
 
@@ -141,7 +141,7 @@
 必要な部品
 ^^^^^^^^
 | (17) 2x10(20P)両端コネクタ付IDCリボンケーブル 1個
-| (40) タッピングビスM2.5-6 2個
+| (39) タッピングビスM2.5-6 2個
 .. image:: ../../images/assembly/head/head5-0.jpg
     :width: 300px
 
@@ -155,7 +155,7 @@
 .. image:: ../../images/assembly/head/head5-2.jpg
     :width: 300px
 
-2. `(40) タッピングビスM2.5-6` でリボンケーブルの左右側面から2点ネジ留めする。
+2. `(39) タッピングビスM2.5-6` でリボンケーブルの左右側面から2点ネジ留めする。
 
 .. image:: ../../images/assembly/head/head5-3.jpg
     :width: 300px
@@ -175,7 +175,7 @@
 
 手順
 ^^^^^^^^
-1. ヘッド内部に裏から `(30) パネルマウントUSB3.0ケーブル 30cm` を通す。
+1. ヘッド内部に裏から `(31) パネルマウントUSB3.0ケーブル 30cm` を通す。
 
 .. image:: ../../images/assembly/head/head6-1.jpg
     :width: 300px
@@ -190,14 +190,14 @@
 
 必要な部品
 ^^^^^^^^
-| (32) USB Type-Cケーブル 0.5mL字 1個
+| (33) USB Type-Cケーブル 0.5mL字 1個
 
 .. image:: ../../images/assembly/head/head7-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. ヘッド内部に裏から `(32) USB Type-Cケーブル 0.5mL字` を入れ、ヘッド正面に出す。
+1. ヘッド内部に裏から `(33) USB Type-Cケーブル 0.5mL字` を入れ、ヘッド正面に出す。
 
 .. image:: ../../images/assembly/head/head7-1.jpg
     :width: 300px

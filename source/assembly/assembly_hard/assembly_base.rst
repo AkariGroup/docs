@@ -121,7 +121,7 @@
 
 必要な部品
 ^^^^^^^^
-| (21) コネクタ付コード2P PH(赤白) 1個
+| (22) コネクタ付コード2P PH(赤白) 1個
 | (36) モーメンタリスイッチ 1個
 
 .. image:: ../../images/assembly/base/base5-0.jpg
@@ -140,12 +140,12 @@
 .. image:: ../../images/assembly/base/base5-2.jpg
     :width: 300px
 
-3. `(21) コネクタ付コード2P PH(赤白)` の端線をスイッチにはんだ付けする。(どちらの足にはんだ付けしても問題ない。)
+3. `(22) コネクタ付コード2P PH(赤白)` の端線をスイッチにはんだ付けする。(どちらの足にはんだ付けしても問題ない。)
 
 .. image:: ../../images/assembly/base/base5-3.jpg
     :width: 300px
 
-4. `(21) コネクタ付コード2P PH(赤白)` のコネクタをLattepandaのSWコネクタに差し込む。
+4. `(22) コネクタ付コード2P PH(赤白)` のコネクタをLattepandaのSWコネクタに差し込む。
 
 .. image:: ../../images/assembly/base/base5-4.jpg
     :width: 300px
@@ -174,7 +174,7 @@
 
 必要な部品
 ^^^^^^^^
-| (34) 5.5✕2.1mm Lタイプジャック 1個
+| (21) 2.1mm標準DCプラグ L型 1個
 | (19) コネクタ付コード2P XH(赤黒) 1個
 
 .. image:: ../../images/assembly/base/base7-0.jpg
@@ -182,17 +182,17 @@
 
 手順
 ^^^^^^^^
-1. `(34) 5.5✕2.1mm Lタイプジャック` の蓋を取る。
+1. `(21) 2.1mm標準DCプラグ L型` の蓋を取る。
 
 .. image:: ../../images/assembly/base/base7-1.jpg
     :width: 300px
 
-2. `(34) 5.5✕2.1mm Lタイプジャック` の+側(足の短い方)に `(19) コネクタ付コード2P XH(赤黒)` の端線の赤を、-側(足の長い方)に黒をはんだ付けする。
+2. `(21) 2.1mm標準DCプラグ L型` の+側(足の短い方)に `(19) コネクタ付コード2P XH(赤黒)` の端線の赤を、-側(足の長い方)に黒をはんだ付けする。
 
 .. image:: ../../images/assembly/base/base7-2.jpg
     :width: 300px
 
-3. `(34) 5.5✕2.1mm Lタイプジャック` の蓋を再度被せる。
+3. `(21) 2.1mm標準DCプラグ L型` の蓋を再度被せる。
 
 .. image:: ../../images/assembly/base/base7-3.jpg
     :width: 300px
@@ -220,7 +220,7 @@
 .. image:: ../../images/assembly/base/base8-1.jpg
     :width: 300px
 
-2. ボディー部の `(34) 5.5✕2.1mm Lタイプジャック` をベース部に接続する。
+2. ボディー部の `(21) 2.1mm標準DCプラグ L型` をベース部に接続する。
 
 .. image:: ../../images/assembly/base/base8-2.jpg
     :width: 300px

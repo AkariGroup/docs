@@ -40,16 +40,16 @@
 
 必要な部品
 ^^^^^^^^
-| (29) USBハブ 4ポート15cm 1個
-| (23) OAK-D Lite  1個
-| (39) ボルトM4-5  2個
+| (30) USBハブ 4ポート15cm 1個
+| (24) OAK-D Lite  1個
+| (38) ボルトM4-5  2個
 
 .. image:: ../../images/assembly/body/body2-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(29) USBハブ 4ポート15cm` をボディー内部にスライドさせて挿入する。
+1. `(30) USBハブ 4ポート15cm` をボディー内部にスライドさせて挿入する。
 
 .. image:: ../../images/assembly/body/body2-1.jpg
     :width: 300px
@@ -60,7 +60,7 @@
 必要な部品
 ^^^^^^^^
 | (1) M5基板( :doc:`assembly_pcb` で組み立て済みのもの) 1個
-| (40) タッピングビスM2.5-6 4個
+| (39) タッピングビスM2.5-6 4個
 
 .. image:: ../../images/assembly/body/body3-0.jpg
     :width: 300px
@@ -74,7 +74,7 @@
 .. image:: ../../images/assembly/body/body3-1.jpg
     :width: 300px
 
-2. `(40) タッピングビスM2.5-6` で４点を表面からねじ留めする。
+2. `(39) タッピングビスM2.5-6` で４点を表面からねじ留めする。
 
 .. image:: ../../images/assembly/body/body3-2.jpg
     :width: 300px
@@ -155,7 +155,7 @@
 
 必要な部品
 ^^^^^^^^
-| (33) XHコネクタ付ケーブル 3P 1個
+| (34) XHコネクタ付ケーブル 3P 1個
 | (35) ロッカスイッチ 1個
 
 .. image:: ../../images/assembly/body/body6-0.jpg
@@ -163,12 +163,12 @@
 
 手順
 ^^^^^^^^
-1. `(33) XHコネクタ付ケーブル 3P` の真ん中の黒線を抜く。もしくは切る。
+1. `(34) XHコネクタ付ケーブル 3P` の真ん中の黒線を抜く。もしくは切る。
 
 .. image:: ../../images/assembly/body/body6-1.jpg
     :width: 300px
 
-2. `(35) ロッカスイッチ` の端子に `(33) XHコネクタ付ケーブル 3P` の赤、黃の線をはんだ付けする。
+2. `(35) ロッカスイッチ` の端子に `(34) XHコネクタ付ケーブル 3P` の赤、黃の線をはんだ付けする。
 
 | **黃はスイッチのON側端子( | マーク側)**
 | **赤はスイッチのOFF側端子(○マーク側)**
@@ -287,7 +287,7 @@
 必要な部品
 ^^^^^^^^
 | :doc:`assembly_head` で組み立てたヘッド 1個
-| (26) Dynamixel 2XL430-W250-T付属のネジ(黒) 3個
+| (27) Dynamixel 2XL430-W250-T付属のネジ(黒) 3個
 
 .. image:: ../../images/assembly/body/body9-0.jpg
     :width: 300px
@@ -363,7 +363,7 @@
 
 手順
 ^^^^^^^^
-1. ヘッドの `(30)パネルマウントUSB3.0ケーブル 30cm` を背面から通す。
+1. ヘッドの `(31)パネルマウントUSB3.0ケーブル 30cm` を背面から通す。
 
 （通らない場合は、一旦本体内のUSBハブをずらす。）
 
@@ -385,7 +385,7 @@
 
 手順
 ^^^^^^^^
-1. ヘッドのOAK-D Liteから出ている `(32) USB Type-Cケーブル 0.5mL字` を背面から通す。
+1. ヘッドのOAK-D Liteから出ている `(33) USB Type-Cケーブル 0.5mL字` を背面から通す。
 
 .. image:: ../../images/assembly/body/body13-1.jpg
     :width: 300px
@@ -400,14 +400,14 @@
 
 必要な部品
 ^^^^^^^^
-| (28) USB2TTL dongle 1個
+| (29) USB2TTL dongle 1個
 
 .. image:: ../../images/assembly/body/body14-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(28) USB2TTL dongle` に付属のケーブルを差し込む。
+1. `(29) USB2TTL dongle` に付属のケーブルを差し込む。
 
 .. image:: ../../images/assembly/body/body14-1.jpg
     :width: 300px
@@ -432,14 +432,14 @@
 
 必要な部品
 ^^^^^^^^
-| (31) USB Type-Cケーブル 0.3mL字 1個
+| (32) USB Type-Cケーブル 0.3mL字 1個
 
 .. image:: ../../images/assembly/body/body15-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(31) USB Type-Cケーブル 0.3mL字` をボディー部の内側からM5Stack本体側面に差し込む。
+1. `(32) USB Type-Cケーブル 0.3mL字` をボディー部の内側からM5Stack本体側面に差し込む。
 
 .. image:: ../../images/assembly/body/body15-1.jpg
     :width: 300px
