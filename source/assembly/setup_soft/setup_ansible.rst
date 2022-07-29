@@ -135,5 +135,5 @@ ansibleを用いたakari_mainのシステムへのインストール
 
 :doc:`setup_poetry` へ進む
 
-:doc:`setup_autostart_bios` へ戻る
+:doc:`install_ubuntu` へ戻る
 

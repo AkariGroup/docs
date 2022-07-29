@@ -35,5 +35,5 @@ microSDカードの挿入
 
 :doc:`setup_dynamixel` へ進む
 
-:doc:`setup_akari_main` へ戻る
+:doc:`setup_poetry` へ戻る
 

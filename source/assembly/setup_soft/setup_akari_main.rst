@@ -76,5 +76,5 @@ akari_mainレポジトリのclone
 
 :doc:`setup_m5` へ進む
 
-:doc:`setup_autostart_bios` へ戻る
+:doc:`setup_ansible` へ戻る
 

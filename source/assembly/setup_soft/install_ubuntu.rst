@@ -50,6 +50,6 @@ Ubuntuをlattepandaにインストールする。
 
 これでUbuntuのインストールは完了です。次に、lattepandaを自動起動できるようにBIOSの書き換えを行います。
 
-:doc:`setup_autostart_bios` へ進む
+:doc:`setup_ansible` へ進む
 
 :doc:`main` へ戻る
