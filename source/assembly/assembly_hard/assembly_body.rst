@@ -41,8 +41,6 @@
 必要な部品
 ^^^^^^^^
 | (30) USBハブ 4ポート15cm 1個
-| (24) OAK-D Lite  1個
-| (38) ボルトM4-5  2個
 
 .. image:: ../../images/assembly/body/body2-0.jpg
     :width: 300px
