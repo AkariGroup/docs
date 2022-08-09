@@ -15,15 +15,15 @@
 
 必要な部品
 ^^^^^^^^
-| (26) Dynamixel 2XL430-W250-T 1個
-| (27) HN11-I101  1個
+| (27) Dynamixel 2XL430-W250-T 1個
+| (28) HN11-I101  1個
 
 .. image:: ../../images/assembly/head/head1-0.jpg
     :width: 300px
 
 手順
 ^^^^^^^^
-1. `(26) Dynamixel 2XL430-W250-T` のID(B)ポートに付属のケーブルを接続する。
+1. `(27) Dynamixel 2XL430-W250-T` のID(B)ポートに付属のケーブルを接続する。
 
 .. image:: ../../images/assembly/head/head1-1.jpg
     :width: 300px
@@ -168,7 +168,7 @@
 
 必要な部品
 ^^^^^^^^
-| (30) パネルマウントUSB3.0ケーブル 30cm 1個
+| (31) パネルマウントUSB3.0ケーブル 30cm 1個
 | (37) ボルトM3-6 2個
 .. image:: ../../images/assembly/head/head6-0.jpg
     :width: 300px
