@@ -388,7 +388,7 @@
 .. image:: ../../images/assembly/body/body13-1.jpg
     :width: 300px
 
-2. ボディー内のUSBハブにケーブルを差し込む。
+2. ボディー内を通って背面のカバー部分から出す。
 
 .. image:: ../../images/assembly/body/body13-2.jpg
     :width: 300px
