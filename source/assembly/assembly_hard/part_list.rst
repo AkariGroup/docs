@@ -56,7 +56,7 @@ AKARIの組み立てに必要な道具、部品の一覧を記載します。
    28,"購入品",,"HN11-I101 Set","BTX098",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=204>`_",
    29,"購入品",,"USB2TTL dongle","BTE080C",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=268>`_",
    30,"購入品",,"USBハブ 4ポート15cm","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`_",
-   31,"購入品",,"パネルマウントUSB3.0ケーブル 30cm",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`_",
+   31,"購入品",,"パネルマウントUSB3.0ケーブル 30cm 左角",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`_",
    32,"購入品",,"USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B07CYQG6HR>`_",
    33,"購入品",,"USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B08RMFTGHZ>`_",
    34,"購入品",,"XHコネクタ付ケーブル 3P",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B011HFRYNW>`_",
