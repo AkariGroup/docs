@@ -26,7 +26,7 @@ Google Colabについて
 5. `dataset` フォルダの中に、:doc:`annotation` で準備した画像ファイル(.jpg)とアノテーションファイル(.xml)を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、dataset直下にまとめて置きます。
 6. `test` フォルダの中に、テスト用の画像を数枚入れます。こちらはアノテーションファイルは必要ありません。学習結果の確認のための最終テストをするのに用います。
 
-.. image:: ../images/google_drive_dir.jpg
+.. image:: ../../images/google_drive_dir.jpg
    :scale: 70%
 
 | 以上でGoogleドライブの準備は完了です。
@@ -47,11 +47,11 @@ Google Colabで学習をする
 | https://colab.research.google.com/?hl=ja
 | 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/training_mobilenet_akari.ipynb` を選択します。
 
-.. image:: ../images/colab_open.jpg
+.. image:: ../../images/colab_open.jpg
 
 | 後は順番にコードを実行していくことで、学習済みのOAK-D用モデル(.blob)とラベルファイル(.json)をダウンロードすることができます。
 
-.. image:: ../images/colab_play.jpg
+.. image:: ../../images/colab_play.jpg
 
 | 手順はリンク先のGoogle Colab内に書かれているので、それに沿ってください。
 

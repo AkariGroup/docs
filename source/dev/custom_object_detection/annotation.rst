@@ -28,27 +28,27 @@
 | 下記のウィンドウが開くので、「ディレクトリを開く」で:doc:`image_collection` で収集した画像のディレクトリを選択します。
 | 先程の画像の一覧が読み込まれます。
 
-.. image:: ../images/label_img_dir.jpg
+.. image:: ../../images/label_img_dir.jpg
    :width: 500px
 
 | 保存するデータのフォーマットを「PascalVOC」に変更します。
 
-.. image:: ../images/label_img_load.jpg
+.. image:: ../../images/label_img_load.jpg
    :width: 500px
 
 | 「矩形を作成する」を選択し、画像内の認識させたい物体を囲むようにドラッグします。
 
-.. image:: ../images/label_img_rect.jpg
+.. image:: ../../images/label_img_rect.jpg
    :width: 500px
 
 | ドラッグすると、ラベル名をつけるウィンドウが表示されるので、1でディレクトリとファイルに付けたラベル名を設定します。("pen"など)
 
-.. image:: ../images/label_img_label.png
+.. image:: ../../images/label_img_label.png
    :width: 500px
 
 | 「保存する」を押して、画像と同じ名前でアノテーションファイルを保存します。PascalVOCの場合は. *xml* 形式となります。
 
-.. image:: ../images/label_img_save.jpg
+.. image:: ../../images/label_img_save.jpg
    :width: 500px
 
 | 「次の画像」を押して、次の画像についても同様に行っていきます。
