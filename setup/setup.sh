@@ -23,7 +23,7 @@ titleEcho "Install python3-pip"
 apt_check_and_install python3-pip
 
 titleEcho " Install poetry"
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+curl -sSL https://install.python-poetry.org | python3 -
 successEcho "poetry installed"
 
 titleEcho "Add poetry path in .bashrc"
