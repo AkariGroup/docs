@@ -133,16 +133,16 @@ AKARIの組み立てに必要な道具、部品の一覧を記載します。
    29,"購入品","|29|","USB2TTL dongle","BTE080C",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=268>`_",
    30,"購入品","|30|","USBハブ 4ポート15cm","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`_",
    31,"購入品","|31|","パネルマウントUSB3.0ケーブル 30cm",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`_",
-   32,"購入品","|32|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B07CYQG6HR>`_",
-   33,"購入品","|33|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B08RMFTGHZ>`_",
-   34,"購入品","|34|","XHコネクタ付ケーブル 3P",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B011HFRYNW>`_",
-   35,"購入品","|35|","ロッカスイッチ",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B00HUHBP8C>`_",
+   32,"購入品","|32|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`_",
+   33,"購入品","|33|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`_",
+   34,"購入品","|34|","XHコネクタ付ケーブル 3P",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B011HFRYNW>`_",
+   35,"購入品","|35|","ロッカスイッチ",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00HUHBP8C>`_",
    36,"購入品","|36|","モーメンタリスイッチ","JSANKG-01",1,1,"`Amazon <https://www.amazon.co.jp/dp/B076KBJVH3>`_",
    37,"購入品","|37|","ボルトM3-6",,4,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`_",
    38,"購入品","|38|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`_",
    39,"購入品","|39|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`_",
-   40,"購入品","|40|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B00VQOEWYO>`_","容量1GB以上推奨"
-   41,"購入品","|41|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5www.amazon.co.jp/dp/B08LK9669N>`_",
+   40,"購入品","|40|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`_","容量1GB以上推奨"
+   41,"購入品","|41|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08LK9669N>`_",
    42,"購入品",,"両面テープ","SRE-19",1,1,"`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`_","強めの両面テープなら代替可"
 
 :doc:`assembly_head` へ進む
