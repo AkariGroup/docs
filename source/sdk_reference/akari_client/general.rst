@@ -5,4 +5,3 @@
 .. module:: akari_client
 
 .. autoclass:: AkariClient
-   :members:

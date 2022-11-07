@@ -3,4 +3,3 @@
 ########
 
 .. autoclass:: akari_client.m5stack_client.M5StackClient
-   :members:
