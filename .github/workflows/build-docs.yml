@@ -48,7 +48,7 @@ jobs:
         GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
       if: github.ref == 'refs/heads/main'
       run: |
-        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" | ssh-add
+        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" | ssh-add -
 
         tempdir=$(mktemp -d)
 
