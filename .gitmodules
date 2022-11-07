@@ -1,0 +1,3 @@
+[submodule "references/akari_software"]
+	path = references/akari_software
+	url = git@github.com:AkariGroup/akari_software.git
