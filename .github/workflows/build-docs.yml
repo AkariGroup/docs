@@ -16,6 +16,17 @@ jobs:
     - uses: actions/checkout@v2
       with:
         lfs: false
+    - name: Checkout submodules
+      shell: bash
+      env:
+        GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
+
+        echo "${{ secrets.AKARI_SOFTWARE_CHECKOUT_KEY }}" | ssh-add -
+        git submodule update --init -- references/akari_software
+        ssh-add -D
     - uses: actions/setup-python@v4
       with:
         python-version: '3.8'

@@ -11,6 +11,8 @@ sphinx-rtd-theme = "^1.0.0"
 sphinxcontrib-youtube = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
+akari-client = {path = "references/akari_software/sdk/akari_client/", develop = true}
+akari-proto = {path = "references/akari_software/sdk/akari_proto/", develop = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
