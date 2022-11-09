@@ -7,6 +7,7 @@ on:
 env:
   POETRY_HOME: /opt/poetry
   POETRY_VERSION: 1.1.13
+  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 jobs:
   build:
     name: Build docs
@@ -16,14 +17,15 @@ jobs:
     - uses: actions/checkout@v2
       with:
         lfs: false
+    - name: Initialize ssh-agent
+      shell: bash
+      run: |
+        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
     - name: Checkout submodules
       shell: bash
       env:
         GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
-        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
-
         echo "${{ secrets.AKARI_SOFTWARE_CHECKOUT_KEY }}" | ssh-add -
         git submodule update --init -- references/akari_software
         ssh-add -D
@@ -44,13 +46,9 @@ jobs:
       shell: bash
       env:
         GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
-        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       if: github.ref == 'refs/heads/main'
       run: |
-        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
-        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" > ~/deploy_key
-        chmod 600 ~/deploy_key
-        ssh-add ~/deploy_key
+        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" | ssh-add -
 
         tempdir=$(mktemp -d)
 
