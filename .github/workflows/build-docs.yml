@@ -27,7 +27,7 @@ jobs:
         GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
       run: |
         echo "${{ secrets.AKARI_SOFTWARE_CHECKOUT_KEY }}" | ssh-add -
-        git submodule update --init -- references/akari_software
+        GIT_LFS_SKIP_SMUDGE=1 git submodule update --init -- references/akari_software
         ssh-add -D
     - uses: actions/setup-python@v4
       with:
