@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to akari-manual!
-========================================
+===========================================================
 .. image:: source/images/akari_logo.png
    :width: 300px
 
@@ -17,15 +17,12 @@ Welcome to akari-manual!
    source/tutorial/main
    source/spec/main
    source/practice/main
-   source/ros2_tutorial/main
    source/dev/main
    source/troubleshoot/main
-   source/notice/main
-   source/setup_soft/main
    source/sdk_reference/main
 
 Indices and tables
-========================================
+===========================================================
 
 * :ref:`genindex`
 * :ref:`search`
