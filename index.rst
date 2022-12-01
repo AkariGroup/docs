@@ -14,6 +14,7 @@ Welcome to akari-manual!
 
    source/intro
    source/assembly/main
+   source/tutorial_web/main
    source/tutorial/main
    source/spec/main
    source/practice/main

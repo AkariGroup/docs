@@ -20,11 +20,11 @@ Baudrate書き換えスクリプトの実行
 
 AKARIでは、Baudrateの書き換えをpythonスクリプトで実行しています。
 
-1. akari_mainのtools/python内へ移動します。
+1. akari_softwareのtools/python内へ移動します。
 
 .. code-block:: bash
 
-    cd akari_main/tools/python
+    cd akari_software/tools/python
 
 1. 下記コマンドでBaudrate書き換えを実行します。
 

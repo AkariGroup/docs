@@ -16,18 +16,18 @@ M5との通信がうまく行かないときは下記を実行してください
 
    AKARIのアプリを実行する際は、最初にこの仮想環境へ移動する必要があります。
 
-   akari_main直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
+   akari_software直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
 
       .. code-block:: bash
 
-         $ cd akari_main
+         $ cd akari_software
          $ poetry shell
 
 toolsディレクトリ内のpythonへ移動します。
 
 .. code-block:: bash
 
-   $ cd akari_main/tools/python
+   $ cd akari_software/tools/python
 
 M5の再起動スクリプトを実行します。
 

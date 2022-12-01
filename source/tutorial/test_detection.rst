@@ -6,16 +6,15 @@ AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサ�
 
 .. note::
 
-   AKARIのソフトはpoetryというpythonの仮想環境マネージャーを用いてセットアップされています。
+   AKARIのアプリは、poetryというpythonの仮想環境マネージャーを用いて実行する必要があります。
 
-   AKARIのアプリを実行する際は、最初にこの仮想環境へ移動する必要があります。
-
-   akari_main直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
+   akari_software直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
 
       .. code-block:: bash
 
-         $ cd akari_main
+         $ cd akari_software
          $ poetry shell
+
 
 ===========================================================
 顔認識を試してみよう
@@ -27,7 +26,7 @@ AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサ�
 
    .. code-block:: bash
 
-      $ cd src/depthai_sample/face_detection
+      $ cd samples/depthai_sample/face_detection
 
 次にmain.pyを実行します。
 
@@ -50,7 +49,7 @@ depthai_sampleでは、mobilenet-ssd, YOLOv3-tiny, YOLOv4-tinyの3種類の物�
 
    .. code-block:: bash
 
-      $ cd src/depthai_sample/object_recognition
+      $ cd samples/depthai_sample/object_recognition
 
 mobilenet-ssdの物体認識を実行したい場合は、下記を実行します。
 
