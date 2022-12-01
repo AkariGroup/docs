@@ -6,3 +6,4 @@ AKARIをはじめよう(webコンソール編)
    :maxdepth: 2
 
    access
+   controller
