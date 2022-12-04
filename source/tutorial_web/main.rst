@@ -7,3 +7,5 @@ AKARIをはじめよう(webコンソール編)
 
    access
    controller
+   service
+   project

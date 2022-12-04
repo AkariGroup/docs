@@ -15,14 +15,14 @@ webコントローラを使ってみよう
 
 | 左のページリストから、Servicesを選択し、開きます。
 
-2. akari_rpc_serverを立ち上げる
+2. AkariRpcServerを立ち上げる
 
-| もしakari_rpc_serverが立ち上がっていなかったら、実行ボタンをクリックして立ち上げます。
+| もしAkariRpcServerが立ち上がっていなかったら、実行ボタンをクリックして立ち上げます。
 | STATUSがRUNNINGに変わればOKです。
 
-3. akari_controller_serverを立ち上げる。
+3. ControllerServerを立ち上げる。
 
-| akari_controller_serverの実行ボタンをクリックして立ち上げます。
+| ControllerServerの実行ボタンをクリックして立ち上げます。
 | STATUSがRUNNINGに変わればOKです。
 
 ===========================================================
@@ -167,8 +167,8 @@ Display
 
 
 | このControllerで、AKARIの基本機能はほぼ全て試すことができます。
-| 次はwebコンソールからJupyterLabを起動してプロジェクトを作成してみましょう。
+| 次はwebコンソールからサービスを作成してみましょう。
 
-:doc:`jupyter` へ進む
+:doc:`service` へ進む
 
 :doc:`access` へ戻る
