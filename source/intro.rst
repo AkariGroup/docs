@@ -75,10 +75,6 @@ AKARIの情報元
 
    AKARIの詳細仕様について記載しています。
 
-#. :doc:`practice/main`
-
-   AKARIを使った練習問題集です。
-
 #. :doc:`dev/main`
 
    AKARIを使った開発のヒントが記載してあります。
