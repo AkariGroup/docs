@@ -34,7 +34,7 @@ microSDカードの挿入
 | 以上でM5StackのSDカードのセットアップは完了です。
 |
 
-:doc:`setup_dynamixel` へ進む
+:doc:`main` へ戻る
 
 :doc:`setup_poetry` へ戻る
 

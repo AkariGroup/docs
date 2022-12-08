@@ -88,9 +88,11 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    ./run-ansible.py -i hosts ./system.yml -Kk --diff -c local
+    ./run-ansible.py -i hosts ./system.yml --ask-vault-pass -Kk --diff -c local
 
-| SSH password, Default passwordを聞かれるので、それぞれlattepandaのログインパスワードを入力します。
+| SSH password, Default password、Vault passwordを聞かれます。
+| SSH password, Default passwordには、それぞれUbuntuのログインパスワードを入力します。
+| Vault passwordはAKARIのプロジェクト管理者に問い合わせてください。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
 | このセットアップでは、下記の様なタスクが自動で実行されます。
 
