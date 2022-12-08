@@ -67,6 +67,10 @@ AKARIの情報元
 
    AKARIの組み立て方、セットアップ方法について記載しています。
 
+#. :doc:`startup/main`
+
+   AKARIの起動方法について記載しています。
+
 #. :doc:`tutorial_web/main`
 
    AKARIのwebブラウザからの使い方について記載しています。
