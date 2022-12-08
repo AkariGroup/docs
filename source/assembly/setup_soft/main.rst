@@ -11,4 +11,3 @@ AKARIのセットアップを行います。
    setup_ansible
    setup_poetry
    setup_m5
-   setup_dynamixel

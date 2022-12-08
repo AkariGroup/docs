@@ -9,11 +9,11 @@
 物体認識の実行方法
 ===========================================================
 
-1. akari_main内のdepthai_sampleのディレクトリに移動します。
+1. akari_software内のdepthai_sampleのディレクトリに移動します。
 
 .. code-block:: bash
 
-   cd akari_main/src/depthai_sample/object_recognition
+   cd akari_software/samples/depthai_sample/object_recognition
 
 2. 下記を実行します。
 

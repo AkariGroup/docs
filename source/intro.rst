@@ -44,7 +44,7 @@ AKARIの情報元
 
 * ソースコード
 
-   - 本体PC上で動作するコード： https://github.com/AkariGroup/akari_main
+   - 本体PC上で動作するコード： https://github.com/AkariGroup/akari_software
    - ハードウェアの情報: https://github.com/AkariGroup/akarihardware
    - 基本マニュアルのソース: https://github.com/AkariGroup/akari_document
 
@@ -67,9 +67,17 @@ AKARIの情報元
 
    AKARIの組み立て方、セットアップ方法について記載しています。
 
+#. :doc:`startup/main`
+
+   AKARIの起動方法について記載しています。
+
+#. :doc:`tutorial_web/main`
+
+   AKARIのwebブラウザからの使い方について記載しています。
+
 #. :doc:`tutorial/main`
 
-   AKARIの簡単な使い方について記載しています。
+   AKARIのUbuntuからの使い方について記載しています。
 
 #. :doc:`spec/main`
 

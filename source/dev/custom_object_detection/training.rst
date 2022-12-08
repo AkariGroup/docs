@@ -60,8 +60,8 @@ Google Colabで学習をする
 ===========================================================
 
 | ダウンロードしたモデルファイルとラベルファイルは、下記の場所にコピーします。
-| モデルファイル(.blob): `akari_main/src/depthai_sample/object_recognition/models`
-| ラベルファイル(.json): `akari_main/src/depthai_sample/object_recognition/configs`
+| モデルファイル(.blob): `akari_software/samples/depthai_sample/object_recognition/models`
+| ラベルファイル(.json): `akari_software/samples/depthai_sample/object_recognition/configs`
 | 以上で物体認識モデルの準備は完了です。次はいよいよ物体認識を実行してみましょう。
 
 :doc:`testing` へ進む

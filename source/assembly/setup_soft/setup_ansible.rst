@@ -24,28 +24,28 @@ lattepandaのUbuntu20.04にAKARI用の環境セットアップをしていきま
     sudo apt install git python3.8 python3.8-venv sshpass
 
 ===========================================================
-akari_mainレポジトリのclone
+akari_softwareレポジトリのclone
 ===========================================================
 
-| lattepandaのUbuntuにakari_mainレポジトリをcloneします。
+| lattepandaのUbuntuにakari_softwareレポジトリをcloneします。
 | home直下で下記のコマンドを実行します。
 
 .. code-block:: bash
 
-    git clone https://github.com/AkariGroup/akari_main.git
+    git clone https://github.com/AkariGroup/akari_software.git
 
 ===========================================================
 git submoduleのclone
 ===========================================================
 
-| akari_mainレポジトリ内には、いくつかのライブラリがsubmoduleとして含まれています。
+| akari_softwareレポジトリ内には、いくつかのライブラリがsubmoduleとして含まれています。
 | これらのsubmoduleもcloneする必要があります。
 
-1. akari_mainの直下に移動します。
+1. akari_softwareの直下に移動します。
 
 .. code-block:: bash
 
-    cd akari_main
+    cd akari_software
 
 2. 下記コマンドでsubmoduleの設定を初期化します。
 
@@ -88,9 +88,11 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    ./run-ansible.py -i hosts ./system.yml -Kk --diff -c local
+    ./run-ansible.py -i hosts ./system.yml --ask-vault-pass -Kk --diff -c local
 
-| SSH password, Default passwordを聞かれるので、それぞれlattepandaのログインパスワードを入力します。
+| SSH password, Default password、Vault passwordを聞かれます。
+| SSH password, Default passwordには、それぞれUbuntuのログインパスワードを入力します。
+| Vault passwordはAKARIのプロジェクト管理者に問い合わせてください。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
 | このセットアップでは、下記の様なタスクが自動で実行されます。
 
@@ -105,22 +107,6 @@ AKARIのセットアップには、ansibleというセットアップツール�
 .. image:: ../../images/ansible.jpg
     :width: 600px
 
-===========================================================
-ansibleを用いたakari_mainのシステムへのインストール
-===========================================================
-
-次に、ansibleを用いてAKARIのUbuntuのシステム領域にakari_mainをインストールします。
-
-1. 同じ `akari_main/setup/ansible` の下で、下記のコマンドで環境セットアップを実行します。
-
-.. code-block:: bash
-
-   ./run-ansible.py -c local ./local.yml -K --diff
-
-| Default passwordを聞かれるので、lattepandaのログインパスワードを入力します。
-
-2. 終了すると、PLAY RECAPが表示されます。
-全てがOKまたはchangedになっており、failed=0であればOKです。
 
 ===========================================================
 本体の再起動
@@ -130,7 +116,7 @@ ansibleを用いたakari_mainのシステムへのインストール
 
 
 | 以上でansibleによるセットアップは完了です。
-| 次はakari_main直下にアプリケーションを実行するための仮想実行環境を構築します。
+| 次はakari_software直下にアプリケーションを実行するための仮想実行環境を構築します。
 |
 
 :doc:`setup_poetry` へ進む
