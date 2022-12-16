@@ -108,6 +108,7 @@ Servicesページの説明
 | サービスの起動には、再生マークの実行ボタンをクリックします。
 | すると、しばらく待った後にサービスのStatusがSTARTING→RUNNNINGへと変化します。
 | RUNNINGになったらサービスの立ち上げは完了です。
+| **初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**
 
 .. image:: ../images/tutorial_web/service_06.jpg
     :width: 800px
