@@ -1,5 +1,5 @@
 ***********************************************************
-AKARI環境のセットアップ(ansible版)
+AKARI環境のセットアップ
 ***********************************************************
 
 lattepandaのUbuntu20.04にAKARI用の環境セットアップをしていきます。
@@ -21,7 +21,7 @@ lattepandaのUbuntu20.04にAKARI用の環境セットアップをしていきま
 
 .. code-block:: bash
 
-    sudo apt install git python3.8 python3.8-venv sshpass
+    sudo apt install git python3.8 python3.8-venv sshpass git-lfs
 
 ===========================================================
 akari_softwareレポジトリのclone
@@ -52,6 +52,20 @@ git submoduleのclone
 .. code-block:: bash
 
     git submodule update --init --recursive
+
+===========================================================
+git lfsのpull
+===========================================================
+
+| akari_softwareレポジトリ内では、画像や認識モデルなどいくつかのファイルはGit LFS(Large File Storage)で管理されています。
+| これらは別でpullする必要があります。
+
+1. 下記コマンドでLFSのpullとcheckoutをします。
+
+.. code-block:: bash
+
+    git lfs pull
+    git lfs checkout
 
 ===========================================================
 ansibleを用いたセットアップ
