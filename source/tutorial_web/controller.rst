@@ -22,6 +22,7 @@ webコントローラを使ってみよう
 
   | もしAkariRpcServerが立ち上がっていなかったら、実行ボタンをクリックして立ち上げます。
   | STATUSがRUNNINGに変わればOKです。
+  | **初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**
 
 .. image:: ../images/tutorial_web/controller_01.jpg
     :width: 600px
@@ -30,6 +31,7 @@ webコントローラを使ってみよう
 
   | ControllerServerの実行ボタンをクリックして立ち上げます。
   | STATUSがRUNNINGに変わればOKです。
+  | **初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**
 
 .. image:: ../images/tutorial_web/controller_02.jpg
     :width: 600px

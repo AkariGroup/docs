@@ -20,6 +20,14 @@ AKARIチュートリアルのダウンロード
     cd ~/akari_projects
     git clone git@github.com:AkariGroup/akari_tutorial.git
 
+3. 一度AKARIのサービスを再起動する。
+
+.. code-block:: bash
+
+    sudo systemctl restart akira.service
+
+**注: akariではなくakiraです。**
+
 | ここまで終わったら、:doc:`project` と同様そのままAKARI本体からでも、別PCからでもwebコンソールに接続して問題ありません。
 | :doc:`project` と同様の手順で、サービス一覧からJupyterLabかVisual Studio Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_tutorialを開きます。
 
