@@ -79,13 +79,13 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
     cd ~/akari_software/setup/ansible
 
-2. `hosts.example` を `hosts` という名前で同一ディレクトリ内でコピーします。
+2. 下記コマンドで、`hosts.example` を `hosts` という名前で同一ディレクトリ内でコピーします。
 
 .. code-block:: bash
 
     cp hosts.example hosts
 
-3. 下記のコマンドで、ansibleによる環境セットアップを実行します。
+3. 下記コマンドで、ansibleによる環境セットアップを実行します。
 
 .. code-block:: bash
 
