@@ -45,7 +45,7 @@ git submoduleのclone
 
 .. code-block:: bash
 
-    cd akari_software
+    cd ~/akari_software
 
 2. 下記コマンドでsubmoduleの設定を初期化します。
 
@@ -77,28 +77,15 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    cd setup/ansible
+    cd ~/akari_software/setup/ansible
 
-2. `hosts.example` を `hosts` という名前でコピーします。
+2. 下記コマンドで、`hosts.example` を `hosts` という名前で同一ディレクトリ内でコピーします。
 
 .. code-block:: bash
 
     cp hosts.example hosts
 
-3. 先程の `hosts` ファイルを開き、IPアドレスとして、 `127.0.0.1` を設定します。
-
-| ansibleを使うと、IPアドレスを指定することで、ネットワーク経由で別のPCからもセットアップすることが可能です。
-| ただし、今回はAKARI本体から直接セットアップを行うので、自身を指し示すipアドレス`127.0.0.1`を使っています。
-| `hosts` ファイルの中身が下記のようになっていればOKです。
-
-.. code-block:: yaml
-
-    [mainpc]
-    127.0.0.1
-    # ここにIPアドレスを記述します
-    # 例: 192.168.100.2
-
-4. 下記のコマンドで、ansibleによる環境セットアップを実行します。
+3. 下記コマンドで、ansibleによる環境セットアップを実行します。
 
 .. code-block:: bash
 
