@@ -5,7 +5,7 @@ AKARI APIの実行に失敗するときは
 | AKARIのモータやM5を制御するAPIの実行に失敗する時や、web controllerからの動作に失敗する時はAkariRpcServerに異常が発生している可能性があります。
 | webコンソールからAkariRpcServerを再起動しましょう。
 
-1. AKARIのwebコンソールにアクセスします。。
+1. AKARIのwebコンソールにアクセスします。
 
 2. Servicesのページに移動します。
 
