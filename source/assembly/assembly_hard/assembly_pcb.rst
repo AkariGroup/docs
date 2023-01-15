@@ -13,62 +13,86 @@
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (1) M5stack基板 1個
-| (25) M5Stack用2x15ピンヘッダ・ソケットセット 1個
-| (11) XHコネクタ2P トップ型 2個
-| (12) XHコネクタ3P トップ型 1個
-| (26) Groveコネクタトップ型 2個
-| (13) 2mmピッチピンヘッダ 1✕3 2個 (もしくはEHコネクタ3P トップ型 2個)
+| (11) 2.1mm標準DCジャック(4A) 基板取付用 1個
+| (12) PHコネクタ ベース付ポスト トップ型 4P 1個
+| (13-A) EHコネクタ3P トップ型 2個(もしくは(13-B)2mmピッチピンヘッダ 1✕3 2個)
 | (14) ボックスヘッダ 20P 1個
 | (15) DCDCコンバーター 1個
 | (16) 積層セラミックコンデンサー 10μF 2個
+| (17) ターミナルブロック 1個
+| (22) Groveコネクタ トップ型 2個
+| (25) M5Stack用2x15ピンヘッダ・ソケットセット 1個
 
-.. image:: ../../images/assembly/pcb/pcb00.jpg
+.. image:: ../../images/assembly/pcb/pcb01-01.jpg
     :width: 300px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(25) M5Stack用2x15ピンヘッダ・ソケットセット` をCN9にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb01.jpg
+.. image:: ../../images/assembly/pcb/pcb01-02.jpg
     :width: 300px
 
-2. `(11) XHコネクタ2P トップ型` をCN1,CN2にはんだ付けする。
+2. `(14) ボックスヘッダ 20P` をCN8にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb02.jpg
+| **切り欠きが基板内側に向くようにすること**
+
+.. image:: ../../images/assembly/pcb/pcb01-03.jpg
     :width: 300px
 
-3. `(12) XHコネクタ3P トップ型` をCN3にはんだ付けする。
+3. `(26) Groveコネクタ トップ型` をCN6, CN7にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb03.jpg
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly/pcb/pcb01-04.jpg
     :width: 300px
 
-4. `(26) Groveコネクタ トップ型` をCN7, CN8にはんだ付けする。
+4. `(13-A) EHコネクタ 3P トップ型` (もしくは`(13-B) 2mmピッチピンヘッダ 1✕3`)をCN4, CN5にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb04.jpg
+| **(13-A)の場合は基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly/pcb/pcb01-05.jpg
     :width: 300px
 
-5. `(13) 2mmピッチピンヘッダ 1✕3` (もしくは `(13) EHコネクタ 3P トップ型` )をCN4, CN5にはんだ付けする。
+5. `(12) PHコネクタ ベース付ポスト トップ型 4P` をCN2にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb05.jpg
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly/pcb/pcb01-06.jpg
     :width: 300px
 
-6. `(14) ボックスヘッダ 20P` をCN6にはんだ付けする。
+6. `(17) ターミナルブロック` をCN3にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb06.jpg
+|  **配線の差し込み穴が基板の外側を向くようにすること**
+
+.. image:: ../../images/assembly/pcb/pcb01-07.jpg
     :width: 300px
 
-7. `(15) DC-DCコンバーター` をU1にはんだ付けする。
-8. `(16) 積層セラミックコンデンサー 10μF` 2個をC1,C2にはんだ付けする。
+7. `(11) 2.1mm標準DCジャック(4A) 基板取付用` をCN1にはんだ付けする。
 
-.. image:: ../../images/assembly/pcb/pcb07.jpg
+.. image:: ../../images/assembly/pcb/pcb01-08.jpg
+    :width: 300px
+
+8. `(15) DC-DCコンバーター` をU1にはんだ付けする。
+
+| **ラベルが基板の手前方向を向くように、図を見ながら向きを決めること**
+
+.. image:: ../../images/assembly/pcb/pcb01-09.jpg
+    :width: 300px
+
+9. `(16) 積層セラミックコンデンサー 10μF` 2個をC1,C2にはんだ付けする。
+
+.. image:: ../../images/assembly/pcb/pcb01-10.jpg
     :width: 300px
 
 
-9. 基板を裏返し `(16) 積層セラミックコンデンサー 10μF` の足を切断する。
+10. 基板を裏返し `(16) 積層セラミックコンデンサー 10μF` の足を切断する。
 
-.. image:: ../../images/assembly/pcb/pcb08.jpg
+.. image:: ../../images/assembly/pcb/pcb01-11.jpg
     :width: 300px
 
+| 以上で基板の実装は終わりです。
+| 次はヘッド部の組み立てを行います。
 
 :doc:`assembly_head` へ進む
 
