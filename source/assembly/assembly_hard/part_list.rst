@@ -25,7 +25,9 @@
    :width: 400px
 .. |12| image:: ../../images/assembly/part/12.jpg
    :width: 400px
-.. |13| image:: ../../images/assembly/part/13.jpg
+.. |13-A| image:: ../../images/assembly/part/13-A.jpg
+   :width: 400px
+.. |13-B| image:: ../../images/assembly/part/13-B.jpg
    :width: 400px
 .. |14| image:: ../../images/assembly/part/14.jpg
    :width: 400px
@@ -79,10 +81,6 @@
    :width: 400px
 .. |39| image:: ../../images/assembly/part/39.jpg
    :width: 400px
-.. |40| image:: ../../images/assembly/part/40.jpg
-   :width: 400px
-.. |41| image:: ../../images/assembly/part/41.jpg
-   :width: 400px
 
 AKARIの組み立てに必要な道具、部品の一覧を記載します。
 各部品には購入先リンクも貼ってありますので、各自で購入をしてください。
@@ -108,42 +106,40 @@ AKARIの組み立てに必要な道具、部品の一覧を記載します。
    5,"製造品","|5|","AKARI Base",,1,1,,
    6,"製造品","|6|","AKARI Plate",,1,1,,
    7,"購入品","|7|","Lattepanda Alpha","Lattepanda Alpha 864S DFR0546",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-13736/>`__",
-   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC v2.6",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-16008>`__",
+   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC v2.6",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17375/>`__",
    9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17213>`__",
    10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17217>`__",
-   11,"購入品","|11|","XHコネクタ2P トップ型","B2B-XH-A(LF)(SN)",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-12247>`__",
-   12,"購入品","|12|","XHコネクタ3P トップ型","B3B-XH-A(LF)(SN)",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-12248>`__",
-   13,"購入品",,"EHコネクタ3P トップ型","B3B-EH-A",2,2,,"↓とどちらか選択"
-   13,"購入品","|13|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-06192>`__","↑とどちらか選択"
+   11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-06568/>`__",
+   12,"購入品","|12|","PHコネクタ ベース付ポスト トップ型 4P","B4B-PH-K-S",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-12804/>`__",
+   13-A,"購入品","|13-A|",EHコネクタ3P トップ型","B3B-EH-A",2,2,"`共立エレショップ <https://eleshop.jp/shop/g/g5CP14I/>`__","↓とどちらか選択"
+   13-B,"購入品","|13-B|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-06192>`__","↑とどちらか選択"
    14,"購入品","|14|","ボックスヘッダ 20P","BH-20SG",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13176>`__",
    15,"購入品","|15|","DC-DCコンバーター","M78AR05-1",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-13536>`__",
-   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RDEC71H106K3K1H03B",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gP-08155>`__",
-   17,"購入品","|17|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13378>`__",
-   18,"購入品","|18|","コネクタ付コード 4P PH(赤黒黄緑)","DG01032-0049-01",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-15554>`__",
-   19,"購入品","|19|","コネクタ付コード2P XH(赤黒)",,2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05682>`__",
-   20,"購入品","|20|","2.1mm標準DCジャック パネル取付用","C-17108",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-17108>`__",
-   21,"購入品","|21|","2.1mm標準DCプラグ　L型",,1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-00092>`__",
-   22,"購入品","|22|","コネクタ付コード2P PH(赤白)",,1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-05679>`__",
-   23,"購入品","|23|","ACアダプター12V5A","ATS065-P120",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-06961>`__",
-   24,"購入品","|24|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
-   25,"購入品","|25|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
-   26,"購入品","|26|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
-   27,"購入品","|27|","Dynamixel 2XL430-W250-T","BTX079",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262>`__",
-   28,"購入品","|28|","HN11-I101 Set","BTX098",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=204>`__",
-   29,"購入品","|29|","USB2TTL dongle","BTE080C",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=268>`__",
-   30,"購入品","|30|","USBハブ 4ポート15cm","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`__",
-   31,"購入品","|31|","パネルマウントUSB3.0ケーブル 30cm",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`__",
-   32,"購入品","|32|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
-   33,"購入品","|33|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
-   34,"購入品","|34|","XHコネクタ付ケーブル 3P",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B011HFRYNW>`__",
-   35,"購入品","|35|","ロッカスイッチ",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00HUHBP8C>`__",
-   36,"購入品","|36|","モーメンタリスイッチ","JSANKG-01",1,1,"`Amazon <https://www.amazon.co.jp/dp/B076KBJVH3>`__",
-   37,"購入品","|37|","ボルトM3-6",,4,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
-   38,"購入品","|38|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
-   39,"購入品","|39|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
-   40,"購入品","|40|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量1GB以上推奨"
-   41,"購入品","|41|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08LK9669N>`__",
-   42,"購入品",,"両面テープ","SRE-19",1,1,"`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`__","強めの両面テープなら代替可"
+   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RD20F106Z1EH5L",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gP-03095>`__",
+   17,"購入品","|17|","ターミナルブロック 2P","TB-111-2",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gP-02333>`__",
+   18,"購入品","|18|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13378>`__",
+   19,"購入品","|19|","ACアダプター12V5A","ATS065-P120",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-06961>`__",
+   20,"購入品","|20|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
+   21,"購入品","|21|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
+   22,"購入品","|22|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
+   23,"購入品","|23|","Dynamixel 2XL430-W250-T","BTX079",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262>`__",
+   24,"購入品","|24|","HN11-I101 Set","BTX098",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=204>`__",
+   25,"購入品","|25|","USB2DXIF","BTE101",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=291>`__",
+   26,"購入品","|26|","Robot Cable-X3P 100mm","BTX100",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=215>`__",
+   27,"購入品","|27|","USB-C オス to USB-A オス 変換アダプタ","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B0BDL77KLX>`__",
+   28,"購入品","|28|","USBハブ 4ポート15cm","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`__",
+   29,"購入品","|29|","パネルマウントUSB3.0ケーブル 30cm",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`__",
+   30,"購入品","|30|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
+   31,"購入品","|31|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
+   32,"購入品","|32|","DCケーブル 20cm",TDDC-020-3,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__",
+   33,"購入品","|33|","ロッカスイッチ汎用ON-OFF 2極",as1104,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__",
+   34,"購入品","|34|","電源ジャック 2.1mm JST PHコネクタ4ピンメス",TDDC-020-3,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08HGWBXY9>`__",
+   35,"購入品","|35|","ボルトM3-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
+   36,"購入品","|36|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
+   37,"購入品","|37|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
+   38,"購入品","|38|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
+   39,"購入品","|39|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08LK9669N>`__",
+   40,"購入品",,"両面テープ","SRE-19",1,1,"`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`__","強めの両面テープなら代替可"
 
 :doc:`assembly_head` へ進む
 
