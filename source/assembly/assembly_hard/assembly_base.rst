@@ -149,7 +149,7 @@
 .. image:: ../../images/assembly/base/base06-03.jpg
     :width: 300px
 
-3. ボディー部を奥でロックするまでスライドさせ、ボディー部背面のUSB2本をベース部のLattepandaに接続する。
+3. ボディー部を奥でロックするまでスライドさせ、ボディー部背面のUSB2本をベース部のLattepandaに接続する(接続するポートは任意の場所で良い)。
 
 .. image:: ../../images/assembly/base/base06-04.jpg
     :width: 300px
