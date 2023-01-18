@@ -22,8 +22,8 @@ Google Colabについて
 1. Googleドライブをブラウザから開きます。
 2. Googleドライブ上でマイドライブを右クリックし、「新しいフォルダ」を選択し `object_detection` というフォルダを作ります。
 3. `object_detection` の中に `images` というフォルダを作ります。
-4. `images` の中に `dataset` というフォルダと `test` というフォルダを作ります。
-5. `dataset` フォルダの中に、:doc:`annotation` で準備した画像ファイル(.jpg)とアノテーションファイル(.xml)を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、dataset直下にまとめて置きます。
+4. `images` の中に `train` というフォルダと `test` というフォルダを作ります。
+5. `train` フォルダの中に、:doc:`annotation` で準備した画像ファイル(.jpg)とアノテーションファイル(.txt)、識別する物体のクラス情報が入った `class.txt` を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、train直下にまとめて置きます。
 6. `test` フォルダの中に、テスト用の画像を数枚入れます。こちらはアノテーションファイルは必要ありません。学習結果の確認のための最終テストをするのに用います。
 
 .. image:: ../../images/google_drive_dir.jpg
@@ -45,25 +45,17 @@ Google Colabで学習をする
 
 | 下記リンクからGoogle Colabにアクセスします。
 | https://colab.research.google.com/?hl=ja
-| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/training_mobilenet_akari.ipynb` を選択します。
+| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/yolov7_training_akari.ipynb` を選択します。
 
 .. image:: ../../images/colab_open.jpg
 
-| 後は順番にコードを実行していくことで、学習済みのOAK-D用モデル(.blob)とラベルファイル(.json)をダウンロードすることができます。
+| 後は順番にコードを実行していくことで、学習済みのpytorchモデル(.pt)をダウンロードすることができます。
 
 .. image:: ../../images/colab_play.jpg
 
 | 手順はリンク先のGoogle Colab内に書かれているので、それに沿ってください。
+| 次は、このpytorchモデルをOAK-Dで使えるモデルファイルへ変換します。
 
-===========================================================
-学習モデルファイルを配置する
-===========================================================
-
-| ダウンロードしたモデルファイルとラベルファイルは、下記の場所にコピーします。
-| モデルファイル(.blob): `akari_software/samples/depthai_sample/object_recognition/models`
-| ラベルファイル(.json): `akari_software/samples/depthai_sample/object_recognition/configs`
-| 以上で物体認識モデルの準備は完了です。次はいよいよ物体認識を実行してみましょう。
-
-:doc:`testing` へ進む
+:doc:`convert_model` へ進む
 
 :doc:`annotation` へ戻る

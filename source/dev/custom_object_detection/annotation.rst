@@ -31,7 +31,7 @@
 .. image:: ../../images/label_img_dir.jpg
    :width: 500px
 
-| 保存するデータのフォーマットを「PascalVOC」に変更します。
+| 保存するデータのフォーマットを「YOLO」に変更します。
 
 .. image:: ../../images/label_img_load.jpg
    :width: 500px

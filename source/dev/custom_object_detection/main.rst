@@ -12,4 +12,5 @@
    image_collection
    annotation
    training
+   convert_model
    testing
