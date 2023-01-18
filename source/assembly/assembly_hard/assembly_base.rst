@@ -19,14 +19,14 @@
 | (7) Lattepanda Alpha付属のアンテナ 2個
 
 .. image:: ../../images/assembly/base/base01-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(3) AKARI base` 内部の図の位置に2枚貼り付ける。
 
 .. image:: ../../images/assembly/base/base01-02.jpg
-    :width: 300px
+    :width: 400px
 
 
 2 Lattepanda Alphaの搭載
@@ -40,28 +40,28 @@
 
 
 .. image:: ../../images/assembly/base/base02-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. 先程貼り付けたアンテナのコネクタを `(7) Lattepanda AlphaLattepanda` のアンテナジャックに接続する。
 
 .. image:: ../../images/assembly/base/base02-02.jpg
-    :width: 300px
+    :width: 400px
 
 
 2. `(7) Lattepanda AlphaLattepanda` を `(3) AKARI base` にはめ込む。
 
 .. image:: ../../images/assembly/base/base02-03.jpg
-    :width: 300px
+    :width: 400px
 
 3. ベース上部からLattepanda付属のねじを差し込み、同じく付属のスペーサーで4点留める。
 
 .. image:: ../../images/assembly/base/base02-04.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/base/base02-05.jpg
-    :width: 300px
+    :width: 400px
 
 3 DCジャックの搭載
 -----------------------------------------------------------
@@ -71,7 +71,7 @@
 | (34) 電源ジャック 2.1mm JST PHコネクタ4ピンメス 1個
 
 .. image:: ../../images/assembly/base/base03-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,15 +80,15 @@
 | ** 図を見ながら、AKARI baseの外側に電源ジャックの平らな面が向くような向きで差し込むこと**
 
 .. image:: ../../images/assembly/base/base03-02.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/base/base03-03.jpg
-    :width: 300px
+    :width: 400px
 
 2. `(34) 電源ジャック 2.1mm JST PHコネクタ4ピンメス 1個` から出ているケーブルを `(7) Lattepanda AlphaLattepanda` の電源コネクタに差し込む。
 
 .. image:: ../../images/assembly/base/base03-04.jpg
-    :width: 300px
+    :width: 400px
 
 4 底面プレートの搭載
 -----------------------------------------------------------
@@ -99,14 +99,14 @@
 | (37) ボルトM3-6 4個
 
 .. image:: ../../images/assembly/base/base04-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(6) AKARI Plate` をベース底面に、 `(37)ボルトM3-6` で4点ねじ留めする。
 
 .. image:: ../../images/assembly/base/base04-02.jpg
-    :width: 300px
+    :width: 400px
 
 5 DCケーブルの接続
 -----------------------------------------------------------
@@ -117,14 +117,14 @@
 | (32) DCケーブル 20cm 1個
 
 .. image:: ../../images/assembly/base/base05-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(32) DCケーブル 20cm` をボディー部のDCジャックに接続する。
 
 .. image:: ../../images/assembly/base/base05-02.jpg
-    :width: 300px
+    :width: 400px
 
 6 全体の組み付け
 -----------------------------------------------------------
@@ -135,30 +135,30 @@
 | :doc:`assembly_body` で組み立てたボディー 1個
 
 .. image:: ../../images/assembly/base/base06-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. ボディー部をベース部の溝に沿って横からスライドさせながらベース部に半分程度まで差し込む。
 
 .. image:: ../../images/assembly/base/base06-02.jpg
-    :width: 300px
+    :width: 400px
 
 2. ボディー部の `(21) 2.1mm標準DCプラグ L型` をベース部に接続する。
 
 .. image:: ../../images/assembly/base/base06-03.jpg
-    :width: 300px
+    :width: 400px
 
 3. ボディー部を奥でロックするまでスライドさせ、ボディー部背面のUSB2本をベース部のLattepandaに接続する(接続するポートは任意の場所で良い)。
 
 .. image:: ../../images/assembly/base/base06-04.jpg
-    :width: 300px
+    :width: 400px
 
 7 完成！
 -----------------------------------------------------------
 
 .. image:: ../../images/assembly/base/base07-01.jpg
-    :width: 300px
+    :width: 400px
 
 | 以上でAKARI本体の組み立ては完了です。
 | 次はソフトのセットアップに進みます。
