@@ -256,7 +256,7 @@
 .. image:: ../../images/assembly/body/body09-02.jpg
     :width: 400px
 
-2. `(25) USB2DXIF`に `(27) USB-CオスtoUSB-Aオス 変換アダプタ` を差し込む。
+2. `(25) USB2DXIF` に `(27) USB-CオスtoUSB-Aオス 変換アダプタ` を差し込む。
 
 | **変換アダプタのラベルが表を向くように接続すること**
 
