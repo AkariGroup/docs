@@ -18,7 +18,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (1) M5基板( :doc:`assembly_pcb` で組み立て済みのもの) 1個
 | (3) AKARI Body 1個
-| (39) タッピングビスM2.5-6 4個
+| (37) タッピングビスM2.5-6 4個
 
 .. image:: ../../images/assembly/body/body01-01.jpg
     :width: 400px
@@ -32,7 +32,7 @@
 .. image:: ../../images/assembly/body/body01-02.jpg
     :width: 400px
 
-2. `(39) タッピングビスM2.5-6` で４点を表面からねじ留めする。
+2. `(37) タッピングビスM2.5-6` で４点を表面からねじ留めする。
 
 .. image:: ../../images/assembly/body/body01-03.jpg
     :width: 400px
@@ -232,7 +232,7 @@
 .. image:: ../../images/assembly/body/body08-01.jpg
     :width: 400px
 
-2. M5stack基板のCN6に差し込む。
+2. M5stack基板のCN8に差し込む。
 
 .. image:: ../../images/assembly/body/body08-02.jpg
     :width: 400px
