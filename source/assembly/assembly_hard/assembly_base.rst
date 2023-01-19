@@ -15,7 +15,7 @@
 
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| (3) AKARI base 1個
+| (5) AKARI base 1個
 | (7) Lattepanda Alpha付属のアンテナ 2個
 
 .. image:: ../../images/assembly/base/base01-01.jpg
@@ -23,7 +23,7 @@
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. `(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(3) AKARI base` 内部の図の位置に2枚貼り付ける。
+1. `(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(5) AKARI base` 内部の図の位置に2枚貼り付ける。
 
 .. image:: ../../images/assembly/base/base01-02.jpg
     :width: 400px
@@ -50,7 +50,7 @@
     :width: 400px
 
 
-2. `(7) Lattepanda AlphaLattepanda` を `(3) AKARI base` にはめ込む。
+2. `(7) Lattepanda AlphaLattepanda` を `(5) AKARI base` にはめ込む。
 
 .. image:: ../../images/assembly/base/base02-03.jpg
     :width: 400px
@@ -75,7 +75,7 @@
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. `(34) 電源ジャック 2.1mm JST PHコネクタ4ピンメス 1個` を `(3) AKARI base` の溝に横から押し込む。
+1. `(34) 電源ジャック 2.1mm JST PHコネクタ4ピンメス 1個` を `(5) AKARI base` の溝に横から押し込む。
 
 | ** 図を見ながら、AKARI baseの外側に電源ジャックの平らな面が向くような向きで差し込むこと**
 
@@ -96,14 +96,14 @@
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (6) AKARI Plate 1個
-| (37) ボルトM3-6 4個
+| (35) ボルトM3-6 4個
 
 .. image:: ../../images/assembly/base/base04-01.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. `(6) AKARI Plate` をベース底面に、 `(37)ボルトM3-6` で4点ねじ留めする。
+1. `(6) AKARI Plate` をベース底面に、 `(35)ボルトM3-6` で4点ねじ留めする。
 
 .. image:: ../../images/assembly/base/base04-02.jpg
     :width: 400px
@@ -144,7 +144,7 @@
 .. image:: ../../images/assembly/base/base06-02.jpg
     :width: 400px
 
-2. ボディー部の `(21) 2.1mm標準DCプラグ L型` をベース部に接続する。
+2. ボディー部の `(11) 2.1mm標準DCプラグ L型` をベース部に接続する。
 
 .. image:: ../../images/assembly/base/base06-03.jpg
     :width: 400px
