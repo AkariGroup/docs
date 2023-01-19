@@ -15,7 +15,14 @@ https://akari-docs.vbcpp.net/
    $ git clone git@github.com:AkariGroup/akari_document.git
 ~~~
 
-2. セットアップスクリプトを実行する。これにより環境の構築とドキュメントのビルドが行われ、デスクトップにリンクが生成される。
+2. submoduleを更新する
+
+~~~bash
+   $ cd ~/akari_document
+   $ git submodule update --init --recursive
+~~~
+
+3. セットアップスクリプトを実行する。これにより環境の構築とドキュメントのビルドが行われ、デスクトップにリンクが生成される。
 
 
 ~~~bash
