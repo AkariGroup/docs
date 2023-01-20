@@ -18,6 +18,9 @@
 
 4. Input shapeは「640」を入力します。
 
+.. image:: ../../images/custom_object_detection/model_converter.png
+   :width: 300px
+
 5. 「submit」を選択すると、model変換が始まり、しばらくするとzipファイルがダウンロードできます。
 
 6. ダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記に移動します。
