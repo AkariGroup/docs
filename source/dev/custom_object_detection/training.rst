@@ -26,8 +26,8 @@ Google Colabについて
 5. `train` フォルダの中に、:doc:`annotation` で準備した画像ファイル(.jpg)とアノテーションファイル(.txt)、識別する物体のクラス情報が入った `class.txt` を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、train直下にまとめて置きます。
 6. `test` フォルダの中に、テスト用の画像を数枚入れます。こちらはアノテーションファイルは必要ありません。学習結果の確認のための最終テストをするのに用います。
 
-.. image:: ../../images/google_drive_dir.jpg
-   :scale: 70%
+.. image:: ../../images/custom_object_detection/train_directory_02.jpg
+   :width: 800px
 
 | 以上でGoogleドライブの準備は完了です。
 

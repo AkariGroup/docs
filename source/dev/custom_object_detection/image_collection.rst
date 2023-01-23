@@ -133,8 +133,8 @@ Google画像検索から画像を自動収集する
 | testの下はラベルごとにディレクトリ分けする必要はありません。
 | 例) pen,book,phoneの3種類を学習させたい場合
 
-.. image:: ../../images/image_dir.png
-   :scale: 70%
+.. image:: ../../images/custom_object_detection/train_directory_01.jpg
+   :width: 600px
 
 | 画像が揃ったら、次は学習用のラベル付けをする、 **アノテーション** という工程に進みます。
 

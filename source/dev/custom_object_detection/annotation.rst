@@ -25,7 +25,7 @@
    pip3 install labelImg --user
    labelImg
 
-| 下記のウィンドウが開くので、「ディレクトリを開く」で:doc:`image_collection` で収集した画像のディレクトリを選択します。
+| 下記のウィンドウが開くので、「ディレクトリを開く」で :doc:`image_collection` で収集した画像のディレクトリを選択します。
 | 先程の画像の一覧が読み込まれます。
 
 .. image:: ../../images/label_img_dir.jpg
