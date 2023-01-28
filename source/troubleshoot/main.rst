@@ -10,3 +10,4 @@
    reset_servo
    restart_akira
    restart_rpc_server
+   jupyter_error
