@@ -28,10 +28,12 @@ akari_softwareレポジトリのclone
 ===========================================================
 
 | lattepandaのUbuntuにakari_softwareレポジトリをcloneします。
-| home直下で下記のコマンドを実行します。
+| homeディレクトリ直下で下記のコマンドを実行します。
+| **必ずhomeディレクトリで実行してください。home/以外へのcloneは後のセットアップのエラーの元になります！**
 
 .. code-block:: bash
 
+    cd ~/
     git clone https://github.com/AkariGroup/akari_software.git
 
 ===========================================================
