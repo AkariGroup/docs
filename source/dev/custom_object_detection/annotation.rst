@@ -22,34 +22,38 @@
 
 .. code-block:: bash
 
+   sudo apt install -y python3-pyqt5
    pip3 install labelImg --user
    labelImg
 
 | 下記のウィンドウが開くので、「ディレクトリを開く」で :doc:`image_collection` で収集した画像のディレクトリを選択します。
 | 先程の画像の一覧が読み込まれます。
 
-.. image:: ../../images/label_img_dir.jpg
-   :width: 500px
+.. image:: ../../images/custom_object_detection/annotation_01.jpg
+   :width: 700px
 
 | 保存するデータのフォーマットを「YOLO」に変更します。
 
-.. image:: ../../images/label_img_load.jpg
-   :width: 500px
+.. image:: ../../images/custom_object_detection/annotation_02.jpg
+   :width: 700px
 
 | 「矩形を作成する」を選択し、画像内の認識させたい物体を囲むようにドラッグします。
 
-.. image:: ../../images/label_img_rect.jpg
-   :width: 500px
+.. image:: ../../images/custom_object_detection/annotation_03.jpg
+   :width: 700px
 
 | ドラッグすると、ラベル名をつけるウィンドウが表示されるので、1でディレクトリとファイルに付けたラベル名を設定します。("pen"など)
 
-.. image:: ../../images/label_img_label.png
-   :width: 500px
+.. image:: ../../images/custom_object_detection/annotation_04.jpg
+   :width: 700px
 
-| 「保存する」を押して、画像と同じ名前でアノテーションファイルを保存します。PascalVOCの場合は. *xml* 形式となります。
+| 「保存する」を押して、画像と同じ名前でアノテーションファイルを保存します。YOLOの場合は. *txt* 形式となります。
 
-.. image:: ../../images/label_img_save.jpg
-   :width: 500px
+.. image:: ../../images/custom_object_detection/annotation_05.jpg
+   :width: 700px
+
+.. image:: ../../images/custom_object_detection/annotation_06.jpg
+   :width: 700px
 
 | 「次の画像」を押して、次の画像についても同様に行っていきます。
 

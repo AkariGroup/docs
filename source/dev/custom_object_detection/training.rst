@@ -47,11 +47,13 @@ Google Colabで学習をする
 | https://colab.research.google.com/?hl=ja
 | 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/yolov7_training_akari.ipynb` を選択します。
 
-.. image:: ../../images/colab_open.jpg
+.. image:: ../../images/custom_object_detection/colab_open.jpg
+   :width: 800px
 
 | 後は順番にコードを実行していくことで、学習済みのpytorchモデル(.pt)をダウンロードすることができます。
 
-.. image:: ../../images/colab_play.jpg
+.. image:: ../../images/custom_object_detection/colab_play.jpg
+   :width: 800px
 
 | 手順はリンク先のGoogle Colab内に書かれているので、それに沿ってください。
 | 次は、このpytorchモデルをOAK-Dで使えるモデルファイルへ変換します。
