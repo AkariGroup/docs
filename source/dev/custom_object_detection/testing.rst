@@ -25,7 +25,13 @@
 
    cd akari_object_detection/4_testing
 
-2. 下記を実行します。
+2. 初回のみ、blobconverterのインストールを行います。
+
+.. code-block:: bash
+
+   pip install blobconverter -user
+
+3. 下記を実行します。
 
 .. code-block:: bash
 
@@ -37,7 +43,7 @@
 
    python3 main.py -m model/my_detection.blob -c json/my_detection.json
 
-3. カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。
+4. カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。
 
 | 映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。
 
