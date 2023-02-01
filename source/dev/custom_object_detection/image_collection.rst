@@ -27,13 +27,23 @@
 | 例) ペンの画像を撮影するため、"pen"という名前をつける場合
 
 .. code-block:: bash
-   
+
    python3 imageset_creator.py -n pen
 
 | 実行すると現在のカメラ映像を写すウィンドウが起動します。
-| キーボードの'c'を押すと、その度に画像を撮影していきます。
+| このウインドウ上でキーボードの'c'を押すと、その度に画像を撮影していきます。
 | 'pen'の例の場合は、'pen'というディレクトリが作られ、その中に'pen_001.jpg','pen_002.jpg'...という画像が保存されていきます。
-| キーボードの'q'を押すと終了します。
+| 映像ウインドウ上でキーボードの'q'を押すと終了します。
+
+| また、'-a'オプションと共にfpsの数値を指定すると、1秒間に指定した数値の枚数を自動で撮影するモードを使用することができます。
+| 例) "dog"という名前で1秒あたり2枚の画像を自動撮影する場合
+
+.. code-block:: bash
+
+   python3 imageset_creator.py -n pen -a 2
+
+| この場合も映像ウインドウ上でキーボードの'q'を押すと終了します。
+
 
 .. note::
 
@@ -50,14 +60,14 @@ Google画像検索から画像を自動収集する
 
 .. code-block:: bash
 
-   git clone https://github.com/Joeclinton1/google-images-download.git  
+   git clone https://github.com/Joeclinton1/google-images-download.git
 
 2. ライブラリのインストールを行います。
 
 .. code-block:: bash
 
-   cd google-images-download 
-   python3 setup.py install --user  
+   cd google-images-download
+   python3 setup.py install --user
 
 3. google chromeをインストールします。
 
@@ -68,9 +78,9 @@ Google画像検索から画像を自動収集する
    sudo apt update
    sudo apt install google-chrome-stable
 
-4.  chromedriverを下記リンクからダウンロードします。自分のchromeと同じバージョンをダウンロードします。  
+4.  chromedriverを下記リンクからダウンロードします。自分のchromeと同じバージョンをダウンロードします。
 
-| https://chromedriver.chromium.org/downloads  
+| https://chromedriver.chromium.org/downloads
 | `chromedriver_linux64.zip` をリンク先からダウンロードして、展開した中身にある *chromedriver* ファイルを任意の場所に移動します。
 | chromeのバージョンは下記コマンドで確認できます。
 
@@ -123,8 +133,8 @@ Google画像検索から画像を自動収集する
 | testの下はラベルごとにディレクトリ分けする必要はありません。
 | 例) pen,book,phoneの3種類を学習させたい場合
 
-.. image:: ../../images/image_dir.png
-   :scale: 70%
+.. image:: ../../images/custom_object_detection/train_directory_01.jpg
+   :width: 600px
 
 | 画像が揃ったら、次は学習用のラベル付けをする、 **アノテーション** という工程に進みます。
 
