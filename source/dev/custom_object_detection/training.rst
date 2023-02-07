@@ -13,6 +13,17 @@ Google Colabについて
 | 特徴はGPU環境が用意されていることで、これによって自分で環境を用意しなくても、高速な学習を行うことができます。
 
 ===========================================================
+akari_yolo_trainingのClone
+===========================================================
+
+| akari_yolo_trainingをgitからcloneします。
+| **webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！**
+
+.. code-block:: bash
+
+   git clone https://github.com/AkariGroup/akari_yolo_training.git
+
+===========================================================
 学習前の準備
 ===========================================================
 
@@ -45,7 +56,7 @@ Google Colabで学習をする
 
 | 下記リンクからGoogle Colabにアクセスします。
 | https://colab.research.google.com/?hl=ja
-| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_object_detection/3_training/yolov7_training_akari.ipynb` を選択します。
+| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_yolo_training/yolov7_training_akari.ipynb` を選択します。
 
 .. image:: ../../images/custom_object_detection/colab_open.jpg
    :width: 800px
