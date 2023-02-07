@@ -16,14 +16,25 @@
          $ poetry shell
 
 ===========================================================
-物体認識の実行方法
+akari_yolo_inferenceのClone
 ===========================================================
 
-1. akari_object_detection内の4_testingのディレクトリに移動します。
+| akari_yolo_inferenceをgitからcloneします。
+| **webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！**
 
 .. code-block:: bash
 
-   cd akari_object_detection/4_testing
+   git clone https://github.com/AkariGroup/akari_yolo_inference.git
+
+===========================================================
+物体認識の実行方法
+===========================================================
+
+1. akari_yolo_inference内に移動します。
+
+.. code-block:: bash
+
+   cd akari_yolo_inference
 
 2. 初回のみ、blobconverterのインストールを行います。
 
