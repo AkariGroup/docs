@@ -1,18 +1,10 @@
 ***********************************************************
-0. 事前準備をする
+0. ���O����������
 ***********************************************************
 
-| 物体認識チュートリアルを始める前に必要なファイルをgitからcloneします。
-| ディレクトリごとに各工程で必要なファイルが入っています。
-| **webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！**
+| ���̃`���[�g���A���ł͊w�K�f�[�^�̕ۑ���Google Drive���g�p���܂��B
+| Google�A�J�E���g���������łȂ����͍쐬���Ă����K�v������܂��B
 
-.. code-block:: bash
+:doc:`image_collection` �֐i��
 
-   git clone https://github.com/AkariGroup/akari_object_detection.git
-
-| また、このチュートリアルでは学習データの保存にGoogle Driveを使用します。
-| Googleアカウントをお持ちでない方は作成しておく必要があります。
-
-:doc:`image_collection` へ進む
-
-:doc:`main` へ戻る
+:doc:`main` �֖߂�
