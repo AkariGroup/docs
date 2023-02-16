@@ -23,12 +23,7 @@
 
 5. 「submit」を選択すると、model変換が始まり、しばらくするとzipファイルがダウンロードできます。
 
-6. ダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記に移動します。
-
-| モデル(.blob): `akari_object_detection/4_testing/model`
-| ラベル(.json): `akari_object_detection/4_testing/json/``
-
-| 以上でオリジナル画像認識の準備は完了です。
+| 以上でオリジナル画像認識のモデルの準備は完了です。
 | 次はいよいよ画像認識をAKARIで実際に動かしていきます。
 
 :doc:`testing` へ進む
