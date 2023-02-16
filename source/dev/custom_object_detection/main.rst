@@ -13,6 +13,8 @@
 |   https://github.com/AkariGroup/akari_yolo_training
 | - akari_yolo_inference
 |   https://github.com/AkariGroup/akari_yolo_inference
+| - akari_yolo_inference_jupyter
+|   https://github.com/AkariGroup/akari_yolo_inference_jupyter
 
 .. toctree::
    :maxdepth: 2
