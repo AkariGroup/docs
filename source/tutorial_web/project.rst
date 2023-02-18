@@ -30,15 +30,19 @@ Projectsページの説明
 .. image:: ../images/tutorial_web/project_02.jpg
     :width: 800px
 
-**1. View切替ボタン**
+**1. 更新ボタン**
+
+  | プロジェクト一覧の更新ができます。
+
+**2. View切替ボタン**
 
   | ここでAKARIのプロジェクト一覧の表示形式をカード形式とリスト形式に切り替えできます。
 
-**2. 新規プロジェクトボタン**
+**3. 新規プロジェクトボタン**
 
   | 新しいプロジェクトを作成できます。
 
-**3. プロジェクト一覧**
+**4. プロジェクト一覧**
 
   | プロジェクトの一覧が表示されます。
   | プロジェクト名を選択すると、プロジェクトが開きます。
@@ -64,7 +68,7 @@ Projectsページの説明
   | 左のページリストから、Projectsを選択し、開きます。
 
 .. image:: ../images/tutorial_web/project_03.jpg
-    :width: 600px
+    :width: 800px
 
 2. 新規プロジェクトボタンを押す。
 
@@ -106,17 +110,58 @@ Projectsページの説明
 1. プロジェクト一覧からプロジェクト名を選択します。
 
 .. image:: ../images/tutorial_web/project_07.jpg
-    :width: 600px
+    :width: 800px
 
 2. プロジェクトページが開くので、右上の `OPEN WITH SERVICE` をクリックし、先程起動したサービスからプロジェクトの編集に使いたいものを選択します。
 
 .. image:: ../images/tutorial_web/project_08.jpg
-    :width: 600px
+    :width: 800px
 
 3. サービスを使って、プロジェクトのページがポップアップします。
 
   | このポップアップしたJupyterLabやVisual Studio Code上で、プログラムを書いて実行することでAKARIを動かすことができます。
-  | 実際にAKARIをこのサービス上で動かせるプロジェクトのサンプルが用意してあるので、次のページからはその使い方を見ていきましょう。
+
+
+===========================================================
+gitレポジトリからプロジェクトを作ってみよう
+===========================================================
+
+| 次に、git上に公開されているAKARIのプロジェクトを使ってプロジェクトを作成してみましょう。
+| 今回は、次ページ以降で使うakari_tutorialを例にして進めます。
+
+1. Projectsページを開く。
+
+  | webコンソールに戻って、左のページリストからProjectsを選択し、開きます。
+
+.. image:: ../images/tutorial_web/project_03.jpg
+    :width: 800px
+
+2. 新規プロジェクトボタンを押す。
+
+  | 新規プロジェクトボタンを押し、新しいプロジェクトを作成します。
+
+.. image:: ../images/tutorial_web/project_04.jpg
+    :width: 800px
+
+3. 「GITレポジトリから作成」を選択する。
+
+  | 「GITレポジトリから作成」を選択し、タブを切り替えます。
+
+.. image:: ../images/tutorial_web/project_09.jpg
+    :width: 800px
+
+4. プロジェクトを作成する。
+
+  | akarai_tutorialのcloneに必要な情報を入力し、作成ボタンを押します。
+  | git URL: https://github.com/AkariGroup/akari_tutorial.git
+  | gitブランチ名: main
+
+.. image:: ../images/tutorial_web/project_10.jpg
+    :width: 800px
+
+5. akari_tutorialというプロジェクトが作成されます。
+
+| 次に、今回作成したakari_tutorialを動かしてみましょう。
 
 :doc:`tutorial_project` へ進む
 
