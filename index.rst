@@ -18,6 +18,7 @@ Welcome to akari-manual!
    source/tutorial_web/main
    source/tutorial/main
    source/spec/main
+   source/practice/main
    source/dev/main
    source/troubleshoot/main
    source/sdk_reference/main
