@@ -83,6 +83,10 @@ AKARIの情報元
 
    AKARIの詳細仕様について記載しています。
 
+#. :doc:`practice/main`
+
+   AKARIの使い方とpythonを学べる練習問題の進め方が記載されています。
+
 #. :doc:`dev/main`
 
    AKARIを使った開発のヒントが記載してあります。
