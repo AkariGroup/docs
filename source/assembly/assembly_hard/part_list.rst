@@ -83,7 +83,7 @@
    :width: 400px
 
 | AKARIの組み立てに必要な道具、部品の一覧を記載します。
-| 各部品には購入先のリンクも貼ってあります。
+| 各部品には購入先のリンクも貼ってあります(秋月電子に関しては通販コードを併記してあるため、そちらを用いて参照ください)。
 | **購入先はあくまで一例ですので、同じ部品であれば他の購入先でも問題ありません。**
 
 必要な道具
@@ -106,20 +106,36 @@
    4,"製造品","|4|","AKARI Cover",,1,1,,
    5,"製造品","|5|","AKARI Base",,1,1,,
    6,"製造品","|6|","AKARI Plate",,1,1,,
-   7,"購入品","|7|","Lattepanda Alpha","Lattepanda Alpha 864S DFR0546",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-13736/>`__",
-   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC v2.6",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17375/>`__",
-   9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17213>`__",
-   10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-17217>`__",
-   11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-06568/>`__",
-   12,"購入品","|12|","PHコネクタ ベース付ポスト トップ型 4P","B4B-PH-K-S",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-12804/>`__",
+   7,"購入品","|7|","Lattepanda Alpha","Lattepanda Alpha 864S DFR0546",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-13736)",
+   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC v2.6",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-17375)
+   | `スイッチサイエンス <https://www.switch-science.com/products/7362?_pos=2&_sid=2cc3998fb&_ss=r>`__",
+   9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-17213)
+   | `スイッチサイエンス <https://www.switch-science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__",
+   10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-17217)
+   | `スイッチサイエンス <https://www.switch-science.com/products/4051?_pos=1&_sid=7d953003e&_ss=r>`__",
+   11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (C-06568)",
+   12,"購入品","|12|","PHコネクタ ベース付ポスト トップ型 4P","B4B-PH-K-S",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (C-12804)",
    13-A,"購入品","|13-A|",EHコネクタ3P トップ型","B3B-EH-A",2,2,"`共立エレショップ <https://eleshop.jp/shop/g/g5CP14I/>`__","↓とどちらか選択"
-   13-B,"購入品","|13-B|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-06192>`__","↑とどちらか選択"
-   14,"購入品","|14|","ボックスヘッダ 20P","BH-20SG",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13176>`__",
-   15,"購入品","|15|","DC-DCコンバーター","M78AR05-1",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-13536>`__",
-   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RD20F106Z1EH5L",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/gP-03095>`__",
-   17,"購入品","|17|","ターミナルブロック 2P","TB-111-2",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gP-02333>`__",
-   18,"購入品","|18|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gC-13378>`__",
-   19,"購入品","|19|","ACアダプター12V5A","ATS065-P120",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/gM-06961>`__",
+   13-B,"購入品","|13-B|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (C-06192)","↑とどちらか選択"
+   14,"購入品","|14|","ボックスヘッダ 20P","BH-20SG",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (C-13176)",
+   15,"購入品","|15|","DC-DCコンバーター","M78AR05-1",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-13536)",
+   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RD20F106Z1EH5L",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (P-03095)",
+   17,"購入品","|17|","ターミナルブロック 2P","TB-111-2",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (P-02333)",
+   18,"購入品","|18|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (C-13378)",
+   19,"購入品","|19|","ACアダプター12V5A","ATS065-P120",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (M-06961)",
    20,"購入品","|20|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
    21,"購入品","|21|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
    22,"購入品","|22|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
