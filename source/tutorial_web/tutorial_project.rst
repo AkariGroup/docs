@@ -5,31 +5,11 @@ AKARIチュートリアルを動かしてみよう
 | ここでは、AKARIの各機能を動かしながら学習できるプロジェクトである、AKARIチュートリアルの動かし方を説明します。
 
 ===========================================================
-AKARIチュートリアルのダウンロード
+AKARIチュートリアルを開く
 ===========================================================
 
-| まずはAKARIチュートリアルを自身のプロジェクト一覧に追加する必要があります。
-| 現時点では、AKARIチュートリアルはAKARI本体にログインして直接git cloneする必要があります。
-
-1. AKARIにディスプレイ、キーボード、マウスを接続し、AKARIのUbuntuにログインします。
-
-2. ターミナルを起動し、下記コマンドを実行する。
-
-.. code-block:: bash
-
-    cd ~/akari_projects
-    git clone git@github.com:AkariGroup/akari_tutorial.git
-
-3. 一度AKARIのサービスを再起動する。
-
-.. code-block:: bash
-
-    sudo systemctl restart akira.service
-
-**注: akariではなくakiraです。**
-
-| ここまで終わったら、:doc:`project` と同様そのままAKARI本体からでも、別PCからでもwebコンソールに接続して問題ありません。
-| :doc:`project` と同様の手順で、サービス一覧からJupyterLabかVisual Studio Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_tutorialを開きます。
+| :doc:`project` で作成したakari_tutorialを開きます。
+| サービス一覧からJupyterLabかVisual Studio Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_tutorialを開きます。
 
 
 ===========================================================
