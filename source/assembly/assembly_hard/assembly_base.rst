@@ -163,6 +163,6 @@
 | 以上でAKARI本体の組み立ては完了です。
 | 次はソフトのセットアップに進みます。
 
-:doc:`../setup_soft/main` へ進む
+:doc:`../assembly_test_unit/main` へ進む
 
 :doc:`assembly_body` へ戻る
