@@ -35,7 +35,7 @@ akari_yolo_inferenceのClone
 物体認識モデルの移動
 -----------------------------------------------------------
 
-:doc:`./convert_model.rst` でダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記ディレクトリ内に移動します。
+:doc:`./convert_model` でダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記ディレクトリ内に移動します。
 
 | モデル(.blob): `akari_yolo_inference/model/`
 | ラベル(.json): `akari_yolo_inference/json/`
@@ -88,9 +88,9 @@ https://github.com/AkariGroup/akari_yolo_inference_jupyter.git
 
 2. :doc:`../../tutorial_web/tutorial_project` を参考に、先程cloneした`akari_yolo_inference_jupyter`をJupyter Lab上で開きます。
 
-3. 開いたら、ページ左のFile Browserを開き、`model`というディレクトリを開きます。File Browser上部の「Upload Files」ボタンを押し、先程展開したzipファイル内のOAK-Dの認識モデル(.blob)をアップロードします。
+3. 開いたら、ページ左のFile Browserを開き、 `model` というディレクトリを開きます。File Browser上部の「Upload Files」ボタンを押し、先程展開したzipファイル内のOAK-Dの認識モデル(.blob)をアップロードします。
 
-4. 3.と同様に、File Browseから、`json`というディレクトリを開き、「Upload Files」から、先程展開したzipファイル内のOAK-Dのラベルファイル(.json)をアップロードします。
+4. 3.と同様に、File Browseから、 `json` というディレクトリを開き、「Upload Files」から、先程展開したzipファイル内のOAK-Dのラベルファイル(.json)をアップロードします。
 
 -----------------------------------------------------------
 物体認識の実行
