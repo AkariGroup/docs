@@ -48,7 +48,7 @@
    T5,"購入品","|T5|","3mm黄色LED 595nm 70度",OSY5JA3Z74A,2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (I-11639)",他の色でもOK
    T6,"購入品","|T6|","3mm緑色LED 525nm 70度",OSG5TA3Z74A,1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (I-12688)",他の色でもOK
+   | (I-11635)",他の色でもOK
    T7,"購入品","|T7|","カーボン抵抗（炭素皮膜抵抗）120Ω","CF25J120RB",4,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (R-25121)",推奨抵抗値
    T8,"購入品","|T8|","カーボン抵抗（炭素皮膜抵抗）200Ω","CF25J200RB",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
