@@ -40,7 +40,7 @@
    "No.","分類","画像","名称","型番","必要数 [個]","購入数[組]","購入先リンク","備考"
    T1,"製造品","|T1|","TEST UNIT基板",,1,1,,
    T2,"購入品","|T2|","10×2ピンヘッダ",PH-2x10SG,1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-13736)",
+   | (C-00078)",
    T3,"購入品","|T3|","タクトスイッチ 12mm",TVGP01-G73BB,2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (P-12226)",
    T4,"購入品","|T4|","3mm赤色LED 625nm 70度",OSR5JA3Z74A,3,3,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__

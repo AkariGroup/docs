@@ -84,7 +84,21 @@
 .. image:: ../../images/assembly/assembly_test_unit/test_unit01-11.jpg
     :width: 400px
 
+
+取り付け方法
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+AKARIのヘッド部のボックスヘッダに、テストユニットのピンヘッダを合わせる形で差し込むと取り付けが出来ます。
+
+.. image:: ../../images/assembly/assembly_test_unit/test_unit02-01.jpg
+    :width: 400px
+
+
+.. image:: ../../images/assembly/assembly_test_unit/test_unit02-02.jpg
+    :width: 400px
+
 | 以上でテスト基板の作成は終わりです。
+| 使い方については :doc:`../../spec/test_unit` を参照してください。
 
 :doc:`../setup_soft/main` へ進む
 

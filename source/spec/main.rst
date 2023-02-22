@@ -7,3 +7,4 @@ AKARIの仕様
 
    hard_spec
    soft_base
+   test_unit
