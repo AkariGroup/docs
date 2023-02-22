@@ -13,6 +13,7 @@ Welcome to akari-manual!
    :caption: Contents:
 
    source/intro
+   source/overview/main
    source/assembly/main
    source/startup/main
    source/tutorial_web/main

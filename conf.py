@@ -19,11 +19,11 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'akari-manual'
-copyright = '2020, tmc'
-author = 'tmc'
+copyright = '2023, TOYOTA MOTOR CORPORATION'
+author = 'TOYOTA MOTOR CORPORATION'
 
 # The full version, including alpha/beta/rc tags
-release = '0.9'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
