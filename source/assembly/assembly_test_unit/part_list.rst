@@ -1,26 +1,26 @@
 ***********************************************************
 組み立てに必要なもの
 ***********************************************************
-.. |T1| image:: ../../images/assembly_test_unit/part/01.jpg
-   :width: 400px
-.. |T2| image:: ../../images/assembly_test_unit/part/02.jpg
-   :width: 400px
-.. |T3| image:: ../../images/assembly_test_unit/part/03.jpg
-   :width: 400px
-.. |T4| image:: ../../images/assembly_test_unit/part/04.jpg
-   :width: 400px
-.. |T5| image:: ../../images/assembly_test_unit/part/05.jpg
-   :width: 400px
-.. |T6| image:: ../../images/assembly_test_unit/part/06.jpg
-   :width: 400px
-.. |T7| image:: ../../images/assembly_test_unit/part/07.jpg
-   :width: 400px
-.. |T8| image:: ../../images/assembly_test_unit/part/08.jpg
-   :width: 400px
-.. |T9| image:: ../../images/assembly_test_unit/part/09.jpg
-   :width: 400px
-.. |T10| image:: ../../images/assembly_test_unit/part/10.jpg
-   :width: 400px
+.. |T1| image:: ../../images/assembly/part_test_unit/t01.jpg
+   :width: 200px
+.. |T2| image:: ../../images/assembly/part_test_unit/t02.jpg
+   :width: 200px
+.. |T3| image:: ../../images/assembly/part_test_unit/t03.jpg
+   :width: 200px
+.. |T4| image:: ../../images/assembly/part_test_unit/t04.jpg
+   :width: 200px
+.. |T5| image:: ../../images/assembly/part_test_unit/t05.jpg
+   :width: 200px
+.. |T6| image:: ../../images/assembly/part_test_unit/t06.jpg
+   :width: 200px
+.. |T7| image:: ../../images/assembly/part_test_unit/t07.jpg
+   :width: 200px
+.. |T8| image:: ../../images/assembly/part_test_unit/t08.jpg
+   :width: 200px
+.. |T9| image:: ../../images/assembly/part_test_unit/t09.jpg
+   :width: 200px
+.. |T10| image:: ../../images/assembly/part_test_unit/t10.jpg
+   :width: 200px
 
 | AKARIのテストユニットの組み立てに必要な道具、部品の一覧を記載します。
 | 各部品には購入先のリンクも貼ってあります(秋月電子に関しては通販コードを併記してあるため、そちらを用いて参照ください)。
