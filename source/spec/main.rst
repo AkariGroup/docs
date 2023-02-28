@@ -6,4 +6,5 @@ AKARIの仕様
    :maxdepth: 2
 
    hard_spec
+   test_unit
    soft_base

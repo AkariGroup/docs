@@ -10,4 +10,5 @@ AKARIを作ってみよう(工事中)
    :caption: Contents:
 
    assembly_hard/main
+   assembly_test_unit/main
    setup_soft/main
