@@ -21,7 +21,7 @@ lattepandaのUbuntu20.04にAKARI用の環境セットアップをしていきま
 
 .. code-block:: bash
 
-    sudo apt install git python3.8 python3.8-venv sshpass git-lfs
+    sudo apt install git python3.10 python3.10-venv sshpass git-lfs
 
 ===========================================================
 akari_softwareレポジトリのclone
@@ -91,16 +91,14 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    ./run-ansible.py -i hosts ./system.yml --ask-vault-pass -Kk --diff -c local
+    ./run-ansible.py -i hosts ./system.yml -Kk --diff -c local
 
-| SSH password, Default password、Vault passwordを聞かれます。
+| SSH password, Default passwordを聞かれます。
 | SSH password, Default passwordには、それぞれUbuntuのログインパスワードを入力します。
-| Vault passwordはAKARIのプロジェクト管理者に問い合わせてください。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
 | このセットアップでは、下記の様なタスクが自動で実行されます。
 
 * ライブラリのインストール
-* akariのpython仮想環境(poetry)の設定
 * ユーザー権限の設定
 * dynamixel、M5Stack、OAK-DなどのUSB周辺機器の接続設定
 * M5Stackへのソフト書き込み

@@ -4,17 +4,6 @@
 
 AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサンプルを動かしてみましょう。
 
-.. note::
-
-   AKARIのアプリは、poetryというpythonの仮想環境マネージャーを用いて実行する必要があります。
-
-   akari_software直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
-
-      .. code-block:: bash
-
-         $ cd akari_software
-         $ poetry shell
-
 
 ===========================================================
 顔認識を試してみよう

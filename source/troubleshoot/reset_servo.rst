@@ -10,19 +10,6 @@
 
    **挙動がおかしくなる可能性があります。**
 
-.. note::
-
-   AKARIのソフトはpoetryというpythonの仮想環境マネージャーを用いてセットアップされています。
-
-   AKARIのアプリを実行する際は、最初にこの仮想環境へ移動する必要があります。
-
-   akari_software直下へ移動し、 `poetry shell` を実行して仮想環境を立ち上げます。
-
-      .. code-block:: bash
-
-         $ cd akari_software
-         $ poetry shell
-
 toolsディレクトリ内のpythonへ移動します。
 
 .. code-block:: bash
