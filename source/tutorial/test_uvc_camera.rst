@@ -27,7 +27,7 @@ UVCとはUSB Video Classの略で、主にUSBカメラの通信方法に関す�
 
    .. code-block:: bash
 
-      $ cd sdk/depthai_uvc
+      $ cd samples/depthai_uvc
 
 ===========================================================
 UVCアプリの実行
