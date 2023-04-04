@@ -151,7 +151,7 @@
    30,"購入品","|30|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
    31,"購入品","|31|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
    32,"購入品","|32|","DCケーブル 20cm",TDDC-020-3,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__",
-   33,"購入品","|33|","ロッカスイッチ汎用ON-OFF 2極",as1104,1,1,"`Amazon <https://amzn.asia/d/20SbGJA>`__",
+   33,"購入品","|33|","ロッカスイッチ汎用ON-OFF 2極",as1104,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00KW0PPVW>`__",
    34,"購入品","|34|","電源ジャック 2.1mm JST PHコネクタ4ピンメス",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08HGWBXY9>`__",
    35,"購入品","|35|","ボルトM3-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
    36,"購入品","|36|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
