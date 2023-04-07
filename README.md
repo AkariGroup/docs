@@ -2,7 +2,7 @@
 
 AKARIのマニュアルを管理するリポジトリです。  
 本レポジトリのマニュアルは下記リンク先に掲載されています。  
-https://akari-docs.vbcpp.net/  
+https://akarigroup.github.io/docs/
 
 
 ## セットアップ手順
@@ -48,3 +48,4 @@ https://akari-docs.vbcpp.net/
    $ cd ~/akari_document/setup
    $ ./build.sh
 ~~~
+
