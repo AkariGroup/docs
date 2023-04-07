@@ -7,7 +7,6 @@ on:
 env:
   POETRY_HOME: /opt/poetry
   POETRY_VERSION: 1.1.13
-  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 jobs:
   build:
     name: Build docs
@@ -17,18 +16,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         lfs: false
-    - name: Initialize ssh-agent
-      shell: bash
-      run: |
-        ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null
     - name: Checkout submodules
       shell: bash
-      env:
-        GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
       run: |
-        echo "${{ secrets.AKARI_SOFTWARE_CHECKOUT_KEY }}" | ssh-add -
         GIT_LFS_SKIP_SMUDGE=1 git submodule update --init -- references/akari_software
-        ssh-add -D
     - uses: actions/setup-python@v4
       with:
         python-version: '3.8'
@@ -42,19 +33,14 @@ jobs:
     - name: Build documents
       run: |
         poetry run make html
-    - name: Deploy to private repository
+    - name: Deploy documents
       shell: bash
-      env:
-        GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
       if: github.ref == 'refs/heads/main'
       run: |
-        echo "${{ secrets.GH_PAGES_DEPLOY_KEY }}" | ssh-add -
-
         tempdir=$(mktemp -d)
 
         cp -r _build/html $tempdir
         cd $tempdir/html
-        echo "${{ secrets.GH_PAGES_CNAME }}" >> CNAME
         touch .nojekyll
 
         git init
@@ -65,5 +51,5 @@ jobs:
         git add .
         git commit -am "Build: $(date)"
 
-        git remote add origin ${{ secrets.GH_PAGES_REPO }}
+        git remote add origin "https://git:${{ github.token }}@github.com/${{ github.repository }}"
         git push -f origin HEAD
