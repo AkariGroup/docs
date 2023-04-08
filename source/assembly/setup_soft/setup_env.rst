@@ -43,7 +43,7 @@ venvのセットアップ
    pip install akari_client[depthai]
    pip install akari_proto
 
-| 次はM5Stackへのソフト書き込みを行います。
+| 次はM5StackのSDカードのデータ書き込みを行います。
 |
 
 :doc:`setup_m5` へ進む

@@ -52,4 +52,4 @@ Ubuntuをlattepandaにインストールする。
 
 :doc:`setup_ansible` へ進む
 
-:doc:`main` へ戻る
+:doc:`requirement_list` へ戻る
