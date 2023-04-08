@@ -180,43 +180,43 @@
 1. `(21) 2.1mm標準DCジャック パネル取付用` 付属のナットを、あらかじめ `(20) コネクタ付コード4P PH(赤黒黄緑)` に通す。
 
 .. image:: ../../images/assembly/body/body06-02.jpg
-    :width: 300px
+    :width: 400px
 
 2. 1.を、ボディー背面のDCジャック用の穴に内側から通し、端線を外に出す。
 
 .. image:: ../../images/assembly/body/body06-03.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/body/body06-04.jpg
-    :width: 300px
+    :width: 400px
 
 4. `(21) 2.1mm標準DCジャック パネル取付用` にはんだ付けする。
 
 **+側(端子が短い方)に赤黒、-側(端子が長い方)に黄緑をはんだ付けすること。**
 
 .. image:: ../../images/assembly/body/body06-05.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/body/body06-06.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/body/body06-07.jpg
-    :width: 300px
+    :width: 400px
 
 5. DCジャックをボディーの外側から押してはめ込む。
 
 .. image:: ../../images/assembly/body/body06-08.jpg
-    :width: 300px
+    :width: 400px
 
 6. ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN2に差し込む。
 
 .. image:: ../../images/assembly/body/body06-09.jpg
-    :width: 300px
+    :width: 400px
 
 7. ナットを内側から締める。
 
 .. image:: ../../images/assembly/body/body06-10.jpg
-    :width: 300px
+    :width: 400px
 
 7 M5Stackの搭載
 -----------------------------------------------------------

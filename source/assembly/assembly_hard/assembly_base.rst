@@ -72,33 +72,33 @@
 | (21) 2.1mm標準DCジャック パネル取付用 1個
 
 .. image:: ../../images/assembly/base/base03-01.jpg
-    :width: 300px
+    :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(21) 2.1mm標準DCジャック パネル取付用` を上部から押し込み、裏側から付属のナットで留める。
 
 .. image:: ../../images/assembly/base/base03-02.jpg
-    :width: 300px
+    :width: 400px
 
 .. image:: ../../images/assembly/base/base03-03.jpg
-    :width: 300px
+    :width: 400px
 
 2. `(20) コネクタ付コード 4P PH(赤黒黄緑)` のコネクタをLattepandaのDCコネクタに挿す。
 
 .. image:: ../../images/assembly/base/base03-04.jpg
-    :width: 300px
+    :width: 400px
 
 
 2. `(20) コネクタ付コード 4P PH(赤黒黄緑)` の-側(緑と黄色の線)を2本まとめて、DCジャックの-側(足が長い端子)にはんだ付けする。
 
 .. image:: ../../images/assembly/base/base03-05.jpg
-    :width: 300px
+    :width: 400px
 
 3. `(20) コネクタ付コード 4P PH(赤黒黄緑)` の+側(赤と黒の線)を2本まとめて、DCジャックの+側(足が短い端子)にはんだ付けする。
 
 .. image:: ../../images/assembly/base/base03-06.jpg
-    :width: 300px
+    :width: 400px
 
 4 底面プレートの搭載
 -----------------------------------------------------------
