@@ -13,11 +13,10 @@ akari_software下に仮想実行環境のセットアップをしていきます
 * マウス
 
 ===========================================================
-poetry環境のセットアップ
+venvのセットアップ
 ===========================================================
 
-| 次にakari_softwareの仮想実行環境をセットアップします。
-| AKARIでは、poetryを使って仮想環境を構築しています。
+| akari_softwareの仮想実行環境をセットアップします。
 
 1. akari_software直下に移動し直します。
 
@@ -25,20 +24,26 @@ poetry環境のセットアップ
 
    cd ~/akari_software
 
-2. poetry環境のインストールをします。
+2.  仮想環境を作成にする（初回のみ必要）
 
 .. code-block:: bash
 
-   poetry install
+   python -m venv venv
 
-| 以上を実行することで、poetryの仮想環境に必要なライブラリがインストールされます。
-| akari_software直下で下記コマンドを実行することで、AKARIのアプリケーションを実行するためのライブラリがインストールされた、仮想実行環境下に移動することができます。
+2. 仮想環境を有効にする
 
 .. code-block:: bash
 
-   poetry shell
+   source venv/bin/activate
 
-| 次はM5Stackへのソフト書き込みを行います。
+3. 必要なライブラリをインストールする
+
+.. code-block:: bash
+
+   pip install akari_client[depthai]
+   pip install akari_proto
+
+| 次はM5StackのSDカードのデータ書き込みを行います。
 |
 
 :doc:`setup_m5` へ進む

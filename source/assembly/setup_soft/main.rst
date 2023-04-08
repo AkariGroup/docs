@@ -7,6 +7,7 @@ AKARIのセットアップを行います。
 .. toctree::
    :maxdepth: 2
 
+   requirement_list
    install_ubuntu
    setup_ansible
    setup_poetry

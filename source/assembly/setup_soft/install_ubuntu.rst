@@ -1,8 +1,8 @@
 ***********************************************************
-Ubuntu 20.04のインストール
+Ubuntu 22.04のインストール
 ***********************************************************
 
-lattepandaにUbuntu20.04をインストールします。
+lattepandaにUbuntu22.04をインストールします。
 
 ===========================================================
 必要なもの
@@ -16,8 +16,8 @@ lattepandaにUbuntu20.04をインストールします。
 ===========================================================
 Ubuntuの起動用USBを作成する。
 ===========================================================
-| 1. PC上に下記リンクからUbuntu 20.04のisoファイルをダウンロードします。
-| https://releases.ubuntu.com/20.04/ubuntu-20.04.4-desktop-amd64.iso
+| 1. PC上に下記リンクからUbuntu 22.04のisoファイルをダウンロードします。
+| https://releases.ubuntu.com/22.04/ubuntu-22.04.2-desktop-amd64.iso
 | 2. 下記リンクからUniversal USB installerをダウンロードします。
 | https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-2.0.1.0.exe
 | 3. USBメモリをパソコンに差し込み、Universal USB Installerを起動します。
@@ -52,4 +52,4 @@ Ubuntuをlattepandaにインストールする。
 
 :doc:`setup_ansible` へ進む
 
-:doc:`main` へ戻る
+:doc:`requirement_list` へ戻る

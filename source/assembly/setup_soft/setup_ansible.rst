@@ -2,21 +2,32 @@
 AKARI環境のセットアップ
 ***********************************************************
 
-lattepandaのUbuntu20.04にAKARI用の環境セットアップをしていきます。
+lattepandaのUbuntu22.04にAKARI用の環境セットアップをしていきます。
 
 ===========================================================
 必要なもの
 ===========================================================
 
-* AKARI(Ubuntu20.04インストール済み)
+* AKARI(Ubuntu22.04インストール済み)
 * キーボード
 * マウス
+
+===========================================================
+apt upgradeの実行
+===========================================================
+
+| まずはaptパッケージのupgradeをします。
+| ターミナルを開いて、下記コマンドを実行します。
+
+.. code-block:: bash
+    sudo apt update
+    sudo apt upgrade
 
 ===========================================================
 必要なパッケージのインストール
 ===========================================================
 
-| まずはlattepandaに必要なパッケージをインストールします。
+| 次にlattepandaに必要なパッケージをインストールします。
 | ターミナルを開いて、下記コマンドを実行します。
 
 .. code-block:: bash
@@ -81,20 +92,14 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
     cd ~/akari_software/setup/ansible
 
-2. 下記コマンドで、`hosts.example` を `hosts` という名前で同一ディレクトリ内でコピーします。
+2. 下記コマンドで、ansibleによる環境セットアップを実行します。
 
 .. code-block:: bash
 
-    cp hosts.example hosts
+    ./run-ansible.py -i hosts ./system.yml -K --diff -c local
 
-3. 下記コマンドで、ansibleによる環境セットアップを実行します。
-
-.. code-block:: bash
-
-    ./run-ansible.py -i hosts ./system.yml -Kk --diff -c local
-
-| SSH password, Default passwordを聞かれます。
-| SSH password, Default passwordには、それぞれUbuntuのログインパスワードを入力します。
+| Default passwordを聞かれます。
+| Default passwordには、それぞれUbuntuのログインパスワードを入力します。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
 | このセットアップでは、下記の様なタスクが自動で実行されます。
 
@@ -120,7 +125,7 @@ AKARIのセットアップには、ansibleというセットアップツール�
 | 次はakari_software直下にアプリケーションを実行するための仮想実行環境を構築します。
 |
 
-:doc:`setup_poetry` へ進む
+:doc:`setup_m5` へ進む
 
 :doc:`install_ubuntu` へ戻る
 
