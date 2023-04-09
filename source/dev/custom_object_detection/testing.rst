@@ -20,6 +20,20 @@ akari_yolo_inferenceのClone
 
    git clone https://github.com/AkariGroup/akari_yolo_inference.git
 
+
+-----------------------------------------------------------
+(初回のみ) venvのセットアップ
+-----------------------------------------------------------
+
+| 仮想実行環境をセットアップします。
+
+.. code-block:: bash
+
+   cd akari_yolo_inference
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+
 -----------------------------------------------------------
 物体認識モデルの移動
 -----------------------------------------------------------
@@ -39,7 +53,13 @@ akari_yolo_inferenceのClone
 
    cd akari_yolo_inference
 
-2. 下記を実行します。
+2. venvを有効化していなければ下記を実行します。
+
+.. code-block:: bash
+
+   source venv/bin/activate
+
+3. 下記を実行します。
 
 .. code-block:: bash
 
@@ -51,7 +71,7 @@ akari_yolo_inferenceのClone
 
    python3 main.py -m model/my_detection.blob -c json/my_detection.json
 
-3. カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。
+4. カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。
 
 | 映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。
 
