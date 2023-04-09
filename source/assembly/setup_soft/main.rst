@@ -10,5 +10,5 @@ AKARIのセットアップを行います。
    requirement_list
    install_ubuntu
    setup_ansible
-   setup_poetry
+   setup_env
    setup_m5
