@@ -70,9 +70,9 @@ depthai_uvcを起動したまま、新しいターミナルを立ち上げ、 `u
 
    .. code-block:: bash
 
-   cd ~/akari_software/samples/depthai_uvc
-   source venv/bin/activate
-   python3 uvc_streamer.py
+      cd ~/akari_software/samples/depthai_uvc
+      source venv/bin/activate
+      python3 uvc_streamer.py
 
 | 映像をストリーミングするウインドウが起動し、OAK-Dの映像が確認できるようになったと思います。
 | ウィンドウを選択して、キーボードの'q'キーを押すことで終了することができます。
