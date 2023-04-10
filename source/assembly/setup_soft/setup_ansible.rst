@@ -125,7 +125,7 @@ AKARIのセットアップには、ansibleというセットアップツール�
 | 次はakari_software直下にアプリケーションを実行するための仮想実行環境を構築します。
 |
 
-:doc:`setup_m5` へ進む
+:doc:`setup_env` へ進む
 
 :doc:`install_ubuntu` へ戻る
 
