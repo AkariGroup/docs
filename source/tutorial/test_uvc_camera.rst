@@ -9,25 +9,34 @@ UVCとはUSB Video Classの略で、主にUSBカメラの通信方法に関す�
 これを行うには、UVCに偽装するためのアプリを立ち上げる必要があります。
 
 ===========================================================
-仮想環境の有効化
+depthai_uvcの仮想環境の作成
 ===========================================================
 
-仮想環境を有効化していなければ、下記のコマンドで仮想環境を有効化します。
+depthai_uvcは独自に仮想環境の作成が必要です。
+
+1. UVCアプリの保存先のディレクトリへ移動する。
 
 .. code-block:: bash
 
-   cd ~/akari_software
+   cd ~/akari_software/samples/depthai_uvc
+
+2. 仮想環境を作成する。
+
+.. code-block:: bash
+
+   python -m venv venv
+
+3. 仮想環境を有効化する。
+
+.. code-block:: bash
+
    source venv/bin/activate
 
-===========================================================
-アプリのディレクトリへの移動
-===========================================================
+4. requirements.txtを使って必要なライブラリをインストールする。
 
-最初にUVCアプリの保存先のディレクトリへ移動しましょう。
+.. code-block:: bash
 
-   .. code-block:: bash
-
-      $ cd samples/depthai_uvc
+   pip install -r requirements.txt
 
 ===========================================================
 UVCアプリの実行
@@ -39,13 +48,13 @@ RGBの場合は下記を実行します。
 
    .. code-block:: bash
 
-      $ python3 depthai_uvc_rgb.py
+      python3 depthai_uvc_rgb.py
 
 ステレオdepthの場合は下記を実行します。
 
    .. code-block:: bash
 
-      $ python3 depthai_uvc_depth.py
+      python3 depthai_uvc_depth.py
 
 このアプリを起動している間は、OAK-D Liteの映像が `/dev/video20` に割り当てられ、ストリーミングされます。
 
@@ -55,14 +64,16 @@ RGBの場合は下記を実行します。
 映像の確認
 =============================
 
-例えば、Ubuntu標準で入っているカメラ映像の撮影アプリ `cheese` を起動して確かめてみましょう。
+サンプルアプリを使って、UVCアプリからの映像を確かめてみましょう。
 
-depthai_uvcを起動したまま、新しいターミナルを立ち上げて、cheeseを起動します。
+depthai_uvcを起動したまま、新しいターミナルを立ち上げ、 `uvc_streamer.py` を実行します。
 
    .. code-block:: bash
 
-      $ cheese
+      cd ~/akari_software/samples/depthai_uvc
+      source venv/bin/activate
+      python3 uvc_streamer.py
 
-cheeseのウインドウが起動し、OAK-Dの映像が確認できるようになったと思います。
-
-このように、depthai_uvcを起動しておくことで、一般的なwebカメラの映像を用いるアプリやプログラムでもOAK-D Liteの映像を使うことができます。
+| 映像をストリーミングするウインドウが起動し、OAK-Dの映像が確認できるようになったと思います。
+| ウィンドウを選択して、キーボードの'q'キーを押すことで終了することができます。
+| このように、depthai_uvcを起動しておくことで、一般的なwebカメラの映像を用いるアプリやプログラムでもOAK-D Liteの映像を使うことができます。
