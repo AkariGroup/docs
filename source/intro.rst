@@ -24,11 +24,16 @@ AKARIの情報元
 
 	AKARIのハード、ソフト仕様や組み立て方、開発での使い方、チュートリアルなど基本となる情報しています。
 
-* ソースコード
+* gitレポジトリ
 
-   - 本体PC上で動作するコード： https://github.com/AkariGroup/akari_software
-   - ハードウェアの情報: https://github.com/AkariGroup/akarihardware
-   - 基本マニュアルのソース: https://github.com/AkariGroup/akari_document
+   | AKARIのハード、ソフトはgit上に公開されています。
+   | github Group: https://github.com/AkariGroup
+   
+   代表的なレポジトリは下記となります。
+
+   - ベースソフト： https://github.com/AkariGroup/akari_software
+   - ハードウェアの情報: https://github.com/AkariGroup/akari_hardware
+   - 本マニュアルのソース: https://github.com/AkariGroup/docs
 
 
 ***********************************************************
