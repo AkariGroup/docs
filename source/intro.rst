@@ -77,3 +77,7 @@ AKARIの情報元
 
    AKARIのトラブルシュートを記載します。
 
+#. :doc:`update/main`
+
+   AKARIのベースソフトの更新方法を記載します。
+
