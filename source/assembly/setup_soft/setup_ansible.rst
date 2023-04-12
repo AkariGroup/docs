@@ -20,6 +20,7 @@ apt upgradeの実行
 | ターミナルを開いて、下記コマンドを実行します。
 
 .. code-block:: bash
+
     sudo apt update
     sudo apt upgrade
 
@@ -32,7 +33,7 @@ apt upgradeの実行
 
 .. code-block:: bash
 
-    sudo apt install git python3.10 python3.10-venv sshpass git-lfs
+    sudo apt install git python3.10 python3.10-venv git-lfs
 
 ===========================================================
 akari_softwareレポジトリのclone

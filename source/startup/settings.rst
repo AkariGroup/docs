@@ -8,7 +8,7 @@ AKARIを使用するための事前準備を行いましょう。
 必要なもの
 =============================
 
-* 電源（12V5A以上のACアダプタ、2.1mmDCジャック）
+* 電源（12V5A以上のACアダプタ、2.1mmDCジャック）:ref: 部品表(19)<`part_table`>
 * Wifiもしくは有線LAN環境
 * HDMI接続可能なPCモニター
 * キーボード
@@ -18,14 +18,18 @@ AKARIを使用するための事前準備を行いましょう。
 接続方法
 =============================
 
-.. image:: ../images/AKARI_Part.jpg
-   :width: 650px
+.. image:: ../images/startup/front.jpg
+   :height: 200px
+.. image:: ../images/startup/right.jpg
+   :height: 200px
+.. image:: ../images/startup/back.jpg
+   :height: 200px
 
 1. 背面のDCジャックに電源プラグを接続します。
 
 2. 正面のHDMI端子にHDMIコネクタを接続します。
 
-3. 背面のUSB3.0端子にマウスやキーボードを接続します。
+3. 背面のUSB3.0ポート、もしくは正面のUSB-Cポートにマウスやキーボードを接続します。(USBハブの使用を推奨します。)
 
 =============================
 起動方法
