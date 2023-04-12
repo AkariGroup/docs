@@ -22,6 +22,7 @@ Welcome to akari-manual!
    source/practice/main
    source/dev/main
    source/troubleshoot/main
+   source/update/main
    source/sdk_reference/main
 
 Indices and tables
