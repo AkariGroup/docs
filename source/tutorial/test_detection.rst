@@ -111,17 +111,17 @@ mobilenet-ssdの物体認識を実行したい場合は、下記を実行しま�
 ===========================================================
 
 | 次にYOLOの物体認識を試してみます。mobolenetと同じobject_recognitionのディレクトリで実行できます。
-| デフォルトの状態で起動すると、YOLOv4-tinyが起動するようになっています。
+| デフォルトの状態で起動すると、YOLOv3-tinyが起動するようになっています。
 
 .. code-block:: bash
 
    $ python3 tiny_yolo.py
 
-YOLOv3-tinyを起動したい場合は、YOLOv3-tinyのモデルをオプションで指定する必要があります。
+YOLOv4-tinyを起動したい場合は、YOLOv4-tinyのモデルをオプションで指定する必要があります。
 
 .. code-block:: bash
 
-   $ python3 tiny_yolo.py -n models/yolo-v3-tiny-tf_openvino_2021.4_6shave.blob
+   $ python3 tiny_yolo.py -n yolo-v4-tiny-tf
 
 | どちらの場合でも映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。
 | カメラ映像のウインドウ上で"q"を押すと終了します。
