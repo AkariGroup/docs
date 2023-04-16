@@ -18,9 +18,10 @@ microSDカードの準備
 ===========================================================
 
 | M5stack用のmicroSDカードを準備します。
-| microSDカードをPCに挿入し、 `akari_software/setup/m5_sd` の中身を、microSDカードの直下に全てコピーします。
-| USB-microSDカードリーダを使う場合は、AKARI本体に接続してakari_softwareからデータをコピーします。
-| PCを使う場合は、PC側でも :doc:`setup_ansible` と同様にgitのインストール、クローンが必要です。
+| 下記のリンク先から、m5_sd.zipをダウンロードし、解凍します。
+| https://drive.google.com/file/d/1bmp_ZMYMjZQXyLB6NGfF3jKg0oWGZHwf/view?usp=share_link
+| 上記の `m5_sd` の中身を、microSDカードの直下に全てコピーします。
+| **"jpg" "Fonts" などのディレクトリがmicroSDの直下に置かれた状態にしてください。**
 
 ===========================================================
 microSDカードの挿入
