@@ -1,4 +1,4 @@
-# akari_document
+# docs
 
 AKARIのマニュアルを管理するリポジトリです。  
 本レポジトリのマニュアルは下記リンク先に掲載されています。  
@@ -9,16 +9,16 @@ https://akarigroup.github.io/docs/
 
 ローカルでセットアップしたい場合は下記手順に沿ってください。  
 
-1. akari_document をクローンする
+1. docsをクローンする
 
 ~~~bash
-   $ git clone git@github.com:AkariGroup/akari_document.git
+   $ git clone https://github.com/AkariGroup/docs.git
 ~~~
 
 2. submoduleを更新する
 
 ~~~bash
-   $ cd ~/akari_document
+   $ cd ~/docs
    $ git submodule update --init --recursive
 ~~~
 
@@ -26,7 +26,7 @@ https://akarigroup.github.io/docs/
 
 
 ~~~bash
-   $ cd ~/akari_document/setup
+   $ cd ~/docs/setup
    $ ./setup.sh
 ~~~
 
@@ -45,7 +45,7 @@ https://akarigroup.github.io/docs/
 
 
 ~~~bash
-   $ cd ~/akari_document/setup
+   $ cd ~/docs/setup
    $ ./build.sh
 ~~~
 
