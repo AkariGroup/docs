@@ -65,15 +65,23 @@ Camera
 | 下記の3種類のボタンを押すことでカメラウインドウの映像が切り替わります。
 
 - NONE
+
   ストリーミングを停止します。
 
 - RGB
+
   RGBカメラの画像をストリーミングします。
 
 - DEPTH
+
   ステレオカメラによるDepthの画像をストリーミングします。
 
+- FACEDETECTION
+
+  顔認識の結果をオーバーレイしたRGB画像をストリーミングします。
+
 - OBJECTDETECTION
+
   mobilenetによる物体認識の結果をオーバーレイしたRGB画像をストリーミングします。
 
 Sensor input
