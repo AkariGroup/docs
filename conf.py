@@ -38,7 +38,11 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx_rtd_theme',
     'sphinxcontrib.youtube',
+    'sphinxcontrib.googleanalytics',
 ]
+
+# Google Analytics
+googleanalytics_id = 'G-47HZTCENMJ'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
