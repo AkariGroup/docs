@@ -9,6 +9,8 @@ python = "^3.8"
 Sphinx = "^5.0.0"
 sphinx-rtd-theme = "^1.0.0"
 sphinxcontrib-youtube = "^1.1.0"
+sphinxcontrib-googleanalytics = "^0.4"
+sphinx-sitemap = "^2.5.0"
 
 [tool.poetry.dev-dependencies]
 akari-client = {path = "references/akari_software/sdk/akari_client/", develop = true}
