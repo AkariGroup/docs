@@ -39,10 +39,14 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinxcontrib.youtube',
     'sphinxcontrib.googleanalytics',
+    'sphinx_sitemap',
 ]
 
 # Google Analytics
 googleanalytics_id = 'G-47HZTCENMJ'
+
+# Base url for sitemap
+html_baseurl = 'https://akarigroup.github.io/docs/'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
