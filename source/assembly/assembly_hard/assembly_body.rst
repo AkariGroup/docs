@@ -200,10 +200,7 @@
 .. image:: ../../images/assembly/body/body06-06.jpg
     :width: 400px
 
-.. image:: ../../images/assembly/body/body06-07.jpg
-    :width: 400px
-
-5. DCジャックをボディーの外側から押してはめ込む。
+1. DCジャックをボディーの外側から押してはめ込む。
 
 .. image:: ../../images/assembly/body/body06-08.jpg
     :width: 400px
