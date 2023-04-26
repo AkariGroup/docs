@@ -24,6 +24,11 @@ webコントローラを使ってみよう
   | STATUSがRUNNINGに変わればOKです。
   | **初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**
 
+.. hint::
+
+  | AkariRpcServerはAPI実行のため毎回立ち上げる必要があるので、AutoStartのスイッチをONにしておくことを推奨します。
+  | これを実行しておくと、以降AKARIの電源投入時に自動でAkariRpcServerが立ち上がるようになります。
+
 .. image:: ../images/tutorial_web/controller_01.jpg
     :width: 600px
 
