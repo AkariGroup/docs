@@ -34,6 +34,6 @@ AKARIチュートリアルを使ってみよう
 |
 | webコンソールの使い方の説明は以上となります。
 
-:doc:`main` へ戻る
+:doc:`app_repositories_jupyter` へ進む
 
 :doc:`project` へ戻る
