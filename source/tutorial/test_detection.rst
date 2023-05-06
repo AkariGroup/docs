@@ -207,3 +207,7 @@ YOLOv4-tinyを起動したい場合は、YOLOv4-tinyのモデルをオプショ�
    - teddy bear
    - hair drier
    - toothbrush
+
+:doc:`test_uvc_camera` へ進む
+
+:doc:`test_sample_app` へ戻る

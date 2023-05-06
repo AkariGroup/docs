@@ -12,3 +12,4 @@ AKARIをはじめよう(webコンソール編)
    service
    project
    tutorial_project
+   app_repositories_jupyter

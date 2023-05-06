@@ -10,3 +10,4 @@ AKARIをはじめよう(Ubuntu編)
    test_sample_app
    test_uvc_camera
    test_detection
+   app_repositories
