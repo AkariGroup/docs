@@ -20,7 +20,7 @@ akari_dataset_creator
 URL: https://github.com/AkariGroup/akari_dataset_creator
 
 | AKARIで学習用のデータセットを作成するアプリです。
-| 画像を特定の名前や連番で撮影する昨日があり、手動シャッター、自動撮影を行うことができます。
+| 画像を特定の名前や連番で撮影する機能があり、手動シャッター、自動撮影を行うことができます。
 | 詳しい使い方は :doc:`../dev/custom_object_detection/image_collection` を参照ください。
 
 akari_yolo_inference
