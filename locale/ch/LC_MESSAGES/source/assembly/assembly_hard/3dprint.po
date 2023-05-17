@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ch\n"
@@ -24,30 +24,57 @@ msgid "3Dプリント部品を作ろう"
 msgstr ""
 
 #: ../../source/assembly/assembly_hard/3dprint.rst:5
-msgid "例として、FLASHFORGE社製3Dプリンタでの造形方法を説明します。"
+msgid "AKARIの3Dプリント部品は :doc:`part_list` のNo.2~No.6の5種類です。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/3dprint.rst:7
-msgid "FLASHFORGEのスライサーソフト「FlashPrint」を起動し、ロードを選択します。"
+#: ../../source/assembly/assembly_hard/3dprint.rst:6
+msgid "これらはakari_hardwareのレポジトリでSTLファイルが公開されています。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:8
+msgid "公開先: https://github.com/AkariGroup/akari_hardware/tree/main/3d_models"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:10
+msgid "このSTLファイルを使用して、3Dプリント部品を作成する方法を紹介します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:11
+msgid "また手元に3Dプリンタがない場合は、製造会社に発注することでも製造が可能です。"
 msgstr ""
 
 #: ../../source/assembly/assembly_hard/3dprint.rst:12
+msgid "(JLCPCB(https://jlcpcb.com/)など。JLCPCBは中国の製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:13
+msgid "ここでは例として、FLASHFORGE社製3Dプリンタでの造形方法を説明します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:15
+msgid "FLASHFORGEのスライサーソフト「FlashPrint」を起動し、ロードを選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:20
 msgid "ファイル選択ダイアログで、akari_hardwareリポジトリにある、造形したいSTLファイルを選択します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/3dprint.rst:17
+#: ../../source/assembly/assembly_hard/3dprint.rst:25
 msgid "表示されたモデルを移動・回転させ、枠内に収まるようにします。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/3dprint.rst:22
+#: ../../source/assembly/assembly_hard/3dprint.rst:30
 msgid "サポート材-自動サポートを選択し、サポート材を設定します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/3dprint.rst:27
+#: ../../source/assembly/assembly_hard/3dprint.rst:35
 msgid "スライスを選択し、3Dプリンタに合わせた細かな設定を行います。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/3dprint.rst:32
+#: ../../source/assembly/assembly_hard/3dprint.rst:40
 msgid "その後、gxファイルが出力され、3Dプリンタで造形可能です。"
 msgstr ""
+
+#~ msgid "例として、FLASHFORGE社製3Dプリンタでの造形方法を説明します。"
+#~ msgstr ""
 

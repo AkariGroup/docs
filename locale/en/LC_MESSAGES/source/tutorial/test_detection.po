@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -485,5 +485,13 @@ msgstr ""
 
 #: ../../source/tutorial/test_detection.rst:209
 msgid "toothbrush"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:211
+msgid ":doc:`test_uvc_camera` へ進む"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:213
+msgid ":doc:`test_sample_app` へ戻る"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -32,51 +32,61 @@ msgstr ""
 msgid "AKARIのwebコンソールを使ってみましよう。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:10
-msgid "webコンソールへのアクセス準備をする"
+#: ../../source/tutorial_web/access.rst
+msgid "webコンソールにAKARI本体のUbuntuからアクセスする際、処理が重くなる場合があります。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:12
-msgid "まずは、下記の手順でwebコンソールにアクセスする準備をしましょう。"
-msgstr ""
-
-#: ../../source/tutorial_web/access.rst:14
-msgid "AKARIにディスプレイ、キーボード、マウスを接続し、AKARI本体のUbuntuにログインする。"
+#: ../../source/tutorial_web/access.rst
+msgid ""
+"Ubuntuデフォルトのfirefoxよりgoogle chromeを使う方が軽快に動作する場合が多いため、google "
+"chromeのインストール、使用を推奨します。"
 msgstr ""
 
 #: ../../source/tutorial_web/access.rst:15
+msgid "webコンソールへのアクセス準備をする"
+msgstr ""
+
+#: ../../source/tutorial_web/access.rst:17
+msgid "まずは、下記の手順でwebコンソールにアクセスする準備をしましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/access.rst:19
+msgid "AKARIにディスプレイ、キーボード、マウスを接続し、AKARI本体のUbuntuにログインする。"
+msgstr ""
+
+#: ../../source/tutorial_web/access.rst:20
 msgid "AKARIを有線もしくはWi-Fiでネットワークに接続する。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:16
+#: ../../source/tutorial_web/access.rst:21
 msgid "AKARIのIPアドレスを調べる。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:18
+#: ../../source/tutorial_web/access.rst:23
 msgid "AKARIの本体内でUbuntuのインジゲータアイコン(下図)を開き、有線接続の場合は有線設定、Wi-Fiの場合はWi-Fi設定を開く。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:23
+#: ../../source/tutorial_web/access.rst:28
 msgid "接続中のネットワークの歯車アイコンをクリックし、IPv4アドレスを確認する。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:34
+#: ../../source/tutorial_web/access.rst:39
 msgid "webコンソールへアクセスする"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:36
+#: ../../source/tutorial_web/access.rst:41
 msgid "AKARIのwebコンソールには、AKARI本体から直接、もしくは同一ネットワーク内にある他のPCからでもアクセス可能です。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:37
+#: ../../source/tutorial_web/access.rst:42
 msgid "下記の手順でwebコンソールにアクセスしてみましょう。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:39
+#: ../../source/tutorial_web/access.rst:44
 msgid "(別PCからアクセスする場合)AKARIが接続されているネットワークと同一のネットワークにPCを接続する。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:41
+#: ../../source/tutorial_web/access.rst:46
 msgid "webブラウザを開き、webアドレス欄に `[AKARIのIPアドレス]:8080` を入力してアクセスする。"
 msgstr ""
 
@@ -90,67 +100,67 @@ msgstr ""
 msgid "AKARI本体から直接アクセスしている場合は、 `localhost:8080` でもアクセスできます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:46
+#: ../../source/tutorial_web/access.rst:51
 msgid "AKARIのwebコンソールが開く"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:48
+#: ../../source/tutorial_web/access.rst:53
 msgid "もし開かなかった時は、ブラウザのアドレスバーを選択してenterを押してみてください。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:52
+#: ../../source/tutorial_web/access.rst:57
 msgid "各ページの説明"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:54
+#: ../../source/tutorial_web/access.rst:59
 msgid "webコンソールの各ページについて説明します。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:55
+#: ../../source/tutorial_web/access.rst:60
 msgid "ページ間の移動は左のメニューから移動できます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:60
+#: ../../source/tutorial_web/access.rst:65
 msgid "**・Projects**"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:61
+#: ../../source/tutorial_web/access.rst:66
 msgid "webコンソール上で作成したプロジェクトが一覧表示されます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:62
+#: ../../source/tutorial_web/access.rst:67
 msgid "ここからアプリを新たに作成したり、作成中のアプリを再度開くことができます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:63
+#: ../../source/tutorial_web/access.rst:68
 msgid "**・Services**"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:64
+#: ../../source/tutorial_web/access.rst:69
 msgid "webコンソール上でアプリを実行したり、コントローラを動かすためのバックグラウンドサービスの管理を行う画面です。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:65
+#: ../../source/tutorial_web/access.rst:70
 msgid "サービスの起動や終了、また新規作成や編集、消去などが行えます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:66
+#: ../../source/tutorial_web/access.rst:71
 msgid "**・Controller**"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:67
+#: ../../source/tutorial_web/access.rst:72
 msgid "AKARIの各機能をブラウザ上から試せるControllerのページです。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:69
+#: ../../source/tutorial_web/access.rst:74
 msgid "次のページからはwebコンソールの使い方を詳細に説明していきます。"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:71
+#: ../../source/tutorial_web/access.rst:76
 msgid ":doc:`controller` へ進む"
 msgstr ""
 
-#: ../../source/tutorial_web/access.rst:73
+#: ../../source/tutorial_web/access.rst:78
 msgid ":doc:`main` へ戻る"
 msgstr ""
 

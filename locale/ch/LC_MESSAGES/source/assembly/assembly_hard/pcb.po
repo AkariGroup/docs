@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ch\n"
@@ -24,38 +24,63 @@ msgid "基板を作ろう"
 msgstr ""
 
 #: ../../source/assembly/assembly_hard/pcb.rst:5
-msgid "例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。"
+msgid ""
+"AKARIの回路基板は :doc:`part_list` のNo.1、テストユニットを作成する場合は :doc:`テストユニットの部品 "
+"<../assembly_test_unit/part_list>` のNo.T1の2種類です。"
 msgstr ""
 
 #: ../../source/assembly/assembly_hard/pcb.rst:6
-msgid "JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。"
+msgid "これらはakari_hardwareのレポジトリでgerberデータが公開されています。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:7
-msgid "海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。"
+#: ../../source/assembly/assembly_hard/pcb.rst:8
+msgid ""
+"(1) M5stack基板の公開先: "
+"https://github.com/AkariGroup/akari_hardware/tree/main/electronics/pcb"
 msgstr ""
 
 #: ../../source/assembly/assembly_hard/pcb.rst:9
+msgid ""
+"(T1) TEST UNIT基板の公開先: "
+"https://github.com/AkariGroup/akari_hardware/tree/main/head_units/test_unit/pcb"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:11
+msgid "例として、 `(1) M5stack基板` のJLCPCB(https://jlcpcb.com/)での発注方法を説明します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:12
+msgid "JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:13
+msgid "海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:15
 msgid "https://jlcpcb.com/ サイト内の「Add gerber file」を選択します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:14
+#: ../../source/assembly/assembly_hard/pcb.rst:20
 msgid "ファイル選択ダイアログで、akari_hardwareリポジトリにある「AKARI_M5_board_gerber」を選択します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:19
+#: ../../source/assembly/assembly_hard/pcb.rst:25
 msgid "インポートされたデータを確認し、「SAVE TO CART」を選択します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:24
+#: ../../source/assembly/assembly_hard/pcb.rst:30
 msgid "アカウントがない場合、新規作成します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:29
+#: ../../source/assembly/assembly_hard/pcb.rst:35
 msgid "アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。"
 msgstr ""
 
-#: ../../source/assembly/assembly_hard/pcb.rst:34
+#: ../../source/assembly/assembly_hard/pcb.rst:40
 msgid "以降、配送先住所や支払い先を入力することで、発注が完了します。"
 msgstr ""
+
+#~ msgid "例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。"
+#~ msgstr ""
 

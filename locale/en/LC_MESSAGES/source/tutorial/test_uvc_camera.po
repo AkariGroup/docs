@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -110,5 +110,13 @@ msgstr ""
 msgid ""
 "このように、depthai_uvcを起動しておくことで、一般的なwebカメラの映像を用いるアプリやプログラムでもOAK-D "
 "Liteの映像を使うことができます。"
+msgstr ""
+
+#: ../../source/tutorial/test_uvc_camera.rst:81
+msgid ":doc:`app_repositories` へ進む"
+msgstr ""
+
+#: ../../source/tutorial/test_uvc_camera.rst:83
+msgid ":doc:`test_detection` へ戻る"
 msgstr ""
 

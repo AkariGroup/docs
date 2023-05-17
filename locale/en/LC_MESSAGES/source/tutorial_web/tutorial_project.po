@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -109,10 +109,13 @@ msgid "webコンソールの使い方の説明は以上となります。"
 msgstr ""
 
 #: ../../source/tutorial_web/tutorial_project.rst:37
-msgid ":doc:`main` へ戻る"
+msgid ":doc:`app_repositories_jupyter` へ進む"
 msgstr ""
 
 #: ../../source/tutorial_web/tutorial_project.rst:39
 msgid ":doc:`project` へ戻る"
 msgstr ""
+
+#~ msgid ":doc:`main` へ戻る"
+#~ msgstr ""
 

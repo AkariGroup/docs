@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:3
+msgid "その他のアプリも使ってみよう(JupyterNotebook版)"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:5
+msgid ""
+"ここまで紹介した以外にも、様々なアプリが公開されています。 :doc:`project`で紹介したwebコンソール上でのgit "
+"cloneを用いてプロジェクトとして使うことができます。 興味のあるものはぜひ試してみてください。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:10
+msgid "akari_face_tracking_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:12
+msgid "URL: https://github.com/AkariGroup/akari_face_tracking_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:14
+msgid "JupyterNotebook上で顔追従が使えるアプリです。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:17
+msgid "akari_motion_sample_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:19
+msgid "URL: https://github.com/AkariGroup/akari_motion_sample_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:21
+msgid "AKARIのヘッドのモーションで感情表現を行うサンプルです。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:22
+msgid "うなずく、首を振る、笑うなどのモーションごとに動かすことができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:25
+msgid "akari_yolo_inference_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:27
+msgid "URL: https://github.com/AkariGroup/akari_yolo_inference_jupyter"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:29
+msgid "AKARIでYOLOの推論を行うアプリのJupyterNotebook版です。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:30
+msgid "デフォルトではYOLOv4の認識を行う設定になっていますが、自身で学習させたYOLOの推論モデルを使うこともできます。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:31
+msgid "詳しい使い方は :doc:`../dev/custom_object_detection/testing` を参照ください。"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:33
+msgid ":doc:`main` へ戻る"
+msgstr ""
+
+#: ../../source/tutorial_web/app_repositories_jupyter.rst:35
+msgid ":doc:`tutorial_project` へ戻る"
+msgstr ""
+

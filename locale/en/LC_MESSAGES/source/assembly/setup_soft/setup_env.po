@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -33,7 +33,7 @@ msgid "必要なもの"
 msgstr ""
 
 #: ../../source/assembly/setup_soft/setup_env.rst:11
-msgid "AKARI(Ubuntu20.04インストール済み)"
+msgid "AKARI(Ubuntu22.04インストール済み)"
 msgstr ""
 
 #: ../../source/assembly/setup_soft/setup_env.rst:12
@@ -79,4 +79,7 @@ msgstr ""
 #: ../../source/assembly/setup_soft/setup_env.rst:51
 msgid ":doc:`setup_ansible` へ戻る"
 msgstr ""
+
+#~ msgid "AKARI(Ubuntu20.04インストール済み)"
+#~ msgstr ""
 

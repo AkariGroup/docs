@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akari-manual \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"POT-Creation-Date: 2023-05-17 18:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ch\n"
@@ -177,5 +177,13 @@ msgstr ""
 
 #: ../../source/tutorial/test_sample_app.rst:151
 msgid "ヘッドのOAK-Dカメラのステレオdepth映像をストリーミングするサンプルです。ウィンドウが開きカメラ映像が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:158
+msgid ":doc:`test_detection` へ進む"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:160
+msgid ":doc:`main` へ戻る"
 msgstr ""
 
