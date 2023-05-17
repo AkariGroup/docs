@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:3
+msgid "ベースを組み立てよう"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:5
+msgid "最後にベースを組み立てます。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:6
+msgid "ベースを使わずに、PCなどと接続して使う場合はこの工程は必要ありません。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:9
+msgid "必要な道具"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:10
+msgid "- 精密ドライバ(＋)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:14
+msgid "１ アンテナの貼り付け"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:17
+#: ../../source/assembly/assembly_hard/assembly_base.rst:36
+#: ../../source/assembly/assembly_hard/assembly_base.rst:70
+#: ../../source/assembly/assembly_hard/assembly_base.rst:107
+#: ../../source/assembly/assembly_hard/assembly_base.rst:125
+#: ../../source/assembly/assembly_hard/assembly_base.rst:143
+msgid "必要な部品"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:18
+msgid "(5) AKARI base 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:19
+msgid "(7) Lattepanda Alpha付属のアンテナ 2個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:25
+#: ../../source/assembly/assembly_hard/assembly_base.rst:46
+#: ../../source/assembly/assembly_hard/assembly_base.rst:78
+#: ../../source/assembly/assembly_hard/assembly_base.rst:115
+#: ../../source/assembly/assembly_hard/assembly_base.rst:133
+#: ../../source/assembly/assembly_hard/assembly_base.rst:151
+msgid "手順"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:26
+msgid ""
+"`(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(5) AKARI base` "
+"内部の図の位置に2枚貼り付ける。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:33
+msgid "2 Lattepanda Alphaの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:37
+msgid "(7) Lattepanda Alpha 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:38
+msgid "(7) Lattepanda Alpha付属のスペーサー 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:39
+msgid "(7) Lattepanda Alpha付属のねじ 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:47
+msgid "先程貼り付けたアンテナのコネクタを `(7) Lattepanda AlphaLattepanda` のアンテナジャックに接続する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:53
+msgid "`(7) Lattepanda AlphaLattepanda` を `(5) AKARI base` にはめ込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:58
+msgid "ベース上部からLattepanda付属のねじを差し込み、同じく付属のスペーサーで4点留める。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:67
+msgid "3 DCジャックの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:71
+msgid "(20) コネクタ付コード 4P PH(赤黒黄緑) 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:72
+msgid "(21) 2.1mm標準DCジャック パネル取付用 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:79
+msgid "`(21) 2.1mm標準DCジャック パネル取付用` を上部から押し込み、裏側から付属のナットで留める。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:87
+msgid "`(20) コネクタ付コード 4P PH(赤黒黄緑)` のコネクタをLattepandaのDCコネクタに挿す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:93
+msgid "`(20) コネクタ付コード 4P PH(赤黒黄緑)` の-側(緑と黄色の線)を2本まとめて、DCジャックの-側(足が長い端子)にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:98
+msgid "`(20) コネクタ付コード 4P PH(赤黒黄緑)` の+側(赤と黒の線)を2本まとめて、DCジャックの+側(足が短い端子)にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:104
+msgid "4 底面プレートの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:108
+msgid "(6) AKARI Plate 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:109
+msgid "(36) ボルトM3-6 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:116
+msgid "`(6) AKARI Plate` をベース底面に、 `(36)ボルトM3-6` で4点ねじ留めする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:122
+msgid "5 DCケーブルの接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:126
+msgid ":doc:`assembly_body` で組み立てたボディー部 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:127
+msgid "(34) DCケーブル 20cm 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:134
+msgid "`(34) DCケーブル 20cm` をボディー部のDCジャックに接続する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:140
+msgid "6 全体の組み付け"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:145
+msgid ":doc:`assembly_body` で組み立てたボディー 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:152
+msgid "ボディー部をベース部の溝に沿って横からスライドさせながらベース部に半分程度まで差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:157
+msgid "ボディー部の `(11) 2.1mm標準DCプラグ L型` をベース部に接続する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:162
+msgid "ボディー部を奥でロックするまでスライドさせ、ボディー部背面のUSB2本をベース部のLattepandaに接続する(接続するポートは任意の場所で良い)。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:168
+msgid "7 完成！"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:173
+msgid "以上でAKARI本体の組み立ては完了です。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:174
+msgid "次はソフトのセットアップに進みます。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:176
+msgid ":doc:`../assembly_test_unit/main` へ進む"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_base.rst:178
+msgid ":doc:`assembly_body` へ戻る"
+msgstr ""
+

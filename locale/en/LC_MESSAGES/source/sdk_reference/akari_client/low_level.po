@@ -1,0 +1,505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 18:34+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/sdk_reference/akari_client/low_level.rst:3
+msgid "低レイヤー実装"
+msgstr ""
+
+#: ../../source/sdk_reference/akari_client/low_level.rst:8
+msgid "gRPC クライアント"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_dout:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout:1 of
+msgid "ヘッド部GPIOピンのデジタル出力を設定する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_velocity
+#: akari_client.grpc.joints_controller.GrpcJointController.set_goal_position
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_acceleration
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_velocity
+#: akari_client.grpc.joints_controller.GrpcJointController.set_servo_enabled
+#: akari_client.m5stack_client.M5StackClient.reset_allout
+#: akari_client.m5stack_client.M5StackClient.set_allout
+#: akari_client.m5stack_client.M5StackClient.set_display_color
+#: akari_client.m5stack_client.M5StackClient.set_display_image
+#: akari_client.m5stack_client.M5StackClient.set_display_text
+#: akari_client.m5stack_client.M5StackClient.set_dout
+#: akari_client.m5stack_client.M5StackClient.set_pwmout
+#: akari_client.serial.dynamixel.DynamixelController
+#: akari_client.serial.dynamixel.DynamixelController.set_goal_position
+#: akari_client.serial.dynamixel.DynamixelController.set_position_limit
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_acceleration
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_velocity
+#: akari_client.serial.dynamixel.DynamixelController.set_servo_enabled
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.open
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write
+#: akari_client.serial.m5stack.M5StackSerialClient
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_allout
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout
+#: akari_client.serial.m5stack_communicator.M5SerialCommunicator of
+msgid "Parameters"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_dout:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout:3 of
+msgid "pin番号。0でdout0、1でdout1を指定する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_dout:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout:4 of
+msgid "デジタル出力の値。Falseで0V,Trueで3.3V出力。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.reset_allout:4
+#: akari_client.m5stack_client.M5StackClient.set_allout:6
+#: akari_client.m5stack_client.M5StackClient.set_display_color:4
+#: akari_client.m5stack_client.M5StackClient.set_display_image:8
+#: akari_client.m5stack_client.M5StackClient.set_display_text:10
+#: akari_client.m5stack_client.M5StackClient.set_dout:5
+#: akari_client.m5stack_client.M5StackClient.set_pwmout:5
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_allout:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:6
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:8
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:10
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout:5
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout:5 of
+msgid "同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_moving_state
+#: akari_client.grpc.joints_controller.GrpcJointController.get_position_limit
+#: akari_client.grpc.joints_controller.GrpcJointController.get_present_position
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_acceleration
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_velocity
+#: akari_client.grpc.joints_controller.GrpcJointController.get_servo_enabled
+#: akari_client.grpc.joints_controller.GrpcJointController.set_goal_position
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_acceleration
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_velocity
+#: akari_client.grpc.joints_controller.GrpcJointController.set_servo_enabled
+#: akari_client.m5stack_client.M5StackClient.get
+#: akari_client.m5stack_client.M5StackClient.reset_allout
+#: akari_client.m5stack_client.M5StackClient.reset_m5
+#: akari_client.m5stack_client.M5StackClient.set_allout
+#: akari_client.m5stack_client.M5StackClient.set_display_color
+#: akari_client.m5stack_client.M5StackClient.set_display_image
+#: akari_client.m5stack_client.M5StackClient.set_display_text
+#: akari_client.m5stack_client.M5StackClient.set_dout
+#: akari_client.m5stack_client.M5StackClient.set_pwmout
+#: akari_client.serial.dynamixel.DynamixelController.get_moving_state
+#: akari_client.serial.dynamixel.DynamixelController.get_position_limit
+#: akari_client.serial.dynamixel.DynamixelController.get_present_position
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_acceleration
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_velocity
+#: akari_client.serial.dynamixel.DynamixelController.get_servo_enabled
+#: akari_client.serial.dynamixel.DynamixelController.set_goal_position
+#: akari_client.serial.dynamixel.DynamixelController.set_position_limit
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_acceleration
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_velocity
+#: akari_client.serial.dynamixel.DynamixelController.set_servo_enabled
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.open
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write
+#: akari_client.serial.m5stack.M5StackSerialClient.get
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_allout
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_m5
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout of
+msgid "Return type"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.get:6
+#: akari_client.m5stack_client.M5StackClient.reset_allout:7
+#: akari_client.m5stack_client.M5StackClient.reset_m5:4
+#: akari_client.m5stack_client.M5StackClient.set_allout:9
+#: akari_client.m5stack_client.M5StackClient.set_display_color:7
+#: akari_client.m5stack_client.M5StackClient.set_display_image:11
+#: akari_client.m5stack_client.M5StackClient.set_display_text:13
+#: akari_client.m5stack_client.M5StackClient.set_dout:8
+#: akari_client.m5stack_client.M5StackClient.set_pwmout:8
+#: akari_client.serial.m5stack.M5StackSerialClient.get:6
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_allout:7
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_m5:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:9
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color:7
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:11
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:13
+#: akari_client.serial.m5stack.M5StackSerialClient.set_dout:8
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout:8 of
+msgid "Example"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_pwmout:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout:1 of
+msgid "ヘッド部GPIOピンのPWM出力を設定する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_pwmout:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout:3 of
+msgid "pin番号。デフォルトではpwmout0しかないため、0を指定すること。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_pwmout:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_pwmout:4 of
+msgid "PWM出力の値。 0-255で指定し、0で0V、255で3.3Vを出力する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_allout:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:1 of
+msgid "ヘッド部GPIOピンの出力をまとめて設定する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_allout:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:3 of
+msgid "dout0の出力値。Falseで0V,Trueで3.3V出力。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_allout:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:4 of
+msgid "dout1の出力値。Falseで0V,Trueで3.3V出力。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_allout:5
+#: akari_client.serial.m5stack.M5StackSerialClient.set_allout:5 of
+msgid "pwmout0の出力値。0-255で指定し、0で0V、255で3.3Vを出力する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.reset_allout:1
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_allout:1 of
+msgid "ヘッド部GPIOピンの出力を初期値にリセットする。 dout0、dout1はFalse、pwmout0は0となる。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_color:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color:1 of
+msgid "ボディー部M5のディスプレイ背景色を変更する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_color:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_color:3 of
+msgid "背景色を指定。色は ``color.Colors`` から色名を引用する、もしくはRGBの数値指定も可能。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:1 of
+msgid "ボディー部M5のディスプレイに文字を表示する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:3 of
+msgid "表示する文字列。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_image:4
+#: akari_client.m5stack_client.M5StackClient.set_display_text:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:4
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:4 of
+msgid ""
+"x方向の描画位置ピクセルを0-320で指定。左端が0。 ``position.Positions`` "
+"を用いた位置指定も可能。デフォルト値は中央揃え。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_image:5
+#: akari_client.m5stack_client.M5StackClient.set_display_text:5
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:5
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:5 of
+msgid ""
+"y方向の描画位置ピクセルを0-240で指定。上端が0。 ``position.Positions`` "
+"を用いた位置指定も可能。デフォルト値は中央揃え。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:6
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:6 of
+msgid "文字サイズを1-11の11段階で指定。デフォルト値は5。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:7
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:7 of
+msgid "文字色を指定。色は ``color.Colors`` から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、前回値を引き継ぐ。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:8
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:8 of
+msgid ""
+"背景色を指定。色は ``color.Colors`` "
+"から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、画面全体の背景色に合わせる。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_text:9
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_text:9 of
+msgid "trueの場合画面全体を現在の背景色で更新する。falseの場合は現在の表示を維持しつつ、文字を描画する範囲のみ更新する。デフォルト値は背景更新あり。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_image:1
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:1 of
+msgid "ボディー部M5のディスプレイにM5のSDカード内の画像を表示する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_image:3
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:3 of
+msgid "M5のSDカード内のファイルパス。(例;\"image/hoge.jpg\")"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.set_display_image:6
+#: akari_client.serial.m5stack.M5StackSerialClient.set_display_image:6 of
+msgid ""
+"画像の拡大縮小倍率を指定。1.0で等倍表示。マイナスの値を入れた場合、画面サイズに合わせて自動でサイズ調整される。 "
+"デフォルト値は自動サイズ調整となっている。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.reset_m5:1
+#: akari_client.serial.m5stack.M5StackSerialClient.reset_m5:1 of
+msgid "M5をリセットして再起動する。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.get:1
+#: akari_client.serial.m5stack.M5StackSerialClient.get:1 of
+msgid "M5から環境センサ、ヘッドGPIOの入力値、M5のボタンの状態を取得する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_moving_state
+#: akari_client.grpc.joints_controller.GrpcJointController.get_position_limit
+#: akari_client.grpc.joints_controller.GrpcJointController.get_present_position
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_acceleration
+#: akari_client.grpc.joints_controller.GrpcJointController.get_servo_enabled
+#: akari_client.m5stack_client.M5StackClient.get
+#: akari_client.serial.dynamixel.DynamixelController.get_moving_state
+#: akari_client.serial.dynamixel.DynamixelController.get_position_limit
+#: akari_client.serial.dynamixel.DynamixelController.get_present_position
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_acceleration
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_velocity
+#: akari_client.serial.dynamixel.DynamixelController.joint_name
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read
+#: akari_client.serial.m5stack.M5StackSerialClient.get of
+msgid "Returns"
+msgstr ""
+
+#: akari_client.m5stack_client.M5StackClient.get:3
+#: akari_client.serial.m5stack.M5StackSerialClient.get:3 of
+msgid "M5から取得した各データを格納したDict。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_position_limit:1
+#: akari_client.serial.dynamixel.DynamixelController.get_position_limit:1 of
+msgid "Positionの上限値と下限値を取得する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_position_limit:3
+#: akari_client.serial.dynamixel.DynamixelController.get_position_limit:3 of
+msgid "現在角度の下限値、上限値 [rad]"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_servo_enabled:1
+#: akari_client.serial.dynamixel.DynamixelController.get_servo_enabled:1 of
+msgid "サーボの有効無効状態を取得する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_servo_enabled:3
+#: of
+msgid "サーボ有効なら``True``、無効なら``False``"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_servo_enabled:1
+#: akari_client.serial.dynamixel.DynamixelController.set_servo_enabled:1 of
+msgid "サーボの有効無効状態を設定する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_servo_enabled:3
+#: of
+msgid "``True`` であればサーボを有効にする"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_acceleration:1
+#: of
+msgid "サーボの目標加速度を設定する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_acceleration:3
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_acceleration:3
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_acceleration:3
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_velocity:3
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_acceleration:3
+#: of
+msgid "加速度 [rad/s^2]"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_acceleration:1
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_acceleration:1
+#: of
+msgid "Profile Acceleration を取得する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_velocity:1
+#: of
+msgid "サーボの目標速度を設定する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_velocity:3
+#: akari_client.grpc.joints_controller.GrpcJointController.set_profile_velocity:3
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_velocity:3 of
+msgid "速度 [rad/s]"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_profile_velocity:1
+#: of
+msgid "Profile Velocity を設定する"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_goal_position:1
+#: of
+msgid "サーボの目標角度を設定する。 ここで設定した値まで移動する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.set_goal_position:4
+#: akari_client.serial.dynamixel.DynamixelController.set_goal_position:3 of
+msgid "目標角度 [rad]"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_present_position:1
+#: akari_client.serial.dynamixel.DynamixelController.get_present_position:1 of
+msgid "サーボの現在角度を取得する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_present_position:3
+#: akari_client.serial.dynamixel.DynamixelController.get_present_position:3 of
+msgid "現在角度 [rad]"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_moving_state:1
+#: of
+msgid "モーターが動作中かどうか判定する。"
+msgstr ""
+
+#: akari_client.grpc.joints_controller.GrpcJointController.get_moving_state:3
+#: of
+msgid "現在のモーター状態。"
+msgstr ""
+
+#: ../../source/sdk_reference/akari_client/low_level.rst:23
+msgid "Serial クライアント"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_position_limit:1 of
+msgid "Positionの上限値と下限値を設定する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_position_limit:3 of
+msgid "下限値 [rad]"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_position_limit:4 of
+msgid "上限値 [rad]"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.joint_name:1 of
+msgid "関節名を取得する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.joint_name:3 of
+msgid "関節名"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_servo_enabled:3 of
+msgid "Trueであればサーボを有効にする"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_acceleration:1
+#: of
+msgid "Profile Acceleration を設定する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_profile_velocity:1 of
+msgid "Profile Velocity を設定する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.get_profile_velocity:1 of
+msgid "Profile Velocity を取得する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.set_goal_position:1 of
+msgid "サーボの目標角度を設定する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.get_moving_state:1 of
+msgid "サーボが動作中かどうか判定する。"
+msgstr ""
+
+#: akari_client.serial.dynamixel.DynamixelController.get_moving_state:3 of
+msgid "現在のサーボ状態"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.open:1 of
+msgid "dynamixelと通信を行うクラスを初期化する"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read:1 of
+msgid "dynamixelからデータを読み込む。"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read:3
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write:3 of
+msgid "DynamixelのID"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read:4
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write:4 of
+msgid "データアドレス"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read:5
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write:5 of
+msgid "データ長"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read:7
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write:6 of
+msgid "データ値"
+msgstr ""
+
+#: akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write:1 of
+msgid "dynamixelにデータを書き込む。"
+msgstr ""
+
+#~ msgid "パラメータ"
+#~ msgstr ""
+
+#~ msgid "戻り値の型"
+#~ msgstr ""
+
+#~ msgid "サンプル"
+#~ msgstr ""
+
+#~ msgid "戻り値"
+#~ msgstr ""
+

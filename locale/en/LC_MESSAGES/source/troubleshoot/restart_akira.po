@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/troubleshoot/restart_akira.rst:3
+msgid "webコンソールに繋がらないときは"
+msgstr ""
+
+#: ../../source/troubleshoot/restart_akira.rst:5
+msgid "AKARIが操作PCと同一ネットワークに繋がれており、正しいIPアドレスでアクセスしているのにwebコンソールが開けない場合は、AKARI内でのサービスの自動起動が失敗している可能性があります。"
+msgstr ""
+
+#: ../../source/troubleshoot/restart_akira.rst:7
+msgid "AKARIのPCのUbuntuにログインします。"
+msgstr ""
+
+#: ../../source/troubleshoot/restart_akira.rst:9
+msgid "下記コマンドを実行します。 **akari.serviceではなくakira.serviceです。**"
+msgstr ""
+
+#: ../../source/troubleshoot/restart_akira.rst:15
+msgid ""
+"3. akiraのステータスが表示されます。この状態がfailになっていた場合、サービスの自動起動が失敗しています。 | "
+"下記コマンドを実行して、サービスを再起動します。"
+msgstr ""
+
+#: ../../source/troubleshoot/restart_akira.rst:22
+msgid "もう一度2.を実行して、statusがactiveになっていたらOKです。"
+msgstr ""
+

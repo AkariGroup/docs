@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/spec/test_unit.rst:3
+msgid "テストユニット仕様"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:5
+msgid "ヘッドのGPIOのテストに使うテストユニットの仕様について説明します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:6
+msgid ""
+":doc:`../tutorial_web/tutorial_project` や :doc:`../practice/main` "
+"などでGPIOを使う場合はこちらを使います。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:10
+msgid "各部説明"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:15
+msgid "ピンヘッダ(CN1)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "AKARI本体ヘッド部のボックスヘッダに差し込んで接続します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:19
+msgid "12V LED(LED1)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "12V電源が外部入力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "DCジャックをAKARI本体に接続した時点で点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:24
+msgid "5V LED(LED2)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "M5Stack基板から5V電源が出力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:29
+msgid "3.3V LED(LED3)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "M5Stackから3.3V電源が出力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:34
+msgid "Dout0 LED(LED4)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "dout0がAKARIから出力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:38
+msgid "Dout1 LED(LED5)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "dout1がAKARIから出力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:42
+msgid "PWM LED(LED6)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "pwmout0がAKARIから出力されると点灯します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "AKARI本体のpwmout0の出力を0-255で変化させると、それに応じて出力電圧が0-3.3Vで変化し、LEDの明るさが変化します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:47
+msgid "Din0 SW(SW1)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "din0の入力を操作するためのスイッチです。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "din0はデフォルトHiなので、何も操作していない場合はdin0には3.3Vが入力されており、値はTrueになっています。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "このスイッチを押すとdin0はGNDに接続され、値はFalseに変化します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:53
+msgid "Din1 SW(SW2)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "din1の入力を操作するためのスイッチです。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "din0同様にデフォルトHiでTrue、このスイッチを押すとdin1はGNDに接続され、値はFalseに変化します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:58
+msgid "Ain0可変抵抗(VR1)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "ain0の入力を操作するための可変抵抗です。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "このつまみを操作することでAKARI本体のain0ピンの電圧が0-3.3Vで変化し、ain0の値も0-255で変化します。"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst:63
+msgid "I2Cポート(CN2)"
+msgstr ""
+
+#: ../../source/spec/test_unit.rst
+msgid "ここにコネクタをマウントし、AKARIのM5のソフトを変更することでI2C通信が可能になりますが、通常時は使いません。"
+msgstr ""
+

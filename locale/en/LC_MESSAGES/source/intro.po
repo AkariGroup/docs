@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/intro.rst:3
+msgid "はじめに"
+msgstr ""
+
+#: ../../source/intro.rst:7
+msgid "AKARIとは"
+msgstr "What's AKARI?"
+
+#: ../../source/intro.rst:9
+msgid "AKARIは、 **「誰もがロボット作りを身近に！」** を目指して開発した小型卓上ロボットです。"
+msgstr "AKARI is a small robot developed with the goal of **Making robotics accessible to everyone!** AKARI is a small tabletop robot developed with the goal of "making robotics accessible to everyone!"
+
+#: ../../source/intro.rst:10
+msgid ""
+"私たちは **多くの人がロボットを自分で組み立てたり、ロボットプログラミングを自分で行いながら楽しく身の回りの課題を解決できる社会** "
+"を目指しています。"
+msgstr ""
+
+#: ../../source/intro.rst:11
+msgid "AKARIはその実現の助けとなるような、組み立てやすく、開発にも使いやすいロボットを目指して開発しています。"
+msgstr ""
+
+#: ../../source/intro.rst:12
+msgid "さらに、AKARIを多くの方に使ってもらえるように、 **ハード、ソフト共にオープンソース化** しました。"
+msgstr ""
+
+#: ../../source/intro.rst:13
+msgid "また、本マニュアルには組み立て方や使い方、ハードやソフトの仕様などを公開しています。"
+msgstr ""
+
+#: ../../source/intro.rst:14
+msgid "**このページを見ていただき、興味を持ったらぜひ一度AKARIを作って、使ってみてください！**"
+msgstr ""
+
+#: ../../source/intro.rst:21
+msgid "AKARIの情報元"
+msgstr ""
+
+#: ../../source/intro.rst:23
+msgid "基本マニュアル（本ページ）"
+msgstr ""
+
+#: ../../source/intro.rst:25
+msgid "AKARIのハード、ソフト仕様や組み立て方、開発での使い方、チュートリアルなど基本となる情報しています。"
+msgstr ""
+
+#: ../../source/intro.rst:27
+msgid "gitレポジトリ"
+msgstr ""
+
+#: ../../source/intro.rst
+msgid "AKARIのハード、ソフトはgit上に公開されています。"
+msgstr ""
+
+#: ../../source/intro.rst
+msgid "github Group: https://github.com/AkariGroup"
+msgstr ""
+
+#: ../../source/intro.rst:32
+msgid "代表的なレポジトリは下記となります。"
+msgstr ""
+
+#: ../../source/intro.rst:34
+msgid "ベースソフト： https://github.com/AkariGroup/akari_software"
+msgstr ""
+
+#: ../../source/intro.rst:35
+msgid "ハードウェアの情報: https://github.com/AkariGroup/akari_hardware"
+msgstr ""
+
+#: ../../source/intro.rst:36
+msgid "本マニュアルのソース: https://github.com/AkariGroup/docs"
+msgstr ""
+
+#: ../../source/intro.rst:41
+msgid "本マニュアルの構成"
+msgstr ""
+
+#: ../../source/intro.rst:43
+msgid "本マニュアルは以下のような構成になっています。"
+msgstr ""
+
+#: ../../source/intro.rst:45
+msgid ":doc:`intro`"
+msgstr ""
+
+#: ../../source/intro.rst:47
+msgid "AKARIの概要について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:49
+msgid ":doc:`overview/main`"
+msgstr ""
+
+#: ../../source/intro.rst:51
+msgid "AKARIの特徴を紹介しています。。"
+msgstr ""
+
+#: ../../source/intro.rst:53
+msgid ":doc:`assembly/main`"
+msgstr ""
+
+#: ../../source/intro.rst:55
+msgid "AKARIの組み立て方、セットアップ方法について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:57
+msgid ":doc:`startup/main`"
+msgstr ""
+
+#: ../../source/intro.rst:59
+msgid "AKARIの起動方法について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:61
+msgid ":doc:`tutorial_web/main`"
+msgstr ""
+
+#: ../../source/intro.rst:63
+msgid "AKARIのwebブラウザからの使い方について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:65
+msgid ":doc:`tutorial/main`"
+msgstr ""
+
+#: ../../source/intro.rst:67
+msgid "AKARIのUbuntuからの使い方について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:69
+msgid ":doc:`spec/main`"
+msgstr ""
+
+#: ../../source/intro.rst:71
+msgid "AKARIの詳細仕様について記載しています。"
+msgstr ""
+
+#: ../../source/intro.rst:73
+msgid ":doc:`practice/main`"
+msgstr ""
+
+#: ../../source/intro.rst:75
+msgid "AKARIの使い方とpythonを学べる練習問題の進め方が記載されています。"
+msgstr ""
+
+#: ../../source/intro.rst:77
+msgid ":doc:`dev/main`"
+msgstr ""
+
+#: ../../source/intro.rst:79
+msgid "AKARIを使った開発のヒントが記載してあります。"
+msgstr ""
+
+#: ../../source/intro.rst:81
+msgid ":doc:`troubleshoot/main`"
+msgstr ""
+
+#: ../../source/intro.rst:83
+msgid "AKARIのトラブルシュートを記載します。"
+msgstr ""
+
+#: ../../source/intro.rst:85
+msgid ":doc:`update/main`"
+msgstr ""
+
+#: ../../source/intro.rst:87
+msgid "AKARIのベースソフトの更新方法を記載します。"
+msgstr ""
+

@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_hard/pcb.rst:3
+msgid "基板を作ろう"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:5
+msgid "例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:6
+msgid "JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:7
+msgid "海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:9
+msgid "https://jlcpcb.com/ サイト内の「Add gerber file」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:14
+msgid "ファイル選択ダイアログで、akari_hardwareリポジトリにある「AKARI_M5_board_gerber」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:19
+msgid "インポートされたデータを確認し、「SAVE TO CART」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:24
+msgid "アカウントがない場合、新規作成します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:29
+msgid "アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/pcb.rst:34
+msgid "以降、配送先住所や支払い先を入力することで、発注が完了します。"
+msgstr ""
+

@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:3
+msgid "3. モデル変換を行う"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:5
+msgid ""
+"先程学習させたpyTorchモデルをdepthAI公式ののonline model "
+"converterを使ってOAK-D形式のモデルファイルに変換します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:9
+msgid "モデルのアップロードと変換"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:11
+msgid "下記リンクからdepthAIのYOLO model converterにアクセスします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:13
+msgid "http://tools.luxonis.com/"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:15
+msgid "「Yolo version」で「YoloV7(detection only)」を選択します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:17
+msgid "「File」をクリックし、:doc:`training` でダウンロードしたpytorchモデル(.pt)を選択します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:19
+msgid "Input shapeは「640」を入力します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:24
+msgid "「submit」を選択すると、model変換が始まり、しばらくするとzipファイルがダウンロードできます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:26
+msgid "以上でオリジナル画像認識のモデルの準備は完了です。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:27
+msgid "次はいよいよ画像認識をAKARIで実際に動かしていきます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:29
+msgid ":doc:`testing` へ進む"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/convert_model.rst:31
+msgid ":doc:`annotation` へ戻る"
+msgstr ""
+

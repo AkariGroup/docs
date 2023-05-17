@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:3
+msgid "テストユニットを作成しよう"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:5
+msgid "テストユニットを作成しましょう。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:8
+msgid "必要な道具"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:9
+msgid "- はんだごて"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:10
+msgid "- はんだ線"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:11
+msgid "- ニッパ"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:14
+msgid "必要な部品"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:15
+msgid "(T1) TEST UNIT基板 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:16
+msgid "(T2) 10×2ピンヘッダ 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:17
+msgid "(T3) タクトスイッチ 12mm 2個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:18
+msgid "(T4) 3mm赤色LED 625nm 70度 3個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:19
+msgid "(T5) 3mm黄色LED 595nm 70度 2個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:20
+msgid "(T6) 3mm緑色LED 525nm 70度 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:21
+msgid "(T7) カーボン抵抗（炭素皮膜抵抗）120Ω 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:22
+msgid "(T8) カーボン抵抗（炭素皮膜抵抗）200Ω 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:23
+msgid "(T9) カーボン抵抗（炭素皮膜抵抗）470Ω 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:24
+msgid "(T10) 可変抵抗器 10KΩ 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:30
+msgid "手順"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:31
+msgid "`(T2) 10×2ピンヘッダ` を `(T1) TEST UNIT基板` 裏面のCN1にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:36
+msgid "`(T10) 可変抵抗器 10KΩ` をVR1にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:41
+msgid "`(T3) タクトスイッチ` をSW1,SW2にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:46
+msgid "`(T9) カーボン抵抗（炭素皮膜抵抗）470Ω` をR1にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:51
+msgid "`(T8) カーボン抵抗（炭素皮膜抵抗）200Ω` をR2にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:56
+msgid "`(T7) カーボン抵抗（炭素皮膜抵抗）120Ω` をR3~R6にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:61
+msgid "`(T4) 3mm赤色LED 625nm 70度` をLED1~3にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:63
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:70
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:77
+msgid "**LEDの足の長い方(アノード側)を基板の＋側にすること**"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:68
+msgid "`(T5) 3mm黄色LED 595nm` をLED4,5にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:75
+msgid "`(T6) 3mm緑色LED 525nm` をLED6にはんだ付けし、足を切断する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:84
+msgid "取り付け方法"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:86
+msgid "AKARIのヘッド部のボックスヘッダに、テストユニットのピンヘッダを合わせる形で差し込むと取り付けができる。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:95
+msgid "以上でテスト基板の作成は終わりです。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:96
+msgid "使い方については :doc:`../../spec/test_unit` を参照してください。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:98
+msgid ":doc:`../setup_soft/main` へ進む"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/assembly_test_unit.rst:100
+msgid ":doc:`part_list` へ戻る"
+msgstr ""
+

@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:3
+msgid "3Dプリント部品を作ろう"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:5
+msgid "例として、FLASHFORGE社製3Dプリンタでの造形方法を説明します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:7
+msgid "FLASHFORGEのスライサーソフト「FlashPrint」を起動し、ロードを選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:12
+msgid "ファイル選択ダイアログで、akari_hardwareリポジトリにある、造形したいSTLファイルを選択します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:17
+msgid "表示されたモデルを移動・回転させ、枠内に収まるようにします。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:22
+msgid "サポート材-自動サポートを選択し、サポート材を設定します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:27
+msgid "スライスを選択し、3Dプリンタに合わせた細かな設定を行います。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/3dprint.rst:32
+msgid "その後、gxファイルが出力され、3Dプリンタで造形可能です。"
+msgstr ""
+

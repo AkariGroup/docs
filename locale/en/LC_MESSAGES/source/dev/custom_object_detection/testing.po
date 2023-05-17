@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/dev/custom_object_detection/testing.rst:3
+msgid "4. 物体認識をテストする"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:4
+msgid ""
+"最後に、学習させた物体認識を実行してみましょう。 物体認識のテストには、 **AKARI内でpythonアプリを実行する方法** と **web "
+"console上のJupyter Notebookを実行する方法** があります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:10
+msgid "AKARI内のpythonでテストする"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:14
+msgid "akari_yolo_inferenceのClone"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:16
+msgid "akari_yolo_inferenceをgitからcloneします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:17
+msgid "**webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！**"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:26
+msgid "(初回のみ) venvのセットアップ"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:28
+msgid "仮想実行環境をセットアップします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:39
+msgid "物体認識モデルの移動"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:41
+msgid ""
+":doc:`./convert_model` "
+"でダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記ディレクトリ内に移動します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:43
+msgid "モデル(.blob): `akari_yolo_inference/model/`"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:44
+msgid "ラベル(.json): `akari_yolo_inference/json/`"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:48
+#: ../../source/dev/custom_object_detection/testing.rst:106
+msgid "物体認識の実行"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:50
+msgid "akari_yolo_inference内に移動します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:56
+msgid "venvを有効化していなければ下記を実行します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:62
+msgid "下記を実行します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:68
+#: ../../source/dev/custom_object_detection/testing.rst:112
+msgid "例) `my_detection.blob` をmodelの中に、 `my_detection.json` をjsonの中に保存してある場合"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:74
+msgid "カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:76
+msgid "映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:81
+msgid "webコンソール上でテストする"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:85
+msgid "akari_yolo_inference_jupyterのClone"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:87
+msgid ""
+":doc:`../../tutorial_web/tutorial_project` の解説を参考に、webコンソール上で "
+"`akari_yolo_inference_jupyter` をcloneします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:88
+msgid "アドレスは下記です。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:90
+msgid "https://github.com/AkariGroup/akari_yolo_inference_jupyter.git"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:94
+msgid "物体認識モデルのアップロード"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:96
+msgid ":doc:`./convert_model` でダウンロードしたzipファイルを展開しておきます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:98
+msgid ""
+":doc:`../../tutorial_web/tutorial_project` "
+"を参考に、先程cloneした`akari_yolo_inference_jupyter`をJupyter Lab上で開きます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:100
+msgid ""
+"開いたら、ページ左のFile Browserを開き、 `model` というディレクトリを開きます。File Browser上部の「Upload "
+"Files」ボタンを押し、先程展開したzipファイル内のOAK-Dの認識モデル(.blob)をアップロードします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:102
+msgid ""
+"3.と同様に、File Browseから、 `json` というディレクトリを開き、「Upload "
+"Files」から、先程展開したzipファイル内のOAK-Dのラベルファイル(.json)をアップロードします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:108
+msgid "`akari_yolo_inference_jupyter` の親ディレクトリに戻って `main.ipynb` をクリックして表示します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:110
+msgid ""
+"main.ipynb内のコードの17行目の `MODEL_PATH` を先程アップロードした認識モデルのパス、18行目の "
+"`CONFIG_PATH` をアップロードしたラベルファイルのパスに書き換えます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:120
+msgid "コードを実行します。Notebook上にカメラ出力のウインドウが表示されるので、学習させた物体を映してみて、正しく認識されるかをチェックします。映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:123
+msgid "物体認識のデータセット作成から学習、動作までのチュートリアルは以上となります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:124
+msgid "うまく行かなかった場合は、データセットの画像の枚数やパターンを増やしてみるなど、色々試してみましょう。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:126
+msgid ":doc:`main` へ戻る"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/testing.rst:128
+msgid ":doc:`training` へ戻る"
+msgstr ""
+

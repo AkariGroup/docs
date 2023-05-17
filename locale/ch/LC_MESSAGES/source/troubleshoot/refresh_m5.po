@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/troubleshoot/refresh_m5.rst:3
+msgid "M5の画面を初期状態に戻したいときは"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:5
+msgid "アプリ実行後、AKARIの画面を初期状態に戻したい場合は下記を実行してください。"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:9
+msgid "**M5を使ったアプリ(ディスプレイ、環境センサ、GPIO)実行中には実施しないこと！**"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:11
+msgid "**挙動がおかしくなる可能性があります。**"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:14
+msgid "toolsディレクトリ内のpythonへ移動します。"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:20
+msgid "M5のリフレッシュスクリプトを実行します。"
+msgstr ""
+
+#: ../../source/troubleshoot/refresh_m5.rst:26
+msgid "これにより、M5の画面がリセットされるかと思います。"
+msgstr ""
+

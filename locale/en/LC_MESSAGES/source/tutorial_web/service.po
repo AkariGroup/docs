@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-27 17:23+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial_web/service.rst:3
+msgid "サービスを使ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:5
+msgid "ここからは、webコンソールからプログラムを書いて、AKARIを動かす方法を学習していきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:6
+msgid "そのための第一歩として、まずはサービスの作り方、実行方法を学習していきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:10
+msgid "Servicesページの説明"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:12
+msgid ""
+":doc:`controller` "
+"のページでも、controllerで必要なサービスの立ち上げ手順を学習しましたが、今回はサービスについてより詳しく学んでいきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:13
+msgid "まずはServicesページについて説明していきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:16
+msgid "サービスの種類"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:18
+msgid "AKARI webコンソールのサービスは、バックグラウンドで起動するAKARIの動作、実行環境を意味します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:19
+msgid "サービスには、 **ユーザーサービス** と **システムサービス** があります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:20
+msgid "**ユーザーサービス** はユーザーが自由に追加、編集して使うことのできるサービスです。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:21
+msgid "**システムサービス** はよりシステム領域に近いサービスで、追加や編集はできません。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:24
+msgid "サービスページの見方"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:29
+msgid "サービスページの見方を説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:31
+msgid "新規作成ボタン"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "ここでAKARIのサービスを新たに作成できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:35
+msgid "ユーザーサービス一覧"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "ユーザーサービスの一覧が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "各サービスには下記の項目があります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・DisplayName**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービス名です。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・Service**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスのベースとなるイメージです。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・Status**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスの状態です。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・AutoStart**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスの自動起動の設定です。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "これをONにしておくと、次回からAKARIが立ち上がった時点でこのサービスも自動で起動します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・編集ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスの編集ができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・開くボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスが開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・実行・停止ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスの実行、停止ができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・削除ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスを削除できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**・詳細ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスの状態やエラーメッセージを確認できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:59
+msgid "システムサービス一覧"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "システムサービスの一覧が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "項目はユーザーサービス一覧と同じですが、編集、開く、削除ボタンはありません。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:67
+msgid "AkaraiRpcServerを立ち上げよう"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid ""
+":doc:`controller` でも説明しましたが、AkariRpcServerはAKARIのpython "
+"APIを実行するために起動しておく必要があります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "AkariRpcServerが立ち上がっていなかったら、実行ボタンをクリックして起動しておきましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "STATUSがRUNNINGに変わればOKです。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "**初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "AkariRpcServerはAPI実行のため毎回立ち上げる必要があるので、AutoStartのスイッチをONにしておくことを推奨します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "これを実行しておくと、以降AKARIの電源投入時に自動でAkariRpcServerが立ち上がるようになります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:84
+msgid "サービスを作ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:86
+msgid "ここからは、webコンソールからAKARIのプログラムを書いて動かすために必要なユーザーサービスの使い方を説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:87
+msgid ":doc:`access` の手順でwebコンソールへアクセスしたら、コントローラを使うために必要なサービスを作っていきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:89
+msgid "Servicesページを開く。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:91
+msgid "左のページリストから、Servicesを選択し、開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:96
+msgid "新規作成ボタンを押す。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:98
+msgid "新規作成ボタンを押し、新しいユーザーサービスを作成します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:103
+msgid "必要な項目を編集する。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "新たにサービス作成用のページがポップアップするので、必要な情報を編集してきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "表示名: 好きな名前を入れます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "概要: 任意で概要を記載します。空欄でも問題ありません。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "サービスイメージ: クリックすると、選択できるサービスイメージの一覧が開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "まずは `JupyterLab` を選択してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:114
+msgid "作成ボタンを押す。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:116
+msgid "サービスの一覧に戻り、作成したサービスがユーザーサービス一覧に追加されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:123
+msgid "サービスを起動しよう"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:125
+msgid "次に先程作ったサービスを起動します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:126
+msgid "サービスの起動には、再生マークの実行ボタンをクリックします。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:127
+msgid "すると、しばらく待った後にサービスのStatusがSTARTING→RUNNNINGへと変化します。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:128
+msgid "RUNNINGになったらサービスの立ち上げは完了です。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "初回実行時やアップデート配信時は、起動に時間がかかります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "ネットワーク速度によって、10分以上かかる場合もあります。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst
+msgid "しばらくお待ちください。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:139
+msgid "これで必要なサービスを立ち上げることができました。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:140
+msgid "次はwebコンソールからプロジェクトを作成してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:142
+msgid ":doc:`project` へ進む"
+msgstr ""
+
+#: ../../source/tutorial_web/service.rst:144
+msgid ":doc:`access` へ戻る"
+msgstr ""
+

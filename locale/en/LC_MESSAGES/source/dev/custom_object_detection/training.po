@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/dev/custom_object_detection/training.rst:3
+msgid "3. 学習を行う"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:5
+msgid "次に、先程作成したアノテーション付き画像を学習させ、学習結果のモデルファイルを出力します。 学習はGoogle Colab上で行います。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:10
+msgid "Google Colabについて"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:12
+msgid ""
+"Google Colab は、ブラウザから Python "
+"を実行できるサービスです。Googleのサーバ上で動作するもので、Googleアカウントがあれば基本無料で使えます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:13
+msgid "特徴はGPU環境が用意されていることで、これによって自分で環境を用意しなくても、高速な学習を行うことができます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:17
+msgid "akari_yolo_trainingのClone"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:19
+msgid "akari_yolo_trainingをgitからcloneします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:20
+msgid "**webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！**"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:28
+msgid "学習前の準備"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:30
+msgid ""
+"Google Colabでの学習をするためには、:doc:`annotation` "
+"で作成した画像とアノテーションファイルをGoogleドライブに保存する必要があります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:31
+msgid "下記の手順に沿って実行してください。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:33
+msgid "Googleドライブをブラウザから開きます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:34
+msgid "Googleドライブ上でマイドライブを右クリックし、「新しいフォルダ」を選択し `object_detection` というフォルダを作ります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:35
+msgid "`object_detection` の中に `images` というフォルダを作ります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:36
+msgid "`images` の中に `train` というフォルダと `test` というフォルダを作ります。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:37
+msgid ""
+"`train` フォルダの中に、:doc:`annotation` "
+"で準備した画像ファイル(.jpg)とアノテーションファイル(.txt)、識別する物体のクラス情報が入った `class.txt` "
+"を全部入れます。画像もアノテーションファイルもラベルごとにフォルダ分けせず、train直下にまとめて置きます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:38
+msgid ""
+"`test` "
+"フォルダの中に、テスト用の画像を数枚入れます。こちらはアノテーションファイルは必要ありません。学習結果の確認のための最終テストをするのに用います。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:43
+msgid "以上でGoogleドライブの準備は完了です。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:47
+msgid "Google Colabで学習をする"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:57
+msgid "下記リンクからGoogle Colabにアクセスします。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:58
+msgid "https://colab.research.google.com/?hl=ja"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:59
+msgid ""
+"「ファイル」→「ノートブックを開く」→「アップロード」から "
+"`akari_yolo_training/yolov7_training_akari.ipynb` を選択します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:64
+msgid "後は順番にコードを実行していくことで、学習済みのpytorchモデル(.pt)をダウンロードすることができます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:69
+msgid "手順はリンク先のGoogle Colab内に書かれているので、それに沿ってください。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:70
+msgid "次は、このpytorchモデルをOAK-Dで使えるモデルファイルへ変換します。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:72
+msgid ":doc:`convert_model` へ進む"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/training.rst:74
+msgid ":doc:`annotation` へ戻る"
+msgstr ""
+

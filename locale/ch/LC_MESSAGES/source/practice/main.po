@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/practice/main.rst:3
+msgid "AKARI練習問題に挑戦しよう"
+msgstr ""
+
+#: ../../source/practice/main.rst:5
+msgid "ここでは、練習問題を解きながらAKARIの使い方とpythonについて学べるakari_practiceの進め方を説明します。"
+msgstr ""
+
+#: ../../source/practice/main.rst:6
+msgid "akari_practiceはwebコンソール上のJupyterLab上で使うことができます。"
+msgstr ""
+
+#: ../../source/practice/main.rst:10
+msgid "akari_practiceのprojectの作成"
+msgstr ""
+
+#: ../../source/practice/main.rst:12
+msgid "まずは、webコンソール上でakari_practiceをベースにprojectの作成を行います。"
+msgstr ""
+
+#: ../../source/practice/main.rst:14
+msgid ""
+":doc:`../tutorial_web/project` "
+"の「gitレポジトリからプロジェクトを作ってみよう」を参考に、akari_practiceを元にしたprojectを作ります。"
+msgstr ""
+
+#: ../../source/practice/main.rst:16
+msgid "gitのURL及びブランチ名は下記を入力してください。"
+msgstr ""
+
+#: ../../source/practice/main.rst:17
+msgid "git URL: https://github.com/AkariGroup/akari_practice.git"
+msgstr ""
+
+#: ../../source/practice/main.rst:18
+msgid "gitブランチ名: main"
+msgstr ""
+
+#: ../../source/practice/main.rst:20
+msgid ""
+"サービス一覧からJupyterLabかVisual Studio "
+"Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_practiceを開きます。"
+msgstr ""
+
+#: ../../source/practice/main.rst:24
+msgid "akari_practiceの進め方"
+msgstr ""
+
+#: ../../source/practice/main.rst:26
+msgid "akari_practice内には4つのディレクトリがあります。"
+msgstr ""
+
+#: ../../source/practice/main.rst:28
+msgid "1_motor: ヘッドを上下左右に動かすモータの制御方法を学習できます。"
+msgstr ""
+
+#: ../../source/practice/main.rst:29
+msgid "2_m5_com: ヘッドのGPIOピンの使い方を学習できます。"
+msgstr ""
+
+#: ../../source/practice/main.rst:30
+msgid "3_m5_display: ボディーについているM5のディスプレイ表示の仕方を学習できます。"
+msgstr ""
+
+#: ../../source/practice/main.rst:31
+msgid "4_challenge: カメラを使ったり、これまで学んだ項目を複合して練習するチャレンジ問題です。"
+msgstr ""
+
+#: ../../source/practice/main.rst:33
+msgid "各パート内にはそれぞれの練習問題ごとにipynbファイルが置かれています。番号が小さいものから順に実行していくのがおすすめです。"
+msgstr ""
+
+#: ../../source/practice/main.rst:34
+msgid "各ファイルの最初に問題分が示されており、その下に回答用のコードタブがあります。"
+msgstr ""
+
+#: ../../source/practice/main.rst:35
+msgid "このコードを穴埋めして、問題分に沿った動作をするプログラムを完成させていきましょう。"
+msgstr ""
+
+#: ../../source/practice/main.rst:36
+msgid "各問題は **\"\"\"()\"\"\"で囲われた部分の中身を埋めていく、穴埋め問題となっています。**"
+msgstr ""
+
+#: ../../source/practice/main.rst:37
+msgid "最初は関数１個の穴埋めから始まり、問題番号が進むにつれ、コード全部を埋めていくことになります。"
+msgstr ""
+
+#: ../../source/practice/main.rst:38
+msgid "問題の下にはヒントが書かれています。関数の意味や使い方を示したサンプルコードのタブもあるので、動かしてみながら使い方を学んでいきましょう。"
+msgstr ""
+
+#: ../../source/practice/main.rst:39
+msgid "ファイルの最後には、回答例のコードタブがあります。"
+msgstr ""
+
+#: ../../source/practice/main.rst:40
+msgid "書き終わって答え合わせをする時や、分からなかった時はこの回答例と解説を参考にしましょう。"
+msgstr ""
+

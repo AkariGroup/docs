@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/troubleshoot/jupyter_error.rst:3
+msgid "webコンソールからのJupyter Notebookの起動に失敗するときは"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:5
+msgid "webコンソールからJupyter Notebookの起動に失敗する時は、下記の手順を実行してみてください。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:9
+msgid "再起動"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:11
+msgid "下記の順番で再起動を試してみてください。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:13
+msgid "ブラウザのタブを閉じて、再度Jupyter Notebookのserviceをprojectから開く。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:15
+msgid "1.で解決しない時は、ServicesのページからJupyter LabのServiceを再起動して再度試す。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:17
+msgid "2.で解決しない時は、AKARI本体を再起動する。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:21
+msgid "Jupyter serviceのSTATUSの確認"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:23
+msgid ""
+"ここまでで解決しない時は、下記コマンドを実行してakarirobot/akira-service-"
+"jupyter@v1のSTATUSを確認してください。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:32
+msgid "STATUSが\"Up\"だった場合は、他のブラウザを試すか、ブラウザのキャッシュを削除してみてください。。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:33
+msgid "STATUSが\"Exited\"だった場合は、次に説明する方法でJupyterのvenvを削除します。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:37
+msgid "Jupyter serviceのvenvの削除"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:39
+msgid "下記コマンドを実行します。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:46
+msgid "エクスプローラが開くので、右上の3本線が並んでいるオプションを開き、「隠しファイルの表示を有効にする」にチェックを入れます。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:48
+msgid "表示されている文字列の羅列のディレクトリの中身を一つ一つ確認し、\".jupyter\" というディレクトリが含まれるものを探します。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:50
+msgid ""
+"\".jupyter\" というディレクトリが含まれる場所を見つけたら、 "
+"**同じディレクトリ内にある\".venv\"というディレクトリを削除します。**"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:52
+msgid "エクスプローラを閉じ、AKARI本体を再起動します。"
+msgstr ""
+
+#: ../../source/troubleshoot/jupyter_error.rst:54
+msgid "Jupyterのサービスを再度立ち上げ、正しく起動するか確認します。"
+msgstr ""
+

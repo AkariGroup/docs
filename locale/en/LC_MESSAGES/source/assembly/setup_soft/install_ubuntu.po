@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:3
+msgid "Ubuntu 22.04のインストール"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:5
+msgid "lattepandaにUbuntu22.04をインストールします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:11
+msgid "PC"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:12
+msgid "USBメモリ(4GB以上)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:13
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:14
+msgid "マウス"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:18
+msgid "Ubuntuの起動用USBを作成する。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:19
+msgid "1. PC上に下記リンクからUbuntu 22.04のisoファイルをダウンロードします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:20
+msgid "https://releases.ubuntu.com/22.04/ubuntu-22.04.2-desktop-amd64.iso"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:21
+msgid "2. 下記リンクからUniversal USB installerをダウンロードします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:22
+msgid ""
+"https://www.pendrivelinux.com/downloads/Universal-USB-Installer"
+"/Universal-USB-Installer-2.0.1.0.exe"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:23
+msgid "3. USBメモリをパソコンに差し込み、Universal USB Installerを起動します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:24
+msgid "4. Step.1のDistributionとしてUbuntuを選択します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:25
+msgid "5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu20.04のisoを指定します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:26
+msgid "6. Step.3のUSBメモリの選択で、インストールするUSBメモリを指定します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:31
+msgid "Createを選択すると、Ubuntu起動用USBメモリの作成が開始します。しばらく待っていれば終了します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:35
+msgid "Ubuntuをlattepandaにインストールする。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:37
+msgid "先ほど作成したUbuntu起動用USBメモリをlattepandaに挿入し、「del」キーを押しながらlattepandaを起動します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:38
+msgid "「Save & Exit」に移動し、「Boot Override」内から先程のUbuntu起動用USBメモリを選択し、「Enter」キーを押します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:39
+msgid "「Ubuntu」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:40
+msgid "言語を日本語に変更し、「Ubuntuをインストール」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:41
+msgid "キーボードレイアウトを「Japanese」にします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:42
+msgid "Wi-fiネットワークの接続画面になります。接続可能なら接続してください。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:43
+msgid "「通常のインストール」を選択します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:44
+msgid "「ディスクを削除してUbuntuをインストール」を選択し、「インストール」→「続ける」を選びます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:45
+msgid "住んでいる場所は任意で選びます。日本国内なら「Tokyo」で問題ありません。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:46
+msgid "あなたの名前、コンピューターの名前、ユーザー名、パスワードは任意で設定します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:47
+msgid "インストールが始まるのでしばらく待ちます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:48
+msgid ""
+"「インストールは完了しました」と表示されたら、「今すぐ再起動する」を選択します。「Please remove install "
+"medium」と表示されたらUSBメモリを抜き、「Enter」キーを押します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:49
+msgid "lattepandaが再起動してUbuntuが立ち上がります。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:51
+msgid "これでUbuntuのインストールは完了です。次に、lattepandaを自動起動できるようにBIOSの書き換えを行います。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:53
+msgid ":doc:`setup_ansible` へ進む"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/install_ubuntu.rst:55
+msgid ":doc:`requirement_list` へ戻る"
+msgstr ""
+

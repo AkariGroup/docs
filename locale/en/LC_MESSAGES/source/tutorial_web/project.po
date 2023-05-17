@@ -1,0 +1,306 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial_web/project.rst:3
+msgid "プロジェクトを使ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:5
+msgid "ここからは、webコンソールからプログラムを書いて、AKARIを動かす方法を学習していきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:9
+msgid "Projectsページの説明"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:11
+msgid "ここではProjectsページについて説明していきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:14
+msgid "プロジェクトについて"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:16
+msgid "プロジェクトは、ユーザが作成することができるAKARIのアプリに該当するものです。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:17
+msgid "各プロジェクトごとに、home直下の `akari_projects` ディレクトリに格納されています。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:18
+msgid "各プロジェクトは `akari_manifest.yaml` というファイルを持っており、ここにプロジェクトの基本情報が書かれています。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:21
+msgid "プロジェクトページの見方"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:23
+msgid "プロジェクトページの見方を説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:25
+msgid "カード表示"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:29
+msgid "リスト表示"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:33
+msgid "**1. 更新ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクト一覧の更新ができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:37
+msgid "**2. View切替ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "ここでAKARIのプロジェクト一覧の表示形式をカード形式とリスト形式に切り替えできます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:41
+msgid "**3. 新規プロジェクトボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "新しいプロジェクトを作成できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:45
+msgid "**4. プロジェクト一覧**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクトの一覧が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクト名を選択すると、プロジェクトが開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "各プロジェクトには下記の項目があります。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "**・プロジェクト名**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクトの名前です。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "**・作者名**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "作者の名前です。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "**・概要**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクトの概要です。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "**・その他ボタン**"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "現時点では機能未実装です。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:62
+msgid "プロジェクトを作ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:64
+msgid "まずは、プロジェクトを作ってみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:66
+#: ../../source/tutorial_web/project.rst:132
+msgid "Projectsページを開く。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "左のページリストから、Projectsを選択し、開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:73
+#: ../../source/tutorial_web/project.rst:139
+msgid "新規プロジェクトボタンを押す。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "新規プロジェクトボタンを押し、新しいプロジェクトを作成します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:80
+msgid "必要な項目を編集する。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "新たにプロジェクト作成用のページが開くので、必要な情報を編集してきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクトの作成方法には、 **テンプレートから作成** と **GITレポジトリから作成** があります。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "ただしGITレポジトリから作成は現在未実装です。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "今回は **テンプレートから作成** を選択し、下記情報を記入します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクト名: 好きな名前を入れます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "作者名: 任意で作者名を記載します。空欄でも問題ありません。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "URL:Git公開機能が実装時には、このURLを使って公開しますが、現時点では未実装なので空欄にしてください。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "テンプレート: プロジェクトのテンプレートスタイルです。今回はBASICを選択してください。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "概要: 任意でプロジェクトの概要を入れます。空欄でも問題ありません。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:96
+msgid "作成ボタンを押す。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "プロジェクトの一覧に戻り、作成したプロジェクトが一覧に追加されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:105
+msgid "プロジェクトを開いてみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:107
+msgid "次に、作成したプロジェクトを開いてみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:108
+msgid ""
+"ここでは、 :doc:`service` から **JupyterLabかVisual Studio "
+"Codeのサービスをあらかじめ起動している前提** で説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:110
+msgid "プロジェクト一覧からプロジェクト名を選択します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:115
+msgid ""
+"プロジェクトページが開くので、右上の `OPEN WITH SERVICE` "
+"をクリックし、先程起動したサービスからプロジェクトの編集に使いたいものを選択します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:120
+msgid "サービスを使って、プロジェクトのページがポップアップします。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid ""
+"このポップアップしたJupyterLabやVisual Studio "
+"Code上で、プログラムを書いて実行することでAKARIを動かすことができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:127
+msgid "gitレポジトリからプロジェクトを作ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:129
+msgid "次に、git上に公開されているAKARIのプロジェクトを使ってプロジェクトを作成してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:130
+msgid "今回は、次ページ以降で使うakari_tutorialを例にして進めます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "webコンソールに戻って、左のページリストからProjectsを選択し、開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:146
+msgid "「GITレポジトリから作成」を選択する。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "「GITレポジトリから作成」を選択し、タブを切り替えます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:153
+msgid "プロジェクトを作成する。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "akarai_tutorialのcloneに必要な情報を入力し、作成ボタンを押します。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "git URL: https://github.com/AkariGroup/akari_tutorial.git"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst
+msgid "gitブランチ名: main"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:162
+msgid "akari_tutorialというプロジェクトが作成されます。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:164
+msgid "次に、今回作成したakari_tutorialを動かしてみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:166
+msgid ":doc:`tutorial_project` へ進む"
+msgstr ""
+
+#: ../../source/tutorial_web/project.rst:168
+msgid ":doc:`service` へ戻る"
+msgstr ""
+

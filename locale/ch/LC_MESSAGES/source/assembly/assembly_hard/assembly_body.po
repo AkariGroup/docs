@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-27 17:23+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:3
+msgid "ボディーを組み立てよう"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:5
+msgid "次にボディー部分を組み立てます。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:9
+msgid "必要な道具"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:10
+msgid "- 精密ドライバ(＋)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:11
+msgid "- ニッパ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:15
+msgid "1 M5基板の搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:18
+#: ../../source/assembly/assembly_hard/assembly_body.rst:44
+#: ../../source/assembly/assembly_hard/assembly_body.rst:79
+#: ../../source/assembly/assembly_hard/assembly_body.rst:114
+#: ../../source/assembly/assembly_hard/assembly_body.rst:138
+#: ../../source/assembly/assembly_hard/assembly_body.rst:171
+#: ../../source/assembly/assembly_hard/assembly_body.rst:222
+#: ../../source/assembly/assembly_hard/assembly_body.rst:251
+#: ../../source/assembly/assembly_hard/assembly_body.rst:270
+#: ../../source/assembly/assembly_hard/assembly_body.rst:303
+#: ../../source/assembly/assembly_hard/assembly_body.rst:320
+#: ../../source/assembly/assembly_hard/assembly_body.rst:341
+#: ../../source/assembly/assembly_hard/assembly_body.rst:366
+#: ../../source/assembly/assembly_hard/assembly_body.rst:392
+#: ../../source/assembly/assembly_hard/assembly_body.rst:417
+msgid "必要な部品"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:19
+msgid "(1) M5基板( :doc:`assembly_pcb` で組み立て済みのもの) 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:20
+msgid "(3) AKARI Body 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:21
+msgid "(38) タッピングビスM2.5-6 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:27
+#: ../../source/assembly/assembly_hard/assembly_body.rst:51
+#: ../../source/assembly/assembly_hard/assembly_body.rst:86
+#: ../../source/assembly/assembly_hard/assembly_body.rst:122
+#: ../../source/assembly/assembly_hard/assembly_body.rst:145
+#: ../../source/assembly/assembly_hard/assembly_body.rst:179
+#: ../../source/assembly/assembly_hard/assembly_body.rst:229
+#: ../../source/assembly/assembly_hard/assembly_body.rst:255
+#: ../../source/assembly/assembly_hard/assembly_body.rst:279
+#: ../../source/assembly/assembly_hard/assembly_body.rst:310
+#: ../../source/assembly/assembly_hard/assembly_body.rst:324
+#: ../../source/assembly/assembly_hard/assembly_body.rst:348
+#: ../../source/assembly/assembly_hard/assembly_body.rst:373
+#: ../../source/assembly/assembly_hard/assembly_body.rst:396
+#: ../../source/assembly/assembly_hard/assembly_body.rst:421
+msgid "手順"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:28
+msgid "`(1) M5基板` を表側から載せる。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:30
+msgid "**CN9のピンヘッダが右前に来るようにすること**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:35
+msgid "`(38) タッピングビスM2.5-6` で４点を表面からねじ留めする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:41
+msgid "2 温湿度気圧センサユニットの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:45
+msgid "(9) 温湿度気圧センサユニット ENVⅢ 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:52
+msgid "`(9) 温湿度気圧センサユニット ENVⅢ` 付属の配線をボディーの右側面から通す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:58
+msgid "`(9) 温湿度気圧センサユニット ENVⅢ` を配線のコネクタに接続する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:63
+msgid "ENVⅢをボディーの突起に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:65
+msgid "**ENVⅢのラベルがボディーの内向きになるようにすること**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:70
+msgid "ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN6に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:76
+msgid "3 光センサユニットの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:80
+msgid "(10) 光センサユニット 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:87
+msgid "`(10) 光センサユニット` 付属のケーブルをボディーの左側面から通す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:93
+msgid "`(10) 光センサユニット` を配線のコネクタに接続する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:98
+msgid "光センサをボディーの突起に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:100
+msgid "**光センサのラベルがボディーの内向きになるようにすること**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:105
+msgid "ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN7に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:111
+msgid "4 ヘッドとボディーの結合"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:115
+msgid ":doc:`assembly_head` で組み立てたヘッド 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:116
+msgid "(25) Dynamixel 2XL430-W250-T付属のネジ(黒) 4個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:123
+msgid "ヘッドとボディーを図のように合わせ、内部から `(25)(24)付属のネジ(黒)` で4点ねじ留めする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:125
+msgid "**ヘッドとボディーが同じ方向を向いた状態で固定すること！**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:126
+msgid "**締結向きがずれるとモータの初期位置とヘッドの初期位置がずれます！**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:135
+msgid "5 電源スイッチの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:139
+msgid "(35) ロッカスイッチ汎用ON-OFF 2極 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:147
+msgid "ボディー表面のスイッチ用の穴に表から2. の配線を通していき、 `(35) ロッカスイッチ汎用ON-OFF 2極` を押してはめ込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:149
+msgid "**○マークが下になるように**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:157
+msgid "ケーブルの反対側をM5基板のCN3のターミナルブロックに差し込み、ネジを締めて固定する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:159
+msgid "**線の順序は問わない。どちらの線をどちらの穴に差し込んでも問題ない。**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:168
+msgid "6 DCジャックの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:172
+msgid "(20) コネクタ付コード4P PH(赤黒黄緑) 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:173
+msgid "(21) 2.1mm標準DCジャック パネル取付用 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:180
+msgid "`(21) 2.1mm標準DCジャック パネル取付用` 付属のナットを、あらかじめ `(20) コネクタ付コード4P PH(赤黒黄緑)` に通す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:185
+msgid "1.を、ボディー背面のDCジャック用の穴に内側から通し、端線を外に出す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:193
+msgid "`(21) 2.1mm標準DCジャック パネル取付用` にはんだ付けする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:195
+msgid "**+側(端子が短い方)に赤黒、-側(端子が長い方)に黄緑をはんだ付けすること。**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:203
+msgid "DCジャックをボディーの外側から押してはめ込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:208
+msgid "ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN2に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:213
+msgid "ナットを内側から締める。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:219
+msgid "7 M5Stackの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:223
+msgid "(8) M5Stack BASIC 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:230
+msgid ""
+"1. `(8) M5Stack BASIC` の背面を外す。 | "
+"**外れにくい場合は、マイナスドライバーをM5Stack側面の溝に差し込んで開く。**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:239
+msgid "`(8) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack用基板に表から差し込む"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:248
+msgid "8 GPIOケーブルの接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:252
+#: ../../source/assembly/assembly_hard/assembly_body.rst:321
+#: ../../source/assembly/assembly_hard/assembly_body.rst:393
+#: ../../source/assembly/assembly_hard/assembly_body.rst:418
+msgid "なし"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:256
+msgid "ヘッドのリボンケーブルをボディー背面から内部に通す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:261
+msgid "M5stack基板のCN8に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:267
+msgid "9 USB2DXIFの接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:271
+msgid "(27) USB2DXIF 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:272
+msgid "(28) Robot Cable-X3P 100mm 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:273
+msgid "(29) USB-CオスtoUSB-Aオス 変換アダプタ 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:280
+msgid "`(27) USB2DXIF` に `(28) Robot Cable-X3P` を差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:285
+msgid "`(27) USB2DXIF` に `(29) USB-CオスtoUSB-Aオス 変換アダプタ` を差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:287
+msgid "**変換アダプタのラベルが表を向くように接続すること**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:292
+msgid "2.の反対側のコネクタをCN4に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:294
+#: ../../source/assembly/assembly_hard/assembly_body.rst:332
+msgid "**基板側コネクタに(13-B) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:300
+msgid "10 M5StackのUSB接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:304
+msgid "(32) USB Type-Cケーブル 0.3mL字 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:311
+msgid "`(32) USB Type-Cケーブル 0.3mL字` をボディー部の内側からM5Stack本体側面に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:317
+msgid "11 モータ線の接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:325
+msgid "ヘッドのDynamixelから出ているケーブルをボディー背面から内部に通す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:330
+msgid "M5stack基板のCN5に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:338
+msgid "12 カバーの取り付け"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:342
+msgid "(4) AKARI Cover 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:349
+msgid ""
+"`(3) AKARI Body` 背面の溝に、ヘッドからの線(GPIOケーブル、OAK-D "
+"LITEのケーブル、モータケーブル、USBパネルマウントケーブル)が収まっている状態にする。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:354
+msgid ""
+"1.の線が `(3) AKARI Body` と `(4) AKARI Cover` の間を通るようにしながら、 `(3) AKARI Body`"
+" 内部から `(4) AKARI Cover` をカチッと奥まで差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:363
+msgid "13 USBハブの搭載"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:367
+msgid "(30) USBハブ 4ポート15cm 1個"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:374
+msgid "`(30) USBハブ 4ポート15cm` をボディー内部にスライドさせて挿入する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:382
+msgid "OAK-DのUSB線、`(30) USBハブ 4ポート15cm` のUSB線は、背面のカバーの溝から外部に出す。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:389
+msgid "14 USBハブへのUSB接続"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:398
+msgid "USB2DXIFのUSBをボディー内部のUSBハブ(一番左)に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:403
+msgid "M5StackのUSBをボディー内部のUSBハブ(左から2番目)に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:408
+msgid "ヘッドのUSBパネルマウントからのUSBをボディー内部のUSBハブ(左から3番目)に差し込む。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:414
+msgid "15 可動域の確認"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:423
+msgid "ヘッドを上下左右に外から動かしてみて、ケーブルの引っ掛かりがないか確認する。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:429
+msgid "以上でボディーの組み立ては終わりです。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:430
+msgid "次はベースの組み立てを行います。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:432
+msgid ":doc:`assembly_base` へ進む"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/assembly_body.rst:434
+msgid ":doc:`part_list` へ戻る"
+msgstr ""
+

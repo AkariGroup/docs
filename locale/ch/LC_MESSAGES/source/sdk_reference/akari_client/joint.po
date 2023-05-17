@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 18:34+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/sdk_reference/akari_client/joint.rst:3
+msgid "関節制御"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_profile_velocity
+#: akari_client.joint_controller.RevoluteJointController.set_goal_position
+#: akari_client.joint_controller.RevoluteJointController.set_profile_acceleration
+#: akari_client.joint_controller.RevoluteJointController.set_profile_velocity
+#: akari_client.joint_controller.RevoluteJointController.set_servo_enabled
+#: akari_client.joint_manager.JointManager
+#: akari_client.joint_manager.JointManager.move_joint_positions
+#: akari_client.joint_manager.JointManager.set_joint_accelerations
+#: akari_client.joint_manager.JointManager.set_joint_velocities
+#: akari_client.joint_manager.JointManager.set_servo_enabled of
+msgid "Parameters"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_names:1 of
+msgid "関節名を取得する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_moving_state
+#: akari_client.joint_controller.RevoluteJointController.get_position_limit
+#: akari_client.joint_controller.RevoluteJointController.get_present_position
+#: akari_client.joint_controller.RevoluteJointController.get_profile_acceleration
+#: akari_client.joint_controller.RevoluteJointController.get_servo_enabled
+#: akari_client.joint_manager.JointManager.get_joint_accelerations
+#: akari_client.joint_manager.JointManager.get_joint_limits
+#: akari_client.joint_manager.JointManager.get_joint_names
+#: akari_client.joint_manager.JointManager.get_joint_positions
+#: akari_client.joint_manager.JointManager.get_joint_velocities of
+msgid "Returns"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_names:3 of
+msgid "AKARIの全関節名のlist"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_moving_state
+#: akari_client.joint_controller.RevoluteJointController.get_position_limit
+#: akari_client.joint_controller.RevoluteJointController.get_present_position
+#: akari_client.joint_controller.RevoluteJointController.get_profile_acceleration
+#: akari_client.joint_controller.RevoluteJointController.get_profile_velocity
+#: akari_client.joint_controller.RevoluteJointController.get_servo_enabled
+#: akari_client.joint_controller.RevoluteJointController.set_goal_position
+#: akari_client.joint_controller.RevoluteJointController.set_profile_acceleration
+#: akari_client.joint_controller.RevoluteJointController.set_profile_velocity
+#: akari_client.joint_controller.RevoluteJointController.set_servo_enabled
+#: akari_client.joint_manager.JointManager.disable_all_servo
+#: akari_client.joint_manager.JointManager.enable_all_servo
+#: akari_client.joint_manager.JointManager.get_joint_accelerations
+#: akari_client.joint_manager.JointManager.get_joint_limits
+#: akari_client.joint_manager.JointManager.get_joint_names
+#: akari_client.joint_manager.JointManager.get_joint_positions
+#: akari_client.joint_manager.JointManager.get_joint_velocities
+#: akari_client.joint_manager.JointManager.move_joint_positions
+#: akari_client.joint_manager.JointManager.set_joint_accelerations
+#: akari_client.joint_manager.JointManager.set_joint_velocities
+#: akari_client.joint_manager.JointManager.set_servo_enabled of
+msgid "Return type"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_limits:1 of
+msgid "サーボの位置リミットを取得する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_limits:3 of
+msgid "関節名と位置リミット(min,max)[rad]のDict"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.disable_all_servo:4
+#: akari_client.joint_manager.JointManager.enable_all_servo:4
+#: akari_client.joint_manager.JointManager.get_joint_accelerations:6
+#: akari_client.joint_manager.JointManager.get_joint_limits:6
+#: akari_client.joint_manager.JointManager.get_joint_positions:6
+#: akari_client.joint_manager.JointManager.get_joint_velocities:6
+#: akari_client.joint_manager.JointManager.move_joint_positions:9
+#: akari_client.joint_manager.JointManager.set_joint_accelerations:7
+#: akari_client.joint_manager.JointManager.set_joint_velocities:7
+#: akari_client.joint_manager.JointManager.set_servo_enabled:7 of
+msgid "Example"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_profile_acceleration:1
+#: akari_client.joint_manager.JointManager.set_joint_accelerations:1 of
+msgid "サーボの目標加速度を設定する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_joint_accelerations:3 of
+msgid "pan軸の加速度 [rad/s^2]"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_joint_accelerations:4 of
+msgid "tilt軸の加速度 [rad/s^2]"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_accelerations:1 of
+msgid "サーボの目標加速度を取得する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_accelerations:3 of
+msgid "関節名と目標加速度[rad/s^2]のDict"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_profile_velocity:1
+#: akari_client.joint_manager.JointManager.set_joint_velocities:1 of
+msgid "サーボの目標速度を設定する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_joint_velocities:3 of
+msgid "pan軸の速度 [rad/s]"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_joint_velocities:4 of
+msgid "tilt軸の速度 [rad/s]"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_velocities:1 of
+msgid "サーボの目標速度を取得する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_velocities:3 of
+msgid "関節名と目標速度[rad/s]のDict"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_goal_position:1
+#: akari_client.joint_manager.JointManager.move_joint_positions:1 of
+msgid "サーボの目標角度を設定する。 ここで設定した値まで移動する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.move_joint_positions:4 of
+msgid "Trueにすると、サーボの移動が完了するまで関数の終了を待機する。デフォルト値はFalse。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.move_joint_positions:5 of
+msgid "pan軸の目標角度 [rad]"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.move_joint_positions:6 of
+msgid "tilt軸の目標角度 [rad]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_present_position:1
+#: akari_client.joint_manager.JointManager.get_joint_positions:1 of
+msgid "サーボの現在角度を取得する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.get_joint_positions:3 of
+msgid "サーボ名と現在角度[rad]のdict"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_servo_enabled:1
+#: akari_client.joint_manager.JointManager.set_servo_enabled:1 of
+msgid "サーボの有効無効状態を設定する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_servo_enabled:3 of
+msgid "pan軸のサーボ有効無効の設定。``True`` であればサーボを有効にする。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.set_servo_enabled:4 of
+msgid "tilt軸のサーボ有効無効の設定。``True`` であればサーボを有効にする。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.enable_all_servo:1 of
+msgid "全サーボを有効状態に設定する。"
+msgstr ""
+
+#: akari_client.joint_manager.JointManager.disable_all_servo:1 of
+msgid "全サーボを無効状態に設定する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_servo_enabled:1 of
+msgid "サーボの有効無効状態を取得する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_servo_enabled:3 of
+msgid "サーボ有効なら``True``、無効なら``False``"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_servo_enabled:3 of
+msgid "``True`` であればサーボを有効にする"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_position_limit:1
+#: of
+msgid "Positionの上限値と下限値を取得する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_position_limit:3
+#: of
+msgid "現在角度の下限値、上限値 [rad]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_profile_acceleration:3
+#: akari_client.joint_controller.RevoluteJointController.set_profile_acceleration:3
+#: of
+msgid "加速度 [rad/s^2]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_profile_acceleration:1
+#: of
+msgid "Profile Acceleration を取得する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_profile_velocity:3
+#: akari_client.joint_controller.RevoluteJointController.set_profile_velocity:3
+#: of
+msgid "速度 [rad/s]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_profile_velocity:1
+#: of
+msgid "Profile Velocity を設定する"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.set_goal_position:4 of
+msgid "目標角度 [rad]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_present_position:3
+#: of
+msgid "現在角度 [rad]"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_moving_state:1 of
+msgid "モーターが動作中かどうか判定する。"
+msgstr ""
+
+#: akari_client.joint_controller.RevoluteJointController.get_moving_state:3 of
+msgid "現在のモーター状態。"
+msgstr ""
+
+#~ msgid "パラメータ"
+#~ msgstr ""
+
+#~ msgid "戻り値"
+#~ msgstr ""
+
+#~ msgid "戻り値の型"
+#~ msgstr ""
+
+#~ msgid "サンプル"
+#~ msgstr ""
+

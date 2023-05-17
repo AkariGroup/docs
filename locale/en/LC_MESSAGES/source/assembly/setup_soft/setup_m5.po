@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-27 17:23+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:3
+msgid "M5stackのSDカードのセットアップ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:5
+msgid "次にM5stackのデータを保存している、SDカードのセットアップをしていきます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:11
+msgid "microSDカードにデータコピーできる環境(PC、またはUSB-microSDカードリーダ)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:12
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:13
+msgid "マウス"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:14
+msgid "microSDカード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:18
+msgid "microSDカードの準備"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:20
+msgid "M5stack用のmicroSDカードを準備します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:21
+msgid "下記のリンク先から、m5_sd.zipをダウンロードし、解凍します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:22
+msgid "https://drive.google.com/file/d/1bmp_ZMYMjZQXyLB6NGfF3jKg0oWGZHwf/view?usp=share_link"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:23
+msgid "上記の `m5_sd` の中身を、microSDカードの直下に全てコピーします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:24
+msgid "**\"jpg\" \"Fonts\" などのディレクトリがmicroSDの直下に置かれた状態にしてください。**"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:28
+msgid "microSDカードの挿入"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:30
+msgid "microSDカードをPCから抜き、M5stackに挿入します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:35
+msgid "以上でM5StackのSDカードのセットアップは完了です。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:38
+msgid ":doc:`main` へ戻る"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_m5.rst:40
+msgid ":doc:`setup_env` へ戻る"
+msgstr ""
+

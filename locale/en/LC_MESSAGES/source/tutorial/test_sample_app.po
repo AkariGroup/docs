@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial/test_sample_app.rst:3
+msgid "サンプルアプリを動かそう"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:5
+msgid "AKARIのサンプルアプリを動かしてみましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:9
+msgid "仮想環境の有効化"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:11
+msgid "仮想環境を有効化していなければ、下記のコマンドで仮想環境を有効化します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:20
+msgid "アプリのディレクトリへの移動"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:22
+msgid "最初にサンプルアプリの保存先のディレクトリへ移動しましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:30
+msgid "モータの制御"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:32
+msgid "1a.モータ制御"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:34
+msgid "ヘッドのモータ制御サンプルです。実行するとヘッドが速度を変えながら動きます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:42
+msgid "環境情報の取得"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:44
+msgid "2a.ボタン入力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:46
+msgid "ボタン入力のサンプルです。M5のボタンを押すとコマンドラインに押したボタン(A~C)のメッセージが出力されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:47
+#: ../../source/tutorial/test_sample_app.rst:56
+#: ../../source/tutorial/test_sample_app.rst:65
+#: ../../source/tutorial/test_sample_app.rst:74
+#: ../../source/tutorial/test_sample_app.rst:99
+#: ../../source/tutorial/test_sample_app.rst:108
+#: ../../source/tutorial/test_sample_app.rst:117
+#: ../../source/tutorial/test_sample_app.rst:130
+msgid "コマンドライン上でCtrl+Cを押すと終了します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:53
+msgid "2b.GPIO入力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:55
+msgid "GPIO入力のサンプルです。コマンドラインにヘッドのGPIOデジタル入力(din0,din1)とアナログ入(ain0)の現在値が一定間隔で出力されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:62
+msgid "2c.GPIO出力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:64
+msgid "GPIO出力のサンプルです。コマンドラインにヘッドのGPIOデジタル出力(dout0,dout1)とPWM出力(pwmout0)の現在値が一定間隔で出力されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:71
+msgid "2d.環境センサ"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:73
+msgid "環境センサのサンプルです。コマンドラインに気圧、温度、明るさセンサの現在値が一定間隔で出力されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:82
+msgid "GPIO出力の取得"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:84
+msgid "3a.GPIO出力制御"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:86
+msgid "GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル出力(dout0,dout1)とPWM出力(pwmout0)が変化します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:94
+msgid "ディスプレイ制御"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:96
+msgid "4a.ディスプレイ背景カラー出力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:98
+msgid "ディスプレイ背景カラー変更のサンプルです。各ステップごとにM5の背景カラー変更を行います。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:105
+msgid "4b.ディスプレイテキスト出力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:107
+msgid "ディスプレイテキスト出力のサンプルです。ステップごとにM5の画面にテキストを出力します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:114
+msgid "4c.ディスプレイ画像出力"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:116
+msgid "ディスプレイ画像出力のサンプルです。ステップごとにM5の画面の様々な位置にサイズを変えた画像を出力します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:125
+msgid "その他の制御"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:127
+msgid "5a.M5リセット"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:129
+msgid "M5リセットのサンプルです。一定時間ごとにM5をリセットします。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:138
+msgid "カメラ"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:140
+msgid "6a.カメラRGB映像のストリーミング"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:142
+msgid "ヘッドのOAK-DカメラのRGB映像をストリーミングするサンプルです。ウィンドウが開きカメラ映像が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:143
+#: ../../source/tutorial/test_sample_app.rst:152
+msgid "カメラ映像のウインドウ上で `q` を押すと終了します。"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:149
+msgid "6b.カメラステレオdepth映像のストリーミング"
+msgstr ""
+
+#: ../../source/tutorial/test_sample_app.rst:151
+msgid "ヘッドのOAK-Dカメラのステレオdepth映像をストリーミングするサンプルです。ウィンドウが開きカメラ映像が表示されます。"
+msgstr ""
+

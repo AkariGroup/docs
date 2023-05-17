@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 18:34+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/sdk_reference/akari_client/utility.rst:3
+msgid "ユーティリティ"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:1 of
+msgid "M5から取得する情報を格納するDict。"
+msgstr ""
+
+#: akari_client.color.Color akari_client.m5stack_client.M5ComDict of
+msgid "Parameters"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:3 of
+msgid "ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:4 of
+msgid "ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:5 of
+msgid "ヘッドのain0ピンのアナログ入力。0-3.3Vを0-255の256段階にする。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:6 of
+msgid "ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:7 of
+msgid "ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:8 of
+msgid "ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:9
+#: akari_client.m5stack_client.M5ComDict:10 of
+msgid "任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:11 of
+msgid "M5の前面のボタンAの入力。ボタンを押すとTrue、押していないとFalse。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:12 of
+msgid "M5の前面のボタンBの入力。ボタンを押すとTrue、押していないとFalse。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:13 of
+msgid "M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:14 of
+msgid "AKARI側面の環境センサモジュールの温度計測値。単位は℃。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:15 of
+msgid "AKARI側面の環境センサモジュールの観測絶対圧力。単位はPa。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:16 of
+msgid "AKARI側面の光センサユニットの観測明るさを4096段階で出力。0が最も明るい。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:17 of
+msgid "データ取得した時間。M5のソフト起動時からの経過秒数を用いている。"
+msgstr ""
+
+#: akari_client.m5stack_client.M5ComDict:18 of
+msgid "akari_client()の各コマンド実行完了時のレスポンス。実行完了するとTrueを返す。"
+msgstr ""
+
+#: akari_client.color.Color:1 of
+msgid "M5のディスプレイの表示色を指定するクラス。"
+msgstr ""
+
+#: akari_client.color.Color:3 of
+msgid "RGBのR要素。0~255で指定。"
+msgstr ""
+
+#: akari_client.color.Color:4 of
+msgid "RGBのG要素。0~255で指定。"
+msgstr ""
+
+#: akari_client.color.Color:5 of
+msgid "RGBのB要素。0~255で指定。"
+msgstr ""
+
+#: akari_client.color.Colors:1 of
+msgid "M5のディスプレイの表示色のenum。"
+msgstr ""
+
+#: akari_client.color.Colors:2 of
+msgid "下記の色を指定可能。"
+msgstr ""
+
+#: akari_client.color.Colors:3 of
+msgid "BLACK"
+msgstr ""
+
+#: akari_client.color.Colors:4 of
+msgid "NAVY"
+msgstr ""
+
+#: akari_client.color.Colors:5 of
+msgid "DARKGREEN"
+msgstr ""
+
+#: akari_client.color.Colors:6 of
+msgid "DARKCYAN"
+msgstr ""
+
+#: akari_client.color.Colors:7 of
+msgid "MAROON"
+msgstr ""
+
+#: akari_client.color.Colors:8 of
+msgid "PURPLE"
+msgstr ""
+
+#: akari_client.color.Colors:9 of
+msgid "OLIVE"
+msgstr ""
+
+#: akari_client.color.Colors:10 of
+msgid "LIGHTGREY"
+msgstr ""
+
+#: akari_client.color.Colors:11 of
+msgid "DARKGREY"
+msgstr ""
+
+#: akari_client.color.Colors:12 of
+msgid "BLUE"
+msgstr ""
+
+#: akari_client.color.Colors:13 of
+msgid "GREEN"
+msgstr ""
+
+#: akari_client.color.Colors:14 of
+msgid "CYAN"
+msgstr ""
+
+#: akari_client.color.Colors:15 of
+msgid "RED"
+msgstr ""
+
+#: akari_client.color.Colors:16 of
+msgid "MAGENTA"
+msgstr ""
+
+#: akari_client.color.Colors:17 of
+msgid "YELLOW"
+msgstr ""
+
+#: akari_client.color.Colors:18 of
+msgid "WHITE"
+msgstr ""
+
+#: akari_client.color.Colors:19 of
+msgid "ORANGE"
+msgstr ""
+
+#: akari_client.color.Colors:20 of
+msgid "GREENYELLOW"
+msgstr ""
+
+#: akari_client.color.Colors:21 of
+msgid "PINK"
+msgstr ""
+
+#: akari_client.position.Positions:1 of
+msgid "M5のディスプレイの表示位置のenum。"
+msgstr ""
+
+#: akari_client.position.Positions:2 of
+msgid "下記が利用可能。"
+msgstr ""
+
+#: akari_client.position.Positions:3 of
+msgid "CENTER: 中央"
+msgstr ""
+
+#: akari_client.position.Positions:4 of
+msgid "LEFT: 左揃え"
+msgstr ""
+
+#: akari_client.position.Positions:5 of
+msgid "TOP: 上揃え"
+msgstr ""
+
+#: akari_client.position.Positions:6 of
+msgid "RIGHT: 右揃え"
+msgstr ""
+
+#: akari_client.position.Positions:7 of
+msgid "BOTTOM: 下揃え"
+msgstr ""
+
+#~ msgid "パラメータ"
+#~ msgstr ""
+

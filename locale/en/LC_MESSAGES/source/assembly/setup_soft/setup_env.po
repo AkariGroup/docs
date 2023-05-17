@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/setup_soft/setup_env.rst:3
+msgid "AKARI仮想実行環境のセットアップ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:5
+msgid "akari_software下に仮想実行環境のセットアップをしていきます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:11
+msgid "AKARI(Ubuntu20.04インストール済み)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:12
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:13
+msgid "マウス"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:17
+msgid "venvのセットアップ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:19
+msgid "akari_softwareの仮想実行環境をセットアップします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:21
+msgid "akari_software直下に移動し直します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:27
+msgid "仮想環境を作成にする（初回のみ必要）"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:33
+msgid "仮想環境を有効にする"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:39
+msgid "必要なライブラリをインストールする"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:46
+msgid "次はM5StackのSDカードのデータ書き込みを行います。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:49
+msgid ":doc:`setup_m5` へ進む"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_env.rst:51
+msgid ":doc:`setup_ansible` へ戻る"
+msgstr ""
+

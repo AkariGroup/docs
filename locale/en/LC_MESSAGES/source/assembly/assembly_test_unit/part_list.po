@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:3
+msgid "組み立てに必要なもの"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:4
+msgid "T1"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:6
+msgid "T2"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:8
+msgid "T3"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:10
+msgid "T4"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:12
+msgid "T5"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:14
+msgid "T6"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:16
+msgid "T7"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:18
+msgid "T8"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:20
+msgid "T9"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+#: ../../source/assembly/assembly_test_unit/part_list.rst:22
+msgid "T10"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:25
+msgid "AKARIのテストユニットの組み立てに必要な道具、部品の一覧を記載します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:26
+msgid "各部品にはご参考までに自分達の購入先のリンクを掲載してあります(秋月電子に関しては通販コードを用いて参照ください)。"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:27
+msgid "**購入先はあくまで一例ですので、同じ部品であれば他の購入先でも問題ありません。**"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:30
+msgid "必要な道具"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:31
+msgid "- はんだごて"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:32
+msgid "- はんだ線"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:33
+msgid "- ニッパ"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:36
+msgid "部品表"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "No."
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "分類"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "画像"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "名称"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "型番"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "必要数 [個]"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "購入数[組]"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "購入先リンク"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "備考"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "製造品"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T1|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "TEST UNIT基板"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "1"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "ー"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "購入品"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T2|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "10×2ピンヘッダ"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "PH-2x10SG"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "`秋月電子 <https://akizukidenshi.com/catalog/>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(C-00078)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T3|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "タクトスイッチ 12mm"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "TVGP01-G73BB"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "2"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(P-12226)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T4|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "3mm赤色LED 625nm 70度"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "OSR5JA3Z74A"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "3"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(I-11577)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "他の色でもOK"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T5|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "3mm黄色LED 595nm 70度"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "OSY5JA3Z74A"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(I-11639)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T6|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "3mm緑色LED 525nm 70度"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "OSG5TA3Z74A"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(I-11635)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T7|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "カーボン抵抗（炭素皮膜抵抗）120Ω"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "CF25J120RB"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "4"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(R-25121)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "推奨抵抗値"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T8|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "カーボン抵抗（炭素皮膜抵抗）200Ω"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "CF25J200RB"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(R-25201)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T9|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "カーボン抵抗（炭素皮膜抵抗）470Ω"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "CF25J470RB"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst
+msgid "(R-25471)"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "|T10|"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "可変抵抗器 10KΩ"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B07TFTK41V>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:60
+msgid ":doc:`assembly_test_unit` へ進む"
+msgstr ""
+
+#: ../../source/assembly/assembly_test_unit/part_list.rst:62
+msgid ":doc:`../assembly_hard/assembly_base` へ戻る"
+msgstr ""
+

@@ -1,0 +1,958 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/assembly_hard/part_list.rst:3
+msgid "組み立てに必要なもの"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:4
+msgid "1"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:6
+msgid "2"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:8
+msgid "3"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:10
+msgid "4"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:12
+msgid "5"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:14
+msgid "6"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:16
+msgid "7"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:18
+msgid "8"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:20
+msgid "9"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:22
+msgid "10"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:24
+msgid "11"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:26
+msgid "12"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:28
+msgid "13-A"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:30
+msgid "13-B"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:32
+msgid "14"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:34
+msgid "15"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:36
+msgid "16"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:38
+msgid "17"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:40
+msgid "18"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:42
+msgid "19"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:44
+msgid "20"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:46
+msgid "21"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:48
+msgid "22"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:50
+msgid "23"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:52
+msgid "24"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:54
+msgid "25"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:56
+msgid "26"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:58
+msgid "27"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:60
+msgid "28"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:62
+msgid "29"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:64
+msgid "30"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:66
+msgid "31"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:68
+msgid "32"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:70
+msgid "33"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:72
+msgid "34"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:74
+msgid "35"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:76
+msgid "36"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:78
+msgid "37"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:80
+msgid "38"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:82
+msgid "39"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+#: ../../source/assembly/assembly_hard/part_list.rst:84
+msgid "40"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:87
+msgid "AKARIの組み立てに必要な道具、部品の一覧を記載します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:88
+msgid "各部品にはご参考までに自分達の購入先のリンクを掲載してあります(秋月電子に関しては通販コードを用いて参照ください)。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:89
+msgid "**購入先はあくまで一例ですので、同じ部品であれば他の購入先でも問題ありません。**"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:91
+msgid ""
+"またテストユニットを作成される方は、合わせて :doc:`テストユニットの部品 "
+"<../assembly_test_unit/part_list>` を購入することを推奨します。"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:94
+msgid "必要な道具"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:95
+msgid "- 精密ドライバ(＋)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:96
+msgid "- 精密ドライバ(ー)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:97
+msgid "- はんだごて"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:98
+msgid "- はんだ線"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:99
+msgid "- ニッパ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:100
+msgid "- はさみ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:103
+msgid "部品表"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "No."
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "分類"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "画像"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "名称"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "型番"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "必要数 [個]"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "購入数[組]"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "購入先リンク"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "備考"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "製造品"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|1|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5stack基板"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ー"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|2|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "AKARI Head"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|3|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "AKARI Body"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|4|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "AKARI Cover"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|5|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "AKARI Base"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|6|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "AKARI Plate"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "購入品"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|7|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "Lattepanda Alpha"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "Lattepanda Alpha 864S DFR0546"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "`秋月電子 <https://akizukidenshi.com/catalog/>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-13736)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|8|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5Stack BASIC"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5Stack BASIC v2.6"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-17375)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid ""
+"`スイッチサイエンス <https://www.switch-"
+"science.com/products/7362?_pos=2&_sid=2cc3998fb&_ss=r>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|9|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "温湿度気圧センサユニット ENVⅢ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5STACK-U001-C"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-17213)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid ""
+"`スイッチサイエンス <https://www.switch-"
+"science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|10|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "光センサユニット"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5STACK-LIGHT-UNIT"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-17217)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid ""
+"`スイッチサイエンス <https://www.switch-"
+"science.com/products/4051?_pos=1&_sid=7d953003e&_ss=r>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|11|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "2.1mm標準DCジャック(4A) 基板取付用"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "MJ-179PH"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-06568)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|12|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "PHコネクタ ベース付ポスト トップ型 4P"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "B4B-PH-K-S"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-12804)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|13-A|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "EHコネクタ3P トップ型\""
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "B3B-EH-A"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`共立エレショップ <https://eleshop.jp/shop/g/g5CP14I/>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "13-A,13-Bどちらか一つを購入"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|13-B|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "2mmピッチピンヘッダ 1✕3"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "PH2-1x3SBG"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-06192)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|14|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ボックスヘッダ 20P"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "BH-20SG"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-13176)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|15|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "DC-DCコンバーター"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M78AR05-1"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-13536)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|16|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "積層セラミックコンデンサー 10μF"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "RD20F106Z1EH5L"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(P-03095)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|17|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ターミナルブロック 2P"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "TB-111-2"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(P-02333)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|18|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "2x10(20P)両端コネクタ付IDCリボンケーブル"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "DG01032-0041-01-180mm"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-13378)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|19|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ACアダプター12V5A"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ATS065-P120"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(M-06961)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|20|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "コネクタ付コード 4P PH(赤黒黄緑)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "DG01032-0049-01"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-15554)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|21|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "2.1mm標準DCジャック パネル取付用"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "C-17108"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst
+msgid "(C-17108)"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|22|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "OAK-D Lite"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "OAK-D-LITE OpenCV DepthAIカメラ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|23|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "M5Stack用2x15ピンヘッダ・ソケットセット"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|24|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "Groveコネクタ トップ型"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|25|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "Dynamixel 2XL430-W250-T"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "BTX079"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid ""
+"`ベストテクノロジー "
+"<https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|26|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "HN11-I101 Set"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "BTX098"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid ""
+"`ベストテクノロジー "
+"<https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=204>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|27|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "USB2DXIF"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "BTE101"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid ""
+"`ベストテクノロジー "
+"<https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=291>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|28|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "Robot Cable-X3P 100mm"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "BTX100"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid ""
+"`ベストテクノロジー "
+"<https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=215>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|29|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "USB-C オス to USB-A オス 変換アダプタ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B0BDL77KLX>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|30|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "USBハブ 4ポート15cm"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "U3H-FC02BBK"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|31|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "パネルマウントUSB3.0ケーブル 30cm 左角度"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|32|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "USB Type-Cケーブル 0.3mL字"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|33|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "USB Type-Cケーブル 0.5mL字"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|34|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "DCケーブル 20cm"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "TDDC-020-3"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|35|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ロッカスイッチ汎用ON-OFF 2極"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "as1104"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B00KW0PPVW>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|36|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ボルトM3-6"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|37|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "ボルトM4-5"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|38|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "タッピングビスM2.5-6"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|39|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "MicroSDカード"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "容量2GB以上推奨"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "|40|"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "磁石角型20x10x3"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B08LK9669N>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "41"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "両面テープ"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "SRE-19"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`__"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:1
+msgid "強めの両面テープなら代替可"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:169
+msgid ":doc:`assembly_head` へ進む"
+msgstr ""
+
+#: ../../source/assembly/assembly_hard/part_list.rst:171
+msgid ":doc:`pcb` へ戻る"
+msgstr ""
+

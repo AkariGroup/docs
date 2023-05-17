@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/troubleshoot/reset_servo.rst:3
+msgid "ヘッドの向きを初期位置に戻したいときは"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:5
+msgid "ヘッドのモータ向きを初期位置に戻したいときは下記を実行してください。"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:9
+msgid "**モータ制御を行うアプリ実行中には実施しないこと！**"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:11
+msgid "**挙動がおかしくなる可能性があります。**"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:13
+msgid "toolsディレクトリ内のpythonへ移動します。"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:19
+msgid "モータ位置のリセット用スクリプトを実行します。"
+msgstr ""
+
+#: ../../source/troubleshoot/reset_servo.rst:25
+msgid "これにより、ヘッドの位置が初期位置に戻ります。"
+msgstr ""
+

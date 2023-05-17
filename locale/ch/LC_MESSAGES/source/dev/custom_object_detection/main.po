@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/dev/custom_object_detection/main.rst:3
+msgid "オリジナルの物体認識を作ってみよう"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:5
+msgid "本章は、AKARIで簡単にオリジナルのデータセットで物体認識を行うためのチュートリアルです。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:6
+msgid "学習用の画像収集からアノテーション、学習を行い、その学習結果を使って物体認識を動かしていきます。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:8
+msgid "本チュートリアルで使うレポジトリは下記です(各チュートリアル内でCloneします)。"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:10
+msgid "- akari_dataset_creator"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:11
+msgid "https://github.com/AkariGroup/akari_dataset_creator"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:12
+msgid "- akari_yolo_training"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:13
+msgid "https://github.com/AkariGroup/akari_yolo_training"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:14
+msgid "- akari_yolo_inference"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:15
+msgid "https://github.com/AkariGroup/akari_yolo_inference"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:16
+msgid "- akari_yolo_inference_jupyter"
+msgstr ""
+
+#: ../../source/dev/custom_object_detection/main.rst:17
+msgid "https://github.com/AkariGroup/akari_yolo_inference_jupyter"
+msgstr ""
+

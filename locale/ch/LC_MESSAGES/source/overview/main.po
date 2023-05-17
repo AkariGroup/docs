@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/overview/main.rst:3
+msgid "AKARIの特徴"
+msgstr ""
+
+#: ../../source/overview/main.rst:5
+msgid "ここでは、AKARIの特徴を紹介します。"
+msgstr ""
+
+#: ../../source/overview/main.rst:9
+msgid "小型で使いやすい卓上カメラロボット"
+msgstr ""
+
+#: ../../source/overview/main.rst:11
+msgid "AKARIは、卓上に置ける小型サイズのロボットです。"
+msgstr ""
+
+#: ../../source/overview/main.rst:12
+msgid "機能も大変シンプルで、"
+msgstr ""
+
+#: ../../source/overview/main.rst:13
+msgid "・ カメラのついたヘッドが上下左右の2方向に動かせられる"
+msgstr ""
+
+#: ../../source/overview/main.rst:14
+msgid "・ ボディーに搭載されたディスプレイ(M5Stack)に文字や画像が表示できる"
+msgstr ""
+
+#: ../../source/overview/main.rst:15
+msgid "・ ボタン入力や環境センサの情報が取得できる"
+msgstr ""
+
+#: ../../source/overview/main.rst:16
+msgid "・ ヘッドのGPIOが制御でき、センサなどがモジュールとして追加できる"
+msgstr ""
+
+#: ../../source/overview/main.rst:17
+msgid "のみで、 **簡単に使い方を覚えることができます。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:24
+msgid "AIカメラを搭載！ロボット単体でも多様な画像認識が使える"
+msgstr ""
+
+#: ../../source/overview/main.rst:26
+msgid "カメラにはステレオAIカメラである **OAK-D Lite** を採用しています。"
+msgstr ""
+
+#: ../../source/overview/main.rst:27
+msgid ""
+"カメラに推論を行うことができる演算機能が搭載されており、小型なAKARI単体でも "
+"**顔認識・物体認識はもちろん、セグメンテーションや骨格推定など様々な画像認識を使うことも可能です。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:28
+msgid "またステレオカメラを活かしたデプス推定を行うことも可能です。"
+msgstr ""
+
+#: ../../source/overview/main.rst:29
+msgid ""
+"AKARIに組み込まれたサンプルの他にもOAK-"
+"Dの開発元であるLuxonisからも多くのサンプルが公開されており、幅広い画像認識技術を簡単に試すことができます。"
+msgstr ""
+
+#: ../../source/overview/main.rst:33
+msgid "機能を拡張して使える！"
+msgstr ""
+
+#: ../../source/overview/main.rst:35
+msgid "AKARIは **ヘッドにユニットを追加したり、ベース部を付け替えて使うこともできます。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:36
+msgid "ヘッドにはUSBポートとGPIOが付いており、センサや出力モジュールを追加することができます。"
+msgstr ""
+
+#: ../../source/overview/main.rst:37
+msgid "**画像認識＋αのオリジナル機能を開発したい！** といった場合にすぐに試すことができます。"
+msgstr ""
+
+#: ../../source/overview/main.rst:44
+msgid "webブラウザ上からソフトを書いて動かせる！"
+msgstr ""
+
+#: ../../source/overview/main.rst:46
+msgid "AKARIには本体のPC上のUbuntuから直接プログラムの開発、実行を行う方法の他に、webブラウザ経由でアクセスして開発が行えるwebコンソールを使うことができます。"
+msgstr ""
+
+#: ../../source/overview/main.rst:47
+msgid ""
+"AKARI本体のPCからだけでなく、 "
+"**同一ネットワークに接続されている別のPCやタブレットからアクセスして、JupyterLab上でプログラミングし、AKARIを動かしたり、カメラ映像や認識結果を取得することができます。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:48
+msgid "これによって、 **Linuxの知識がなくても簡単・手軽にプログラミングの勉強や開発を始めることができます。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:58
+msgid "ロボット学習のコンテンツが充実！"
+msgstr ""
+
+#: ../../source/overview/main.rst:60
+msgid "AKARIのハード、ソフトの仕様は本マニュアルにて詳しく公開されています。"
+msgstr ""
+
+#: ../../source/overview/main.rst:61
+msgid "また、AKARI本体の組み立て方やソフトのセットアップ方法、使い方の手順も記載されています。"
+msgstr ""
+
+#: ../../source/overview/main.rst:62
+msgid ""
+"更に、AKARIの開発をする上でのソフトの書き方を紹介したチュートリアル用のJupyter "
+"NotebookやAKARIを動かしながらPythonが学習できる練習問題集も公開されており、 "
+"**初めてロボットを使ったプログラミングに挑戦する方にも、勉強しやすい環境が整っています。**"
+msgstr ""
+
+#: ../../source/overview/main.rst:69
+msgid "完全オープンソース"
+msgstr ""
+
+#: ../../source/overview/main.rst:71
+msgid "ハードの設計やベースとなるソフト、はオープンソース化されています。"
+msgstr ""
+
+#: ../../source/overview/main.rst:72
+msgid "ソフトはApache2.0、ハードはCC BY 4.0のライセンスで公開されています。"
+msgstr ""
+
+#: ../../source/overview/main.rst:73
+msgid "**各ライセンスの規約に従ってさえいれば、使うのも、改変するのも自由です。**"
+msgstr ""
+

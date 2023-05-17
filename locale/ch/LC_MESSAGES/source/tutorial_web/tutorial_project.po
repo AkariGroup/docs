@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial_web/tutorial_project.rst:3
+msgid "AKARIチュートリアルを動かしてみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:5
+msgid "ここでは、AKARIの各機能を動かしながら学習できるプロジェクトである、AKARIチュートリアルの動かし方を説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:9
+msgid "AKARIチュートリアルを開く"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:11
+msgid ":doc:`project` で作成したakari_tutorialを開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:12
+msgid ""
+"サービス一覧からJupyterLabかVisual Studio "
+"Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_tutorialを開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:17
+msgid "AKARIチュートリアルを使ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:19
+msgid "JupyterLab、もしくはVisual Studio Codeが開いたら、左のエクスプローラから各チュートリアルのipynbファイルを開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:20
+msgid "チュートリアルファイルは下記です。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:21
+msgid "**・1.motor.ipynb**"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:22
+msgid "モータの動かし方のチュートリアル"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:23
+msgid "**・2.m5_com.ipynb**"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:24
+msgid "M5のGPIO入出力、センサ情報取得のチュートリアル"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:25
+msgid "**・3.m5_display.ipynb**"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:26
+msgid "M5のディスプレイ制御のチュートリアル"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:27
+msgid "**・4.camera.ipynb**"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:28
+msgid "カメラ映像取得のチュートリアル"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:30
+msgid "ファイル内の説明に沿って進めていくことで、各APIの使い方を学習することが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:31
+msgid ""
+"JupyterLabでもVisual Studio Codeでも、実行したいセルを選んで「Shift」+ "
+"「Enter」でコードを実行することが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:32
+msgid "また、セルをクリックすると、セル内のコードを編集することも出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:33
+msgid "途中練習問題等もありますので、実施する際は直接セル内を書き換えて実行し、動作を試してみてください。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:35
+msgid "webコンソールの使い方の説明は以上となります。"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:37
+msgid ":doc:`main` へ戻る"
+msgstr ""
+
+#: ../../source/tutorial_web/tutorial_project.rst:39
+msgid ":doc:`project` へ戻る"
+msgstr ""
+

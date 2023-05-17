@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/update/main.rst:3
+msgid "ソフトのアップデート"
+msgstr ""
+
+#: ../../source/update/main.rst:5
+msgid ""
+"AKARIのベースソフトはDocker Imageとして配布されており、本体起動時は過去にダウンロードしたDocker "
+"Imageを使用しています。 アップデートが配信された場合、このDocker Imageを更新する必要があります。"
+msgstr ""
+
+#: ../../source/update/main.rst:10
+msgid "ベースソフトのアップデート方法"
+msgstr ""
+
+#: ../../source/update/main.rst:12
+msgid "AKARI本体のUbuntuにログインします。"
+msgstr ""
+
+#: ../../source/update/main.rst:13
+msgid "ターミナルを起動し、下記コマンドを実行します。"
+msgstr ""
+
+#: ../../source/update/main.rst:19
+msgid "AKARI本体を再起動すると、ソフトの更新が行われます。"
+msgstr ""
+
+#: ../../source/update/main.rst
+msgid "各サービスに関しては、webコンソールからサービスを起動した際に更新が行われます。"
+msgstr ""
+

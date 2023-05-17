@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-27 17:23+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial_web/controller.rst:3
+msgid "webコントローラを使ってみよう"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:5
+msgid "webコンソールのcontrollerページにアクセスすることで、ブラウザ上からAKARIの基本機能の制御を試すことが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:6
+msgid "ここではAKARIのwebコントローラを使ってみましよう。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:10
+msgid "必要なサービスを立ち上げる"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:12
+msgid ":doc:`access` の手順でwebコンソールへアクセスしたら、コントローラを使うために必要なサービスを立ち上げていきます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:14
+msgid "Servicesページを開く"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "左のページリストから、Servicesを選択し、開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:21
+msgid "AkariRpcServerを立ち上げる"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "もしAkariRpcServerが立ち上がっていなかったら、実行ボタンをクリックして立ち上げます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "STATUSがRUNNINGに変わればOKです。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "**初回実行時やアップデート配信時は、起動に時間がかかりますのでしばらくお待ちください**"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "AkariRpcServerはAPI実行のため毎回立ち上げる必要があるので、AutoStartのスイッチをONにしておくことを推奨します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "これを実行しておくと、以降AKARIの電源投入時に自動でAkariRpcServerが立ち上がるようになります。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:35
+msgid "ControllerServerを立ち上げる。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "ControllerServerの実行ボタンをクリックして立ち上げます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:46
+msgid "webコントローラにアクセスする"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:48
+msgid "左のページリストから、Controllerを選択し、開きます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:55
+msgid "機能の説明"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:57
+msgid "webコントローラのページの見方と機能について説明します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:64
+msgid "Camera"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:69
+msgid "AKARIのヘッドのカメラの映像をストリーミングできます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:70
+msgid "下記の3種類のボタンを押すことでカメラウインドウの映像が切り替わります。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:72
+msgid "NONE"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:74
+msgid "ストリーミングを停止します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:76
+msgid "RGB"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:78
+msgid "RGBカメラの画像をストリーミングします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:80
+msgid "DEPTH"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:82
+msgid "ステレオカメラによるDepthの画像をストリーミングします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:84
+msgid "FACEDETECTION"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:86
+msgid "顔認識の結果をオーバーレイしたRGB画像をストリーミングします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:88
+msgid "OBJECTDETECTION"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:90
+msgid "mobilenetによる物体認識の結果をオーバーレイしたRGB画像をストリーミングします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:93
+msgid "Sensor input"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:98
+msgid "センサからの各入力値を表示します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:100
+msgid "Button A-C"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "M5前面のボタンA-Cの値を表示します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst
+msgid "ボタンを押すと値が1に変わります。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:105
+msgid "din0, din1, ain0"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:107
+msgid "ヘッドGPIOのdin0, din1, ain0の入力値を表示します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:109
+msgid "Temperature"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:111
+msgid "環境センサの取得した温度を表示します。単位は[℃]です。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:113
+msgid "Pressure"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:115
+msgid "環境センサの取得した圧力を表示します。単位は[Pa]です。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:117
+msgid "Brightness"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:119
+msgid "環境センサの取得した明るさを4096段階で出力します。値が小さいほど明るくなります。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:122
+msgid "Joint"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:127
+msgid "ヘッドのサーボ制御を行います。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:129
+msgid "Servoトグル"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:131
+msgid "サーボのON、OFFを行います。ONにするとヘッドのサーボがロックされます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:133
+msgid "ジョイステック"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:135
+msgid "内側の円をドラッグして動かすことで、ヘッドの上下左右の向きを動かすことが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:137
+msgid "速度設定スライダー&ボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:139
+msgid "サーボの目標速度をスライダーもしくはテキストボックスへの数値入力で変更することが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:141
+msgid "加速度設定スライダー&ボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:143
+msgid "サーボの目標加速度をスライダーもしくはテキストボックスへの数値入力で変更することが出来ます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:145
+msgid "Pan位置設定スライダー&ボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:147
+msgid ""
+"Pan(左右方向)のヘッドの目標位置をスライダーもしくはテキストボックスへの数値入力で指令することが出来ます。 "
+"またCurrent欄に現在位置を表示します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:150
+msgid "Tilt位置設定スライダー&ボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:152
+msgid ""
+"Tilt(上下方向)のヘッドの目標位置をスライダーもしくはテキストボックスへの数値入力で指令することが出来ます。 "
+"またCurrent欄に現在位置を表示します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:155
+#: ../../source/tutorial_web/controller.rst:183
+#: ../../source/tutorial_web/controller.rst:211
+msgid "SENDボタン"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:157
+msgid "指定したヘッドの目標位置への移動を実行します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:159
+msgid "CURRENTボタン"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:161
+msgid "目標位置設定を現在位置にリセットします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:163
+#: ../../source/tutorial_web/controller.rst:187
+#: ../../source/tutorial_web/controller.rst:215
+msgid "RESETボタン"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:165
+msgid "サーボを初期位置に移動します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:168
+msgid "Pinout"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:173
+msgid "ヘッドのGPIO出力を制御します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:175
+msgid "dout0, dout1トグル"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:177
+msgid "ヘッドのdout出力をON,OFFします。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:179
+msgid "pwmout0スライダー&ボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:181
+msgid "ヘッドのpwmout0出力の目標値を設定します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:185
+msgid "ヘッドのpwmout0出力の変更を実行します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:189
+msgid "dout0, dout1,pwmout0出力を初期化します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:192
+msgid "Display"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:197
+msgid "ディスプレイの文字出力を制御します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:199
+msgid "テキストボックス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:201
+msgid "表示する文字列を入力します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:203
+msgid "FontColor, DisplayColorキャンバス"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:205
+msgid "カラーキャンバスから、文字色及び背景色を選択できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:207
+msgid "FontSizeスライダー"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:209
+msgid "表示する文字のサイズを指定できます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:213
+msgid "文字の表示を実行します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:217
+msgid "画面表示をリセットし、白一色に戻します。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:220
+msgid "このControllerで、AKARIの基本機能はほぼ全て試すことができます。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:221
+msgid "次はwebコンソールからサービスを作成してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:223
+msgid ":doc:`service` へ進む"
+msgstr ""
+
+#: ../../source/tutorial_web/controller.rst:225
+msgid ":doc:`access` へ戻る"
+msgstr ""
+

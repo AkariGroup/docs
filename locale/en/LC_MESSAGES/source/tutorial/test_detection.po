@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/tutorial/test_detection.rst:3
+msgid "認識機能を試してみよう"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:5
+msgid "AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサンプルを動かしてみましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:9
+msgid "仮想環境の有効化"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:11
+msgid "仮想環境を有効化していなければ、下記のコマンドで仮想環境を有効化します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:20
+msgid "顔認識を試してみよう"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:22
+msgid "最初に顔認識アプリを試してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:23
+#: ../../source/tutorial/test_detection.rst:45
+msgid "まずface_detectionのディレクトリに移動します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:30
+msgid "次にface_detection.pyを実行します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:36
+msgid "映像をストリーミングするウィンドウが立ち上がって、顔が画面内に写っていると、顔の枠と目、鼻、口の特徴点のプロット、確からしさの数字(0~1)が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:37
+#: ../../source/tutorial/test_detection.rst:60
+#: ../../source/tutorial/test_detection.rst:127
+msgid "カメラ映像のウインドウ上で\"q\"を押すと終了します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:42
+msgid "顔追従を試してみよう"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:44
+msgid "ここでは、顔認識にプラスして、認識した顔の方をAKARIが追いかけてくれる顔追従も試してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:52
+msgid "次にface_tracking.pyを実行します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:58
+msgid "顔認識と同様の認識ウインドウが立ち上がります。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:59
+msgid "顔を動かすと、AKARIのヘッドが動いて顔を追従してくれます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:64
+msgid "物体認識を試してみよう(mobilenet-ssd版)"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:66
+msgid "次に物体認識アプリを試してみましょう。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:67
+msgid "depthai_sampleでは、mobilenet-ssd, YOLOv3-tiny, YOLOv4-tinyの3種類の物体認識が実行できます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:69
+msgid "まずobject_recognitionのディレクトリに移動します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:75
+msgid "mobilenet-ssdの物体認識を実行したい場合は、下記を実行します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:81
+msgid "映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:82
+msgid "カメラ映像のウインドウ上で\"q\" を押すと終了します。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:83
+msgid "mobilenetで認識できる物体の一覧は下記のとおりです。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:85
+#: ../../source/tutorial/test_detection.rst:134
+msgid "aeroplane"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:86
+#: ../../source/tutorial/test_detection.rst:131
+msgid "bicycle"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:87
+#: ../../source/tutorial/test_detection.rst:144
+msgid "bird"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:88
+#: ../../source/tutorial/test_detection.rst:138
+msgid "boat"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:89
+#: ../../source/tutorial/test_detection.rst:169
+msgid "bottle"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:90
+#: ../../source/tutorial/test_detection.rst:135
+msgid "bus"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:91
+#: ../../source/tutorial/test_detection.rst:132
+msgid "car"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:92
+#: ../../source/tutorial/test_detection.rst:145
+msgid "cat"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:93
+#: ../../source/tutorial/test_detection.rst:186
+msgid "chair"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:94
+#: ../../source/tutorial/test_detection.rst:149
+msgid "cow"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:95
+#: ../../source/tutorial/test_detection.rst:190
+msgid "diningtable"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:96
+#: ../../source/tutorial/test_detection.rst:146
+msgid "dog"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:97
+#: ../../source/tutorial/test_detection.rst:147
+msgid "horse"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:98
+#: ../../source/tutorial/test_detection.rst:133
+msgid "motorbike"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:99
+#: ../../source/tutorial/test_detection.rst:130
+msgid "person"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:100
+#: ../../source/tutorial/test_detection.rst:188
+msgid "pottedplant"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:101
+#: ../../source/tutorial/test_detection.rst:148
+msgid "sheep"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:102
+#: ../../source/tutorial/test_detection.rst:187
+msgid "sofa"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:103
+#: ../../source/tutorial/test_detection.rst:136
+msgid "train"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:104
+#: ../../source/tutorial/test_detection.rst:192
+msgid "tvmonitor"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:106
+msgid "また、このアプリでは、オリジナルの物体認識を作成し、それを実行することもできます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:107
+msgid "詳しくは、 :doc:`../dev/custom_object_detection/main` をご覧ください。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:111
+msgid "物体認識を試してみよう(YOLO版)"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:113
+msgid "次にYOLOの物体認識を試してみます。mobolenetと同じobject_recognitionのディレクトリで実行できます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:114
+msgid "デフォルトの状態で起動すると、YOLOv3-tinyが起動するようになっています。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:120
+msgid "YOLOv4-tinyを起動したい場合は、YOLOv4-tinyのモデルをオプションで指定する必要があります。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:126
+msgid "どちらの場合でも映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:128
+msgid "YOLOで認識できる物体の一覧は下記のとおりです。"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:137
+msgid "truck"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:139
+msgid "traffic light"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:140
+msgid "fire hydrant"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:141
+msgid "stop sign"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:142
+msgid "parking meter"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:143
+msgid "bench"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:150
+msgid "elephant"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:151
+msgid "bear"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:152
+msgid "zebra"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:153
+msgid "giraffe"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:154
+msgid "backpack"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:155
+msgid "umbrella"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:156
+msgid "handbag"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:157
+msgid "tie"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:158
+msgid "suitcase"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:159
+msgid "frisbee"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:160
+msgid "skis"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:161
+msgid "snowboard"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:162
+msgid "sports ball"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:163
+msgid "kite"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:164
+msgid "baseball bat"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:165
+msgid "baseball glove"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:166
+msgid "skateboard"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:167
+msgid "surfboard"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:168
+msgid "tennis racket"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:170
+msgid "wine glass"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:171
+msgid "cup"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:172
+msgid "fork"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:173
+msgid "knife"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:174
+msgid "spoon"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:175
+msgid "bowl"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:176
+msgid "banana"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:177
+msgid "apple"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:178
+msgid "sandwich"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:179
+msgid "orange"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:180
+msgid "broccoli"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:181
+msgid "carrot"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:182
+msgid "hot dog"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:183
+msgid "pizza"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:184
+msgid "donut"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:185
+msgid "cake"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:189
+msgid "bed"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:191
+msgid "toilet"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:193
+msgid "laptop"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:194
+msgid "mouse"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:195
+msgid "remote"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:196
+msgid "keyboard"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:197
+msgid "cell phone"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:198
+msgid "microwave"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:199
+msgid "oven"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:200
+msgid "toaster"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:201
+msgid "sink"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:202
+msgid "refrigerator"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:203
+msgid "book"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:204
+msgid "clock"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:205
+msgid "vase"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:206
+msgid "scissors"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:207
+msgid "teddy bear"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:208
+msgid "hair drier"
+msgstr ""
+
+#: ../../source/tutorial/test_detection.rst:209
+msgid "toothbrush"
+msgstr ""
+

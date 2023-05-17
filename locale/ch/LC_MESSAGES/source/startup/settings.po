@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/startup/settings.rst:3
+msgid "事前準備"
+msgstr ""
+
+#: ../../source/startup/settings.rst:5
+msgid "AKARIを使用するための事前準備を行いましょう。"
+msgstr ""
+
+#: ../../source/startup/settings.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/startup/settings.rst:11
+msgid "電源（12V5A以上のACアダプタ、2.1mmDCジャック）"
+msgstr ""
+
+#: ../../source/startup/settings.rst:12
+msgid "Wifiもしくは有線LAN環境"
+msgstr ""
+
+#: ../../source/startup/settings.rst:13
+msgid "HDMI接続可能なPCモニター"
+msgstr ""
+
+#: ../../source/startup/settings.rst:14
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/startup/settings.rst:15
+msgid "マウス"
+msgstr ""
+
+#: ../../source/startup/settings.rst:19
+msgid "接続方法"
+msgstr ""
+
+#: ../../source/startup/settings.rst:28
+msgid "背面のDCジャックに電源プラグを接続します。"
+msgstr ""
+
+#: ../../source/startup/settings.rst:30
+msgid "正面のHDMI端子にHDMIコネクタを接続します。"
+msgstr ""
+
+#: ../../source/startup/settings.rst:32
+msgid "背面のUSB3.0ポート、もしくは正面のUSB-Cポートにマウスやキーボードを接続します。(USBハブの使用を推奨します。)"
+msgstr ""
+
+#: ../../source/startup/settings.rst:36
+msgid "起動方法"
+msgstr ""
+
+#: ../../source/startup/settings.rst:38
+msgid "AKARIボディー部正面にある駆動SWをONにします。"
+msgstr ""
+
+#: ../../source/startup/settings.rst:40
+msgid "AKARIベース部側面にある制御SWを2秒程度長押しし、本体を起動します。起動すると、ベース部内部のLEDが青に点灯します。"
+msgstr ""
+
+#: ../../source/startup/settings.rst:42
+msgid "Ubuntuが起動します。"
+msgstr ""
+

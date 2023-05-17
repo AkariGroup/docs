@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:3
+#: ../../source/assembly/setup_soft/requirement_list.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:5
+msgid "まずは、セットアップに必要なものの用意をします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:11
+msgid "AKARI本体"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:12
+msgid "ディスプレイ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:13
+msgid "PC"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:14
+msgid "microSDカードにデータコピーできる環境(PC、またはUSB-microSDカードリーダ)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:15
+msgid "USBメモリ(8GB以上)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:16
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:17
+msgid "マウス"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:18
+msgid "microSDカード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:21
+msgid "まずは次章からUbuntuのインストールを行っていきます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:23
+msgid ":doc:`install_ubuntu` へ進む"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/requirement_list.rst:25
+msgid ":doc:`main` へ戻る"
+msgstr ""
+

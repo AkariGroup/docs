@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 18:48+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/main.rst:8
+msgid "Contents:"
+msgstr ""
+
+#: ../../source/assembly/main.rst:3
+msgid "AKARIを作ってみよう"
+msgstr ""
+
+#: ../../source/assembly/main.rst:5
+msgid "ここでは、AKARIを自分で作る方法を説明していきます。 本体の組み立て、ソフトのセットアップ手順を公開します。"
+msgstr ""
+
+#~ msgid "AKARIを作ってみよう"
+#~ msgstr ""
+
+#~ msgid "AKARIを作ってみようか"
+#~ msgstr ""
+

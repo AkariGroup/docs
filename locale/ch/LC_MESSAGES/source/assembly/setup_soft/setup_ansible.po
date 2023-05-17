@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, TOYOTA MOTOR CORPORATION
+# This file is distributed under the same license as the akari-manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: akari-manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 17:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ch\n"
+"Language-Team: ch <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:3
+msgid "AKARI環境のセットアップ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:5
+msgid "lattepandaのUbuntu22.04にAKARI用の環境セットアップをしていきます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:9
+msgid "必要なもの"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:11
+msgid "AKARI(Ubuntu22.04インストール済み)"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:12
+msgid "キーボード"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:13
+msgid "マウス"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:17
+msgid "apt upgradeの実行"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:19
+msgid "まずはaptパッケージのupgradeをします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:20
+#: ../../source/assembly/setup_soft/setup_ansible.rst:32
+msgid "ターミナルを開いて、下記コマンドを実行します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:29
+msgid "必要なパッケージのインストール"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:31
+msgid "次にlattepandaに必要なパッケージをインストールします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:40
+msgid "akari_softwareレポジトリのclone"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:42
+msgid "lattepandaのUbuntuにakari_softwareレポジトリをcloneします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:43
+msgid "homeディレクトリ直下で下記のコマンドを実行します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:44
+msgid "**必ずhomeディレクトリで実行してください。home/以外へのcloneは後のセットアップのエラーの元になります！**"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:53
+msgid "git submoduleのclone"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:55
+msgid "akari_softwareレポジトリ内には、いくつかのライブラリがsubmoduleとして含まれています。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:56
+msgid "これらのsubmoduleもcloneする必要があります。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:58
+msgid "akari_softwareの直下に移動します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:64
+msgid "下記コマンドでsubmoduleの設定を初期化します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:72
+msgid "git lfsのpull"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:74
+msgid ""
+"akari_softwareレポジトリ内では、画像や認識モデルなどいくつかのファイルはGit LFS(Large File "
+"Storage)で管理されています。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:75
+msgid "これらは別でpullする必要があります。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:77
+msgid "下記コマンドでLFSのpullとcheckoutをします。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:86
+msgid "ansibleを用いたセットアップ"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:88
+msgid "AKARIのセットアップには、ansibleというセットアップツールを用います。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:90
+msgid "下記コマンドでansibleのセットアップ環境に移動します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:96
+msgid "下記コマンドで、ansibleによる環境セットアップを実行します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:102
+msgid "Default passwordを聞かれます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:103
+msgid "Default passwordには、それぞれUbuntuのログインパスワードを入力します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:104
+msgid "初回実行時は時間がかかるので、終了までしばらく待ちます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:105
+msgid "このセットアップでは、下記の様なタスクが自動で実行されます。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:107
+msgid "ライブラリのインストール"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:108
+msgid "ユーザー権限の設定"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:109
+msgid "dynamixel、M5Stack、OAK-DなどのUSB周辺機器の接続設定"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:110
+msgid "M5Stackへのソフト書き込み"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:112
+msgid "全てがOK(既に変更済み)またはchanged(変更あり)になっており、failed=0であればOKです。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:120
+msgid "本体の再起動"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:122
+msgid "一旦Ubuntuをシャットダウンし、AKARI本体を再起動してください。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:125
+msgid "以上でansibleによるセットアップは完了です。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:126
+msgid "次はakari_software直下にアプリケーションを実行するための仮想実行環境を構築します。"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:129
+msgid ":doc:`setup_env` へ進む"
+msgstr ""
+
+#: ../../source/assembly/setup_soft/setup_ansible.rst:131
+msgid ":doc:`install_ubuntu` へ戻る"
+msgstr ""
+
