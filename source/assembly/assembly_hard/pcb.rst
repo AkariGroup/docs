@@ -2,7 +2,13 @@
 基板を作ろう
 ***********************************************************
 
-| 例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。
+| AKARIの回路基板は :doc:`part_list` のNo.1、テストユニットを作成する場合は :doc:`テストユニットの部品 <../assembly_test_unit/part_list>` のNo.T1の2種類です。
+| これらはakari_hardwareのレポジトリでgerberデータが公開されています。
+
+| (1) M5stack基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/electronics/pcb
+| (T1) TEST UNIT基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/head_units/test_unit/pcb
+
+| 例として、 `(1) M5stack基板` のJLCPCB(https://jlcpcb.com/)での発注方法を説明します。
 | JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。
 | 海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。
 

@@ -154,3 +154,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
    .. code-block:: bash
 
       $ python3 6b_camera_image_stereo_depth.py
+
+:doc:`test_detection` へ進む
+
+:doc:`main` へ戻る
