@@ -33,7 +33,7 @@ apt upgradeの実行
 
 .. code-block:: bash
 
-    sudo apt install git python3.10 python3.10-venv git-lfs
+    sudo apt install git python3.10 python3.10-venv
 
 ===========================================================
 akari_softwareレポジトリのclone
@@ -67,19 +67,6 @@ git submoduleのclone
 
     git submodule update --init --recursive
 
-===========================================================
-git lfsのpull
-===========================================================
-
-| akari_softwareレポジトリ内では、画像や認識モデルなどいくつかのファイルはGit LFS(Large File Storage)で管理されています。
-| これらは別でpullする必要があります。
-
-1. 下記コマンドでLFSのpullとcheckoutをします。
-
-.. code-block:: bash
-
-    git lfs pull
-    git lfs checkout
 
 ===========================================================
 ansibleを用いたセットアップ
