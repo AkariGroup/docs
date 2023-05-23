@@ -163,7 +163,7 @@
    37,"購入品","|37|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
    38,"購入品","|38|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
    39,"購入品","|39|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
-   40,"購入品","|40|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B08LK9669N>`__",
+   40,"購入品","|40|","磁石角型20x10x3",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B09TKF2XQ8>`__","同寸法なら代替可"
    41,"購入品",,"両面テープ","SRE-19",1,1,"`Amazon <https://www.amazon.co.jp/dp/B00BPJKM4E>`__","強めの両面テープなら代替可"
 
 :doc:`assembly_head` へ進む
