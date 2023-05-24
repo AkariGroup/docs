@@ -43,6 +43,17 @@ venvのセットアップ
    pip install akari_client[depthai]
    pip install akari_proto
 
+
+.. tip::
+
+   venvを終了したい場合は下記コマンドを実行します。
+
+   .. code-block:: bash
+
+      deactivate
+
+
+
 | 次はM5StackのSDカードのデータ書き込みを行います。
 |
 
