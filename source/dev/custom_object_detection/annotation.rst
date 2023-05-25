@@ -14,17 +14,48 @@
 | アノテーションは:doc:`image_collection` で行ったように自動化する方法もありますが、基本的には手作業が必要となります。
 
 ===========================================================
-アノテーションをする
+labelImgのセットアップ
 ===========================================================
 
 | アノテーションには専用のソフトを用います。ソフトは様々な種類がありますが、今回はlabelImgを用います。
-| 下記コマンドでlabelImgをインストールして実行します。
+| 下記コマンドでlabelImgをセットアップして起動します。
+
+1. labelImgをcloneする。
 
 .. code-block:: bash
 
-   sudo apt install -y python3-pyqt5
-   pip3 install labelImg --user
-   labelImg
+   git clone https://github.com/heartexlabs/labelImg.git
+
+2. 仮想環境をセットアップする。
+
+.. code-block:: bash
+
+   cd labelImg
+   python3 -m venv venv
+   . venv/bin/activate
+
+3. 必要なライブラリをインストールする。
+
+.. code-block:: bash
+
+   pip install pyqt5==5.15.2 lxml
+
+4. labelImgをビルドする。
+
+.. code-block:: bash
+
+   make qt5py3
+
+5. labelImgを起動する。
+
+.. code-block:: bash
+
+   python3 labelImg.py
+
+
+===========================================================
+labelImgでアノテーションをする
+===========================================================
 
 | 下記のウィンドウが開くので、「ディレクトリを開く」で :doc:`image_collection` で収集した画像のディレクトリを選択します。
 | 先程の画像の一覧が読み込まれます。
