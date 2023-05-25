@@ -2,7 +2,7 @@
    sphinx-quickstart on Fri Mar 20 19:52:51 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-   
+
 .. meta::
    :description: オープンソースの小型卓上ロボット「AKARI」のwebマニュアルです。
 
@@ -31,8 +31,9 @@ Welcome to AKARI manual!
    source/update/main
    source/sdk_reference/main
 
+***********************************************************
 Indices and tables
-===========================================================
+***********************************************************
 
 * :ref:`genindex`
 * :ref:`search`
