@@ -17,7 +17,7 @@ akari_practiceのprojectの作成
 | git URL: https://github.com/AkariGroup/akari_practice.git
 | gitブランチ名: main
 
-2. サービス一覧からJupyterLabかVisual Studio Codeのサービスをあらかじめ起動し、プロジェクト一覧からakari_practiceを開きます。
+2. サービス一覧からJupyterLabのサービスをあらかじめ起動し、プロジェクト一覧からakari_practiceを開きます。
 
 ===========================================================
 akari_practiceの進め方
