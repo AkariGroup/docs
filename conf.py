@@ -18,13 +18,13 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'akari-manual'
+project = 'AKARI manual'
 copyright = '2023, TOYOTA MOTOR CORPORATION'
 author = 'TOYOTA MOTOR CORPORATION'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
-
+html_title = 'AKARI webマニュアル'
 
 # -- General configuration ---------------------------------------------------
 

@@ -29,7 +29,7 @@ Jupyter serviceのSTATUSの確認
 .. image:: ../images/troubleshooting/jupyter_status.png
     :width: 900px
 
-| STATUSが"Up"だった場合は、他のブラウザを試すか、ブラウザのキャッシュを削除してみてください。。
+| STATUSが"Up"だった場合は、他のブラウザを試すか、ブラウザのキャッシュを削除してみてください。
 | STATUSが"Exited"だった場合は、次に説明する方法でJupyterのvenvを削除します。
 
 ===========================================================
