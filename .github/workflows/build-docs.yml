@@ -23,16 +23,22 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.8'
-    - name: Install poetry
+    - name: Set up venv
       run: |
-        curl -sSL https://install.python-poetry.org | python3 -
-        echo "$POETRY_HOME/bin" >> $GITHUB_PATH
+        python3 -m venv venv
+        . venv/bin/activate
     - name: Install Python dependencies
       run: |
-        poetry install
+        pip install -r requirements.txt
+    - name: Get multi language text
+      run: |
+        make gettext
     - name: Build documents
       run: |
-        poetry run make html
+        sphinx-intl update -p _build/gettext -l ch -l en
+        sphinx-build . _build/ja -D language='ja'
+        sphinx-build . _build/en -D language='en'
+        sphinx-build . _build/ch -D language='ch'
     - name: Deploy documents
       shell: bash
       if: github.ref == 'refs/heads/main'

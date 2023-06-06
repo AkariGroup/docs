@@ -18,9 +18,9 @@ titleEcho "Build document"
   source venv/bin/activate
   make gettext
   sphinx-intl update -p _build/gettext -l ch -l en
-  sphinx-build . _build/ja -D language='ja'
-  sphinx-build . _build/en -D language='en'
-  sphinx-build . _build/ch -D language='ch'
+  sphinx-build . _build -D language='ja'
+  sphinx-build . _build -D language='en'
+  sphinx-build . _build -D language='ch'
   successEcho "Document built."
 )
 

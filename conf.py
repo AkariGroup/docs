@@ -57,7 +57,9 @@ templates_path = ['_templates']
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = 'ja,en,ch'
-#sitemap_url_scheme= "{link}"
+defaultLang: 'ja'
+sitemap_url_scheme = "{lang}{link}"
+sitemap_locales = ['ja', 'en', 'ch']
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False
 # List of patterns, relative to source directory, that match files and
@@ -76,10 +78,12 @@ html_theme = "sphinx_rtd_theme"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['source/_static']
 
 html_style = 'css/akaridoc_theme.css'
-
+html_js_files = [
+    'js/flyout.js'
+]
 autosummary_generate = True
 autodoc_typehints = 'description'
 autodoc_default_options = {
