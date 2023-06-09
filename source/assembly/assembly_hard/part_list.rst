@@ -151,7 +151,7 @@
    25,"購入品","|25|","Dynamixel 2XL430-W250-T","BTX079",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262>`__",
    26,"購入品","|26|","HN11-I101 Set","BTX098",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=204>`__",
    27,"購入品","|27|","USB2DXIF","BTE101",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=291>`__",
-   28,"購入品","|28|","Robot Cable-X3P 100mm","BTX100",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=215>`__",
+   28,"購入品","|28|","Robot Cable-X3P 180mm","BTX104",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=237>`__",
    29,"購入品","|29|","USB-C オス to USB-A オス 変換アダプタ",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0BDL77KLX>`__",
    30,"購入品","|30|","USBハブ 4ポート15cm","U3H-FC02BBK",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07CMF41B5>`__",
    31,"購入品","|31|","パネルマウントUSB3.0ケーブル 30cm 左角度",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08LPBS15D?th=1>`__",
