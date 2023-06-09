@@ -269,7 +269,7 @@
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (27) USB2DXIF 1個
-| (28) Robot Cable-X3P 100mm 1個
+| (28) Robot Cable-X3P 180mm 1個
 | (29) USB-CオスtoUSB-Aオス 変換アダプタ 1個
 
 .. image:: ../../images/assembly/body/body09-01.jpg
