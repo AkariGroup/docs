@@ -63,18 +63,70 @@ akari_yolo_inferenceのClone
 
 .. code-block:: bash
 
-   python3 main.py -m <モデルファイルへのパス> -c <ラベルファイルへのパス>
+   python3 yolo.py -m <モデルファイルへのパス> -c <ラベルファイルへのパス>
 
 例) `my_detection.blob` をmodelの中に、 `my_detection.json` をjsonの中に保存してある場合
 
 .. code-block:: bash
 
-   python3 main.py -m model/my_detection.blob -c json/my_detection.json
+   python3 yolo.py -m model/my_detection.blob -c json/my_detection.json
 
 4. カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。
 
 | 映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。
 
+.. note::
+
+   | `-f` オプションの後に数値を入れることで、入力のrgbのfpsを変更することができます。(デフォルトは10FPSです。)
+   | 例) 20FPSで実行する場合
+
+      .. code-block:: bash
+
+            python3 yolo.py -f 20
+   
+   | ただし、OAK-Dの特性上、推論のFPSより入力のFPSを大きくすると、遅延が大きくなる、ソフトが落ちるといった問題が発生することがあります。
+   | 実行中の映像に表示されるNN FPSの値が推論のFPSなので、モデルに応じてこれより小さい値を入れることを推奨します。
+
+
+-----------------------------------------------------------
+空間物体認識の実行
+-----------------------------------------------------------
+
+同様に、空間内の3次元位置が推定可能な物体認識も使うことが出来ます。
+
+1. akari_yolo_inference内に移動します。
+
+.. code-block:: bash
+
+   cd akari_yolo_inference
+
+2. venvを有効化していなければ下記を実行します。
+
+.. code-block:: bash
+
+   source venv/bin/activate
+
+3. 下記を実行します。
+
+.. code-block:: bash
+
+   python3 spatial_yolo.py -m <モデルファイルへのパス> -c <ラベルファイルへのパス>
+
+例) `my_detection.blob` をmodelの中に、 `my_detection.json` をjsonの中に保存してある場合
+
+.. code-block:: bash
+
+   python3 spatial_yolo.py -m model/my_detection.blob -c json/my_detection.json
+
+4. カメラ出力のウインドウと、3次元位置の俯瞰マップが描画されます。学習させた物体を映すと、物体ラベルと3次元位置が表示され、俯瞰マップ上にも物体位置を表す点が表示されます。
+
+.. note::
+
+   | こちらも `-f` オプションの後に数値を入れることで、入力のRGBとdepthのfpsを変更することができます。(デフォルトは10FPSです。)
+   | 注意点も上記の `yolo.py` の場合と同様です。
+   | また、 `-d` オプションをつけることで、推論に入力しているRGB、depthの映像も画面に表示することができます。
+   | こちらは引数は必要なく、 `-d` をつけるのみで有効になります。
+   | RGBは正方形にしてから認識に入力しているため、上下に黒枠が追加された形で出力されます。
 
 ===========================================================
 webコンソール上でテストする
