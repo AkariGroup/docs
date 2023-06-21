@@ -15,3 +15,4 @@ Scratch3.0を使うと、ブロックをつなげていくだけで簡単にAKAR
    setup
    playing
    ref_akari_blocks
+   ref_akari_camera
