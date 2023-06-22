@@ -159,7 +159,7 @@
    33,"購入品","|33|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
    34,"購入品","|34|","DCケーブル 20cm",TDDC-020-3,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__",
    35,"購入品","|35|","ロッカスイッチ汎用ON-OFF 2極",as1104,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00KW0PPVW>`__",
-   36,"購入品","|36|","ボルトM3-6",,4,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
+   36,"購入品","|36|","ボルトM3-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
    37,"購入品","|37|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
    38,"購入品","|38|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
    39,"購入品","|39|","MicroSDカード",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
