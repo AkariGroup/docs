@@ -9,6 +9,11 @@
 
 servoをONにする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/block_motor_01.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -17,6 +22,10 @@ servoをONにする
 servoをOFFにする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_02.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -25,6 +34,10 @@ servoをOFFにする
 [関節名]の位置
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_03.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -33,6 +46,10 @@ servoをOFFにする
 [関節名]を[角度]°に移動する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_04.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -42,6 +59,10 @@ servoをOFFにする
 panを[pan角度]°、tiltを[tilt角度]°に移動する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_05.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -51,15 +72,10 @@ panを[pan角度]°、tiltを[tilt角度]°に移動する
 [関節名]を現在位置から[角度]°移動する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Block type:
-    COMMAND
-  Ref:
-    | 指定した[関節名]を現在位置から指定した[角度]だけ移動します。
-    | サーボをONにしていないと動作しません。
+  .. image:: ../images/scratch/block_motor_06.jpg
+    :height: 60px
 
-[関節名]を現在位置から[角度]°移動する
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+  |
   Block type:
     COMMAND
   Ref:
@@ -69,6 +85,10 @@ panを[pan角度]°、tiltを[tilt角度]°に移動する
 panをを現在位置から[pan角度]°、tiltをを現在位置から[tilt角度]°移動する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_07.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -78,6 +98,10 @@ panをを現在位置から[pan角度]°、tiltをを現在位置から[tilt角�
 モータ角速度を[速度]°/sにする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_08.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -86,6 +110,10 @@ panをを現在位置から[pan角度]°、tiltをを現在位置から[tilt角�
 モータ角加速度を[ACC]°/s^2にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_motor_09.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -98,6 +126,10 @@ M5通信
 ボタン[ID]が押されたとき
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_01.jpg
+    :height: 60px
+
+  |
   Block type:
     HAT
   Ref:
@@ -107,6 +139,10 @@ M5通信
 ボタン[ID]が押された
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_02.jpg
+    :height: 60px
+
+  |
   Block type:
     BOOLEAN
   Ref:
@@ -115,6 +151,10 @@ M5通信
 din[ID]がLowになったとき
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_03.jpg
+    :height: 60px
+
+  |
   Block type:
     HAT
   Ref:
@@ -124,6 +164,10 @@ din[ID]がLowになったとき
 din[ID]がLow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_04.jpg
+    :height: 60px
+
+  |
   Block type:
     BOOLEAN
   Ref:
@@ -132,6 +176,10 @@ din[ID]がLow
 ain0の値
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_05.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -140,6 +188,10 @@ ain0の値
 [センサ]の値
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_06.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -149,6 +201,10 @@ ain0の値
 dout[ID]を[値]にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_07.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -157,6 +213,10 @@ dout[ID]を[値]にする
 pwmout0を[VALUE]にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_m5_08.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -170,6 +230,10 @@ pwmout0を[VALUE]にする
 画面表示の背景色を[色]に設定する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_display_01.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -179,6 +243,10 @@ pwmout0を[VALUE]にする
 画面表示の文字色を[色]に設定する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_display_02.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -188,6 +256,10 @@ pwmout0を[VALUE]にする
 画面表示の文字サイズを[サイズ]にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_display_03.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -198,6 +270,10 @@ pwmout0を[VALUE]にする
 画面に[テキスト]を表示する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_display_04.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -208,6 +284,10 @@ pwmout0を[VALUE]にする
 画面に画像[パス]を表示する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  .. image:: ../images/scratch/block_display_05.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:

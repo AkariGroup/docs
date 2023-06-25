@@ -9,6 +9,11 @@
 
 [モード]の映像をONにする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_function_01.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -17,6 +22,11 @@
 
 カメラ映像をOFFにする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_function_02.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -28,6 +38,11 @@
 
 【顔】結果を取得する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_face_01.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -37,7 +52,11 @@
 
 【顔】顔が認識された
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  Block type:
+
+  .. image:: ../images/scratch/camera_face_02.jpg
+    :height: 60px
+
+  |  Block type:
     BOOLEAN
   Ref:
     | 取得した結果のうち、顔が認識されていたらTrue、認識されていなければFalseを返します。
@@ -45,6 +64,11 @@
 
 【顔】顔の[座標軸]位置
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_face_03.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -53,6 +77,11 @@
 
 【顔】顔の[座標軸]方向のサイズ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_face_04.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -64,6 +93,11 @@
 
 【物体】結果を取得する
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_01.jpg
+    :height: 60px
+
+  |
   Block type:
     COMMAND
   Ref:
@@ -73,6 +107,11 @@
 
 【物体】[名前]が認識された
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_02.jpg
+    :height: 60px
+
+  |
   Block type:
     BOOLEAN
   Ref:
@@ -80,6 +119,11 @@
 
 【物体】認識した[名前]の数
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_03.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -87,6 +131,11 @@
 
 【物体】認識した数
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_04.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -94,6 +143,11 @@
 
 【物体】[ID]番目の名前
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_05.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -102,6 +156,11 @@
 
 【物体】[ID]番目の[座標軸]位置
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_06.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:
@@ -110,6 +169,11 @@
 
 【物体】[ID]番目の[座標軸]方向のサイズ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../images/scratch/camera_object_07.jpg
+    :height: 60px
+
+  |
   Block type:
     REPORTER
   Ref:

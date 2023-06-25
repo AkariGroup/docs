@@ -15,6 +15,7 @@ Scratchの起動
   | `akari_scratch/docker` 内で下記コマンドを実行し、akari_scratchを起動します。
 
   .. code-block:: bash
+
     docker compose -f docker-compose.yml up
 
   | akari_scratchのcompileが始まるので、Compiled successfullyの表示になるまでしばらく待ちます。
@@ -23,7 +24,7 @@ Scratchの起動
 
 3. ブラウザからscratchにアクセスする。
 
-  | :doc: `../tutorial_web/access.rst` と同様の方法でAKARIのIPアドレスを調べ、webブラウザのwebアドレス欄に `[AKARIのIPアドレス]:8601` を入力してアクセスします。
+  | :doc:`../tutorial_web/access` と同様の方法でAKARIのIPアドレスを調べ、webブラウザのwebアドレス欄に `[AKARIのIPアドレス]:8601` を入力してアクセスします。
   | AKARI本体から直接アクセスしている場合は、 `localhost:8601` でもアクセスできます。
 
 3. scratchが起動する。
@@ -36,11 +37,20 @@ AKARIの動かし方
 
 1. Scratchの画面左下の拡張機能ボタンを押す。
 
+.. image:: ../images/scratch/playing_01.jpg
+    :width: 600px
+
 2. 拡張機能画面を下にスクロールして、AkariBlocksを選択する。
+
+.. image:: ../images/scratch/playing_02.jpg
+    :width: 600px
 
 3. TOP画面でAkariBlocksのブロックが使えるようになる。
 
 4. 同様に拡張機能画面を再度開き、AkariCameraの拡張機能を選択する。
+
+.. image:: ../images/scratch/playing_03.jpg
+    :width: 600px
 
 5. AkariCameraのブロックが使えるようになる。
 
@@ -62,9 +72,15 @@ AKARIの動かし方
   | Scratch上の画面上部の「ファイル」→「コンピュータから読み込む」を選択し、先程ダウンロードした `bow.sb3` を開きます。
   | Scratch画面中央に、サンプルプログラムが表示されます。
 
+.. image:: ../images/scratch/playing_04.jpg
+    :width: 600px
+
 3. プロジェクトを実行する。
 
   | Scratch上のサンプルプログラムをクリックすると、動作が実行されAKARIがヘッドを上下に動かすおじぎのモーションをします。
+
+.. image:: ../images/scratch/playing_05.jpg
+    :width: 600px
 
 | 以上がScratchの使い方の簡単な説明となります。
 | 次はAKARI拡張機能の各ブロックの仕様を説明します。
