@@ -77,6 +77,10 @@ AKARIの情報元
 
    AKARIの使い方とpythonを学べる練習問題の進め方が記載されています。
 
+#. :doc:`scratch/main`
+
+   Scratch版の使い方が記載されています。
+
 #. :doc:`dev/main`
 
    AKARIを使った開発のヒントが記載してあります。
