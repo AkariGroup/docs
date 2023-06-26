@@ -8,7 +8,7 @@ Scratchで動かしてみよう
 Scratchの起動
 ===========================================================
 
-| :doc: `setup` の準備が終わったら、scratchを起動します。
+| :doc:`setup` の準備が終わったら、scratchを起動します。
 
 1. akari_scratchのdockerを起動する。
 
