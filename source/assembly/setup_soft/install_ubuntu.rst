@@ -21,8 +21,8 @@ Ubuntuの起動用USBを作成する。
 | 2. 下記リンクからUniversal USB installerをダウンロードします。
 | https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-2.0.1.0.exe
 | 3. USBメモリをパソコンに差し込み、Universal USB Installerを起動します。
-| 4. Step.1のDistributionとしてUbuntuを選択します。
-| 5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu20.04のisoを指定します。
+| 4. Step.1のDistributionとして「Try or Install Ubuntu」を選択します。
+| 5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu22.04のisoを指定します。
 | 6. Step.3のUSBメモリの選択で、インストールするUSBメモリを指定します。
 
 .. image:: ../../images/usb_installer_setting.jpg
