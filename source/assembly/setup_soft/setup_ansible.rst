@@ -86,8 +86,8 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
     ./run-ansible.py -i hosts ./system.yml -K --diff -c local
 
-| Default passwordを聞かれます。
-| Default passwordには、それぞれUbuntuのログインパスワードを入力します。
+| BECOME passwordを聞かれます。
+| BECOME passwordには、Ubuntuのログインパスワードを入力します。
 | 初回実行時は時間がかかるので、終了までしばらく待ちます。
 | このセットアップでは、下記の様なタスクが自動で実行されます。
 
