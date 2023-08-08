@@ -192,6 +192,7 @@
     :width: 400px
 
 2. `(31) パネルマウントUSB3.0ケーブル 30cm 左角度` に `(36) ボルトM3-6` で表側から2点ネジ留めする。
+| USB端子の向きに指定はない。
 
 .. image:: ../../images/assembly/head/head06-03.jpg
     :width: 400px
