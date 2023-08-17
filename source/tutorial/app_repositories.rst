@@ -32,6 +32,16 @@ URL: https://github.com/AkariGroup/akari_yolo_inference
 | デフォルトではYOLOv4の認識を行う設定になっていますが、自身で学習させたYOLOの推論モデルを使うこともできます。
 | 詳しい使い方は :doc:`../dev/custom_object_detection/testing` を参照ください。
 
+akari_motion_server
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_motion_server.git
+
+| AKARIヘッドを動かして感情表現をするモーションサーバアプリです。
+| grpcでモーション名を送ると、そのモーションを再生します。
+| 割り込み再生や優先度による割り込みブロックにも対応しています。
+
+
 :doc:`main` へ戻る
 
 :doc:`test_uvc_camera` へ戻る
