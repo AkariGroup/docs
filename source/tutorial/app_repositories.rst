@@ -41,6 +41,15 @@ URL: https://github.com/AkariGroup/akari_motion_server.git
 | grpcでモーション名を送ると、そのモーションを再生します。
 | 割り込み再生や優先度による割り込みブロックにも対応しています。
 
+akari_chatgpt_bot
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_chatgpt_bot.git
+
+| AKARIでchatGPTを使った音声対話botを使用するサンプルです。
+| 音声認識、文章生成、音声合成を組み合わせて、高速で応答するチャットボットを作成しています。
+| それぞれの要素に対するサンプルアプリも用意されているため、各機能を個別で試したり、自身のアプリに実装する用途でも使えます。
+
 
 :doc:`main` へ戻る
 
