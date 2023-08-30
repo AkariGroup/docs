@@ -94,6 +94,8 @@ akari_yolo_inferenceのClone
 
 同様に、空間内の3次元位置が推定可能な物体認識も使うことが出来ます。
 
+..  youtube:: 4lPpDrTqanQ
+
 1. akari_yolo_inference内に移動します。
 
 .. code-block:: bash
@@ -136,6 +138,8 @@ akari_yolo_inferenceのClone
 -----------------------------------------------------------
 
 同様に、空間内の3次元位置推定に基づいて、検出した物体のトラッキングを行うアプリもあります。
+
+..  youtube:: OlwG40fLblM
 
 1. akari_yolo_inference内に移動します。
 
