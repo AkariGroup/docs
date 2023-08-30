@@ -31,13 +31,16 @@ AKARIの情報元
 
    | AKARIのハード、ソフトはgit上に公開されています。
    | github Group: https://github.com/AkariGroup
-   
+
    代表的なレポジトリは下記となります。
 
    - ベースソフト： https://github.com/AkariGroup/akari_software
    - ハードウェアの情報: https://github.com/AkariGroup/akari_hardware
    - 本マニュアルのソース: https://github.com/AkariGroup/docs
 
+* YouTube
+   | 本マニュアルにリンクされている動画などがアップロードされています。
+   | https://www.youtube.com/@akarirobot
 
 ***********************************************************
 本マニュアルの構成
