@@ -55,6 +55,17 @@ URL: https://github.com/AkariGroup/akari_chatgpt_bot.git
 | それぞれの要素に対するサンプルアプリも用意されているため、各機能を個別で試したり、自身のアプリに実装する用途でも使えます。
 | **注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。**
 
+tracking_annotator
+===========================================================
+
+URL: https://github.com/AkariGroup/tracking_annotator.git
+
+.. image:: https://raw.githubusercontent.com/AkariGroup/tracking_annotator/main/jpg/tracking_annotator.jpg
+   :width: 600
+
+| OAK-Dのtracking機能を使い、認識できなかったフレームを自動でYOLOアノテーションし、保存するアプリです。
+| 作成した学習モデルを再学習して強化する用途に便利です。
+
 
 :doc:`main` へ戻る
 
