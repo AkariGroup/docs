@@ -11,6 +11,8 @@ akari_hand_tracking
 
 URL: https://github.com/AkariGroup/akari_hand_tracking
 
+..  youtube:: jrmozEp-8qc
+
 | AKARIが認識した手の追従が出来るアプリです。
 | 引数で手のポーズを指定すると、そのポーズをしている時のみ追従することができます。
 
