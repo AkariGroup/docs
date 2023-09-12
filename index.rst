@@ -27,6 +27,7 @@ Welcome to AKARI manual!
    source/spec/main
    source/practice/main
    source/scratch/main
+   source/ros2/main
    source/dev/main
    source/troubleshoot/main
    source/update/main
