@@ -12,23 +12,45 @@ https://akarigroup.github.io/docs/
 1. docsをクローンする
 
 ~~~bash
-   $ git clone https://github.com/AkariGroup/docs.git
+   git clone https://github.com/AkariGroup/docs.git
 ~~~
 
 2. submoduleを更新する
 
 ~~~bash
-   $ cd ~/docs
-   $ git submodule update --init --recursive
+   cd ~/docs
+   git submodule update --init --recursive
 ~~~
 
-3. セットアップスクリプトを実行する。これにより環境の構築とドキュメントのビルドが行われ、デスクトップにリンクが生成される。
-
+3. apt updateを実行
 
 ~~~bash
-   $ cd ~/docs/setup
-   $ ./setup.sh
+   sudo apt update
 ~~~
+
+4. 必要なライブラリのインストール
+
+~~~bash
+   sudo apt install curl python3.10 python3.10-venv
+~~~
+
+5. 仮想環境の作成
+
+~~~bash
+   python3 -m venv venv
+   . venv/bin/activate
+   pip install -r requirements.txt
+~~~
+
+6. ビルドの実行
+
+~~~bash
+   cd setup
+   ./build.sh
+~~~
+
+1回セットアップが完了した後は、6.のみの再実行でドキュメントの再ビルドができます。  
+
 
 ## ドキュメントの確認
 
@@ -37,15 +59,3 @@ https://akarigroup.github.io/docs/
 ~~~bash
    $ sensible-browser _build/html/index.html
 ~~~
-
-## ドキュメントの再ビルド
-
-1回セットアップが完了した後は、下記でドキュメントの再ビルドができます。
-ドキュメントを更新した場合は下記でビルドして確認して下さい。
-
-
-~~~bash
-   $ cd ~/docs/setup
-   $ ./build.sh
-~~~
-
