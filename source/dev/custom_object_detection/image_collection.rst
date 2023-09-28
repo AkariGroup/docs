@@ -97,7 +97,7 @@ Google画像検索から画像を自動収集する
 .. code-block:: bash
 
    cd google-images-download
-   pip install -r requirements.txt
+   pip install selenium==4.0.0
    python3 setup.py install --user
 
 3. google chromeをインストールします。
@@ -115,10 +115,9 @@ Google画像検索から画像を自動収集する
 
    apt list | grep google-chrome-stable
 
-5.  choromeのバージョンと同じバージョンのchromedriverを下記リンク先からダウンロードします。|
+5.  choromeのバージョンと同じバージョンのchromedriverを下記リンク先からダウンロードします。
 
 | https://googlechromelabs.github.io/chrome-for-testing/#stable
-
 | versionの同じchromedriverのlinux64版のリンクをコピーし、下記のコマンドでダウンロードします。
 
 .. code-block:: bash
@@ -134,9 +133,9 @@ Google画像検索から画像を自動収集する
 
 .. code-block:: bash
 
-   googleimagesdownload -l 120 -k 'ペン' -f jpg -cd ~/chromedriver
+   googleimagesdownload -l 120 -k 'ペン' -f jpg --chromedriver ~/chromedriver
 
-6. 画像収集が実行され、実行したディレクトリに *downloads* ディレクトリが作られ、その中に画像が収集されます。
+8. 画像収集が実行され、実行したディレクトリに *downloads* ディレクトリが作られ、その中に画像が収集されます。
 
 画像検索結果なので、全然違うものなど認識の学習に適さない画像も混ざっています。必ず中身をチェックして、不要なものは削除しましょう。
 
