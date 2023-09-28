@@ -34,42 +34,122 @@ akari_ros2には下記のパッケージが含まれています。
 ROS2サーバの起動
 ===========================================================
 
-| サーバ側のアプリは下記のコマンドでまとめて起動します。
+| 最初にサーバ側のノードの起動が必要になります。
+| 下記のコマンドでまとめて起動します。
 
   .. code-block:: bash
 
     ros2 launch akari_launch akari_launch.py
 
-| 上記コマンドでは、下記のノードをまとめて起動しています。
+| 上記launchファイルでは、下記のノードをまとめて起動しています。
 
 ・ **joint_state_publisher** (パッケージ: state_publisher)
   各関節の状態をpublishするpublisher
 ・ **m5stack_publisher** (パッケージ: state_publisher)
   M5の状態をpublishするpublisher
-・servo_server
+・ **servo_server** (パッケージ: servo_server)
+  ヘッドのサーボのコマンドを実行するservice server
+・ **m5_server** (パッケージ: m5_server)
+  M5のコマンドを実行するservice server
 
+===========================================================
+サンプルの実行
+===========================================================
 
+| サーバ側のノードが起動したら、クライアントのサンプルで機能を確認できます。
 
+サーボの制御
+-----------------------------------------------------------
 
+1a. サーボ状態の取得
 
+  | サーボの現在状態を取得し、表示するサンプルです。
 
   .. code-block:: bash
 
-    . ~/ros2_ws/install/local_setup.bash
+    ros2 run akari_client_example joint_state_subscriber
 
-  .. note::
+1b.サーボの制御
 
-    | **こちらの読み込みも、ROS2を使う場合ターミナルを起動する度に実行する必要があります。**
-    | **下記コマンドを実行して~/.bashrcに追記しておくと自動実行されるようになります。**
+  | ヘッドのサーボ制御を行うサンプルクライアントです。
+  | 実行すると、速度、加速度を変えながらサーボが動きます。
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-      echo ". ~/ros2_ws/install/local_setup.bash" >> ~/.bashrc
+    ros2 run akari_client_example servo_client
+
+1c. サーボの制御(action)
+
+  | ヘッドのサーボ制御を行うサンプルのaction版です。
+  | actionで実行すると、サーボの移動中に現在位置をフィードバックとして受け取ることができます。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example move_joints_action_client
 
 
-以上でセットアップは終了です。
-次は、実際に起動して使ってみましょう。
+環境情報の取得
+-----------------------------------------------------------
 
-:doc:`example` へ進む
+2a. M5の情報取得
+
+  | M5の現在状態を取得し、表示するサンプルです。
+  | ボタン、GPIOの入出力、環境センサの入力(気温、気圧、明るさ)が取得できます。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber
+
+GPIO出力
+-----------------------------------------------------------
+
+3a. GPIO出力
+
+  | ヘッドのGPIOの出力制御をするサンプルです。
+  | 各ステップごとにGPIOデジタル出力(dout0,dout1)とPWM出力(pwmout0)が変化します。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber set_pinout
+
+ディスプレイ制御
+-----------------------------------------------------------
+
+4a. ディスプレイ背景カラー出力
+
+  | ディスプレイ背景カラー変更のサンプルです。各ステップごとにM5の背景カラー変更を行います。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber display_color
+
+4b. ディスプレイテキスト出力
+
+  | ディスプレイテキスト出力のサンプルです。ステップごとにM5の画面にテキストを出力します。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber display_text
+
+4c. ディスプレイ画像出力
+
+  | ディスプレイ画像出力のサンプルです。ステップごとにM5の画面の様々な位置にサイズを変えた画像を出力します。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber display_image
+
+その他の制御
+-----------------------------------------------------------
+
+5a.M5リセット
+
+  | M5リセットのサンプルです。M5にリセット信号を送ります。
+
+  .. code-block:: bash
+
+    ros2 run akari_client_example m5_subscriber reset_m5
+
+:doc:`specs` へ進む
 
 :doc:`main` へ戻る
