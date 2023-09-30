@@ -90,13 +90,14 @@ Google画像検索から画像を自動収集する
 
 .. code-block:: bash
 
-   git clone https://github.com/Joeclinton1/google-images-download.git
+   git clone https://github.com/janvdp/google-images-download.git
 
 2. ライブラリのインストールを行います。
 
 .. code-block:: bash
 
    cd google-images-download
+   pip install selenium==4.0.0
    python3 setup.py install --user
 
 3. google chromeをインストールします。
@@ -108,26 +109,33 @@ Google画像検索から画像を自動収集する
    sudo apt update
    sudo apt install google-chrome-stable
 
-4.  chromedriverを下記リンクからダウンロードします。自分のchromeと同じバージョンをダウンロードします。
-
-| https://chromedriver.chromium.org/downloads
-| `chromedriver_linux64.zip` をリンク先からダウンロードして、展開した中身にある *chromedriver* ファイルを任意の場所に移動します。
-| chromeのバージョンは下記コマンドで確認できます。
+4.  先程インストールしたchromeのバージョンを確認します。
 
 .. code-block:: bash
 
    apt list | grep google-chrome-stable
 
-5. cdコマンドで画像収集したいディレクトリに移動し、googleimagesdownloadを実行します。
+5.  choromeのバージョンと同じバージョンのchromedriverを下記リンク先からダウンロードします。
 
-| *-l* オプションで枚数、 *-k* オプションで検索ワード、 *-f* オプションで拡張子、 *-cd* オプションで4.でダウンロードしたchromedriverまでのパスを指定します。
-| 例) 120枚の犬の画像をjpg形式で収集する場合。(chromedriverはhome直下に保存)
+| https://googlechromelabs.github.io/chrome-for-testing/#stable
+| versionの同じchromedriverのlinux64版のリンクをコピーし、下記のコマンドでダウンロードします。
 
 .. code-block:: bash
 
-   googleimagesdownload -l 120 -k 'ペン' -f jpg -cd ~/chromedriver
+   wget "コピーしたchromedriverのリンク"
 
-6. 画像収集が実行され、実行したディレクトリに *downloads* ディレクトリが作られ、その中に画像が収集されます。
+6. ダウンロードしたzipファイルを展開し、中に含まれる *chromedriver* ファイルを任意の場所に移動します。
+
+7. cdコマンドで画像収集したいディレクトリに移動し、googleimagesdownloadを実行します。
+
+| *-l* オプションで枚数、 *-k* オプションで検索ワード、 *-f* オプションで拡張子、 *-cd* オプションで4.でダウンロードしたchromedriverまでのパスを指定します。
+| 例) 120枚の犬の画像をjpg形式で収集する場合。(chromedriverをhome直下に保存している場合)
+
+.. code-block:: bash
+
+   googleimagesdownload -l 120 -k 'ペン' -f jpg --chromedriver ~/chromedriver
+
+8. 画像収集が実行され、実行したディレクトリに *downloads* ディレクトリが作られ、その中に画像が収集されます。
 
 画像検索結果なので、全然違うものなど認識の学習に適さない画像も混ざっています。必ず中身をチェックして、不要なものは削除しましょう。
 
