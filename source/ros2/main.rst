@@ -13,4 +13,4 @@ ROS2版を使ってみよう
 
    setup
    example
-   specs
+   communications

@@ -51,15 +51,15 @@ AKARIのROS2環境をセットアップしよう
     mkdir ros2_ws
     cd ros2_ws
 
-6. akari_ros2をcloneする。
+6. akari_rosをcloneする。
 
-  | 作成したworkspace内にsrcというディレクトリを作成し、その中にakari_ros2をcloneします。
+  | 作成したworkspace内にsrcというディレクトリを作成し、その中にakari_rosをcloneします。
 
   .. code-block:: bash
 
     mkdir src
     cd src
-    git clone https://github.com/AkariGroup/akari_ros2.git
+    git clone https://github.com/AkariGroup/akari_ros.git
 
 7. ROS2のsetupファイルを読み込む
 
@@ -79,9 +79,9 @@ AKARIのROS2環境をセットアップしよう
 
       echo ". /opt/ros/humble/setup.bash" >> ~/.bashrc
 
-8. akari_ros2をビルドする。
+8. akari_rosをビルドする。
 
-  | akari_ros2のビルドを行います。
+  | akari_rosのビルドを行います。
   | ビルドはros2_ws直下で行うため、移動してから実行します。
 
   .. code-block:: bash
