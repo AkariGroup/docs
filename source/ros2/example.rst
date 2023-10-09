@@ -153,6 +153,6 @@ GPIO出力
 
     ros2 run akari_client_example reset_m5
 
-:doc:`specs` へ進む
+:doc:`communications` へ進む
 
-:doc:`main` へ戻る
+:doc:`setup` へ戻る
