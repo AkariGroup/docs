@@ -113,7 +113,7 @@ GPIO出力
 
   .. code-block:: bash
 
-    ros2 run akari_client_example m5_subscriber set_pinout
+    ros2 run akari_client_example set_pinout
 
 ディスプレイ制御
 -----------------------------------------------------------
@@ -124,7 +124,7 @@ GPIO出力
 
   .. code-block:: bash
 
-    ros2 run akari_client_example m5_subscriber display_color
+    ros2 run akari_client_example display_color
 
 4b. ディスプレイテキスト出力
 
@@ -132,7 +132,7 @@ GPIO出力
 
   .. code-block:: bash
 
-    ros2 run akari_client_example m5_subscriber display_text
+    ros2 run akari_client_example display_text
 
 4c. ディスプレイ画像出力
 
@@ -140,7 +140,7 @@ GPIO出力
 
   .. code-block:: bash
 
-    ros2 run akari_client_example m5_subscriber display_image
+    ros2 run akari_client_example display_image
 
 その他の制御
 -----------------------------------------------------------
@@ -151,7 +151,7 @@ GPIO出力
 
   .. code-block:: bash
 
-    ros2 run akari_client_example m5_subscriber reset_m5
+    ros2 run akari_client_example reset_m5
 
 :doc:`specs` へ進む
 
