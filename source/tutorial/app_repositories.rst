@@ -68,6 +68,12 @@ URL: https://github.com/AkariGroup/tracking_annotator.git
 | OAK-Dのtracking機能を使い、認識できなかったフレームを自動でYOLOアノテーションし、保存するアプリです。
 | 作成した学習モデルを再学習して強化する用途に便利です。
 
+akari_joy_controller
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_joy_controller.git
+
+| AKARIのヘッドをジョイスティックで動かすためのアプリです。
 
 :doc:`main` へ戻る
 
