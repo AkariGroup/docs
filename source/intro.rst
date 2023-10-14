@@ -84,6 +84,10 @@ AKARIの情報元
 
    Scratch版の使い方が記載されています。
 
+#. :doc:`ros2/main`
+
+   ROS2版の使い方が記載されています。
+
 #. :doc:`dev/main`
 
    AKARIを使った開発のヒントが記載してあります。
