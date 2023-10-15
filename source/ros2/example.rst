@@ -8,7 +8,7 @@ ROS2で動かしてみよう
 akari_rosのパッケージ紹介
 ===========================================================
 
-.. image:: ../../images/ros2/packages.jpg
+.. image:: ../images/ros2/packages.jpg
     :width: 600px
 
 最初に、akari_rosに含まれる各パッケージを紹介します。
