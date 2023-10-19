@@ -83,6 +83,8 @@
    :width: 400px
 .. |40| image:: ../../images/assembly/part/40.jpg
    :width: 400px
+.. |42| image:: ../../images/assembly/part/42.jpg
+   :width: 400px
 
 | AKARIの組み立てに必要な道具、部品の一覧を記載します。
 | 各部品にはご参考までに自分達の購入先のリンクを掲載してあります(秋月電子に関しては通販コードを用いて参照ください)。
@@ -101,6 +103,9 @@
 
 部品表
 -----------------------------------------------------------
+
+| 必要数はAKARI1台の製作に必要な個数、購入数は、その個数を入手するために購入が必要なセット数です。
+| 例えば、1台に2個使う部品が2個1セットで販売されていた場合は、必要数2、購入数1という表示になっています。
 
 .. csv-table::
 
@@ -145,6 +150,8 @@
    | (C-15554)",
    21,"購入品","|21|","2.1mm標準DCジャック パネル取付用","C-17108",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (C-17108)",
+   42,"購入品","|42|","テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm",,2,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
+   | (P-03446)",
    22,"購入品","|22|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
    23,"購入品","|23|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
    24,"購入品","|24|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
@@ -158,7 +165,7 @@
    32,"購入品","|32|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
    33,"購入品","|33|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
    34,"購入品","|34|","DCケーブル 20cm",TDDC-020-3,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07B7LW839>`__",
-   35,"購入品","|35|","ロッカスイッチ汎用ON-OFF 2極",as1104,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00KW0PPVW>`__",
+   35,"購入品","|35|","ロッカースイッチ 小型 丸型 2ピン",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B07QFV7ZXV>`__",
    36,"購入品","|36|","ボルトM3-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B012TE12CY>`__",
    37,"購入品","|37|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
    38,"購入品","|38|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
