@@ -120,7 +120,7 @@
    | (M-13736)",
    8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC V2.7",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (M-17375)
-   | `スイッチサイエンス <https://www.switch-science.com/products/9010?_pos=3&_sid=773ec7817&_ss=r>`__",V2.6でも可(秋月電子はV2.6を掲載)
+   | `スイッチサイエンス <https://www.switch-science.com/products/9010?_pos=3&_sid=773ec7817&_ss=r>`__",
    9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
    | (M-17213)
    | `スイッチサイエンス <https://www.switch-science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__",
