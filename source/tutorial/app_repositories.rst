@@ -80,6 +80,8 @@ akari_tracking_palette
 
 URL: https://github.com/AkariGroup/akari_tracking_palette.git
 
+..  youtube:: Yt79S5aHO8Q
+
 | AKARIで物体認識を使って、指定した位置に存在する物体の検知を行うサンプルです。
 | 3次元物体トラッキングを用い、人や物の場所も認識することができます。
 | 更に、俯瞰図上にマウスでエリアを描画することで、そのエリア内に人や物が存在するかを検出することができます。
