@@ -75,6 +75,18 @@ URL: https://github.com/AkariGroup/akari_joy_controller.git
 
 | AKARIのヘッドをジョイスティックで動かすためのアプリです。
 
+akari_tracking_palette
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_tracking_palette.git
+
+..  youtube:: Yt79S5aHO8Q
+
+| AKARIで物体認識を使って、指定した位置に存在する物体の検知を行うサンプルです。
+| 3次元物体トラッキングを用い、人や物の場所も認識することができます。
+| 更に、俯瞰図上にマウスでエリアを描画することで、そのエリア内に人や物が存在するかを検出することができます。
+| 任意の認識モデル、任意のエリアを簡単に設定してオリジナルの見守り、インタラクションアプリを簡単に作ることができます。
+
 :doc:`main` へ戻る
 
 :doc:`test_uvc_camera` へ戻る
