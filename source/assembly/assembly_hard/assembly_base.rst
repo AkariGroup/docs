@@ -16,7 +16,7 @@
 
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| (5) AKARI base 1個
+| (5) AKARI Base 1個
 | (7) Lattepanda Alpha付属のアンテナ 2個
 
 .. image:: ../../images/assembly/base/base01-01.jpg
@@ -24,7 +24,7 @@
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. `(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(5) AKARI base` 内部の図の位置に2枚貼り付ける。
+1. `(7) Lattepanda Alpha` 付属のアンテナの両面テープを剥がし、 `(5) AKARI Base` 内部の図の位置に2枚貼り付ける。
 
 .. image:: ../../images/assembly/base/base01-02.jpg
     :width: 400px
@@ -56,7 +56,7 @@
     :width: 400px
 
 
-2. `(7) Lattepanda AlphaLattepanda` を `(5) AKARI base` にはめ込む。
+2. `(7) Lattepanda AlphaLattepanda` を `(5) AKARI Base` にはめ込む。
 
 .. image:: ../../images/assembly/base/base02-03.jpg
     :width: 400px
