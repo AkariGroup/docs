@@ -22,8 +22,8 @@ AKARI環境のセットアップ
 ===========================================================
 
 | OSインストール後、Raspberry Piを起動したら :doc:`../setup_soft/setup_ansible` と同様の手順でセットアップを行うことができます。
-| **ただし、Rasoberry Pi OSの場合は** :doc:`../setup_soft/setup_ansible` **の「必要なパッケージのインストール」手順は実行不要です。**
-| (Rasoberry Pi OSは標準でpython3.11, python3.11-venv, gitがインストールされているため、そちらを使用します。)
+| **ただし、Raspberry Pi OSの場合は** :doc:`../setup_soft/setup_ansible` **の「必要なパッケージのインストール」手順は実行不要です。**
+| (Raspberry Pi OSは標準でpython3.11, python3.11-venv, gitがインストールされているため、そちらを使用します。)
 
 | 以降、:doc:`../setup_soft/setup_env` 及び :doc:`../setup_soft/setup_m5` を通常のAKARIと同様に実行してください。
 

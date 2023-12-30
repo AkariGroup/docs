@@ -1,5 +1,5 @@
 .. meta::
-   :description: オープンソースの小型卓上ロボット「AKARI」のRasoberry piでのセットアップ方法を説明します。
+   :description: オープンソースの小型卓上ロボット「AKARI」のRaspberry piでのセットアップ方法を説明します。
 
 ***********************************************************
 (おまけ) AKARIをRaspberry Piで使ってみる
