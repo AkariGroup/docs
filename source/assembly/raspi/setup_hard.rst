@@ -25,6 +25,11 @@ Raspberry Piで使う場合のハードウェアの準備方法を記載しま�
 | AKARIをRaspberry Piで使う場合は、ベース部の組み立ては不要です。
 | ベース部を使わない代わりに、ボディー部から出る2本のUSB(OAK-D Lite、USBハブ)をRaspberry Pi4のUSB3.0ポートに接続することで使用可能です。
 | **電源はボディー部のDCジャックと、Raspberry PiのPWR IN端子(USB-C)の両方にそれぞれ入力する必要があります。**
+| 下図が接続の例です。
+
+.. image:: ../../images/raspi/raspi_connection.jpg
+    :width: 600px
+
 
 | ベース部が不要となることで、下記の部品は準備不要となります。
 
