@@ -15,3 +15,4 @@ AKARIを作ってみよう
    assembly_hard/main
    assembly_test_unit/main
    setup_soft/main
+   raspi/main
