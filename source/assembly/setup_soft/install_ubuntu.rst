@@ -51,7 +51,7 @@ Ubuntuをlattepandaにインストールする。
 13. 「インストールは完了しました」と表示されたら、「今すぐ再起動する」を選択します。「Please remove install medium」と表示されたらUSBメモリを抜き、「Enter」キーを押します。
 14. lattepandaが再起動してUbuntuが立ち上がります。
 
-これでUbuntuのインストールは完了です。次に、lattepandaを自動起動できるようにBIOSの書き換えを行います。
+これでUbuntuのインストールは完了です。次に、Ubuntu上でソフトウェア環境のセットアップを行います。
 
 :doc:`setup_ansible` へ進む
 
