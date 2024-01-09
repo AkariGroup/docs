@@ -11,11 +11,12 @@
 * AKARI本体
 * ディスプレイ
 * PC
-* microSDカードにデータコピーできる環境(PC、またはUSB-microSDカードリーダ)
+* USB-microSDカードリーダ(PCにSDカードスロットがついていない場合)
 * USBメモリ(8GB以上)
+* USBハブ(3ポート以上のもの)
 * キーボード
 * マウス
-* microSDカード
+* microSDカード(:doc:`../assembly_hard/part_list` (39)で用意したもの)
 
 
 まずは次章からUbuntuのインストールを行っていきます。
