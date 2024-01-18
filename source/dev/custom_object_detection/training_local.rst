@@ -32,11 +32,12 @@ nvidia GPUが使えるLinux PCを所持している場合は、こちらの方�
 
    sudo apt install python3.10 python3.10-venv
 
-1. yolov7ディレクトリ直下に仮想環境を作成します（初回のみ必要）。
+4. akari_yolo_training_localディレクトリに移動し、submoduleの更新、仮想環境の作成をします（初回のみ必要）。
 
 .. code-block:: bash
 
    cd akari_yolo_training_local
+   git submodule update --init
    python -m venv venv
 
 5. 仮想環境を有効にします。
