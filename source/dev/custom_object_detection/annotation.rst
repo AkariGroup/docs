@@ -98,6 +98,14 @@ labelImgでアノテーションをする
 |
 | アノテーションは単純作業の繰り返しで枚数が多いほど大変ですが、ここの作業が後の学習の精度を左右します。頑張って全部の画像にアノテーションを行いましょう。
 
+| 次は学習のステップに進みます。
+| もしnvidia GPU搭載のLinux PCがない場合は、Google Colabを使ってクラウド上で学習する :doc:`training` を実行してください。こちらはAKARIのブラウザ上でも実行可能です。
+| ただ、Google Colabは無料版ではアクセス数が一定以上になると処理が中断されるなど、安定して学習が行えない場合があります。ご注意ください。
+| nvidia GPU搭載のLinux PCを持っている場合は、PC上で学習する :doc:`training_local` を実行した方が、学習が早く安定します。
+
+
 :doc:`training` へ進む
+
+:doc:`training_local` へ進む
 
 :doc:`image_collection` へ戻る
