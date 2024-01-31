@@ -45,22 +45,14 @@ akari_yolo_trainingのClone
 ===========================================================
 Google Colabで学習をする
 ===========================================================
-..
-   TODO(Yamamoto):
-   git アカウントがオープンソース化してからは、下記リンクからのアクセスに差し替え。
-   .. raw:: html
-
-      <h3>学習用リンク <a href="https://colab.research.google.com/github/AkariGroup/akari_object_detection/blob/main/3_training/training_mobilenet_akari.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></h2>
-
-   | 学習は上の `Open in colab` のリンク先からGoogle Colabを開いて行います。
 
 | 下記リンクからGoogle Colabにアクセスします。
-| https://colab.research.google.com/?hl=ja
-| 「ファイル」→「ノートブックを開く」→「アップロード」から `akari_yolo_training/yolov7_training_akari.ipynb` を選択します。
 
-.. image:: ../../images/custom_object_detection/colab_open.jpg
-   :width: 800px
+   .. raw:: html
 
+      <b>学習用Notebook→</b> <a href="https://colab.research.google.com/github/AkariGroup/akari_yolo_training/blob/main/yolov7_training_akari.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></h2>
+
+| 学習は上の `Open in colab` のリンク先からGoogle Colabを開いて行います。
 | 後は順番にコードを実行していくことで、学習済みのpytorchモデル(.pt)をダウンロードすることができます。
 
 .. image:: ../../images/custom_object_detection/colab_play.jpg
