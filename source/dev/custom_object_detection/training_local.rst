@@ -26,6 +26,12 @@ nvidia GPUが使えるLinux PCを所持している場合は、こちらの方�
    git clone https://github.com/AkariGroup/akari_yolo_training_local.git
 
 2. :doc:`annotation` で準備した画像とアノテーションファイルが含まれるimagesディレクトリを、先程Cloneした `akari_yolo_training_local/images` 内にコピーします。
+
+   | 下図のディレクトリ構成になっていることを確認してください。
+
+.. image:: ../../images/custom_object_detection/train_directory_03.jpg
+   :width: 800px
+
 3. pythonがインストールされていない場合は、インストールします。
 
 .. code-block:: bash
