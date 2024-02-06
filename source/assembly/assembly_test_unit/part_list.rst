@@ -39,22 +39,14 @@
 
    "No.","分類","画像","名称","型番","必要数 [個]","購入数[組]","購入先リンク","備考"
    T1,"製造品","|T1|","TEST UNIT基板",,1,1,ー,
-   T2,"購入品","|T2|","10×2ピンヘッダ",PH-2x10SG,1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-00078)",
-   T3,"購入品","|T3|","タクトスイッチ 12mm",TVGP01-G73BB,2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (P-12226)",
-   T4,"購入品","|T4|","3mm赤色LED 625nm 70度",OSR5JA3Z74A,3,3,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (I-11577)",他の色でもOK
-   T5,"購入品","|T5|","3mm黄色LED 595nm 70度",OSY5JA3Z74A,2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (I-11639)",他の色でもOK
-   T6,"購入品","|T6|","3mm緑色LED 525nm 70度",OSG5TA3Z74A,1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (I-11635)",他の色でもOK
-   T7,"購入品","|T7|","カーボン抵抗（炭素皮膜抵抗）120Ω","CF25J120RB",4,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (R-25121)",推奨抵抗値
-   T8,"購入品","|T8|","カーボン抵抗（炭素皮膜抵抗）200Ω","CF25J200RB",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (R-25201)",推奨抵抗値
-   T9,"購入品","|T9|","カーボン抵抗（炭素皮膜抵抗）470Ω","CF25J470RB",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (R-25471)",推奨抵抗値
+   T2,"購入品","|T2|","10×2ピンヘッダ",PH-2x10SG,1,1," `秋月電子 <https://akizukidenshi.com/catalog/g/g100078/>`__",
+   T3,"購入品","|T3|","タクトスイッチ 12mm",TVGP01-G73BB,2,2," `秋月電子 <https://akizukidenshi.com/catalog/g/g112226/>`__",
+   T4,"購入品","|T4|","3mm赤色LED 625nm 70度",OSR5JA3Z74A,3,3," `秋月電子 <https://akizukidenshi.com/catalog/g/g111577/>`__",他の色でもOK
+   T5,"購入品","|T5|","3mm黄色LED 595nm 70度",OSY5JA3Z74A,2,2," `秋月電子 <https://akizukidenshi.com/catalog/g/g111639/>`__",他の色でもOK
+   T6,"購入品","|T6|","3mm緑色LED 525nm 70度",OSG5TA3Z74A,1,1," `秋月電子 <https://akizukidenshi.com/catalog/g/g111635/>`__",他の色でもOK
+   T7,"購入品","|T7|","カーボン抵抗（炭素皮膜抵抗）120Ω","CF25J120RB",4,1," `秋月電子 <https://akizukidenshi.com/catalog/g/g125121/>`__",推奨抵抗値
+   T8,"購入品","|T8|","カーボン抵抗（炭素皮膜抵抗）200Ω","CF25J200RB",1,1," `秋月電子 <https://akizukidenshi.com/catalog/g/g125201/>`__",推奨抵抗値
+   T9,"購入品","|T9|","カーボン抵抗（炭素皮膜抵抗）470Ω","CF25J470RB",1,1," `秋月電子 <https://akizukidenshi.com/catalog/g/g125471/>`__",推奨抵抗値
    T10,"購入品","|T10|","可変抵抗器 10KΩ","",1,1,"`Amazon <https://www.amazon.co.jp/dp/B07TFTK41V>`__",
 
 :doc:`assembly_test_unit` へ進む

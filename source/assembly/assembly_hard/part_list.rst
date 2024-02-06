@@ -122,42 +122,26 @@ AKARIのセットアップに必要なもの
    4,"製造品","|4|","AKARI Cover",,1,1, ー ,
    5,"製造品","|5|","AKARI Base",,1,1, ー ,
    6,"製造品","|6|","AKARI Plate",,1,1, ー ,
-   7,"購入品","|7|","Lattepanda Alpha","Lattepanda Alpha 864S DFR0546",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-13736)",
-   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC V2.7",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-17375)
+   7,"購入品","|7|","Lattepanda Alpha","Lattepanda Alpha 864S DFR0546",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/g113736/>`__",
+   8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC V2.7",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117375/>`__
    | `スイッチサイエンス <https://www.switch-science.com/products/9010?_pos=3&_sid=773ec7817&_ss=r>`__",
-   9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-17213)
+   9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117213/>`__
    | `スイッチサイエンス <https://www.switch-science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__",
-   10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-17217)
+   10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117217/>`__
    | `スイッチサイエンス <https://www.switch-science.com/products/4051?_pos=1&_sid=7d953003e&_ss=r>`__",
-   11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-06568)",
-   12,"購入品","|12|","PHコネクタ ベース付ポスト トップ型 4P","B4B-PH-K-S",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-12804)",
+   11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/g106568/>`__",
+   12,"購入品","|12|","PHコネクタ ベース付ポスト トップ型 4P","B4B-PH-K-S",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/g112804/>`__",
    13-A,"購入品","|13-A|",EHコネクタ3P トップ型","B3B-EH-A",2,2,"`共立エレショップ <https://eleshop.jp/shop/g/g5CP14I/>`__","13-A,13-Bどちらか一つを購入"
-   13-B,"購入品","|13-B|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-06192)","13-A,13-Bどちらか一つを購入"
-   14,"購入品","|14|","ボックスヘッダ 20P","BH-20SG",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-13176)",
-   15,"購入品","|15|","DC-DCコンバーター","M78AR05-1",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-13536)",
-   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RD20F106Z1EH5L",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (P-03095)",
-   17,"購入品","|17|","ターミナルブロック 2P","TB-111-2",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (P-02333)",
-   18,"購入品","|18|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-13378)",
-   19,"購入品","|19|","ACアダプター12V5A","ATS065-P120",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (M-06961)",
-   20,"購入品","|20|","コネクタ付コード 4P PH(赤黒黄緑)","DG01032-0049-01",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-15554)",
-   21,"購入品","|21|","2.1mm標準DCジャック パネル取付用","C-17108",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (C-17108)",
-   42,"購入品","|42|","テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm",,2,1,"| `秋月電子 <https://akizukidenshi.com/catalog/>`__
-   | (P-03446)",
+   13-B,"購入品","|13-B|","2mmピッチピンヘッダ 1✕3","PH2-1x3SBG",2,2,"`秋月電子 <https://akizukidenshi.com/catalog/g/g106192/>`__","13-A,13-Bどちらか一つを購入"
+   14,"購入品","|14|","ボックスヘッダ 20P","BH-20SG",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g113176/>`__",
+   15,"購入品","|15|","DC-DCコンバーター","M78AR05-1",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g113536/>`__",
+   16,"購入品","|16|","積層セラミックコンデンサー 10μF","RD20F106Z1EH5L",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103095/>`__",
+   17,"購入品","|17|","ターミナルブロック 2P","TB-111-2",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g102333/>`__",
+   18,"購入品","|18|","2x10(20P)両端コネクタ付IDCリボンケーブル","DG01032-0041-01-180mm",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g113378/>`__",
+   19,"購入品","|19|","ACアダプター12V5A","ATS065-P120",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g106961/>`__",
+   20,"購入品","|20|","コネクタ付コード 4P PH(赤黒黄緑)","DG01032-0049-01",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g115554/>`__",
+   21,"購入品","|21|","2.1mm標準DCジャック パネル取付用","C-17108",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117108/>`__",
+   42,"購入品","|42|","テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm",,2,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103446/>`__",
    22,"購入品","|22|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
    23,"購入品","|23|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
    24,"購入品","|24|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
