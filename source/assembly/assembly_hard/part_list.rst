@@ -126,7 +126,7 @@ AKARIのセットアップに必要なもの
    8,"購入品","|8|","M5Stack BASIC","M5Stack BASIC V2.7",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117375/>`__
    | `スイッチサイエンス <https://www.switch-science.com/products/9010?_pos=3&_sid=773ec7817&_ss=r>`__",
    9,"購入品","|9|","温湿度気圧センサユニット ENVⅢ","M5STACK-U001-C",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117213/>`__
-   | `スイッチサイエンス <https://www.switch-science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__",
+   | `スイッチサイエンス <https://www.switch-science.com/products/7254?_pos=2&_sid=9f20b6823&_ss=r>`__","ENVⅣでも可。`スイッチサイエンス <https://www.switch-science.com/products/9270>`__"
    10,"購入品","|10|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117217/>`__
    | `スイッチサイエンス <https://www.switch-science.com/products/4051?_pos=1&_sid=7d953003e&_ss=r>`__",
    11,"購入品","|11|","2.1mm標準DCジャック(4A) 基板取付用","MJ-179PH",1,1,"`秋月電子 <https://akizukidenshi.com/catalog/g/g106568/>`__",
