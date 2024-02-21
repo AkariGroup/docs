@@ -46,7 +46,7 @@ topic
   | ・ **button_c** (`bool`) -- M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。
   | ・ **din0** (`bool`) -- ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。
   | ・ **din1** (`bool`) -- ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。
-  | ・ **ain0** (`uint16`) -- ヘッドのain0ピンのアナログ入力。0-3.3Vを0-255の256段階にする。
+  | ・ **ain0** (`uint16`) -- ヘッドのain0ピンのアナログ入力。0-3.3Vを0-4095の4096段階にする。
   | ・ **dout0** (`bool`) -- ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。
   | ・ **dout1** (`bool`) -- ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。
   | ・ **pwmout0** (`uint8`) -- ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。
