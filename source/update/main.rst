@@ -62,11 +62,12 @@ M5Stackのソフトアップデート方法
       cd ~/akari_software/setup/arduino
       platformio run --target=upload
 
-1. M5stackが再起動し、「Waiting...」画面に戻ることを確認します。
+3. M5stackが再起動し、「Waiting...」画面に戻ることを確認します。
 
    | バージョン表記が書き込みたいソフトのバージョンになっていることを確認します。
 
-2. AKARIのサービスを再起動します(もしくはAKARI本体を再起動します)。
+4. AKARIのサービスを再起動します(もしくはAKARI本体を再起動します)。
+
    | **「akari」ではなく「akira」です。**
 
    .. code-block:: bash

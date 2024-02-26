@@ -13,6 +13,7 @@ AKARIが操作PCと同一ネットワークに繋がれており、正しいIP�
    $ sudo systemctl status akira.service
 
 3. akiraのステータスが表示されます。この状態がfailになっていた場合、サービスの自動起動が失敗しています。
+
 | 下記コマンドを実行して、サービスを再起動します。
 
 .. code-block:: bash
