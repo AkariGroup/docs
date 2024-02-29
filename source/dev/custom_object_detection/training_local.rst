@@ -93,6 +93,15 @@ nvidia GPUが使えるLinux PCを所持している場合は、こちらの方�
 
    python3 yolov7/train.py --epochs 300 --workers 8 --device 0 --batch-size 16 --data data/akari_train_data.yaml --img 640 640 --cfg data/akari_train_cfg.yaml --weights data/yolov7-tiny.pt --hyp yolov7/data/hyp.scratch.tiny.yaml --name result --exist-ok
 
+.. note::
+
+   もし `undefined symbol: __nvJitLinkAddData_12_1, version libnvJitLink.so.12` というエラーが出た場合は、自身のvenv内のnvidiaライブラリにLD_LIBRARY_PATHを通す必要があります。
+
+   .. code-block:: bash
+
+      export LD_LIBRARY_PATH=~/"akari_yolo_training_localのパス"/venv/lib64/python3.10/site-packages/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH
+
+
 ===========================================================
 テストの実行
 ===========================================================
