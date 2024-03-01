@@ -24,14 +24,14 @@ AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサ�
 
    .. code-block:: bash
 
-      $ cd ~/akari_software/samples/depthai_sample/face_detection
+      cd ~/akari_software/samples/depthai_sample/face_detection
 
 
 | 次にface_detection.pyを実行します。
 
    .. code-block:: bash
 
-      $ python3 face_detection.py
+      python3 face_detection.py
 
 | 映像をストリーミングするウィンドウが立ち上がって、顔が画面内に写っていると、顔の枠と目、鼻、口の特徴点のプロット、確からしさの数字(0~1)が表示されます。
 | カメラ映像のウインドウ上で"q"を押すと終了します。
@@ -48,14 +48,14 @@ AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサ�
 
    .. code-block:: bash
 
-      $ cd ~/akari_software/samples/depthai_sample/face_detection
+      cd ~/akari_software/samples/depthai_sample/face_detection
 
 
 | 次にface_tracking.pyを実行します。
 
    .. code-block:: bash
 
-      $ python3 face_tracking.py
+      python3 face_tracking.py
 
 | 顔認識と同様の認識ウインドウが立ち上がります。
 | 顔を動かすと、AKARIのヘッドが動いて顔を追従してくれます。
@@ -72,13 +72,13 @@ AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサ�
 
    .. code-block:: bash
 
-      $ cd ~/akari_software/samples/depthai_sample/object_recognition
+      cd ~/akari_software/samples/depthai_sample/object_recognition
 
 mobilenet-ssdの物体認識を実行したい場合は、下記を実行します。
 
    .. code-block:: bash
 
-      $ python3 mobilenet.py
+      python3 mobilenet.py
 
 | 映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。
 | カメラ映像のウインドウ上で"q" を押すと終了します。
@@ -113,19 +113,27 @@ mobilenet-ssdの物体認識を実行したい場合は、下記を実行しま�
 ===========================================================
 
 | 次にYOLOの物体認識を試してみます。mobolenetと同じobject_recognitionのディレクトリで実行できます。
-| デフォルトの状態で起動すると、YOLOv3-tinyが起動するようになっています。
+| デフォルトの状態で起動すると、YOLOv4tinyが起動するようになっています。
 
 .. code-block:: bash
 
-   $ python3 tiny_yolo.py
+   python3 tiny_yolo.py
 
-YOLOv4-tinyを起動したい場合は、YOLOv4-tinyのモデルをオプションで指定する必要があります。
+| 下記のコマンドで、別のモデルで物体認識を起動することもできます。
+
+YOLOv6n
 
 .. code-block:: bash
 
-   $ python3 tiny_yolo.py -n yolo-v4-tiny-tf
+   python3 tiny_yolo.py -n yolov6n_coco_416x416 -c configs/yolov6n_coco_416x416.json
 
-| どちらの場合でも映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。
+YOLOv7tiny
+
+.. code-block:: bash
+
+   python3 tiny_yolo.py -n yolov7tiny_coco_416x416 -c configs/yolov7tiny_coco_416x416.json
+
+| どの場合でも映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。
 | カメラ映像のウインドウ上で"q"を押すと終了します。
 | YOLOで認識できる物体の一覧は下記のとおりです。
 
