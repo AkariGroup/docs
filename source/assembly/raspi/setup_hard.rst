@@ -12,6 +12,7 @@ Raspberry Piで使う場合のハードウェアの準備方法を記載しま�
 | 動作確認済みのRaspberry Piは下記の通りです。
 
 - Raspberry Pi 4 Model B / 8GB (`スイッチサイエンス <https://www.switch-science.com/collections/raspberry-pi/products/6370>`__ )
+- Raspberry Pi 5 Model B / 8GB (`スイッチサイエンス <https://www.switch-science.com/collections/raspberry-pi/products/9250>`__ )
 
 また、Raspberry Piの使用に下記が必要です。
 

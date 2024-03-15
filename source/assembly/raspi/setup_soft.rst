@@ -10,8 +10,14 @@ Raspberry Piでのソフトウェア環境セットアップを記載します�
 
 下記のOSにて動作確認済みです。
 
+RaspberryPi 4
+
 - Ubuntu 22.04
 - Ubuntu MATE 22.04
+- Raspberry Pi OS(bookwarm)
+
+RaspberryPi 5
+
 - Raspberry Pi OS(bookwarm)
 
 | **Ubuntu, Ubuntu MATEは通常のAKARIとの互換性に優れますが、GUI上での動作がRaspberry Pi上では非常に重いため、Raspberry Pi OSでの使用を推奨します。**
