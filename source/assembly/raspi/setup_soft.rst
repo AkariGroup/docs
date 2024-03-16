@@ -14,11 +14,11 @@ RaspberryPi 4
 
 - Ubuntu 22.04
 - Ubuntu MATE 22.04
-- Raspberry Pi OS(bookwarm)
+- Raspberry Pi OS(bookworm)
 
 RaspberryPi 5
 
-- Raspberry Pi OS(bookwarm)
+- Raspberry Pi OS(bookworm)
 
 | **Ubuntu, Ubuntu MATEは通常のAKARIとの互換性に優れますが、GUI上での動作がRaspberry Pi上では非常に重いため、Raspberry Pi OSでの使用を推奨します。**
 | あらかじめ :doc:`setup_hard` で準備したMicroSDカードに上記のOSをインストールしておく必要があります。
