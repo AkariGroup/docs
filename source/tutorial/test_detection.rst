@@ -105,8 +105,6 @@ mobilenet-ssdの物体認識を実行したい場合は、下記を実行しま�
    - train
    - tvmonitor
 
-| また、このアプリでは、オリジナルの物体認識を作成し、それを実行することもできます。
-| 詳しくは、 :doc:`../dev/custom_object_detection/main` をご覧ください。
 
 ===========================================================
 物体認識を試してみよう(YOLO版)
@@ -217,6 +215,10 @@ YOLOv7tiny
    - teddy bear
    - hair drier
    - toothbrush
+
+| また、このアプリでは、オリジナルの物体認識を作成し、それを実行することもできます。
+| 詳しくは、 :doc:`../dev/custom_object_detection/main` をご覧ください。
+
 
 :doc:`test_uvc_camera` へ進む
 

@@ -11,10 +11,14 @@
 |   https://github.com/AkariGroup/akari_dataset_creator
 | - akari_yolo_training
 |   https://github.com/AkariGroup/akari_yolo_training
+| - akari_yolo_training_local
+|   https://github.com/AkariGroup/akari_yolo_training_local
 | - akari_yolo_inference
 |   https://github.com/AkariGroup/akari_yolo_inference
 | - akari_yolo_inference_jupyter
 |   https://github.com/AkariGroup/akari_yolo_inference_jupyter
+| - akari_yolo_models
+|   https://github.com/AkariGroup/akari_yolo_models
 
 .. toctree::
    :maxdepth: 2
@@ -26,3 +30,4 @@
    training_local
    convert_model
    testing
+   test_models

@@ -241,6 +241,6 @@ https://github.com/AkariGroup/akari_yolo_inference_jupyter.git
 | 物体認識のデータセット作成から学習、動作までのチュートリアルは以上となります。
 | うまく行かなかった場合は、データセットの画像の枚数やパターンを増やしてみるなど、色々試してみましょう。
 
-:doc:`main` へ戻る
+:doc:`test_models` へ進む
 
 :doc:`training` へ戻る
