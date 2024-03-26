@@ -30,6 +30,8 @@ akari_yolo_inference
 
 URL: https://github.com/AkariGroup/akari_yolo_inference
 
+..  youtube:: OlwG40fLblM
+
 | AKARIでYOLOの推論を行うアプリです。
 | デフォルトではYOLOv4の認識を行う設定になっていますが、自身で学習させたYOLOの推論モデルを使うこともできます。
 | 詳しい使い方は :doc:`../dev/custom_object_detection/testing` を参照ください。
@@ -68,6 +70,17 @@ URL: https://github.com/AkariGroup/akari_chatgpt_vision_bot
 | カメラ画像と音声を組み合わせてchatGPTから返答を得るGPT-4V版と、YOLOの3次元位置認識結果と音声を組み合わせてchatGPTから返答を得るYOLO版の2種類を公開しています。
 | **注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。**
 
+akari_chatgpt_indian_poker
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_chatgpt_indian_poker
+
+..  youtube:: 0CN5xbVBv1o
+
+| chatGPTを使った音声対話botで、AKARIとインディアンポーカーができるアプリです。
+| インディアンポーカーの醍醐味であるカード交換の駆け引きを、ChatGPT対話で実現しています。
+| トランプはYOLOで認識しています。
+| **注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。**
 
 tracking_annotator
 ===========================================================
