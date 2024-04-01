@@ -59,7 +59,7 @@ M5Stackのソフトアップデート方法
 
    .. code-block:: bash
 
-      cd ~/akari_software/setup/arduino
+      cd ~/akari_software/setup/akari_m5_software
       platformio run --target=upload
 
 3. M5stackが再起動し、「Waiting...」画面に戻ることを確認します。

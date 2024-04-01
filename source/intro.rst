@@ -34,8 +34,13 @@ AKARIの情報元
    代表的なレポジトリは下記となります。
 
    - ベースソフト： https://github.com/AkariGroup/akari_software
+   - M5Stackのベースソフト: https://github.com/AkariGroup/akari_m5_software
    - ハードウェアの情報: https://github.com/AkariGroup/akari_hardware
    - 本マニュアルのソース: https://github.com/AkariGroup/docs
+
+* X(Twitter)
+   | 最新の開発情報が配信されています。
+   | https://twitter.com/akariRobot
 
 * YouTube
    | 本マニュアルにリンクされている動画などがアップロードされています。
