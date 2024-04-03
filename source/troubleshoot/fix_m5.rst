@@ -21,7 +21,7 @@ AKARIの電源投入直後から、M5の画面が真っ暗の場合(Waiting...)�
   .. code-block:: bash
 
      sudo systemctl stop akira.service
-     cd ~/akari_software/setup/arduino
+     cd ~/akari_software/setup/akari_m5_software
      platformio run --target=upload
 
   | ( **akira**.serviceなので注意してください。)
@@ -55,14 +55,14 @@ M5の画面がwaitingから進まない場合
      cd ~/akari_software
      git pull
 
-  | 次にM5のWaiting画面に表示されているバージョン表記が、最新の `akari_software/setup/arduino/src/m5base_for_akari.ino` に記載されているバージョンと一致しているか確認します。
-  | githubの最新のファイル(https://github.com/AkariGroup/akari_software/blob/main/setup/arduino/src/m5base_for_akari.ino#L18)からも確認できます。
+  | 次にM5のWaiting画面に表示されているバージョン表記が、最新の `akari_software/setup/akari_m5_software/src/m5base_for_akari.ino` に記載されているバージョンと一致しているか確認します。
+  | githubの最新のファイル(https://github.com/AkariGroup/akari_m5_software/blob/main/src/m5base_for_akari.ino)からも確認できます。
   | M5のWaiting画面に表示されているバージョンが古い場合は、下記コマンドでM5のソフトを再度書き込みます。
 
   .. code-block:: bash
 
      sudo systemctl stop akira.service
-     cd ~/akari_software/setup/arduino
+     cd ~/akari_software/setup/akari_m5_software
      platformio run --target=upload
 
   | ( **akira**.serviceなので注意してください。)
