@@ -82,6 +82,15 @@ URL: https://github.com/AkariGroup/akari_chatgpt_indian_poker
 | トランプはYOLOで認識しています。
 | **注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。**
 
+akari_chat_dify_bot
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_chat_dify_bot
+
+| akari_chatgpt_botのLLM部分をDify(https://dify.ai/)で作成したアプリに置き換えたものです。
+| 独自にデザインしたDifyアプリを介して音声対話をすることができます。
+| **注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。**
+
 tracking_annotator
 ===========================================================
 
