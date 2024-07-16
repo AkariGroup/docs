@@ -104,4 +104,6 @@ AKARIの動かし方
 
 :doc:`ref_akari_blocks` へ進む
 
+:doc:`ref_akari_blocks_beginner` へ進む
+
 :doc:`setup` へ戻る

@@ -16,3 +16,5 @@ Scratch3.0を使うと、ブロックをつなげていくだけで簡単にAKAR
    playing
    ref_akari_blocks
    ref_akari_camera
+   ref_akari_blocks_beginner
+   ref_akari_camera_beginner
