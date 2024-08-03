@@ -16,4 +16,3 @@ AKARIの組み立てを行います。
    assembly_pcb
    assembly_head
    assembly_body
-   assembly_base
