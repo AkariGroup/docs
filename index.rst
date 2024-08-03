@@ -21,6 +21,7 @@ Welcome to AKARI manual!
    source/intro
    source/overview/main
    source/assembly/main
+   source/assembly_light/main
    source/startup/main
    source/tutorial_web/main
    source/tutorial/main
