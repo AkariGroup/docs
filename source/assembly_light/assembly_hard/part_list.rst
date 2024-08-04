@@ -143,20 +143,21 @@ AKARI Lightのセットアップに必要なもの
    19,"購入品","|19|","STS3215","STS3215",2,2,"| `マルツ <https://www.marutsu.co.jp/pc/i/2349133/>`__",
    20,"購入品","|20|","OAK-D Lite","OAK-D-LITE",1,1,"`マルツ <https://www.marutsu.co.jp/pc/i/2235787/>`__",
    21,"購入品","|21|","Raspberry Pi5用アクティブクーラー","SC1148",1,1,"`マルツ <https://www.marutsu.co.jp/pc/i/2782705/>`__",
-   22,"購入品","|22|",タッピングスクリュー M2.5-6","4979874451842",6,1,"`マルツ <https://www.marutsu.co.jp/pc/i/2566507/>`__",
-   23,"購入品","|23|","ACアダプター 5V 6.2A","LTE36ES-S1-304",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2775202/>`__",
-   24,"購入品","|24|","2x5両端コネクター付IDCリボンケーブル","DG01032-0012-01",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103796/>`__",
-   25,"購入品","|25|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
-   26,"購入品","|26|","MicroSDカード(RaspberryPi用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0CH2X5LBX>`__","容量128GB以上推奨"
-   27,"購入品","|27|","MicroSDカード(M5Stack用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
+   22,"購入品","|22|","ACアダプター 5V 6.2A","LTE36ES-S1-304",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2775202/>`__",
+   23,"購入品","|23|","2x5両端コネクター付IDCリボンケーブル","DG01032-0012-01",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103796/>`__",
+   24,"購入品","|24|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
+   25,"購入品","|25|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
+   26,"購入品","|26|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
+   27,"購入品","|27|","MicroSDカード(RaspberryPi用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0CH2X5LBX>`__","容量128GB以上推奨"
+   28,"購入品","|28|","MicroSDカード(M5Stack用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
 
 | オプション
 使用しない場合は購入不要です。
 
 .. csv-table::
 
-   28,"購入品","|28|","温湿度気圧センサユニット ENVIV","M5STACK-U001-C",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2764443/>`__","温度、気圧センサを使用しない場合は不要",
-   29,"購入品","|29|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/1526328/>`__","光センサを使用しない場合は不要",
+   29,"購入品","|29|","温湿度気圧センサユニット ENVIV","M5STACK-U001-C",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2764443/>`__","温度、気圧センサを使用しない場合は不要",
+   30,"購入品","|30|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/1526328/>`__","光センサを使用しない場合は不要",
 
 
 :doc:`assembly_head` へ進む
