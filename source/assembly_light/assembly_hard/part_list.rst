@@ -59,30 +59,6 @@
    :width: 400px
 .. |29| image:: ../../images/assembly_light/part/29.jpg
    :width: 400px
-.. |30| image:: ../../images/assembly_light/part/30.jpg
-   :width: 400px
-.. |31| image:: ../../images/assembly_light/part/31.jpg
-   :width: 400px
-.. |32| image:: ../../images/assembly_light/part/32.jpg
-   :width: 400px
-.. |33| image:: ../../images/assembly_light/part/33.jpg
-   :width: 400px
-.. |34| image:: ../../images/assembly_light/part/34.jpg
-   :width: 400px
-.. |35| image:: ../../images/assembly_light/part/35.jpg
-   :width: 400px
-.. |36| image:: ../../images/assembly_light/part/36.jpg
-   :width: 400px
-.. |37| image:: ../../images/assembly_light/part/37.jpg
-   :width: 400px
-.. |38| image:: ../../images/assembly_light/part/38.jpg
-   :width: 400px
-.. |39| image:: ../../images/assembly_light/part/39.jpg
-   :width: 400px
-.. |40| image:: ../../images/assembly_light/part/40.jpg
-   :width: 400px
-.. |42| image:: ../../images/assembly_light/part/42.jpg
-   :width: 400px
 
 | AKARI Lightの組み立てに必要な道具、部品の一覧を記載します。
 | 各部品にはご参考までに自分達の購入先のリンクを掲載してあります(秋月電子に関しては通販コードを用いて参照ください)。
@@ -113,6 +89,7 @@ AKARI Lightのセットアップに必要なもの
 
 | M5基板用
 | **JLCPCBで実装済み基板を購入する場合、2-5は購入不要なので注意**
+
 .. csv-table::
 
    "No.","分類","画像","名称","型番","必要数 [個]","購入数[組]","購入先リンク","備考"
@@ -146,18 +123,17 @@ AKARI Lightのセットアップに必要なもの
    22,"購入品","|22|","ACアダプター 5V 6.2A","LTE36ES-S1-304",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2775202/>`__",
    23,"購入品","|23|","2x5両端コネクター付IDCリボンケーブル","DG01032-0012-01",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103796/>`__",
    24,"購入品","|24|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
-   25,"購入品","|25|","タッピングビスM2.5-6",,6,1,"`Amazon <https://www.amazon.co.jp/dp/B076ZF94HR>`__",
-   26,"購入品","|26|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
-   27,"購入品","|27|","MicroSDカード(RaspberryPi用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0CH2X5LBX>`__","容量128GB以上推奨"
-   28,"購入品","|28|","MicroSDカード(M5Stack用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
+   25,"購入品","|25|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
+   26,"購入品","|26|","MicroSDカード(RaspberryPi用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0CH2X5LBX>`__","容量128GB以上推奨"
+   27,"購入品","|27|","MicroSDカード(M5Stack用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
 
 | オプション
 使用しない場合は購入不要です。
 
 .. csv-table::
 
-   29,"購入品","|29|","温湿度気圧センサユニット ENVIV","M5STACK-U001-C",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2764443/>`__","温度、気圧センサを使用しない場合は不要",
-   30,"購入品","|30|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/1526328/>`__","光センサを使用しない場合は不要",
+   28,"購入品","|28|","温湿度気圧センサユニット ENVIV","M5STACK-U001-C",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2764443/>`__","温度、気圧センサを使用しない場合は不要",
+   29,"購入品","|29|","光センサユニット","M5STACK-LIGHT-UNIT",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/1526328/>`__","光センサを使用しない場合は不要",
 
 
 :doc:`assembly_head` へ進む
