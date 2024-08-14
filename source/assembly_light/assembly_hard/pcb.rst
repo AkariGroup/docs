@@ -1,56 +1,100 @@
 ***********************************************************
-基板を作ろう
+基板を作ろう(AKARI Light)
 ***********************************************************
 
-| AKARIの回路基板は :doc:`part_list` のNo.1、テストユニットを作成する場合は :doc:`テストユニットの部品 <../assembly_test_unit/part_list>` のNo.T1の2種類です。
-| これらはakari_hardwareのレポジトリでgerberデータが公開されています。
+| AKARI Lightの回路基板は :doc:`part_list` のNo.1です。
 
-| (1) M5stack基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/electronics/pcb
-| (T1) TEST UNIT基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/head_units/test_unit/pcb
+| akari_hardwareのレポジトリで必要なデータが公開されています。
+| (1) M5stack基板(Light用)の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/electronics/AKARI_Light/pcb
 
 | 例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。
 | JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。
 | 海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。
 
-1.  https://jlcpcb.com/ サイト内の「Add gerber file」を選択します。
+| また、表面実装の部品2-6は実装済みの状態で発注することができます。
+| ここでは、No.2-6の部品を実装済みの状態で発注する方法を説明します。
 
-.. image:: ../../images/assembly/pcba/pcba01-01.PNG
+1. https://jlcpcb.com/ サイト内の「PCB Assembly」の「Quote Now」を選択します。
+
+.. image:: ../../images/assembly_light/pcba/pcba01-01.PNG
     :width: 400px
 
-2. ファイル選択ダイアログで、akari_hardwareリポジトリの `electronics/pcb/AKARI_M5_board_gerber.zip` を選択します。
+2.  https://jlcpcb.com/ サイト内の「Add gerber file」を選択します。
 
 .. image:: ../../images/assembly/pcba/pcba01-02.PNG
+    :width: 400px
+
+2. ファイル選択ダイアログで、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_gerber.zip` を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-03.PNG
     :width: 400px
 
 3. インポートされたデータを確認し、各設定を行います。
 
 | 図は設定の一例です。「PCB Qty」を必要な基板の個数、「PCB Color」を黒にしていますが、これらは任意です。
 
-.. image:: ../../images/assembly/pcba/pcba01-03.PNG
+.. image:: ../../images/assembly/pcba/pcba01-04.PNG
     :width: 500px
 
-4. 設定が問題なければ、「SAVE TO CART」を選択します。
-
-.. image:: ../../images/assembly/pcba/pcba01-04.PNG
-    :width: 400px
-
-5. テスト基板も作成する場合は、同様に 1.から行います。
-
-| アップロードするファイルは akari_hardwareリポジトリの `head_units/test_unit/pcbAKARI_Test_Head_Unit_gerber.zip` です。
-| 下図は設定の一例で、こちらも「PCB Qty」を必要な基板の個数に変更、「PCB Color」を黒にしていますが、これらは任意です。
+4. PCB Assemblyを有効化します。
 
 .. image:: ../../images/assembly/pcba/pcba01-05.PNG
-    :width: 500px
+    :width: 400px
 
-6. アカウントがない場合、新規作成します。
+5. 各設定を行います。
+
+| PCBA TypeはEconomic、Assembly sideはTOP Sideを選択します。
 
 .. image:: ../../images/assembly/pcba/pcba01-06.PNG
-    :width: 200px
+    :width: 500px
 
-7. アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。
+6. 設定が問題なければ、「Confirm」を選択します。
 
 .. image:: ../../images/assembly/pcba/pcba01-07.PNG
     :width: 400px
 
-8. 以降、配送先住所や支払い先を入力することで、発注が完了します。
+7. NEXTを選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-08.PNG
+    :width: 200px
+
+8. 「Add BOM File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_bom_JLCSMT.xlsx` を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-09.PNG
+    :width: 200px
+
+
+9. 「Add CPL File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_top_cpl.csv` を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-10.PNG
+    :width: 200px
+
+10. 「Process BOM & CPL」を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-11.PNG
+    :width: 200px
+
+11. 部品一覧を確認し、問題なければ「NEXT」を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-12.PNG
+    :width: 200px
+
+12. 部品のマウント位置を確認し、問題なければ「NEXT」を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-13.PNG
+    :width: 200px
+
+13. 「Product Description」を一つ選択してから、「SAVE TO CART」を選択します。
+
+| 「Product Description」はどれでも問題ないと思いますが、今回は「Reserch\Education\DIY\Entertainment」→「Robot - HS Code 847990」を選択しています。
+
+.. image:: ../../images/assembly/pcba/pcba01-14.PNG
+    :width: 400px
+
+14. アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。
+
+.. image:: ../../images/assembly/pcba/pcba01-15.PNG
+    :width: 400px
+
+15. 以降、配送先住所や支払い先を入力することで、発注が完了します。
 
