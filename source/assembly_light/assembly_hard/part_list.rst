@@ -125,7 +125,7 @@ AKARI Lightのセットアップに必要なもの
    23,"購入品","|23|","ACアダプター 5V 6.2A","LTE36ES-S1-304",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2775202/>`__",
    24,"購入品","|24|","2x5両端コネクター付IDCリボンケーブル","DG01032-0012-01",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103796/>`__",
    25,"購入品","|25|","ボルトM4-5",,2,1,"`Amazon <https://www.amazon.co.jp/dp/B07MZQTTTV>`__",
-   26,"購入品","|26|","USB Type-Cケーブル 0.3mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B097PJLG39>`__",
+   26,"購入品","|26|","USB Type-Cケーブル 0.5mL字",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B08RMFTGHZ>`__",
    27,"購入品","|27|","MicroSDカード(RaspberryPi用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B0CH2X5LBX>`__","容量128GB以上推奨"
    28,"購入品","|28|","MicroSDカード(M5Stack用)",,1,1,"`Amazon <https://www.amazon.co.jp/dp/B00VQOEWYO>`__","容量2GB以上推奨"
 
