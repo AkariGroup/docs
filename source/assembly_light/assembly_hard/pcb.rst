@@ -16,85 +16,91 @@
 
 1. https://jlcpcb.com/ サイト内の「PCB Assembly」の「Quote Now」を選択します。
 
-.. image:: ../../images/assembly_light/pcba/pcba01-01.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-01.jpg
+    :width: 500px
 
 2.  https://jlcpcb.com/ サイト内の「Add gerber file」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-02.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-02.jpg
+    :width: 500px
 
 2. ファイル選択ダイアログで、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_gerber.zip` を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-03.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-03.jpg
+    :width: 500px
 
 3. インポートされたデータを確認し、各設定を行います。
 
 | 図は設定の一例です。「PCB Qty」を必要な基板の個数、「PCB Color」を黒にしていますが、これらは任意です。
 
-.. image:: ../../images/assembly/pcba/pcba01-04.PNG
+.. image:: ../../images/assembly_light/pcba/pcba01-04.jpg
     :width: 500px
 
 4. PCB Assemblyを有効化します。
 
-.. image:: ../../images/assembly/pcba/pcba01-05.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-05.jpg
+    :width: 500px
 
 5. 各設定を行います。
 
 | PCBA TypeはEconomic、Assembly sideはTOP Sideを選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-06.PNG
+.. image:: ../../images/assembly_light/pcba/pcba01-06.jpg
     :width: 500px
 
 6. 設定が問題なければ、「Confirm」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-07.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-07.jpg
+    :width: 500px
 
 7. NEXTを選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-08.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-08.jpg
+    :width: 500px
 
 8. 「Add BOM File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_bom_JLCSMT.xlsx` を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-09.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-09.jpg
+    :width: 600px
+
+.. image:: ../../images/assembly_light/pcba/pcba01-10.jpg
+    :width: 600px
 
 
 9. 「Add CPL File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_top_cpl.csv` を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-10.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-11.jpg
+    :width: 600px
+
+.. image:: ../../images/assembly_light/pcba/pcba01-12.jpg
+    :width: 600px
 
 10. 「Process BOM & CPL」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-11.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-13.jpg
+    :width: 500px
 
 11. 部品一覧を確認し、問題なければ「NEXT」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-12.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-14.jpg
+    :width: 500px
 
 12. 部品のマウント位置を確認し、問題なければ「NEXT」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-13.PNG
-    :width: 200px
+.. image:: ../../images/assembly_light/pcba/pcba01-15.jpg
+    :width: 500px
 
 13. 「Product Description」を一つ選択してから、「SAVE TO CART」を選択します。
 
 | 「Product Description」はどれでも問題ないと思いますが、今回は「Reserch\Education\DIY\Entertainment」→「Robot - HS Code 847990」を選択しています。
 
-.. image:: ../../images/assembly/pcba/pcba01-14.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-16.jpg
+    :width: 500px
 
 14. アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。
 
-.. image:: ../../images/assembly/pcba/pcba01-15.PNG
-    :width: 400px
+.. image:: ../../images/assembly_light/pcba/pcba01-17.jpg
+    :width: 500px
 
 15. 以降、配送先住所や支払い先を入力することで、発注が完了します。
 
