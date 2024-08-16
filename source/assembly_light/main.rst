@@ -13,5 +13,4 @@ AKARI Lightを作ってみよう
    :caption: Contents:
 
    assembly_hard/main
-   assembly_test_unit/main
    setup_soft/main
