@@ -11,7 +11,7 @@ AKARIのソフトウェアのセットアップを行います。
    :maxdepth: 2
 
    requirement_list
-   install_ubuntu
+   install_raspi_os
    setup_ansible
    setup_feetech
    setup_env

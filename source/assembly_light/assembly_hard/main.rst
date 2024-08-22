@@ -14,5 +14,5 @@ AKARIの組み立てを行います。
    pcb
    part_list
    assembly_pcb
-   assembly_head
    assembly_body
+   assembly_head

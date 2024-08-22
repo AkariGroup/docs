@@ -10,20 +10,109 @@
 | - はんだ線
 | - ニッパ
 
+1 表面実装部品の実装
+-----------------------------------------------------------
+
+:doc:`pcb` で実装済み基板を購入した場合この手順は不要です。
+
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 | (1) M5stack基板(Light用) 1個
 | (2) チップ抵抗 10kΩ 0805 1個
 | (3) チップ抵抗 1kΩ 0805 2個
+| (4) コンデンサ 0.1uF 0805 1個
+| (5) バッファIC 1個
+| (6) インバータ1CH 1個
 
 .. image:: ../../images/assembly_light/pcb/pcb01-01.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**実装済み基板を購入している場合、1.~5の手順は不要です。**
 
-1. `チップ抵抗 10kΩ 0805 1個` をR1にはんだ付けする。
+1. `チップ抵抗 10kΩ 0805` をR1にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-02.jpg
+    :width: 400px
+
+2 `チップ抵抗 1kΩ 0805` をR2, R3にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-03.jpg
+    :width: 400px
+
+3 `コンデンサ 0.1uF 0805` をC1にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-04.jpg
+    :width: 400px
+
+4 `バッファIC` をIC1にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-05.jpg
+    :width: 400px
+
+5 `インバータ1CH` をIC2にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-06.jpg
+    :width: 400px
+
+2 接続部品の実装
+-----------------------------------------------------------
+
+必要な部品
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| 表面実装部品実装済みのM5stack基板(Light用) 1個
+| (7) M5Stack用2x15ピンソケット 1個
+| (8) Raspberry Pi用 L字ピンソケット2x13(26P) 1個
+| (9) GROVEユニバーサル4ピンコネクター 2個
+| (10) MOLEX 3ピン2.5mmコネクター 1個
+| (11) DCジャック 2x5.5mm 1個
+| (12) ボックスヘッダ10P 1個
+
+.. image:: ../../images/assembly_light/pcb/pcb01-07.jpg
+    :width: 400px
+
+手順
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. `(7) M5Stack用2x15ピンソケット` をM5stack基板(Light用)のJ1にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-08.jpg
+    :width: 400px
+
+2. `(10) MOLEX 3ピン2.5mmコネクター` をM5stack基板(Light用)のJ6にはんだ付けする。
+
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-09.jpg
+    :width: 400px
+
+3. `(9) GROVEユニバーサル4ピンコネクター` をM5stack基板(Light用)のJ4,J5にはんだ付けする。
+
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-10.jpg
+    :width: 400px
+
+4. `(11)  DCジャック 2x5.5mm` をM5stack基板(Light用)のJ3にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-11.jpg
+    :width: 400px
+
+5. `(12) ボックスヘッダ10P` をM5stack基板(Light用)のJ7にはんだ付けする。
+
+| **切り欠きが基板内側に向くようにすること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-12.jpg
+    :width: 400px
+
+6. `(8) Raspberry Pi用 L字ピンソケット2x13(26P)` をM5stack基板(Light用)のJ2にはんだ付けする。
+
+| **ピンが基板外側に向くようにすること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-13.jpg
+    :width: 400px
 
 | 以上で基板の実装は終わりです。
 | 次はヘッド部の組み立てを行います。
