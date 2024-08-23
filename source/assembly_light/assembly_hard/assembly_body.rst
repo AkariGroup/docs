@@ -27,14 +27,14 @@
 .. image:: ../../images/assembly_light/body/body01-02.jpg
     :width: 400px
 
-1. `(24) 2x5両端コネクター付IDCリボンケーブル` を `(1) M5stack基板(Light用)` のJ7に接続する。
+2. `(24) 2x5両端コネクター付IDCリボンケーブル` を `(1) M5stack基板(Light用)` のJ7に接続する。
 
 | **向きに注意！**
 
 .. image:: ../../images/assembly_light/body/body01-03.jpg
     :width: 400px
 
-2. 1.のケーブルを `(15) AKARI Light Body` 背面の穴を通して、上に引き出す。
+3. 1.のケーブルを `(15) AKARI Light Body` 背面の穴を通して、上に引き出す。
 
 .. image:: ../../images/assembly_light/body/body01-04.jpg
     :width: 400px
@@ -58,7 +58,7 @@
 .. image:: ../../images/assembly_light/body/body01-06.jpg
     :width: 400px
 
-2 (オプション) 温湿度気圧センサユニットの搭載
+3 (オプション) 温湿度気圧センサユニットの搭載
 -----------------------------------------------------------
 **温湿度気圧センサユニットを使用しない場合はこの工程は不要です。**
 
@@ -88,7 +88,7 @@
 .. image:: ../../images/assembly_light/body/body01-10.jpg
     :width: 400px
 
-3 (オプション) 光センサユニットの搭載
+4 (オプション) 光センサユニットの搭載
 -----------------------------------------------------------
 **光センサユニットを使用しない場合はこの工程は不要です。**
 
@@ -214,7 +214,7 @@
 .. image:: ../../images/assembly_light/body/body01-23.jpg
     :width: 400px
 
-8 M5stackの取り付け
+9 M5stackの取り付け
 -----------------------------------------------------------
 
 必要な部品
@@ -250,12 +250,12 @@
 .. image:: ../../images/assembly_light/body/body01-28.jpg
     :width: 400px
 
-9 Coverの取り付け
+10 Baseの取り付け
 -----------------------------------------------------------
 
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| (16) AKARI Light Cover 1個
+| (17) AKARI Light Base 1個
 
 .. image:: ../../images/assembly_light/body/body01-29.jpg
     :width: 400px
@@ -263,9 +263,28 @@
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1. `(17) AKARI Light Base` を `(15) AKARI Light Body` の下部にはめ込む。
+
+.. image:: ../../images/assembly_light/body/body01-30.jpg
+    :width: 400px
+
+
+11 Coverの取り付け
+-----------------------------------------------------------
+
+必要な部品
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+| (16) AKARI Light Cover 1個
+
+.. image:: ../../images/assembly_light/body/body01-31.jpg
+    :width: 400px
+
+手順
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 1. `(16) AKARI Light Cover` を `(15) AKARI Light Body` の前面に取り付ける。
 
-。。 image:: ../../images/assembly_light/body/body01-30.jpg
+.. image:: ../../images/assembly_light/body/body01-32.jpg
     :width: 400px
 
 | 以上でボディーの組み立ては終わりです。
