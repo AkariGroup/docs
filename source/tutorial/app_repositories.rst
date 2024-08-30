@@ -133,6 +133,16 @@ URL: https://github.com/AkariGroup/shy_akari.git
 | AKARIはこちらの顔を見つめてきますが目が合うと恥ずかしがって顔を背けてしまいます。
 | 顔認識と目線認識を組み合わせて、目が合っていない時は顔を追従しつつ、目線がAKARIを向いているかを検出しています。
 
+akari_good_sign_counter
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_good_sign_counter.git
+
+..  youtube:: 24ZCWwcNGfE
+
+| AKARIにグッドポーズをすると、1いいねカウントされるアプリです。
+
+
 :doc:`main` へ戻る
 
 :doc:`test_uvc_camera` へ戻る
