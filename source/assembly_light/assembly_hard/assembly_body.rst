@@ -193,6 +193,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (18) Raspberry Pi5 8GB 1個
 | (19) M5stack BASIC付属のUSBケーブル 1個
+| (20) STS3215付属のタッピングビス 4個
 
 .. image:: ../../images/assembly_light/body/body01-21.jpg
     :width: 400px
@@ -214,6 +215,11 @@
 .. image:: ../../images/assembly_light/body/body01-23.jpg
     :width: 400px
 
+4. `(20) STS3215` に付属のタッピングビスを使って `(18) Raspberry Pi5 8GB` を `(15) AKARI Light Body` に4点ネジ留めする。
+
+.. image:: ../../images/assembly_light/body/body01-24.jpg
+    :width: 400px
+
 8 M5stackの取り付け
 -----------------------------------------------------------
 
@@ -221,14 +227,18 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (19) M5stack BASIC 1個
 | (20) STS3215付属のタッピングビス 2個
-.. image:: ../../images/assembly_light/body/body01-24.jpg
+
+.. image:: ../../images/assembly_light/body/body01-25.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(20) STS3215` に付属のタッピングビスを使って `(1) M5stack基板(Light用)` を `(15) AKARI Light Body` に2点ネジ留めする。
 
-1. `(19) M5Stack BASIC` の背面を外す。
+.. image:: ../../images/assembly_light/body/body01-26.jpg
+    :width: 400px
+
+2. `(19) M5Stack BASIC` の背面を外す。
 
 | **外れにくい場合は、マイナスドライバーをM5Stack側面の溝に差し込んで開く。**
 
@@ -238,14 +248,14 @@
 .. image:: ../../images/assembly_light/body/body01-26.jpg
     :width: 400px
 
-2. `(19) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack基板に表から差し込む。
+3. `(19) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack基板に表から差し込む。
 
 | **ディスプレイ中央部分に強い力をかけないこと。ディスプレイが割れる場合があります！**
 
 .. image:: ../../images/assembly_light/body/body01-27.jpg
     :width: 400px
 
-3. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
+4. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
 
 .. image:: ../../images/assembly_light/body/body01-28.jpg
     :width: 400px
