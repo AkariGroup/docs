@@ -10,9 +10,11 @@ AKARIの組み立てを行います。
 .. toctree::
    :maxdepth: 2
 
+   part_list
    3dprint
    pcb
-   part_list
+   setup_raspi_os
+   setup_m5
    assembly_pcb
    assembly_body
    assembly_head

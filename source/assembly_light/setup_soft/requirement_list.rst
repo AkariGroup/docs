@@ -10,15 +10,12 @@
 
 * AKARI Light本体
 * ディスプレイ
-* PC
-* USB-microSDカードリーダ(PCにSDカードスロットがついていない場合)
 * キーボード
 * マウス
-* microSDカード(:doc:`../assembly_hard/part_list` (39)で用意したもの)
 
 
-まずは次章からRaspberryPi OSのインストールを行っていきます。
+まずは次章からAKARIの環境セットアップを行っていきます。
 
-:doc:`install_raspi_os` へ進む
+:doc:`setup_ansible` へ進む
 
 :doc:`main` へ戻る

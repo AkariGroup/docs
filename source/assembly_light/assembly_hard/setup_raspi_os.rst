@@ -13,11 +13,15 @@ SDカードにRaspberryPi OS(bookworm)をインストールします。
 * キーボード
 * マウス
 * ディスプレイ
+* microSDカード(:doc:`part_list` (39)で用意したもの)
 
 ===========================================================
 RaspberryPi OSの起動用SDカードを作成する。
 ===========================================================
 
-:doc:`setup_ansible` へ進む
+| 以上でRaspberryPi OSのインストールは完了です。
+| 次はm5のSDカードのセットアップを行います。
 
-:doc:`requirement_list` へ戻る
+:doc:`setup_m5` へ進む
+
+:doc:`part_list` へ戻る

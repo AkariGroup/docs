@@ -55,10 +55,10 @@ venvのセットアップ
 
 
 
-| 次はM5StackのSDカードのデータ書き込みを行います。
+| 以上でAKARI Lightの準備は完了です。
 |
 
-:doc:`setup_m5` へ進む
+:doc:`main` へ戻る
 
 :doc:`setup_ansible` へ戻る
 
