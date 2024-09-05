@@ -19,6 +19,29 @@ SDカードにRaspberryPi OS(bookworm)をインストールします。
 RaspberryPi OSの起動用SDカードを作成する。
 ===========================================================
 
+1. PCにmicroSDカードを挿入する。(SDカードスロットがない場合はUSB-microSDカードリーダを使用する。)
+
+2. RaspberryPi Imagerをダウンロードする。
+
+    `RaspberryPi Imager <https://www.raspberrypi.org/software/>`_ から、OSにあったRaspberry Pi Imagerをダウンロードしてインストールします。
+
+3. RaspberryPi Imagerを起動する。
+
+4. 「デバイスを選択」をクリックし、Raspberry Pi 5を選択。
+
+5. 「OSを選択」クリックし、Raspberry Pi OS (64-bit)を選択。
+
+6. 「ストレージを選択」をクリックし、microSDカードを選択。
+
+7. 「次へ」を選択。
+
+.. image:: ../../images/assembly_light/setup_raspi_os/os_01.jpg
+    :width: 400px
+
+8. 必要であれば「設定を編集する」から、ユーザー名やログインパスワード、Wi-Fiの設定を行い、「はい」を選択。
+
+9. 書き込みの終了まで待機する。
+
 | 以上でRaspberryPi OSのインストールは完了です。
 | 次はm5のSDカードのセットアップを行います。
 
