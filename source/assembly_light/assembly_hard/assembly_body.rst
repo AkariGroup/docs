@@ -64,7 +64,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(24) 2x5両端コネクター付IDCリボンケーブル` を `(1) M5stack基板(Light用)` のJ7に接続する。
 
-| **向きに注意！**
+| **どちら側も刺さるが、ケーブルが基板内側に出る方のコネクタを指すこと。**
 
 .. image:: ../../images/assembly_light/body/body01-03.jpg
     :width: 400px
@@ -178,7 +178,7 @@
 .. image:: ../../images/assembly_light/body/body01-20.jpg
     :width: 400px
 
-8 Raspberryの準備
+8 Raspberry Piの準備
 -----------------------------------------------------------
 
 必要な部品
@@ -238,12 +238,17 @@
 .. image:: ../../images/assembly_light/body/body01-24.jpg
     :width: 400px
 
-5. `(18) Raspberry Pi5 8GB` のUSB3.0ポートに、7 OAK-D用USBケーブルの配線で接続したUSBケーブルを接続する。
+5. `(19) M5stack BASIC` 付属のUSBケーブルのtype-C側を `(18) Raspberry Pi5 8GB` のUSBポートとBodyの隙間から内部に差し入れ、前面開口部から外に出す。
 
 .. image:: ../../images/assembly_light/body/body01-21.jpg
     :width: 400px
 
-6. `(19) M5stack BASIC` 付属のUSBケーブルを `(18) Raspberry Pi5 8GB` のUSB2.0ポートに接続し、内部からボディー前面の穴に出す。
+6. `(18) Raspberry Pi5 8GB` のUSB3.0ポートに、7 OAK-D用USBケーブルの配線で接続したUSBケーブルを接続する。
+
+.. image:: ../../images/assembly_light/body/body01-21.jpg
+    :width: 400px
+
+7. `(18) Raspberry Pi5 8GB` のUSB2.0ポートに `(19) M5stack BASIC` 付属のUSBケーブルを接続する。
 
 .. image:: ../../images/assembly_light/body/body01-22.jpg
     :width: 400px
@@ -277,17 +282,20 @@
 .. image:: ../../images/assembly_light/body/body01-26.jpg
     :width: 400px
 
-3. `(19) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack基板に表から差し込む。
+3. `(28) MicroSDカード(M5Stack用)` を `(19) M5Stack BASIC` に挿入する。
+
+4. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
+
+.. image:: ../../images/assembly_light/body/body01-28.jpg
+    :width: 400px
+
+5. `(19) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack基板に表から差し込む。
 
 | **ディスプレイ中央部分に強い力をかけないこと。ディスプレイが割れる場合があります！**
 
 .. image:: ../../images/assembly_light/body/body01-27.jpg
     :width: 400px
 
-4. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
-
-.. image:: ../../images/assembly_light/body/body01-28.jpg
-    :width: 400px
 
 11 Baseの取り付け
 -----------------------------------------------------------
