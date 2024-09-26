@@ -226,7 +226,7 @@
 .. image:: ../../images/assembly/body/body06-04.jpg
     :width: 400px
 
-4. `(21) 2.1mm標準DCジャック パネル取付用` にはんだ付けする。
+3. `(21) 2.1mm標準DCジャック パネル取付用` にはんだ付けする。
 
 **+側(端子が短い方)に赤黒、-側(端子が長い方)に黄緑をはんだ付けすること。**
 
@@ -236,17 +236,17 @@
 .. image:: ../../images/assembly/body/body06-06.jpg
     :width: 400px
 
-1. DCジャックをボディーの外側から押してはめ込む。
+4. DCジャックをボディーの外側から押してはめ込む。
 
 .. image:: ../../images/assembly/body/body06-08.jpg
     :width: 400px
 
-6. ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN2に差し込む。
+5. ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN2に差し込む。
 
 .. image:: ../../images/assembly/body/body06-09.jpg
     :width: 400px
 
-7. ナットを内側から締める。
+6. ナットを内側から締める。
 
 .. image:: ../../images/assembly/body/body06-10.jpg
     :width: 400px
@@ -333,7 +333,7 @@
 .. image:: ../../images/assembly/body/body09-03.jpg
     :width: 400px
 
-4. 2.の反対側のコネクタをCN4に差し込む。
+3. 2.の反対側のコネクタをCN4に差し込む。
 
  **基板側コネクタに(13-B) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！**
 
