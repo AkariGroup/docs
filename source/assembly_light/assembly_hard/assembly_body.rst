@@ -266,14 +266,17 @@
 .. image:: ../../images/assembly_light/body/body09-06.jpg
     :width: 400px
 
+.. image:: ../../images/assembly_light/body/body09-07.jpg
+    :width: 400px
+
 6. `(18) Raspberry Pi5 8GB` のUSB3.0ポートに、7 OAK-D用USBケーブルの配線で接続したUSBケーブルを接続する。
 
-.. image:: ../../images/assembly_light/body/body09-07.jpg
+.. image:: ../../images/assembly_light/body/body09-08.jpg
     :width: 400px
 
 7. `(18) Raspberry Pi5 8GB` のUSB2.0ポートに `(19) M5stack BASIC` 付属のUSBケーブルを接続する。
 
-.. image:: ../../images/assembly_light/body/body09-08.jpg
+.. image:: ../../images/assembly_light/body/body09-09.jpg
     :width: 400px
 
 10 M5stackの取り付け
