@@ -20,14 +20,14 @@
 | (20) STS3215 に付属のサーボホーン 1個
 | (20) STS3215付属のM3ネジ 5個
 
-.. image:: ../../images/assembly_light/body/body01-18.jpg
+.. image:: ../../images/assembly_light/head/head01-01.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(20) STS3215` に付属のサーボホーンを取り付け、付属のM3ネジでネジ留めする。
 
-.. image:: ../../images/assembly_light/body/body01-16.jpg
+.. image:: ../../images/assembly_light/head/head01-02.jpg
     :width: 400px
 
 |  **締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！**
@@ -35,12 +35,11 @@
 
 2. `(14) AKARI Light Arm` をBodyに取り付けた `(20) STS3215` に、付属のM3ネジでネジ留めする。
 
-|  **締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！**
-|  **取り付け後も極力回転させないようにすること**
-
-.. image:: ../../images/assembly_light/body/body01-18.jpg
+.. image:: ../../images/assembly_light/head/head01-03.jpg
     :width: 400px
 
+.. image:: ../../images/assembly_light/head/head01-04.jpg
+    :width: 400px
 
 2 モーターの取り付け
 -----------------------------------------------------------
@@ -53,28 +52,34 @@
 | (20) STS3215付属のM3ねじ 9個
 
 
-.. image:: ../../images/assembly_light/head/head01-01.jpg
+.. image:: ../../images/assembly_light/head/head02-01.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(20) STS3215` の軸に、付属のサーボホーン(軸用)を取り付ける。
 
+.. image:: ../../images/assembly_light/head/head02-02.jpg
+    :width: 400px
+
 2. `(20) STS3215` の軸の反対側に、付属のサーボホーン(受け用)を取り付ける。
 
-4. `(20) STS3215` に取り付けたサーボホーン(軸用)が、本体を背面から見た時に右側に来るようにし、ボディーに取り付けたアームに付属のM3ネジで5点ネジ留めする。
+.. image:: ../../images/assembly_light/head/head02-03.jpg
+    :width: 400px
+
+3. `(20) STS3215` に取り付けたサーボホーン(軸用)が、本体を背面から見た時に右側に来るようにし、ボディーに取り付けたアームに付属のM3ネジで5点ネジ留めする。
+
+.. image:: ../../images/assembly_light/head/head02-04.jpg
+    :width: 400px
 
 5. 反対側のサーボホーン(受け用)を、付属のM3ネジで4点ネジ留めする。
 
 | **ボディーからのケーブルは、まだコネクタに接続しないこと！モータのセットアップ作業の途中で接続します。**
 
-.. image:: ../../images/assembly_light/head/head01-02.jpg
+.. image:: ../../images/assembly_light/head/head02-05.jpg
     :width: 400px
 
-.. image:: ../../images/assembly_light/head/head01-03.jpg
-    :width: 400px
-
-4 ヘッドの取り付け
+3 ヘッドの取り付け
 -----------------------------------------------------------
 
 必要な部品
@@ -82,7 +87,7 @@
 | (13) AKARI Light Head 1個
 | (20) STS3215に付属のタッピングビス 2個
 
-.. image:: ../../images/assembly_light/head/head01-06.jpg
+.. image:: ../../images/assembly_light/head/head03-01.jpg
     :width: 400px
 
 手順
@@ -90,17 +95,20 @@
 
 1. `(13) AKARI Light Head`を、ボディーに取り付けた `(20) STS3215` の上に載せ、左右両側面からSTS3215のネジ穴に `(20) STS3215` に付属のタッピングビスで2点ネジ留めする。
 
-.. image:: ../../images/assembly_light/head/head01-07.jpg
+.. image:: ../../images/assembly_light/head/head03-02.jpg
     :width: 400px
 
-5 リボンケーブルの取り付け
+.. image:: ../../images/assembly_light/head/head03-03.jpg
+    :width: 400px
+
+4 リボンケーブルの取り付け
 -----------------------------------------------------------
 
 必要な部品
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | (20) STS3215に付属のタッピングビス 2個
 
-.. image:: ../../images/assembly_light/head/head01-08.jpg
+.. image:: ../../images/assembly_light/head/head04-01.jpg
     :width: 400px
 
 手順
@@ -108,10 +116,10 @@
 
 1. ボディー上端から出ているリボンケーブルをヘッドの後部に接続し、(20) STS3215に付属のタッピングビスでヘッドの両端から2点ネジ留めする。
 
-.. image:: ../../images/assembly_light/head/head01-09.jpg
+.. image:: ../../images/assembly_light/head/head04-02.jpg
     :width: 400px
 
-6 カメラの取り付け
+5 カメラの取り付け
 -----------------------------------------------------------
 
 必要な部品
@@ -119,19 +127,22 @@
 | (21) OAK-D Lite 1個
 | (25) ボルトM4-5 2個
 
-.. image:: ../../images/assembly_light/head/head01-04.jpg
+.. image:: ../../images/assembly_light/head/head05-01.jpg
     :width: 400px
 
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. ボディー上端から出ているUSBケーブルを、ヘッドの左後部から前方に差し入れ、 `(21) OAK-D Lite` に接続する。
 
-.. image:: ../../images/assembly_light/head/head01-05.jpg
+.. image:: ../../images/assembly_light/head/head05-02.jpg
+    :width: 400px
+
+.. image:: ../../images/assembly_light/head/head05-03.jpg
     :width: 400px
 
 1. `(21) OAK-D Lite` をヘッドの前面に載せ、裏側から`(25) ボルトM4-5` で2点ネジ留めする。
 
-.. image:: ../../images/assembly_light/head/head01-05.jpg
+.. image:: ../../images/assembly_light/head/head05-04.jpg
     :width: 400px
 
 
