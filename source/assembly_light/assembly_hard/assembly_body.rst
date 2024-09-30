@@ -45,7 +45,7 @@
 .. image:: ../../images/assembly_light/body/body01-06.jpg
     :width: 400px
 
-2. 1.のケーブルを 先程Bodyに取り付けた `(20) STS3215` に接続する。
+2. 1.のケーブルを  `(15) AKARI Light Body` の前面から中に通し、先程取り付けた `(20) STS3215` に接続する。
 
 .. image:: ../../images/assembly_light/body/body01-16.jpg
     :width: 400px
@@ -64,7 +64,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. `(24) 2x5両端コネクター付IDCリボンケーブル` を `(1) M5stack基板(Light用)` のJ7に接続する。
 
-| **向きに注意！**
+| **向きに注意！ケーブルが基板内側を向くようにすること**
 
 .. image:: ../../images/assembly_light/body/body01-03.jpg
     :width: 400px
@@ -95,12 +95,12 @@
 
 2. 1.のケーブルを `(15) AKARI Light Body` 背面の右側の穴から中に通し、 `(29) 温湿度気圧センサユニット ENVIV` を背面の凸部に差し込む。
 
+| **ENVIVのラベルがボディーの内向きになるようにすること**
+
 .. image:: ../../images/assembly_light/body/body01-09.jpg
     :width: 400px
 
 3.  2.のケーブルを`(1) M5stack基板(Light用)` のJ5に接続する。
-
-| **ENVIVのラベルがボディーの内向きになるようにすること**
 
 .. image:: ../../images/assembly_light/body/body01-10.jpg
     :width: 400px
@@ -125,12 +125,13 @@
 
 2. 1.のケーブルを `(15) AKARI Light Body` 背面の左側の穴から中に通し、 `(30) 光センサユニット` を背面の凸部に差し込む。
 
+| **光センサのラベルがボディーの内向きになるようにすること**
+
 .. image:: ../../images/assembly_light/body/body01-13.jpg
     :width: 400px
 
 3. 2. のケーブルを `(1) M5stack基板(Light用)` のJ4に接続する。
 
-| **光センサのラベルがボディーの内向きになるようにすること**
 
 .. image:: ../../images/assembly_light/body/body01-14.jpg
     :width: 400px
@@ -150,7 +151,7 @@
 手順
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. `(20) STS3215` に付属のケーブルを、1. の `(20) STS3215` の別ポートに接続する。
+1. `(20) STS3215` に付属のケーブルを、1. の `(20) STS3215` の空いているポートに接続する。
 
 .. image:: ../../images/assembly_light/body/body01-17.jpg
     :width: 400px
@@ -178,7 +179,7 @@
 .. image:: ../../images/assembly_light/body/body01-20.jpg
     :width: 400px
 
-8 Raspberryの準備
+8 Raspberry Piの準備
 -----------------------------------------------------------
 
 必要な部品
@@ -226,7 +227,7 @@
 
 1. 7 OAK-D用USBケーブルの配線で接続したUSBケーブルをBody右側面の穴から外に出す。
 
-2. `(19) M5stack BASIC` 付属のUSBケーブルを、同じくBody右側面の穴から外に出す。
+2. `(19) M5stack BASIC` 付属のUSBケーブルのTypeCケーブルを、同じくBody右側面の穴から中に通し、全面開口部から外に出す。
 
 3. `(18) Raspberry Pi5 8GB` を本体内部下側からM5Stack基板のピンソケットに接続する。
 
@@ -243,7 +244,7 @@
 .. image:: ../../images/assembly_light/body/body01-21.jpg
     :width: 400px
 
-6. `(19) M5stack BASIC` 付属のUSBケーブルを `(18) Raspberry Pi5 8GB` のUSB2.0ポートに接続し、内部からボディー前面の穴に出す。
+6. `(19) M5stack BASIC` 付属のUSBケーブルを `(18) Raspberry Pi5 8GB` のUSB2.0ポートに接続する。
 
 .. image:: ../../images/assembly_light/body/body01-22.jpg
     :width: 400px
@@ -277,6 +278,14 @@
 .. image:: ../../images/assembly_light/body/body01-26.jpg
     :width: 400px
 
+3. `(28) MicroSDカード(M5Stack用)` を `(19) M5Stack BASIC` に挿入する。
+
+
+4. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
+
+.. image:: ../../images/assembly_light/body/body01-28.jpg
+    :width: 400px
+
 3. `(19) M5Stack BASIC` の前面を、ボディーに取り付けたM5stack基板に表から差し込む。
 
 | **ディスプレイ中央部分に強い力をかけないこと。ディスプレイが割れる場合があります！**
@@ -284,10 +293,6 @@
 .. image:: ../../images/assembly_light/body/body01-27.jpg
     :width: 400px
 
-4. 8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 `(19) M5stack BASIC` に接続する。
-
-.. image:: ../../images/assembly_light/body/body01-28.jpg
-    :width: 400px
 
 11 Baseの取り付け
 -----------------------------------------------------------
