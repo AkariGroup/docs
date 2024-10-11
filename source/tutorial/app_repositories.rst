@@ -142,6 +142,15 @@ URL: https://github.com/AkariGroup/akari_good_sign_counter.git
 
 | AKARIにグッドポーズをすると、1いいねカウントされるアプリです。
 
+akari_starry_sky
+===========================================================
+
+URL: https://github.com/AkariGroup/akar_starry_sky
+
+..  youtube:: VKhBbwKr3s0
+
+| YOLOの物体認識で人の3次元位置の軌道を認識、記録し、星空を描画するアプリです。
+
 
 :doc:`main` へ戻る
 
