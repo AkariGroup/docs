@@ -81,44 +81,48 @@
 .. image:: ../../images/assembly_light/pcb/pcb01-08.jpg
     :width: 400px
 
-2. `(10) MOLEX 3ピン2.5mmコネクター` をM5stack基板(Light用)のJ6にはんだ付けする。
+2. `(8) Raspberry Pi用 L字ピンソケット2x13(26P)` をM5stack基板(Light用)のJ2にはんだ付けする。
 
-| **基板のシルクと図を参照に向きを合わせること**
+| - **ピンが基板外側に向くようにすること**
+| - **基板に対して、水平方向、垂直方向共に斜めにならないよう、並行にはんだ付けすること。**
+| - **かつ横から見たときに、基板とコネクタがピッタリ接触するようにすること。**
+| - **まずは両端のピンを1つずつはんだ付けしながら位置を調整し、位置が整ったら他のピンをはんだ付けするとよい。**
+| - **(10) MOLEX 3ピン2.5mmコネクターを使って基板の並行をとるとはんだ付けしやすい。**
+
 
 .. image:: ../../images/assembly_light/pcb/pcb01-09.jpg
     :width: 400px
 
-3. `(9) GROVEユニバーサル4ピンコネクター` をM5stack基板(Light用)のJ4,J5にはんだ付けする。
-
-| **基板のシルクと図を参照に向きを合わせること**
-
 .. image:: ../../images/assembly_light/pcb/pcb01-10.jpg
     :width: 400px
 
-4. `(11)  DCジャック 2x5.5mm` をM5stack基板(Light用)のJ3にはんだ付けする。
-
 .. image:: ../../images/assembly_light/pcb/pcb01-11.jpg
+    :width: 400px
+
+3. `(10) MOLEX 3ピン2.5mmコネクター` をM5stack基板(Light用)のJ6にはんだ付けする。
+
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-12.jpg
+    :width: 400px
+
+4. `(9) GROVEユニバーサル4ピンコネクター` をM5stack基板(Light用)のJ4,J5にはんだ付けする。
+
+| **基板のシルクと図を参照に向きを合わせること**
+
+.. image:: ../../images/assembly_light/pcb/pcb01-13.jpg
     :width: 400px
 
 5. `(12) ボックスヘッダ10P` をM5stack基板(Light用)のJ7にはんだ付けする。
 
 | **切り欠きが基板内側に向くようにすること**
 
-.. image:: ../../images/assembly_light/pcb/pcb01-12.jpg
-    :width: 400px
-
-6. `(8) Raspberry Pi用 L字ピンソケット2x13(26P)` をM5stack基板(Light用)のJ2にはんだ付けする。
-
-| **ピンが基板外側に向くようにすること**
-| **基板に対して、水平方向、垂直方向共に斜めにならないよう、並行にはんだ付けすること。**
-| **かつ横から見たときに、基板とコネクタがピッタリ接触するようにすること。**
-| **まずは両端のピンを1つずつはんだ付けしながら位置を調整し、位置が整ったら他のピンをはんだ付けするとよい。**
-
-
-.. image:: ../../images/assembly_light/pcb/pcb01-13.jpg
-    :width: 400px
-
 .. image:: ../../images/assembly_light/pcb/pcb01-14.jpg
+    :width: 400px
+
+6. `(11)  DCジャック 2x5.5mm` をM5stack基板(Light用)のJ3にはんだ付けする。
+
+.. image:: ../../images/assembly_light/pcb/pcb01-15.jpg
     :width: 400px
 
 | 以上で基板の実装は終わりです。
