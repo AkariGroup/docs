@@ -14,7 +14,8 @@
 # import sys
 import sphinx_rtd_theme
 # sys.path.insert(0, os.path.abspath('.'))
-
+from sphinx.util import docutils
+from urllib.parse import quote
 
 # -- Project information -----------------------------------------------------
 
@@ -78,6 +79,7 @@ html_static_path = ['_static']
 
 html_style = 'css/akaridoc_theme.css'
 
+docutils.nodes.make_id = quote
 autosummary_generate = True
 autodoc_typehints = 'description'
 autodoc_default_options = {
