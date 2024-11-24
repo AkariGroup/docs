@@ -133,14 +133,14 @@ LattePanda Alpha 864s
 
 Intelの第8世代Core m3-8100Yを搭載したシングルボードコンピュータ
 
-https://www.lattepanda.com/products/lattepanda-alpha-864s.html
+https://www.lattepanda.com/lattepanda-alpha
 
 .. image:: ../images/LattePanda.jpg
    :width: 200px
 
 .. csv-table::
    :widths: 9, 9
-    
+
     CPU, Intel 第8世代Core m3-8100Y
     Core, 1.1-3.4 GHz 2コア/ 4スレッド
     GPU, Intel HD Graphics 615 900 MHz
