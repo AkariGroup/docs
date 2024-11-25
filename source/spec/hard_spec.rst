@@ -80,7 +80,7 @@ M5StackBasic
 
 ESP32を搭載した開発デバイスです。
 
-https://m5stack-store.myshopify.com/collections/m5-core/products/grey-development-core
+https://shop.m5stack.com/products/esp32-basic-core-lot-development-kit-v2-7
 
 .. image:: ../images/m5stack.jpg
    :width: 200px
@@ -119,7 +119,7 @@ https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pre
 
 環境光の強度を検出します。
 
-https://m5stack-store.myshopify.com/collections/m5-unit/products/light-sensor-unit
+https://shop.m5stack.com/products/light-sensor-unit
 
 .. image:: ../images/LIGHT_Sensor.jpg
    :width: 200px
@@ -133,14 +133,14 @@ LattePanda Alpha 864s
 
 Intelの第8世代Core m3-8100Yを搭載したシングルボードコンピュータ
 
-https://www.lattepanda.com/products/lattepanda-alpha-864s.html
+https://www.lattepanda.com/lattepanda-alpha
 
 .. image:: ../images/LattePanda.jpg
    :width: 200px
 
 .. csv-table::
    :widths: 9, 9
-    
+
     CPU, Intel 第8世代Core m3-8100Y
     Core, 1.1-3.4 GHz 2コア/ 4スレッド
     GPU, Intel HD Graphics 615 900 MHz
