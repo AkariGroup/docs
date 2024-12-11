@@ -87,7 +87,7 @@ AKARIのセットアップには、ansibleというセットアップツール�
 
 .. code-block:: bash
 
-    ./run-ansible.py -i hosts ./system.yml -K --diff -c local -e lite=true
+    ./run-ansible.py -i hosts ./system.yml -K --diff -c local -e light=true
 
 | BECOME passwordを聞かれます。
 | BECOME passwordには、Ubuntuのログインパスワードを入力します。
