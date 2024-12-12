@@ -1,11 +1,11 @@
 ***********************************************************
-3Dプリント部品を作ろう
+3Dプリント部品を作ろう(AKARI light)
 ***********************************************************
 
-| AKARIの3Dプリント部品は :doc:`part_list` のNo.2~No.6の5種類です。
+| AKARI lightの3Dプリント部品は :doc:`part_list` のNo.13~No.17の5種類です。
 | これらはakari_hardwareのレポジトリでSTLファイルが公開されています。
 
-| 公開先: https://github.com/AkariGroup/akari_hardware/tree/main/3d_models/AKARI/
+| 公開先: https://github.com/AkariGroup/akari_hardware/tree/main/3d_models/AKARI_Light
 
 | このSTLファイルを使用して、3Dプリント部品を作成する方法を紹介します。
 

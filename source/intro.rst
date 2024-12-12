@@ -64,6 +64,10 @@ AKARIの情報元
 
    AKARIの組み立て方、セットアップ方法について記載しています。
 
+#. :doc:`assembly_light/main`
+
+   AKARI Lightの組み立て方、セットアップ方法について記載しています。
+
 #. :doc:`startup/main`
 
    AKARIの起動方法について記載しています。
