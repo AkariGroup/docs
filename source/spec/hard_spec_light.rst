@@ -59,7 +59,7 @@ M5StackBasic
 
 ESP32を搭載した開発デバイスです。
 
-https://m5stack-store.myshopify.com/collections/m5-core/products/grey-development-core
+https://shop.m5stack.com/products/esp32-basic-core-lot-development-kit-v2-7
 
 .. image:: ../images/m5stack.jpg
    :width: 200px
@@ -98,7 +98,7 @@ https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pre
 
 環境光の強度を検出します。
 
-https://m5stack-store.myshopify.com/collections/m5-unit/products/light-sensor-unit
+https://shop.m5stack.com/products/light-sensor-unit
 
 .. image:: ../images/LIGHT_Sensor.jpg
    :width: 200px
@@ -107,5 +107,39 @@ https://m5stack-store.myshopify.com/collections/m5-unit/products/light-sensor-un
 ===========================================================
 コンピュータ
 ===========================================================
-RaspberryPi 5
+RaspberryPi 5 (8GB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Linuxが動作する手のひらサイズのシングルボードコンピュータ（SBC）です。
+
+https://raspberry-pi.ksyic.com/main/index/pdp.id/1016/
+
+.. image:: ../images/Raspberry_Pi_5.jpg
+   :width: 200px
+
+基本仕様
+
+.. csv-table::
+   :widths: 5, 5
+
+    CPU,    2.4GHz 4コア Cortex-A76 （ARMv8、64bit、L2: 512KB、L3: 2MB）
+    GPU,    VideoCore VII®
+    メモリー,  8GB LPDDR4X-4267 SDRAM、2133MHz
+    RTC(Real Time Clock),  RTCと電池コネクタ
+    電源,   USB Type-C ソケット 5V 5.0A PD使用
+
+インタフェース／通信
+
+.. csv-table::
+   :widths: 5, 5
+
+    イーサネット,    
+    無線LAN,   IEEE 802.11 b/g/n/ac 2.4/5GHz デュアルバンド
+    Bluetooth, Bluetooth Ver5.0＋LE （BLE）
+    ビデオ出力,   2 x micro HDMI (最大4Kp60)、2 x MIPI DSI 4-lane （22pin 0.5mmピッチ） （カメラ入力と共有）
+    オーディオ出力,  2 x HDMI（ビデオ出力と共有）、I2Sピンヘッダ
+    カメラ入力,   2 x MIPI CSI 4-lane （22pin 0.5mmピッチ）（ビデオ出力と共有）
+    PCIe,   1 x PCIe 2.0 シングルレーン （FFCコネクタ）
+    USB,    4 x USB Type-A ソケット (2 x USB 2.0、2 x USB 3.0)
+    GPIOコネクター, 40ピン 2.54mm ピンヘッダー
+    カード スロット, micro SDメモリーカード（SDIO）
