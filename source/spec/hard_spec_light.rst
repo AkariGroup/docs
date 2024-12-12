@@ -50,6 +50,22 @@ https://shop.luxonis.com/products/oak-d-lite-1?_pos=1&_psq=lite&_ss=e&_v=1.0
 Feetech STS3215
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+小型のシリアルサーボです。
+
+https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html
+
+.. image:: ../images/STS3215.jpg
+   :width: 200px
+
+.. csv-table::
+   :widths: 6, 6
+
+    電源電圧min,  4V
+    電源電圧max,  7.4V
+    スピードmax,  0.192sec/60°
+    トルクmax[kgf・cm],    19.5kgf・cm
+    制御信号,  シリアル
+
 
 ===========================================================
 M5Stack
