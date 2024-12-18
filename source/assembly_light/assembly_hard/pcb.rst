@@ -5,7 +5,7 @@
 | AKARI Lightの回路基板は :doc:`part_list` のNo.1です。
 
 | akari_hardwareのレポジトリで必要なデータが公開されています。
-| (1) M5stack基板(Light用)の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/electronics/AKARI_Light/pcb
+| (1) M5stack基板(Light用)の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/AKARI_Light/electronics/pcb
 
 | 例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。
 | JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。
@@ -24,7 +24,7 @@
 .. image:: ../../images/assembly_light/pcba/pcba01-02.jpg
     :width: 500px
 
-2. ファイル選択ダイアログで、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_gerber.zip` を選択します。
+2. ファイル選択ダイアログで、akari_hardwareリポジトリの `AKARI_Light/electronics/pcb/AKARI_Light_board_gerber.zip` を選択します。
 
 .. image:: ../../images/assembly_light/pcba/pcba01-03.jpg
     :width: 500px
@@ -58,7 +58,7 @@
 .. image:: ../../images/assembly_light/pcba/pcba01-08.jpg
     :width: 500px
 
-8. 「Add BOM File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_bom_JLCSMT.xlsx` を選択します。
+8. 「Add BOM File」を選択し、akari_hardwareリポジトリの `AKARI_Light/electronics/pcb/AKARI_Light_board_bom_JLCSMT.xlsx` を選択します。
 
 .. image:: ../../images/assembly_light/pcba/pcba01-09.jpg
     :width: 600px
@@ -67,7 +67,7 @@
     :width: 600px
 
 
-9. 「Add CPL File」を選択し、akari_hardwareリポジトリの `electronics/pcb/AKARI_Light_board_top_cpl.csv` を選択します。
+9. 「Add CPL File」を選択し、akari_hardwareリポジトリの `AKARI_Light/electronics/pcb/AKARI_Light_board_top_cpl.csv` を選択します。
 
 .. image:: ../../images/assembly_light/pcba/pcba01-11.jpg
     :width: 600px

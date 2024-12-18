@@ -5,7 +5,7 @@
 | AKARIの3Dプリント部品は :doc:`part_list` のNo.2~No.6の5種類です。
 | これらはakari_hardwareのレポジトリでSTLファイルが公開されています。
 
-| 公開先: https://github.com/AkariGroup/akari_hardware/tree/main/3d_models/AKARI/
+| 公開先: https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/3d_models/
 
 | このSTLファイルを使用して、3Dプリント部品を作成する方法を紹介します。
 
