@@ -11,5 +11,6 @@ AKARIのハード仕様やソフトウェアAPIを説明します。
    :maxdepth: 2
 
    hard_spec
+   hard_spec_light
    test_unit
    soft_base
