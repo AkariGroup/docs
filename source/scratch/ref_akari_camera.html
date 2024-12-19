@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>拡張機能の紹介① AkariCamera &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/scratch/ref_akari_camera.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="拡張機能の紹介③ AKARIブロック(簡易版)" href="ref_akari_blocks_beginner.html" />
+    <link rel="prev" title="拡張機能の紹介① AkariBlocks" href="ref_akari_blocks.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">Scratchを使ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">AKARIのScratch環境をセットアップしよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playing.html">Scratchで動かしてみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_blocks.html">拡張機能の紹介① AkariBlocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">拡張機能の紹介① AkariCamera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%82%AB%E3%83%A1%E3%83%A9%E5%88%B6%E5%BE%A1">カメラ制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%5B%E3%83%A2%E3%83%BC%E3%83%89%5D%E3%81%AE%E6%98%A0%E5%83%8F%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B">[モード]の映像をONにする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%AB%E3%83%A1%E3%83%A9%E6%98%A0%E5%83%8F%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B">カメラ映像をOFFにする</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E9%A1%94%E8%AA%8D%E8%AD%98">顔認識</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E9%A1%94%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">【顔】結果を取得する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F">【顔】顔が認識された</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE">【顔】顔の[座標軸]位置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA">【顔】顔の[座標軸]方向のサイズ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98">物体認識</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">【物体】結果を取得する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5B%E5%90%8D%E5%89%8D%5D%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F">【物体】[名前]が認識された</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%5B%E5%90%8D%E5%89%8D%5D%E3%81%AE%E6%95%B0">【物体】認識した[名前]の数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%E6%95%B0">【物体】認識した数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%E5%90%8D%E5%89%8D">【物体】[ID]番目の名前</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE">【物体】[ID]番目の[座標軸]位置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA">【物体】[ID]番目の[座標軸]方向のサイズ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_blocks_beginner.html">拡張機能の紹介③ AKARIブロック(簡易版)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_camera_beginner.html">拡張機能の紹介④ AKARIカメラ(簡易版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">Scratchを使ってみよう</a></li>
+      <li class="breadcrumb-item active">拡張機能の紹介① AkariCamera</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/scratch/ref_akari_camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B%E2%91%A0%20akaricamera">
+<h1>拡張機能の紹介① AkariCamera<a class="headerlink" href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B%E2%91%A0%20akaricamera" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ここでは、AKARIのカメラの制御が可能な拡張機能であるAkariCameraの各ブロックを紹介します。</div>
+</div>
+<section id="%E3%82%AB%E3%83%A1%E3%83%A9%E5%88%B6%E5%BE%A1">
+<h2>カメラ制御<a class="headerlink" href="#%E3%82%AB%E3%83%A1%E3%83%A9%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h2>
+<section id="%5B%E3%83%A2%E3%83%BC%E3%83%89%5D%E3%81%AE%E6%98%A0%E5%83%8F%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>[モード]の映像をONにする<a class="headerlink" href="#%5B%E3%83%A2%E3%83%BC%E3%83%89%5D%E3%81%AE%E6%98%A0%E5%83%8F%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_function_01.jpg"><img alt="../../_images/camera_function_01.jpg" src="../../_images/camera_function_01.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">[モード]の機能を立ち上げ、カメラ映像をScratch右上のウィンドウにストリーミングします。</div>
+<div class="line">認識機能を使う場合は、必ずこのブロックで使いたい機能と同じモードを立ち上げる必要があります。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%82%AB%E3%83%A1%E3%83%A9%E6%98%A0%E5%83%8F%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>カメラ映像をOFFにする<a class="headerlink" href="#%E3%82%AB%E3%83%A1%E3%83%A9%E6%98%A0%E5%83%8F%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_function_02.jpg"><img alt="../../_images/camera_function_02.jpg" src="../../_images/camera_function_02.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">カメラのストリーミングをOFFにします。</div>
+<div class="line">認識機能も停止します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="%E9%A1%94%E8%AA%8D%E8%AD%98">
+<h2>顔認識<a class="headerlink" href="#%E9%A1%94%E8%AA%8D%E8%AD%98" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E3%80%90%E9%A1%94%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">
+<h3>【顔】結果を取得する<a class="headerlink" href="#%E3%80%90%E9%A1%94%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_face_01.jpg"><img alt="../../_images/camera_face_01.jpg" src="../../_images/camera_face_01.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">顔認識の最新の結果を取得します。</div>
+<div class="line">必ずあらかじめ顔認識の映像をONにしている必要があります。</div>
+<div class="line">ここで結果が取得できていないと、以降の顔認識結果のブロックの結果が更新されません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F">
+<h3>【顔】顔が認識された<a class="headerlink" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_face_02.jpg"><img alt="../../_images/camera_face_02.jpg" src="../../_images/camera_face_02.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line">Block type:
+BOOLEAN</div>
+</div>
+<dl>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">取得した結果のうち、顔が認識されていたらTrue、認識されていなければFalseを返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE">
+<h3>【顔】顔の[座標軸]位置<a class="headerlink" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_face_03.jpg"><img alt="../../_images/camera_face_03.jpg" src="../../_images/camera_face_03.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内での顔の[座標軸]方向の中心位置を返します。</div>
+<div class="line">画像中心を0とし、X方向であれば左端-0.5~右端0.5、Y方向であれば上端0.5〜下端-0.5です。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA">
+<h3>【顔】顔の[座標軸]方向のサイズ<a class="headerlink" href="#%E3%80%90%E9%A1%94%E3%80%91%E9%A1%94%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_face_04.jpg"><img alt="../../_images/camera_face_04.jpg" src="../../_images/camera_face_04.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内での顔の[座標軸]方向のサイズを返します。</div>
+<div class="line">X方向であれば左右幅、Y方向であれば上下幅の最大を1としています。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98">
+<h2>物体認識<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">
+<h3>【物体】結果を取得する<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E7%B5%90%E6%9E%9C%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_01.jpg"><img alt="../../_images/camera_object_01.jpg" src="../../_images/camera_object_01.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">物体認識の最新の結果を取得します。</div>
+<div class="line">必ずあらかじめ物体認識の映像をONにしている必要があります。</div>
+<div class="line">ここで結果が取得できていないと、以降の物体認識結果のブロックの結果が更新されません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5B%E5%90%8D%E5%89%8D%5D%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F">
+<h3>【物体】[名前]が認識された<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5B%E5%90%8D%E5%89%8D%5D%E3%81%8C%E8%AA%8D%E8%AD%98%E3%81%95%E3%82%8C%E3%81%9F" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_02.jpg"><img alt="../../_images/camera_object_02.jpg" src="../../_images/camera_object_02.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>BOOLEAN</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">取得した結果のうち、[名前]の物体が認識されていたらTrue、認識されていなければFalseを返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%5B%E5%90%8D%E5%89%8D%5D%E3%81%AE%E6%95%B0">
+<h3>【物体】認識した[名前]の数<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%5B%E5%90%8D%E5%89%8D%5D%E3%81%AE%E6%95%B0" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_03.jpg"><img alt="../../_images/camera_object_03.jpg" src="../../_images/camera_object_03.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内で認識した物体のうち[名前]と一致するものの数を返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%E6%95%B0">
+<h3>【物体】認識した数<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%E8%AA%8D%E8%AD%98%E3%81%97%E3%81%9F%E6%95%B0" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_04.jpg"><img alt="../../_images/camera_object_04.jpg" src="../../_images/camera_object_04.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内で認識した物体の数を返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%E5%90%8D%E5%89%8D">
+<h3>【物体】[ID]番目の名前<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%E5%90%8D%E5%89%8D" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_05.jpg"><img alt="../../_images/camera_object_05.jpg" src="../../_images/camera_object_05.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内で認識した物体には番号が振られます。</div>
+<div class="line">この番号が[ID]番目のものの名前を返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE">
+<h3>【物体】[ID]番目の[座標軸]位置<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E4%BD%8D%E7%BD%AE" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_06.jpg"><img alt="../../_images/camera_object_06.jpg" src="../../_images/camera_object_06.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内で認識した物体のうち[ID]番目のものの[座標軸]方向の中心位置を返します。</div>
+<div class="line">画像中心を0とし、X方向であれば左端-0.5~右端0.5、Y方向であれば上端0.5〜下端-0.5です。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA">
+<h3>【物体】[ID]番目の[座標軸]方向のサイズ<a class="headerlink" href="#%E3%80%90%E7%89%A9%E4%BD%93%E3%80%91%5Bid%5D%E7%95%AA%E7%9B%AE%E3%81%AE%5B%E5%BA%A7%E6%A8%99%E8%BB%B8%5D%E6%96%B9%E5%90%91%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%BA" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/camera_object_07.jpg"><img alt="../../_images/camera_object_07.jpg" src="../../_images/camera_object_07.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画像内で認識した物体のうち[ID]番目のものの[座標軸]方向のサイズを返します。</div>
+<div class="line">X方向であれば左右幅、Y方向であれば上下幅の最大を1としています</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p><a class="reference internal" href="main.html"><span class="doc">Scratchを使ってみよう</span></a> へ戻る</p>
+<p><a class="reference internal" href="ref_akari_blocks.html"><span class="doc">拡張機能の紹介① AkariBlocks</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ref_akari_blocks.html" class="btn btn-neutral float-left" title="拡張機能の紹介① AkariBlocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ref_akari_blocks_beginner.html" class="btn btn-neutral float-right" title="拡張機能の紹介③ AKARIブロック(簡易版)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

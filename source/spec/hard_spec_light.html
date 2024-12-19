@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ハードウェア仕様(AKARI Light) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/spec/hard_spec_light.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="テストユニット仕様" href="test_unit.html" />
+    <link rel="prev" title="ハードウェア仕様" href="hard_spec.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIの仕様</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hard_spec.html">ハードウェア仕様</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ハードウェア仕様(AKARI Light)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E5%A4%96%E8%A6%B3">外観</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#depthai%E3%82%AB%E3%83%A1%E3%83%A9">DepthAIカメラ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oak-d-lite">OAK-D-LITE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%83%A2%E3%83%BC%E3%82%BF">モータ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#feetech%20sts3215">Feetech STS3215</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5stack">M5Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#m5stackbasic">M5StackBasic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E7%92%B0%E5%A2%83%E3%82%BB%E3%83%B3%E3%82%B5%EF%BC%88env%20%E2%85%B2%EF%BC%89">環境センサ（ENV Ⅲ）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5">光センサ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#raspberrypi%205%20%288gb%29">RaspberryPi 5 (8GB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="test_unit.html">テストユニット仕様</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_base.html">ソフトウェアAPI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの仕様</a></li>
+      <li class="breadcrumb-item active">ハードウェア仕様(AKARI Light)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/spec/hard_spec_light.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E4%BB%95%E6%A7%98%28akari%20light%29">
+<h1>ハードウェア仕様(AKARI Light)<a class="headerlink" href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E4%BB%95%E6%A7%98%28akari%20light%29" title="この見出しへのパーマリンク"></a></h1>
+<p>ハードウェアの仕様について説明します。</p>
+<section id="%E5%A4%96%E8%A6%B3">
+<h2>外観<a class="headerlink" href="#%E5%A4%96%E8%A6%B3" title="この見出しへのパーマリンク"></a></h2>
+<p>AKARI Lightは卓上に配置可能なサイズです。AKARIとほぼ同等の機能を持ち、同じソフトで動作します。
+より安価に、より簡単に組み立てることができます。</p>
+<iframe src="https://a360.co/3AoEkZ6" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></section>
+<section id="gpio">
+<h2>GPIO<a class="headerlink" href="#gpio" title="この見出しへのパーマリンク"></a></h2>
+<p>ヘッドのGPIOにより3V3、5Vの電源出力を行うことができます。</p>
+</section>
+<section id="depthai%E3%82%AB%E3%83%A1%E3%83%A9">
+<h2>DepthAIカメラ<a class="headerlink" href="#depthai%E3%82%AB%E3%83%A1%E3%83%A9" title="この見出しへのパーマリンク"></a></h2>
+<section id="oak-d-lite">
+<h3>OAK-D-LITE<a class="headerlink" href="#oak-d-lite" title="この見出しへのパーマリンク"></a></h3>
+<p>ステレオカメラ2基と4Kカメラ1基を通して、深度情報と色情報を取得できるAIカメラです。</p>
+<p><a class="reference external" href="https://shop.luxonis.com/products/oak-d-lite-1?_pos=1&amp;_psq=lite&amp;_ss=e&amp;_v=1.0">https://shop.luxonis.com/products/oak-d-lite-1?_pos=1&amp;_psq=lite&amp;_ss=e&amp;_v=1.0</a></p>
+<a class="reference internal image-reference" href="../../_images/oak-d-lite.jpg"><img alt="../../_images/oak-d-lite.jpg" src="../../_images/oak-d-lite.jpg" style="width: 200px;" /></a>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>メインカメラモデル</p></td>
+<td><p>Sony IMX214</p></td>
+</tr>
+<tr class="row-even"><td><p>焦点範囲</p></td>
+<td><p>8 cm〜∞</p></td>
+</tr>
+<tr class="row-odd"><td><p>有効焦点距離長</p></td>
+<td><p>3.37 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>ステレオカメラモデル</p></td>
+<td><p>OmniVision OV725</p></td>
+</tr>
+<tr class="row-odd"><td><p>焦点範囲</p></td>
+<td><p>6.5 cm〜∞</p></td>
+</tr>
+<tr class="row-even"><td><p>有効焦点距離長</p></td>
+<td><p>1.3 mm</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="%E3%83%A2%E3%83%BC%E3%82%BF">
+<h2>モータ<a class="headerlink" href="#%E3%83%A2%E3%83%BC%E3%82%BF" title="この見出しへのパーマリンク"></a></h2>
+<section id="feetech%20sts3215">
+<h3>Feetech STS3215<a class="headerlink" href="#feetech%20sts3215" title="この見出しへのパーマリンク"></a></h3>
+<p>小型のシリアルサーボです。</p>
+<p><a class="reference external" href="https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html">https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html</a></p>
+<a class="reference internal image-reference" href="../../_images/STS3215.jpg"><img alt="../../_images/STS3215.jpg" src="../../_images/STS3215.jpg" style="width: 200px;" /></a>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>電源電圧min</p></td>
+<td><p>4V</p></td>
+</tr>
+<tr class="row-even"><td><p>電源電圧max</p></td>
+<td><p>7.4V</p></td>
+</tr>
+<tr class="row-odd"><td><p>スピードmax</p></td>
+<td><p>0.192sec/60°</p></td>
+</tr>
+<tr class="row-even"><td><p>トルクmax[kgf・cm]</p></td>
+<td><p>19.5kgf・cm</p></td>
+</tr>
+<tr class="row-odd"><td><p>制御信号</p></td>
+<td><p>シリアル</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="m5stack">
+<h2>M5Stack<a class="headerlink" href="#m5stack" title="この見出しへのパーマリンク"></a></h2>
+<section id="m5stackbasic">
+<h3>M5StackBasic<a class="headerlink" href="#m5stackbasic" title="この見出しへのパーマリンク"></a></h3>
+<p>ESP32を搭載した開発デバイスです。</p>
+<p><a class="reference external" href="https://shop.m5stack.com/products/esp32-basic-core-lot-development-kit-v2-7">https://shop.m5stack.com/products/esp32-basic-core-lot-development-kit-v2-7</a></p>
+<a class="reference internal image-reference" href="../../_images/m5stack.jpg"><img alt="../../_images/m5stack.jpg" src="../../_images/m5stack.jpg" style="width: 200px;" /></a>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>CPU</p></td>
+<td><p>240MHz dual core、 600 DMIPS、 520KB SRAM、 Wi-Fi、 dual mode Bluetooth</p></td>
+</tr>
+<tr class="row-even"><td><p>ストレージ</p></td>
+<td><p>microSDスロット</p></td>
+</tr>
+<tr class="row-odd"><td><p>搭載LCD</p></td>
+<td><p>320 x 240 カラーTFT LCD</p></td>
+</tr>
+<tr class="row-even"><td><p>内蔵スピーカー</p></td>
+<td><p>1W</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="%E7%92%B0%E5%A2%83%E3%82%BB%E3%83%B3%E3%82%B5%EF%BC%88env%20%E2%85%B2%EF%BC%89">
+<h3>環境センサ（ENV Ⅲ）<a class="headerlink" href="#%E7%92%B0%E5%A2%83%E3%82%BB%E3%83%B3%E3%82%B5%EF%BC%88env%20%E2%85%B2%EF%BC%89" title="この見出しへのパーマリンク"></a></h3>
+<p>SHT30とQMP6988を搭載した温度/湿度/気圧が測定できる環境センサです。</p>
+<p><a class="reference external" href="https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pressure-sensor-sht30-qmp6988">https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pressure-sensor-sht30-qmp6988</a></p>
+<a class="reference internal image-reference" href="../../_images/ENV3_Sensor.png"><img alt="../../_images/ENV3_Sensor.png" src="../../_images/ENV3_Sensor.png" style="width: 200px;" /></a>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>温度測定範囲</p></td>
+<td><p>-40 ~ 120 ℃</p></td>
+</tr>
+<tr class="row-even"><td><p>標準温度許容差</p></td>
+<td><p>0 ~ 60 ℃/±0.2 ℃</p></td>
+</tr>
+<tr class="row-odd"><td><p>湿度測定範囲</p></td>
+<td><p>10 ~ 90 %RH / ±2 %</p></td>
+</tr>
+<tr class="row-even"><td><p>気圧測定範囲</p></td>
+<td><p>300 ~ 1100 hPa / ±1 hPa</p></td>
+</tr>
+<tr class="row-odd"><td><p>通信プロトコル</p></td>
+<td><p>I2C：SHT30（0x44） QMP6988（0x56）</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5">
+<h3>光センサ<a class="headerlink" href="#%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5" title="この見出しへのパーマリンク"></a></h3>
+<p>環境光の強度を検出します。</p>
+<p><a class="reference external" href="https://shop.m5stack.com/products/light-sensor-unit">https://shop.m5stack.com/products/light-sensor-unit</a></p>
+<a class="reference internal image-reference" href="../../_images/LIGHT_Sensor.jpg"><img alt="../../_images/LIGHT_Sensor.jpg" src="../../_images/LIGHT_Sensor.jpg" style="width: 200px;" /></a>
+</section>
+</section>
+<section id="%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">
+<h2>コンピュータ<a class="headerlink" href="#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="この見出しへのパーマリンク"></a></h2>
+<section id="raspberrypi%205%20%288gb%29">
+<h3>RaspberryPi 5 (8GB)<a class="headerlink" href="#raspberrypi%205%20%288gb%29" title="この見出しへのパーマリンク"></a></h3>
+<p>Linuxが動作する手のひらサイズのシングルボードコンピュータ（SBC）です。</p>
+<p><a class="reference external" href="https://raspberry-pi.ksyic.com/main/index/pdp.id/1016/">https://raspberry-pi.ksyic.com/main/index/pdp.id/1016/</a></p>
+<a class="reference internal image-reference" href="../../_images/Raspberry_Pi_5.jpg"><img alt="../../_images/Raspberry_Pi_5.jpg" src="../../_images/Raspberry_Pi_5.jpg" style="width: 200px;" /></a>
+<p>基本仕様</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>CPU</p></td>
+<td><p>2.4GHz 4コア Cortex-A76 （ARMv8、64bit、L2: 512KB、L3: 2MB）</p></td>
+</tr>
+<tr class="row-even"><td><p>GPU</p></td>
+<td><p>VideoCore VII®</p></td>
+</tr>
+<tr class="row-odd"><td><p>メモリー</p></td>
+<td><p>8GB LPDDR4X-4267 SDRAM、2133MHz</p></td>
+</tr>
+<tr class="row-even"><td><p>RTC(Real Time Clock)</p></td>
+<td><p>RTCと電池コネクタ</p></td>
+</tr>
+<tr class="row-odd"><td><p>電源</p></td>
+<td><p>USB Type-C ソケット 5V 5.0A PD使用</p></td>
+</tr>
+</tbody>
+</table>
+<p>インタフェース／通信</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>イーサネット</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>無線LAN</p></td>
+<td><p>IEEE 802.11 b/g/n/ac 2.4/5GHz デュアルバンド</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bluetooth</p></td>
+<td><p>Bluetooth Ver5.0＋LE （BLE）</p></td>
+</tr>
+<tr class="row-even"><td><p>ビデオ出力</p></td>
+<td><p>2 x micro HDMI (最大4Kp60)、2 x MIPI DSI 4-lane （22pin 0.5mmピッチ） （カメラ入力と共有）</p></td>
+</tr>
+<tr class="row-odd"><td><p>オーディオ出力</p></td>
+<td><p>2 x HDMI（ビデオ出力と共有）、I2Sピンヘッダ</p></td>
+</tr>
+<tr class="row-even"><td><p>カメラ入力</p></td>
+<td><p>2 x MIPI CSI 4-lane （22pin 0.5mmピッチ）（ビデオ出力と共有）</p></td>
+</tr>
+<tr class="row-odd"><td><p>PCIe</p></td>
+<td><p>1 x PCIe 2.0 シングルレーン （FFCコネクタ）</p></td>
+</tr>
+<tr class="row-even"><td><p>USB</p></td>
+<td><p>4 x USB Type-A ソケット (2 x USB 2.0、2 x USB 3.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIOコネクター</p></td>
+<td><p>40ピン 2.54mm ピンヘッダー</p></td>
+</tr>
+<tr class="row-even"><td><p>カード スロット</p></td>
+<td><p>micro SDメモリーカード（SDIO）</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hard_spec.html" class="btn btn-neutral float-left" title="ハードウェア仕様" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="test_unit.html" class="btn btn-neutral float-right" title="テストユニット仕様" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

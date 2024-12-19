@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="オープンソースの小型卓上ロボット「AKARI」の組み立て方を説明します。" name="description" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKARIの組み立て &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/assembly_hard/main.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="3Dプリント部品を作ろう" href="3dprint.html" />
+    <link rel="prev" title="AKARIを作ってみよう" href="../main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AKARIの組み立て</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_base.html">ベースを組み立てよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+      <li class="breadcrumb-item active">AKARIの組み立て</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/assembly_hard/main.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="akari%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6">
+<h1>AKARIの組み立て<a class="headerlink" href="#akari%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6" title="この見出しへのパーマリンク"></a></h1>
+<p>AKARIの組み立てを行います。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3dprint.html#3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%A7%E9%80%A0%E5%BD%A2%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">3Dプリンタで造形する場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3dprint.html#%E8%A3%BD%E9%80%A0%E6%A5%AD%E8%80%85%E3%81%AB%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">製造業者に外注する場合</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pcb.html">基板を作ろう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_list.html">組み立てに必要なもの</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="part_list.html#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="part_list.html#akari%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">AKARIのセットアップに必要なもの</a></li>
+<li class="toctree-l2"><a class="reference internal" href="part_list.html#%E9%83%A8%E5%93%81%E8%A1%A8">部品表</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assembly_pcb.html#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#1%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E9%83%A8%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6">1 モーター部の組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#2%20oak-d%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">2 OAK-Dのヘッドへの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#3%20dynamixel%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">3 Dynamixelのヘッドへの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#4%20%E7%A3%81%E7%9F%B3%E3%81%AE%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91">4 磁石の貼り付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#5%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%90%AD%E8%BC%89">5 リボンケーブルの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#6%20usb%E3%83%91%E3%83%8D%E3%83%AB%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">6 USBパネルマウントの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_head.html#7%20oak-d%20lite%E3%81%AEusb%E6%8E%A5%E7%B6%9A">7 OAK-D LiteのUSB接続</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#1%20m5%E5%9F%BA%E6%9D%BF%E3%81%AE%E6%90%AD%E8%BC%89">1 M5基板の搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#2%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">2 温湿度気圧センサユニットの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#3%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">3 光センサユニットの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#4%20%E3%83%98%E3%83%83%E3%83%89%E3%81%A8%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%81%AE%E7%B5%90%E5%90%88">4 ヘッドとボディーの結合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#5%20%E9%9B%BB%E6%BA%90%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%81%AE%E6%90%AD%E8%BC%89">5 電源スイッチの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#6%20dc%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%81%AE%E6%90%AD%E8%BC%89">6 DCジャックの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#7%20m5stack%E3%81%AE%E6%90%AD%E8%BC%89">7 M5Stackの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#8%20gpio%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%8E%A5%E7%B6%9A">8 GPIOケーブルの接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#9%20usb2dxif%E3%81%AE%E6%8E%A5%E7%B6%9A">9 USB2DXIFの接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#10%20m5stack%E3%81%AEusb%E6%8E%A5%E7%B6%9A">10 M5StackのUSB接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#11%20%E3%83%A2%E3%83%BC%E3%82%BF%E7%B7%9A%E3%81%AE%E6%8E%A5%E7%B6%9A">11 モータ線の接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#12%20%E3%82%AB%E3%83%90%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">12 カバーの取り付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#13%20usb%E3%83%8F%E3%83%96%E3%81%AE%E6%90%AD%E8%BC%89">13 USBハブの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#14%20usb%E3%83%8F%E3%83%96%E3%81%B8%E3%81%AEusb%E6%8E%A5%E7%B6%9A">14 USBハブへのUSB接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_body.html#15%20%E5%8F%AF%E5%8B%95%E5%9F%9F%E3%81%AE%E7%A2%BA%E8%AA%8D">15 可動域の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_base.html">ベースを組み立てよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#%EF%BC%91%20%E3%82%A2%E3%83%B3%E3%83%86%E3%83%8A%E3%81%AE%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91">１ アンテナの貼り付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#2%20lattepanda%20alpha%E3%81%AE%E6%90%AD%E8%BC%89">2 Lattepanda Alphaの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#3%20dc%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%81%AE%E6%90%AD%E8%BC%89">3 DCジャックの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#4%20%E5%BA%95%E9%9D%A2%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">4 底面プレートの搭載</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#5%20dc%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%8E%A5%E7%B6%9A">5 DCケーブルの接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#6%20%E5%85%A8%E4%BD%93%E3%81%AE%E7%B5%84%E3%81%BF%E4%BB%98%E3%81%91">6 全体の組み付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly_base.html#7%20%E5%AE%8C%E6%88%90%EF%BC%81">7 完成！</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../main.html" class="btn btn-neutral float-left" title="AKARIを作ってみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3dprint.html" class="btn btn-neutral float-right" title="3Dプリント部品を作ろう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
