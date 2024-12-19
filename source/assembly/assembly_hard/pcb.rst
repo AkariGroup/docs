@@ -5,8 +5,8 @@
 | AKARIの回路基板は :doc:`part_list` のNo.1、テストユニットを作成する場合は :doc:`テストユニットの部品 <../assembly_test_unit/part_list>` のNo.T1の2種類です。
 | これらはakari_hardwareのレポジトリでgerberデータが公開されています。
 
-| (1) M5stack基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/electronics/pcb
-| (T1) TEST UNIT基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/head_units/test_unit/pcb
+| (1) M5stack基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/electronics/pcb
+| (T1) TEST UNIT基板の公開先: https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/head_units/test_unit/pcb
 
 | 例として、JLCPCB(https://jlcpcb.com/)での発注方法を説明します。
 | JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。
@@ -17,7 +17,7 @@
 .. image:: ../../images/assembly/pcba/pcba01-01.PNG
     :width: 400px
 
-2. ファイル選択ダイアログで、akari_hardwareリポジトリの `electronics/pcb/AKARI_M5_board_gerber.zip` を選択します。
+2. ファイル選択ダイアログで、akari_hardwareリポジトリの `AKARI/electronics/pcb/AKARI_M5_board_gerber.zip` を選択します。
 
 .. image:: ../../images/assembly/pcba/pcba01-02.PNG
     :width: 400px
@@ -36,7 +36,7 @@
 
 5. テスト基板も作成する場合は、同様に 1.から行います。
 
-| アップロードするファイルは akari_hardwareリポジトリの `head_units/test_unit/pcbAKARI_Test_Head_Unit_gerber.zip` です。
+| アップロードするファイルは akari_hardwareリポジトリの `AKARI/head_units/test_unit/pcb/AKARI_Test_Head_Unit_gerber.zip` です。
 | 下図は設定の一例で、こちらも「PCB Qty」を必要な基板の個数に変更、「PCB Color」を黒にしていますが、これらは任意です。
 
 .. image:: ../../images/assembly/pcba/pcba01-05.PNG
