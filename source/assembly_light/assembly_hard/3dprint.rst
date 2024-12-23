@@ -72,30 +72,30 @@
 | 参考までに、各部品の造形情報の一例を掲載しておきます。
 | あくまで一度造形に成功した例になりますので、この設定による確実な造形成功を保証するものではありません。ご了承ください。
 
-・AKARI_Head
+・AKARI_Light_Head
 
-.. image:: ../../images/assembly/3dprint/3dorder01-04.png
+.. image:: ../../images/assembly_light/3dprint/3dorder_light01-01.png
     :width: 400px
 
-・AKARI_Body
+・AKARI_Light_Arm
 
-.. image:: ../../images/assembly/3dprint/3dorder01-05.png
+.. image:: ../../images/assembly_light/3dprint/3dorder_light01-02.png
     :width: 400px
 
 
-・AKARI_Cover
+・AKARI_Light_Body
 
-.. image:: ../../images/assembly/3dprint/3dorder01-06.png
+.. image:: ../../images/assembly_light/3dprint/3dorder_light01-03.png
     :width: 400px
 
-・AKARI_Base
+・AKARI_Light_Cover
 
-.. image:: ../../images/assembly/3dprint/3dorder01-07.png
+.. image:: ../../images/assembly_light/3dprint/3dorder_light01-04.png
     :width: 400px
 
-・AKARI_Plate
+・AKARI_Light_Base
 
-.. image:: ../../images/assembly/3dprint/3dorder01-08.png
+.. image:: ../../images/assembly_light/3dprint/3dorder_light01-05.png
     :width: 400px
 
 4. 設定が終わったら「SAVE TO CART」を選択します。アカウントがない場合新規作成し、注文を進めます。
