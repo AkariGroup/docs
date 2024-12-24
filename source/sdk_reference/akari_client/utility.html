@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ユーティリティ &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/sdk_reference/akari_client/utility.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="低レイヤー実装" href="low_level.html" />
+    <link rel="prev" title="関節制御" href="joint.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">SDK リファレンス</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="general.html">基本クラス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="m5_com.html">M5の制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="joint.html">関節制御</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ユーティリティ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.m5stack_client.M5ComDict"><code class="docutils literal notranslate"><span class="pre">M5ComDict</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.color.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.color.Colors"><code class="docutils literal notranslate"><span class="pre">Colors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.position.Positions"><code class="docutils literal notranslate"><span class="pre">Positions</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="low_level.html">低レイヤー実装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html">設定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">SDK リファレンス</a></li>
+          <li class="breadcrumb-item"><a href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a></li>
+      <li class="breadcrumb-item active">ユーティリティ</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/sdk_reference/akari_client/utility.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-akari_client">
+<span id="%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3"></span><h1>ユーティリティ<a class="headerlink" href="#module-akari_client" title="この見出しへのパーマリンク"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5ComDict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.m5stack_client.</span></span><span class="sig-name descname"><span class="pre">M5ComDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/m5stack_client.html#M5ComDict"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5ComDict" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5から取得する情報を格納するDict。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>din0</strong> -- ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</p></li>
+<li><p><strong>din1</strong> -- ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</p></li>
+<li><p><strong>ain0</strong> -- ヘッドのain0ピンのアナログ入力。0-3.3Vを0-4095の4096段階にする。</p></li>
+<li><p><strong>dout0</strong> -- ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</p></li>
+<li><p><strong>dout1</strong> -- ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</p></li>
+<li><p><strong>pwmout0</strong> -- ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。</p></li>
+<li><p><strong>general0</strong> -- 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</p></li>
+<li><p><strong>general1</strong> -- 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</p></li>
+<li><p><strong>button_a</strong> -- M5の前面のボタンAの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>button_b</strong> -- M5の前面のボタンBの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>button_c</strong> -- M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>temperature</strong> -- AKARI側面の環境センサモジュールの温度計測値。単位は℃。</p></li>
+<li><p><strong>pressure</strong> -- AKARI側面の環境センサモジュールの観測絶対圧力。単位はPa。</p></li>
+<li><p><strong>brightness</strong> -- AKARI側面の光センサユニットの観測明るさを4096段階で出力。0が最も明るい。</p></li>
+<li><p><strong>time</strong> -- データ取得した時間。M5のソフト起動時からの経過秒数を用いている。</p></li>
+<li><p><strong>is_responce</strong> -- akari_client()の各コマンド実行完了時のレスポンス。実行完了するとTrueを返す。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.color.Color">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.color.</span></span><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/color.html#Color"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.color.Color" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5のディスプレイの表示色を指定するクラス。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<em>int</em>) -- RGBのR要素。0~255で指定。</p></li>
+<li><p><strong>green</strong> (<em>int</em>) -- RGBのG要素。0~255で指定。</p></li>
+<li><p><strong>blue</strong> (<em>int</em>) -- RGBのB要素。0~255で指定。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.color.Colors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.color.</span></span><span class="sig-name descname"><span class="pre">Colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/color.html#Colors"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.color.Colors" title="この定義へのパーマリンク"></a></dt>
+<dd><div class="line-block">
+<div class="line">M5のディスプレイの表示色のenum。</div>
+<div class="line">下記の色を指定可能。</div>
+<div class="line">BLACK</div>
+<div class="line">NAVY</div>
+<div class="line">DARKGREEN</div>
+<div class="line">DARKCYAN</div>
+<div class="line">MAROON</div>
+<div class="line">PURPLE</div>
+<div class="line">OLIVE</div>
+<div class="line">LIGHTGREY</div>
+<div class="line">DARKGREY</div>
+<div class="line">BLUE</div>
+<div class="line">GREEN</div>
+<div class="line">CYAN</div>
+<div class="line">RED</div>
+<div class="line">MAGENTA</div>
+<div class="line">YELLOW</div>
+<div class="line">WHITE</div>
+<div class="line">ORANGE</div>
+<div class="line">GREENYELLOW</div>
+<div class="line">PINK</div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.position.Positions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.position.</span></span><span class="sig-name descname"><span class="pre">Positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/position.html#Positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.position.Positions" title="この定義へのパーマリンク"></a></dt>
+<dd><div class="line-block">
+<div class="line">M5のディスプレイの表示位置のenum。</div>
+<div class="line">下記が利用可能。</div>
+<div class="line">CENTER: 中央</div>
+<div class="line">LEFT: 左揃え</div>
+<div class="line">TOP: 上揃え</div>
+<div class="line">RIGHT: 右揃え</div>
+<div class="line">BOTTOM: 下揃え</div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="joint.html" class="btn btn-neutral float-left" title="関節制御" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="low_level.html" class="btn btn-neutral float-right" title="低レイヤー実装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M5stackのSDカードのセットアップ &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/setup_soft/setup_m5.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="(おまけ) AKARIをRaspberry Piで使ってみる" href="../raspi/main.html" />
+    <link rel="prev" title="AKARI仮想実行環境のセットアップ" href="setup_env.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../assembly_hard/main.html">AKARIの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIのセットアップ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="requirement_list.html">必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ubuntu.html">Ubuntu 22.04のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_ansible.html">AKARI環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_env.html">AKARI仮想実行環境のセットアップ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">M5stackのSDカードのセットアップ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%BA%96%E5%82%99">microSDカードの準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%8C%BF%E5%85%A5">microSDカードの挿入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIのセットアップ</a></li>
+      <li class="breadcrumb-item active">M5stackのSDカードのセットアップ</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/setup_soft/setup_m5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="m5stack%E3%81%AEsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h1>M5stackのSDカードのセットアップ<a class="headerlink" href="#m5stack%E3%81%AEsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h1>
+<p>次にM5stackのデータを保存している、SDカードのセットアップをしていきます。</p>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">
+<h2>必要なもの<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>PC</p></li>
+<li><p>USB-microSDカードリーダ(PCにSDカードスロットがついていない場合)</p></li>
+<li><p>microSDカード(<a class="reference internal" href="../assembly_hard/part_list.html"><span class="doc">組み立てに必要なもの</span></a> (39)で用意したもの)</p></li>
+</ul>
+</section>
+<section id="microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%BA%96%E5%82%99">
+<h2>microSDカードの準備<a class="headerlink" href="#microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%BA%96%E5%82%99" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">M5stack用のmicroSDカードを準備します。</div>
+<div class="line">下記のリンク先から、m5_sd.zipをダウンロードし、解凍します。</div>
+<div class="line"><a class="reference external" href="https://drive.google.com/file/d/1bmp_ZMYMjZQXyLB6NGfF3jKg0oWGZHwf/view?usp=share_link">https://drive.google.com/file/d/1bmp_ZMYMjZQXyLB6NGfF3jKg0oWGZHwf/view?usp=share_link</a></div>
+<div class="line">上記の <cite>m5_sd</cite> の中身を、microSDカードの直下に全てコピーします。</div>
+<div class="line"><strong>&quot;jpg&quot; &quot;Fonts&quot; などのディレクトリがmicroSDの直下に置かれた状態にしてください。</strong></div>
+</div>
+</section>
+<section id="microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%8C%BF%E5%85%A5">
+<h2>microSDカードの挿入<a class="headerlink" href="#microsd%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E6%8C%BF%E5%85%A5" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">microSDカードをPCから抜き、M5stackに挿入します。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/sd.jpg"><img alt="../../../_images/sd.jpg" src="../../../_images/sd.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">以上でM5StackのSDカードのセットアップは完了です。</div>
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="main.html"><span class="doc">AKARIのセットアップ</span></a> へ戻る</p>
+<p><a class="reference internal" href="setup_env.html"><span class="doc">AKARI仮想実行環境のセットアップ</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup_env.html" class="btn btn-neutral float-left" title="AKARI仮想実行環境のセットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../raspi/main.html" class="btn btn-neutral float-right" title="(おまけ) AKARIをRaspberry Piで使ってみる" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scratchで動かしてみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/scratch/playing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="拡張機能の紹介① AkariBlocks" href="ref_akari_blocks.html" />
+    <link rel="prev" title="AKARIのScratch環境をセットアップしよう" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">Scratchを使ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">AKARIのScratch環境をセットアップしよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Scratchで動かしてみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scratch%E3%81%AE%E8%B5%B7%E5%8B%95">Scratchの起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari%E3%81%AE%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9">AKARIの動かし方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">サンプルアプリを動かしてみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA">その他のサンプルアプリ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_blocks.html">拡張機能の紹介① AkariBlocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_camera.html">拡張機能の紹介① AkariCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_blocks_beginner.html">拡張機能の紹介③ AKARIブロック(簡易版)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_camera_beginner.html">拡張機能の紹介④ AKARIカメラ(簡易版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">Scratchを使ってみよう</a></li>
+      <li class="breadcrumb-item active">Scratchで動かしてみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/scratch/playing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scratch%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>Scratchで動かしてみよう<a class="headerlink" href="#scratch%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ここでは、Scratchを起動してAKARIを動かす方法を説明します。</div>
+</div>
+<section id="scratch%E3%81%AE%E8%B5%B7%E5%8B%95">
+<h2>Scratchの起動<a class="headerlink" href="#scratch%E3%81%AE%E8%B5%B7%E5%8B%95" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="setup.html"><span class="doc">AKARIのScratch環境をセットアップしよう</span></a> の準備が終わったら、scratchを起動します。</div>
+</div>
+<ol class="arabic simple">
+<li><p>akari_scratchのdockerを起動する。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><cite>akari_scratch/docker</cite> 内で下記コマンドを実行し、akari_scratchを起動します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker compose -f docker-compose.yml up
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">akari_scratchのcompileが始まるので、Compiled successfullyの表示になるまでしばらく待ちます。</div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>(別PCからアクセスする場合)AKARIが接続されているネットワークと同一のネットワークにPCを接続する。</p></li>
+<li><p>ブラウザからscratchにアクセスする。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference internal" href="../tutorial_web/access.html"><span class="doc">webコンソールを使ってみよう</span></a> と同様の方法でAKARIのIPアドレスを調べ、webブラウザのwebアドレス欄に <cite>[AKARIのIPアドレス]:8601</cite> を入力してアクセスします。</div>
+<div class="line">AKARI本体から直接アクセスしている場合は、 <cite>localhost:8601</cite> でもアクセスできます。</div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>scratchが起動する。</p></li>
+</ol>
+</section>
+<section id="akari%E3%81%AE%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9">
+<h2>AKARIの動かし方<a class="headerlink" href="#akari%E3%81%AE%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">AKARIを動かすためには、専用の拡張機能をインポートする必要があります。</div>
+</div>
+<ol class="arabic simple">
+<li><p>Scratchの画面左下の拡張機能ボタンを押す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/playing_01.jpg"><img alt="../../_images/playing_01.jpg" src="../../_images/playing_01.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>拡張機能画面を下にスクロールして、AkariBlocksを選択する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/playing_02.jpg"><img alt="../../_images/playing_02.jpg" src="../../_images/playing_02.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>TOP画面でAkariBlocksのブロックが使えるようになる。</p></li>
+<li><p>同様に拡張機能画面を再度開き、AkariCameraの拡張機能を選択する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/playing_03.jpg"><img alt="../../_images/playing_03.jpg" src="../../_images/playing_03.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>AkariCameraのブロックが使えるようになる。</p></li>
+</ol>
+</section>
+<section id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>サンプルアプリを動かしてみよう<a class="headerlink" href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">まずはサンプルアプリを動かしてみましょう。</div>
+</div>
+<ol class="arabic simple">
+<li><p>Scratchを使っているPCにサンプルアプリをダウンロードする。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">サンプルアプリはScratchを開いているPC側から開く必要があります。</div>
+<div class="line">サンプルアプリは <cite>akari_scratch/sample</cite> に含まれているため、AKARI本体ではなく外部のPCからScratchを起動している場合はそちらのPCにもダウンロードし直す必要があります。</div>
+<div class="line">外部のPC上でakari_scratchをcloneするか、<a class="reference external" href="https://github.com/AkariGroup/akari_scratch/tree/main/sample">akari_scratch/sample</a> からファイルを直接ダウンロードします。</div>
+<div class="line">今回は <cite>bow.sb3</cite> をダウンロードしましょう。</div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Scratch上でサンプルアプリを開く。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Scratch上の画面上部の「ファイル」→「コンピュータから読み込む」を選択し、先程ダウンロードした <cite>bow.sb3</cite> を開きます。</div>
+<div class="line">Scratch画面中央に、サンプルプログラムが表示されます。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/playing_04.jpg"><img alt="../../_images/playing_04.jpg" src="../../_images/playing_04.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>プロジェクトを実行する。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Scratch上のサンプルプログラムをクリックすると、動作が実行されAKARIがヘッドを上下に動かすおじぎのモーションをします。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/playing_05.jpg"><img alt="../../_images/playing_05.jpg" src="../../_images/playing_05.jpg" style="width: 600px;" /></a>
+</section>
+<section id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA">
+<h2>その他のサンプルアプリ<a class="headerlink" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>sleepy.sb3</p></li>
+</ul>
+<div class="line-block">
+<div class="line">AKARIの明るさセンサの値が一定以下になったらAKARIが寝てしまいます。</div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/HSteJR8OdmU" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p>face_tracking.sb3</p></li>
+</ul>
+<div class="line-block">
+<div class="line">顔追従をするアプリです。</div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/8kNUdVpN4tM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">以上がScratchの使い方の簡単な説明となります。</div>
+<div class="line">次はAKARI拡張機能の各ブロックの仕様を説明します。</div>
+<div class="line">これらを参考に、ブロックを組み合わせてアプリを作ってみてください。</div>
+</div>
+<p><a class="reference internal" href="ref_akari_blocks.html"><span class="doc">拡張機能の紹介① AkariBlocks</span></a> へ進む</p>
+<p><a class="reference internal" href="ref_akari_blocks_beginner.html"><span class="doc">拡張機能の紹介③ AKARIブロック(簡易版)</span></a> へ進む</p>
+<p><a class="reference internal" href="setup.html"><span class="doc">AKARIのScratch環境をセットアップしよう</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="AKARIのScratch環境をセットアップしよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ref_akari_blocks.html" class="btn btn-neutral float-right" title="拡張機能の紹介① AkariBlocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

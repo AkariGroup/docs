@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ソフトウェア仕様(ROS2版) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/ros2/communications.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="AKARIを使った開発" href="../dev/main.html" />
+    <link rel="prev" title="ROS2で動かしてみよう" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">ROS2版を使ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">AKARIのROS2環境をセットアップしよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">ROS2で動かしてみよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ソフトウェア仕様(ROS2版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#joint_state_publisher">joint_state_publisher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#topic">topic</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5stack_publisher">m5stack_publisher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">topic</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#servo_server">servo_server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#service">service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#action">action</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5_server">m5_server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">service</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">ROS2版を使ってみよう</a></li>
+      <li class="breadcrumb-item active">ソフトウェア仕様(ROS2版)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/ros2/communications.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E4%BB%95%E6%A7%98%28ros2%E7%89%88%29">
+<h1>ソフトウェア仕様(ROS2版)<a class="headerlink" href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E4%BB%95%E6%A7%98%28ros2%E7%89%88%29" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ROS2版のtopic, service, actionの通信仕様を記載します。</div>
+</div>
+<section id="joint_state_publisher">
+<h2>joint_state_publisher<a class="headerlink" href="#joint_state_publisher" title="この見出しへのパーマリンク"></a></h2>
+<section id="topic">
+<h3>topic<a class="headerlink" href="#topic" title="この見出しへのパーマリンク"></a></h3>
+<section id="/joint_state">
+<h4><strong>/joint_state</strong><a class="headerlink" href="#/joint_state" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">関節情報を取得する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>JointState</cite></div>
+<div class="line">・ <strong>header</strong> (<cite>std_msgs/Header</cite>) -- Headerの情報。</div>
+<div class="line">・ <strong>name</strong> (<cite>string[]</cite>)  -- 関節の名前のリスト。</div>
+<div class="line">・ <strong>position</strong> (<cite>float32[]</cite>) -- 各関節の現在位置のリスト。単位は[rad]</div>
+<div class="line">・ <strong>velocity</strong> (<cite>float32[]</cite>) -- 各関節の目標関節速度の設定値のリスト。単位は[rad/s]</div>
+<div class="line">・ <strong>acceleration</strong> (<cite>float32[]</cite>) -- 各関節の目標関節加速度の設定値のリスト。単位は[rad/s^2]</div>
+<div class="line">・ <strong>enabled</strong> (<cite>bool[]</cite>) -- 各関節のサーボON状態。Trueの場合サーボON。</div>
+<div class="line">・ <strong>moving_state</strong> (<cite>bool[]</cite>) -- 各関節の動作状態。停止中であればTrue。</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="m5stack_publisher">
+<h2>m5stack_publisher<a class="headerlink" href="#m5stack_publisher" title="この見出しへのパーマリンク"></a></h2>
+<section id="id1">
+<h3>topic<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<section id="/m5stack">
+<h4><strong>/m5stack</strong><a class="headerlink" href="#/m5stack" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">M5からの情報を取得する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>M5</cite></div>
+<div class="line">・ <strong>header</strong> (<cite>std_msgs/Header</cite>) -- Headerの情報。</div>
+<div class="line">・ <strong>button_a</strong> (<cite>bool</cite>) -- M5の前面のボタンAの入力。ボタンを押すとTrue、押していないとFalse。</div>
+<div class="line">・ <strong>button_b</strong> (<cite>bool</cite>) -- M5の前面のボタンBの入力。ボタンを押すとTrue、押していないとFalse。</div>
+<div class="line">・ <strong>button_c</strong> (<cite>bool</cite>) -- M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。</div>
+<div class="line">・ <strong>din0</strong> (<cite>bool</cite>) -- ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</div>
+<div class="line">・ <strong>din1</strong> (<cite>bool</cite>) -- ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</div>
+<div class="line">・ <strong>ain0</strong> (<cite>uint16</cite>) -- ヘッドのain0ピンのアナログ入力。0-3.3Vを0-4095の4096段階にする。</div>
+<div class="line">・ <strong>dout0</strong> (<cite>bool</cite>) -- ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</div>
+<div class="line">・ <strong>dout1</strong> (<cite>bool</cite>) -- ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</div>
+<div class="line">・ <strong>pwmout0</strong> (<cite>uint8</cite>) -- ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。</div>
+<div class="line">・ <strong>temperature</strong> (<cite>float32</cite>) -- AKARI側面の環境センサモジュールの温度計測値。単位は℃。</div>
+<div class="line">・ <strong>pressure</strong> (<cite>float32</cite>) -- AKARI側面の環境センサモジュールの観測絶対圧力。単位はPa。</div>
+<div class="line">・ <strong>brightness</strong> (<cite>uint16</cite>) -- AKARI側面の光センサユニットの観測明るさを4096段階で出力。0が最も明るい。</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="servo_server">
+<h2>servo_server<a class="headerlink" href="#servo_server" title="この見出しへのパーマリンク"></a></h2>
+<section id="service">
+<h3>service<a class="headerlink" href="#service" title="この見出しへのパーマリンク"></a></h3>
+<section id="/set_joint_enable">
+<h4><strong>/set_joint_enable</strong><a class="headerlink" href="#/set_joint_enable" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">サーボの有効無効状態を設定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetJointBool</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>joint_name</strong> (<cite>string[]</cite>) -- 関節名のリスト。制御したい関節名を <cite>pan</cite>, <cite>tilt</cite> で入力する。</div>
+<div class="line">・ <strong>val</strong> (<cite>bool[]</cite>) -- 関節名のリストに対応した要素を設定。TrueでトルクON, FalseでトルクOFF。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/move_joint">
+<h4><strong>/move_joint</strong><a class="headerlink" href="#/move_joint" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">サーボの目標角度を設定する。 ここで設定した値まで移動する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetJointPos</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>joint_name</strong> (<cite>string[]</cite>) -- 関節名のリスト。動かしたい関節名を <cite>pan</cite>, <cite>tilt</cite> で入力する。</div>
+<div class="line">・ <strong>val</strong> (<cite>float32[]</cite>) --  関節名のリストに対応した目標角度のリスト。単位はrad。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- Trueにすると、サーボの移動が完了するまで関数の終了を待機する。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_joint_vel">
+<h4><strong>/set_joint_vel</strong><a class="headerlink" href="#/set_joint_vel" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">関節の速度を指定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetJointFloat</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>joint_name</strong> (<cite>string[]</cite>) -- 関節名のリスト。制御したい関節名を <cite>pan</cite>, <cite>tilt</cite> で入力する。</div>
+<div class="line">・ <strong>val</strong> (<cite>float32[]</cite>) -- 関節名のリストに対応した目標速度のリスト。単位はrad/s。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_joint_acc">
+<h4><strong>/set_joint_acc</strong><a class="headerlink" href="#/set_joint_acc" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">関節の加速度を指定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetJointFloat</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>joint_name</strong> (<cite>string[]</cite>) -- 関節名のリスト。制御したい関節名を <cite>pan</cite>, <cite>tilt</cite> で入力する。</div>
+<div class="line">・ <strong>val</strong> (<cite>float32[]</cite>) -- 関節名のリストに対応した目標加速度のリスト。単位はrad/s^2。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="action">
+<h3>action<a class="headerlink" href="#action" title="この見出しへのパーマリンク"></a></h3>
+<section id="id2">
+<h4><strong>/move_joint</strong><a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">サーボの目標角度を設定する。 ここで設定した値まで移動する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>MoveJoint</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>goal_pan</strong> (<cite>float32</cite>) --  pan関節の目標角度。単位はrad。</div>
+<div class="line">・ <strong>goal_tilt</strong> (<cite>float32</cite>) --  tilt関節の目標角度。単位はrad。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+<div class="line"><strong>Feedback:</strong></div>
+<div class="line">・ <strong>pos_pan</strong> (<cite>float32</cite>) -- 現在のpan角度フィードバック。単位はrad。</div>
+<div class="line">・ <strong>pos_tilt</strong> (<cite>float32</cite>) -- 現在のtilt角度フィードバック。単位はrad。</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="m5_server">
+<h2>m5_server<a class="headerlink" href="#m5_server" title="この見出しへのパーマリンク"></a></h2>
+<section id="id3">
+<h3>service<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<section id="/set_dout">
+<h4><strong>/set_dout</strong><a class="headerlink" href="#/set_dout" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッド部GPIOピンのデジタル出力を設定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetDout</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>pin_id</strong> (<cite>uint8</cite>) -- pin番号。0でdout0、1でdout1を指定する。</div>
+<div class="line">・ <strong>val</strong> (<cite>bool</cite>) -- デジタル出力の値。Falseで0V,Trueで3.3V出力。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_pwmout">
+<h4><strong>/set_pwmout</strong><a class="headerlink" href="#/set_pwmout" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッド部GPIOピンのPWM出力を設定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetPwmout</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>pin_id</strong> (<cite>uint8</cite>) -- pin番号。デフォルトではpwmout0しかないため、0を指定すること。</div>
+<div class="line">・ <strong>val</strong> (<cite>uint8</cite>) --  PWM出力の値。 0-255で指定し、0で0V、255で3.3Vを出力する。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_allout">
+<h4><strong>/set_allout</strong><a class="headerlink" href="#/set_allout" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッド部GPIOピンの出力をまとめて設定する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetAllout</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>dout0_val</strong> (<cite>bool</cite>) -- dout0の出力値。Falseで0V,Trueで3.3V出力。</div>
+<div class="line">・ <strong>dout1_val</strong> (<cite>bool</cite>) -- dout1の出力値。Falseで0V,Trueで3.3V出力。</div>
+<div class="line">・ <strong>pwmout0_val</strong> (<cite>uint8</cite>) --  pwmout0の出力値。0-255で指定し、0で0V、255で3.3Vを出力する。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/reset_allout">
+<h4><strong>/reset_allout</strong><a class="headerlink" href="#/reset_allout" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッド部GPIOピンの出力をリセットする。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>Trigger</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ None</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_display_color">
+<h4><strong>/set_display_color</strong><a class="headerlink" href="#/set_display_color" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ボディー部M5のディスプレイ背景色を変更する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetDisplayColor</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>color</strong> (<cite>string</cite>) -- 色名をテキストで指定。指定可能な色は <a class="reference internal" href="../spec/soft_base.html"><span class="doc">ソフトウェアAPI</span></a> 内akari_client.color.Colorsと同様。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_display_color_rgb">
+<h4><strong>/set_display_color_rgb</strong><a class="headerlink" href="#/set_display_color_rgb" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ボディー部M5のディスプレイ背景色を変更する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetDisplayColorRgb</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>r</strong> (<cite>uint8</cite>) -- RGBのR値を0-255で指定。</div>
+<div class="line">・ <strong>g</strong> (<cite>uint8</cite>) -- RGBのG値を0-255で指定。</div>
+<div class="line">・ <strong>b</strong> (<cite>uint8</cite>) -- RGBのB値を0-255で指定。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_display_text">
+<h4><strong>/set_display_text</strong><a class="headerlink" href="#/set_display_text" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ボディー部M5のディスプレイに文字を表示する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetDisplayText</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>text</strong> (<cite>string</cite>) -- 表示する文字列。</div>
+<div class="line">・ <strong>pos_x</strong> (<cite>int32</cite>) -- x方向の描画位置ピクセルを0-320で指定。左端が0。 <a class="reference internal" href="../spec/soft_base.html"><span class="doc">ソフトウェアAPI</span></a> 内akari_client.position.Positions を用いた位置指定も可能。</div>
+<div class="line">・ <strong>pos_y</strong> (<cite>int32</cite>) -- y方向の描画位置ピクセルを0-240で指定。上端が0。 position.Positions を用いた位置指定も可能。</div>
+<div class="line">・ <strong>size</strong> (<cite>uint8</cite>) -- 文字サイズを1-11の11段階で指定。</div>
+<div class="line">・ <strong>text_color</strong> (<cite>string</cite>) -- 文字色名をテキストで指定。指定可能な色は <a class="reference internal" href="../spec/soft_base.html"><span class="doc">ソフトウェアAPI</span></a> 内akari_client.color.Colorsと同様。</div>
+<div class="line">・ <strong>back_color</strong> (<cite>string</cite>) -- 背景色名をテキストで指定。指定可能な色は <a class="reference internal" href="../spec/soft_base.html"><span class="doc">ソフトウェアAPI</span></a> 内akari_client.color.Colorsと同様。</div>
+<div class="line">・ <strong>refresh</strong> (<cite>bool</cite>) -- trueの場合画面全体を現在の背景色で更新する。falseの場合は現在の表示を維持しつつ、文字を描画する範囲のみ更新する。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/set_display_image">
+<h4><strong>/set_display_image</strong><a class="headerlink" href="#/set_display_image" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ボディー部M5のディスプレイに画像を表示する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>SetDisplayImage</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ <strong>filepath</strong> (<cite>string</cite>) -- M5のSDカード内のファイルパス。(例;&quot;image/hoge.jpg&quot;)</div>
+<div class="line">・ <strong>pos_x</strong> (<cite>int32</cite>) -- x方向の描画位置ピクセルを0-320で指定。左端が0。 <a class="reference internal" href="../spec/soft_base.html"><span class="doc">ソフトウェアAPI</span></a> 内akari_client.position.Positions を用いた位置指定も可能。</div>
+<div class="line">・ <strong>pos_y</strong> (<cite>int32</cite>) -- y方向の描画位置ピクセルを0-240で指定。上端が0。 position.Positions を用いた位置指定も可能。</div>
+<div class="line">・ <strong>scale</strong> (<cite>float32</cite>) -- 画像の拡大縮小倍率を指定。1.0で等倍表示。マイナスの値を入れた場合、画面サイズに合わせて自動でサイズ調整される。</div>
+<div class="line">・ <strong>sync</strong> (<cite>bool</cite>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="/reset_m5">
+<h4><strong>/reset_m5</strong><a class="headerlink" href="#/reset_m5" title="この見出しへのパーマリンク"></a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">M5をリセットして再起動する。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>type</strong>: <cite>Trigger</cite></div>
+<div class="line"><strong>Request:</strong></div>
+<div class="line">・ None</div>
+<div class="line"><strong>Response:</strong></div>
+<div class="line">・ <strong>result</strong> (<cite>bool</cite>) -- サービス実行の成功、失敗を返答する。</div>
+</div>
+</div></blockquote>
+<p><a class="reference internal" href="main.html"><span class="doc">ROS2版を使ってみよう</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example.html" class="btn btn-neutral float-left" title="ROS2で動かしてみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../dev/main.html" class="btn btn-neutral float-right" title="AKARIを使った開発" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

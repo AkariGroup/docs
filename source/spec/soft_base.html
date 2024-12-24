@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ソフトウェアAPI &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/spec/soft_base.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="AKARI練習問題に挑戦しよう" href="../practice/main.html" />
+    <link rel="prev" title="テストユニット仕様" href="test_unit.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIの仕様</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hard_spec.html">ハードウェア仕様</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_spec_light.html">ハードウェア仕様(AKARI Light)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_unit.html">テストユニット仕様</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ソフトウェアAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-akari_client">サーボの制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.joint_manager.JointManager"><code class="docutils literal notranslate"><span class="pre">JointManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5%E3%81%AE%E5%88%B6%E5%BE%A1">M5の制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.m5stack_client.M5StackClient"><code class="docutils literal notranslate"><span class="pre">M5StackClient</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9">M5の制御に使用するクラス</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.m5stack_client.M5ComDict"><code class="docutils literal notranslate"><span class="pre">M5ComDict</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.color.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.color.Colors"><code class="docutils literal notranslate"><span class="pre">Colors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.position.Positions"><code class="docutils literal notranslate"><span class="pre">Positions</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの仕様</a></li>
+      <li class="breadcrumb-item active">ソフトウェアAPI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/spec/soft_base.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2api">
+<h1>ソフトウェアAPI<a class="headerlink" href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2api" title="この見出しへのパーマリンク"></a></h1>
+<p>AKARIのソフトウェアAPIを記載します。</p>
+<section id="module-akari_client">
+<span id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%81%AE%E5%88%B6%E5%BE%A1"></span><h2>サーボの制御<a class="headerlink" href="#module-akari_client" title="この見出しへのパーマリンク"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.joint_manager.</span></span><span class="sig-name descname"><span class="pre">JointManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_controllers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>joint_controllers</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="../sdk_reference/akari_client/joint.html#akari_client.joint_controller.RevoluteJointController" title="akari_client.joint_controller.RevoluteJointController"><em>RevoluteJointController</em></a><em>]</em>) -- </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_names">
+<span class="sig-name descname"><span class="pre">get_joint_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_joint_names"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_names" title="この定義へのパーマリンク"></a></dt>
+<dd><p>関節名を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>AKARIの全関節名のlist</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>List</em>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_limits">
+<span class="sig-name descname"><span class="pre">get_joint_limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_joint_limits"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_limits" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの位置リミットを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と位置リミット(min,max)[rad]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, <em>PositionLimit</em>]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">())</span>
+<span class="go"># 各軸のリミット値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_joint_accelerations">
+<span class="sig-name descname"><span class="pre">set_joint_accelerations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.set_joint_accelerations"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_joint_accelerations" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標加速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の加速度 [rad/s^2]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の加速度 [rad/s^2]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_joint_accelerations</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">tilt</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="go"># pan軸の目標加速度が10rad/s^2, tilt軸の目標加速度が8rad/s^2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_accelerations">
+<span class="sig-name descname"><span class="pre">get_joint_accelerations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_joint_accelerations"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_accelerations" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標加速度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と目標加速度[rad/s^2]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_accelerations</span><span class="p">())</span>
+<span class="go"># 各軸の目標加速度値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_joint_velocities">
+<span class="sig-name descname"><span class="pre">set_joint_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.set_joint_velocities"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_joint_velocities" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の速度 [rad/s]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の速度 [rad/s]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_joint_velocities</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">tilt</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="go"># pan軸の目標加速度が10rad/s, tilt軸の目標加速度が8rad/s</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_velocities">
+<span class="sig-name descname"><span class="pre">get_joint_velocities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_joint_velocities"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_velocities" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標速度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と目標速度[rad/s]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_velocities</span><span class="p">())</span>
+<span class="go"># 各軸の目標速度値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.move_joint_positions">
+<span class="sig-name descname"><span class="pre">move_joint_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.move_joint_positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.move_joint_positions" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標角度を設定する。
+ここで設定した値まで移動する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sync</strong> (<em>bool</em>) -- Trueにすると、サーボの移動が完了するまで関数の終了を待機する。デフォルト値はFalse。</p></li>
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の目標角度 [rad]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の目標角度 [rad]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">move_joint_positions</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">tilt</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="go"># pan軸が0.4rad, tilt軸の目標加速度が-0.2radの位置へ移動</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_positions">
+<span class="sig-name descname"><span class="pre">get_joint_positions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_joint_positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_positions" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの現在角度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>サーボ名と現在角度[rad]のdict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_positions</span><span class="p">())</span>
+<span class="go"># 各軸の現在角度[rad]が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_servo_enabled">
+<span class="sig-name descname"><span class="pre">set_servo_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.set_servo_enabled"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_servo_enabled" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの有効無効状態を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- pan軸のサーボ有効無効の設定。<code class="docutils literal notranslate"><span class="pre">True</span></code> であればサーボを有効にする。</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- tilt軸のサーボ有効無効の設定。<code class="docutils literal notranslate"><span class="pre">True</span></code> であればサーボを有効にする。</p></li>
+<li><p><strong>kwargs</strong> (<em>bool</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_servo_enabled</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">tilt</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go"># panのサーボを有効、tiltのサーボを無効に設定</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.enable_all_servo">
+<span class="sig-name descname"><span class="pre">enable_all_servo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.enable_all_servo"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.enable_all_servo" title="この定義へのパーマリンク"></a></dt>
+<dd><p>全サーボを有効状態に設定する。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">enable_all_servo</span><span class="p">()</span>
+<span class="go"># pan、tiltのサーボ両方を有効に設定</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.disable_all_servo">
+<span class="sig-name descname"><span class="pre">disable_all_servo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.disable_all_servo"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.disable_all_servo" title="この定義へのパーマリンク"></a></dt>
+<dd><p>全サーボを無効状態に設定する。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">disable_all_servo</span><span class="p">()</span>
+<span class="go"># pan、tiltのサーボ両方を無効に設定</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_moving_state">
+<span class="sig-name descname"><span class="pre">get_moving_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/joint_manager.html#JointManager.get_moving_state"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_moving_state" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="simple">
+<dt>サーボが現在移動中かを取得する。</dt><dd><p>停止中ならTrue、移動中ならFalseを返す。</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>サーボ名と現在状態のdict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, bool]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_moving_state</span><span class="p">())</span>
+<span class="go"># 各軸の現在状態が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="m5%E3%81%AE%E5%88%B6%E5%BE%A1">
+<h2>M5の制御<a class="headerlink" href="#m5%E3%81%AE%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.m5stack_client.</span></span><span class="sig-name descname"><span class="pre">M5StackClient</span></span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_dout">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_dout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_dout"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_dout" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ヘッド部GPIOピンのデジタル出力を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pin_id</strong> (<em>int</em>) -- pin番号。0でdout0、1でdout1を指定する。</p></li>
+<li><p><strong>value</strong> (<em>bool</em>) -- デジタル出力の値。Falseで0V,Trueで3.3V出力。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">m5stack</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">set_dout</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go"># dout0がTrueになる。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_pwmout">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_pwmout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_pwmout"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_pwmout" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ヘッド部GPIOピンのPWM出力を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pin_id</strong> (<em>int</em>) -- pin番号。デフォルトではpwmout0しかないため、0を指定すること。</p></li>
+<li><p><strong>value</strong> (<em>int</em>) -- PWM出力の値。 0-255で指定し、0で0V、255で3.3Vを出力する。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">m5stack</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">set_pwmout</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="go"># pwmout0が200になる。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_allout">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_allout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dout0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dout1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwmout0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_allout"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_allout" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ヘッド部GPIOピンの出力をまとめて設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dout0</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- dout0の出力値。Falseで0V,Trueで3.3V出力。</p></li>
+<li><p><strong>dout1</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- dout1の出力値。Falseで0V,Trueで3.3V出力。</p></li>
+<li><p><strong>pwmout0</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) -- pwmout0の出力値。0-255で指定し、0で0V、255で3.3Vを出力する。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">m5stack</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">set_allout</span><span class="p">(</span><span class="n">dout0</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dout1</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pwmout0</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="go"># dout0がFalse, dout1がTrue, pwmout0が100になる。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.reset_allout">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset_allout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.reset_allout"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.reset_allout" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ヘッド部GPIOピンの出力を初期値にリセットする。
+dout0、dout1はFalse、pwmout0は0となる。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">m5stack</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">reset_allout</span><span class="p">()</span>
+<span class="go"># dout0がFalse, dout1がFalse, pwmout0が0になる。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_display_color">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_display_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_display_color"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_display_color" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ボディー部M5のディスプレイ背景色を変更する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>color</strong> (<a class="reference internal" href="#akari_client.color.Color" title="akari_client.color.Color"><em>Color</em></a>) -- 背景色を指定。色は <code class="docutils literal notranslate"><span class="pre">color.Colors</span></code> から色名を引用する、もしくはRGBの数値指定も可能。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">m5stack</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">color</span> <span class="o">=</span> <span class="n">Colors</span><span class="o">.</span><span class="n">WHITE</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">set_display_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="go"># 画面色が白になる。</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">red</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">green</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">blue</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">m5</span><span class="o">.</span><span class="n">set_display_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="go"># 画面色が指定したRGB値になる。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_display_text">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_display_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Positions.CENTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Positions.CENTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">back_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_display_text"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_display_text" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ボディー部M5のディスプレイに文字を表示する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- 表示する文字列。</p></li>
+<li><p><strong>pos_x</strong> (<em>int</em>) -- x方向の描画位置ピクセルを0-320で指定。左端が0。 <code class="docutils literal notranslate"><span class="pre">position.Positions</span></code> を用いた位置指定も可能。デフォルト値は中央揃え。</p></li>
+<li><p><strong>pos_y</strong> (<em>int</em>) -- y方向の描画位置ピクセルを0-240で指定。上端が0。 <code class="docutils literal notranslate"><span class="pre">position.Positions</span></code> を用いた位置指定も可能。デフォルト値は中央揃え。</p></li>
+<li><p><strong>size</strong> (<em>int</em>) -- 文字サイズを1-11の11段階で指定。デフォルト値は5。</p></li>
+<li><p><strong>text_color</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#akari_client.color.Color" title="akari_client.color.Color"><em>Color</em></a><em>]</em>) -- 文字色を指定。色は <code class="docutils literal notranslate"><span class="pre">color.Colors</span></code> から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、前回値を引き継ぐ。</p></li>
+<li><p><strong>back_color</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#akari_client.color.Color" title="akari_client.color.Color"><em>Color</em></a><em>]</em>) -- 背景色を指定。色は <code class="docutils literal notranslate"><span class="pre">color.Colors</span></code> から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、画面全体の背景色に合わせる。</p></li>
+<li><p><strong>refresh</strong> (<em>bool</em>) -- trueの場合画面全体を現在の背景色で更新する。falseの場合は現在の表示を維持しつつ、文字を描画する範囲のみ更新する。デフォルト値は背景更新あり。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client.color</span> <span class="kn">import</span> <span class="n">Colors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client.position</span> <span class="kn">import</span> <span class="n">Positions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;AKARI&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">pos_x</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">LEFT</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">pos_y</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">TOP</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">size</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">text_color</span> <span class="o">=</span> <span class="n">Colors</span><span class="o">.</span><span class="n">WHITE</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">back_color</span> <span class="o">=</span> <span class="n">Colors</span><span class="o">.</span><span class="n">BLACK</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">refresh</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">m5</span><span class="o">.</span><span class="n">set_display_text</span><span class="p">(</span>
+<span class="gp">... </span>       <span class="n">text</span><span class="p">,</span> <span class="n">pos_x</span><span class="p">,</span> <span class="n">pos_y</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">text_color</span><span class="p">,</span> <span class="n">back_color</span><span class="p">,</span> <span class="n">refresh</span>
+<span class="gp">... </span>   <span class="p">)</span>
+<span class="go"># 画面に「AKARI」と表示される。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.set_display_image">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_display_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Positions.CENTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Positions.CENTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.set_display_image"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.set_display_image" title="この定義へのパーマリンク"></a></dt>
+<dd><p>ボディー部M5のディスプレイにM5のSDカード内の画像を表示する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) -- M5のSDカード内のファイルパス。(例;&quot;image/hoge.jpg&quot;)</p></li>
+<li><p><strong>pos_x</strong> (<em>int</em>) -- x方向の描画位置ピクセルを0-320で指定。左端が0。 <code class="docutils literal notranslate"><span class="pre">position.Positions</span></code> を用いた位置指定も可能。デフォルト値は中央揃え。</p></li>
+<li><p><strong>pos_y</strong> (<em>int</em>) -- y方向の描画位置ピクセルを0-240で指定。上端が0。 <code class="docutils literal notranslate"><span class="pre">position.Positions</span></code> を用いた位置指定も可能。デフォルト値は中央揃え。</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) -- 画像の拡大縮小倍率を指定。1.0で等倍表示。マイナスの値を入れた場合、画面サイズに合わせて自動でサイズ調整される。
+デフォルト値は自動サイズ調整となっている。</p></li>
+<li><p><strong>sync</strong> (<em>bool</em>) -- 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client.position</span> <span class="kn">import</span> <span class="n">Positions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;/jpg/logo320.jpg&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">pos_x</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">LEFT</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">pos_y</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">TOP</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">scale</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">m5</span><span class="o">.</span><span class="n">set_display_image</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">pos_x</span><span class="p">,</span> <span class="n">pos_y</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="go"># 画面に&quot;/jpg/logo320.jpg&quot;の画像が表示される。</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.reset_m5">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset_m5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.reset_m5"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.reset_m5" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5をリセットして再起動する。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">m5</span><span class="o">.</span><span class="n">reset_m5</span><span class="p">()</span>
+<span class="go"># M5が再起動する。</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5StackClient.get">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5StackClient.get"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5StackClient.get" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5から環境センサ、ヘッドGPIOの入力値、M5のボタンの状態を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>M5から取得した各データを格納したDict。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#akari_client.m5stack_client.M5ComDict" title="akari_client.m5stack_client.M5ComDict"><em>M5ComDict</em></a></p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">AkariClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">akari</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">data</span> <span class="o">=</span> <span class="n">m5</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">])</span>
+<span class="go">31.675</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="m5%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9">
+<h2>M5の制御に使用するクラス<a class="headerlink" href="#m5%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9" title="この見出しへのパーマリンク"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.m5stack_client.M5ComDict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.m5stack_client.</span></span><span class="sig-name descname"><span class="pre">M5ComDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/m5stack_client.html#M5ComDict"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.m5stack_client.M5ComDict" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5から取得する情報を格納するDict。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>din0</strong> -- ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</p></li>
+<li><p><strong>din1</strong> -- ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</p></li>
+<li><p><strong>ain0</strong> -- ヘッドのain0ピンのアナログ入力。0-3.3Vを0-4095の4096段階にする。</p></li>
+<li><p><strong>dout0</strong> -- ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</p></li>
+<li><p><strong>dout1</strong> -- ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</p></li>
+<li><p><strong>pwmout0</strong> -- ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。</p></li>
+<li><p><strong>general0</strong> -- 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</p></li>
+<li><p><strong>general1</strong> -- 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</p></li>
+<li><p><strong>button_a</strong> -- M5の前面のボタンAの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>button_b</strong> -- M5の前面のボタンBの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>button_c</strong> -- M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。</p></li>
+<li><p><strong>temperature</strong> -- AKARI側面の環境センサモジュールの温度計測値。単位は℃。</p></li>
+<li><p><strong>pressure</strong> -- AKARI側面の環境センサモジュールの観測絶対圧力。単位はPa。</p></li>
+<li><p><strong>brightness</strong> -- AKARI側面の光センサユニットの観測明るさを4096段階で出力。0が最も明るい。</p></li>
+<li><p><strong>time</strong> -- データ取得した時間。M5のソフト起動時からの経過秒数を用いている。</p></li>
+<li><p><strong>is_responce</strong> -- akari_client()の各コマンド実行完了時のレスポンス。実行完了するとTrueを返す。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.color.Color">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.color.</span></span><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/color.html#Color"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.color.Color" title="この定義へのパーマリンク"></a></dt>
+<dd><p>M5のディスプレイの表示色を指定するクラス。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<em>int</em>) -- RGBのR要素。0~255で指定。</p></li>
+<li><p><strong>green</strong> (<em>int</em>) -- RGBのG要素。0~255で指定。</p></li>
+<li><p><strong>blue</strong> (<em>int</em>) -- RGBのB要素。0~255で指定。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.color.Colors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.color.</span></span><span class="sig-name descname"><span class="pre">Colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/color.html#Colors"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.color.Colors" title="この定義へのパーマリンク"></a></dt>
+<dd><div class="line-block">
+<div class="line">M5のディスプレイの表示色のenum。</div>
+<div class="line">下記の色を指定可能。</div>
+<div class="line">BLACK</div>
+<div class="line">NAVY</div>
+<div class="line">DARKGREEN</div>
+<div class="line">DARKCYAN</div>
+<div class="line">MAROON</div>
+<div class="line">PURPLE</div>
+<div class="line">OLIVE</div>
+<div class="line">LIGHTGREY</div>
+<div class="line">DARKGREY</div>
+<div class="line">BLUE</div>
+<div class="line">GREEN</div>
+<div class="line">CYAN</div>
+<div class="line">RED</div>
+<div class="line">MAGENTA</div>
+<div class="line">YELLOW</div>
+<div class="line">WHITE</div>
+<div class="line">ORANGE</div>
+<div class="line">GREENYELLOW</div>
+<div class="line">PINK</div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.position.Positions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.position.</span></span><span class="sig-name descname"><span class="pre">Positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/akari_client/position.html#Positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.position.Positions" title="この定義へのパーマリンク"></a></dt>
+<dd><div class="line-block">
+<div class="line">M5のディスプレイの表示位置のenum。</div>
+<div class="line">下記が利用可能。</div>
+<div class="line">CENTER: 中央</div>
+<div class="line">LEFT: 左揃え</div>
+<div class="line">TOP: 上揃え</div>
+<div class="line">RIGHT: 右揃え</div>
+<div class="line">BOTTOM: 下揃え</div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test_unit.html" class="btn btn-neutral float-left" title="テストユニット仕様" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../practice/main.html" class="btn btn-neutral float-right" title="AKARI練習問題に挑戦しよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

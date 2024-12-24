@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKARI環境のセットアップ &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/setup_soft/setup_ansible.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="AKARI仮想実行環境のセットアップ" href="setup_env.html" />
+    <link rel="prev" title="Ubuntu 22.04のインストール" href="install_ubuntu.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../assembly_hard/main.html">AKARIの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIのセットアップ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="requirement_list.html">必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ubuntu.html">Ubuntu 22.04のインストール</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AKARI環境のセットアップ</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apt%20upgrade%E3%81%AE%E5%AE%9F%E8%A1%8C">apt upgradeの実行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">必要なパッケージのインストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_software%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AEclone">akari_softwareレポジトリのclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git%20submodule%E3%81%AEclone">git submoduleのclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ansible%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">ansibleを用いたセットアップ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E6%9C%AC%E4%BD%93%E3%81%AE%E5%86%8D%E8%B5%B7%E5%8B%95">本体の再起動</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="setup_env.html">AKARI仮想実行環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIのセットアップ</a></li>
+      <li class="breadcrumb-item active">AKARI環境のセットアップ</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/setup_soft/setup_ansible.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="akari%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h1>AKARI環境のセットアップ<a class="headerlink" href="#akari%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h1>
+<p>lattepandaのUbuntu22.04にAKARI用の環境セットアップをしていきます。</p>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">
+<h2>必要なもの<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>AKARI(Ubuntu22.04インストール済み)</p></li>
+<li><p>USBハブ(3ポート以上のもの)</p></li>
+<li><p>キーボード</p></li>
+<li><p>マウス</p></li>
+<li><p>ディスプレイ</p></li>
+</ul>
+</section>
+<section id="apt%20upgrade%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h2>apt upgradeの実行<a class="headerlink" href="#apt%20upgrade%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">まずはaptパッケージのupgradeをします。</div>
+<div class="line">ターミナルを開いて、下記コマンドを実行します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt upgrade
+</pre></div>
+</div>
+</section>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">
+<h2>必要なパッケージのインストール<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">次にlattepandaに必要なパッケージをインストールします。</div>
+<div class="line">ターミナルを開いて、下記コマンドを実行します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install git python3.10 python3.10-venv
+</pre></div>
+</div>
+</section>
+<section id="akari_software%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AEclone">
+<h2>akari_softwareレポジトリのclone<a class="headerlink" href="#akari_software%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AEclone" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">lattepandaのUbuntuにakari_softwareレポジトリをcloneします。</div>
+<div class="line">homeディレクトリ直下で下記のコマンドを実行します。</div>
+<div class="line"><strong>必ずhomeディレクトリで実行してください。home/以外へのcloneは後のセットアップのエラーの元になります！</strong></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/
+git clone https://github.com/AkariGroup/akari_software.git
+</pre></div>
+</div>
+</section>
+<section id="git%20submodule%E3%81%AEclone">
+<h2>git submoduleのclone<a class="headerlink" href="#git%20submodule%E3%81%AEclone" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">akari_softwareレポジトリ内には、いくつかのライブラリがsubmoduleとして含まれています。</div>
+<div class="line">これらのsubmoduleもcloneする必要があります。</div>
+</div>
+<ol class="arabic simple">
+<li><p>akari_softwareの直下に移動します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>下記コマンドでsubmoduleの設定を初期化します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git submodule update --init --recursive
+</pre></div>
+</div>
+</section>
+<section id="ansible%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h2>ansibleを用いたセットアップ<a class="headerlink" href="#ansible%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h2>
+<p>AKARIのセットアップには、ansibleというセットアップツールを用います。</p>
+<ol class="arabic simple">
+<li><p>下記コマンドでansibleのセットアップ環境に移動します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/setup/ansible
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>下記コマンドで、ansibleによる環境セットアップを実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./run-ansible.py -i hosts ./system.yml -K --diff -c <span class="nb">local</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">BECOME passwordを聞かれます。</div>
+<div class="line">BECOME passwordには、Ubuntuのログインパスワードを入力します。</div>
+<div class="line">初回実行時は時間がかかるので、終了までしばらく待ちます。</div>
+<div class="line">このセットアップでは、下記の様なタスクが自動で実行されます。</div>
+</div>
+<ul class="simple">
+<li><p>ライブラリのインストール</p></li>
+<li><p>ユーザー権限の設定</p></li>
+<li><p>dynamixel、M5Stack、OAK-DなどのUSB周辺機器の接続設定</p></li>
+<li><p>M5Stackへのソフト書き込み</p></li>
+</ul>
+<p>全てがOK(既に変更済み)またはchanged(変更あり)になっており、failed=0であればOKです。</p>
+<a class="reference internal image-reference" href="../../../_images/ansible.jpg"><img alt="../../../_images/ansible.jpg" src="../../../_images/ansible.jpg" style="width: 600px;" /></a>
+</section>
+<section id="%E6%9C%AC%E4%BD%93%E3%81%AE%E5%86%8D%E8%B5%B7%E5%8B%95">
+<h2>本体の再起動<a class="headerlink" href="#%E6%9C%AC%E4%BD%93%E3%81%AE%E5%86%8D%E8%B5%B7%E5%8B%95" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>一旦Ubuntuをシャットダウンし、AKARI本体を再起動してください。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">以上でansibleによるセットアップは完了です。</div>
+<div class="line">次はakari_software直下にアプリケーションを実行するための仮想実行環境を構築します。</div>
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="setup_env.html"><span class="doc">AKARI仮想実行環境のセットアップ</span></a> へ進む</p>
+<p><a class="reference internal" href="install_ubuntu.html"><span class="doc">Ubuntu 22.04のインストール</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install_ubuntu.html" class="btn btn-neutral float-left" title="Ubuntu 22.04のインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="setup_env.html" class="btn btn-neutral float-right" title="AKARI仮想実行環境のセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
