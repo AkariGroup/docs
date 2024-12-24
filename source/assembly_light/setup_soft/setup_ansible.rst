@@ -116,7 +116,7 @@ AKARIのセットアップには、ansibleというセットアップツール�
 | 次はfeetechサーボのセットアップを行います。
 |
 
-:doc:`setup_feetech`` へ進む
+:doc:`setup_feetech` へ進む
 
-:doc:`install_ubuntu` へ戻る
+:doc:`requirement_list` へ戻る
 
