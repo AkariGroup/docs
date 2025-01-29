@@ -192,6 +192,8 @@ akari_treasure_hunt
 
 URL: https://github.com/AkariGroup/akari_treasure_hunt
 
+..  youtube:: Z25ZOcmBq8E
+
 | 物体認識を使って、AKARIと宝探しゲームで勝負できるアプリです。
 | 画像の中から、指定した物体をAKARIより先に見つけられるかを競います。
 
