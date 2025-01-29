@@ -179,6 +179,64 @@ URL: https://github.com/AkariGroup/akar_starry_sky
 | YOLOの物体認識で人の3次元位置の軌道を認識、記録し、星空を描画するアプリです。
 
 
+
+***********************************************************
+愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション
+***********************************************************
+
+以下は愛知工業大学 情報科学部 知的制御研究室の学生が開発したアプリケーションです。
+
+
+akari_treasure_hunt
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_treasure_hunt
+
+..  youtube:: Z25ZOcmBq8E
+
+| 物体認識を使って、AKARIと宝探しゲームで勝負できるアプリです。
+| 画像の中から、指定した物体をAKARIより先に見つけられるかを競います。
+
+
+akari_finger_alphabet_game
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_finger_alphabet_game.git
+
+..  youtube:: K45tEPlqJnw
+
+| 物体認識を使って、指文字の練習がクイズ形式でできるアプリです。
+| ディスプレイに表示された単語に一番多く含まれる母音を手で示す、という形式で指文字の練習ができます。
+
+akari_doze_detection
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_doze_detection.git
+
+..  youtube:: m8uzp-P0CAY
+
+| 顔と手の認識を使って、居眠りを防止するアプリです。
+| 居眠りを検知したらアラームが鳴ります。
+
+akari_smile_counter
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_smile_counter.git
+
+..  youtube:: exHdhSjy72o
+
+| 表情認識を使って、笑顔の人を見つけた回数をカウントし、ディスプレイに表示するアプリです。
+
+akari_draw_picture
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_draw_picture.git
+
+..  youtube:: qPgw0fd7b1o
+
+| 画像認識を使って写真の撮影をし、その写真の上にお絵描きができるアプリです。
+
+
 :doc:`main` へ戻る
 
 :doc:`test_uvc_camera` へ戻る
