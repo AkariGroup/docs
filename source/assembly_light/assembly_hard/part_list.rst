@@ -129,7 +129,8 @@ M5基板用
    18,"購入品","|18|","RaspberryPi5 8GB","RPI5-8GB",1,1,"`マルツ <https://www.marutsu.co.jp/pc/i/46415211/>`__",
    19,"購入品","|19|","M5Stack BASIC","M5Stack BASIC V2.7",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2733151/>`__",
    20,"購入品","|20|","STS3215","STS3215",2,2,"| `マルツ <https://www.marutsu.co.jp/pc/i/2349133/>`__",
-   21,"購入品","|21|","OAK-D Lite","OAK-D-LITE",1,1,"`マルツ <https://www.marutsu.co.jp/pc/i/2235787/>`__",
+   21,"購入品","|21|","OAK-D Lite","OAK-D-LITE",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2235787/>`__
+   | `mouser <https://www.mouser.jp/ProductDetail/Luxonis/OAK-D-Lite-FF?qs=Znm5pLBrcAJFZUYhzN5JTQ%3D%3D>`__",
    22,"購入品","|22|","Raspberry Pi5用アクティブクーラー","SC1148",1,1,"`マルツ <https://www.marutsu.co.jp/pc/i/2782705/>`__",
    23,"購入品","|23|","ACアダプター 5V 6.2A","LTE36ES-S1-304",1,1,"| `マルツ <https://www.marutsu.co.jp/pc/i/2775202/>`__",
    24,"購入品","|24|","2x5両端コネクター付IDCリボンケーブル","DG01032-0012-01",1,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103796/>`__",

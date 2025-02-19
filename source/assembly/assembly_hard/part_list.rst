@@ -142,7 +142,8 @@ AKARIのセットアップに必要なもの
    20,"購入品","|20|","コネクタ付コード 4P PH(赤黒黄緑)","DG01032-0049-01",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g115554/>`__",
    21,"購入品","|21|","2.1mm標準DCジャック パネル取付用","C-17108",2,2,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g117108/>`__",
    42,"購入品","|42|","テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm",,2,1,"| `秋月電子 <https://akizukidenshi.com/catalog/g/g103446/>`__",
-   22,"購入品","|22|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__",
+   22,"購入品","|22|","OAK-D Lite","OAK-D-LITE OpenCV DepthAIカメラ",1,1,"| `スイッチサイエンス <https://www.switch-science.com/catalog/7651>`__
+   | `mouser <https://www.mouser.jp/ProductDetail/Luxonis/OAK-D-Lite-FF?qs=Znm5pLBrcAJFZUYhzN5JTQ%3D%3D>`__",
    23,"購入品","|23|","M5Stack用2x15ピンヘッダ・ソケットセット",,1,1,"`スイッチサイエンス <https://www.switch-science.com/catalog/3654>`__",
    24,"購入品","|24|","Groveコネクタ トップ型",,2,2,"`スイッチサイエンス <https://www.switch-science.com/catalog/1122>`__",
    25,"購入品","|25|","Dynamixel 2XL430-W250-T","BTX079",1,1,"`ベストテクノロジー <https://www.besttechnology.co.jp/modules/onlineshop/index.php?fct=photo&p=262>`__",
