@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>拡張機能の紹介③ AKARIブロック(簡易版) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/scratch/ref_akari_blocks_beginner.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="拡張機能の紹介④ AKARIカメラ(簡易版)" href="ref_akari_camera_beginner.html" />
+    <link rel="prev" title="拡張機能の紹介① AkariCamera" href="ref_akari_camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">Scratchを使ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">AKARIのScratch環境をセットアップしよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playing.html">Scratchで動かしてみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_blocks.html">拡張機能の紹介① AkariBlocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_camera.html">拡張機能の紹介① AkariCamera</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">拡張機能の紹介③ AKARIブロック(簡易版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%83%A2%E3%83%BC%E3%82%BF%E5%88%B6%E5%BE%A1">モータ制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B">サーボをONにする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B">サーボをOFFにする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87">[ヘッドの向き]のばしょ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">[ヘッドの向き]を[角度]°にうごかす</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%95%E3%82%86%E3%81%86%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">さゆうを[角度]°、じょうげを[角度]°にうごかす</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">いまのばしょから[ヘッドの向き]に[角度]°うごかす</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%E3%81%95%E3%82%86%E3%81%86%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">いまのばしょからさゆうに[角度]°、じょうげに[角度]°うごかす</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E3%81%AF%E3%82%84%E3%81%95%E3%82%92%5B%E3%81%AF%E3%82%84%E3%81%8F/%E3%82%86%E3%81%A3%E3%81%8F%E3%82%8A/%E3%81%8A%E3%81%9D%E3%81%8F%5D%E3%81%99%E3%82%8B">モータのはやさを[はやく/ゆっくり/おそく]する</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m5%E9%80%9A%E4%BF%A1">M5通信</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F%E3%81%A8%E3%81%8D">ボタンの[ID]がおされたとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F">ボタンの[ID]がおされた</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%A8%E3%81%8D">デジタルにゅうりょくの[ID]がローになったとき</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC">デジタルにゅうりょくの[ID]がロー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F">アナログにゅうりょく</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%5B%E3%82%BB%E3%83%B3%E3%82%B5%5D%E3%81%AE%E3%81%82%E3%81%9F%E3%81%84">[センサ]のあたい</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%5Bid%5D%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B">デジタルしゅつりょく[ID]を[値]にする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pwm%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B">PWMしゅつりょくを[値]にする</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">ディスプレイ制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%AF%E3%81%84%E3%81%91%E3%81%84%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B">はいけいのいろを[色]にする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%82%E3%81%98%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B">もじのいろを[色]にする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%82%E3%81%98%E3%81%AE%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%95%E3%82%92%5B%E3%82%B5%E3%82%A4%E3%82%BA%5D%E3%81%AB%E3%81%99%E3%82%8B">もじのおおきさを[サイズ]にする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%5B%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B">がめんに[テキスト]をひょうじする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%E3%81%8C%E3%81%9E%E3%81%86%5B%E3%83%91%E3%82%B9%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B">がめんにがぞう[パス]をひょうじする</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_akari_camera_beginner.html">拡張機能の紹介④ AKARIカメラ(簡易版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">Scratchを使ってみよう</a></li>
+      <li class="breadcrumb-item active">拡張機能の紹介③ AKARIブロック(簡易版)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/scratch/ref_akari_blocks_beginner.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B%E2%91%A2%20akari%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%28%E7%B0%A1%E6%98%93%E7%89%88%29">
+<h1>拡張機能の紹介③ AKARIブロック(簡易版)<a class="headerlink" href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B%E2%91%A2%20akari%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%28%E7%B0%A1%E6%98%93%E7%89%88%29" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ここでは、AKARIの各APIを実行可能な拡張機能であるAKARIブロック(簡易版)の各ブロックを紹介します。</div>
+</div>
+<section id="%E3%83%A2%E3%83%BC%E3%82%BF%E5%88%B6%E5%BE%A1">
+<h2>モータ制御<a class="headerlink" href="#%E3%83%A2%E3%83%BC%E3%82%BF%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>サーボをONにする<a class="headerlink" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92on%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_011.jpg"><img alt="../../_images/block_motor_011.jpg" src="../../_images/block_motor_011.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">ヘッドのサーボを全軸ONにします。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>サーボをOFFにする<a class="headerlink" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%82%92off%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_021.jpg"><img alt="../../_images/block_motor_021.jpg" src="../../_images/block_motor_021.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">ヘッドのサーボを全軸OFFにします。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87">
+<h3>[ヘッドの向き]のばしょ<a class="headerlink" href="#%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_031.jpg"><img alt="../../_images/block_motor_031.jpg" src="../../_images/block_motor_031.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">指定した[ヘッドの向き]の現在角度を取得します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">
+<h3>[ヘッドの向き]を[角度]°にうごかす<a class="headerlink" href="#%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_041.jpg"><img alt="../../_images/block_motor_041.jpg" src="../../_images/block_motor_041.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">指定した[ヘッドの向き]を指定した[角度]に移動します。</div>
+<div class="line">サーボをONにしていないと動作しません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%81%95%E3%82%86%E3%81%86%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">
+<h3>さゆうを[角度]°、じょうげを[角度]°にうごかす<a class="headerlink" href="#%E3%81%95%E3%82%86%E3%81%86%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%82%92%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%AB%E3%81%86%E3%81%94%E3%81%8B%E3%81%99" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_051.jpg"><img alt="../../_images/block_motor_051.jpg" src="../../_images/block_motor_051.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">ヘッドの左右方向を[角度]に、上下方向を[角度]に移動します。</div>
+<div class="line">サーボをONにしていないと動作しません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">
+<h3>いまのばしょから[ヘッドの向き]に[角度]°うごかす<a class="headerlink" href="#%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%5B%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%90%91%E3%81%8D%5D%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_061.jpg"><img alt="../../_images/block_motor_061.jpg" src="../../_images/block_motor_061.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">指定した[ヘッドの向き]を現在位置から指定した[角度]だけ移動します。</div>
+<div class="line">サーボをONにしていないと動作しません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%E3%81%95%E3%82%86%E3%81%86%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99">
+<h3>いまのばしょからさゆうに[角度]°、じょうげに[角度]°うごかす<a class="headerlink" href="#%E3%81%84%E3%81%BE%E3%81%AE%E3%81%B0%E3%81%97%E3%82%87%E3%81%8B%E3%82%89%E3%81%95%E3%82%86%E3%81%86%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%80%81%E3%81%98%E3%82%87%E3%81%86%E3%81%92%E3%81%AB%5B%E8%A7%92%E5%BA%A6%5D%C2%B0%E3%81%86%E3%81%94%E3%81%8B%E3%81%99" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_071.jpg"><img alt="../../_images/block_motor_071.jpg" src="../../_images/block_motor_071.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">現在位置から左右方向を[角度]、上下方向を[角度]だけ移動します。</div>
+<div class="line">サーボをONにしていないと動作しません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E3%81%AF%E3%82%84%E3%81%95%E3%82%92%5B%E3%81%AF%E3%82%84%E3%81%8F/%E3%82%86%E3%81%A3%E3%81%8F%E3%82%8A/%E3%81%8A%E3%81%9D%E3%81%8F%5D%E3%81%99%E3%82%8B">
+<h3>モータのはやさを[はやく/ゆっくり/おそく]する<a class="headerlink" href="#%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E3%81%AF%E3%82%84%E3%81%95%E3%82%92%5B%E3%81%AF%E3%82%84%E3%81%8F/%E3%82%86%E3%81%A3%E3%81%8F%E3%82%8A/%E3%81%8A%E3%81%9D%E3%81%8F%5D%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_motor_081.jpg"><img alt="../../_images/block_motor_081.jpg" src="../../_images/block_motor_081.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">モータの司令角速度を[はやく/ゆっくり/おそく]の3段階で変更します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="m5%E9%80%9A%E4%BF%A1">
+<h2>M5通信<a class="headerlink" href="#m5%E9%80%9A%E4%BF%A1" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F%E3%81%A8%E3%81%8D">
+<h3>ボタンの[ID]がおされたとき<a class="headerlink" href="#%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F%E3%81%A8%E3%81%8D" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_011.jpg"><img alt="../../_images/block_m5_011.jpg" src="../../_images/block_m5_011.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>HAT</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">M5の[ID]のボタンが押された時に実行されます。</div>
+<div class="line">&quot;どれか&quot;の場合はどれか一つでも押された場合に実行されます。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F">
+<h3>ボタンの[ID]がおされた<a class="headerlink" href="#%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%5Bid%5D%E3%81%8C%E3%81%8A%E3%81%95%E3%82%8C%E3%81%9F" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_021.jpg"><img alt="../../_images/block_m5_021.jpg" src="../../_images/block_m5_021.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>BOOLEAN</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">M5の[ID]のボタンが押されていたら真（True）、それ以外では偽（False）を返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%A8%E3%81%8D">
+<h3>デジタルにゅうりょくの[ID]がローになったとき<a class="headerlink" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%A8%E3%81%8D" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_031.jpg"><img alt="../../_images/block_m5_031.jpg" src="../../_images/block_m5_031.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>HAT</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">[ID]番号のデジタル入力ピンがローになった時に実行されます。</div>
+<div class="line">&quot;どれか&quot;の場合はどれか一つでもローになった場合に実行されます。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC">
+<h3>デジタルにゅうりょくの[ID]がロー<a class="headerlink" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F%E3%81%AE%5Bid%5D%E3%81%8C%E3%83%AD%E3%83%BC" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_041.jpg"><img alt="../../_images/block_m5_041.jpg" src="../../_images/block_m5_041.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>BOOLEAN</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">[ID]番号のデジタル入力ピンがローなら 真（True）、それ以外では偽（False）を返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F">
+<h3>アナログにゅうりょく<a class="headerlink" href="#%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%81%AB%E3%82%85%E3%81%86%E3%82%8A%E3%82%87%E3%81%8F" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_051.jpg"><img alt="../../_images/block_m5_051.jpg" src="../../_images/block_m5_051.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">アナログ入力ピンのアナログ入力値(0-3.3V)を0から4095の4096段階で返します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%5B%E3%82%BB%E3%83%B3%E3%82%B5%5D%E3%81%AE%E3%81%82%E3%81%9F%E3%81%84">
+<h3>[センサ]のあたい<a class="headerlink" href="#%5B%E3%82%BB%E3%83%B3%E3%82%B5%5D%E3%81%AE%E3%81%82%E3%81%9F%E3%81%84" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_061.jpg"><img alt="../../_images/block_m5_061.jpg" src="../../_images/block_m5_061.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>REPORTER</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">[センサ]の出力値を返します。</div>
+<div class="line">センサの種類はおんど(℃)、きあつ(Pa)、あかるさ(0から4095で出力。0が最も明るい)です。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%5Bid%5D%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>デジタルしゅつりょく[ID]を[値]にする<a class="headerlink" href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%5Bid%5D%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_071.jpg"><img alt="../../_images/block_m5_071.jpg" src="../../_images/block_m5_071.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">[ID]ばんごうのデジタルしゅつりょくピンを[値]にします。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="pwm%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>PWMしゅつりょくを[値]にする<a class="headerlink" href="#pwm%E3%81%97%E3%82%85%E3%81%A4%E3%82%8A%E3%82%87%E3%81%8F%E3%82%92%5B%E5%80%A4%5D%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_m5_081.jpg"><img alt="../../_images/block_m5_081.jpg" src="../../_images/block_m5_081.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">PWM出力ピンのPWM出力を[値]にします。</div>
+<div class="line">値範囲は0から255で、0で0V、255で3.3Vを出力します。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">
+<h2>ディスプレイ制御<a class="headerlink" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E3%81%AF%E3%81%84%E3%81%91%E3%81%84%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>はいけいのいろを[色]にする<a class="headerlink" href="#%E3%81%AF%E3%81%84%E3%81%91%E3%81%84%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_display_011.jpg"><img alt="../../_images/block_display_011.jpg" src="../../_images/block_display_011.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画面表示を行う際の背景色を[色]に設定します。</div>
+<div class="line">このブロック単体ではM5にコマンドは送られません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%82%82%E3%81%98%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>もじのいろを[色]にする<a class="headerlink" href="#%E3%82%82%E3%81%98%E3%81%AE%E3%81%84%E3%82%8D%E3%82%92%5B%E8%89%B2%5D%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_display_021.jpg"><img alt="../../_images/block_display_021.jpg" src="../../_images/block_display_021.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画面表示を行う際の文字色を[色]に設定します。</div>
+<div class="line">このブロック単体ではM5にコマンドは送られません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%82%82%E3%81%98%E3%81%AE%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%95%E3%82%92%5B%E3%82%B5%E3%82%A4%E3%82%BA%5D%E3%81%AB%E3%81%99%E3%82%8B">
+<h3>もじのおおきさを[サイズ]にする<a class="headerlink" href="#%E3%82%82%E3%81%98%E3%81%AE%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%95%E3%82%92%5B%E3%82%B5%E3%82%A4%E3%82%BA%5D%E3%81%AB%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_display_031.jpg"><img alt="../../_images/block_display_031.jpg" src="../../_images/block_display_031.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画面表示を行う際の文字サイズを[サイズ]に設定します。</div>
+<div class="line">サイズは1から11の範囲で設定可能です。</div>
+<div class="line">このブロック単体ではM5にコマンドは送られません。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%5B%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B">
+<h3>がめんに[テキスト]をひょうじする<a class="headerlink" href="#%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%5B%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_display_041.jpg"><img alt="../../_images/block_display_041.jpg" src="../../_images/block_display_041.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画面に[テキスト]を表示します。</div>
+<div class="line">背景色、文字色、文字サイズは前述のブロックで設定したものになります。</div>
+<div class="line">[テキスト]を空白にすることで、背景色のみ変更することができます。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%E3%81%8C%E3%81%9E%E3%81%86%5B%E3%83%91%E3%82%B9%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B">
+<h3>がめんにがぞう[パス]をひょうじする<a class="headerlink" href="#%E3%81%8C%E3%82%81%E3%82%93%E3%81%AB%E3%81%8C%E3%81%9E%E3%81%86%5B%E3%83%91%E3%82%B9%5D%E3%82%92%E3%81%B2%E3%82%87%E3%81%86%E3%81%98%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/block_display_051.jpg"><img alt="../../_images/block_display_051.jpg" src="../../_images/block_display_051.jpg" style="height: 60px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Block type:</dt><dd><p>COMMAND</p>
+</dd>
+<dt>Ref:</dt><dd><div class="line-block">
+<div class="line">画面にM5のSDカード内の[パス]の画像を表示します。</div>
+<div class="line">あらかじめM5のSDカードに使用する画像を入れておき、SDカードのrootディレクトリからのパスを入力してください。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p><a class="reference internal" href="ref_akari_camera_beginner.html"><span class="doc">拡張機能の紹介④ AKARIカメラ(簡易版)</span></a> へ進む</p>
+<p><a class="reference internal" href="playing.html"><span class="doc">Scratchで動かしてみよう</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ref_akari_camera.html" class="btn btn-neutral float-left" title="拡張機能の紹介① AkariCamera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ref_akari_camera_beginner.html" class="btn btn-neutral float-right" title="拡張機能の紹介④ AKARIカメラ(簡易版)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

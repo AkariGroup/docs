@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>その他のアプリも使ってみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/tutorial/app_repositories.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="AKARIの仕様" href="../spec/main.html" />
+    <link rel="prev" title="認識機能を試してみよう" href="test_detection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIをはじめよう(Ubuntu編)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test_sample_app.html">サンプルアプリを動かそう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_uvc_camera.html">ヘッドカメラをwebカメラとして使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_detection.html">認識機能を試してみよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">その他のアプリも使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#akari_hand_tracking">akari_hand_tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_dataset_creator">akari_dataset_creator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_yolo_inference">akari_yolo_inference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_motion_server">akari_motion_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_chatgpt_bot">akari_chatgpt_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_chatgpt_vision_bot">akari_chatgpt_vision_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_chatgpt_indian_poker">akari_chatgpt_indian_poker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_chat_dify_bot">akari_chat_dify_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_rag_chatbot">akari_rag_chatbot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_introducer">akari_introducer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#face_annotator">face_annotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tracking_annotator">tracking_annotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_joy_controller">akari_joy_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_tracking_palette">akari_tracking_palette</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shy_akari">shy_akari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_good_sign_counter">akari_good_sign_counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_starry_sky">akari_starry_sky</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#akari_treasure_hunt">akari_treasure_hunt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_finger_alphabet_game">akari_finger_alphabet_game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_doze_detection">akari_doze_detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_smile_counter">akari_smile_counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#akari_draw_picture">akari_draw_picture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+      <li class="breadcrumb-item active">その他のアプリも使ってみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/tutorial/app_repositories.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%82%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>その他のアプリも使ってみよう<a class="headerlink" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%82%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<p>ここまで紹介した以外にも、様々なアプリが公開されています。
+興味があるアプリがあれば、git cloneして使ってみましょう。
+使い方は、各URL先のREADMEを参照ください。</p>
+<section id="akari_hand_tracking">
+<h2>akari_hand_tracking<a class="headerlink" href="#akari_hand_tracking" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_hand_tracking">https://github.com/AkariGroup/akari_hand_tracking</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jrmozEp-8qc" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIが認識した手の追従が出来るアプリです。</div>
+<div class="line">引数で手のポーズを指定すると、そのポーズをしている時のみ追従することができます。</div>
+</div>
+</section>
+<section id="akari_dataset_creator">
+<h2>akari_dataset_creator<a class="headerlink" href="#akari_dataset_creator" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_dataset_creator">https://github.com/AkariGroup/akari_dataset_creator</a></p>
+<div class="line-block">
+<div class="line">AKARIで学習用のデータセットを作成するアプリです。</div>
+<div class="line">画像を特定の名前や連番で撮影する機能があり、手動シャッター、自動撮影を行うことができます。</div>
+<div class="line">詳しい使い方は <a class="reference internal" href="../dev/custom_object_detection/image_collection.html"><span class="doc">1. 学習用のデータセットを作る</span></a> を参照ください。</div>
+</div>
+</section>
+<section id="akari_yolo_inference">
+<h2>akari_yolo_inference<a class="headerlink" href="#akari_yolo_inference" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_yolo_inference">https://github.com/AkariGroup/akari_yolo_inference</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/OlwG40fLblM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIでYOLOの推論を行うアプリです。</div>
+<div class="line">デフォルトではYOLOv4の認識を行う設定になっていますが、自身で学習させたYOLOの推論モデルを使うこともできます。</div>
+<div class="line">詳しい使い方は <a class="reference internal" href="../dev/custom_object_detection/testing.html"><span class="doc">4. 物体認識をテストする</span></a> を参照ください。</div>
+</div>
+</section>
+<section id="akari_motion_server">
+<h2>akari_motion_server<a class="headerlink" href="#akari_motion_server" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_motion_server.git">https://github.com/AkariGroup/akari_motion_server.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/qHvSr6PvjPQ" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIヘッドを動かして感情表現をするモーションサーバアプリです。</div>
+<div class="line">grpcでモーション名を送ると、そのモーションを再生します。</div>
+<div class="line">割り込み再生や優先度による割り込みブロックにも対応しています。</div>
+</div>
+</section>
+<section id="akari_chatgpt_bot">
+<h2>akari_chatgpt_bot<a class="headerlink" href="#akari_chatgpt_bot" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_chatgpt_bot.git">https://github.com/AkariGroup/akari_chatgpt_bot.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/1lY4J1G9-K8" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIでchatGPTを使った音声対話botを使用するサンプルです。</div>
+<div class="line">音声認識、文章生成、音声合成を組み合わせて、高速で応答するチャットボットを作成しています。</div>
+<div class="line">それぞれの要素に対するサンプルアプリも用意されているため、各機能を個別で試したり、自身のアプリに実装する用途でも使えます。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="akari_chatgpt_vision_bot">
+<h2>akari_chatgpt_vision_bot<a class="headerlink" href="#akari_chatgpt_vision_bot" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_chatgpt_vision_bot">https://github.com/AkariGroup/akari_chatgpt_vision_bot</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/eHn9dKENpEM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">chatGPTを使った音声対話botに画像を組み合わせたアプリです。</div>
+<div class="line">カメラ画像と音声を組み合わせてchatGPTから返答を得るGPT-4V版と、YOLOの3次元位置認識結果と音声を組み合わせてchatGPTから返答を得るYOLO版の2種類を公開しています。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="akari_chatgpt_indian_poker">
+<h2>akari_chatgpt_indian_poker<a class="headerlink" href="#akari_chatgpt_indian_poker" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_chatgpt_indian_poker">https://github.com/AkariGroup/akari_chatgpt_indian_poker</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/0CN5xbVBv1o" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">chatGPTを使った音声対話botで、AKARIとインディアンポーカーができるアプリです。</div>
+<div class="line">インディアンポーカーの醍醐味であるカード交換の駆け引きを、ChatGPT対話で実現しています。</div>
+<div class="line">トランプはYOLOで認識しています。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="akari_chat_dify_bot">
+<h2>akari_chat_dify_bot<a class="headerlink" href="#akari_chat_dify_bot" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_chat_dify_bot">https://github.com/AkariGroup/akari_chat_dify_bot</a></p>
+<div class="line-block">
+<div class="line">akari_chatgpt_botのLLM部分をDify(<a class="reference external" href="https://dify.ai/">https://dify.ai/</a>)で作成したアプリに置き換えたものです。</div>
+<div class="line">独自にデザインしたDifyアプリを介して音声対話をすることができます。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="akari_rag_chatbot">
+<h2>akari_rag_chatbot<a class="headerlink" href="#akari_rag_chatbot" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_rag_chatbot">https://github.com/AkariGroup/akari_rag_chatbot</a></p>
+<div class="line-block">
+<div class="line">akari_chatgpt_botのLLM部分をWeaviateを用いたRAGを参照し、回答するLLMに置き換えたアプリです。</div>
+<div class="line">独自に用意したテキストの知識を参照しながら音声対話をすることができます。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="akari_introducer">
+<h2>akari_introducer<a class="headerlink" href="#akari_introducer" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_introducer">https://github.com/AkariGroup/akari_introducer</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/7YoJtFZIltM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">akari_rag_chatbotのRAGにAKARIマニュアルの内容を追加し、AKARIに質問すると、マニュアルのページを表示しながら回答してくれるアプリです。</div>
+<div class="line"><strong>注: AKARI本体にはマイク、スピーカーが内蔵されていないので、音声認識、音声合成の発話を試す際は外付けする必要があります。</strong></div>
+</div>
+</section>
+<section id="face_annotator">
+<h2>face_annotator<a class="headerlink" href="#face_annotator" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/face_annotator.git">https://github.com/AkariGroup/face_annotator.git</a></p>
+<div class="line-block">
+<div class="line">OAK-Dの認識機能を使い、顔認識したフレームを自動でYOLOアノテーションし、指定したIDで保存するアプリです。</div>
+<div class="line">顔ごとに別のラベルで保存することで、個人識別用のデータセットを作成することができます。</div>
+</div>
+</section>
+<section id="tracking_annotator">
+<h2>tracking_annotator<a class="headerlink" href="#tracking_annotator" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/tracking_annotator.git">https://github.com/AkariGroup/tracking_annotator.git</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/AkariGroup/tracking_annotator/main/jpg/tracking_annotator.jpg"><img alt="https://raw.githubusercontent.com/AkariGroup/tracking_annotator/main/jpg/tracking_annotator.jpg" src="https://raw.githubusercontent.com/AkariGroup/tracking_annotator/main/jpg/tracking_annotator.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">OAK-Dのtracking機能を使い、認識できなかったフレームを自動でYOLOアノテーションし、保存するアプリです。</div>
+<div class="line">作成した学習モデルを再学習して強化する用途に便利です。</div>
+</div>
+</section>
+<section id="akari_joy_controller">
+<h2>akari_joy_controller<a class="headerlink" href="#akari_joy_controller" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_joy_controller.git">https://github.com/AkariGroup/akari_joy_controller.git</a></p>
+<div class="line-block">
+<div class="line">AKARIのヘッドをジョイスティックで動かすためのアプリです。</div>
+</div>
+</section>
+<section id="akari_tracking_palette">
+<h2>akari_tracking_palette<a class="headerlink" href="#akari_tracking_palette" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_tracking_palette.git">https://github.com/AkariGroup/akari_tracking_palette.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/Yt79S5aHO8Q" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIで物体認識を使って、指定した位置に存在する物体の検知を行うサンプルです。</div>
+<div class="line">3次元物体トラッキングを用い、人や物の場所も認識することができます。</div>
+<div class="line">更に、俯瞰図上にマウスでエリアを描画することで、そのエリア内に人や物が存在するかを検出することができます。</div>
+<div class="line">任意の認識モデル、任意のエリアを簡単に設定してオリジナルの見守り、インタラクションアプリを簡単に作ることができます。</div>
+</div>
+</section>
+<section id="shy_akari">
+<h2>shy_akari<a class="headerlink" href="#shy_akari" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/shy_akari.git">https://github.com/AkariGroup/shy_akari.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/8cPC2DWVK-Y" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">恥ずかしがり屋のAKARIアプリです。</div>
+<div class="line">AKARIはこちらの顔を見つめてきますが目が合うと恥ずかしがって顔を背けてしまいます。</div>
+<div class="line">顔認識と目線認識を組み合わせて、目が合っていない時は顔を追従しつつ、目線がAKARIを向いているかを検出しています。</div>
+</div>
+</section>
+<section id="akari_good_sign_counter">
+<h2>akari_good_sign_counter<a class="headerlink" href="#akari_good_sign_counter" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_good_sign_counter.git">https://github.com/AkariGroup/akari_good_sign_counter.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/24ZCWwcNGfE" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">AKARIにグッドポーズをすると、1いいねカウントされるアプリです。</div>
+</div>
+</section>
+<section id="akari_starry_sky">
+<h2>akari_starry_sky<a class="headerlink" href="#akari_starry_sky" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akar_starry_sky">https://github.com/AkariGroup/akar_starry_sky</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/VKhBbwKr3s0" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">YOLOの物体認識で人の3次元位置の軌道を認識、記録し、星空を描画するアプリです。</div>
+</div>
+</section>
+</section>
+<section id="%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">
+<h1>愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション<a class="headerlink" href="#%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="この見出しへのパーマリンク"></a></h1>
+<p>以下は愛知工業大学 情報科学部 知的制御研究室の学生が開発したアプリケーションです。</p>
+<section id="akari_treasure_hunt">
+<h2>akari_treasure_hunt<a class="headerlink" href="#akari_treasure_hunt" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_treasure_hunt">https://github.com/AkariGroup/akari_treasure_hunt</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/Z25ZOcmBq8E" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">物体認識を使って、AKARIと宝探しゲームで勝負できるアプリです。</div>
+<div class="line">画像の中から、指定した物体をAKARIより先に見つけられるかを競います。</div>
+</div>
+</section>
+<section id="akari_finger_alphabet_game">
+<h2>akari_finger_alphabet_game<a class="headerlink" href="#akari_finger_alphabet_game" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_finger_alphabet_game.git">https://github.com/AkariGroup/akari_finger_alphabet_game.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/K45tEPlqJnw" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">物体認識を使って、指文字の練習がクイズ形式でできるアプリです。</div>
+<div class="line">ディスプレイに表示された単語に一番多く含まれる母音を手で示す、という形式で指文字の練習ができます。</div>
+</div>
+</section>
+<section id="akari_doze_detection">
+<h2>akari_doze_detection<a class="headerlink" href="#akari_doze_detection" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_doze_detection.git">https://github.com/AkariGroup/akari_doze_detection.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/m8uzp-P0CAY" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">顔と手の認識を使って、居眠りを防止するアプリです。</div>
+<div class="line">居眠りを検知したらアラームが鳴ります。</div>
+</div>
+</section>
+<section id="akari_smile_counter">
+<h2>akari_smile_counter<a class="headerlink" href="#akari_smile_counter" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_smile_counter.git">https://github.com/AkariGroup/akari_smile_counter.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/exHdhSjy72o" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">表情認識を使って、笑顔の人を見つけた回数をカウントし、ディスプレイに表示するアプリです。</div>
+</div>
+</section>
+<section id="akari_draw_picture">
+<h2>akari_draw_picture<a class="headerlink" href="#akari_draw_picture" title="この見出しへのパーマリンク"></a></h2>
+<p>URL: <a class="reference external" href="https://github.com/AkariGroup/akari_draw_picture.git">https://github.com/AkariGroup/akari_draw_picture.git</a></p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/qPgw0fd7b1o" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">画像認識を使って写真の撮影をし、その写真の上にお絵描きができるアプリです。</div>
+</div>
+<p><a class="reference internal" href="main.html"><span class="doc">AKARIをはじめよう(Ubuntu編)</span></a> へ戻る</p>
+<p><a class="reference internal" href="test_uvc_camera.html"><span class="doc">ヘッドカメラをwebカメラとして使ってみよう</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test_detection.html" class="btn btn-neutral float-left" title="認識機能を試してみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../spec/main.html" class="btn btn-neutral float-right" title="AKARIの仕様" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

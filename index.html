@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="オープンソースの小型卓上ロボット「AKARI」のwebマニュアルです。" name="description" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to AKARI manual! &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/index.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="はじめに" href="source/intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="source/intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Welcome to AKARI manual!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome%20to%20akari%20manual%21">
+<h1>Welcome to AKARI manual!<a class="headerlink" href="#welcome%20to%20akari%20manual%21" title="この見出しへのパーマリンク"></a></h1>
+<a class="reference internal image-reference" href="_images/akari_logo.png"><img alt="_images/akari_logo.png" src="_images/akari_logo.png" style="width: 300px;" /></a>
+<div class="line-block">
+<div class="line"><strong>AKARIのwebマニュアルへようこそ！</strong></div>
+<div class="line"><strong>AKARIは、「誰もがロボット作りを身近に！」を目指して開発した、オープンソースの小型卓上ロボットです。</strong></div>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="source/intro.html">はじめに</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/intro.html#akari%E3%81%A8%E3%81%AF">AKARIとは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/intro.html#akari%E3%81%A8akari%20light">AKARIとAKARI Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/intro.html#akari%E3%81%AE%E6%83%85%E5%A0%B1%E5%85%83">AKARIの情報元</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/intro.html#%E6%9C%AC%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AE%E6%A7%8B%E6%88%90">本マニュアルの構成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/overview/main.html">AKARIの特徴</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#%E5%B0%8F%E5%9E%8B%E3%81%A7%E4%BD%BF%E3%81%84%E3%82%84%E3%81%99%E3%81%84%E5%8D%93%E4%B8%8A%E3%82%AB%E3%83%A1%E3%83%A9%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88">小型で使いやすい卓上カメラロボット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#ai%E3%82%AB%E3%83%A1%E3%83%A9%E3%82%92%E6%90%AD%E8%BC%89%EF%BC%81%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%8D%98%E4%BD%93%E3%81%A7%E3%82%82%E5%A4%9A%E6%A7%98%E3%81%AA%E7%94%BB%E5%83%8F%E8%AA%8D%E8%AD%98%E3%81%8C%E4%BD%BF%E3%81%88%E3%82%8B">AIカメラを搭載！ロボット単体でも多様な画像認識が使える</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#%E6%A9%9F%E8%83%BD%E3%82%92%E6%8B%A1%E5%BC%B5%E3%81%97%E3%81%A6%E4%BD%BF%E3%81%88%E3%82%8B%EF%BC%81">機能を拡張して使える！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E4%B8%8A%E3%81%8B%E3%82%89%E3%82%BD%E3%83%95%E3%83%88%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E5%8B%95%E3%81%8B%E3%81%9B%E3%82%8B%EF%BC%81">webブラウザ上からソフトを書いて動かせる！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%AD%A6%E7%BF%92%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%8C%E5%85%85%E5%AE%9F%EF%BC%81">ロボット学習のコンテンツが充実！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/overview/main.html#%E5%AE%8C%E5%85%A8%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9">完全オープンソース</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/assembly/main.html">AKARIを作ってみよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly/assembly_hard/main.html">AKARIの組み立て</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/3dprint.html">3Dプリント部品を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/pcb.html">基板を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/assembly_pcb.html">基板に部品を実装しよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/assembly_head.html">ヘッドを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/assembly_body.html">ボディーを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_hard/assembly_base.html">ベースを組み立てよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly/assembly_test_unit/main.html">テストユニットの組み立て</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_test_unit/part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/assembly_test_unit/assembly_test_unit.html">テストユニットを作成しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly/setup_soft/main.html">AKARIのセットアップ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/setup_soft/requirement_list.html">必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/setup_soft/install_ubuntu.html">Ubuntu 22.04のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/setup_soft/setup_ansible.html">AKARI環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/setup_soft/setup_env.html">AKARI仮想実行環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/setup_soft/setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly/raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/raspi/setup_hard.html">(Raspberry Pi版) ハードウェアの準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly/raspi/setup_soft.html">(Raspberry Pi版) ソフトウェア環境のセットアップ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/assembly_light/main.html">AKARI Lightを作ってみよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly_light/assembly_hard/main.html">AKARIの組み立て</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/part_list.html">組み立てに必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/3dprint.html">3Dプリント部品を作ろう(AKARI light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/pcb.html">基板を作ろう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/setup_raspi_os.html">RaspberryPi OS(bookworm)のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/assembly_pcb.html">基板に部品を実装しよう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/assembly_body.html">ボディーを組み立てよう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_hard/assembly_head.html">ヘッドを組み立てよう(AKARI Light)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly_light/assembly_test_unit/main.html">テストユニットの組み立て(AKARI Light)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_test_unit/part_list.html">組み立てに必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/assembly_test_unit/assembly_test_unit.html">テストユニットを作成しよう(AKARI Light)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/assembly_light/setup_soft/main.html">AKARIのセットアップ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/setup_soft/requirement_list.html">必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/setup_soft/setup_ansible.html">AKARI Light環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/setup_soft/setup_feetech.html">Feetechサーボのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/assembly_light/setup_soft/setup_env.html">AKARI Light仮想実行環境のセットアップ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/startup/main.html">AKARIを起動しよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/startup/settings.html">事前準備</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/startup/settings.html#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/startup/settings.html#%E6%8E%A5%E7%B6%9A%E6%96%B9%E6%B3%95">接続方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/startup/settings.html#%E8%B5%B7%E5%8B%95%E6%96%B9%E6%B3%95">起動方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/startup/settings.html#%E7%B5%82%E4%BA%86%E6%96%B9%E6%B3%95">終了方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/access.html">webコンソールを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/access.html#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">解説動画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/access.html#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%BA%96%E5%82%99%E3%82%92%E3%81%99%E3%82%8B">webコンソールへのアクセス準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/access.html#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B">webコンソールへアクセスする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/access.html#%E5%90%84%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">各ページの説明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/controller.html">webコントローラを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/controller.html#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">解説動画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/controller.html#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%8B">必要なサービスを立ち上げる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/controller.html#web%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B">webコントローラにアクセスする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/controller.html#%E6%A9%9F%E8%83%BD%E3%81%AE%E8%AA%AC%E6%98%8E">機能の説明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/service.html">サービスを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/service.html#services%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">Servicesページの説明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/service.html#akarirpcserver%E3%82%92%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%88%E3%81%86">AkariRpcServerを立ち上げよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/service.html#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">サービスを作ってみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/service.html#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E3%82%88%E3%81%86">サービスを起動しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/project.html">プロジェクトを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/project.html#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">解説動画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/project.html#projects%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">Projectsページの説明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/project.html#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">プロジェクトを作ってみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/project.html#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">プロジェクトを開いてみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/project.html#git%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">gitレポジトリからプロジェクトを作ってみよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/tutorial_project.html">AKARIチュートリアルを動かしてみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/tutorial_project.html#akari%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E9%96%8B%E3%81%8F">AKARIチュートリアルを開く</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/tutorial_project.html#akari%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">AKARIチュートリアルを使ってみよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial_web/app_repositories_jupyter.html">その他のアプリも使ってみよう(JupyterNotebook版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/app_repositories_jupyter.html#akari_face_tracking_jupyter">akari_face_tracking_jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/app_repositories_jupyter.html#akari_motion_sample_jupyter">akari_motion_sample_jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial_web/app_repositories_jupyter.html#akari_yolo_inference_jupyter">akari_yolo_inference_jupyter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial/test_sample_app.html">サンプルアプリを動かそう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96">仮想環境の有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E7%A7%BB%E5%8B%95">アプリのディレクトリへの移動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E5%88%B6%E5%BE%A1">モータの制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97">環境情報の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#gpio%E5%87%BA%E5%8A%9B%E3%81%AE%E5%8F%96%E5%BE%97">GPIO出力の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">ディスプレイ制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%88%B6%E5%BE%A1">その他の制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_sample_app.html#%E3%82%AB%E3%83%A1%E3%83%A9">カメラ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial/test_uvc_camera.html">ヘッドカメラをwebカメラとして使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_uvc_camera.html#depthai_uvc%E3%81%AE%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E4%BD%9C%E6%88%90">depthai_uvcの仮想環境の作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_uvc_camera.html#uvc%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C">UVCアプリの実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_uvc_camera.html#%E6%98%A0%E5%83%8F%E3%81%AE%E7%A2%BA%E8%AA%8D">映像の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial/test_detection.html">認識機能を試してみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_detection.html#%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96">仮想環境の有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_detection.html#%E9%A1%94%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">顔認識を試してみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_detection.html#%E9%A1%94%E8%BF%BD%E5%BE%93%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">顔追従を試してみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_detection.html#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28mobilenet-ssd%E7%89%88%29">物体認識を試してみよう(mobilenet-ssd版)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/test_detection.html#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28yolo%E7%89%88%29">物体認識を試してみよう(YOLO版)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial/app_repositories.html">その他のアプリも使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_hand_tracking">akari_hand_tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_dataset_creator">akari_dataset_creator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_yolo_inference">akari_yolo_inference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_motion_server">akari_motion_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_chatgpt_bot">akari_chatgpt_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_chatgpt_vision_bot">akari_chatgpt_vision_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_chatgpt_indian_poker">akari_chatgpt_indian_poker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_chat_dify_bot">akari_chat_dify_bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_rag_chatbot">akari_rag_chatbot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_introducer">akari_introducer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#face_annotator">face_annotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#tracking_annotator">tracking_annotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_joy_controller">akari_joy_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_tracking_palette">akari_tracking_palette</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#shy_akari">shy_akari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_good_sign_counter">akari_good_sign_counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_starry_sky">akari_starry_sky</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/tutorial/app_repositories.html#%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_treasure_hunt">akari_treasure_hunt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_finger_alphabet_game">akari_finger_alphabet_game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_doze_detection">akari_doze_detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_smile_counter">akari_smile_counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/tutorial/app_repositories.html#akari_draw_picture">akari_draw_picture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/spec/main.html">AKARIの仕様</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/spec/hard_spec.html">ハードウェア仕様</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#%E5%A4%96%E8%A6%B3">外観</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#gpio">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#depthai%E3%82%AB%E3%83%A1%E3%83%A9">DepthAIカメラ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#%E3%83%A2%E3%83%BC%E3%82%BF">モータ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#m5stack">M5Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec.html#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/spec/hard_spec_light.html">ハードウェア仕様(AKARI Light)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#%E5%A4%96%E8%A6%B3">外観</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#gpio">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#depthai%E3%82%AB%E3%83%A1%E3%83%A9">DepthAIカメラ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#%E3%83%A2%E3%83%BC%E3%82%BF">モータ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#m5stack">M5Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/hard_spec_light.html#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/spec/test_unit.html">テストユニット仕様</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/test_unit.html#%E5%90%84%E9%83%A8%E8%AA%AC%E6%98%8E">各部説明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/spec/soft_base.html">ソフトウェアAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/soft_base.html#module-akari_client">サーボの制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/soft_base.html#m5%E3%81%AE%E5%88%B6%E5%BE%A1">M5の制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/spec/soft_base.html#m5%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9">M5の制御に使用するクラス</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/practice/main.html">AKARI練習問題に挑戦しよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/practice/main.html#akari_practice%E3%81%AEproject%E3%81%AE%E4%BD%9C%E6%88%90">akari_practiceのprojectの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/practice/main.html#akari_practice%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9">akari_practiceの進め方</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/scratch/main.html">Scratchを使ってみよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/setup.html">AKARIのScratch環境をセットアップしよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/setup.html#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/playing.html">Scratchで動かしてみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/playing.html#scratch%E3%81%AE%E8%B5%B7%E5%8B%95">Scratchの起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/playing.html#akari%E3%81%AE%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9">AKARIの動かし方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/playing.html#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">サンプルアプリを動かしてみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/playing.html#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA">その他のサンプルアプリ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/ref_akari_blocks.html">拡張機能の紹介① AkariBlocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks.html#%E3%83%A2%E3%83%BC%E3%82%BF%E5%88%B6%E5%BE%A1">モータ制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks.html#m5%E9%80%9A%E4%BF%A1">M5通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks.html#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">ディスプレイ制御</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/ref_akari_camera.html">拡張機能の紹介① AkariCamera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera.html#%E3%82%AB%E3%83%A1%E3%83%A9%E5%88%B6%E5%BE%A1">カメラ制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera.html#%E9%A1%94%E8%AA%8D%E8%AD%98">顔認識</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera.html#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98">物体認識</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/ref_akari_blocks_beginner.html">拡張機能の紹介③ AKARIブロック(簡易版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks_beginner.html#%E3%83%A2%E3%83%BC%E3%82%BF%E5%88%B6%E5%BE%A1">モータ制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks_beginner.html#m5%E9%80%9A%E4%BF%A1">M5通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_blocks_beginner.html#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">ディスプレイ制御</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/scratch/ref_akari_camera_beginner.html">拡張機能の紹介④ AKARIカメラ(簡易版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera_beginner.html#%E3%82%AB%E3%83%A1%E3%83%A9%E5%88%B6%E5%BE%A1">カメラ制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera_beginner.html#%E9%A1%94%E8%AA%8D%E8%AD%98">顔認識</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/scratch/ref_akari_camera_beginner.html#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98">物体認識</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/ros2/main.html">ROS2版を使ってみよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/ros2/setup.html">AKARIのROS2環境をセットアップしよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/ros2/example.html">ROS2で動かしてみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/example.html#akari_ros%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%B4%B9%E4%BB%8B">akari_rosのパッケージ紹介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/example.html#ros2%E3%82%B5%E3%83%BC%E3%83%90%E3%81%AE%E8%B5%B7%E5%8B%95">ROS2サーバの起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/example.html#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AE%E5%AE%9F%E8%A1%8C">サンプルの実行</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/ros2/communications.html">ソフトウェア仕様(ROS2版)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/communications.html#joint_state_publisher">joint_state_publisher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/communications.html#m5stack_publisher">m5stack_publisher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/communications.html#servo_server">servo_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/ros2/communications.html#m5_server">m5_server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/dev/main.html">AKARIを使った開発</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/dev/custom_object_detection/main.html">オリジナルの物体認識を作ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/image_collection.html">1. 学習用のデータセットを作る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/annotation.html">2. 画像のアノテーションをする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/training_local.html">3. 学習を行う(GPU搭載のPC上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/testing.html">4. 物体認識をテストする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/custom_object_detection/test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/dev/remote_api/main.html">外部PCからAKARIを制御しよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/remote_api/main.html#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/remote_api/main.html#%E5%AE%9F%E8%A1%8C%E6%96%B9%E6%B3%95">実行方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/dev/remote_api/main.html#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89">サンプルコード</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/troubleshoot/main.html">困ったときは</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/refresh_m5.html">M5の画面を初期状態に戻したいときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/restart_m5.html">M5と通信できないときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/fix_m5.html">M5が起動しない時は</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/troubleshoot/fix_m5.html#m5%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%8C%E6%9C%80%E5%88%9D%E3%81%8B%E3%82%89%E7%9C%9F%E3%81%A3%E6%9A%97%E3%81%AE%E3%81%BE%E3%81%BE%E3%81%AE%E5%A0%B4%E5%90%88">M5の画面が最初から真っ暗のままの場合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/troubleshoot/fix_m5.html#m5%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%8Cwaiting%E3%81%8B%E3%82%89%E9%80%B2%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">M5の画面がwaitingから進まない場合</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/reset_servo.html">ヘッドの向きを初期位置に戻したいときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/restart_akira.html">webコンソールに繋がらないときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/restart_rpc_server.html">AKARI APIの実行に失敗するときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/troubleshoot/jupyter_error.html">webコンソールからのJupyter Notebookの起動に失敗するときは</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/troubleshoot/jupyter_error.html#%E5%86%8D%E8%B5%B7%E5%8B%95">再起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/troubleshoot/jupyter_error.html#jupyter%20service%E3%81%AEstatus%E3%81%AE%E7%A2%BA%E8%AA%8D">Jupyter serviceのSTATUSの確認</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/troubleshoot/jupyter_error.html#jupyter%20service%E3%81%AEvenv%E3%81%AE%E5%89%8A%E9%99%A4">Jupyter serviceのvenvの削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/update/main.html">ソフトのアップデート</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/update/main.html#%E3%83%99%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95">ベースソフトのアップデート方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/update/main.html#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95">ライブラリのアップデート方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/update/main.html#m5stack%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95">M5Stackのソフトアップデート方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/sdk_reference/main.html">SDK リファレンス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/sdk_reference/akari_client.html">akari_client: Akari操作用の基本ライブラリ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/general.html">基本クラス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/m5_com.html">M5の制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/joint.html">関節制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/utility.html">ユーティリティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/low_level.html">低レイヤー実装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/sdk_reference/akari_client/config.html">設定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="indices%20and%20tables">
+<h2>Indices and tables<a class="headerlink" href="#indices%20and%20tables" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">検索ページ</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="source/intro.html" class="btn btn-neutral float-right" title="はじめに" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

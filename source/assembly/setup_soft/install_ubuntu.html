@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubuntu 22.04のインストール &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/setup_soft/install_ubuntu.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="AKARI環境のセットアップ" href="setup_ansible.html" />
+    <link rel="prev" title="必要なもの" href="requirement_list.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../assembly_hard/main.html">AKARIの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIのセットアップ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="requirement_list.html">必要なもの</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ubuntu 22.04のインストール</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubuntu%E3%81%AE%E8%B5%B7%E5%8B%95%E7%94%A8usb%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%80%82">Ubuntuの起動用USBを作成する。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubuntu%E3%82%92lattepanda%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%80%82">Ubuntuをlattepandaにインストールする。</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="setup_ansible.html">AKARI環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_env.html">AKARI仮想実行環境のセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIのセットアップ</a></li>
+      <li class="breadcrumb-item active">Ubuntu 22.04のインストール</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/setup_soft/install_ubuntu.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubuntu%2022.04%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">
+<h1>Ubuntu 22.04のインストール<a class="headerlink" href="#ubuntu%2022.04%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" title="この見出しへのパーマリンク"></a></h1>
+<p>lattepandaにUbuntu22.04をインストールします。</p>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">
+<h2>必要なもの<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>PC</p></li>
+<li><p>USBメモリ(4GB以上)</p></li>
+<li><p>USBハブ(3ポート以上のもの)</p></li>
+<li><p>キーボード</p></li>
+<li><p>マウス</p></li>
+<li><p>ディスプレイ</p></li>
+</ul>
+</section>
+<section id="ubuntu%E3%81%AE%E8%B5%B7%E5%8B%95%E7%94%A8usb%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%80%82">
+<h2>Ubuntuの起動用USBを作成する。<a class="headerlink" href="#ubuntu%E3%81%AE%E8%B5%B7%E5%8B%95%E7%94%A8usb%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%80%82" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">1. PC上に下記リンクからUbuntu 22.04のisoファイルをダウンロードします。</div>
+<div class="line"><a class="reference external" href="https://releases.ubuntu.com/22.04/ubuntu-22.04.2-desktop-amd64.iso">https://releases.ubuntu.com/22.04/ubuntu-22.04.2-desktop-amd64.iso</a></div>
+<div class="line">2. 下記リンクからUniversal USB installerをダウンロードします。</div>
+<div class="line"><a class="reference external" href="https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-2.0.1.0.exe">https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-2.0.1.0.exe</a></div>
+<div class="line">3. USBメモリをパソコンに差し込み、Universal USB Installerを起動します。</div>
+<div class="line">4. Step.1のDistributionとして「Try or Install Ubuntu」を選択します。</div>
+<div class="line">5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu22.04のisoを指定します。</div>
+<div class="line">6. Step.3のUSBメモリの選択で、インストールするUSBメモリを指定します。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/usb_installer_setting.jpg"><img alt="../../../_images/usb_installer_setting.jpg" src="../../../_images/usb_installer_setting.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>Createを選択すると、Ubuntu起動用USBメモリの作成が開始します。しばらく待っていれば終了します。</p></li>
+</ol>
+</section>
+<section id="ubuntu%E3%82%92lattepanda%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%80%82">
+<h2>Ubuntuをlattepandaにインストールする。<a class="headerlink" href="#ubuntu%E3%82%92lattepanda%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%80%82" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>AKARIのHDMIにディスプレイを接続し、USBハブをAKARI本体のUSBポートに接続、そこにマウス、キーボードを接続します(接続方法は <a class="reference internal" href="../../startup/settings.html"><span class="doc">事前準備</span></a> を参照ください)。</p></li>
+<li><p>先ほど作成したUbuntu起動用USBメモリを先程のUSBハブに接続し、「del」キーを押しながらAKARIを起動します(電源の入れ方は <a class="reference internal" href="../../startup/settings.html"><span class="doc">事前準備</span></a> を参照ください)。</p></li>
+<li><p>「Save &amp; Exit」に移動し、「Boot Override」内から先程のUbuntu起動用USBメモリを選択し、「Enter」キーを押します。</p></li>
+<li><p>「Ubuntu」を選択します。</p></li>
+<li><p>言語を日本語に変更し、「Ubuntuをインストール」を選択します。</p></li>
+<li><p>キーボードレイアウトを「Japanese」にします。</p></li>
+<li><p>Wi-fiネットワークの接続画面になります。接続可能なら接続してください。</p></li>
+<li><p>「通常のインストール」を選択します。</p></li>
+<li><p>「ディスクを削除してUbuntuをインストール」を選択し、「インストール」→「続ける」を選びます。</p></li>
+<li><p>住んでいる場所は任意で選びます。日本国内なら「Tokyo」で問題ありません。</p></li>
+<li><p>あなたの名前、コンピューターの名前、ユーザー名、パスワードは任意で設定します。</p></li>
+<li><p>インストールが始まるのでしばらく待ちます。</p></li>
+<li><p>「インストールは完了しました」と表示されたら、「今すぐ再起動する」を選択します。「Please remove install medium」と表示されたらUSBメモリを抜き、「Enter」キーを押します。</p></li>
+<li><p>lattepandaが再起動してUbuntuが立ち上がります。</p></li>
+</ol>
+<p>これでUbuntuのインストールは完了です。次に、Ubuntu上でソフトウェア環境のセットアップを行います。</p>
+<p><a class="reference internal" href="setup_ansible.html"><span class="doc">AKARI環境のセットアップ</span></a> へ進む</p>
+<p><a class="reference internal" href="requirement_list.html"><span class="doc">必要なもの</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirement_list.html" class="btn btn-neutral float-left" title="必要なもの" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="setup_ansible.html" class="btn btn-neutral float-right" title="AKARI環境のセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

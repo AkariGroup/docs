@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webコンソールを使ってみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/tutorial_web/access.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="webコントローラを使ってみよう" href="controller.html" />
+    <link rel="prev" title="AKARIをはじめよう(webコンソール編)" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIをはじめよう(webコンソール編)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">webコンソールを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">解説動画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%BA%96%E5%82%99%E3%82%92%E3%81%99%E3%82%8B">webコンソールへのアクセス準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B">webコンソールへアクセスする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E5%90%84%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">各ページの説明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html">webコントローラを使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service.html">サービスを使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">プロジェクトを使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_project.html">AKARIチュートリアルを動かしてみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories_jupyter.html">その他のアプリも使ってみよう(JupyterNotebook版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIをはじめよう(webコンソール編)</a></li>
+      <li class="breadcrumb-item active">webコンソールを使ってみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/tutorial_web/access.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>webコンソールを使ってみよう<a class="headerlink" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">AKARIはwebコンソールにアクセスすることでwebブラウザ上から制御やコーディングが出来ます。</div>
+<div class="line">AKARIのwebコンソールを使ってみましよう。</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<div class="line-block">
+<div class="line">webコンソールにAKARI本体のUbuntuからアクセスする際、処理が重くなる場合があります。</div>
+<div class="line">Ubuntuデフォルトのfirefoxよりgoogle chromeを使う方が軽快に動作する場合が多いため、google chromeのインストール、使用を推奨します。</div>
+</div>
+</div>
+<section id="%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">
+<h2>解説動画<a class="headerlink" href="#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">以降の解説を動画にしたものです。こちらもご参考ください。</div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/PHsNiREHRH8" style="border: 0; height: 345px; width: 560px">
+</iframe></div></section>
+<section id="web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%BA%96%E5%82%99%E3%82%92%E3%81%99%E3%82%8B">
+<h2>webコンソールへのアクセス準備をする<a class="headerlink" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%BA%96%E5%82%99%E3%82%92%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">まずは、下記の手順でwebコンソールにアクセスする準備をしましょう。</div>
+</div>
+<ol class="arabic">
+<li><p>AKARIにディスプレイ、キーボード、マウスを接続し、AKARI本体のUbuntuにログインする。</p></li>
+<li><p>AKARIを有線もしくはWi-Fiでネットワークに接続する。</p></li>
+<li><p>AKARIのIPアドレスを調べる。</p>
+<blockquote>
+<div><p>AKARIの本体内でUbuntuのインジゲータアイコン(下図)を開き、有線接続の場合は有線設定、Wi-Fiの場合はWi-Fi設定を開く。</p>
+</div></blockquote>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/access_01.jpg"><img alt="../../_images/access_01.jpg" src="../../_images/access_01.jpg" style="width: 600px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>接続中のネットワークの歯車アイコンをクリックし、IPv4アドレスを確認する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/access_02.jpg"><img alt="../../_images/access_02.jpg" src="../../_images/access_02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/access_03.jpg"><img alt="../../_images/access_03.jpg" src="../../_images/access_03.jpg" style="width: 300px;" /></a>
+</section>
+<section id="web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B">
+<h2>webコンソールへアクセスする<a class="headerlink" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%B8%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">AKARIのwebコンソールには、AKARI本体から直接、もしくは同一ネットワーク内にある他のPCからでもアクセス可能です。</div>
+<div class="line">下記の手順でwebコンソールにアクセスしてみましょう。</div>
+</div>
+<ol class="arabic">
+<li><p>(別PCからアクセスする場合)AKARIが接続されているネットワークと同一のネットワークにPCを接続する。</p></li>
+<li><p>webブラウザを開き、webアドレス欄に <cite>[AKARIのIPアドレス]:8080</cite> を入力してアクセスする。</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">例: AKARIのIPアドレスが <cite>192.168.100.20</cite> だった場合、アドレス欄に <cite>192.168.100.20:8080</cite> と入力する。</div>
+<div class="line">AKARI本体から直接アクセスしている場合は、 <cite>localhost:8080</cite> でもアクセスできます。</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>AKARIのwebコンソールが開く</p></li>
+</ol>
+<div class="line-block">
+<div class="line">もし開かなかった時は、ブラウザのアドレスバーを選択してenterを押してみてください。</div>
+</div>
+</section>
+<section id="%E5%90%84%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">
+<h2>各ページの説明<a class="headerlink" href="#%E5%90%84%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">webコンソールの各ページについて説明します。</div>
+<div class="line">ページ間の移動は左のメニューから移動できます。</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/access_04.jpg"><img alt="../../_images/access_04.jpg" src="../../_images/access_04.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><strong>・Projects</strong></div>
+<div class="line-block">
+<div class="line">webコンソール上で作成したプロジェクトが一覧表示されます。</div>
+<div class="line">ここからアプリを新たに作成したり、作成中のアプリを再度開くことができます。</div>
+</div>
+<div class="line"><strong>・Services</strong></div>
+<div class="line-block">
+<div class="line">webコンソール上でアプリを実行したり、コントローラを動かすためのバックグラウンドサービスの管理を行う画面です。</div>
+<div class="line">サービスの起動や終了、また新規作成や編集、消去などが行えます。</div>
+</div>
+<div class="line"><strong>・Controller</strong></div>
+<div class="line-block">
+<div class="line">AKARIの各機能をブラウザ上から試せるControllerのページです。</div>
+</div>
+</div>
+<p>次のページからはwebコンソールの使い方を詳細に説明していきます。</p>
+<p><a class="reference internal" href="controller.html"><span class="doc">webコントローラを使ってみよう</span></a> へ進む</p>
+<p><a class="reference internal" href="main.html"><span class="doc">AKARIをはじめよう(webコンソール編)</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="AKARIをはじめよう(webコンソール編)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="controller.html" class="btn btn-neutral float-right" title="webコントローラを使ってみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
