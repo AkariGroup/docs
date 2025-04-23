@@ -148,6 +148,23 @@ URL: https://github.com/AkariGroup/akari_tracking_palette.git
 | 更に、俯瞰図上にマウスでエリアを描画することで、そのエリア内に人や物が存在するかを検出することができます。
 | 任意の認識モデル、任意のエリアを簡単に設定してオリジナルの見守り、インタラクションアプリを簡単に作ることができます。
 
+akari_tracking_captioning
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_tracking_captioning
+
+..  youtube:: fyRc4VqmvE8
+
+| AKARIの人トラッキングと、リモートPC上のローカルVLMでの解析を元に、視野内の人の外観や行動の記録を自動的に作成するアプリです。
+| AKARIのカメラで認識した人の位置を、リモートPC上のVLMに送信し、VLM側で解析を行い、AKARIに返すことで、AKARIのカメラで認識した人の外観や行動を記録することができます。
+
+local_vlm_server
+===========================================================
+
+URL: https://github.com/AkariGroup/local_vlm_server
+
+| ローカルVLMをgRPC経由で簡単に実行するサーバーアプリです。
+| nvidiaのGPUを搭載したPC上で実行することで、AKARIのカメラ画像をVLMに送信し、高速に画像の解析を行うことができます。
 
 shy_akari
 ===========================================================
