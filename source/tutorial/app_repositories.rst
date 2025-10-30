@@ -253,6 +253,43 @@ URL: https://github.com/AkariGroup/akari_draw_picture.git
 
 | 画像認識を使って写真の撮影をし、その写真の上にお絵描きができるアプリです。
 
+akari_barcode_reader
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_barcode_reader.git
+
+
+| AKARIのカメラでバーコードを認識し、AKARIで読み取るレジアプリです。
+| 任意のバーコードをデータベースに登録することができます。
+
+akari_game_daruma
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_game_daruma.git
+
+| AKARIのカメラでだるまさんが転んだゲームをするアプリです。
+| AKARIのカメラで人の動きを認識し、動いているかどうかを判定します。
+
+akari_posture_checker
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_posture_checker.git
+
+| AKARIのカメラで座り姿勢を認識し、姿勢が悪かったり座り時間が長かったりした場合に音声で注意を促すアプリです。
+
+akari_room_support
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_room_support.git
+
+| AKARIのセンサで部屋の気温などを検知して表示、気温に応じた音声アラートを行うアプリです。
+
+akari_show_face_game
+===========================================================
+
+URL: https://github.com/AkariGroup/akari_show_face_game.git
+
+| AKARIの首振りを追いかけ、顔をカメラに写し続けられるかを競うゲームです。
 
 :doc:`main` へ戻る
 
