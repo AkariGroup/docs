@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>認識機能を試してみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/tutorial/test_detection.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="その他のアプリも使ってみよう" href="app_repositories.html" />
+    <link rel="prev" title="ヘッドカメラをwebカメラとして使ってみよう" href="test_uvc_camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIをはじめよう(Ubuntu編)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test_sample_app.html">サンプルアプリを動かそう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_uvc_camera.html">ヘッドカメラをwebカメラとして使ってみよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">認識機能を試してみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96">仮想環境の有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E9%A1%94%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">顔認識を試してみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E9%A1%94%E8%BF%BD%E5%BE%93%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">顔追従を試してみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28mobilenet-ssd%E7%89%88%29">物体認識を試してみよう(mobilenet-ssd版)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28yolo%E7%89%88%29">物体認識を試してみよう(YOLO版)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories.html">その他のアプリも使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories.html#%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+      <li class="breadcrumb-item active">認識機能を試してみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/tutorial/test_detection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E8%AA%8D%E8%AD%98%E6%A9%9F%E8%83%BD%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>認識機能を試してみよう<a class="headerlink" href="#%E8%AA%8D%E8%AD%98%E6%A9%9F%E8%83%BD%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<p>AKARIのヘッドカメラであるOAK-D Liteを使った、認識機能のサンプルを動かしてみましょう。</p>
+<section id="%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96">
+<h2>仮想環境の有効化<a class="headerlink" href="#%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96" title="この見出しへのパーマリンク"></a></h2>
+<p>仮想環境を有効化していなければ、下記のコマンドで仮想環境を有効化します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software
+<span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+</section>
+<section id="%E9%A1%94%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>顔認識を試してみよう<a class="headerlink" href="#%E9%A1%94%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">最初に顔認識アプリを試してみましょう。</div>
+<div class="line">まずface_detectionのディレクトリに移動します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/samples/depthai_sample/face_detection
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">次にface_detection.pyを実行します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 face_detection.py
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">映像をストリーミングするウィンドウが立ち上がって、顔が画面内に写っていると、顔の枠と目、鼻、口の特徴点のプロット、確からしさの数字(0~1)が表示されます。</div>
+<div class="line">カメラ映像のウインドウ上で&quot;q&quot;を押すと終了します。</div>
+</div>
+</section>
+<section id="%E9%A1%94%E8%BF%BD%E5%BE%93%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>顔追従を試してみよう<a class="headerlink" href="#%E9%A1%94%E8%BF%BD%E5%BE%93%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/WEss7OVRRiM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="line-block">
+<div class="line">ここでは、顔認識にプラスして、認識した顔の方をAKARIが追いかけてくれる顔追従も試してみましょう。</div>
+<div class="line">まずface_detectionのディレクトリに移動します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/samples/depthai_sample/face_detection
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">次にface_tracking.pyを実行します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 face_tracking.py
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">顔認識と同様の認識ウインドウが立ち上がります。</div>
+<div class="line">顔を動かすと、AKARIのヘッドが動いて顔を追従してくれます。</div>
+<div class="line">カメラ映像のウインドウ上で&quot;q&quot;を押すと終了します。</div>
+</div>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28mobilenet-ssd%E7%89%88%29">
+<h2>物体認識を試してみよう(mobilenet-ssd版)<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28mobilenet-ssd%E7%89%88%29" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">次に物体認識アプリを試してみましょう。</div>
+<div class="line">depthai_sampleでは、mobilenet-ssd, YOLOv3-tiny, YOLOv4-tinyの3種類の物体認識が実行できます。</div>
+</div>
+<p>まずobject_recognitionのディレクトリに移動します。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/samples/depthai_sample/object_recognition
+</pre></div>
+</div>
+</div></blockquote>
+<p>mobilenet-ssdの物体認識を実行したい場合は、下記を実行します。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 mobilenet.py
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。</div>
+<div class="line">カメラ映像のウインドウ上で&quot;q&quot; を押すと終了します。</div>
+<div class="line">mobilenetで認識できる物体の一覧は下記のとおりです。</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>aeroplane</p></li>
+<li><p>bicycle</p></li>
+<li><p>bird</p></li>
+<li><p>boat</p></li>
+<li><p>bottle</p></li>
+<li><p>bus</p></li>
+<li><p>car</p></li>
+<li><p>cat</p></li>
+<li><p>chair</p></li>
+<li><p>cow</p></li>
+<li><p>diningtable</p></li>
+<li><p>dog</p></li>
+<li><p>horse</p></li>
+<li><p>motorbike</p></li>
+<li><p>person</p></li>
+<li><p>pottedplant</p></li>
+<li><p>sheep</p></li>
+<li><p>sofa</p></li>
+<li><p>train</p></li>
+<li><p>tvmonitor</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28yolo%E7%89%88%29">
+<h2>物体認識を試してみよう(YOLO版)<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%28yolo%E7%89%88%29" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">次にYOLOの物体認識を試してみます。mobolenetと同じobject_recognitionのディレクトリで実行できます。</div>
+<div class="line">デフォルトの状態で起動すると、YOLOv4tinyが起動するようになっています。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 tiny_yolo.py
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">下記のコマンドで、別のモデルで物体認識を起動することもできます。</div>
+</div>
+<p>YOLOv6n</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 tiny_yolo.py -n yolov6n_coco_416x416 -c configs/yolov6n_coco_416x416.json
+</pre></div>
+</div>
+<p>YOLOv7tiny</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 tiny_yolo.py -n yolov7tiny_coco_416x416 -c configs/yolov7tiny_coco_416x416.json
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">どの場合でも映像をストリーミングするウィンドウが立ち上がって、認識可能な物体が画面内に写っていると、枠と認識した物体名、その確からしさの数字(0~100%)が表示されます。</div>
+<div class="line">カメラ映像のウインドウ上で&quot;q&quot;を押すと終了します。</div>
+<div class="line">YOLOで認識できる物体の一覧は下記のとおりです。</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>person</p></li>
+<li><p>bicycle</p></li>
+<li><p>car</p></li>
+<li><p>motorbike</p></li>
+<li><p>aeroplane</p></li>
+<li><p>bus</p></li>
+<li><p>train</p></li>
+<li><p>truck</p></li>
+<li><p>boat</p></li>
+<li><p>traffic light</p></li>
+<li><p>fire hydrant</p></li>
+<li><p>stop sign</p></li>
+<li><p>parking meter</p></li>
+<li><p>bench</p></li>
+<li><p>bird</p></li>
+<li><p>cat</p></li>
+<li><p>dog</p></li>
+<li><p>horse</p></li>
+<li><p>sheep</p></li>
+<li><p>cow</p></li>
+<li><p>elephant</p></li>
+<li><p>bear</p></li>
+<li><p>zebra</p></li>
+<li><p>giraffe</p></li>
+<li><p>backpack</p></li>
+<li><p>umbrella</p></li>
+<li><p>handbag</p></li>
+<li><p>tie</p></li>
+<li><p>suitcase</p></li>
+<li><p>frisbee</p></li>
+<li><p>skis</p></li>
+<li><p>snowboard</p></li>
+<li><p>sports ball</p></li>
+<li><p>kite</p></li>
+<li><p>baseball bat</p></li>
+<li><p>baseball glove</p></li>
+<li><p>skateboard</p></li>
+<li><p>surfboard</p></li>
+<li><p>tennis racket</p></li>
+<li><p>bottle</p></li>
+<li><p>wine glass</p></li>
+<li><p>cup</p></li>
+<li><p>fork</p></li>
+<li><p>knife</p></li>
+<li><p>spoon</p></li>
+<li><p>bowl</p></li>
+<li><p>banana</p></li>
+<li><p>apple</p></li>
+<li><p>sandwich</p></li>
+<li><p>orange</p></li>
+<li><p>broccoli</p></li>
+<li><p>carrot</p></li>
+<li><p>hot dog</p></li>
+<li><p>pizza</p></li>
+<li><p>donut</p></li>
+<li><p>cake</p></li>
+<li><p>chair</p></li>
+<li><p>sofa</p></li>
+<li><p>pottedplant</p></li>
+<li><p>bed</p></li>
+<li><p>diningtable</p></li>
+<li><p>toilet</p></li>
+<li><p>tvmonitor</p></li>
+<li><p>laptop</p></li>
+<li><p>mouse</p></li>
+<li><p>remote</p></li>
+<li><p>keyboard</p></li>
+<li><p>cell phone</p></li>
+<li><p>microwave</p></li>
+<li><p>oven</p></li>
+<li><p>toaster</p></li>
+<li><p>sink</p></li>
+<li><p>refrigerator</p></li>
+<li><p>book</p></li>
+<li><p>clock</p></li>
+<li><p>vase</p></li>
+<li><p>scissors</p></li>
+<li><p>teddy bear</p></li>
+<li><p>hair drier</p></li>
+<li><p>toothbrush</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">また、このアプリでは、オリジナルの物体認識を作成し、それを実行することもできます。</div>
+<div class="line">詳しくは、 <a class="reference internal" href="../dev/custom_object_detection/main.html"><span class="doc">オリジナルの物体認識を作ってみよう</span></a> をご覧ください。</div>
+</div>
+<p><a class="reference internal" href="test_uvc_camera.html"><span class="doc">ヘッドカメラをwebカメラとして使ってみよう</span></a> へ進む</p>
+<p><a class="reference internal" href="test_sample_app.html"><span class="doc">サンプルアプリを動かそう</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test_uvc_camera.html" class="btn btn-neutral float-left" title="ヘッドカメラをwebカメラとして使ってみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="app_repositories.html" class="btn btn-neutral float-right" title="その他のアプリも使ってみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

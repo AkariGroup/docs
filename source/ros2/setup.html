@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKARIのROS2環境をセットアップしよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/ros2/setup.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ROS2で動かしてみよう" href="example.html" />
+    <link rel="prev" title="ROS2版を使ってみよう" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">ROS2版を使ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AKARIのROS2環境をセットアップしよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">ROS2で動かしてみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="communications.html">ソフトウェア仕様(ROS2版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">ROS2版を使ってみよう</a></li>
+      <li class="breadcrumb-item active">AKARIのROS2環境をセットアップしよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/ros2/setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="akari%E3%81%AEros2%E7%92%B0%E5%A2%83%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%82%88%E3%81%86">
+<h1>AKARIのROS2環境をセットアップしよう<a class="headerlink" href="#akari%E3%81%AEros2%E7%92%B0%E5%A2%83%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">まずは、AKARIのROS2環境のセットアップ方法を説明します。</div>
+</div>
+<ol class="arabic simple">
+<li><p>aptリポジトリの追加</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">下記コマンドを実行し、aptリポジトリを追加します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install software-properties-common
+sudo add-apt-repository universe
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>aptの更新とROS2のGPGキーを取得</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">下記コマンドを実行しaptの更新を行い、ROS2のGPGキーを取得します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>リポジトリをsource listに追加</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">下記コマンドを実行し、ROS2のリポジトリをsourceのlistに追加します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span>. /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>ROS2のインストール</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">再度aptの更新を行い、ROS2 humbleとbuild用のパッケージであるcolconをインストールします。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt upgrade
+sudo apt install ros-humble-desktop python3-colcon-common-extensions
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>workspaceを作成する</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ros2のworkspaceを作成します。</div>
+<div class="line">今回はhomeディレクトリの直下に&quot;ros2_ws&quot;というディレクトリを作成し、そこでROS2の開発を行います。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/
+mkdir ros2_ws
+<span class="nb">cd</span> ros2_ws
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>akari_rosをcloneする。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">作成したworkspace内にsrcというディレクトリを作成し、その中にakari_rosをcloneします。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir src
+<span class="nb">cd</span> src
+git clone https://github.com/AkariGroup/akari_ros.git
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>ROS2のsetupファイルを読み込む</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ROS2を使うには、ROS2のsetupファイルを読み込む必要が有ります。</div>
+<div class="line">下記を実行し、setupファイルを読み込みます。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. /opt/ros/humble/setup.bash
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><strong>この読み込みは、ROS2を使う場合ターミナルを起動する度に実行する必要があります。</strong></div>
+<div class="line"><strong>下記コマンドを実行して~/.bashrcに追記しておくと自動実行されるようになります。</strong></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;. /opt/ros/humble/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>akari_rosをビルドする。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">akari_rosのビルドを行います。</div>
+<div class="line">ビルドはros2_ws直下で行うため、移動してから実行します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws
+colcon build --symlink-install
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>workspaceのsetupファイルを読み込む</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ビルドが成功したら、このworkspaceのsetupファイルが生成されるのでこちらも読み込む必要が有ります。</div>
+<div class="line">下記を実行し、setupファイルを読み込みます。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_ws/install/local_setup.bash
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><strong>こちらの読み込みも、ROS2を使う場合ターミナルを起動する度に実行する必要があります。</strong></div>
+<div class="line"><strong>下記コマンドを実行して~/.bashrcに追記しておくと自動実行されるようになります。</strong></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;. ~/ros2_ws/install/local_setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>以上でセットアップは終了です。
+次は、実際に起動して使ってみましょう。</p>
+<p><a class="reference internal" href="example.html"><span class="doc">ROS2で動かしてみよう</span></a> へ進む</p>
+<p><a class="reference internal" href="main.html"><span class="doc">ROS2版を使ってみよう</span></a> へ戻る</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="ROS2版を使ってみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="ROS2で動かしてみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

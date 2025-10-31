@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>関節制御 &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/sdk_reference/akari_client/joint.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="ユーティリティ" href="utility.html" />
+    <link rel="prev" title="M5の制御" href="m5_com.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">SDK リファレンス</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="general.html">基本クラス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="m5_com.html">M5の制御</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">関節制御</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.joint_manager.JointManager"><code class="docutils literal notranslate"><span class="pre">JointManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.joint_controller.RevoluteJointController"><code class="docutils literal notranslate"><span class="pre">RevoluteJointController</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="utility.html">ユーティリティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="low_level.html">低レイヤー実装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html">設定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">SDK リファレンス</a></li>
+          <li class="breadcrumb-item"><a href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a></li>
+      <li class="breadcrumb-item active">関節制御</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/sdk_reference/akari_client/joint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-akari_client">
+<span id="%E9%96%A2%E7%AF%80%E5%88%B6%E5%BE%A1"></span><h1>関節制御<a class="headerlink" href="#module-akari_client" title="この見出しへのパーマリンク"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.joint_manager.</span></span><span class="sig-name descname"><span class="pre">JointManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_controllers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>joint_controllers</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="#akari_client.joint_controller.RevoluteJointController" title="akari_client.joint_controller.RevoluteJointController"><em>RevoluteJointController</em></a><em>]</em>) -- </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_names">
+<span class="sig-name descname"><span class="pre">get_joint_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_joint_names"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_names" title="この定義へのパーマリンク"></a></dt>
+<dd><p>関節名を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>AKARIの全関節名のlist</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>List</em>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_limits">
+<span class="sig-name descname"><span class="pre">get_joint_limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_joint_limits"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_limits" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの位置リミットを取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と位置リミット(min,max)[rad]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, <em>PositionLimit</em>]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">())</span>
+<span class="go"># 各軸のリミット値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_joint_accelerations">
+<span class="sig-name descname"><span class="pre">set_joint_accelerations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.set_joint_accelerations"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_joint_accelerations" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標加速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の加速度 [rad/s^2]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の加速度 [rad/s^2]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_joint_accelerations</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">tilt</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="go"># pan軸の目標加速度が10rad/s^2, tilt軸の目標加速度が8rad/s^2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_accelerations">
+<span class="sig-name descname"><span class="pre">get_joint_accelerations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_joint_accelerations"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_accelerations" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標加速度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と目標加速度[rad/s^2]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_accelerations</span><span class="p">())</span>
+<span class="go"># 各軸の目標加速度値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_joint_velocities">
+<span class="sig-name descname"><span class="pre">set_joint_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.set_joint_velocities"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_joint_velocities" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の速度 [rad/s]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の速度 [rad/s]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_joint_velocities</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">tilt</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="go"># pan軸の目標加速度が10rad/s, tilt軸の目標加速度が8rad/s</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_velocities">
+<span class="sig-name descname"><span class="pre">get_joint_velocities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_joint_velocities"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_velocities" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標速度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>関節名と目標速度[rad/s]のDict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_velocities</span><span class="p">())</span>
+<span class="go"># 各軸の目標速度値が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.move_joint_positions">
+<span class="sig-name descname"><span class="pre">move_joint_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.move_joint_positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.move_joint_positions" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標角度を設定する。
+ここで設定した値まで移動する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sync</strong> (<em>bool</em>) -- Trueにすると、サーボの移動が完了するまで関数の終了を待機する。デフォルト値はFalse。</p></li>
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- pan軸の目標角度 [rad]</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) -- tilt軸の目標角度 [rad]</p></li>
+<li><p><strong>kwargs</strong> (<em>float</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">move_joint_positions</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">tilt</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="go"># pan軸が0.4rad, tilt軸の目標加速度が-0.2radの位置へ移動</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_joint_positions">
+<span class="sig-name descname"><span class="pre">get_joint_positions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_joint_positions"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_joint_positions" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの現在角度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>サーボ名と現在角度[rad]のdict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, float]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_joint_positions</span><span class="p">())</span>
+<span class="go"># 各軸の現在角度[rad]が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.set_servo_enabled">
+<span class="sig-name descname"><span class="pre">set_servo_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tilt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.set_servo_enabled"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.set_servo_enabled" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの有効無効状態を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- pan軸のサーボ有効無効の設定。<code class="docutils literal notranslate"><span class="pre">True</span></code> であればサーボを有効にする。</p></li>
+<li><p><strong>tilt</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) -- tilt軸のサーボ有効無効の設定。<code class="docutils literal notranslate"><span class="pre">True</span></code> であればサーボを有効にする。</p></li>
+<li><p><strong>kwargs</strong> (<em>bool</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">set_servo_enabled</span><span class="p">(</span><span class="n">pan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">tilt</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go"># panのサーボを有効、tiltのサーボを無効に設定</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.enable_all_servo">
+<span class="sig-name descname"><span class="pre">enable_all_servo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.enable_all_servo"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.enable_all_servo" title="この定義へのパーマリンク"></a></dt>
+<dd><p>全サーボを有効状態に設定する。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">enable_all_servo</span><span class="p">()</span>
+<span class="go"># pan、tiltのサーボ両方を有効に設定</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.disable_all_servo">
+<span class="sig-name descname"><span class="pre">disable_all_servo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.disable_all_servo"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.disable_all_servo" title="この定義へのパーマリンク"></a></dt>
+<dd><p>全サーボを無効状態に設定する。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span><span class="o">.</span><span class="n">disable_all_servo</span><span class="p">()</span>
+<span class="go"># pan、tiltのサーボ両方を無効に設定</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_manager.JointManager.get_moving_state">
+<span class="sig-name descname"><span class="pre">get_moving_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_manager.html#JointManager.get_moving_state"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_manager.JointManager.get_moving_state" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="simple">
+<dt>サーボが現在移動中かを取得する。</dt><dd><p>停止中ならTrue、移動中ならFalseを返す。</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>サーボ名と現在状態のdict</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>Dict</em>[str, bool]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">akari_client</span> <span class="kn">import</span> <span class="n">AkariClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">akari</span> <span class="o">=</span> <span class="n">AkariClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joints</span> <span class="o">=</span> <span class="n">akari</span><span class="o">.</span><span class="n">joints</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">joints</span><span class="o">.</span><span class="n">get_moving_state</span><span class="p">())</span>
+<span class="go"># 各軸の現在状態が出力される</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">akari_client.joint_controller.</span></span><span class="sig-name descname"><span class="pre">RevoluteJointController</span></span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController" title="この定義へのパーマリンク"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_servo_enabled">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_servo_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_servo_enabled"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_servo_enabled" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの有効無効状態を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>サーボ有効なら``True``、無効なら``False``</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.set_servo_enabled">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_servo_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.set_servo_enabled"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.set_servo_enabled" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの有効無効状態を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>enabled</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> であればサーボを有効にする</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_position_limit">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_position_limit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_position_limit"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_position_limit" title="この定義へのパーマリンク"></a></dt>
+<dd><p>Positionの上限値と下限値を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>現在角度の下限値、上限値 [rad]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><em>PositionLimit</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.set_profile_acceleration">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_profile_acceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rad_per_sec2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.set_profile_acceleration"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.set_profile_acceleration" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標加速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>rad_per_sec2</strong> (<em>float</em>) -- 加速度 [rad/s^2]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_profile_acceleration">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_profile_acceleration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_profile_acceleration"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_profile_acceleration" title="この定義へのパーマリンク"></a></dt>
+<dd><p>Profile Acceleration を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>加速度 [rad/s^2]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.set_profile_velocity">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_profile_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rad_per_sec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.set_profile_velocity"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.set_profile_velocity" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標速度を設定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>rad_per_sec</strong> (<em>float</em>) -- 速度 [rad/s]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_profile_velocity">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_profile_velocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_profile_velocity"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_profile_velocity" title="この定義へのパーマリンク"></a></dt>
+<dd><p>Profile Velocity を設定する</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>rad_per_sec</strong> -- 速度 [rad/s]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.set_goal_position">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_goal_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rad</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.set_goal_position"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.set_goal_position" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの目標角度を設定する。
+ここで設定した値まで移動する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>rad</strong> (<em>float</em>) -- 目標角度 [rad]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_present_position">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_present_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_present_position"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_present_position" title="この定義へのパーマリンク"></a></dt>
+<dd><p>サーボの現在角度を取得する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>現在角度 [rad]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="akari_client.joint_controller.RevoluteJointController.get_moving_state">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_moving_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/joint_controller.html#RevoluteJointController.get_moving_state"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.joint_controller.RevoluteJointController.get_moving_state" title="この定義へのパーマリンク"></a></dt>
+<dd><p>モーターが動作中かどうか判定する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>現在のモーター状態。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="m5_com.html" class="btn btn-neutral float-left" title="M5の制御" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="utility.html" class="btn btn-neutral float-right" title="ユーティリティ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
