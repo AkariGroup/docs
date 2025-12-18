@@ -258,6 +258,7 @@ akari_barcode_reader
 
 URL: https://github.com/AkariGroup/akari_barcode_reader.git
 
+..  youtube:: 60-SPGrz348
 
 | AKARIのカメラでバーコードを認識し、AKARIで読み取るレジアプリです。
 | 任意のバーコードをデータベースに登録することができます。
@@ -288,6 +289,8 @@ akari_show_face_game
 ===========================================================
 
 URL: https://github.com/AkariGroup/akari_show_face_game.git
+
+..  youtube:: IJhI8wqPWkU
 
 | AKARIの首振りを追いかけ、顔をカメラに写し続けられるかを競うゲームです。
 
