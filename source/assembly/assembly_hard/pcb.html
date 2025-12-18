@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>基板を作ろう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/assembly_hard/pcb.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="組み立てに必要なもの" href="part_list.html" />
+    <link rel="prev" title="3Dプリント部品を作ろう" href="3dprint.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">基板を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_base.html">ベースを組み立てよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">基板を作ろう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/assembly_hard/pcb.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E5%9F%BA%E6%9D%BF%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86">
+<h1>基板を作ろう<a class="headerlink" href="#%E5%9F%BA%E6%9D%BF%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">AKARIの回路基板は <a class="reference internal" href="part_list.html"><span class="doc">組み立てに必要なもの</span></a> のNo.1、テストユニットを作成する場合は <a class="reference internal" href="../assembly_test_unit/part_list.html"><span class="doc">テストユニットの部品</span></a> のNo.T1の2種類です。</div>
+<div class="line">これらはakari_hardwareのレポジトリでgerberデータが公開されています。</div>
+</div>
+<div class="line-block">
+<div class="line">(1) M5stack基板の公開先: <a class="reference external" href="https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/electronics/pcb">https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/electronics/pcb</a></div>
+<div class="line">(T1) TEST UNIT基板の公開先: <a class="reference external" href="https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/head_units/test_unit/pcb">https://github.com/AkariGroup/akari_hardware/tree/main/AKARI/head_units/test_unit/pcb</a></div>
+</div>
+<div class="line-block">
+<div class="line">例として、JLCPCB(<a class="reference external" href="https://jlcpcb.com/">https://jlcpcb.com/</a>)での発注方法を説明します。</div>
+<div class="line">JLCPCBは中国の基板製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。</div>
+<div class="line">海外への発注が難しい場合は、他の基板製造会社の利用をご検討ください。</div>
+</div>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://jlcpcb.com/">https://jlcpcb.com/</a> サイト内の「Add gerber file」を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/pcba01-01.PNG"><img alt="../../../_images/pcba01-01.PNG" src="../../../_images/pcba01-01.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>ファイル選択ダイアログで、akari_hardwareリポジトリの <cite>AKARI/electronics/pcb/AKARI_M5_board_gerber.zip</cite> を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/pcba01-02.PNG"><img alt="../../../_images/pcba01-02.PNG" src="../../../_images/pcba01-02.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>インポートされたデータを確認し、各設定を行います。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">図は設定の一例です。「PCB Qty」を必要な基板の個数、「PCB Color」を黒にしていますが、これらは任意です。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/pcba01-03.PNG"><img alt="../../../_images/pcba01-03.PNG" src="../../../_images/pcba01-03.PNG" style="width: 500px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>設定が問題なければ、「SAVE TO CART」を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/pcba01-04.PNG"><img alt="../../../_images/pcba01-04.PNG" src="../../../_images/pcba01-04.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>テスト基板も作成する場合は、同様に 1.から行います。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">アップロードするファイルは akari_hardwareリポジトリの <cite>AKARI/head_units/test_unit/pcb/AKARI_Test_Head_Unit_gerber.zip</cite> です。</div>
+<div class="line">下図は設定の一例で、こちらも「PCB Qty」を必要な基板の個数に変更、「PCB Color」を黒にしていますが、これらは任意です。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/pcba01-05.PNG"><img alt="../../../_images/pcba01-05.PNG" src="../../../_images/pcba01-05.PNG" style="width: 500px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>アカウントがない場合、新規作成します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/pcba01-06.PNG"><img alt="../../../_images/pcba01-06.PNG" src="../../../_images/pcba01-06.PNG" style="width: 200px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>アカウント内のCARTを閲覧し、「Secure Checkout」を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/pcba01-07.PNG"><img alt="../../../_images/pcba01-07.PNG" src="../../../_images/pcba01-07.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="8">
+<li><p>以降、配送先住所や支払い先を入力することで、発注が完了します。</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3dprint.html" class="btn btn-neutral float-left" title="3Dプリント部品を作ろう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="part_list.html" class="btn btn-neutral float-right" title="組み立てに必要なもの" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>akari_client.serial.dynamixel_communicator &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/_modules/akari_client/serial/dynamixel_communicator.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">モジュールコード</a></li>
+      <li class="breadcrumb-item active">akari_client.serial.dynamixel_communicator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>akari_client.serial.dynamixel_communicator のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">contextlib</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span>
+
+<span class="kn">from</span> <span class="nn">dynamixel_sdk</span> <span class="kn">import</span> <span class="n">COMM_SUCCESS</span><span class="p">,</span> <span class="n">PacketHandler</span><span class="p">,</span> <span class="n">PortHandler</span>
+
+<span class="n">DEFAULT_BAUDRATE</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">DEFAULT_DEVICE_NAME</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/dev/ttyUSB_dynamixel&quot;</span><span class="p">)</span>
+<span class="n">DEFAULT_PROTOCOL_VERSION</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+
+<span class="k">def</span> <span class="nf">get_baudrate_control_value</span><span class="p">(</span><span class="n">baudrate</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Dynamixelのボーレート設定値を取得する&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">baudrate</span> <span class="o">==</span> <span class="mi">1000000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">baudrate</span> <span class="o">==</span> <span class="mi">57600</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Either 57600 or 1000000 is supported&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="DynamixelCommunicator"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.serial.dynamixel_communicator.DynamixelCommunicator">[ドキュメント]</a><span class="k">class</span> <span class="nc">DynamixelCommunicator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">port_handler</span><span class="p">:</span> <span class="n">PortHandler</span><span class="p">,</span>
+        <span class="n">packet_handler</span><span class="p">:</span> <span class="n">PacketHandler</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;dynamixelと通信を行うクラス</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            port_handler: dynamixel通信ポートのハンドラ</span>
+<span class="sd">            packet_handler: dynamixelパケット通信のハンドラ</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span> <span class="o">=</span> <span class="n">port_handler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span> <span class="o">=</span> <span class="n">packet_handler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DynamixelCommunicator.open"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.serial.dynamixel_communicator.DynamixelCommunicator.open">[ドキュメント]</a>    <span class="nd">@classmethod</span>
+    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">serial_port</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span> <span class="o">=</span> <span class="n">DEFAULT_DEVICE_NAME</span><span class="p">,</span>
+        <span class="n">baudrate</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">DEFAULT_BAUDRATE</span><span class="p">,</span>
+        <span class="n">protocol_version</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_PROTOCOL_VERSION</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">DynamixelCommunicator</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;dynamixelと通信を行うクラスを初期化する&quot;&quot;&quot;</span>
+
+        <span class="n">port_handler</span> <span class="o">=</span> <span class="n">PortHandler</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">serial_port</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">port_handler</span><span class="o">.</span><span class="n">setBaudRate</span><span class="p">(</span><span class="n">baudrate</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Succeeded to change the baudrate&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to change the baudrate&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">port_handler</span><span class="o">.</span><span class="n">openPort</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Succeeded to open the port&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to open port&quot;</span><span class="p">)</span>
+
+            <span class="n">packet_handler</span> <span class="o">=</span> <span class="n">PacketHandler</span><span class="p">(</span><span class="n">protocol_version</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="bp">cls</span><span class="p">(</span>
+                <span class="n">port_handler</span><span class="o">=</span><span class="n">port_handler</span><span class="p">,</span>
+                <span class="n">packet_handler</span><span class="o">=</span><span class="n">packet_handler</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">port_handler</span><span class="o">.</span><span class="n">closePort</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DynamixelCommunicator.read"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.serial.dynamixel_communicator.DynamixelCommunicator.read">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;dynamixelからデータを読み込む。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            device_id: DynamixelのID</span>
+<span class="sd">            address: データアドレス</span>
+<span class="sd">            length: データ長</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            データ値</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span><span class="p">:</span> <span class="nb">int</span>
+        <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+        <span class="n">err</span><span class="p">:</span> <span class="nb">int</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">read1ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">read2ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">read4ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid length: </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">COMM_SUCCESS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">getTxRxResult</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">err</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">getRxPacketError</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="DynamixelCommunicator.write"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.serial.dynamixel_communicator.DynamixelCommunicator.write">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;dynamixelにデータを書き込む。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            device_id: DynamixelのID</span>
+<span class="sd">            address: データアドレス</span>
+<span class="sd">            length: データ長</span>
+<span class="sd">            value: データ値</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+        <span class="n">err</span><span class="p">:</span> <span class="nb">int</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">write1ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">value</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">write2ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">value</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">write4ByteTxRx</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_port_handler</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">value</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid length: </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">COMM_SUCCESS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">getTxRxResult</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">err</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_packet_handler</span><span class="o">.</span><span class="n">getRxPacketError</span><span class="p">(</span><span class="n">err</span><span class="p">))</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

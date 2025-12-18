@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>(Raspberry Pi版) ハードウェアの準備 &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/raspi/setup_hard.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="(Raspberry Pi版) ソフトウェア環境のセットアップ" href="setup_soft.html" />
+    <link rel="prev" title="(おまけ) AKARIをRaspberry Piで使ってみる" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../assembly_hard/main.html">AKARIの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">(Raspberry Pi版) ハードウェアの準備</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E6%B8%88%E3%81%BF%E7%AB%AF%E6%9C%AB">動作確認済み端末</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%81%AE%E5%A4%89%E5%8C%96%E7%82%B9">ハードの変化点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="setup_soft.html">(Raspberry Pi版) ソフトウェア環境のセットアップ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+      <li class="breadcrumb-item active">(Raspberry Pi版) ハードウェアの準備</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/raspi/setup_hard.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%28raspberry%20pi%E7%89%88%29%20%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%BA%96%E5%82%99">
+<h1>(Raspberry Pi版) ハードウェアの準備<a class="headerlink" href="#%28raspberry%20pi%E7%89%88%29%20%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%BA%96%E5%82%99" title="この見出しへのパーマリンク"></a></h1>
+<p>Raspberry Piで使う場合のハードウェアの準備方法を記載します。</p>
+<section id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E6%B8%88%E3%81%BF%E7%AB%AF%E6%9C%AB">
+<h2>動作確認済み端末<a class="headerlink" href="#%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E6%B8%88%E3%81%BF%E7%AB%AF%E6%9C%AB" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">動作確認済みのRaspberry Piは下記の通りです。</div>
+</div>
+<ul class="simple">
+<li><p>Raspberry Pi 4 Model B / 8GB (<a class="reference external" href="https://www.switch-science.com/collections/raspberry-pi/products/6370">スイッチサイエンス</a> )</p></li>
+<li><p>Raspberry Pi 5 Model B / 8GB (<a class="reference external" href="https://www.switch-science.com/collections/raspberry-pi/products/9250">スイッチサイエンス</a> )</p></li>
+</ul>
+<p>また、Raspberry Piの使用に下記が必要です。</p>
+<ul class="simple">
+<li><p>microSDカード(容量64GB以上、クラスU1以上のもの)</p></li>
+<li><p>USB-C電源アダプタ(5V 3A以上のもの)</p></li>
+</ul>
+</section>
+<section id="%E3%83%8F%E3%83%BC%E3%83%89%E3%81%AE%E5%A4%89%E5%8C%96%E7%82%B9">
+<h2>ハードの変化点<a class="headerlink" href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%81%AE%E5%A4%89%E5%8C%96%E7%82%B9" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">AKARIをRaspberry Piで使う場合は、ベース部の組み立ては不要です。</div>
+<div class="line">ベース部を使わない代わりに、ボディー部から出る2本のUSB(OAK-D Lite、USBハブ)をRaspberry Pi4のUSB3.0ポートに接続することで使用可能です。</div>
+<div class="line"><strong>電源はボディー部のDCジャックと、Raspberry PiのPWR IN端子(USB-C)の両方にそれぞれ入力する必要があります。</strong></div>
+<div class="line">下図が接続の例です。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/raspi_connection.jpg"><img alt="../../../_images/raspi_connection.jpg" src="../../../_images/raspi_connection.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">ベース部が不要となることで、下記の部品は準備不要となります。</div>
+</div>
+<div class="line-block">
+<div class="line">(5) AKARI Base</div>
+<div class="line">(6) AKARI Plate</div>
+<div class="line">(7) Lattepanda Alpha</div>
+<div class="line">(34) DCケーブル 20cm</div>
+</div>
+<div class="line-block">
+<div class="line">下記の部品は必要数が減ります。</div>
+</div>
+<div class="line-block">
+<div class="line">(20) コネクタ付コード4P PH(赤黒黄緑) (-1個)</div>
+<div class="line">(21) 2.1mm標準DCジャック パネル取付用 (-1個)</div>
+<div class="line">(36) ボルトM3-6 (-4個)</div>
+</div>
+<div class="line-block">
+<div class="line">これ以外の点に関しましては、<a class="reference internal" href="../assembly_hard/main.html"><span class="doc">AKARIの組み立て</span></a> を参考に、<a class="reference internal" href="../assembly_hard/assembly_body.html"><span class="doc">ボディーを組み立てよう</span></a> まで同様の手順で進めていただければ問題ないです。</div>
+</div>
+<p><a class="reference internal" href="setup_soft.html"><span class="doc">(Raspberry Pi版) ソフトウェア環境のセットアップ</span></a> へ進む</p>
+<p><a class="reference internal" href="main.html"><span class="doc">(おまけ) AKARIをRaspberry Piで使ってみる</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="(おまけ) AKARIをRaspberry Piで使ってみる" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="setup_soft.html" class="btn btn-neutral float-right" title="(Raspberry Pi版) ソフトウェア環境のセットアップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

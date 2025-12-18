@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS2で動かしてみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/ros2/example.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ソフトウェア仕様(ROS2版)" href="communications.html" />
+    <link rel="prev" title="AKARIのROS2環境をセットアップしよう" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">ROS2版を使ってみよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">AKARIのROS2環境をセットアップしよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS2で動かしてみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#akari_ros%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%B4%B9%E4%BB%8B">akari_rosのパッケージ紹介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2%E3%82%B5%E3%83%BC%E3%83%90%E3%81%AE%E8%B5%B7%E5%8B%95">ROS2サーバの起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AE%E5%AE%9F%E8%A1%8C">サンプルの実行</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%81%AE%E5%88%B6%E5%BE%A1">サーボの制御</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97">環境情報の取得</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpio%E5%87%BA%E5%8A%9B">GPIO出力</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">ディスプレイ制御</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%88%B6%E5%BE%A1">その他の制御</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="communications.html">ソフトウェア仕様(ROS2版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">ROS2版を使ってみよう</a></li>
+      <li class="breadcrumb-item active">ROS2で動かしてみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/ros2/example.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros2%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>ROS2で動かしてみよう<a class="headerlink" href="#ros2%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">セットアップしたROS2を動かしてみましょう。</div>
+</div>
+<section id="akari_ros%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%B4%B9%E4%BB%8B">
+<h2>akari_rosのパッケージ紹介<a class="headerlink" href="#akari_ros%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%B4%B9%E4%BB%8B" title="この見出しへのパーマリンク"></a></h2>
+<a class="reference internal image-reference" href="../../_images/packages.jpg"><img alt="../../_images/packages.jpg" src="../../_images/packages.jpg" style="width: 600px;" /></a>
+<p>最初に、akari_rosに含まれる各パッケージを紹介します。
+akari_rosには下記のパッケージが含まれています。</p>
+<dl>
+<dt>・ <strong>akari_msgs</strong></dt><dd><div class="line-block">
+<div class="line">akari_rosで使うカスタムメッセージ型、サービス型、アクション型を定義しています。</div>
+</div>
+</dd>
+<dt>・ <strong>state_publisher</strong></dt><dd><div class="line-block">
+<div class="line">akariのjointやM5のstateをメッセージとしてpublishするpublisherが含まれています。</div>
+</div>
+</dd>
+<dt>・ <strong>m5_server</strong></dt><dd><div class="line-block">
+<div class="line">akariのM5のコマンドを実行するservice serverが含まれています。</div>
+</div>
+</dd>
+<dt>・ <strong>servo_server</strong></dt><dd><div class="line-block">
+<div class="line">akariのヘッドのサーボのコマンドを実行するservice serverが含まれています。</div>
+</div>
+</dd>
+<dt>・ <strong>akari_client_example</strong></dt><dd><div class="line-block">
+<div class="line">サンプルアプリ群です。上記のpublisherからsubsclibeして表示するサンプルや、serverに対してserviceを実行するclientサンプルが含まれています。</div>
+</div>
+</dd>
+<dt>・ <strong>akari_launch</strong></dt><dd><div class="line-block">
+<div class="line">publisher、serverをまとめて起動するlaunchファイルが含まれています。</div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="ros2%E3%82%B5%E3%83%BC%E3%83%90%E3%81%AE%E8%B5%B7%E5%8B%95">
+<h2>ROS2サーバの起動<a class="headerlink" href="#ros2%E3%82%B5%E3%83%BC%E3%83%90%E3%81%AE%E8%B5%B7%E5%8B%95" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">最初にサーバ側のノードの起動が必要になります。</div>
+<div class="line">下記のコマンドでまとめて起動します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch akari_launch akari_launch.py
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記launchファイルでは、下記のノードをまとめて起動しています。</div>
+</div>
+<dl class="simple">
+<dt>・ <strong>joint_state_publisher</strong> (パッケージ: state_publisher)</dt><dd><p>各関節の状態をpublishするpublisher</p>
+</dd>
+<dt>・ <strong>m5stack_publisher</strong> (パッケージ: state_publisher)</dt><dd><p>M5の状態をpublishするpublisher</p>
+</dd>
+<dt>・ <strong>servo_server</strong> (パッケージ: servo_server)</dt><dd><p>ヘッドのサーボのコマンドを実行するservice server</p>
+</dd>
+<dt>・ <strong>m5_server</strong> (パッケージ: m5_server)</dt><dd><p>M5のコマンドを実行するservice server</p>
+</dd>
+</dl>
+</section>
+<section id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h2>サンプルの実行<a class="headerlink" href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">サーバ側のノードが起動したら、クライアントのサンプルで機能を確認できます。</div>
+</div>
+<section id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%81%AE%E5%88%B6%E5%BE%A1">
+<h3>サーボの制御<a class="headerlink" href="#%E3%82%B5%E3%83%BC%E3%83%9C%E3%81%AE%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h3>
+<p>1a. サーボ状態の取得</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">サーボの現在状態を取得し、表示するサンプルです。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example joint_state_subscriber
+</pre></div>
+</div>
+</div></blockquote>
+<p>1b.サーボの制御</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッドのサーボ制御を行うサンプルクライアントです。</div>
+<div class="line">実行すると、速度、加速度を変えながらサーボが動きます。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example servo_client
+</pre></div>
+</div>
+</div></blockquote>
+<p>1c. サーボの制御(action)</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッドのサーボ制御を行うサンプルのaction版です。</div>
+<div class="line">actionで実行すると、サーボの移動中に現在位置をフィードバックとして受け取ることができます。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example move_joints_action_client
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97">
+<h3>環境情報の取得<a class="headerlink" href="#%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97" title="この見出しへのパーマリンク"></a></h3>
+<p>2a. M5の情報取得</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">M5の現在状態を取得し、表示するサンプルです。</div>
+<div class="line">ボタン、GPIOの入出力、環境センサの入力(気温、気圧、明るさ)が取得できます。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example m5_subscriber
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="gpio%E5%87%BA%E5%8A%9B">
+<h3>GPIO出力<a class="headerlink" href="#gpio%E5%87%BA%E5%8A%9B" title="この見出しへのパーマリンク"></a></h3>
+<p>3a. GPIO出力</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ヘッドのGPIOの出力制御をするサンプルです。</div>
+<div class="line">各ステップごとにGPIOデジタル出力(dout0,dout1)とPWM出力(pwmout0)が変化します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example set_pinout
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1">
+<h3>ディスプレイ制御<a class="headerlink" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h3>
+<p>4a. ディスプレイ背景カラー出力</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ディスプレイ背景カラー変更のサンプルです。各ステップごとにM5の背景カラー変更を行います。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example display_color
+</pre></div>
+</div>
+</div></blockquote>
+<p>4b. ディスプレイテキスト出力</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ディスプレイテキスト出力のサンプルです。ステップごとにM5の画面にテキストを出力します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example display_text
+</pre></div>
+</div>
+</div></blockquote>
+<p>4c. ディスプレイ画像出力</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ディスプレイ画像出力のサンプルです。ステップごとにM5の画面の様々な位置にサイズを変えた画像を出力します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example display_image
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%88%B6%E5%BE%A1">
+<h3>その他の制御<a class="headerlink" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%88%B6%E5%BE%A1" title="この見出しへのパーマリンク"></a></h3>
+<p>5a.M5リセット</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">M5リセットのサンプルです。M5にリセット信号を送ります。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run akari_client_example reset_m5
+</pre></div>
+</div>
+</div></blockquote>
+<p><a class="reference internal" href="communications.html"><span class="doc">ソフトウェア仕様(ROS2版)</span></a> へ進む</p>
+<p><a class="reference internal" href="setup.html"><span class="doc">AKARIのROS2環境をセットアップしよう</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="AKARIのROS2環境をセットアップしよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="communications.html" class="btn btn-neutral float-right" title="ソフトウェア仕様(ROS2版)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

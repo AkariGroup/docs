@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>akari_client.grpc.joints_controller &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/_modules/akari_client/grpc/joints_controller.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">モジュールコード</a></li>
+      <li class="breadcrumb-item active">akari_client.grpc.joints_controller</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>akari_client.grpc.joints_controller のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">grpc</span>
+<span class="kn">from</span> <span class="nn">akari_proto</span> <span class="kn">import</span> <span class="n">joints_controller_pb2</span>
+<span class="kn">from</span> <span class="nn">akari_proto.grpc.error</span> <span class="kn">import</span> <span class="n">deserialize_error</span>
+<span class="kn">from</span> <span class="nn">akari_proto.joints_controller_pb2_grpc</span> <span class="kn">import</span> <span class="n">JointsControllerServiceStub</span>
+<span class="kn">from</span> <span class="nn">google.protobuf.empty_pb2</span> <span class="kn">import</span> <span class="n">Empty</span>
+
+<span class="kn">from</span> <span class="nn">..joint_controller</span> <span class="kn">import</span> <span class="n">PositionLimit</span><span class="p">,</span> <span class="n">RevoluteJointController</span>
+<span class="kn">from</span> <span class="nn">._error</span> <span class="kn">import</span> <span class="n">serializer</span>
+
+
+<span class="k">class</span> <span class="nc">_GrpcJointsController</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="n">grpc</span><span class="o">.</span><span class="n">Channel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stub</span> <span class="o">=</span> <span class="n">JointsControllerServiceStub</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stub</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JointsControllerServiceStub</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stub</span>
+
+    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_joint_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetJointNamesResponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stub</span><span class="o">.</span><span class="n">GetJointNames</span><span class="p">(</span>
+            <span class="n">Empty</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">joint_names</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="GrpcJointController"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController">[ドキュメント]</a><span class="k">class</span> <span class="nc">GrpcJointController</span><span class="p">(</span><span class="n">RevoluteJointController</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">_GrpcJointsController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joint_name</span> <span class="o">=</span> <span class="n">joint_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
+
+<div class="viewcode-block" id="GrpcJointController.get_position_limit"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_position_limit">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_position_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PositionLimit</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetPositionLimitResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetPositionLimit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">limit</span> <span class="o">=</span> <span class="n">PositionLimit</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">limit</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">joint_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joint_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">joint_specifier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">JointSpecifier</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">JointSpecifier</span><span class="p">(</span>
+            <span class="n">joint_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_joint_name</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="GrpcJointController.get_servo_enabled"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_servo_enabled">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_servo_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetServoEnabledResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetServoEnabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">enabled</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.set_servo_enabled"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.set_servo_enabled">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_servo_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">SetServoEnabledRequest</span><span class="p">(</span>
+            <span class="n">target_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="n">enabled</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">SetServoEnabled</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.set_profile_acceleration"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.set_profile_acceleration">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_profile_acceleration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad_per_sec2</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">SetProfileAccelerationRequest</span><span class="p">(</span>
+            <span class="n">target_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">,</span>
+            <span class="n">rad_per_sec2</span><span class="o">=</span><span class="n">rad_per_sec2</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">SetProfileAcceleration</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.get_profile_acceleration"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_profile_acceleration">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_profile_acceleration</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetProfileAccelerationResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetProfileAcceleration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">rad_per_sec2</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.set_profile_velocity"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.set_profile_velocity">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_profile_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad_per_sec</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">SetProfileVelocityRequest</span><span class="p">(</span>
+            <span class="n">target_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">,</span>
+            <span class="n">rad_per_sec</span><span class="o">=</span><span class="n">rad_per_sec</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">SetProfileVelocity</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.get_profile_velocity"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_profile_velocity">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_profile_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetProfileVelocityResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetProfileVelocity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">rad_per_sec</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.set_goal_position"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.set_goal_position">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_goal_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">SetGoalPositionRequest</span><span class="p">(</span>
+            <span class="n">target_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">,</span>
+            <span class="n">rad</span><span class="o">=</span><span class="n">rad</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">SetGoalPosition</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.get_present_position"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_present_position">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_present_position</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetPresentPositionResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetPresentPosition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">rad</span></div>
+
+<div class="viewcode-block" id="GrpcJointController.get_moving_state"><a class="viewcode-back" href="../../../source/sdk_reference/akari_client/low_level.html#akari_client.grpc.joints_controller.GrpcJointController.get_moving_state">[ドキュメント]</a>    <span class="nd">@deserialize_error</span><span class="p">(</span><span class="n">serializer</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_moving_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">:</span> <span class="n">joints_controller_pb2</span><span class="o">.</span><span class="n">GetMovingStateResponse</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stub</span><span class="o">.</span><span class="n">GetMovingState</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_specifier</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">moving</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

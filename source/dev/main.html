@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="オープンソースの小型卓上ロボット「AKARI」を使った開発コンテンツを紹介します。" name="description" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKARIを使った開発 &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/dev/main.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="オリジナルの物体認識を作ってみよう" href="custom_object_detection/main.html" />
+    <link rel="prev" title="ソフトウェア仕様(ROS2版)" href="../ros2/communications.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AKARIを使った開発</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/main.html">オリジナルの物体認識を作ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remote_api/main.html">外部PCからAKARIを制御しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">AKARIを使った開発</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/dev/main.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="akari%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%8B%E7%99%BA">
+<h1>AKARIを使った開発<a class="headerlink" href="#akari%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%96%8B%E7%99%BA" title="この見出しへのパーマリンク"></a></h1>
+<p>AKARIを使った開発コンテンツについて説明します。</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_object_detection/main.html">オリジナルの物体認識を作ってみよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/image_collection.html">1. 学習用のデータセットを作る</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/annotation.html">2. 画像のアノテーションをする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/training_local.html">3. 学習を行う(GPU搭載のPC上で行う場合)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/testing.html">4. 物体認識をテストする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_object_detection/test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remote_api/main.html">外部PCからAKARIを制御しよう</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="remote_api/main.html#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remote_api/main.html#%E5%AE%9F%E8%A1%8C%E6%96%B9%E6%B3%95">実行方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remote_api/main.html#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89">サンプルコード</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ros2/communications.html" class="btn btn-neutral float-left" title="ソフトウェア仕様(ROS2版)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="custom_object_detection/main.html" class="btn btn-neutral float-right" title="オリジナルの物体認識を作ってみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
