@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. 画像のアノテーションをする &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/dev/custom_object_detection/annotation.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="3. 学習を行う(Google Colab上で行う場合)" href="training.html" />
+    <link rel="prev" title="1. 学習用のデータセットを作る" href="image_collection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを使った開発</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">オリジナルの物体認識を作ってみよう</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image_collection.html">1. 学習用のデータセットを作る</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. 画像のアノテーションをする</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">アノテーションについて</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelimg%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">labelImgのセットアップ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B">アノテーションラベルを編集する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelimg%E3%81%A7%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%99%E3%82%8B">labelImgでアノテーションをする</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training_local.html">3. 学習を行う(GPU搭載のPC上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing.html">4. 物体認識をテストする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remote_api/main.html">外部PCからAKARIを制御しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを使った開発</a></li>
+          <li class="breadcrumb-item"><a href="main.html">オリジナルの物体認識を作ってみよう</a></li>
+      <li class="breadcrumb-item active">2. 画像のアノテーションをする</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/dev/custom_object_detection/annotation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="2.%20%E7%94%BB%E5%83%8F%E3%81%AE%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%99%E3%82%8B">
+<h1>2. 画像のアノテーションをする<a class="headerlink" href="#2.%20%E7%94%BB%E5%83%8F%E3%81%AE%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h1>
+<p>次に、収集した画像に学習用の教師ラベルをつける、アノテーションという作業をします。</p>
+<section id="%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
+<h2>アノテーションについて<a class="headerlink" href="#%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">学習を行うには、画像に学習のための情報を付与する必要があります。</div>
+<div class="line">画像のどこに何があるのか、を画像とセットで与えてあげることで、学習を行うことができるようになります。</div>
+<div class="line">この画像内の物体の位置、名前を付与する作業をアノテーションといいます。</div>
+<div class="line">アノテーションは:doc:<cite>image_collection</cite> で行ったように自動化する方法もありますが、基本的には手作業が必要となります。</div>
+</div>
+</section>
+<section id="labelimg%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h2>labelImgのセットアップ<a class="headerlink" href="#labelimg%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">アノテーションには専用のソフトを用います。ソフトは様々な種類がありますが、今回はlabelImgを用います。</div>
+<div class="line">下記コマンドでlabelImgをセットアップして起動します。</div>
+</div>
+<ol class="arabic simple">
+<li><p>labelImgをcloneする。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/heartexlabs/labelImg.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>仮想環境をセットアップする。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> labelImg
+python3 -m venv venv
+. venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>必要なライブラリをインストールする。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="nv">pyqt5</span><span class="o">==</span><span class="m">5</span>.15.2 lxml
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>labelImgをビルドする。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make qt5py3
+</pre></div>
+</div>
+</section>
+<section id="%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B">
+<h2>アノテーションラベルを編集する<a class="headerlink" href="#%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">まず、これから学習させたい物体のラベル名を編集します。</div>
+<div class="line"><cite>labelImg/data/predefined_classes.txt</cite> を開きます。</div>
+<div class="line">デフォルトのラベル名が記載されていますが、全て削除して自分が使いたいラベル名に変更します。</div>
+</div>
+<div class="line-block">
+<div class="line">例) &quot;pen&quot;, &quot;dog&quot;, &quot;phone&quot;を学習させたい場合</div>
+</div>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>pen
+dog
+phone
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">学習させたいラベルを全て記載したら保存します。</div>
+</div>
+</section>
+<section id="labelimg%E3%81%A7%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%99%E3%82%8B">
+<h2>labelImgでアノテーションをする<a class="headerlink" href="#labelimg%E3%81%A7%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">準備が完了したら、labelImgのディレクトリ直下で下記コマンドを実行し、labelImgを起動します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 labelImg.py
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">下記のウィンドウが開くので、「ディレクトリを開く」で <a class="reference internal" href="image_collection.html"><span class="doc">1. 学習用のデータセットを作る</span></a> で収集した画像のディレクトリを選択します。</div>
+<div class="line">先程の画像の一覧が読み込まれます。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/annotation_01.jpg"><img alt="../../../_images/annotation_01.jpg" src="../../../_images/annotation_01.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line">保存するデータのフォーマットを「YOLO」に変更します。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/annotation_02.jpg"><img alt="../../../_images/annotation_02.jpg" src="../../../_images/annotation_02.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line">「矩形を作成する」を選択し、画像内の認識させたい物体を囲むようにドラッグします。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/annotation_03.jpg"><img alt="../../../_images/annotation_03.jpg" src="../../../_images/annotation_03.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line">ドラッグすると、ラベル名をつけるウィンドウが表示されるので、1でディレクトリとファイルに付けたラベル名を設定します。(&quot;pen&quot;など)</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/annotation_04.jpg"><img alt="../../../_images/annotation_04.jpg" src="../../../_images/annotation_04.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line">「保存する」を押して、画像と同じ名前でアノテーションファイルを保存します。YOLOの場合は. <em>txt</em> 形式となります。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/annotation_05.jpg"><img alt="../../../_images/annotation_05.jpg" src="../../../_images/annotation_05.jpg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/annotation_06.jpg"><img alt="../../../_images/annotation_06.jpg" src="../../../_images/annotation_06.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line">「次の画像」を押して、次の画像についても同様に行っていきます。</div>
+</div>
+<div class="line-block">
+<div class="line">この作業をファイル全てに対して繰り返します。</div>
+<div class="line">ショートカットキーを使うことで作業を早く行うことができます。代表的なものとしては、</div>
+<div class="line">w: 矩形を作成する</div>
+<div class="line">d: 次の画像</div>
+<div class="line">s: 前の画像</div>
+<div class="line">Ctrl + s: 保存する</div>
+<div class="line">などがあります。その他のショートカットキーは、labelImgの「ヘルプ」→「ショートカット一覧を見る」から確認できます。</div>
+<div class="line"><br /></div>
+<div class="line">アノテーションは単純作業の繰り返しで枚数が多いほど大変ですが、ここの作業が後の学習の精度を左右します。頑張って全部の画像にアノテーションを行いましょう。</div>
+</div>
+<div class="line-block">
+<div class="line">次は学習のステップに進みます。</div>
+<div class="line">もしnvidia GPU搭載のLinux PCがない場合は、Google Colabを使ってクラウド上で学習する <a class="reference internal" href="training.html"><span class="doc">3. 学習を行う(Google Colab上で行う場合)</span></a> を実行してください。こちらはAKARIのブラウザ上でも実行可能です。</div>
+<div class="line">ただ、Google Colabは無料版ではアクセス数が一定以上になると処理が中断されるなど、安定して学習が行えない場合があります。ご注意ください。</div>
+<div class="line">nvidia GPU搭載のLinux PCを持っている場合は、PC上で学習する <a class="reference internal" href="training_local.html"><span class="doc">3. 学習を行う(GPU搭載のPC上で行う場合)</span></a> を実行した方が、学習が早く安定します。</div>
+</div>
+<p><a class="reference internal" href="training.html"><span class="doc">3. 学習を行う(Google Colab上で行う場合)</span></a> へ進む</p>
+<p><a class="reference internal" href="training_local.html"><span class="doc">3. 学習を行う(GPU搭載のPC上で行う場合)</span></a> へ進む</p>
+<p><a class="reference internal" href="image_collection.html"><span class="doc">1. 学習用のデータセットを作る</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="image_collection.html" class="btn btn-neutral float-left" title="1. 学習用のデータセットを作る" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="training.html" class="btn btn-neutral float-right" title="3. 学習を行う(Google Colab上で行う場合)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

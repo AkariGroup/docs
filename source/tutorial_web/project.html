@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プロジェクトを使ってみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/tutorial_web/project.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="AKARIチュートリアルを動かしてみよう" href="tutorial_project.html" />
+    <link rel="prev" title="サービスを使ってみよう" href="service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIをはじめよう(webコンソール編)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access.html">webコンソールを使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html">webコントローラを使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service.html">サービスを使ってみよう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">プロジェクトを使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">解説動画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">Projectsページの説明</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">プロジェクトについて</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A6%8B%E6%96%B9">プロジェクトページの見方</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">プロジェクトを作ってみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">プロジェクトを開いてみよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">gitレポジトリからプロジェクトを作ってみよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_project.html">AKARIチュートリアルを動かしてみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories_jupyter.html">その他のアプリも使ってみよう(JupyterNotebook版)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIをはじめよう(webコンソール編)</a></li>
+      <li class="breadcrumb-item active">プロジェクトを使ってみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/tutorial_web/project.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>プロジェクトを使ってみよう<a class="headerlink" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ここからは、webコンソールからプログラムを書いて、AKARIを動かす方法を学習していきます。</div>
+</div>
+<section id="%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB">
+<h2>解説動画<a class="headerlink" href="#%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">以降の解説を動画にしたものです。こちらもご参考ください。</div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/MUZq0NAw55s" style="border: 0; height: 345px; width: 560px">
+</iframe></div></section>
+<section id="projects%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E">
+<h2>Projectsページの説明<a class="headerlink" href="#projects%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%AA%AC%E6%98%8E" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">ここではProjectsページについて説明していきます。</div>
+</div>
+<section id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
+<h3>プロジェクトについて<a class="headerlink" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">プロジェクトは、ユーザが作成することができるAKARIのアプリに該当するものです。</div>
+<div class="line">各プロジェクトごとに、home直下の <cite>akari_projects</cite> ディレクトリに格納されています。</div>
+<div class="line">各プロジェクトは <cite>akari_manifest.yaml</cite> というファイルを持っており、ここにプロジェクトの基本情報が書かれています。</div>
+</div>
+</section>
+<section id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A6%8B%E6%96%B9">
+<h3>プロジェクトページの見方<a class="headerlink" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A6%8B%E6%96%B9" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">プロジェクトページの見方を説明します。</div>
+</div>
+<div class="line-block">
+<div class="line">カード表示</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/project_01.jpg"><img alt="../../_images/project_01.jpg" src="../../_images/project_01.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line">リスト表示</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/project_02.jpg"><img alt="../../_images/project_02.jpg" src="../../_images/project_02.jpg" style="width: 800px;" /></a>
+<p><strong>1. 更新ボタン</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">プロジェクト一覧の更新ができます。</div>
+</div>
+</div></blockquote>
+<p><strong>2. View切替ボタン</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ここでAKARIのプロジェクト一覧の表示形式をカード形式とリスト形式に切り替えできます。</div>
+</div>
+</div></blockquote>
+<p><strong>3. 新規プロジェクトボタン</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">新しいプロジェクトを作成できます。</div>
+</div>
+</div></blockquote>
+<p><strong>4. プロジェクト一覧</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">プロジェクトの一覧が表示されます。</div>
+<div class="line">プロジェクト名を選択すると、プロジェクトが開きます。</div>
+<div class="line">各プロジェクトには下記の項目があります。</div>
+<div class="line"><strong>・プロジェクト名</strong></div>
+<div class="line-block">
+<div class="line">プロジェクトの名前です。</div>
+</div>
+<div class="line"><strong>・作者名</strong></div>
+<div class="line-block">
+<div class="line">作者の名前です。</div>
+</div>
+<div class="line"><strong>・概要</strong></div>
+<div class="line-block">
+<div class="line">プロジェクトの概要です。</div>
+</div>
+<div class="line"><strong>・サービスボタン</strong></div>
+<div class="line-block">
+<div class="line">サービスページに飛びます。</div>
+</div>
+<div class="line"><strong>・削除ボタン</strong></div>
+<div class="line-block">
+<div class="line">プロジェクトを削除します。</div>
+</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>プロジェクトを作ってみよう<a class="headerlink" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">まずは、プロジェクトを作ってみましょう。</div>
+</div>
+<ol class="arabic simple">
+<li><p>Projectsページを開く。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">左のページリストから、Projectsを選択し、開きます。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_03.jpg"><img alt="../../_images/project_03.jpg" src="../../_images/project_03.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>新規プロジェクトボタンを押す。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">新規プロジェクトボタンを押し、新しいプロジェクトを作成します。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_04.jpg"><img alt="../../_images/project_04.jpg" src="../../_images/project_04.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>必要な項目を編集する。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">新たにプロジェクト作成用のページが開くので、必要な情報を編集してきます。</div>
+<div class="line">プロジェクトの作成方法には、 <strong>テンプレートから作成</strong> と <strong>GITレポジトリから作成</strong> があります。</div>
+<div class="line">今回は <strong>テンプレートから作成</strong> を選択し、下記情報を記入します。</div>
+</div>
+<div class="line-block">
+<div class="line">プロジェクト名: 好きな名前を入れます。</div>
+<div class="line">作者名: 任意で作者名を記載します。空欄でも問題ありません。</div>
+<div class="line">URL:Git公開機能が実装時には、このURLを使って公開しますが、現時点では未実装なので空欄にしてください。</div>
+<div class="line">テンプレート: プロジェクトのテンプレートスタイルです。今回はBASICを選択してください。</div>
+<div class="line">概要: 任意でプロジェクトの概要を入れます。空欄でも問題ありません。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_05.jpg"><img alt="../../_images/project_05.jpg" src="../../_images/project_05.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>作成ボタンを押す。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">プロジェクトの一覧に戻り、作成したプロジェクトが一覧に追加されます。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_06.jpg"><img alt="../../_images/project_06.jpg" src="../../_images/project_06.jpg" style="width: 800px;" /></a>
+</section>
+<section id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>プロジェクトを開いてみよう<a class="headerlink" href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E9%96%8B%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">次に、作成したプロジェクトを開いてみましょう。</div>
+<div class="line">ここでは、 <a class="reference internal" href="service.html"><span class="doc">サービスを使ってみよう</span></a> から <strong>JupyterLabのサービスをあらかじめ起動している前提</strong> で説明します。</div>
+</div>
+<ol class="arabic simple">
+<li><p>プロジェクト一覧からプロジェクト名を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/project_07.jpg"><img alt="../../_images/project_07.jpg" src="../../_images/project_07.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>プロジェクトページが開くので、右上の <cite>OPEN WITH SERVICE</cite> をクリックし、先程起動したサービスからプロジェクトの編集に使いたいものを選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/project_08.jpg"><img alt="../../_images/project_08.jpg" src="../../_images/project_08.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>サービスを使って、プロジェクトのページがポップアップします。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">このポップアップしたJupyterLab上で、プログラムを書いて実行することでAKARIを動かすことができます。</div>
+</div>
+</div></blockquote>
+</section>
+<section id="git%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h2>gitレポジトリからプロジェクトを作ってみよう<a class="headerlink" href="#git%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">次に、git上に公開されているAKARIのプロジェクトを使ってプロジェクトを作成してみましょう。</div>
+<div class="line">今回は、次ページ以降で使うakari_tutorialを例にして進めます。</div>
+</div>
+<div class="line-block">
+<div class="line">以降の解説を動画にしたものです。こちらもご参考ください。</div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/0OArOmmys1s" style="border: 0; height: 345px; width: 560px">
+</iframe></div><ol class="arabic simple">
+<li><p>Projectsページを開く。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">webコンソールに戻って、左のページリストからProjectsを選択し、開きます。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_03.jpg"><img alt="../../_images/project_03.jpg" src="../../_images/project_03.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>新規プロジェクトボタンを押す。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">新規プロジェクトボタンを押し、新しいプロジェクトを作成します。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_04.jpg"><img alt="../../_images/project_04.jpg" src="../../_images/project_04.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>「GITレポジトリから作成」を選択する。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">「GITレポジトリから作成」を選択し、タブを切り替えます。</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_09.jpg"><img alt="../../_images/project_09.jpg" src="../../_images/project_09.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>プロジェクトを作成する。</p></li>
+</ol>
+<blockquote>
+<div><div class="line-block">
+<div class="line">akarai_tutorialのcloneに必要な情報を入力し、作成ボタンを押します。</div>
+<div class="line">git URL: <a class="reference external" href="https://github.com/AkariGroup/akari_tutorial.git">https://github.com/AkariGroup/akari_tutorial.git</a></div>
+<div class="line">gitブランチ名: main</div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/project_10.jpg"><img alt="../../_images/project_10.jpg" src="../../_images/project_10.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>akari_tutorialというプロジェクトが作成されます。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">次に、今回作成したakari_tutorialを動かしてみましょう。</div>
+</div>
+<p><a class="reference internal" href="tutorial_project.html"><span class="doc">AKARIチュートリアルを動かしてみよう</span></a> へ進む</p>
+<p><a class="reference internal" href="service.html"><span class="doc">サービスを使ってみよう</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="service.html" class="btn btn-neutral float-left" title="サービスを使ってみよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial_project.html" class="btn btn-neutral float-right" title="AKARIチュートリアルを動かしてみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

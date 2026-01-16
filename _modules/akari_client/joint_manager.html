@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>akari_client.joint_manager &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/_modules/akari_client/joint_manager.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../source/intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">モジュールコード</a></li>
+      <li class="breadcrumb-item active">akari_client.joint_manager</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>akari_client.joint_manager のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">enum</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">TypeVar</span>
+
+<span class="kn">from</span> <span class="nn">.joint_controller</span> <span class="kn">import</span> <span class="n">PositionLimit</span><span class="p">,</span> <span class="n">RevoluteJointController</span>
+
+<span class="n">TValue</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;TValue&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">AkariJoint</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    AKARIの関節名の一覧。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">PAN</span> <span class="o">=</span> <span class="s2">&quot;pan&quot;</span>
+    <span class="n">TILT</span> <span class="o">=</span> <span class="s2">&quot;tilt&quot;</span>
+
+
+<div class="viewcode-block" id="JointManager"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager">[ドキュメント]</a><span class="k">class</span> <span class="nc">JointManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_controllers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RevoluteJointController</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Akariの関節制御コントローラ&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">RevoluteJointController</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joint_controllers</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="p">[</span><span class="n">j</span><span class="o">.</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">joint_controllers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">RevoluteJointController</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<div class="viewcode-block" id="JointManager.get_joint_names"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_joint_names">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_joint_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;関節名を取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            AKARIの全関節名のlist</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pan_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RevoluteJointController</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="p">[</span><span class="n">AkariJoint</span><span class="o">.</span><span class="n">PAN</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tilt_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RevoluteJointController</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="p">[</span><span class="n">AkariJoint</span><span class="o">.</span><span class="n">TILT</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_iter_joint_value_pairs</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">pan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TValue</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TValue</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">TValue</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">RevoluteJointController</span><span class="p">,</span> <span class="n">TValue</span><span class="p">]]:</span>
+        <span class="n">values</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">TValue</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">pan</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">values</span><span class="p">[</span><span class="n">AkariJoint</span><span class="o">.</span><span class="n">PAN</span><span class="p">]</span> <span class="o">=</span> <span class="n">pan</span>
+        <span class="k">if</span> <span class="n">tilt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">values</span><span class="p">[</span><span class="n">AkariJoint</span><span class="o">.</span><span class="n">TILT</span><span class="p">]</span> <span class="o">=</span> <span class="n">tilt</span>
+        <span class="n">values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">controller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="n">controller</span><span class="p">,</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="JointManager.get_joint_limits"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_joint_limits">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_joint_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PositionLimit</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの位置リミットを取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            関節名と位置リミット(min,max)[rad]のDict</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; print(joints.get_joint_limits())</span>
+<span class="sd">            # 各軸のリミット値が出力される</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PositionLimit</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">controller</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">get_position_limit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="JointManager.set_joint_accelerations"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.set_joint_accelerations">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">set_joint_accelerations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">pan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの目標加速度を設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pan: pan軸の加速度 [rad/s^2]</span>
+<span class="sd">            tilt: tilt軸の加速度 [rad/s^2]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.set_joint_accelerations(pan=10, tilt=8)</span>
+<span class="sd">            # pan軸の目標加速度が10rad/s^2, tilt軸の目標加速度が8rad/s^2</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_joint_value_pairs</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">tilt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_profile_acceleration</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.get_joint_accelerations"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_joint_accelerations">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_joint_accelerations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの目標加速度を取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            関節名と目標加速度[rad/s^2]のDict</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; print(joints.get_joint_accelerations())</span>
+<span class="sd">            # 各軸の目標加速度値が出力される</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">controller</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">get_profile_acceleration</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="JointManager.set_joint_velocities"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.set_joint_velocities">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">set_joint_velocities</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">pan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの目標速度を設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pan: pan軸の速度 [rad/s]</span>
+<span class="sd">            tilt: tilt軸の速度 [rad/s]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.set_joint_velocities(pan=10, tilt=8)</span>
+<span class="sd">            # pan軸の目標加速度が10rad/s, tilt軸の目標加速度が8rad/s</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_joint_value_pairs</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">tilt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_profile_velocity</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.get_joint_velocities"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_joint_velocities">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_joint_velocities</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの目標速度を取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            関節名と目標速度[rad/s]のDict</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; print(joints.get_joint_velocities())</span>
+<span class="sd">            # 各軸の目標速度値が出力される</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">controller</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">get_profile_velocity</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="JointManager.move_joint_positions"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.move_joint_positions">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">move_joint_positions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">pan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの目標角度を設定する。</span>
+<span class="sd">        ここで設定した値まで移動する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            sync: Trueにすると、サーボの移動が完了するまで関数の終了を待機する。デフォルト値はFalse。</span>
+<span class="sd">            pan: pan軸の目標角度 [rad]</span>
+<span class="sd">            tilt: tilt軸の目標角度 [rad]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.move_joint_positions(pan=0.4,tilt=-0.2)</span>
+<span class="sd">            # pan軸が0.4rad, tilt軸の目標加速度が-0.2radの位置へ移動</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_joint_value_pairs</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">tilt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_goal_position</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sync</span><span class="p">:</span>
+            <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">joint</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_joint_value_pairs</span><span class="p">(</span>
+                    <span class="n">pan</span><span class="p">,</span> <span class="n">tilt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+                <span class="p">):</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">joint</span><span class="o">.</span><span class="n">get_moving_state</span><span class="p">():</span>
+                        <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.get_joint_positions"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_joint_positions">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_joint_positions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの現在角度を取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            サーボ名と現在角度[rad]のdict</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; print(joints.get_joint_positions())</span>
+<span class="sd">            # 各軸の現在角度[rad]が出力される</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">controller</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">get_present_position</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="JointManager.set_servo_enabled"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.set_servo_enabled">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">set_servo_enabled</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">pan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;サーボの有効無効状態を設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pan: pan軸のサーボ有効無効の設定。``True`` であればサーボを有効にする。</span>
+<span class="sd">            tilt: tilt軸のサーボ有効無効の設定。``True`` であればサーボを有効にする。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.set_servo_enabled(pan=True,tilt=False)</span>
+<span class="sd">            # panのサーボを有効、tiltのサーボを無効に設定</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_joint_value_pairs</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">tilt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_servo_enabled</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.enable_all_servo"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.enable_all_servo">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">enable_all_servo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;全サーボを有効状態に設定する。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.enable_all_servo()</span>
+<span class="sd">            # pan、tiltのサーボ両方を有効に設定</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_servo_enabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.disable_all_servo"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.disable_all_servo">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">disable_all_servo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;全サーボを無効状態に設定する。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; joints.disable_all_servo()</span>
+<span class="sd">            # pan、tiltのサーボ両方を無効に設定</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">joint</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">set_servo_enabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JointManager.get_moving_state"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.joint_manager.JointManager.get_moving_state">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">get_moving_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;サーボが現在移動中かを取得する。</span>
+<span class="sd">            停止中ならTrue、移動中ならFalseを返す。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            サーボ名と現在状態のdict</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; akari = AkariClient()</span>
+<span class="sd">            &gt;&gt;&gt; joints = akari.joints</span>
+<span class="sd">            &gt;&gt;&gt; print(joints.get_moving_state())</span>
+<span class="sd">            # 各軸の現在状態が出力される</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">joint_name</span><span class="p">,</span> <span class="n">controller</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">ret</span><span class="p">[</span><span class="n">joint_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">get_moving_state</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">ret</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

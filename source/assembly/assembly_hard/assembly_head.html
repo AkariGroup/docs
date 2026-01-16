@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ヘッドを組み立てよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/assembly_hard/assembly_head.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="ボディーを組み立てよう" href="assembly_body.html" />
+    <link rel="prev" title="基板に部品を実装しよう" href="assembly_pcb.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ヘッドを組み立てよう</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E9%83%A8%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6">1 モーター部の組み立て</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2%20oak-d%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">2 OAK-Dのヘッドへの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3%20dynamixel%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">3 Dynamixelのヘッドへの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4%20%E7%A3%81%E7%9F%B3%E3%81%AE%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91">4 磁石の貼り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#5%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%90%AD%E8%BC%89">5 リボンケーブルの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6%20usb%E3%83%91%E3%83%8D%E3%83%AB%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">6 USBパネルマウントの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#7%20oak-d%20lite%E3%81%AEusb%E6%8E%A5%E7%B6%9A">7 OAK-D LiteのUSB接続</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_base.html">ベースを組み立てよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">ヘッドを組み立てよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/assembly_hard/assembly_head.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%98%E3%83%83%E3%83%89%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86">
+<h1>ヘッドを組み立てよう<a class="headerlink" href="#%E3%83%98%E3%83%83%E3%83%89%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">いよいよ組み立てを始めます。</div>
+<div class="line">ここでは、ヘッド部分を組み立てます。</div>
+</div>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">
+<h2>必要な道具<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">- 精密ドライバ(＋)</div>
+<div class="line">- No.2サイズのドライバ(＋)</div>
+<div class="line">- はさみ</div>
+</div>
+</section>
+<section id="1%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E9%83%A8%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6">
+<h2>1 モーター部の組み立て<a class="headerlink" href="#1%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E9%83%A8%E3%81%AE%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81">
+<h3>必要な部品<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(25) Dynamixel 2XL430-W250-T 1個</div>
+<div class="line">(26) HN11-I101  1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head01-01.jpg"><img alt="../../../_images/head01-01.jpg" src="../../../_images/head01-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="%E6%89%8B%E9%A0%86">
+<h3>手順<a class="headerlink" href="#%E6%89%8B%E9%A0%86" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head01-ex.gif"><img alt="../../../_images/head01-ex.gif" src="../../../_images/head01-ex.gif" style="width: 400px;" /></a>
+<p>1. <cite>(25) Dynamixel 2XL430-W250-T</cite> のID(B)ポートに付属のケーブルを接続する。
+| ケーブルはどちらの端をはめても違いはない。</p>
+<a class="reference internal image-reference" href="../../../_images/head01-02.jpg"><img alt="../../../_images/head01-02.jpg" src="../../../_images/head01-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(26) HN11-I101</cite> の大きいリングを載せる。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head01-03.jpg"><img alt="../../../_images/head01-03.jpg" src="../../../_images/head01-03.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head01-04.jpg"><img alt="../../../_images/head01-04.jpg" src="../../../_images/head01-04.jpg" style="height: 230px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(26) HN11-I101</cite> の留め具を載せる。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head01-05.jpg"><img alt="../../../_images/head01-05.jpg" src="../../../_images/head01-05.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head01-06.jpg"><img alt="../../../_images/head01-06.jpg" src="../../../_images/head01-06.jpg" style="height: 230px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p><cite>(26) HN11-I101</cite> 付属のネジ(銀)で留める。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head01-07.jpg"><img alt="../../../_images/head01-07.jpg" src="../../../_images/head01-07.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="2%20oak-d%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>2 OAK-Dのヘッドへの搭載<a class="headerlink" href="#2%20oak-d%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id1">
+<h3>必要な部品<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(2) AKARI Head 1個</div>
+<div class="line">(22) OAK-D Lite  1個</div>
+<div class="line">(37) ボルトM4-5  2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head02-01.jpg"><img alt="../../../_images/head02-01.jpg" src="../../../_images/head02-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id2">
+<h3>手順<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head02-ex.gif"><img alt="../../../_images/head02-ex.gif" src="../../../_images/head02-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(22) OAK-D Lite</cite> のUSBポートが <cite>(2) AKARI Head</cite> の下向きになるように、表から挿入する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head02-02.jpg"><img alt="../../../_images/head02-02.jpg" src="../../../_images/head02-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>裏面から <cite>(37) ボルトM4-5</cite> で2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head02-03.jpg"><img alt="../../../_images/head02-03.jpg" src="../../../_images/head02-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="3%20dynamixel%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>3 Dynamixelのヘッドへの搭載<a class="headerlink" href="#3%20dynamixel%E3%81%AE%E3%83%98%E3%83%83%E3%83%89%E3%81%B8%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id3">
+<h3>必要な部品<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(25) Dynamixel 2XL430-W250-T(1で組み立て済みのもの) 1個</div>
+<div class="line">(25) Dynamixel 2XL430-W250-T付属のネジ(黒) 6個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head03-01.jpg"><img alt="../../../_images/head03-01.jpg" src="../../../_images/head03-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id4">
+<h3>手順<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head03-ex.gif"><img alt="../../../_images/head03-ex.gif" src="../../../_images/head03-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(25) Dynamixel 2XL430-W250-T</cite> を&quot;dynamixelA&quot;の表示が下向きになるようにヘッドにモータを挿入する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head03-02.jpg"><img alt="../../../_images/head03-02.jpg" src="../../../_images/head03-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head03-03.jpg"><img alt="../../../_images/head03-03.jpg" src="../../../_images/head03-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>ヘッドの左側面とDynamixelを <cite>(25) Dynamixel 2XL430-W250-T</cite> 付属のネジ(黒)で3点ねじ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head03-04.jpg"><img alt="../../../_images/head03-04.jpg" src="../../../_images/head03-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>ヘッドの右側面とDynamixelを <cite>(25) Dynamixel 2XL430-W250-T</cite> 付属のネジ(黒)で3点ねじ留めする。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>モータがヘッドに対して水平な状態で固定すること！</strong></div>
+<div class="line"><strong>締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head03-05.jpg"><img alt="../../../_images/head03-05.jpg" src="../../../_images/head03-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="4%20%E7%A3%81%E7%9F%B3%E3%81%AE%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>4 磁石の貼り付け<a class="headerlink" href="#4%20%E7%A3%81%E7%9F%B3%E3%81%AE%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id5">
+<h3>必要な部品<a class="headerlink" href="#id5" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(40) 磁石角型20x10x3 2個</div>
+<div class="line">(41) テープ 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head04-01.jpg"><img alt="../../../_images/head04-01.jpg" src="../../../_images/head04-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id6">
+<h3>手順<a class="headerlink" href="#id6" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head04-ex.gif"><img alt="../../../_images/head04-ex.gif" src="../../../_images/head04-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(41) テープ</cite> を <cite>(40) 磁石角型20x10x3</cite> 2個に貼って、サイズに合わせてはさみで切る。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>2つの磁石の極性を合わせること！</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head04-02.jpg"><img alt="../../../_images/head04-02.jpg" src="../../../_images/head04-02.jpg" style="height: 220px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head04-03.jpg"><img alt="../../../_images/head04-03.jpg" src="../../../_images/head04-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>テープを剥がし、ヘッド上部のくぼみに貼りつける。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head04-04.jpg"><img alt="../../../_images/head04-04.jpg" src="../../../_images/head04-04.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="5%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>5 リボンケーブルの搭載<a class="headerlink" href="#5%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id7">
+<h3>必要な部品<a class="headerlink" href="#id7" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(18) 2x10(20P)両端コネクタ付IDCリボンケーブル 1個</div>
+<div class="line">(38) タッピングビスM2.5-6 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head05-01.jpg"><img alt="../../../_images/head05-01.jpg" src="../../../_images/head05-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id8">
+<h3>手順<a class="headerlink" href="#id8" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head05-ex.gif"><img alt="../../../_images/head05-ex.gif" src="../../../_images/head05-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(18)2x10(20P)両端コネクタ付IDCリボンケーブル</cite> をヘッドの裏からはめ込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">写真と同じ向きになるように取り付ける。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head05-02.jpg"><img alt="../../../_images/head05-02.jpg" src="../../../_images/head05-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head05-03.jpg"><img alt="../../../_images/head05-03.jpg" src="../../../_images/head05-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(38) タッピングビスM2.5-6</cite> でリボンケーブルの左右側面から2点ビス留めする。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>タッピングビスは、少し時計回りに進めてから一度反時計回りに戻す、を繰り返しながら、少しずつ締めていくこと。</strong></div>
+<div class="line"><strong>無理に進めようとするとヘッドが割れます！</strong></div>
+<div class="line"><strong>リボンケーブルがついていない状態で先にタッピングビスを締め、貫通させてから少し緩め、リボンケーブルをはめてビスを締める方がやりやすいです。</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head05-04.jpg"><img alt="../../../_images/head05-04.jpg" src="../../../_images/head05-04.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head05-05.jpg"><img alt="../../../_images/head05-05.jpg" src="../../../_images/head05-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="6%20usb%E3%83%91%E3%83%8D%E3%83%AB%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>6 USBパネルマウントの搭載<a class="headerlink" href="#6%20usb%E3%83%91%E3%83%8D%E3%83%AB%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id9">
+<h3>必要な部品<a class="headerlink" href="#id9" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(31) パネルマウントUSB3.0ケーブル 30cm 左角度 1個</div>
+<div class="line">(36) ボルトM3-6 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head06-01.jpg"><img alt="../../../_images/head06-01.jpg" src="../../../_images/head06-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id10">
+<h3>手順<a class="headerlink" href="#id10" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/head06-ex.gif"><img alt="../../../_images/head06-ex.gif" src="../../../_images/head06-ex.gif" style="width: 400px;" /></a>
+<p>1. ヘッド内部に裏から <cite>(31) パネルマウントUSB3.0ケーブル 30cm 左角度</cite> を通す。
+| 端子内の青い板部がヘッドの外側にくるように取り付ける。</p>
+<a class="reference internal image-reference" href="../../../_images/head06-02.jpg"><img alt="../../../_images/head06-02.jpg" src="../../../_images/head06-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(31) パネルマウントUSB3.0ケーブル 30cm 左角度</cite> に <cite>(36) ボルトM3-6</cite> で表側から2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head06-03.jpg"><img alt="../../../_images/head06-03.jpg" src="../../../_images/head06-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="7%20oak-d%20lite%E3%81%AEusb%E6%8E%A5%E7%B6%9A">
+<h2>7 OAK-D LiteのUSB接続<a class="headerlink" href="#7%20oak-d%20lite%E3%81%AEusb%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id11">
+<h3>必要な部品<a class="headerlink" href="#id11" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(33) USB Type-Cケーブル 0.5mL字 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head07-01.jpg"><img alt="../../../_images/head07-01.jpg" src="../../../_images/head07-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id12">
+<h3>手順<a class="headerlink" href="#id12" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ヘッド内部に裏から <cite>(33) USB Type-Cケーブル 0.5mL字</cite> を入れ、ヘッド正面に出す。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">通りにくい場合は、サーボの角度を変えると隙間ができる。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head07-02.jpg"><img alt="../../../_images/head07-02.jpg" src="../../../_images/head07-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>OAK-D LiteのUSBポートにUSBケーブルを接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head07-03.jpg"><img alt="../../../_images/head07-03.jpg" src="../../../_images/head07-03.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">以上でヘッドの組み立ては終わりです。</div>
+<div class="line">次はボディー部の組み立てを行います。</div>
+</div>
+<p><a class="reference internal" href="assembly_body.html"><span class="doc">ボディーを組み立てよう</span></a> へ進む</p>
+<p><a class="reference internal" href="assembly_pcb.html"><span class="doc">基板に部品を実装しよう</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="assembly_pcb.html" class="btn btn-neutral float-left" title="基板に部品を実装しよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assembly_body.html" class="btn btn-neutral float-right" title="ボディーを組み立てよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

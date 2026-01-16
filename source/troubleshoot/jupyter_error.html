@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webコンソールからのJupyter Notebookの起動に失敗するときは &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/troubleshoot/jupyter_error.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ソフトのアップデート" href="../update/main.html" />
+    <link rel="prev" title="AKARI APIの実行に失敗するときは" href="restart_rpc_server.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">困ったときは</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="refresh_m5.html">M5の画面を初期状態に戻したいときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restart_m5.html">M5と通信できないときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fix_m5.html">M5が起動しない時は</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reset_servo.html">ヘッドの向きを初期位置に戻したいときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restart_akira.html">webコンソールに繋がらないときは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restart_rpc_server.html">AKARI APIの実行に失敗するときは</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">webコンソールからのJupyter Notebookの起動に失敗するときは</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E5%86%8D%E8%B5%B7%E5%8B%95">再起動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jupyter%20service%E3%81%AEstatus%E3%81%AE%E7%A2%BA%E8%AA%8D">Jupyter serviceのSTATUSの確認</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jupyter%20service%E3%81%AEvenv%E3%81%AE%E5%89%8A%E9%99%A4">Jupyter serviceのvenvの削除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">困ったときは</a></li>
+      <li class="breadcrumb-item active">webコンソールからのJupyter Notebookの起動に失敗するときは</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/troubleshoot/jupyter_error.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEjupyter%20notebook%E3%81%AE%E8%B5%B7%E5%8B%95%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AF">
+<h1>webコンソールからのJupyter Notebookの起動に失敗するときは<a class="headerlink" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEjupyter%20notebook%E3%81%AE%E8%B5%B7%E5%8B%95%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AF" title="この見出しへのパーマリンク"></a></h1>
+<p>webコンソールからJupyter Notebookの起動に失敗する時は、下記の手順を実行してみてください。</p>
+<section id="%E5%86%8D%E8%B5%B7%E5%8B%95">
+<h2>再起動<a class="headerlink" href="#%E5%86%8D%E8%B5%B7%E5%8B%95" title="この見出しへのパーマリンク"></a></h2>
+<p>下記の順番で再起動を試してみてください。</p>
+<ol class="arabic simple">
+<li><p>ブラウザのタブを閉じて、再度Jupyter Notebookのserviceをprojectから開く。</p></li>
+<li><p>1.で解決しない時は、ServicesのページからJupyter LabのServiceを再起動して再度試す。</p></li>
+<li><p>2.で解決しない時は、AKARI本体を再起動する。</p></li>
+</ol>
+</section>
+<section id="jupyter%20service%E3%81%AEstatus%E3%81%AE%E7%A2%BA%E8%AA%8D">
+<h2>Jupyter serviceのSTATUSの確認<a class="headerlink" href="#jupyter%20service%E3%81%AEstatus%E3%81%AE%E7%A2%BA%E8%AA%8D" title="この見出しへのパーマリンク"></a></h2>
+<p>ここまでで解決しない時は、下記コマンドを実行してakarirobot/akira-service-jupyter&#64;v1のSTATUSを確認してください。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker ps -a
+</pre></div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/jupyter_status.png"><img alt="../../_images/jupyter_status.png" src="../../_images/jupyter_status.png" style="width: 900px;" /></a>
+<div class="line-block">
+<div class="line">STATUSが&quot;Up&quot;だった場合は、他のブラウザを試すか、ブラウザのキャッシュを削除してみてください。</div>
+<div class="line">STATUSが&quot;Exited&quot;だった場合は、次に説明する方法でJupyterのvenvを削除します。</div>
+</div>
+</section>
+<section id="jupyter%20service%E3%81%AEvenv%E3%81%AE%E5%89%8A%E9%99%A4">
+<h2>Jupyter serviceのvenvの削除<a class="headerlink" href="#jupyter%20service%E3%81%AEvenv%E3%81%AE%E5%89%8A%E9%99%A4" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic">
+<li><p>下記コマンドを実行します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /var/lib/akira
+sudo nautilus .
+</pre></div>
+</div>
+</li>
+<li><p>エクスプローラが開くので、右上の3本線が並んでいるオプションを開き、「隠しファイルの表示を有効にする」にチェックを入れます。</p></li>
+<li><p>表示されている文字列の羅列のディレクトリの中身を一つ一つ確認し、&quot;.jupyter&quot; というディレクトリが含まれるものを探します。</p></li>
+<li><p>&quot;.jupyter&quot; というディレクトリが含まれる場所を見つけたら、 <strong>同じディレクトリ内にある&quot;.venv&quot;というディレクトリを削除します。</strong></p></li>
+<li><p>エクスプローラを閉じ、AKARI本体を再起動します。</p></li>
+<li><p>Jupyterのサービスを再度立ち上げ、正しく起動するか確認します。</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="restart_rpc_server.html" class="btn btn-neutral float-left" title="AKARI APIの実行に失敗するときは" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../update/main.html" class="btn btn-neutral float-right" title="ソフトのアップデート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

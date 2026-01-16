@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. 学習用のデータセットを作る &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/dev/custom_object_detection/image_collection.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2. 画像のアノテーションをする" href="annotation.html" />
+    <link rel="prev" title="0. 事前準備をする" href="preparation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを使った開発</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">オリジナルの物体認識を作ってみよう</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 学習用のデータセットを作る</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データセットについて</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1-1.%20akari_dataset_creator%E3%81%AEclone">1-1. akari_dataset_creatorのClone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1-2.%20%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20venv%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">1-2. (初回のみ) venvのセットアップ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1-3.%20%E7%94%BB%E5%83%8F%E3%82%92%E5%8F%8E%E9%9B%86%E3%81%99%E3%82%8B">1-3. 画像を収集する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1-4.%20%E7%94%BB%E5%83%8F%E3%81%AE%E5%90%8D%E5%89%8D%E3%80%81%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%BD%A2%E5%BC%8F%E3%81%AA%E3%81%A9%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82">1-4. 画像の名前、ファイル形式などを整理する。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1-5.%20%E7%94%BB%E5%83%8F%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82">1-5. 画像ディレクトリを整理する。</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html">2. 画像のアノテーションをする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training_local.html">3. 学習を行う(GPU搭載のPC上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing.html">4. 物体認識をテストする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remote_api/main.html">外部PCからAKARIを制御しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを使った開発</a></li>
+          <li class="breadcrumb-item"><a href="main.html">オリジナルの物体認識を作ってみよう</a></li>
+      <li class="breadcrumb-item active">1. 学習用のデータセットを作る</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/dev/custom_object_detection/image_collection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="1.%20%E5%AD%A6%E7%BF%92%E7%94%A8%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B">
+<h1>1. 学習用のデータセットを作る<a class="headerlink" href="#1.%20%E5%AD%A6%E7%BF%92%E7%94%A8%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B" title="この見出しへのパーマリンク"></a></h1>
+<p>まずは学習用の画像を収集し、データセットを作成します。</p>
+<section id="%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
+<h2>データセットについて<a class="headerlink" href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">物体認識を行うには、認識させたい物体の画像を大量に収集し、それを学習させる工程が必要です。</div>
+<div class="line">認識させる物体の種類の数だけ画像を収集する必要がありますし、同じ物体の画像が多ければ多いほど(基本的には)認識精度が向上します。</div>
+<div class="line">ただし、画像が多いほど、アノテーション(次章)が大変になりますし、学習に時間がかかるようになります。最低でも1種類につき100枚程度はあると良いでしょう。</div>
+<div class="line">今回は、データセットを作成する方法として、画像を撮影する方法とGoogle画像検索から自動収集する方法を紹介します。</div>
+<div class="line">もちろん、手元に画像が揃っていれば、それを使っても構わないです。</div>
+</div>
+</section>
+<section id="1-1.%20akari_dataset_creator%E3%81%AEclone">
+<h2>1-1. akari_dataset_creatorのClone<a class="headerlink" href="#1-1.%20akari_dataset_creator%E3%81%AEclone" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">akari_dataset_creatorをgitからcloneします。</div>
+<div class="line"><strong>webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！</strong></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/AkariGroup/akari_dataset_creator.git
+</pre></div>
+</div>
+</section>
+<section id="1-2.%20%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20venv%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h2>1-2. (初回のみ) venvのセットアップ<a class="headerlink" href="#1-2.%20%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20venv%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">仮想実行環境をセットアップします。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_dataset_creator
+python -m venv venv
+<span class="nb">source</span> venv/bin/activate
+pip install -r requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="1-3.%20%E7%94%BB%E5%83%8F%E3%82%92%E5%8F%8E%E9%9B%86%E3%81%99%E3%82%8B">
+<h2>1-3. 画像を収集する<a class="headerlink" href="#1-3.%20%E7%94%BB%E5%83%8F%E3%82%92%E5%8F%8E%E9%9B%86%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E7%94%BB%E5%83%8F%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%99%E3%82%8B">
+<h3>画像を撮影する<a class="headerlink" href="#%E7%94%BB%E5%83%8F%E3%82%92%E6%92%AE%E5%BD%B1%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">venvを有効化していなければ下記を実行します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">AKARIで画像を撮影しながらデータセットを作っていきます。</div>
+<div class="line"><a class="reference internal" href="preparation.html"><span class="doc">0. 事前準備をする</span></a> でcloneしたakari_dataset_creatorへ移動し、画像撮影用アプリケーションを起動します。</div>
+<div class="line">この際、-nオプションで認識したい物体名を指定します。撮影した画像はここで付けた名前と共に連番が振られます。</div>
+<div class="line">例) ペンの画像を撮影するため、&quot;pen&quot;という名前をつける場合</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 imageset_creator.py -n pen
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">実行すると現在のカメラ映像を写すウィンドウが起動します。</div>
+<div class="line">このウインドウ上でキーボードの'c'を押すと、その度に画像を撮影していきます。</div>
+<div class="line">'pen'の例の場合は、'pen'というディレクトリが作られ、その中に'pen_001.jpg','pen_002.jpg'...という画像が保存されていきます。</div>
+<div class="line">映像ウインドウ上でキーボードの'q'を押すと終了します。</div>
+</div>
+<div class="line-block">
+<div class="line">また、'-a'オプションと共にfpsの数値を指定すると、1秒間に指定した数値の枚数を自動で撮影するモードを使用することができます。</div>
+<div class="line">例) &quot;dog&quot;という名前で1秒あたり2枚の画像を自動撮影する場合</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 imageset_creator.py -n pen -a <span class="m">2</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">この場合も映像ウインドウ上でキーボードの'q'を押すと終了します。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">より良いデータセットを作るためには、物体の向きや種類を変えながら、なるべく色々なパターンの画像を撮りましょう。</div>
+<div class="line">ペンの例で言うと、ある1種類のペンを認識したいならそのペンだけを、色々なペンを同じペンとして認識させたいのであれば、なるべく多くの種類のペンの画像を撮ることが大事です。</div>
+</div>
+</div>
+</section>
+<section id="google%E7%94%BB%E5%83%8F%E6%A4%9C%E7%B4%A2%E3%81%8B%E3%82%89%E7%94%BB%E5%83%8F%E3%82%92%E8%87%AA%E5%8B%95%E5%8F%8E%E9%9B%86%E3%81%99%E3%82%8B">
+<h3>Google画像検索から画像を自動収集する<a class="headerlink" href="#google%E7%94%BB%E5%83%8F%E6%A4%9C%E7%B4%A2%E3%81%8B%E3%82%89%E7%94%BB%E5%83%8F%E3%82%92%E8%87%AA%E5%8B%95%E5%8F%8E%E9%9B%86%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">汎用的なものの画像であれば、Google画像検索から自動収集する方法が使えます。</div>
+<div class="line">下記の手順でを行います。</div>
+</div>
+<ol class="arabic simple">
+<li><p>google image downloadのレポジトリをgit cloneします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/janvdp/google-images-download.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>ライブラリのインストールを行います。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> google-images-download
+pip install <span class="nv">selenium</span><span class="o">==</span><span class="m">4</span>.0.0
+python3 setup.py install --user
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>google chromeをインストールします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google.list&#39;</span>
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub <span class="p">|</span> sudo apt-key add -
+sudo apt update
+sudo apt install google-chrome-stable
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>先程インストールしたchromeのバージョンを確認します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt list <span class="p">|</span> grep google-chrome-stable
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>choromeのバージョンと同じバージョンのchromedriverを下記リンク先からダウンロードします。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://googlechromelabs.github.io/chrome-for-testing/#stable">https://googlechromelabs.github.io/chrome-for-testing/#stable</a></div>
+<div class="line">versionの同じchromedriverのlinux64版のリンクをコピーし、下記のコマンドでダウンロードします。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget <span class="s2">&quot;コピーしたchromedriverのリンク&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>ダウンロードしたzipファイルを展開し、中に含まれる <em>chromedriver</em> ファイルを任意の場所に移動します。</p></li>
+<li><p>cdコマンドで画像収集したいディレクトリに移動し、googleimagesdownloadを実行します。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><em>-l</em> オプションで枚数、 <em>-k</em> オプションで検索ワード、 <em>-f</em> オプションで拡張子、 <em>-cd</em> オプションで4.でダウンロードしたchromedriverまでのパスを指定します。</div>
+<div class="line">例) 120枚の犬の画像をjpg形式で収集する場合。(chromedriverをhome直下に保存している場合)</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>googleimagesdownload -l <span class="m">120</span> -k <span class="s1">&#39;ペン&#39;</span> -f jpg --chromedriver ~/chromedriver
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>画像収集が実行され、実行したディレクトリに <em>downloads</em> ディレクトリが作られ、その中に画像が収集されます。</p></li>
+</ol>
+<p>画像検索結果なので、全然違うものなど認識の学習に適さない画像も混ざっています。必ず中身をチェックして、不要なものは削除しましょう。</p>
+</section>
+</section>
+<section id="1-4.%20%E7%94%BB%E5%83%8F%E3%81%AE%E5%90%8D%E5%89%8D%E3%80%81%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%BD%A2%E5%BC%8F%E3%81%AA%E3%81%A9%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82">
+<h2>1-4. 画像の名前、ファイル形式などを整理する。<a class="headerlink" href="#1-4.%20%E7%94%BB%E5%83%8F%E3%81%AE%E5%90%8D%E5%89%8D%E3%80%81%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%BD%A2%E5%BC%8F%E3%81%AA%E3%81%A9%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">手元にある画像やGoogle検索などで集めた画像の場合、名前や拡張子がバラバラで扱いづらいです。</div>
+<div class="line">特に今回のプロセスでは、画像を.jpgに統一する必要があります。</div>
+<div class="line">ここでは、自動整理ソフトを使って、ディレクトリ内の画像を一括で連番、jpg変換を行います。</div>
+</div>
+<ol class="arabic simple">
+<li><p>同じ種類のタグを付けたい画像を、一つのディレクトリ内にまとめます。</p></li>
+<li><p>akari_object_detection/1_image_collectionへ移動し、image_converter.pyを実行します。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><em>-d</em> オプションで変換したい画像が保存されているディレクトリのパス、 <em>-n</em> オプションでタグ名を指定します。</div>
+<div class="line">例) <em>~/image/pen</em> ディレクトリに保存されているペンの画像に'pen'というタグ名を付けたい場合</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 image_converter.py -d ~/image/pen -n pen
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>画像形式が自動で.jpgに変換され、&quot;タグ名_000.jpg&quot;,&quot;タグ名_001.jpg&quot;...と連番にリネームされます。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">画像形式変換可能な形式は、 <em>.png</em> と <em>.gif</em> です。 <em>.jpeg</em> や <em>.JPG</em> も.jpgに変換されます。</div>
+</div>
+</section>
+<section id="1-5.%20%E7%94%BB%E5%83%8F%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82">
+<h2>1-5. 画像ディレクトリを整理する。<a class="headerlink" href="#1-5.%20%E7%94%BB%E5%83%8F%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E3%80%82" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">学習させるための各画像のディレクトリは、下図のように整理しておきます。</div>
+<div class="line">imagesの下にtrain,testというディレクトリを作成し、trainの下に各画像をラベルごとにディレクトリ分けし、testの下にはtrainからラベルごとに数枚ずつ、画像を移動しておきます。</div>
+<div class="line">移動する画像はどれでもいいですが、通し番号の最後のものを移動するのが分かりやすいと思います。</div>
+<div class="line">testの下はラベルごとにディレクトリ分けする必要はありません。</div>
+<div class="line">例) pen,book,phoneの3種類を学習させたい場合</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/train_directory_01.jpg"><img alt="../../../_images/train_directory_01.jpg" src="../../../_images/train_directory_01.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">画像が揃ったら、次は学習用のラベル付けをする、 <strong>アノテーション</strong> という工程に進みます。</div>
+</div>
+<p><a class="reference internal" href="annotation.html"><span class="doc">2. 画像のアノテーションをする</span></a> へ進む</p>
+<p><a class="reference internal" href="preparation.html"><span class="doc">0. 事前準備をする</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="preparation.html" class="btn btn-neutral float-left" title="0. 事前準備をする" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="annotation.html" class="btn btn-neutral float-right" title="2. 画像のアノテーションをする" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

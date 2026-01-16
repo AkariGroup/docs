@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ボディーを組み立てよう(AKARI Light) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly_light/assembly_hard/assembly_body.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="ヘッドを組み立てよう(AKARI Light)" href="assembly_head.html" />
+    <link rel="prev" title="基板に部品を実装しよう(AKARI Light)" href="assembly_pcb.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARI Lightを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう(AKARI light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_raspi_os.html">RaspberryPi OS(bookworm)のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう(AKARI Light)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ボディーを組み立てよう(AKARI Light)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">1 サーボモータの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A">2 サーボモータケーブルの配線</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">3 リボンケーブルの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">4 (オプション) 温湿度気圧センサユニットの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#5%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">5 (オプション) 光センサユニットの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6%20%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E9%85%8D%E7%B7%9A">6 ボディー部サーボモータの配線</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#7%20oak-d%E7%94%A8usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A">7 OAK-D用USBケーブルの配線</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#8%20raspberry%20pi%E3%81%AE%E6%BA%96%E5%82%99">8 Raspberry Piの準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#9%20raspberry%20pi%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">9 Raspberry Piの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#10%20m5stack%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">10 M5stackの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#11%20base%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">11 Baseの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#12%20cover%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">12 Coverの取り付け</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう(AKARI Light)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て(AKARI Light)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARI Lightを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">ボディーを組み立てよう(AKARI Light)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly_light/assembly_hard/assembly_body.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86%28akari%20light%29">
+<h1>ボディーを組み立てよう(AKARI Light)<a class="headerlink" href="#%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86%28akari%20light%29" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">まずはボディー部分を組み立てます。</div>
+</div>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">
+<h2>必要な道具<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">- 精密ドライバ(＋)</div>
+<div class="line">- No.2サイズのドライバ(＋)</div>
+</div>
+</section>
+<section id="1%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>1 サーボモータの取り付け<a class="headerlink" href="#1%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81">
+<h3>必要な部品<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(15) AKARI Light Body 1個</div>
+<div class="line">(20) STS3215 1個</div>
+<div class="line">(20) STS3215付属のタッピングビス 4個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body01-011.jpg"><img alt="../../../_images/body01-011.jpg" src="../../../_images/body01-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="%E6%89%8B%E9%A0%86">
+<h3>手順<a class="headerlink" href="#%E6%89%8B%E9%A0%86" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> を <cite>(15) AKARI Light Body</cite> 内部の溝に入れ、STS3215付属のタッピングビスで外側上部から4点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body01-021.jpg"><img alt="../../../_images/body01-021.jpg" src="../../../_images/body01-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body01-031.jpg"><img alt="../../../_images/body01-031.jpg" src="../../../_images/body01-031.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="2%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A">
+<h2>2 サーボモータケーブルの配線<a class="headerlink" href="#2%20%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id1">
+<h3>必要な部品<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(1) M5stack基板(Light用) ( <a class="reference internal" href="assembly_pcb.html"><span class="doc">基板に部品を実装しよう(AKARI Light)</span></a> で組み立て済みのもの) 1個</div>
+<div class="line">(20) STS3215付属のケーブル 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body02-011.jpg"><img alt="../../../_images/body02-011.jpg" src="../../../_images/body02-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id2">
+<h3>手順<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> 付属のケーブルを <cite>(1) M5stack基板(Light用)</cite> のJ6に接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body02-021.jpg"><img alt="../../../_images/body02-021.jpg" src="../../../_images/body02-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>1.のケーブルを  <cite>(15) AKARI Light Body</cite> の前面から中に通し、先程取り付けた <cite>(20) STS3215</cite> に接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body02-031.jpg"><img alt="../../../_images/body02-031.jpg" src="../../../_images/body02-031.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body02-041.jpg"><img alt="../../../_images/body02-041.jpg" src="../../../_images/body02-041.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="3%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>3 リボンケーブルの取り付け<a class="headerlink" href="#3%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id3">
+<h3>必要な部品<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(24) 2x5両端コネクター付IDCリボンケーブル 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body03-011.jpg"><img alt="../../../_images/body03-011.jpg" src="../../../_images/body03-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id4">
+<h3>手順<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(24) 2x5両端コネクター付IDCリボンケーブル</cite> を <cite>(1) M5stack基板(Light用)</cite> のJ7に接続する。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>向きに注意！ケーブルが基板内側を向くようにすること</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body03-021.jpg"><img alt="../../../_images/body03-021.jpg" src="../../../_images/body03-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(24) 2x5両端コネクター付IDCリボンケーブル</cite> を  <cite>(15) AKARI Light Body</cite> の前面から中に通し、背面の穴を通して、上に引き出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body03-031.jpg"><img alt="../../../_images/body03-031.jpg" src="../../../_images/body03-031.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="4%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>4 (オプション) 温湿度気圧センサユニットの搭載<a class="headerlink" href="#4%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>温湿度気圧センサユニットを使用しない場合はこの工程は不要です。</strong></p>
+<section id="id5">
+<h3>必要な部品<a class="headerlink" href="#id5" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(29) 温湿度気圧センサユニット ENVIV 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body04-011.jpg"><img alt="../../../_images/body04-011.jpg" src="../../../_images/body04-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id6">
+<h3>手順<a class="headerlink" href="#id6" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(29) 温湿度気圧センサユニット ENVIV</cite> 付属のケーブルを <cite>(29) 温湿度気圧センサユニット ENVIV</cite> のコネクタに接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body04-021.jpg"><img alt="../../../_images/body04-021.jpg" src="../../../_images/body04-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>1.のケーブルを <cite>(15) AKARI Light Body</cite> 背面の右側の穴から中に通し、 <cite>(29) 温湿度気圧センサユニット ENVIV</cite> を背面の凸部に差し込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>ENVIVのラベルがボディーの内向きになるようにすること</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body04-031.jpg"><img alt="../../../_images/body04-031.jpg" src="../../../_images/body04-031.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>2.のケーブルを <cite>(1) M5stack基板(Light用)</cite> のJ5に接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body04-04.jpg"><img alt="../../../_images/body04-04.jpg" src="../../../_images/body04-04.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="5%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>5 (オプション) 光センサユニットの搭載<a class="headerlink" href="#5%20%28%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%29%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>光センサユニットを使用しない場合はこの工程は不要です。</strong></p>
+<section id="id7">
+<h3>必要な部品<a class="headerlink" href="#id7" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(30) 光センサユニット 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body05-011.jpg"><img alt="../../../_images/body05-011.jpg" src="../../../_images/body05-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id8">
+<h3>手順<a class="headerlink" href="#id8" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(30) 光センサユニット</cite> 付属のケーブルを  <cite>(30) 光センサユニット</cite> のコネクタに取り付ける。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body05-021.jpg"><img alt="../../../_images/body05-021.jpg" src="../../../_images/body05-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>1.のケーブルを <cite>(15) AKARI Light Body</cite> 背面の左側の穴から中に通し、 <cite>(30) 光センサユニット</cite> を背面の凸部に差し込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>光センサのラベルがボディーの内向きになるようにすること</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body05-031.jpg"><img alt="../../../_images/body05-031.jpg" src="../../../_images/body05-031.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><ol class="arabic simple" start="2">
+<li><p>のケーブルを <cite>(1) M5stack基板(Light用)</cite> のJ4に接続する。</p></li>
+</ol>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body05-041.jpg"><img alt="../../../_images/body05-041.jpg" src="../../../_images/body05-041.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="6%20%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E9%85%8D%E7%B7%9A">
+<h2>6 ボディー部サーボモータの配線<a class="headerlink" href="#6%20%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF%E3%81%AE%E9%85%8D%E7%B7%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id9">
+<h3>必要な部品<a class="headerlink" href="#id9" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(20) STS3215 に付属のケーブル 1個
+※ 2個目のSTS3215のものを使用</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body06-011.jpg"><img alt="../../../_images/body06-011.jpg" src="../../../_images/body06-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id10">
+<h3>手順<a class="headerlink" href="#id10" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> に付属のケーブルを、1. の <cite>(20) STS3215</cite> の空いているポートに接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-021.jpg"><img alt="../../../_images/body06-021.jpg" src="../../../_images/body06-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>ケーブルの反対側を、 <cite>(15) AKARI Light Body</cite> 背面の穴から上部へ引き出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-031.jpg"><img alt="../../../_images/body06-031.jpg" src="../../../_images/body06-031.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="7%20oak-d%E7%94%A8usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A">
+<h2>7 OAK-D用USBケーブルの配線<a class="headerlink" href="#7%20oak-d%E7%94%A8usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E7%B7%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id11">
+<h3>必要な部品<a class="headerlink" href="#id11" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(26) USB Type-Cケーブル 0.5mL字 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body07-011.jpg"><img alt="../../../_images/body07-011.jpg" src="../../../_images/body07-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id12">
+<h3>手順<a class="headerlink" href="#id12" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(26) USB Type-Cケーブル 0.5mL字</cite> のtype-A側を <cite>(15) AKARI Light Body</cite> の上面から、背面穴に通して内部から下方向に引き出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body07-021.jpg"><img alt="../../../_images/body07-021.jpg" src="../../../_images/body07-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body07-031.jpg"><img alt="../../../_images/body07-031.jpg" src="../../../_images/body07-031.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="8%20raspberry%20pi%E3%81%AE%E6%BA%96%E5%82%99">
+<h2>8 Raspberry Piの準備<a class="headerlink" href="#8%20raspberry%20pi%E3%81%AE%E6%BA%96%E5%82%99" title="この見出しへのパーマリンク"></a></h2>
+<section id="id13">
+<h3>必要な部品<a class="headerlink" href="#id13" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(18) Raspberry Pi5 8GB 1個</div>
+<div class="line">(22) Raspberry Pi5用アクティブクーラー 1個</div>
+<div class="line">(27) MicroSDカード(RaspberryPi用) (:doc:<a href="#id14"><span class="problematic" id="id15">`</span></a>setup_raspi_os`でセットアップ済みのもの) 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body08-011.jpg"><img alt="../../../_images/body08-011.jpg" src="../../../_images/body08-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id16">
+<h3>手順<a class="headerlink" href="#id16" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(27) MicroSDカード(RaspberryPi用)</cite> を <cite>(18) Raspberry Pi5 8GB</cite> に挿入する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-021.jpg"><img alt="../../../_images/body08-021.jpg" src="../../../_images/body08-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(22) Raspberry Pi5用アクティブクーラー</cite> の裏のシートを剥がす。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-03.jpg"><img alt="../../../_images/body08-03.jpg" src="../../../_images/body08-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(22) Raspberry Pi5用アクティブクーラー</cite> を <cite>(18) Raspberry Pi5 8GB</cite> に載せ、2箇所のピンを押して差し込み固定する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-04.jpg"><img alt="../../../_images/body08-04.jpg" src="../../../_images/body08-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p><cite>(18) Raspberry Pi5 8GB`の FANコネクタのキャップを外し、 `(22) Raspberry Pi5用アクティブクーラー</cite> のコネクタを差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-05.jpg"><img alt="../../../_images/body08-05.jpg" src="../../../_images/body08-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="9%20raspberry%20pi%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>9 Raspberry Piの取り付け<a class="headerlink" href="#9%20raspberry%20pi%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id17">
+<h3>必要な部品<a class="headerlink" href="#id17" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(19) M5stack BASIC付属のUSBケーブル 1個</div>
+<div class="line">(20) STS3215付属のタッピングビス 4個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body09-011.jpg"><img alt="../../../_images/body09-011.jpg" src="../../../_images/body09-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id18">
+<h3>手順<a class="headerlink" href="#id18" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>7 OAK-D用USBケーブルの配線で接続したUSBケーブルをBody右側面の穴から外に出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-021.jpg"><img alt="../../../_images/body09-021.jpg" src="../../../_images/body09-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(19) M5stack BASIC</cite> 付属のUSBケーブルを、同じくBody右側面の穴から外に出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-031.jpg"><img alt="../../../_images/body09-031.jpg" src="../../../_images/body09-031.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(18) Raspberry Pi5 8GB</cite> を本体内部下側からM5Stack基板のピンソケットに接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-041.jpg"><img alt="../../../_images/body09-041.jpg" src="../../../_images/body09-041.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p><cite>(20) STS3215</cite> に付属のタッピングビスを使って <cite>(18) Raspberry Pi5 8GB</cite> を <cite>(15) AKARI Light Body</cite> に4点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-05.jpg"><img alt="../../../_images/body09-05.jpg" src="../../../_images/body09-05.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p><cite>(19) M5stack BASIC</cite> 付属のUSBケーブルのtype-C側を <cite>(18) Raspberry Pi5 8GB</cite> のUSBポートとBodyの隙間から内部に差し入れ、前面開口部から外に出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-06.jpg"><img alt="../../../_images/body09-06.jpg" src="../../../_images/body09-06.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body09-07.jpg"><img alt="../../../_images/body09-07.jpg" src="../../../_images/body09-07.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p><cite>(18) Raspberry Pi5 8GB</cite> のUSB3.0ポートに、7 OAK-D用USBケーブルの配線で接続したUSBケーブルを接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-08.jpg"><img alt="../../../_images/body09-08.jpg" src="../../../_images/body09-08.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p><cite>(18) Raspberry Pi5 8GB</cite> のUSB2.0ポートに <cite>(19) M5stack BASIC</cite> 付属のUSBケーブルを接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-09.jpg"><img alt="../../../_images/body09-09.jpg" src="../../../_images/body09-09.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="10%20m5stack%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>10 M5stackの取り付け<a class="headerlink" href="#10%20m5stack%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id19">
+<h3>必要な部品<a class="headerlink" href="#id19" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(19) M5stack BASIC 1個</div>
+<div class="line">(20) STS3215付属のタッピングビス 2個</div>
+<div class="line">(28) MicroSDカード(M5Stack用) ※必要ファイル書き込み済みのもの 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body10-011.jpg"><img alt="../../../_images/body10-011.jpg" src="../../../_images/body10-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id20">
+<h3>手順<a class="headerlink" href="#id20" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> に付属のタッピングビスを使って <cite>(1) M5stack基板(Light用)</cite> を <cite>(15) AKARI Light Body</cite> に2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body10-021.jpg"><img alt="../../../_images/body10-021.jpg" src="../../../_images/body10-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(19) M5Stack BASIC</cite> の背面を外す。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>外れにくい場合は、マイナスドライバーをM5Stack側面の溝に差し込んで開く。</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body10-03.jpg"><img alt="../../../_images/body10-03.jpg" src="../../../_images/body10-03.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body10-04.jpg"><img alt="../../../_images/body10-04.jpg" src="../../../_images/body10-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(28) MicroSDカード(M5Stack用)</cite> を <cite>(19) M5Stack BASIC</cite> に挿入する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body10-05.jpg"><img alt="../../../_images/body10-05.jpg" src="../../../_images/body10-05.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>8 Raspberry Piの取り付けの手順2.で接続したUSBケーブルを、 <cite>(19) M5stack BASIC</cite> に接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body10-06.jpg"><img alt="../../../_images/body10-06.jpg" src="../../../_images/body10-06.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p><cite>(19) M5Stack BASIC</cite> の前面を、ボディーに取り付けたM5stack基板に表から差し込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>ディスプレイ中央部分に強い力をかけないこと。ディスプレイが割れる場合があります！</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body10-07.jpg"><img alt="../../../_images/body10-07.jpg" src="../../../_images/body10-07.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="11%20base%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>11 Baseの取り付け<a class="headerlink" href="#11%20base%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id21">
+<h3>必要な部品<a class="headerlink" href="#id21" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(17) AKARI Light Base 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body11-011.jpg"><img alt="../../../_images/body11-011.jpg" src="../../../_images/body11-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id22">
+<h3>手順<a class="headerlink" href="#id22" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(17) AKARI Light Base</cite> を <cite>(15) AKARI Light Body</cite> の下部にはめ込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body11-021.jpg"><img alt="../../../_images/body11-021.jpg" src="../../../_images/body11-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body11-03.jpg"><img alt="../../../_images/body11-03.jpg" src="../../../_images/body11-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="12%20cover%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>12 Coverの取り付け<a class="headerlink" href="#12%20cover%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id23">
+<h3>必要な部品<a class="headerlink" href="#id23" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(16) AKARI Light Cover 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body12-011.jpg"><img alt="../../../_images/body12-011.jpg" src="../../../_images/body12-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id24">
+<h3>手順<a class="headerlink" href="#id24" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(16) AKARI Light Cover</cite> を <cite>(15) AKARI Light Body</cite> の前面に取り付ける。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body12-021.jpg"><img alt="../../../_images/body12-021.jpg" src="../../../_images/body12-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body12-031.jpg"><img alt="../../../_images/body12-031.jpg" src="../../../_images/body12-031.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">以上でボディーの組み立ては終わりです。</div>
+<div class="line">次はヘッド部の組み立てを行います。</div>
+</div>
+<p><a class="reference internal" href="assembly_head.html"><span class="doc">ヘッドを組み立てよう(AKARI Light)</span></a> へ進む</p>
+<p><a class="reference internal" href="assembly_pcb.html"><span class="doc">基板に部品を実装しよう(AKARI Light)</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="assembly_pcb.html" class="btn btn-neutral float-left" title="基板に部品を実装しよう(AKARI Light)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assembly_head.html" class="btn btn-neutral float-right" title="ヘッドを組み立てよう(AKARI Light)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

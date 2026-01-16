@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ヘッドカメラをwebカメラとして使ってみよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/tutorial/test_uvc_camera.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="認識機能を試してみよう" href="test_detection.html" />
+    <link rel="prev" title="サンプルアプリを動かそう" href="test_sample_app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIをはじめよう(Ubuntu編)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test_sample_app.html">サンプルアプリを動かそう</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ヘッドカメラをwebカメラとして使ってみよう</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#depthai_uvc%E3%81%AE%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E4%BD%9C%E6%88%90">depthai_uvcの仮想環境の作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uvc%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C">UVCアプリの実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#%E6%98%A0%E5%83%8F%E3%81%AE%E7%A2%BA%E8%AA%8D">映像の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="test_detection.html">認識機能を試してみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories.html">その他のアプリも使ってみよう</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_repositories.html#%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6%20%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E9%83%A8%20%E7%9F%A5%E7%9A%84%E5%88%B6%E5%BE%A1%E7%A0%94%E7%A9%B6%E5%AE%A4%E9%96%8B%E7%99%BA%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">愛知工業大学 情報科学部 知的制御研究室開発のアプリケーション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+      <li class="breadcrumb-item active">ヘッドカメラをwebカメラとして使ってみよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/tutorial/test_uvc_camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%98%E3%83%83%E3%83%89%E3%82%AB%E3%83%A1%E3%83%A9%E3%82%92web%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%A8%E3%81%97%E3%81%A6%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">
+<h1>ヘッドカメラをwebカメラとして使ってみよう<a class="headerlink" href="#%E3%83%98%E3%83%83%E3%83%89%E3%82%AB%E3%83%A1%E3%83%A9%E3%82%92web%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%A8%E3%81%97%E3%81%A6%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<p>AKARIのヘッドカメラとして採用しているOAK-D Liteは、通常のwebカメラとは使い方が異なりますが、通常のカメラのように <strong>UVC</strong> 規格でのストリーミングを行うこともできます。</p>
+<p>UVCとはUSB Video Classの略で、主にUSBカメラの通信方法に関する規格です。</p>
+<p>これを行うには、UVCに偽装するためのアプリを立ち上げる必要があります。</p>
+<section id="depthai_uvc%E3%81%AE%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E4%BD%9C%E6%88%90">
+<h2>depthai_uvcの仮想環境の作成<a class="headerlink" href="#depthai_uvc%E3%81%AE%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%81%AE%E4%BD%9C%E6%88%90" title="この見出しへのパーマリンク"></a></h2>
+<p>depthai_uvcは独自に仮想環境の作成が必要です。</p>
+<ol class="arabic simple">
+<li><p>UVCアプリの保存先のディレクトリへ移動する。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/samples/depthai_uvc
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>仮想環境を作成する。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv venv
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>仮想環境を有効化する。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>requirements.txtを使って必要なライブラリをインストールする。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="uvc%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h2>UVCアプリの実行<a class="headerlink" href="#uvc%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h2>
+<p>UVCアプリを立ち上げます。depthai_uvcでは、RGBとステレオdepthの2つをストリーミングすることができます。</p>
+<p>RGBの場合は下記を実行します。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 depthai_uvc_rgb.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>ステレオdepthの場合は下記を実行します。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 depthai_uvc_depth.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>このアプリを起動している間は、OAK-D Liteの映像が <cite>/dev/video20</cite> に割り当てられ、ストリーミングされます。</p>
+<p>コマンドライン上でCtrl+Cを押すと終了します。</p>
+</section>
+<section id="%E6%98%A0%E5%83%8F%E3%81%AE%E7%A2%BA%E8%AA%8D">
+<h2>映像の確認<a class="headerlink" href="#%E6%98%A0%E5%83%8F%E3%81%AE%E7%A2%BA%E8%AA%8D" title="この見出しへのパーマリンク"></a></h2>
+<p>サンプルアプリを使って、UVCアプリからの映像を確かめてみましょう。</p>
+<p>depthai_uvcを起動したまま、新しいターミナルを立ち上げ、 <cite>uvc_streamer.py</cite> を実行します。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/akari_software/samples/depthai_uvc
+<span class="nb">source</span> venv/bin/activate
+python3 uvc_streamer.py
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">映像をストリーミングするウインドウが起動し、OAK-Dの映像が確認できるようになったと思います。</div>
+<div class="line">ウィンドウを選択して、キーボードの'q'キーを押すことで終了することができます。</div>
+<div class="line">このように、depthai_uvcを起動しておくことで、一般的なwebカメラの映像を用いるアプリやプログラムでもOAK-D Liteの映像を使うことができます。</div>
+</div>
+<p><a class="reference internal" href="app_repositories.html"><span class="doc">その他のアプリも使ってみよう</span></a> へ進む</p>
+<p><a class="reference internal" href="test_detection.html"><span class="doc">認識機能を試してみよう</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test_sample_app.html" class="btn btn-neutral float-left" title="サンプルアプリを動かそう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="test_detection.html" class="btn btn-neutral float-right" title="認識機能を試してみよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

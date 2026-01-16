@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ヘッドを組み立てよう(AKARI Light) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly_light/assembly_hard/assembly_head.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="テストユニットの組み立て(AKARI Light)" href="../assembly_test_unit/main.html" />
+    <link rel="prev" title="ボディーを組み立てよう(AKARI Light)" href="assembly_body.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARI Lightを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう(AKARI light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_raspi_os.html">RaspberryPi OS(bookworm)のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう(AKARI Light)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ヘッドを組み立てよう(AKARI Light)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1%20arm%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">1 Armの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">2 モーターの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3%20%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">3 ヘッドの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">4 リボンケーブルの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#5%20%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">5 カメラの取り付け</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て(AKARI Light)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARI Lightを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">ヘッドを組み立てよう(AKARI Light)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly_light/assembly_hard/assembly_head.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%98%E3%83%83%E3%83%89%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86%28akari%20light%29">
+<h1>ヘッドを組み立てよう(AKARI Light)<a class="headerlink" href="#%E3%83%98%E3%83%83%E3%83%89%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86%28akari%20light%29" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">次に、ヘッド部分を組み立てます。</div>
+</div>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">
+<h2>必要な道具<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">- 精密ドライバ(＋)</div>
+<div class="line">- No.2サイズのドライバ(＋)</div>
+</div>
+</section>
+<section id="1%20arm%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>1 Armの取り付け<a class="headerlink" href="#1%20arm%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81">
+<h3>必要な部品<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="assembly_body.html"><span class="doc">ボディーを組み立てよう(AKARI Light)</span></a> で組み立てたボディー 1個</div>
+<div class="line">(14) AKARI Light Arm 1個</div>
+<div class="line">(20) STS3215 に付属のサーボホーン 1個</div>
+<div class="line">(20) STS3215付属のM3ネジ 5個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head01-011.jpg"><img alt="../../../_images/head01-011.jpg" src="../../../_images/head01-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="%E6%89%8B%E9%A0%86">
+<h3>手順<a class="headerlink" href="#%E6%89%8B%E9%A0%86" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> に付属のサーボホーンを取り付け、付属のM3ネジでネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head01-021.jpg"><img alt="../../../_images/head01-021.jpg" src="../../../_images/head01-021.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><strong>締結穴がずれるとモータの初期位置とヘッドの初期位置がずれます！</strong></div>
+<div class="line"><strong>取り付け後も極力回転させないようにすること</strong></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><cite>(14) AKARI Light Arm</cite> をBodyに取り付けた <cite>(20) STS3215</cite> に、付属のM3ネジでネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head01-031.jpg"><img alt="../../../_images/head01-031.jpg" src="../../../_images/head01-031.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head01-041.jpg"><img alt="../../../_images/head01-041.jpg" src="../../../_images/head01-041.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="2%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>2 モーターの取り付け<a class="headerlink" href="#2%20%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id1">
+<h3>必要な部品<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(20) STS3215  1個</div>
+<div class="line">(20) STS3215付属のサーボホーン(軸用) 1個</div>
+<div class="line">(20) STS3215付属のサーボホーン(受け用) 1個</div>
+<div class="line">(20) STS3215付属のM3ねじ 9個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head02-011.jpg"><img alt="../../../_images/head02-011.jpg" src="../../../_images/head02-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id2">
+<h3>手順<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(20) STS3215</cite> の軸に、付属のサーボホーン(軸用)を取り付ける。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head02-021.jpg"><img alt="../../../_images/head02-021.jpg" src="../../../_images/head02-021.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(20) STS3215</cite> の軸の反対側に、付属のサーボホーン(受け用)を取り付ける。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head02-031.jpg"><img alt="../../../_images/head02-031.jpg" src="../../../_images/head02-031.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(20) STS3215</cite> に取り付けたサーボホーン(軸用)が、本体を背面から見た時に右側に来るようにし、ボディーに取り付けたアームに付属のM3ネジで5点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head02-04.jpg"><img alt="../../../_images/head02-04.jpg" src="../../../_images/head02-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>反対側のサーボホーン(受け用)を、付属のM3ネジで4点ネジ留めする。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>ボディーからのケーブルは、まだコネクタに接続しないこと！モータのセットアップ作業の途中で接続します。</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head02-05.jpg"><img alt="../../../_images/head02-05.jpg" src="../../../_images/head02-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="3%20%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>3 ヘッドの取り付け<a class="headerlink" href="#3%20%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id3">
+<h3>必要な部品<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(13) AKARI Light Head 1個</div>
+<div class="line">(20) STS3215に付属のタッピングビス 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head03-011.jpg"><img alt="../../../_images/head03-011.jpg" src="../../../_images/head03-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id4">
+<h3>手順<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(13) AKARI Light Head`を、ボディーに取り付けた `(20) STS3215</cite> の上に載せ、左右両側面からSTS3215のネジ穴に <cite>(20) STS3215</cite> に付属のタッピングビスで2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head03-021.jpg"><img alt="../../../_images/head03-021.jpg" src="../../../_images/head03-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head03-031.jpg"><img alt="../../../_images/head03-031.jpg" src="../../../_images/head03-031.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="4%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>4 リボンケーブルの取り付け<a class="headerlink" href="#4%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id5">
+<h3>必要な部品<a class="headerlink" href="#id5" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(20) STS3215に付属のタッピングビス 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head04-011.jpg"><img alt="../../../_images/head04-011.jpg" src="../../../_images/head04-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id6">
+<h3>手順<a class="headerlink" href="#id6" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ボディー上端から出ているリボンケーブルをヘッドの後部に接続し、(20) STS3215に付属のタッピングビスでヘッドの両端から2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head04-021.jpg"><img alt="../../../_images/head04-021.jpg" src="../../../_images/head04-021.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="5%20%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>5 カメラの取り付け<a class="headerlink" href="#5%20%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id7">
+<h3>必要な部品<a class="headerlink" href="#id7" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(21) OAK-D Lite 1個</div>
+<div class="line">(25) ボルトM4-5 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/head05-011.jpg"><img alt="../../../_images/head05-011.jpg" src="../../../_images/head05-011.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id8">
+<h3>手順<a class="headerlink" href="#id8" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ボディー上端から出ているUSBケーブルを、ヘッドの左後部から前方に差し入れ、 <cite>(21) OAK-D Lite</cite> に接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head05-021.jpg"><img alt="../../../_images/head05-021.jpg" src="../../../_images/head05-021.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/head05-031.jpg"><img alt="../../../_images/head05-031.jpg" src="../../../_images/head05-031.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(21) OAK-D Lite</cite> をヘッドの前面に載せ、裏側から`(25) ボルトM4-5` で2点ネジ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/head05-041.jpg"><img alt="../../../_images/head05-041.jpg" src="../../../_images/head05-041.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">以上でAKARI Light本体の組み立ては完了です。</div>
+<div class="line">次はソフトのセットアップに進みます。</div>
+</div>
+<p><a class="reference internal" href="../setup_soft/main.html"><span class="doc">AKARIのセットアップ</span></a> へ進む</p>
+<p><a class="reference internal" href="assembly_body.html"><span class="doc">ボディーを組み立てよう(AKARI Light)</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="assembly_body.html" class="btn btn-neutral float-left" title="ボディーを組み立てよう(AKARI Light)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../assembly_test_unit/main.html" class="btn btn-neutral float-right" title="テストユニットの組み立て(AKARI Light)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="オープンソースの小型卓上ロボット「AKARI」の概要を紹介します。" name="description" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>はじめに &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/intro.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="AKARIの特徴" href="overview/main.html" />
+    <link rel="prev" title="Welcome to AKARI manual!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">はじめに</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#akari%E3%81%A8%E3%81%AF">AKARIとは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#akari%E3%81%A8akari%20light">AKARIとAKARI Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#akari%E3%81%AE%E6%83%85%E5%A0%B1%E5%85%83">AKARIの情報元</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#%E6%9C%AC%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AE%E6%A7%8B%E6%88%90">本マニュアルの構成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">はじめに</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/intro.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">
+<h1>はじめに<a class="headerlink" href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" title="この見出しへのパーマリンク"></a></h1>
+<section id="akari%E3%81%A8%E3%81%AF">
+<h2>AKARIとは<a class="headerlink" href="#akari%E3%81%A8%E3%81%AF" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">AKARIは、 <strong>「誰もがロボット作りを身近に！」</strong> を目指して開発した小型卓上ロボットです。</div>
+<div class="line">私たちは <strong>多くの人がロボットを自分で組み立てたり、ロボットプログラミングを自分で行いながら楽しく身の回りの課題を解決できる社会</strong> を目指しています。</div>
+<div class="line">AKARIはその実現の助けとなるような、組み立てやすく、開発にも使いやすいロボットを目指して開発しています。</div>
+<div class="line">さらに、AKARIを多くの方に使ってもらえるように、 <strong>ハード、ソフト共にオープンソース化</strong> しました。</div>
+<div class="line">また、本マニュアルには組み立て方や使い方、ハードやソフトの仕様などを公開しています。</div>
+<div class="line"><strong>このページを見ていただき、興味を持ったらぜひ一度AKARIを作って、使ってみてください！</strong></div>
+</div>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/hufXSDTFMVo" style="border: 0; height: 345px; width: 560px">
+</iframe></div></section>
+<section id="akari%E3%81%A8akari%20light">
+<h2>AKARIとAKARI Light<a class="headerlink" href="#akari%E3%81%A8akari%20light" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">AKARIのハードウェアには、2種類のバージョンが存在します。</div>
+<div class="line">・AKARI</div>
+<div class="line-block">
+<div class="line">通常のバージョン。Intel CPUの載ったシングルボードコンピュータを使い性能や汎用性に優れる。</div>
+</div>
+<div class="line">・AKARI Light</div>
+<div class="line-block">
+<div class="line">ライトユーザー向けのバージョン。Raspberry PiをCPUとして採用し、サーボも安価なものを採用することで、性能はやや落ちるがAKARIの半額程度の初期費用で組み立てられる。組み立てもAKARIより簡単。ソフトはAKARIと共通のものが動作する。</div>
+</div>
+<div class="line">用途に合わせてお好きな方を作って、使ってみてください。</div>
+</div>
+<a class="reference internal image-reference" href="../_images/akari_and_akari_light.jpg"><img alt="../_images/akari_and_akari_light.jpg" src="../_images/akari_and_akari_light.jpg" style="width: 500px;" /></a>
+</section>
+<section id="akari%E3%81%AE%E6%83%85%E5%A0%B1%E5%85%83">
+<h2>AKARIの情報元<a class="headerlink" href="#akari%E3%81%AE%E6%83%85%E5%A0%B1%E5%85%83" title="この見出しへのパーマリンク"></a></h2>
+<ul>
+<li><p>基本マニュアル（本ページ）</p>
+<blockquote>
+<div><p>AKARIのハード、ソフト仕様や組み立て方、開発での使い方、チュートリアルなど基本となる情報しています。</p>
+</div></blockquote>
+</li>
+<li><p>gitレポジトリ</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">AKARIのハード、ソフトはgit上に公開されています。</div>
+<div class="line">github Group: <a class="reference external" href="https://github.com/AkariGroup">https://github.com/AkariGroup</a></div>
+</div>
+<p>代表的なレポジトリは下記となります。</p>
+<ul class="simple">
+<li><p>ベースソフト： <a class="reference external" href="https://github.com/AkariGroup/akari_software">https://github.com/AkariGroup/akari_software</a></p></li>
+<li><p>M5Stackのベースソフト: <a class="reference external" href="https://github.com/AkariGroup/akari_m5_software">https://github.com/AkariGroup/akari_m5_software</a></p></li>
+<li><p>ハードウェアの情報: <a class="reference external" href="https://github.com/AkariGroup/akari_hardware">https://github.com/AkariGroup/akari_hardware</a></p></li>
+<li><p>本マニュアルのソース: <a class="reference external" href="https://github.com/AkariGroup/docs">https://github.com/AkariGroup/docs</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>X(Twitter)</dt><dd><div class="line-block">
+<div class="line">最新の開発情報が配信されています。</div>
+<div class="line"><a class="reference external" href="https://twitter.com/akariRobot">https://twitter.com/akariRobot</a></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>YouTube</dt><dd><div class="line-block">
+<div class="line">本マニュアルにリンクされている動画などがアップロードされています。</div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/&#64;akarirobot">https://www.youtube.com/&#64;akarirobot</a></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="%E6%9C%AC%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AE%E6%A7%8B%E6%88%90">
+<h2>本マニュアルの構成<a class="headerlink" href="#%E6%9C%AC%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AE%E6%A7%8B%E6%88%90" title="この見出しへのパーマリンク"></a></h2>
+<p>本マニュアルは以下のような構成になっています。</p>
+<ol class="arabic">
+<li><p><a class="reference internal" href="#"><span class="doc">はじめに</span></a></p>
+<p>AKARIの概要について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="overview/main.html"><span class="doc">AKARIの特徴</span></a></p>
+<p>AKARIの特徴を紹介しています。</p>
+</li>
+<li><p><a class="reference internal" href="assembly/main.html"><span class="doc">AKARIを作ってみよう</span></a></p>
+<p>AKARIの組み立て方、セットアップ方法について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="assembly_light/main.html"><span class="doc">AKARI Lightを作ってみよう</span></a></p>
+<p>AKARI Lightの組み立て方、セットアップ方法について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="startup/main.html"><span class="doc">AKARIを起動しよう</span></a></p>
+<p>AKARIの起動方法について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="tutorial_web/main.html"><span class="doc">AKARIをはじめよう(webコンソール編)</span></a></p>
+<p>AKARIのwebブラウザからの使い方について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="tutorial/main.html"><span class="doc">AKARIをはじめよう(Ubuntu編)</span></a></p>
+<p>AKARIのUbuntuからの使い方について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="spec/main.html"><span class="doc">AKARIの仕様</span></a></p>
+<p>AKARIの詳細仕様について記載しています。</p>
+</li>
+<li><p><a class="reference internal" href="practice/main.html"><span class="doc">AKARI練習問題に挑戦しよう</span></a></p>
+<p>AKARIの使い方とpythonを学べる練習問題の進め方が記載されています。</p>
+</li>
+<li><p><a class="reference internal" href="scratch/main.html"><span class="doc">Scratchを使ってみよう</span></a></p>
+<p>Scratch版の使い方が記載されています。</p>
+</li>
+<li><p><a class="reference internal" href="ros2/main.html"><span class="doc">ROS2版を使ってみよう</span></a></p>
+<p>ROS2版の使い方が記載されています。</p>
+</li>
+<li><p><a class="reference internal" href="dev/main.html"><span class="doc">AKARIを使った開発</span></a></p>
+<p>AKARIを使った開発のヒントが記載してあります。</p>
+</li>
+<li><p><a class="reference internal" href="troubleshoot/main.html"><span class="doc">困ったときは</span></a></p>
+<p>AKARIのトラブルシュートを記載します。</p>
+</li>
+<li><p><a class="reference internal" href="update/main.html"><span class="doc">ソフトのアップデート</span></a></p>
+<p>AKARIのベースソフトの更新方法を記載します。</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to AKARI manual!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="overview/main.html" class="btn btn-neutral float-right" title="AKARIの特徴" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

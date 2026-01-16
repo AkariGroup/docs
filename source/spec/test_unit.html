@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>テストユニット仕様 &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/spec/test_unit.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ソフトウェアAPI" href="soft_base.html" />
+    <link rel="prev" title="ハードウェア仕様(AKARI Light)" href="hard_spec_light.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">AKARIの仕様</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hard_spec.html">ハードウェア仕様</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_spec_light.html">ハードウェア仕様(AKARI Light)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">テストユニット仕様</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#%E5%90%84%E9%83%A8%E8%AA%AC%E6%98%8E">各部説明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="soft_base.html">ソフトウェアAPI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの仕様</a></li>
+      <li class="breadcrumb-item active">テストユニット仕様</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/spec/test_unit.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%86%E3%82%B9%E3%83%88%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E4%BB%95%E6%A7%98">
+<h1>テストユニット仕様<a class="headerlink" href="#%E3%83%86%E3%82%B9%E3%83%88%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E4%BB%95%E6%A7%98" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">ヘッドのGPIOのテストに使うテストユニットの仕様について説明します。</div>
+<div class="line"><a class="reference internal" href="../tutorial_web/tutorial_project.html"><span class="doc">AKARIチュートリアルを動かしてみよう</span></a> や <a class="reference internal" href="../practice/main.html"><span class="doc">AKARI練習問題に挑戦しよう</span></a> などでGPIOを使う場合はこちらを使います。</div>
+</div>
+<section id="%E5%90%84%E9%83%A8%E8%AA%AC%E6%98%8E">
+<h2>各部説明<a class="headerlink" href="#%E5%90%84%E9%83%A8%E8%AA%AC%E6%98%8E" title="この見出しへのパーマリンク"></a></h2>
+<a class="reference internal image-reference" href="../../_images/test_unit.jpg"><img alt="../../_images/test_unit.jpg" src="../../_images/test_unit.jpg" style="width: 600px;" /></a>
+<ol class="arabic">
+<li><p>ピンヘッダ(CN1)</p>
+<div class="line-block">
+<div class="line">AKARI本体ヘッド部のボックスヘッダに差し込んで接続します。</div>
+</div>
+</li>
+<li><p>12V LED(LED1)</p>
+<div class="line-block">
+<div class="line">12V電源が外部入力されると点灯します。</div>
+<div class="line">DCジャックをAKARI本体に接続した時点で点灯します。</div>
+</div>
+</li>
+<li><p>5V LED(LED2)</p>
+<div class="line-block">
+<div class="line">M5Stack基板から5V電源が出力されると点灯します。</div>
+<div class="line">DCジャックをAKARI本体に接続した時点で点灯します。</div>
+</div>
+</li>
+<li><p>3.3V LED(LED3)</p>
+<div class="line-block">
+<div class="line">M5Stackから3.3V電源が出力されると点灯します。</div>
+<div class="line">DCジャックをAKARI本体に接続した時点で点灯します。</div>
+</div>
+</li>
+<li><p>Dout0 LED(LED4)</p>
+<div class="line-block">
+<div class="line">dout0がAKARIから出力されると点灯します。</div>
+</div>
+</li>
+<li><p>Dout1 LED(LED5)</p>
+<div class="line-block">
+<div class="line">dout1がAKARIから出力されると点灯します。</div>
+</div>
+</li>
+<li><p>PWM LED(LED6)</p>
+<div class="line-block">
+<div class="line">pwmout0がAKARIから出力されると点灯します。</div>
+<div class="line">AKARI本体のpwmout0の出力を0-255で変化させると、それに応じて出力電圧が0-3.3Vで変化し、LEDの明るさが変化します。</div>
+</div>
+</li>
+<li><p>Din0 SW(SW1)</p>
+<div class="line-block">
+<div class="line">din0の入力を操作するためのスイッチです。</div>
+<div class="line">din0はデフォルトHiなので、何も操作していない場合はdin0には3.3Vが入力されており、値はTrueになっています。</div>
+<div class="line">このスイッチを押すとdin0はGNDに接続され、値はFalseに変化します。</div>
+</div>
+</li>
+<li><p>Din1 SW(SW2)</p>
+<div class="line-block">
+<div class="line">din1の入力を操作するためのスイッチです。</div>
+<div class="line">din0同様にデフォルトHiでTrue、このスイッチを押すとdin1はGNDに接続され、値はFalseに変化します。</div>
+</div>
+</li>
+<li><p>Ain0可変抵抗(VR1)</p>
+<div class="line-block">
+<div class="line">ain0の入力を操作するための可変抵抗です。</div>
+<div class="line">このつまみを操作することでAKARI本体のain0ピンの電圧が0-3.3Vで変化し、ain0の値も0-255で変化します。</div>
+</div>
+</li>
+<li><p>I2Cポート(CN2)</p>
+<div class="line-block">
+<div class="line">ここにコネクタをマウントし、AKARIのM5のソフトを変更することでI2C通信が可能になりますが、通常時は使いません。</div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hard_spec_light.html" class="btn btn-neutral float-left" title="ハードウェア仕様(AKARI Light)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="soft_base.html" class="btn btn-neutral float-right" title="ソフトウェアAPI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

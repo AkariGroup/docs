@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>akari_client.m5stack_client &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/_modules/akari_client/m5stack_client.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../source/intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">モジュールコード</a></li>
+      <li class="breadcrumb-item active">akari_client.m5stack_client</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>akari_client.m5stack_client のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypedDict</span>
+
+<span class="kn">from</span> <span class="nn">.color</span> <span class="kn">import</span> <span class="n">Color</span>
+<span class="kn">from</span> <span class="nn">.position</span> <span class="kn">import</span> <span class="n">Positions</span>
+
+
+<div class="viewcode-block" id="M5ComDict"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5ComDict">[ドキュメント]</a><span class="k">class</span> <span class="nc">M5ComDict</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    M5から取得する情報を格納するDict。</span>
+
+<span class="sd">    :param din0: ヘッドのdin0ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</span>
+<span class="sd">    :param din1: ヘッドのdin1ピンのデジタル入力。HiがTrue、LoがFalse。デフォルトHi。</span>
+<span class="sd">    :param ain0: ヘッドのain0ピンのアナログ入力。0-3.3Vを0-4095の4096段階にする。</span>
+<span class="sd">    :param dout0: ヘッドのdout0ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</span>
+<span class="sd">    :param dout1: ヘッドのdout1ピンのデジタル出力。TrueでHi(3.3V)、FalseでLo(0V)。</span>
+<span class="sd">    :param pwmout0: ヘッドのpwmout0ピンのPWM出力。0-255の256段階で0-3.3Vを出力可能。</span>
+<span class="sd">    :param general0: 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</span>
+<span class="sd">    :param general1: 任意値を入力可能なエリア。通常時は使用しない。M5のソフトを書き換えることで自由に使用可能。</span>
+<span class="sd">    :param button_a: M5の前面のボタンAの入力。ボタンを押すとTrue、押していないとFalse。</span>
+<span class="sd">    :param button_b: M5の前面のボタンBの入力。ボタンを押すとTrue、押していないとFalse。</span>
+<span class="sd">    :param button_c: M5の前面のボタンCの入力。ボタンを押すとTrue、押していないとFalse。</span>
+<span class="sd">    :param temperature: AKARI側面の環境センサモジュールの温度計測値。単位は℃。</span>
+<span class="sd">    :param pressure: AKARI側面の環境センサモジュールの観測絶対圧力。単位はPa。</span>
+<span class="sd">    :param brightness: AKARI側面の光センサユニットの観測明るさを4096段階で出力。0が最も明るい。</span>
+<span class="sd">    :param time: データ取得した時間。M5のソフト起動時からの経過秒数を用いている。</span>
+<span class="sd">    :param is_responce: akari_client()の各コマンド実行完了時のレスポンス。実行完了するとTrueを返す。</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">din0</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">din1</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">ain0</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">dout0</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">dout1</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">pwmout0</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">general0</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">general1</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">button_a</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">button_b</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">button_c</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">temperature</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">pressure</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">brightness</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">time</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">is_response</span><span class="p">:</span> <span class="nb">bool</span></div>
+
+
+<div class="viewcode-block" id="M5StackClient"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient">[ドキュメント]</a><span class="k">class</span> <span class="nc">M5StackClient</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<div class="viewcode-block" id="M5StackClient.set_dout"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_dout">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_dout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pin_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ヘッド部GPIOピンのデジタル出力を設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pin_id: pin番号。0でdout0、1でdout1を指定する。</span>
+<span class="sd">            value: デジタル出力の値。Falseで0V,Trueで3.3V出力。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;     m5 = akari.m5stack</span>
+<span class="sd">            &gt;&gt;&gt;     m5.set_dout(0, True)</span>
+<span class="sd">            # dout0がTrueになる。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.set_pwmout"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_pwmout">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_pwmout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pin_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ヘッド部GPIOピンのPWM出力を設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pin_id: pin番号。デフォルトではpwmout0しかないため、0を指定すること。</span>
+<span class="sd">            value: PWM出力の値。 0-255で指定し、0で0V、255で3.3Vを出力する。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;     m5 = akari.m5stack</span>
+<span class="sd">            &gt;&gt;&gt;     m5.set_pwmout(0, 200)</span>
+<span class="sd">            # pwmout0が200になる。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.set_allout"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_allout">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_allout</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">dout0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">dout1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">pwmout0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ヘッド部GPIOピンの出力をまとめて設定する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            dout0: dout0の出力値。Falseで0V,Trueで3.3V出力。</span>
+<span class="sd">            dout1: dout1の出力値。Falseで0V,Trueで3.3V出力。</span>
+<span class="sd">            pwmout0: pwmout0の出力値。0-255で指定し、0で0V、255で3.3Vを出力する。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;     m5 = akari.m5stack</span>
+<span class="sd">            &gt;&gt;&gt;     m5.set_allout(dout0=False, dout1=True, pwmout0=100)</span>
+<span class="sd">            # dout0がFalse, dout1がTrue, pwmout0が100になる。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.reset_allout"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.reset_allout">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">reset_allout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ヘッド部GPIOピンの出力を初期値にリセットする。</span>
+<span class="sd">        dout0、dout1はFalse、pwmout0は0となる。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;     m5 = akari.m5stack</span>
+<span class="sd">            &gt;&gt;&gt;     m5.reset_allout()</span>
+<span class="sd">            # dout0がFalse, dout1がFalse, pwmout0が0になる。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.set_display_color"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_display_color">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_display_color</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">Color</span><span class="p">,</span>
+        <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ボディー部M5のディスプレイ背景色を変更する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            color: 背景色を指定。色は ``color.Colors`` から色名を引用する、もしくはRGBの数値指定も可能。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;     m5 = akari.m5stack</span>
+<span class="sd">            &gt;&gt;&gt;     color = Colors.WHITE</span>
+<span class="sd">            &gt;&gt;&gt;     m5.set_display_color(color)</span>
+<span class="sd">            # 画面色が白になる。</span>
+<span class="sd">            &gt;&gt;&gt;     color = Color(red=0, green=100, blue=200)</span>
+<span class="sd">            &gt;&gt;&gt;     m5.set_display_color(color)</span>
+<span class="sd">            # 画面色が指定したRGB値になる。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.set_display_text"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_display_text">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_display_text</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">pos_x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+        <span class="n">pos_y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+        <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="n">text_color</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Color</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">back_color</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Color</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">refresh</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ボディー部M5のディスプレイに文字を表示する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            text: 表示する文字列。</span>
+<span class="sd">            pos_x: x方向の描画位置ピクセルを0-320で指定。左端が0。 ``position.Positions`` を用いた位置指定も可能。デフォルト値は中央揃え。</span>
+<span class="sd">            pos_y: y方向の描画位置ピクセルを0-240で指定。上端が0。 ``position.Positions`` を用いた位置指定も可能。デフォルト値は中央揃え。</span>
+<span class="sd">            size: 文字サイズを1-11の11段階で指定。デフォルト値は5。</span>
+<span class="sd">            text_color: 文字色を指定。色は ``color.Colors`` から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、前回値を引き継ぐ。</span>
+<span class="sd">            back_color: 背景色を指定。色は ``color.Colors`` から色名を引用する、もしくはRGBの数値指定も可能。値を指定しない場合、画面全体の背景色に合わせる。</span>
+<span class="sd">            refresh: trueの場合画面全体を現在の背景色で更新する。falseの場合は現在の表示を維持しつつ、文字を描画する範囲のみ更新する。デフォルト値は背景更新あり。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client.color import Colors</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client.position import Positions</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;    text = &quot;AKARI&quot;</span>
+<span class="sd">            &gt;&gt;&gt;    pos_x = Positions.LEFT</span>
+<span class="sd">            &gt;&gt;&gt;    pos_y = Positions.TOP</span>
+<span class="sd">            &gt;&gt;&gt;    size = 7</span>
+<span class="sd">            &gt;&gt;&gt;    text_color = Colors.WHITE</span>
+<span class="sd">            &gt;&gt;&gt;    back_color = Colors.BLACK</span>
+<span class="sd">            &gt;&gt;&gt;    refresh = True</span>
+<span class="sd">            &gt;&gt;&gt;    m5.set_display_text(</span>
+<span class="sd">            ...        text, pos_x, pos_y, size, text_color, back_color, refresh</span>
+<span class="sd">            ...    )</span>
+<span class="sd">            # 画面に「AKARI」と表示される。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.set_display_image"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.set_display_image">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">set_display_image</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">pos_x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+        <span class="n">pos_y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Positions</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+        <span class="n">scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">sync</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;ボディー部M5のディスプレイにM5のSDカード内の画像を表示する。</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            filepath: M5のSDカード内のファイルパス。(例;&quot;image/hoge.jpg&quot;)</span>
+<span class="sd">            pos_x: x方向の描画位置ピクセルを0-320で指定。左端が0。 ``position.Positions`` を用いた位置指定も可能。デフォルト値は中央揃え。</span>
+<span class="sd">            pos_y: y方向の描画位置ピクセルを0-240で指定。上端が0。 ``position.Positions`` を用いた位置指定も可能。デフォルト値は中央揃え。</span>
+<span class="sd">            scale: 画像の拡大縮小倍率を指定。1.0で等倍表示。マイナスの値を入れた場合、画面サイズに合わせて自動でサイズ調整される。</span>
+<span class="sd">                   デフォルト値は自動サイズ調整となっている。</span>
+<span class="sd">            sync: 同期実行の指定。Trueの場合M5側で実行完了するまで関数の終了待ちを行う。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client.position import Positions</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;    filepath = &quot;/jpg/logo320.jpg&quot;</span>
+<span class="sd">            &gt;&gt;&gt;    pos_x = Positions.LEFT</span>
+<span class="sd">            &gt;&gt;&gt;    pos_y = Positions.TOP</span>
+<span class="sd">            &gt;&gt;&gt;    scale = 0.75</span>
+<span class="sd">            &gt;&gt;&gt;    m5.set_display_image(filepath, pos_x, pos_y, scale)</span>
+<span class="sd">            # 画面に&quot;/jpg/logo320.jpg&quot;の画像が表示される。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.reset_m5"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.reset_m5">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">reset_m5</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;M5をリセットして再起動する。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;    m5.reset_m5()</span>
+<span class="sd">            # M5が再起動する。</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+<div class="viewcode-block" id="M5StackClient.get"><a class="viewcode-back" href="../../source/spec/soft_base.html#akari_client.grpc.m5stack.M5StackClient.get">[ドキュメント]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">M5ComDict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;M5から環境センサ、ヘッドGPIOの入力値、M5のボタンの状態を取得する。</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            M5から取得した各データを格納したDict。</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from akari_client import AkariClient</span>
+<span class="sd">            &gt;&gt;&gt; with AkariClient() as akari:</span>
+<span class="sd">            &gt;&gt;&gt;    data = m5.get()</span>
+<span class="sd">            &gt;&gt;&gt;    print(data[&quot;temperature&quot;])</span>
+<span class="sd">            31.675</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

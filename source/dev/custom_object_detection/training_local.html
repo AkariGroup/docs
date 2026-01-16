@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. 学習を行う(GPU搭載のPC上で行う場合) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/dev/custom_object_detection/training_local.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="3. モデル変換を行う" href="convert_model.html" />
+    <link rel="prev" title="3. 学習を行う(Google Colab上で行う場合)" href="training.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを使った開発</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">オリジナルの物体認識を作ってみよう</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image_collection.html">1. 学習用のデータセットを作る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html">2. 画像のアノテーションをする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. 学習を行う(GPU搭載のPC上で行う場合)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E6%8E%A8%E5%A5%A8%E7%92%B0%E5%A2%83">推奨環境</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%AD%A6%E7%BF%92%E3%81%AE%E5%AE%9F%E8%A1%8C">学習の実行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C">テストの実行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E5%AE%8C%E6%88%90">学習モデルの完成</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l3"><a class="reference internal" href="testing.html">4. 物体認識をテストする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remote_api/main.html">外部PCからAKARIを制御しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを使った開発</a></li>
+          <li class="breadcrumb-item"><a href="main.html">オリジナルの物体認識を作ってみよう</a></li>
+      <li class="breadcrumb-item active">3. 学習を行う(GPU搭載のPC上で行う場合)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/dev/custom_object_detection/training_local.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="3.%20%E5%AD%A6%E7%BF%92%E3%82%92%E8%A1%8C%E3%81%86%28gpu%E6%90%AD%E8%BC%89%E3%81%AEpc%E4%B8%8A%E3%81%A7%E8%A1%8C%E3%81%86%E5%A0%B4%E5%90%88%29">
+<h1>3. 学習を行う(GPU搭載のPC上で行う場合)<a class="headerlink" href="#3.%20%E5%AD%A6%E7%BF%92%E3%82%92%E8%A1%8C%E3%81%86%28gpu%E6%90%AD%E8%BC%89%E3%81%AEpc%E4%B8%8A%E3%81%A7%E8%A1%8C%E3%81%86%E5%A0%B4%E5%90%88%29" title="この見出しへのパーマリンク"></a></h1>
+<p>次に、先程作成したアノテーション付き画像を学習させ、学習結果のモデルファイルを出力します。
+こちらでは学習をLinux PC上で行う方法を説明します。
+nvidia GPUが使えるLinux PCを所持している場合は、こちらの方法で学習させた方が学習時間が短く、安定しています。</p>
+<section id="%E6%8E%A8%E5%A5%A8%E7%92%B0%E5%A2%83">
+<h2>推奨環境<a class="headerlink" href="#%E6%8E%A8%E5%A5%A8%E7%92%B0%E5%A2%83" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>nvidia GPUが搭載されたPC(Ubuntu 22.04で動作確認済み。cudaをインストールしておくこと。)</p></li>
+</ul>
+</section>
+<section id="%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">
+<h2>事前準備<a class="headerlink" href="#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">以下すべてPC上での作業となります。</div>
+</div>
+<ol class="arabic simple">
+<li><p>PCのターミナル上で、akari_yolo_training_localのレポジトリをgitからcloneします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/AkariGroup/akari_yolo_training_local.git
+</pre></div>
+</div>
+<ol class="arabic" start="2">
+<li><p><a class="reference internal" href="annotation.html"><span class="doc">2. 画像のアノテーションをする</span></a> で準備した画像とアノテーションファイルが含まれるimagesディレクトリを、先程Cloneした <cite>akari_yolo_training_local/images</cite> 内にコピーします。</p>
+<div class="line-block">
+<div class="line">下図のディレクトリ構成になっていることを確認してください。</div>
+</div>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/train_directory_03.jpg"><img alt="../../../_images/train_directory_03.jpg" src="../../../_images/train_directory_03.jpg" style="width: 800px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>pythonがインストールされていない場合は、インストールします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3.10 python3.10-venv
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>akari_yolo_training_localディレクトリに移動し、submoduleの更新、仮想環境の作成をします（初回のみ必要）。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_yolo_training_local
+git submodule update --init
+python -m venv venv
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>仮想環境を有効にします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>必要なライブラリをインストールします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>データセットの画像、アノテーションファイルの8割を学習に、2割をバリデーション用に振り分けます。下記pythonを実行することで、自動で行われます。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 divide_dataset.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>学習用のパラメータファイルを作成します。下記pythonを実行することで、 <cite>akari_train_data.yaml</cite> が自動で作成されます。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 make_train_data.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>学習済みモデルの重みを取得します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-tiny.pt -P data/
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>学習用のコンフィグファイルを作成します。下記pythonを実行することで、 <cite>akari_train_cfg.yaml</cite> が自動で作成されます。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 make_train_cfg.py
+</pre></div>
+</div>
+</section>
+<section id="%E5%AD%A6%E7%BF%92%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h2>学習の実行<a class="headerlink" href="#%E5%AD%A6%E7%BF%92%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h2>
+<p>下記コマンドを実行すると、学習を開始します。
+学習が終了するまで、しばらく待ちます。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 yolov7/train.py --epochs <span class="m">300</span> --workers <span class="m">8</span> --device <span class="m">0</span> --batch-size <span class="m">16</span> --data data/akari_train_data.yaml --img <span class="m">640</span> <span class="m">640</span> --cfg data/akari_train_cfg.yaml --weights data/yolov7-tiny.pt --hyp yolov7/data/hyp.scratch.tiny.yaml --name result --exist-ok
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>もし <cite>undefined symbol: __nvJitLinkAddData_12_1, version libnvJitLink.so.12</cite> というエラーが出た場合は、自身のvenv内のnvidiaライブラリにLD_LIBRARY_PATHを通す必要があります。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>~/<span class="s2">&quot;akari_yolo_training_localのパス&quot;</span>/venv/lib64/python3.10/site-packages/nvidia/nvjitlink/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h2>テストの実行<a class="headerlink" href="#%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">学習が終了すると、akari_yolo_training_localディレクトリ直下にrunsディレクトリが作成され、 <cite>runs/train/result</cite> 内に学習モデル(.pt)が保存されます。</div>
+<div class="line"><cite>best.pt</cite> が学習スコアが最も良かったファイルとなるので、こちらのファイルでテストを実施してみます。</div>
+<div class="line">下記コマンドを実行すると、学習したモデルを用いてテストを開始します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 yolov7/test.py --data data/akari_train_data.yaml --iou-thres <span class="m">0</span>.65 --device <span class="m">0</span> --weights runs/train/result/weights/best.pt --task <span class="nb">test</span> --name result --exist-ok
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">テスト結果は、 <cite>akari_yolo_training_local/runs/test/result</cite> に保存されます。</div>
+<div class="line">テスト画像に対する推論結果が画像として保存されているので、期待通り検出されているかを確認してください。</div>
+</div>
+</section>
+<section id="%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E5%AE%8C%E6%88%90">
+<h2>学習モデルの完成<a class="headerlink" href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E5%AE%8C%E6%88%90" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">テスト結果が問題なければ、 <cite>akari_yolo_training_local/runs/train/result/best.pt</cite> を次のモデル変換で使います。</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="convert_model.html"><span class="doc">3. モデル変換を行う</span></a> へ進む</p>
+<p><a class="reference internal" href="annotation.html"><span class="doc">2. 画像のアノテーションをする</span></a> へ戻る</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="training.html" class="btn btn-neutral float-left" title="3. 学習を行う(Google Colab上で行う場合)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="convert_model.html" class="btn btn-neutral float-right" title="3. モデル変換を行う" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

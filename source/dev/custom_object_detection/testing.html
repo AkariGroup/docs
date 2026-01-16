@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. 物体認識をテストする &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/dev/custom_object_detection/testing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="5. 公開モデルを使ってみる" href="test_models.html" />
+    <link rel="prev" title="3. モデル変換を行う" href="convert_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを使った開発</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">オリジナルの物体認識を作ってみよう</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="preparation.html">0. 事前準備をする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image_collection.html">1. 学習用のデータセットを作る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html">2. 画像のアノテーションをする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training.html">3. 学習を行う(Google Colab上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training_local.html">3. 学習を行う(GPU搭載のPC上で行う場合)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="convert_model.html">3. モデル変換を行う</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4. 物体認識をテストする</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari%E5%86%85%E3%81%AEpython%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B">AKARI内のpythonでテストする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E4%B8%8A%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B">webコンソール上でテストする</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="test_models.html">5. 公開モデルを使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../remote_api/main.html">外部PCからAKARIを制御しよう</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを使った開発</a></li>
+          <li class="breadcrumb-item"><a href="main.html">オリジナルの物体認識を作ってみよう</a></li>
+      <li class="breadcrumb-item active">4. 物体認識をテストする</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/dev/custom_object_detection/testing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="4.%20%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B">
+<h1>4. 物体認識をテストする<a class="headerlink" href="#4.%20%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h1>
+<p>最後に、学習させた物体認識を実行してみましょう。
+物体認識のテストには、 <strong>AKARI内でpythonアプリを実行する方法</strong> と <strong>web console上のJupyter Notebookを実行する方法</strong> があります。</p>
+<section id="akari%E5%86%85%E3%81%AEpython%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B">
+<h2>AKARI内のpythonでテストする<a class="headerlink" href="#akari%E5%86%85%E3%81%AEpython%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<section id="akari_yolo_inference%E3%81%AEclone">
+<h3>akari_yolo_inferenceのClone<a class="headerlink" href="#akari_yolo_inference%E3%81%AEclone" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">akari_yolo_inferenceをgitからcloneします。</div>
+<div class="line"><strong>webコンソール上からはcloneせず、Ubuntu上でのcloneを実施してください！</strong></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/AkariGroup/akari_yolo_inference.git
+</pre></div>
+</div>
+</section>
+<section id="%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20venv%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">
+<h3>(初回のみ) venvのセットアップ<a class="headerlink" href="#%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20venv%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">仮想実行環境をセットアップします。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_yolo_inference
+python -m venv venv
+<span class="nb">source</span> venv/bin/activate
+pip install -r requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20submodule%E3%81%AE%E6%9B%B4%E6%96%B0">
+<h3>(初回のみ) submoduleの更新<a class="headerlink" href="#%28%E5%88%9D%E5%9B%9E%E3%81%AE%E3%81%BF%29%20submodule%E3%81%AE%E6%9B%B4%E6%96%B0" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">submoduleを更新します。</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git submodule update --init --recursive
+</pre></div>
+</div>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E7%A7%BB%E5%8B%95">
+<h3>物体認識モデルの移動<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E7%A7%BB%E5%8B%95" title="この見出しへのパーマリンク"></a></h3>
+<p><a class="reference internal" href="convert_model.html"><span class="doc">3. モデル変換を行う</span></a> でダウンロードしたzipファイルを展開し、中のOAK-Dの認識モデル(.blob)とラベル(.json)をそれぞれ下記ディレクトリ内に移動します。</p>
+<div class="line-block">
+<div class="line">モデル(.blob): <cite>akari_yolo_inference/model/</cite></div>
+<div class="line">ラベル(.json): <cite>akari_yolo_inference/json/</cite></div>
+</div>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h3>物体認識の実行<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>akari_yolo_inference内に移動します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_yolo_inference
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>venvを有効化していなければ下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 yolo.py -m &lt;モデルファイルへのパス&gt; -c &lt;ラベルファイルへのパス&gt;
+</pre></div>
+</div>
+<p>例) <cite>my_detection.blob</cite> をmodelの中に、 <cite>my_detection.json</cite> をjsonの中に保存してある場合</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 yolo.py -m model/my_detection.blob -c json/my_detection.json
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>カメラ出力のウインドウが立ち上がるので、学習させた物体を映してみて、正しく認識されるかをチェックします。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><cite>-f</cite> オプションの後に数値を入れることで、入力のrgbのfpsを変更することができます。(デフォルトは10FPSです。)</div>
+<div class="line">例) 20FPSで実行する場合</div>
+</div>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 yolo.py -f <span class="m">20</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">ただし、OAK-Dの特性上、推論のFPSより入力のFPSを大きくすると、遅延が大きくなる、ソフトが落ちるといった問題が発生することがあります。</div>
+<div class="line">実行中の映像に表示されるNN FPSの値が推論のFPSなので、モデルに応じてこれより小さい値を入れることを推奨します。</div>
+</div>
+</div>
+</section>
+<section id="%E7%A9%BA%E9%96%93%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h3>空間物体認識の実行<a class="headerlink" href="#%E7%A9%BA%E9%96%93%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h3>
+<p>同様に、空間内の3次元位置が推定可能な物体認識も使うことが出来ます。</p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/4lPpDrTqanQ" style="border: 0; height: 345px; width: 560px">
+</iframe></div><ol class="arabic simple">
+<li><p>akari_yolo_inference内に移動します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_yolo_inference
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>venvを有効化していなければ下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 spatial_yolo.py -m &lt;モデルファイルへのパス&gt; -c &lt;ラベルファイルへのパス&gt;
+</pre></div>
+</div>
+<p>例) <cite>my_detection.blob</cite> をmodelの中に、 <cite>my_detection.json</cite> をjsonの中に保存してある場合</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 spatial_yolo.py -m model/my_detection.blob -c json/my_detection.json
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>カメラ出力のウインドウと、3次元位置の俯瞰マップが描画されます。学習させた物体を映すと、物体ラベルと3次元位置が表示され、俯瞰マップ上にも物体位置を表す点が表示されます。</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">こちらも <cite>-f</cite> オプションの後に数値を入れることで、入力のRGBとdepthのfpsを変更することができます。(デフォルトは10FPSです。)</div>
+<div class="line">注意点も上記の <cite>yolo.py</cite> の場合と同様です。</div>
+<div class="line">また、 <cite>-d</cite> オプションをつけることで、推論に入力しているRGB、depthの映像も画面に表示することができます。</div>
+<div class="line">こちらは引数は必要なく、 <cite>-d</cite> をつけるのみで有効になります。</div>
+<div class="line">RGBは正方形にしてから認識に入力しているため、上下に黒枠が追加された形で出力されます。</div>
+<div class="line"><cite>-r</cite> オプションをつけることで、3次元位置をカメラからの位置でなく、ロボットからの位置に変更できます。</div>
+<div class="line">AKARI本体のヘッドの向きを取得して、座標変換を行っています。</div>
+<div class="line">こちらは引数は必要なく、 <cite>-r</cite> をつけるのみで有効になります。</div>
+</div>
+</div>
+</section>
+<section id="%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C">
+<h3>トラッキング物体認識の実行<a class="headerlink" href="#%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%81%AE%E5%AE%9F%E8%A1%8C" title="この見出しへのパーマリンク"></a></h3>
+<p>同様に、空間内の3次元位置推定に基づいて、検出した物体のトラッキングを行うアプリもあります。</p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/OlwG40fLblM" style="border: 0; height: 345px; width: 560px">
+</iframe></div><ol class="arabic simple">
+<li><p>akari_yolo_inference内に移動します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> akari_yolo_inference
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>venvを有効化していなければ下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>下記を実行します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 tracking_yolo.py -m &lt;モデルファイルへのパス&gt; -c &lt;ラベルファイルへのパス&gt;
+</pre></div>
+</div>
+<p>例) <cite>my_detection.blob</cite> をmodelの中に、 <cite>my_detection.json</cite> をjsonの中に保存してある場合</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 tracking_yolo.py -m model/my_detection.blob -c json/my_detection.json
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>カメラ出力のウインドウと、3次元位置の俯瞰マップが描画されます。学習させた物体を映すと、物体ラベルと3次元位置が表示され、俯瞰マップ上にも物体位置を表す点が表示されます。</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line">こちらも <cite>-f</cite> オプションの後に数値を入れることで、入力のRGBとdepthのfpsを変更することができます。(デフォルトは10FPSです。)</div>
+<div class="line">注意点も上記の <cite>yolo.py</cite> の場合と同様です。</div>
+<div class="line">また、 <cite>-d</cite> オプションをつけることで、推論に入力しているRGB、depthの映像も画面に表示することができます。</div>
+<div class="line">こちらは引数は必要なく、 <cite>-d</cite> をつけるのみで有効になります。</div>
+<div class="line">RGBは正方形にしてから認識に入力しているため、上下に黒枠が追加された形で出力されます。</div>
+<div class="line"><cite>-r</cite> オプションをつけることで、3次元位置をカメラからの位置でなく、ロボットからの位置に変更できます。</div>
+<div class="line">AKARI本体のヘッドの向きを取得して、座標変換を行っています。</div>
+<div class="line">こちらは引数は必要なく、 <cite>-r</cite> をつけるのみで有効になります。</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<div class="line-block">
+<div class="line"><cite>--spatial_frame</cite> オプションをつけることで、俯瞰マップの代わりに3次元空間へのプロット図を描画することができます。</div>
+<div class="line">ただし描画が重く、認識、画像描画の速度が低下しますのでご注意ください。</div>
+<div class="line">こちらは引数は必要なく、 <cite>--spatial_frame</cite> をつけるのみで有効になります。</div>
+</div>
+</div>
+</section>
+</section>
+<section id="web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E4%B8%8A%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B">
+<h2>webコンソール上でテストする<a class="headerlink" href="#web%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB%E4%B8%8A%E3%81%A7%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B" title="この見出しへのパーマリンク"></a></h2>
+<section id="akari_yolo_inference_jupyter%E3%81%AEclone">
+<h3>akari_yolo_inference_jupyterのClone<a class="headerlink" href="#akari_yolo_inference_jupyter%E3%81%AEclone" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../../tutorial_web/tutorial_project.html"><span class="doc">AKARIチュートリアルを動かしてみよう</span></a> の解説を参考に、webコンソール上で <cite>akari_yolo_inference_jupyter</cite> をcloneします。</div>
+<div class="line">アドレスは下記です。</div>
+</div>
+<p><a class="reference external" href="https://github.com/AkariGroup/akari_yolo_inference_jupyter.git">https://github.com/AkariGroup/akari_yolo_inference_jupyter.git</a></p>
+</section>
+<section id="%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89">
+<h3>物体認識モデルのアップロード<a class="headerlink" href="#%E7%89%A9%E4%BD%93%E8%AA%8D%E8%AD%98%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="convert_model.html"><span class="doc">3. モデル変換を行う</span></a> でダウンロードしたzipファイルを展開しておきます。</p></li>
+<li><p><a class="reference internal" href="../../tutorial_web/tutorial_project.html"><span class="doc">AKARIチュートリアルを動かしてみよう</span></a> を参考に、先程cloneした`akari_yolo_inference_jupyter`をJupyter Lab上で開きます。</p></li>
+<li><p>開いたら、ページ左のFile Browserを開き、 <cite>model</cite> というディレクトリを開きます。File Browser上部の「Upload Files」ボタンを押し、先程展開したzipファイル内のOAK-Dの認識モデル(.blob)をアップロードします。</p></li>
+<li><p>3.と同様に、File Browseから、 <cite>json</cite> というディレクトリを開き、「Upload Files」から、先程展開したzipファイル内のOAK-Dのラベルファイル(.json)をアップロードします。</p></li>
+</ol>
+</section>
+<section id="id1">
+<h3>物体認識の実行<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>akari_yolo_inference_jupyter</cite> の親ディレクトリに戻って <cite>main.ipynb</cite> をクリックして表示します。</p></li>
+<li><p>main.ipynb内のコードの17行目の <cite>MODEL_PATH</cite> を先程アップロードした認識モデルのパス、18行目の <cite>CONFIG_PATH</cite> をアップロードしたラベルファイルのパスに書き換えます。</p></li>
+</ol>
+<p>例) <cite>my_detection.blob</cite> をmodelの中に、 <cite>my_detection.json</cite> をjsonの中に保存してある場合</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ここのパスにmodel(.blob),config(.json)のパスを記載</span>
+<span class="n">MODEL_PATH</span> <span class="o">=</span> <span class="s1">&#39;model/my_detection.blob&#39;</span>
+<span class="n">CONFIG_PATH</span> <span class="o">=</span> <span class="s1">&#39;json/my_detection.json&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>コードを実行します。Notebook上にカメラ出力のウインドウが表示されるので、学習させた物体を映してみて、正しく認識されるかをチェックします。映像内の学習させた物体に枠がついて、正しいラベルが表示されたら成功です。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">物体認識のデータセット作成から学習、動作までのチュートリアルは以上となります。</div>
+<div class="line">うまく行かなかった場合は、データセットの画像の枚数やパターンを増やしてみるなど、色々試してみましょう。</div>
+</div>
+<p><a class="reference internal" href="test_models.html"><span class="doc">5. 公開モデルを使ってみる</span></a> へ進む</p>
+<p><a class="reference internal" href="training.html"><span class="doc">3. 学習を行う(Google Colab上で行う場合)</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="convert_model.html" class="btn btn-neutral float-left" title="3. モデル変換を行う" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="test_models.html" class="btn btn-neutral float-right" title="5. 公開モデルを使ってみる" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

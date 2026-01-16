@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3Dプリント部品を作ろう(AKARI light) &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly_light/assembly_hard/3dprint.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="基板を作ろう(AKARI Light)" href="pcb.html" />
+    <link rel="prev" title="組み立てに必要なもの(AKARI Light)" href="part_list.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARI Lightを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの(AKARI Light)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3Dプリント部品を作ろう(AKARI light)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%A7%E9%80%A0%E5%BD%A2%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">3Dプリンタで造形する場合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#%E8%A3%BD%E9%80%A0%E6%A5%AD%E8%80%85%E3%81%AB%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">製造業者に外注する場合</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_raspi_os.html">RaspberryPi OS(bookworm)のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup_m5.html">M5stackのSDカードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_body.html">ボディーを組み立てよう(AKARI Light)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう(AKARI Light)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て(AKARI Light)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARI Lightを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">3Dプリント部品を作ろう(AKARI light)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly_light/assembly_hard/3dprint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="3d%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88%E9%83%A8%E5%93%81%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86%28akari%20light%29">
+<h1>3Dプリント部品を作ろう(AKARI light)<a class="headerlink" href="#3d%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88%E9%83%A8%E5%93%81%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86%28akari%20light%29" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">AKARI lightの3Dプリント部品は <a class="reference internal" href="part_list.html"><span class="doc">組み立てに必要なもの(AKARI Light)</span></a> のNo.13~No.17の5種類です。</div>
+<div class="line">これらはakari_hardwareのレポジトリでSTLファイルが公開されています。</div>
+</div>
+<div class="line-block">
+<div class="line">公開先: <a class="reference external" href="https://github.com/AkariGroup/akari_hardware/tree/main/AKARI_Light/3d_models">https://github.com/AkariGroup/akari_hardware/tree/main/AKARI_Light/3d_models</a></div>
+</div>
+<div class="line-block">
+<div class="line">このSTLファイルを使用して、3Dプリント部品を作成する方法を紹介します。</div>
+</div>
+<section id="3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%A7%E9%80%A0%E5%BD%A2%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">
+<h2>3Dプリンタで造形する場合<a class="headerlink" href="#3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%A7%E9%80%A0%E5%BD%A2%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">ここでは例として、FLASHFORGE社製3Dプリンタでの造形方法を説明します。</div>
+<div class="line">手元に3Dプリンタがない場合は、下記の製造業者に発注する方法を検討ください。</div>
+</div>
+<ol class="arabic simple">
+<li><p>FLASHFORGEのスライサーソフト「FlashPrint」を起動し、ロードを選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dprint01-01.PNG"><img alt="../../../_images/3dprint01-01.PNG" src="../../../_images/3dprint01-01.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>ファイル選択ダイアログで、akari_hardwareリポジトリにある、造形したいSTLファイルを選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dprint01-02.PNG"><img alt="../../../_images/3dprint01-02.PNG" src="../../../_images/3dprint01-02.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>表示されたモデルを移動・回転させ、枠内に収まるようにします。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dprint01-03.PNG"><img alt="../../../_images/3dprint01-03.PNG" src="../../../_images/3dprint01-03.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>サポート材-自動サポートを選択し、サポート材を設定します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dprint01-04.PNG"><img alt="../../../_images/3dprint01-04.PNG" src="../../../_images/3dprint01-04.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>スライスを選択し、3Dプリンタに合わせた細かな設定を行います。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dprint01-05.PNG"><img alt="../../../_images/3dprint01-05.PNG" src="../../../_images/3dprint01-05.PNG" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>その後、gxファイルが出力され、3Dプリンタで造形可能です。</p></li>
+</ol>
+</section>
+<section id="%E8%A3%BD%E9%80%A0%E6%A5%AD%E8%80%85%E3%81%AB%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88">
+<h2>製造業者に外注する場合<a class="headerlink" href="#%E8%A3%BD%E9%80%A0%E6%A5%AD%E8%80%85%E3%81%AB%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">手元に3Dプリンタがない場合は、製造会社に発注することでも製造が可能です。</div>
+<div class="line">例として、 JLCPCB(<a class="reference external" href="https://jlcpcb.com/">https://jlcpcb.com/</a>)での発注方法を説明します。</div>
+<div class="line">JLCPCBは中国の製造会社で、海外サイトでの発注、製造、宅配となります。利用は自己責任でお願いします。</div>
+<div class="line">海外への発注が難しい場合は、他の製造会社の利用をご検討ください。</div>
+</div>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://jlcpcb.com/">https://jlcpcb.com/</a> サイト内の「3D Printing」を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/3dorder01-01.png"><img alt="../../../_images/3dorder01-01.png" src="../../../_images/3dorder01-01.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>「Add 3D Files」を選択し、ファイル選択ダイアログで、造形したいSTLファイルを選択します。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">akari_hardwareリポジトリの3d_modelsディレクトリにある5つのSTLファイルがAKARIの組み立てに必要な部品となります。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/3dorder01-02.png"><img alt="../../../_images/3dorder01-02.png" src="../../../_images/3dorder01-02.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/3dorder01-03.png"><img alt="../../../_images/3dorder01-03.png" src="../../../_images/3dorder01-03.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>各モデルが読み込まれるので造形方法や素材、数量などを設定します。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">参考までに、各部品の造形情報の一例を掲載しておきます。</div>
+<div class="line">あくまで一度造形に成功した例になりますので、この設定による確実な造形成功を保証するものではありません。ご了承ください。</div>
+</div>
+<p>・AKARI_Light_Head</p>
+<a class="reference internal image-reference" href="../../../_images/3dorder_light01-01.png"><img alt="../../../_images/3dorder_light01-01.png" src="../../../_images/3dorder_light01-01.png" style="width: 400px;" /></a>
+<p>・AKARI_Light_Arm</p>
+<a class="reference internal image-reference" href="../../../_images/3dorder_light01-02.png"><img alt="../../../_images/3dorder_light01-02.png" src="../../../_images/3dorder_light01-02.png" style="width: 400px;" /></a>
+<p>・AKARI_Light_Body</p>
+<a class="reference internal image-reference" href="../../../_images/3dorder_light01-03.png"><img alt="../../../_images/3dorder_light01-03.png" src="../../../_images/3dorder_light01-03.png" style="width: 400px;" /></a>
+<p>・AKARI_Light_Cover</p>
+<a class="reference internal image-reference" href="../../../_images/3dorder_light01-04.png"><img alt="../../../_images/3dorder_light01-04.png" src="../../../_images/3dorder_light01-04.png" style="width: 400px;" /></a>
+<p>・AKARI_Light_Base</p>
+<a class="reference internal image-reference" href="../../../_images/3dorder_light01-05.png"><img alt="../../../_images/3dorder_light01-05.png" src="../../../_images/3dorder_light01-05.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>設定が終わったら「SAVE TO CART」を選択します。アカウントがない場合新規作成し、注文を進めます。</p></li>
+</ol>
+<div class="line-block">
+<div class="line">注文を進める過程で、3Dモデルのレビューが必要になります。</div>
+<div class="line">レビュー完了までは時間がかかるので、完了まで待ちます。</div>
+<div class="line">またレビュー結果次第では割れ等のリスクの承認が必要となりますので、確認の上各自ご判断ください。</div>
+<div class="line">図は肉厚の薄い箇所に対する割れの警告です。yesを選ぶことでリスクを許容したことになります。</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/3dorder01-09.png"><img alt="../../../_images/3dorder01-09.png" src="../../../_images/3dorder01-09.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>レビューが完了したら支払い可能になるので、支払いして発注完了となります。</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="part_list.html" class="btn btn-neutral float-left" title="組み立てに必要なもの(AKARI Light)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pcb.html" class="btn btn-neutral float-right" title="基板を作ろう(AKARI Light)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

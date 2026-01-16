@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ボディーを組み立てよう &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/akaridoc_theme.css" type="text/css" />
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/assembly/assembly_hard/assembly_body.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="ベースを組み立てよう" href="assembly_base.html" />
+    <link rel="prev" title="ヘッドを組み立てよう" href="assembly_head.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">AKARIを作ってみよう</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">AKARIの組み立て</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="3dprint.html">3Dプリント部品を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcb.html">基板を作ろう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="part_list.html">組み立てに必要なもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_pcb.html">基板に部品を実装しよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_head.html">ヘッドを組み立てよう</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ボディーを組み立てよう</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">必要な道具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1%20m5%E5%9F%BA%E6%9D%BF%E3%81%AE%E6%90%AD%E8%BC%89">1 M5基板の搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">2 温湿度気圧センサユニットの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">3 光センサユニットの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4%20%E3%83%98%E3%83%83%E3%83%89%E3%81%A8%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%81%AE%E7%B5%90%E5%90%88">4 ヘッドとボディーの結合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#5%20%E9%9B%BB%E6%BA%90%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%81%AE%E6%90%AD%E8%BC%89">5 電源スイッチの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6%20dc%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%81%AE%E6%90%AD%E8%BC%89">6 DCジャックの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#7%20m5stack%E3%81%AE%E6%90%AD%E8%BC%89">7 M5Stackの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#8%20gpio%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%8E%A5%E7%B6%9A">8 GPIOケーブルの接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#9%20usb2dxif%E3%81%AE%E6%8E%A5%E7%B6%9A">9 USB2DXIFの接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#10%20m5stack%E3%81%AEusb%E6%8E%A5%E7%B6%9A">10 M5StackのUSB接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#11%20%E3%83%A2%E3%83%BC%E3%82%BF%E7%B7%9A%E3%81%AE%E6%8E%A5%E7%B6%9A">11 モータ線の接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#12%20%E3%82%AB%E3%83%90%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">12 カバーの取り付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#13%20usb%E3%83%8F%E3%83%96%E3%81%AE%E6%90%AD%E8%BC%89">13 USBハブの搭載</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#14%20usb%E3%83%8F%E3%83%96%E3%81%B8%E3%81%AEusb%E6%8E%A5%E7%B6%9A">14 USBハブへのUSB接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#15%20%E5%8F%AF%E5%8B%95%E5%9F%9F%E3%81%AE%E7%A2%BA%E8%AA%8D">15 可動域の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="assembly_base.html">ベースを組み立てよう</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../assembly_test_unit/main.html">テストユニットの組み立て</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_soft/main.html">AKARIのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspi/main.html">(おまけ) AKARIをRaspberry Piで使ってみる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk_reference/main.html">SDK リファレンス</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">AKARIを作ってみよう</a></li>
+          <li class="breadcrumb-item"><a href="main.html">AKARIの組み立て</a></li>
+      <li class="breadcrumb-item active">ボディーを組み立てよう</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/assembly/assembly_hard/assembly_body.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86">
+<h1>ボディーを組み立てよう<a class="headerlink" href="#%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86" title="この見出しへのパーマリンク"></a></h1>
+<div class="line-block">
+<div class="line">次にボディー部分を組み立てます。</div>
+</div>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7">
+<h2>必要な道具<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%81%93%E5%85%B7" title="この見出しへのパーマリンク"></a></h2>
+<div class="line-block">
+<div class="line">- 精密ドライバ(＋)</div>
+<div class="line">- No.2サイズのドライバ(＋)</div>
+<div class="line">- ニッパ</div>
+</div>
+</section>
+<section id="1%20m5%E5%9F%BA%E6%9D%BF%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>1 M5基板の搭載<a class="headerlink" href="#1%20m5%E5%9F%BA%E6%9D%BF%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81">
+<h3>必要な部品<a class="headerlink" href="#%E5%BF%85%E8%A6%81%E3%81%AA%E9%83%A8%E5%93%81" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(1) M5基板( <a class="reference internal" href="assembly_pcb.html"><span class="doc">基板に部品を実装しよう</span></a> で組み立て済みのもの) 1個</div>
+<div class="line">(3) AKARI Body 1個</div>
+<div class="line">(38) タッピングビスM2.5-6 4個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body01-01.jpg"><img alt="../../../_images/body01-01.jpg" src="../../../_images/body01-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="%E6%89%8B%E9%A0%86">
+<h3>手順<a class="headerlink" href="#%E6%89%8B%E9%A0%86" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body01-ex.gif"><img alt="../../../_images/body01-ex.gif" src="../../../_images/body01-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(1) M5基板</cite> を表側から載せる。</p></li>
+</ol>
+<p><strong>CN9のピンヘッダが右前に来るようにすること</strong></p>
+<a class="reference internal image-reference" href="../../../_images/body01-02.jpg"><img alt="../../../_images/body01-02.jpg" src="../../../_images/body01-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(38) タッピングビスM2.5-6</cite> で４点を表面からねじ留めする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body01-03.jpg"><img alt="../../../_images/body01-03.jpg" src="../../../_images/body01-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="2%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>2 温湿度気圧センサユニットの搭載<a class="headerlink" href="#2%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%B0%97%E5%9C%A7%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id1">
+<h3>必要な部品<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(9) 温湿度気圧センサユニット ENVⅢ 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body02-01.jpg"><img alt="../../../_images/body02-01.jpg" src="../../../_images/body02-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id2">
+<h3>手順<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body02-ex.gif"><img alt="../../../_images/body02-ex.gif" src="../../../_images/body02-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(9) 温湿度気圧センサユニット ENVⅢ</cite> 付属の配線をボディーの右側面から通す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body02-02.jpg"><img alt="../../../_images/body02-02.jpg" src="../../../_images/body02-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(9) 温湿度気圧センサユニット ENVⅢ</cite> を配線のコネクタに接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body02-03.jpg"><img alt="../../../_images/body02-03.jpg" src="../../../_images/body02-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>ENVⅢをボディーの突起に差し込む。</p></li>
+</ol>
+<p><strong>ENVⅢのラベルがボディーの内向きになるようにすること</strong></p>
+<a class="reference internal image-reference" href="../../../_images/body02-04.jpg"><img alt="../../../_images/body02-04.jpg" src="../../../_images/body02-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN6に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body02-05.jpg"><img alt="../../../_images/body02-05.jpg" src="../../../_images/body02-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="3%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>3 光センサユニットの搭載<a class="headerlink" href="#3%20%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id3">
+<h3>必要な部品<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(10) 光センサユニット 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body03-01.jpg"><img alt="../../../_images/body03-01.jpg" src="../../../_images/body03-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id4">
+<h3>手順<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body03-ex.gif"><img alt="../../../_images/body03-ex.gif" src="../../../_images/body03-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(10) 光センサユニット</cite> 付属のケーブルをボディーの左側面から通す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body03-02.jpg"><img alt="../../../_images/body03-02.jpg" src="../../../_images/body03-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(10) 光センサユニット</cite> を配線のコネクタに接続する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body03-03.jpg"><img alt="../../../_images/body03-03.jpg" src="../../../_images/body03-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>光センサをボディーの突起に差し込む。</p></li>
+</ol>
+<p><strong>光センサのラベルがボディーの内向きになるようにすること</strong></p>
+<a class="reference internal image-reference" href="../../../_images/body03-04.jpg"><img alt="../../../_images/body03-04.jpg" src="../../../_images/body03-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN7に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body03-05.jpg"><img alt="../../../_images/body03-05.jpg" src="../../../_images/body03-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="4%20%E3%83%98%E3%83%83%E3%83%89%E3%81%A8%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%81%AE%E7%B5%90%E5%90%88">
+<h2>4 ヘッドとボディーの結合<a class="headerlink" href="#4%20%E3%83%98%E3%83%83%E3%83%89%E3%81%A8%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC%E3%81%AE%E7%B5%90%E5%90%88" title="この見出しへのパーマリンク"></a></h2>
+<section id="id5">
+<h3>必要な部品<a class="headerlink" href="#id5" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="assembly_head.html"><span class="doc">ヘッドを組み立てよう</span></a> で組み立てたヘッド 1個</div>
+<div class="line">(25) Dynamixel 2XL430-W250-T付属のネジ(黒) 4個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body04-01.jpg"><img alt="../../../_images/body04-01.jpg" src="../../../_images/body04-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id6">
+<h3>手順<a class="headerlink" href="#id6" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body04-ex.gif"><img alt="../../../_images/body04-ex.gif" src="../../../_images/body04-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p>ヘッドとボディーを図のように合わせ、内部から <cite>(25)(24)付属のネジ(黒)</cite> で4点ねじ留めする。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>ヘッドとボディーが同じ方向を向いた状態で固定すること！</strong></div>
+<div class="line"><strong>締結向きがずれるとモータの初期位置とヘッドの初期位置がずれます！</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body04-02.jpg"><img alt="../../../_images/body04-02.jpg" src="../../../_images/body04-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body04-03.jpg"><img alt="../../../_images/body04-03.jpg" src="../../../_images/body04-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="5%20%E9%9B%BB%E6%BA%90%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>5 電源スイッチの搭載<a class="headerlink" href="#5%20%E9%9B%BB%E6%BA%90%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id7">
+<h3>必要な部品<a class="headerlink" href="#id7" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(35) ロッカースイッチ 小型 丸型 2ピン 2極 1個</div>
+<div class="line">(42) テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm 2個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body05-01.jpg"><img alt="../../../_images/body05-01.jpg" src="../../../_images/body05-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id8">
+<h3>手順<a class="headerlink" href="#id8" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body05-ex.gif"><img alt="../../../_images/body05-ex.gif" src="../../../_images/body05-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(35) ロッカースイッチ 小型 丸型 2ピン</cite> の端子2箇所に、 <cite>(42) テフロン線（フッ素樹脂絶縁電線）26AWG 赤色10cm</cite> を1本ずつはんだ付けする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body05-07.jpg"><img alt="../../../_images/body05-07.jpg" src="../../../_images/body05-07.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>ボディー表面のスイッチ用の穴に表から2. の配線を通していき、 <cite>(35) ロッカースイッチ 小型 丸型 2ピン</cite> を押してはめ込む。</p></li>
+</ol>
+<p><strong>○マークが下になるように</strong></p>
+<a class="reference internal image-reference" href="../../../_images/body05-02.jpg"><img alt="../../../_images/body05-02.jpg" src="../../../_images/body05-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body05-03.jpg"><img alt="../../../_images/body05-03.jpg" src="../../../_images/body05-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>ケーブルの反対側をM5基板のCN3のターミナルブロックに差し込み、ネジを締めて固定する。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>線の順序は問わない。どちらの線をどちらの穴に差し込んでも問題ない。</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body05-04.jpg"><img alt="../../../_images/body05-04.jpg" src="../../../_images/body05-04.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body05-05.jpg"><img alt="../../../_images/body05-05.jpg" src="../../../_images/body05-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="6%20dc%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>6 DCジャックの搭載<a class="headerlink" href="#6%20dc%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id9">
+<h3>必要な部品<a class="headerlink" href="#id9" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(20) コネクタ付コード4P PH(赤黒黄緑) 1個</div>
+<div class="line">(21) 2.1mm標準DCジャック パネル取付用 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body06-01.jpg"><img alt="../../../_images/body06-01.jpg" src="../../../_images/body06-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id10">
+<h3>手順<a class="headerlink" href="#id10" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body06-ex.gif"><img alt="../../../_images/body06-ex.gif" src="../../../_images/body06-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(21) 2.1mm標準DCジャック パネル取付用</cite> 付属のナットを、あらかじめ <cite>(20) コネクタ付コード4P PH(赤黒黄緑)</cite> に通す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-02.jpg"><img alt="../../../_images/body06-02.jpg" src="../../../_images/body06-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>1.を、ボディー背面のDCジャック用の穴に内側から通し、端線を外に出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-03.jpg"><img alt="../../../_images/body06-03.jpg" src="../../../_images/body06-03.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body06-04.jpg"><img alt="../../../_images/body06-04.jpg" src="../../../_images/body06-04.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><cite>(21) 2.1mm標準DCジャック パネル取付用</cite> にはんだ付けする。</p></li>
+</ol>
+<p><strong>+側(端子が短い方)に赤黒、-側(端子が長い方)に黄緑をはんだ付けすること。</strong></p>
+<a class="reference internal image-reference" href="../../../_images/body06-05.jpg"><img alt="../../../_images/body06-05.jpg" src="../../../_images/body06-05.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body06-06.jpg"><img alt="../../../_images/body06-06.jpg" src="../../../_images/body06-06.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>DCジャックをボディーの外側から押してはめ込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-08.jpg"><img alt="../../../_images/body06-08.jpg" src="../../../_images/body06-08.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>ケーブルの反対側(ボディー内部側)のコネクタをM5基板のCN2に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-09.jpg"><img alt="../../../_images/body06-09.jpg" src="../../../_images/body06-09.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>ナットを内側から締める。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body06-10.jpg"><img alt="../../../_images/body06-10.jpg" src="../../../_images/body06-10.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="7%20m5stack%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>7 M5Stackの搭載<a class="headerlink" href="#7%20m5stack%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id11">
+<h3>必要な部品<a class="headerlink" href="#id11" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(8) M5Stack BASIC 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body07-01.jpg"><img alt="../../../_images/body07-01.jpg" src="../../../_images/body07-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id12">
+<h3>手順<a class="headerlink" href="#id12" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body07-ex.gif"><img alt="../../../_images/body07-ex.gif" src="../../../_images/body07-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(8) M5Stack BASIC</cite> の背面を外す。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>外れにくい場合は、マイナスドライバーをM5Stack側面の溝に差し込んで開く。</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body07-02.jpg"><img alt="../../../_images/body07-02.jpg" src="../../../_images/body07-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body07-03.jpg"><img alt="../../../_images/body07-03.jpg" src="../../../_images/body07-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(8) M5Stack BASIC</cite> の前面を、ボディーに取り付けたM5stack用基板に表から差し込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>ディスプレイ中央部分に強い力をかけないこと。ディスプレイが割れる場合があります！</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body07-04.jpg"><img alt="../../../_images/body07-04.jpg" src="../../../_images/body07-04.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body07-05.jpg"><img alt="../../../_images/body07-05.jpg" src="../../../_images/body07-05.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="8%20gpio%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%8E%A5%E7%B6%9A">
+<h2>8 GPIOケーブルの接続<a class="headerlink" href="#8%20gpio%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id13">
+<h3>必要な部品<a class="headerlink" href="#id13" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">なし</div>
+</div>
+</section>
+<section id="id14">
+<h3>手順<a class="headerlink" href="#id14" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ヘッドのリボンケーブルをボディー背面から内部に通す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-01.jpg"><img alt="../../../_images/body08-01.jpg" src="../../../_images/body08-01.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>M5stack基板のCN8に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body08-02.jpg"><img alt="../../../_images/body08-02.jpg" src="../../../_images/body08-02.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="9%20usb2dxif%E3%81%AE%E6%8E%A5%E7%B6%9A">
+<h2>9 USB2DXIFの接続<a class="headerlink" href="#9%20usb2dxif%E3%81%AE%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id15">
+<h3>必要な部品<a class="headerlink" href="#id15" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(27) USB2DXIF 1個</div>
+<div class="line">(28) Robot Cable-X3P 180mm 1個</div>
+<div class="line">(29) USB-CオスtoUSB-Aオス 変換アダプタ 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body09-01.jpg"><img alt="../../../_images/body09-01.jpg" src="../../../_images/body09-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id16">
+<h3>手順<a class="headerlink" href="#id16" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(27) USB2DXIF</cite> に <cite>(28) Robot Cable-X3P</cite> を差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body09-02.jpg"><img alt="../../../_images/body09-02.jpg" src="../../../_images/body09-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p><cite>(27) USB2DXIF</cite> に <cite>(29) USB-CオスtoUSB-Aオス 変換アダプタ</cite> を差し込む。</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><strong>変換アダプタのラベルが表を向くように接続すること</strong></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body09-03.jpg"><img alt="../../../_images/body09-03.jpg" src="../../../_images/body09-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>2.の反対側のコネクタをCN4に差し込む。</p></li>
+</ol>
+<blockquote>
+<div><p><strong>基板側コネクタに(13-B) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！</strong></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../../_images/body09-04.jpg"><img alt="../../../_images/body09-04.jpg" src="../../../_images/body09-04.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="10%20m5stack%E3%81%AEusb%E6%8E%A5%E7%B6%9A">
+<h2>10 M5StackのUSB接続<a class="headerlink" href="#10%20m5stack%E3%81%AEusb%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id17">
+<h3>必要な部品<a class="headerlink" href="#id17" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(32) USB Type-Cケーブル 0.3mL字 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body10-01.jpg"><img alt="../../../_images/body10-01.jpg" src="../../../_images/body10-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id18">
+<h3>手順<a class="headerlink" href="#id18" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p><cite>(32) USB Type-Cケーブル 0.3mL字</cite> をボディー部の内側からM5Stack本体側面に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body10-02.jpg"><img alt="../../../_images/body10-02.jpg" src="../../../_images/body10-02.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="11%20%E3%83%A2%E3%83%BC%E3%82%BF%E7%B7%9A%E3%81%AE%E6%8E%A5%E7%B6%9A">
+<h2>11 モータ線の接続<a class="headerlink" href="#11%20%E3%83%A2%E3%83%BC%E3%82%BF%E7%B7%9A%E3%81%AE%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id19">
+<h3>必要な部品<a class="headerlink" href="#id19" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">なし</div>
+</div>
+</section>
+<section id="id20">
+<h3>手順<a class="headerlink" href="#id20" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ヘッドのDynamixelから出ているケーブルをボディー背面から内部に通す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body11-01.jpg"><img alt="../../../_images/body11-01.jpg" src="../../../_images/body11-01.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>M5stack基板のCN5に差し込む。</p></li>
+</ol>
+<blockquote>
+<div><p><strong>基板側コネクタに(13-B) 2mmピッチピンヘッダ 1✕3を採用した場合は、図を見て同じ向きに接続すること！</strong></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../../_images/body11-02.jpg"><img alt="../../../_images/body11-02.jpg" src="../../../_images/body11-02.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="12%20%E3%82%AB%E3%83%90%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91">
+<h2>12 カバーの取り付け<a class="headerlink" href="#12%20%E3%82%AB%E3%83%90%E3%83%BC%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91" title="この見出しへのパーマリンク"></a></h2>
+<section id="id21">
+<h3>必要な部品<a class="headerlink" href="#id21" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(4) AKARI Cover 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body12-01.jpg"><img alt="../../../_images/body12-01.jpg" src="../../../_images/body12-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id22">
+<h3>手順<a class="headerlink" href="#id22" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body12-ex.gif"><img alt="../../../_images/body12-ex.gif" src="../../../_images/body12-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(3) AKARI Body</cite> 背面の溝に、ヘッドからの線(GPIOケーブル、OAK-D LITEのケーブル、モータケーブル、USBパネルマウントケーブル)が収まっている状態にする。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body12-02.jpg"><img alt="../../../_images/body12-02.jpg" src="../../../_images/body12-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>1.の線が <cite>(3) AKARI Body</cite> と <cite>(4) AKARI Cover</cite> の間を通るようにしながら、 <cite>(3) AKARI Body</cite> 内部から <cite>(4) AKARI Cover</cite> をカチッと奥まで差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body12-03.jpg"><img alt="../../../_images/body12-03.jpg" src="../../../_images/body12-03.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body12-04.jpg"><img alt="../../../_images/body12-04.jpg" src="../../../_images/body12-04.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="13%20usb%E3%83%8F%E3%83%96%E3%81%AE%E6%90%AD%E8%BC%89">
+<h2>13 USBハブの搭載<a class="headerlink" href="#13%20usb%E3%83%8F%E3%83%96%E3%81%AE%E6%90%AD%E8%BC%89" title="この見出しへのパーマリンク"></a></h2>
+<section id="id23">
+<h3>必要な部品<a class="headerlink" href="#id23" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">(30) USBハブ 4ポート15cm 1個</div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/body13-01.jpg"><img alt="../../../_images/body13-01.jpg" src="../../../_images/body13-01.jpg" style="width: 400px;" /></a>
+</section>
+<section id="id24">
+<h3>手順<a class="headerlink" href="#id24" title="この見出しへのパーマリンク"></a></h3>
+<p>組付けアニメーション</p>
+<a class="reference internal image-reference" href="../../../_images/body13-ex.gif"><img alt="../../../_images/body13-ex.gif" src="../../../_images/body13-ex.gif" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p><cite>(30) USBハブ 4ポート15cm</cite> をボディー内部にスライドさせて挿入する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body13-02.jpg"><img alt="../../../_images/body13-02.jpg" src="../../../_images/body13-02.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/body13-03.jpg"><img alt="../../../_images/body13-03.jpg" src="../../../_images/body13-03.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>OAK-DのUSB線、<cite>(30) USBハブ 4ポート15cm</cite> のUSB線は、背面のカバーの溝から外部に出す。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body13-04.jpg"><img alt="../../../_images/body13-04.jpg" src="../../../_images/body13-04.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="14%20usb%E3%83%8F%E3%83%96%E3%81%B8%E3%81%AEusb%E6%8E%A5%E7%B6%9A">
+<h2>14 USBハブへのUSB接続<a class="headerlink" href="#14%20usb%E3%83%8F%E3%83%96%E3%81%B8%E3%81%AEusb%E6%8E%A5%E7%B6%9A" title="この見出しへのパーマリンク"></a></h2>
+<section id="id25">
+<h3>必要な部品<a class="headerlink" href="#id25" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">なし</div>
+</div>
+</section>
+<section id="id26">
+<h3>手順<a class="headerlink" href="#id26" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>USB2DXIFのUSBをボディー内部のUSBハブ(一番左)に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body14-01.jpg"><img alt="../../../_images/body14-01.jpg" src="../../../_images/body14-01.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>M5StackのUSBをボディー内部のUSBハブ(左から2番目)に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body14-02.jpg"><img alt="../../../_images/body14-02.jpg" src="../../../_images/body14-02.jpg" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>ヘッドのUSBパネルマウントからのUSBをボディー内部のUSBハブ(左から3番目)に差し込む。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body14-03.jpg"><img alt="../../../_images/body14-03.jpg" src="../../../_images/body14-03.jpg" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="15%20%E5%8F%AF%E5%8B%95%E5%9F%9F%E3%81%AE%E7%A2%BA%E8%AA%8D">
+<h2>15 可動域の確認<a class="headerlink" href="#15%20%E5%8F%AF%E5%8B%95%E5%9F%9F%E3%81%AE%E7%A2%BA%E8%AA%8D" title="この見出しへのパーマリンク"></a></h2>
+<section id="id27">
+<h3>必要な部品<a class="headerlink" href="#id27" title="この見出しへのパーマリンク"></a></h3>
+<div class="line-block">
+<div class="line">なし</div>
+</div>
+</section>
+<section id="id28">
+<h3>手順<a class="headerlink" href="#id28" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic simple">
+<li><p>ヘッドを上下左右に外から動かしてみて、ケーブルの引っ掛かりがないか確認する。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/body15-01.jpg"><img alt="../../../_images/body15-01.jpg" src="../../../_images/body15-01.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">以上でボディーの組み立ては終わりです。</div>
+<div class="line">次はベースの組み立てを行います。</div>
+</div>
+<p><a class="reference internal" href="assembly_base.html"><span class="doc">ベースを組み立てよう</span></a> へ進む</p>
+<p><a class="reference internal" href="part_list.html"><span class="doc">組み立てに必要なもの</span></a> へ戻る</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="assembly_head.html" class="btn btn-neutral float-left" title="ヘッドを組み立てよう" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assembly_base.html" class="btn btn-neutral float-right" title="ベースを組み立てよう" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
