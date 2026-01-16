@@ -268,6 +268,8 @@ akari_game_daruma
 
 URL: https://github.com/AkariGroup/akari_game_daruma.git
 
+..  youtube:: Qv_3McA5Cb8
+
 | AKARIのカメラでだるまさんが転んだゲームをするアプリです。
 | AKARIのカメラで人の動きを認識し、動いているかどうかを判定します。
 
@@ -276,12 +278,16 @@ akari_posture_checker
 
 URL: https://github.com/AkariGroup/akari_posture_checker.git
 
+..  youtube:: EDZ9FLbcivk
+
 | AKARIのカメラで座り姿勢を認識し、姿勢が悪かったり座り時間が長かったりした場合に音声で注意を促すアプリです。
 
 akari_room_support
 ===========================================================
 
 URL: https://github.com/AkariGroup/akari_room_support.git
+
+..  youtube:: tTRfSiYBP1s
 
 | AKARIのセンサで部屋の気温などを検知して表示、気温に応じた音声アラートを行うアプリです。
 
