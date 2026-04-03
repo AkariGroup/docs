@@ -1,21 +1,24 @@
-[tool.poetry]
+[project]
 name = "akari_document"
 version = "0.1.0"
 description = ""
-authors = ["Kazuya Yamamoto"]
+authors = [{name = "Kazuya Yamamoto"}]
+requires-python = ">=3.12"
+dependencies = [
+    "Sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinxcontrib-youtube>=1.1.0",
+    "sphinxcontrib-googleanalytics>=0.4",
+    "sphinx-sitemap>=2.5.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-Sphinx = "^5.0.0"
-sphinx-rtd-theme = "^1.0.0"
-sphinxcontrib-youtube = "^1.1.0"
-sphinxcontrib-googleanalytics = "^0.4"
-sphinx-sitemap = "^2.5.0"
+[dependency-groups]
+dev = [
+    "akari-client",
+    "akari-proto",
+]
 
-[tool.poetry.dev-dependencies]
-akari-client = {path = "references/akari_software/sdk/akari_client/", develop = true}
-akari-proto = {path = "references/akari_software/sdk/akari_proto/", develop = true}
+[tool.uv.sources]
+akari-client = { path = "references/akari_software/sdk/akari_client/", editable = true }
+akari-proto = { path = "references/akari_software/sdk/akari_proto/", editable = true }
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"

@@ -22,34 +22,25 @@ https://akarigroup.github.io/docs/
    git submodule update --init --recursive
 ~~~
 
-3. apt updateを実行
+3. uvのインストール
 
 ~~~bash
-   sudo apt update
+   curl -LsSf https://astral.sh/uv/install.sh | sh
 ~~~
 
-4. 必要なライブラリのインストール
+4. 依存関係のインストール
 
 ~~~bash
-   sudo apt install curl python3.10 python3.10-venv
+   uv sync
 ~~~
 
-5. 仮想環境の作成
+5. ビルドの実行
 
 ~~~bash
-   python3 -m venv venv
-   . venv/bin/activate
-   pip install -r requirements.txt
+   uv run make html
 ~~~
 
-6. ビルドの実行
-
-~~~bash
-   cd setup
-   ./build.sh
-~~~
-
-1回セットアップが完了した後は、6.のみの再実行でドキュメントの再ビルドができます。  
+1回セットアップが完了した後は、5.のみの再実行でドキュメントの再ビルドができます。  
 
 
 ## ドキュメントの確認
@@ -57,5 +48,5 @@ https://akarigroup.github.io/docs/
 ビルドしたマニュアルは、akari_documentディレクトリ直下で下記コマンドを実行することで確認できます。
 
 ~~~bash
-   $ sensible-browser _build/html/index.html
+   sensible-browser _build/html/index.html
 ~~~
