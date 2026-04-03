@@ -15,8 +15,7 @@ AKARI_DOC_PARENT_PATH=`pwd | xargs dirname`
 titleEcho "Build document"
 (
   cd $AKARI_DOC_PARENT_PATH
-  source venv/bin/activate
-  make html
+  uv run make html
   successEcho "Document built."
 )
 
