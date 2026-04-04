@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47HZTCENMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-47HZTCENMJ');
+    </script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>設定 &mdash; AKARI webマニュアル</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/akaridoc_theme.css?v=e34f6a5d" />
+
+  
+    <link rel="canonical" href="https://akarigroup.github.io/docs/source/sdk_reference/akari_client/config.html" />
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=144c8c96"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="prev" title="低レイヤー実装" href="low_level.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            AKARI manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/main.html">AKARIの特徴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly/main.html">AKARIを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assembly_light/main.html">AKARI Lightを作ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startup/main.html">AKARIを起動しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial_web/main.html">AKARIをはじめよう(webコンソール編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/main.html">AKARIをはじめよう(Ubuntu編)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../spec/main.html">AKARIの仕様</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/main.html">AKARI練習問題に挑戦しよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scratch/main.html">Scratchを使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros2/main.html">ROS2版を使ってみよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/main.html">AKARIを使った開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/main.html">困ったときは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/main.html">ソフトのアップデート</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">SDK リファレンス</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="general.html">基本クラス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="m5_com.html">M5の制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="joint.html">関節制御</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utility.html">ユーティリティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="low_level.html">低レイヤー実装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">設定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.config.AkariClientConfig"><code class="docutils literal notranslate"><span class="pre">AkariClientConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#akari_client.config.AkariClientEnv"><code class="docutils literal notranslate"><span class="pre">AkariClientEnv</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKARI manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">SDK リファレンス</a></li>
+          <li class="breadcrumb-item"><a href="../akari_client.html">akari_client: Akari操作用の基本ライブラリ</a></li>
+      <li class="breadcrumb-item active">設定</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/source/sdk_reference/akari_client/config.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-akari_client">
+<span id="%E8%A8%AD%E5%AE%9A"></span><h1>設定<a class="headerlink" href="#module-akari_client" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.config.AkariClientConfig">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">akari_client.config.</span></span><span class="sig-name descname"><span class="pre">AkariClientConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m5stack</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/config.html#AkariClientConfig"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.config.AkariClientConfig" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joint_manager</strong> (<em>JointManagerDynamixelSerialConfig</em><em> | </em><em>JointManagerFeetechSerialConfig</em><em> | </em><em>JointManagerGrpcConfig</em>)</p></li>
+<li><p><strong>m5stack</strong> (<em>M5StackSerialConfig</em><em> | </em><em>M5StackGrpcConfig</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="akari_client.config.AkariClientConfig.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></span><a class="headerlink" href="#akari_client.config.AkariClientConfig.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="akari_client.config.AkariClientEnv">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">akari_client.config.</span></span><span class="sig-name descname"><span class="pre">AkariClientEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_case_sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nested_model_default_partial_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix_target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_ignore_empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_max_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_none_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_enums</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prog_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_settings_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_none_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_hide_none_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_avoid_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_enforce_required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_use_class_docs_for_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_exit_on_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_flag_prefix_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_implicit_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_ignore_unknown_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_kebab_case</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_shortcuts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_build_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/akari_client/config.html#AkariClientEnv"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#akari_client.config.AkariClientEnv" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_case_sensitive</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_nested_model_default_partial_update</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_prefix</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_prefix_target</strong> (<em>EnvPrefixTarget</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_file</strong> (<em>DotenvType</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_file_encoding</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_ignore_empty</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_nested_delimiter</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_nested_max_split</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_parse_none_str</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_env_parse_enums</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_prog_name</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_parse_args</strong> (<em>bool</em><em> | </em><em>list</em><em>[</em><em>str</em><em>] </em><em>| </em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>...</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>_cli_settings_source</strong> (<em>CliSettingsSource</em><em>[</em><em>Any</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>_cli_parse_none_str</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_hide_none_type</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_avoid_json</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_enforce_required</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_use_class_docs_for_groups</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_exit_on_error</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_prefix</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_flag_prefix_char</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_implicit_flags</strong> (<em>bool</em><em> | </em><em>Literal</em><em>[</em><em>'dual'</em><em>, </em><em>'toggle'</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>_cli_ignore_unknown_args</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_cli_kebab_case</strong> (<em>bool</em><em> | </em><em>Literal</em><em>[</em><em>'all'</em><em>, </em><em>'no_enums'</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>_cli_shortcuts</strong> (<em>Mapping</em><em>[</em><em>str</em><em>, </em><em>str</em><em> | </em><em>list</em><em>[</em><em>str</em><em>]</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>_secrets_dir</strong> (<em>PathType</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_build_sources</strong> (<em>tuple</em><em>[</em><em>tuple</em><em>[</em><em>PydanticBaseSettingsSource</em><em>, </em><em>...</em><em>]</em><em>, </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>config_path</strong> (<em>Annotated</em><em>[</em><em>Path</em><em>, </em><em>PathType</em><em>(</em><em>path_type=file</em><em>)</em><em>] </em><em>| </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="akari_client.config.AkariClientEnv.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'case_sensitive':</span> <span class="pre">False,</span> <span class="pre">'cli_avoid_json':</span> <span class="pre">False,</span> <span class="pre">'cli_enforce_required':</span> <span class="pre">False,</span> <span class="pre">'cli_exit_on_error':</span> <span class="pre">True,</span> <span class="pre">'cli_flag_prefix_char':</span> <span class="pre">'-',</span> <span class="pre">'cli_hide_none_type':</span> <span class="pre">False,</span> <span class="pre">'cli_ignore_unknown_args':</span> <span class="pre">False,</span> <span class="pre">'cli_implicit_flags':</span> <span class="pre">False,</span> <span class="pre">'cli_kebab_case':</span> <span class="pre">False,</span> <span class="pre">'cli_parse_args':</span> <span class="pre">None,</span> <span class="pre">'cli_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'cli_prefix':</span> <span class="pre">'',</span> <span class="pre">'cli_prog_name':</span> <span class="pre">None,</span> <span class="pre">'cli_shortcuts':</span> <span class="pre">None,</span> <span class="pre">'cli_use_class_docs_for_groups':</span> <span class="pre">False,</span> <span class="pre">'enable_decoding':</span> <span class="pre">True,</span> <span class="pre">'env_file':</span> <span class="pre">None,</span> <span class="pre">'env_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'env_ignore_empty':</span> <span class="pre">False,</span> <span class="pre">'env_nested_delimiter':</span> <span class="pre">None,</span> <span class="pre">'env_nested_max_split':</span> <span class="pre">None,</span> <span class="pre">'env_parse_enums':</span> <span class="pre">None,</span> <span class="pre">'env_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'env_prefix':</span> <span class="pre">'AKARI_CLIENT_',</span> <span class="pre">'env_prefix_target':</span> <span class="pre">'variable',</span> <span class="pre">'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'json_file':</span> <span class="pre">None,</span> <span class="pre">'json_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'nested_model_default_partial_update':</span> <span class="pre">False,</span> <span class="pre">'protected_namespaces':</span> <span class="pre">('model_validate',</span> <span class="pre">'model_dump',</span> <span class="pre">'settings_customise_sources'),</span> <span class="pre">'secrets_dir':</span> <span class="pre">None,</span> <span class="pre">'toml_file':</span> <span class="pre">None,</span> <span class="pre">'validate_default':</span> <span class="pre">True,</span> <span class="pre">'yaml_config_section':</span> <span class="pre">None,</span> <span class="pre">'yaml_file':</span> <span class="pre">None,</span> <span class="pre">'yaml_file_encoding':</span> <span class="pre">None}</span></span><a class="headerlink" href="#akari_client.config.AkariClientEnv.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="low_level.html" class="btn btn-neutral float-left" title="低レイヤー実装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TOYOTA MOTOR CORPORATION.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
