@@ -21,6 +21,6 @@ M5のリフレッシュスクリプトを実行します。
 
 .. code-block:: bash
 
-   $ python3 m5_init.py
+   $ uv run m5_init.py
 
 これにより、M5の画面がリセットされるかと思います。

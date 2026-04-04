@@ -31,14 +31,13 @@ labelImgのセットアップ
 .. code-block:: bash
 
    cd labelImg
-   python3 -m venv venv
-   . venv/bin/activate
+   uv init
 
 3. 必要なライブラリをインストールする。
 
 .. code-block:: bash
 
-   pip install pyqt5==5.15.2 lxml
+   uv add install pyqt5==5.15.2 lxml
 
 4. labelImgをビルドする。
 
@@ -72,7 +71,7 @@ labelImgでアノテーションをする
 
 .. code-block:: bash
 
-   python3 labelImg.py
+   uv run labelImg.py
 
 | 下記のウィンドウが開くので、「ディレクトリを開く」で :doc:`image_collection` で収集した画像のディレクトリを選択します。
 | 先程の画像の一覧が読み込まれます。

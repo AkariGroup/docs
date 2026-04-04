@@ -4,24 +4,6 @@
 
 AKARIのサンプルアプリを動かしてみましょう。
 
-===========================================================
-仮想環境の有効化
-===========================================================
-
-仮想環境を有効化していなければ、下記のコマンドで仮想環境を有効化します。
-
-.. code-block:: bash
-
-   cd ~/akari_software
-   source venv/bin/activate
-
-.. tip::
-
-   venvを終了したい場合は下記コマンドを実行します。
-
-   .. code-block:: bash
-
-      deactivate
 
 ===========================================================
 アプリのディレクトリへの移動
@@ -43,7 +25,7 @@ AKARIのサンプルアプリを動かしてみましょう。
 
    .. code-block:: bash
 
-      $ python3 1a_motor_control.py
+      $ uv run 1a_motor_control.py
 
 ===========================================================
 環境情報の取得
@@ -56,7 +38,7 @@ AKARIのサンプルアプリを動かしてみましょう。
 
    .. code-block:: bash
 
-      $ python3 2a_button.py
+      $ uv run 2a_button.py
 
 2b.GPIO入力
 
@@ -65,7 +47,7 @@ AKARIのサンプルアプリを動かしてみましょう。
 
    .. code-block:: bash
 
-      $ python3 2b_gpio_input.py
+      $ uv run 2b_gpio_input.py
 
 2c.GPIO出力
 
@@ -74,7 +56,7 @@ AKARIのサンプルアプリを動かしてみましょう。
 
    .. code-block:: bash
 
-      $ python3 2c_gpio_output.py
+      $ uv run 2c_gpio_output.py
 
 2d.環境センサ
 
@@ -83,7 +65,7 @@ AKARIのサンプルアプリを動かしてみましょう。
 
    .. code-block:: bash
 
-      $ python3 2d_env_info.py
+      $ uv run 2d_env_info.py
 
 ===========================================================
 GPIO出力の取得
@@ -95,7 +77,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 3a_gpio_control.py
+      $ uv run 3a_gpio_control.py
 
 ===========================================================
 ディスプレイ制御
@@ -108,7 +90,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 4a_display_color.py
+      $ uv run 4a_display_color.py
 
 4b.ディスプレイテキスト出力
 
@@ -117,7 +99,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 4b_display_text.py
+      $ uv run 4b_display_text.py
 
 4c.ディスプレイ画像出力
 
@@ -126,7 +108,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 4c_display_image.py
+      $ uv run 4c_display_image.py
 
 ===========================================================
 その他の制御
@@ -139,7 +121,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 5a_reset_m5.py
+      $ uv run 5a_reset_m5.py
 
 ===========================================================
 カメラ
@@ -152,7 +134,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 6a_camera_image_rgb.py
+      $ uv run 6a_camera_image_rgb.py
 
 6b.カメラステレオdepth映像のストリーミング
 
@@ -161,7 +143,7 @@ GPIO出力制御のサンプルです。各ステップごとにGPIOデジタル
 
    .. code-block:: bash
 
-      $ python3 6b_camera_image_stereo_depth.py
+      $ uv run 6b_camera_image_stereo_depth.py
 
 :doc:`test_detection` へ進む
 

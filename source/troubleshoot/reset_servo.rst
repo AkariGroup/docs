@@ -20,6 +20,6 @@ toolsディレクトリ内のpythonへ移動します。
 
 .. code-block:: bash
 
-   $ python3 servo_start.py
+   $ uv run servo_start.py
 
 これにより、ヘッドの位置が初期位置に戻ります。

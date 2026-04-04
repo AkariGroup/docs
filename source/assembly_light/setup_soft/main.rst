@@ -13,4 +13,3 @@ AKARIのソフトウェアのセットアップを行います。
    requirement_list
    setup_ansible
    setup_feetech
-   setup_env
