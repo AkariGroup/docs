@@ -32,15 +32,23 @@ AKARIのROS2環境をセットアップしよう
 
 4. ROS2のインストール
 
-  | 再度aptの更新を行い、ROS2 humbleとbuild用のパッケージであるcolconをインストールします。
+  | 再度aptの更新を行い、ROS2 jazzyとbuild用のパッケージであるcolconをインストールします。
 
   .. code-block:: bash
 
     sudo apt update
     sudo apt upgrade
-    sudo apt install ros-humble-desktop python3-colcon-common-extensions
+    sudo apt install ros-jazzy-desktop python3-colcon-common-extensions
 
-5. workspaceを作成する
+
+5. システムのpythonにAKARIのライブラリをインストールする
+  | ROS2のノードを動かすために、システムのpythonにAKARIのライブラリをインストールします。
+
+  .. code-block:: bash
+
+      pip install --break-system-packages akari-client[depthai] akari-proto
+
+6. workspaceを作成する
 
   | ros2のworkspaceを作成します。
   | 今回はhomeディレクトリの直下に"ros2_ws"というディレクトリを作成し、そこでROS2の開発を行います。
@@ -51,7 +59,7 @@ AKARIのROS2環境をセットアップしよう
     mkdir ros2_ws
     cd ros2_ws
 
-6. akari_rosをcloneする。
+7. akari_rosをcloneする。
 
   | 作成したworkspace内にsrcというディレクトリを作成し、その中にakari_rosをcloneします。
 
@@ -61,14 +69,14 @@ AKARIのROS2環境をセットアップしよう
     cd src
     git clone https://github.com/AkariGroup/akari_ros.git
 
-7. ROS2のsetupファイルを読み込む
+8. ROS2のsetupファイルを読み込む
 
   | ROS2を使うには、ROS2のsetupファイルを読み込む必要が有ります。
   | 下記を実行し、setupファイルを読み込みます。
 
   .. code-block:: bash
 
-    . /opt/ros/humble/setup.bash
+    . /opt/ros/jazzy/setup.bash
 
   .. note::
 
@@ -77,9 +85,9 @@ AKARIのROS2環境をセットアップしよう
 
     .. code-block:: bash
 
-      echo ". /opt/ros/humble/setup.bash" >> ~/.bashrc
+      echo ". /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
-8. akari_rosをビルドする。
+9. akari_rosをビルドする。
 
   | akari_rosのビルドを行います。
   | ビルドはros2_ws直下で行うため、移動してから実行します。
@@ -89,7 +97,7 @@ AKARIのROS2環境をセットアップしよう
     cd ~/ros2_ws
     colcon build --symlink-install
 
-9.  workspaceのsetupファイルを読み込む
+10. workspaceのsetupファイルを読み込む
 
   | ビルドが成功したら、このworkspaceのsetupファイルが生成されるのでこちらも読み込む必要が有ります。
   | 下記を実行し、setupファイルを読み込みます。
@@ -106,6 +114,8 @@ AKARIのROS2環境をセットアップしよう
     .. code-block:: bash
 
       echo ". ~/ros2_ws/install/local_setup.bash" >> ~/.bashrc
+
+
 
 
 以上でセットアップは終了です。
