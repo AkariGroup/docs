@@ -36,5 +36,5 @@ microSDカードの挿入
 
 :doc:`main` へ戻る
 
-:doc:`setup_env` へ戻る
+:doc:`setup_ansible` へ戻る
 

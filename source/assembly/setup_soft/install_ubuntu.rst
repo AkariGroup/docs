@@ -1,8 +1,8 @@
 ***********************************************************
-Ubuntu 22.04のインストール
+Ubuntu 24.04のインストール
 ***********************************************************
 
-lattepandaにUbuntu22.04をインストールします。
+lattepandaにUbuntu24.04をインストールします。
 
 ===========================================================
 必要なもの
@@ -18,13 +18,13 @@ lattepandaにUbuntu22.04をインストールします。
 ===========================================================
 Ubuntuの起動用USBを作成する。
 ===========================================================
-| 1. PC上に下記リンクからUbuntu 22.04のisoファイルをダウンロードします。
-| https://releases.ubuntu.com/22.04/ubuntu-22.04.2-desktop-amd64.iso
+| 1. PC上に下記リンクからUbuntu 24.04のisoファイルをダウンロードします。
+| https://releases.ubuntu.com/24.04/ubuntu-24.04.4-desktop-amd64.iso
 | 2. 下記リンクからUniversal USB installerをダウンロードします。
 | https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-2.0.1.0.exe
 | 3. USBメモリをパソコンに差し込み、Universal USB Installerを起動します。
 | 4. Step.1のDistributionとして「Try or Install Ubuntu」を選択します。
-| 5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu22.04のisoを指定します。
+| 5. Step.2のOSイメージの選択画面で、ダウンロードしたUbuntu24.04のisoを指定します。
 | 6. Step.3のUSBメモリの選択で、インストールするUSBメモリを指定します。
 
 .. image:: ../../images/usb_installer_setting.jpg

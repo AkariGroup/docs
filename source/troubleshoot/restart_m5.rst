@@ -33,7 +33,7 @@ M5の再起動スクリプトを実行します。
 
 .. code-block:: bash
 
-   $ python3 m5_reset.py
+   $ uv run m5_reset.py
 
 これにより、M5が再起動されます。
 
