@@ -32,13 +32,13 @@ AKARIのROS2環境をセットアップしよう
 
 4. ROS2のインストール
 
-  | 再度aptの更新を行い、ROS2 humbleとbuild用のパッケージであるcolconをインストールします。
+  | 再度aptの更新を行い、ROS2 jazzyとbuild用のパッケージであるcolconをインストールします。
 
   .. code-block:: bash
 
     sudo apt update
     sudo apt upgrade
-    sudo apt install ros-humble-desktop python3-colcon-common-extensions
+    sudo apt install ros-jazzy-desktop python3-colcon-common-extensions
 
 5. workspaceを作成する
 
@@ -68,7 +68,7 @@ AKARIのROS2環境をセットアップしよう
 
   .. code-block:: bash
 
-    . /opt/ros/humble/setup.bash
+    . /opt/ros/jazzy/setup.bash
 
   .. note::
 
@@ -77,7 +77,7 @@ AKARIのROS2環境をセットアップしよう
 
     .. code-block:: bash
 
-      echo ". /opt/ros/humble/setup.bash" >> ~/.bashrc
+      choe ". /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
 8. akari_rosをビルドする。
 
