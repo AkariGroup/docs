@@ -97,8 +97,9 @@ Google画像検索から画像を自動収集する
 .. code-block:: bash
 
    cd google-images-download
-   pip install selenium==4.0.0
-   python3 setup.py install --user
+   uv init
+   uv add install selenium==4.0.0
+   uv run setup.py install --user
 
 3. google chromeをインストールします。
 
